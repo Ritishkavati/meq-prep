@@ -1046,6 +1046,550 @@ MHA consideration: If Nathan refuses to recommence his depot, Mental Health Act 
 
 Structured risk assessment: A formal risk assessment tool (e.g. HCR-20) should be applied.`,
   },
+
+  // ─── 7. CHILD & ADOLESCENT ───────────────────────────────────────────────
+  {
+    id: "q7",
+    topic: "child_adolescent",
+    difficulty: "consultant",
+    title: "Aboriginal Adolescent — Complex Trauma and Polypharmacy",
+    candidateRole: "Consultant child and adolescent psychiatrist",
+    setting: "Emergency department, general hospital",
+    stem: `You are the consultant child and adolescent psychiatrist on call. You are asked to review Tyler, a 14-year-old Aboriginal boy who was brought to the emergency department by police at 11 pm after he smashed a window at his current group home and threatened to hurt himself. He is now calm, sitting with his residential carer, playing cards.
+
+The residential carer informs you that Tyler has recently moved to his ninth placement in seven years. He was removed from his mother's care at age 5 following chronic neglect and exposure to severe domestic violence; his biological father was incarcerated when Tyler was 6. He has had no contact with extended family. He is currently prescribed quetiapine 150 mg nocte, methylphenidate long-acting 54 mg morning, and sodium valproate 400 mg twice daily — all commenced at previous placements. He attends school irregularly.
+
+The residential carer — a 22-year-old casual worker on her third shift — cannot access Tyler's previous mental health records. She tells you the window was broken when Tyler was told he would be moving to a new placement "next week." You note bruising on Tyler's forearm.`,
+    totalMarks: 25,
+    signals: [
+      {
+        id: "s1",
+        name: "Complex developmental trauma — not conduct disorder",
+        category: "diagnosis_formulation",
+        severity: "critical",
+        clueInStem: "Removed at age 5; chronic neglect; severe domestic violence; father incarcerated",
+        whyItMatters: "Tyler's behaviour is most parsimoniously explained by complex developmental trauma and attachment disruption — a conduct disorder or oppositional label would be a diagnostic error",
+        modelWording: "Tyler's presentation is best understood through a complex developmental trauma framework: chronic neglect, domestic violence exposure, parental loss, and profound attachment disruption across nine placements",
+        keywords: ["trauma", "complex", "developmental", "attachment", "neglect", "domestic violence", "not conduct", "trauma-inform"],
+      },
+      {
+        id: "s2",
+        name: "Placement change as precipitant — attachment rupture trigger",
+        category: "immediate_safety",
+        severity: "critical",
+        clueInStem: "Window broken when told he would be moving to a new placement 'next week'",
+        whyItMatters: "The placement change is the direct precipitant — Tyler's behaviour is an attachment-based crisis response, not random aggression",
+        modelWording: "The precipitant is unambiguous: notification of his ninth placement change triggered an acute distress response. This is an attachment rupture, not a behavioural incident",
+        keywords: ["placement", "precipitant", "trigger", "ninth", "attachment rupture", "moving", "placement change"],
+      },
+      {
+        id: "s3",
+        name: "Polypharmacy — three medications of uncertain indication",
+        category: "diagnosis_formulation",
+        severity: "critical",
+        clueInStem: "Quetiapine, methylphenidate long-acting, sodium valproate — all commenced at previous placements; no records available",
+        whyItMatters: "Three psychotropic medications prescribed across multiple placements without documented diagnosis, consent review, or outcome assessment is a serious clinical governance concern",
+        relatedSystem: "Clinical governance; prescribing review; medication reconciliation",
+        modelWording: "Tyler is on three psychotropic medications of uncertain current indication, commenced across different placements without available records. A comprehensive medication review with therapeutic target clarification is urgently required",
+        keywords: ["polypharmacy", "three medication", "quetiapine", "methylphenidate", "valproate", "medication review", "indication", "no records"],
+      },
+      {
+        id: "s4",
+        name: "Unexplained bruising — safeguarding concern",
+        category: "child_protection",
+        severity: "critical",
+        clueInStem: "Bruising on Tyler's forearm",
+        whyItMatters: "Unexplained bruising in a child in out-of-home care requires a safeguarding assessment — the source must be established before discharge",
+        relatedLegal: "Child Protection Act; mandatory reporting obligations",
+        modelWording: "The unexplained forearm bruising requires immediate safeguarding assessment — its origin must be established. A mandatory report may be required",
+        keywords: ["bruising", "bruise", "safeguard", "child protection", "mandatory report", "unexplained", "physical"],
+      },
+      {
+        id: "s5",
+        name: "Risk assessment — threat to self",
+        category: "risk_self",
+        severity: "critical",
+        clueInStem: "Threatened to hurt himself",
+        whyItMatters: "The self-harm threat requires direct risk assessment — in the context of trauma, hopelessness about placement, and developmental stage, suicidal ideation must be excluded",
+        modelWording: "Tyler's threat to hurt himself requires direct and developmentally appropriate assessment — in the context of placement disruption and cumulative trauma, suicidal ideation must be explored",
+        keywords: ["risk", "self-harm", "suicidal", "hurt himself", "threat", "risk assessment", "ideation"],
+      },
+      {
+        id: "s6",
+        name: "Aboriginal cultural identity and cultural dislocation",
+        category: "cultural_safety",
+        severity: "critical",
+        clueInStem: "Aboriginal boy; no contact with extended family",
+        whyItMatters: "An Aboriginal child in out-of-home care with no connection to extended family or community represents a failure of the Aboriginal Child Placement Principle — cultural identity loss is a significant mental health risk factor",
+        relatedCultural: "Aboriginal Child Placement Principle; kinship care; cultural connection",
+        modelWording: "Tyler's cultural disconnection — no contact with extended family and likely no connection to Aboriginal community — represents both a safeguarding failure and a significant mental health risk factor. The Aboriginal Child Placement Principle should have been applied",
+        keywords: ["aboriginal", "cultural", "kinship", "placement principle", "cultural identity", "community", "extended family", "cultural dislocation"],
+      },
+      {
+        id: "s7",
+        name: "Inadequate carer — inexperienced casual worker cannot access records",
+        category: "system_pressure",
+        severity: "important",
+        clueInStem: "22-year-old casual worker on her third shift; cannot access previous mental health records",
+        whyItMatters: "A child with complex needs is in the care of an inexperienced casual worker who cannot access clinical records — this is a systemic failure requiring escalation",
+        relatedSystem: "Out-of-home care system; therapeutic residential care; continuity of care records",
+        modelWording: "The absence of clinical records and the inexperience of the current carer are systemic failures that must be escalated to child protection services and the agency responsible for Tyler's care",
+        keywords: ["carer", "casual", "inexperienced", "no records", "systemic", "escalat", "third shift", "out-of-home care"],
+      },
+      {
+        id: "s8",
+        name: "Consent for treatment — state as guardian",
+        category: "capacity",
+        severity: "important",
+        clueInStem: "Child removed from family care; in state care",
+        whyItMatters: "With the state as Tyler's guardian, consent for psychiatric assessment and treatment must be obtained from the appropriate state authority",
+        relatedLegal: "Child Protection Act; statutory guardian for child in state care; consent for medical treatment",
+        modelWording: "As Tyler is in state care, consent for psychiatric assessment and treatment must be obtained from the statutory guardian — the residential carer does not have authority to provide this",
+        keywords: ["consent", "guardian", "state care", "statutory", "authority", "parental responsibility", "guardian consent"],
+      },
+      {
+        id: "s9",
+        name: "Diagnostic formulation — differential to ADHD and bipolar",
+        category: "diagnosis_formulation",
+        severity: "important",
+        clueInStem: "On methylphenidate (ADHD indication?) and valproate (mood stabiliser?); uncertain previous diagnoses",
+        whyItMatters: "ADHD and childhood bipolar disorder are commonly misapplied in complex trauma presentations — the diagnostic basis for current medications must be challenged",
+        modelWording: "The current medications suggest diagnoses of ADHD and possibly bipolar disorder — in a child with complex trauma, both diagnoses may be trauma-related misattributions requiring re-evaluation",
+        keywords: ["ADHD", "bipolar", "differential", "misdiagnosis", "trauma-related", "re-evaluate", "diagnostic uncertainty", "mood disorder"],
+      },
+      {
+        id: "s10",
+        name: "School attendance — educational needs and functional impairment",
+        category: "diagnosis_formulation",
+        severity: "optional",
+        clueInStem: "Attends school irregularly",
+        whyItMatters: "Irregular school attendance indicates functional impairment and reduced protective factors",
+        modelWording: "Irregular school attendance adds to the functional impact — school connection is a key protective factor and its absence is clinically significant",
+        keywords: ["school", "education", "irregular", "attendance", "functioning", "protective"],
+      },
+    ],
+    priorityOrder: {
+      urgent: ["s1", "s2", "s4", "s5"],
+      secondary: ["s3", "s6", "s7", "s8"],
+      lowYield: ["s9", "s10"],
+    },
+    modelAnswer: `Complex developmental trauma: Tyler's behaviour is a trauma and attachment-based crisis response, not a conduct disorder. Chronic neglect, domestic violence exposure, parental loss, and nine placement changes constitute profound developmental adversity.
+
+Precipitant: The direct trigger is the notification of another placement change — this is an attachment rupture response, not random aggression.
+
+Safeguarding: Unexplained bruising on the forearm requires immediate safeguarding assessment and likely a mandatory child protection notification.
+
+Risk assessment: Tyler's threat to hurt himself requires direct, developmentally appropriate assessment including suicidal ideation in the context of cumulative trauma and placement hopelessness.
+
+Cultural safety: As an Aboriginal child in out-of-home care with no family or community connection, the Aboriginal Child Placement Principle has likely not been applied — cultural identity disconnection is a significant mental health risk.
+
+Polypharmacy: Three psychotropic medications of uncertain indication, commenced across multiple placements without records, require urgent medication reconciliation and therapeutic target review.
+
+Systemic failures: The inexperienced casual carer, unavailable records, and state guardianship issues must all be escalated — a holistic system response is required, not just a psychiatric label.
+
+Consent: As Tyler is in state care, the statutory guardian must provide consent for assessment and treatment.`,
+  },
+
+  // ─── 8. CAPACITY / MHA — CTO ─────────────────────────────────────────────
+  {
+    id: "q8",
+    topic: "capacity_mha",
+    difficulty: "difficult",
+    title: "CTO Review — First Episode Psychosis, Recovery and Rights",
+    candidateRole: "Junior consultant psychiatrist, community mental health team",
+    setting: "Community mental health outpatient clinic",
+    stem: `You are a junior consultant psychiatrist in a community mental health team. You are reviewing Marcus, a 26-year-old man with a diagnosis of first-episode psychosis. He was placed on a Community Treatment Order (CTO) eighteen months ago following an acute psychotic episode during which he became acutely agitated and damaged property in his apartment building. He has no history of violence to persons.
+
+Marcus is prescribed paliperidone depot 100 mg monthly. He has received all depot injections on time and has had no further hospital admissions. He works three days per week at a bookshop, has reconnected with his family, and has been attending a weekly recovery group. He tells you: "I'm doing well. The medication helps but it also makes me feel stiff and tired. I want to come off the CTO — I understand I need to keep taking the medication."
+
+His case manager tells you that his mental state has been consistently stable. The CTO is due to expire in six weeks.
+
+Marcus's mother contacts you separately before the appointment to express concern: "He says he's better but I'm terrified of what happens if he goes off the order."`,
+    totalMarks: 22,
+    signals: [
+      {
+        id: "s1",
+        name: "Least restrictive principle — review CTO necessity",
+        category: "mental_health_act",
+        severity: "critical",
+        clueInStem: "Stable for 18 months; all depots received; no admissions; no violence to persons",
+        whyItMatters: "The Mental Health Act requires that involuntary treatment be the least restrictive option — 18 months of stability, adherence, and no violence must prompt genuine consideration of discontinuing the CTO",
+        relatedLegal: "Mental Health Act — least restrictive principle; criteria for CTO continuation",
+        modelWording: "The least restrictive principle requires me to genuinely consider whether a CTO is still necessary — 18 months of adherence, stability, and community functioning is a strong argument for discontinuation",
+        keywords: ["least restrictive", "necessity", "cto necessary", "continuation", "criteria", "still needed", "review criteria", "proportionate"],
+      },
+      {
+        id: "s2",
+        name: "Marcus's insight and autonomy — requests voluntary treatment",
+        category: "consent_refusal",
+        severity: "critical",
+        clueInStem: "'I understand I need to keep taking the medication'",
+        whyItMatters: "Marcus is demonstrating insight and voluntarily agreeing to continued treatment — this significantly weakens the justification for compulsion",
+        modelWording: "Marcus is demonstrating intact insight and voluntary agreement to continued medication — the legal and ethical basis for compulsion is substantially weakened",
+        keywords: ["insight", "autonomous", "voluntary", "agrees to medic", "understands", "self-directed", "voluntary treatment", "own decision"],
+      },
+      {
+        id: "s3",
+        name: "EPSE — stiffness and fatigue are legitimate side effect concerns",
+        category: "physical_health",
+        severity: "critical",
+        clueInStem: "'The medication helps but it also makes me feel stiff and tired'",
+        whyItMatters: "Extrapyramidal side effects and fatigue are recognised adverse effects of paliperidone depot that must be formally assessed and addressed — not dismissed",
+        modelWording: "Stiffness and fatigue on paliperidone depot require formal EPSE assessment (including AIMS), dose review, and consideration of anticholinergic or dose adjustment — these are legitimate treatment concerns, not pretexts",
+        keywords: ["EPSE", "extrapyramidal", "stiffness", "fatigue", "side effect", "AIMS", "dose review", "paliperidone"],
+      },
+      {
+        id: "s4",
+        name: "Functional recovery — work, family, community engagement",
+        category: "diagnosis_formulation",
+        severity: "important",
+        clueInStem: "Works 3 days/week; reconnected with family; attends recovery group",
+        whyItMatters: "Functional recovery — employment, social reconnection, community participation — is a recognised indicator of sustained wellness and a factor supporting CTO discontinuation",
+        modelWording: "Marcus has achieved meaningful functional recovery: part-time employment, family reconnection, and community group participation — all recognised indicators of sustained wellness",
+        keywords: ["functional", "recovery", "employment", "work", "family", "community", "recovery group", "social"],
+      },
+      {
+        id: "s5",
+        name: "Relapse risk assessment — what was the original episode like?",
+        category: "risk_self",
+        severity: "important",
+        clueInStem: "First episode psychosis 18 months ago; property damage but no violence to persons",
+        whyItMatters: "The nature and severity of the original episode and any previous relapses must be reviewed when considering CTO discontinuation",
+        modelWording: "A detailed review of the original episode — precipitants, severity, risk, prodromal features — is essential to inform the relapse risk calculation before discontinuing the CTO",
+        keywords: ["relapse risk", "original episode", "previous psychosis", "precipitant", "prodrome", "risk of relapse", "episode review"],
+      },
+      {
+        id: "s6",
+        name: "Mother's anxiety — triangulation and family dynamics",
+        category: "family_carer",
+        severity: "important",
+        clueInStem: "Mother contacts you separately before appointment expressing terror about what happens if 'off the order'",
+        whyItMatters: "The mother's separate contact is a triangulation dynamic — her anxiety must be acknowledged but cannot override Marcus's rights. The decision is clinically and legally Marcus's",
+        modelWording: "The mother's separate contact must be acknowledged but cannot override Marcus's clinical and legal rights — this dynamic requires family psychoeducation rather than allowing parental anxiety to drive clinical decisions",
+        keywords: ["mother", "family", "triangulation", "separate contact", "anxiety", "family dynamics", "carer concern", "family meeting"],
+      },
+      {
+        id: "s7",
+        name: "Advance care planning — if CTO lapses",
+        category: "disposition",
+        severity: "important",
+        clueInStem: "CTO due to expire in six weeks; stable and voluntary",
+        whyItMatters: "A documented advance care plan — agreed early warning signs, agreed escalation pathway, relapse prevention plan — should be developed before CTO lapse",
+        modelWording: "Before the CTO lapses, a detailed advance care plan should be co-developed with Marcus: agreed early warning signs, relapse prevention strategies, and agreed escalation pathway",
+        keywords: ["advance care", "relapse prevention", "early warning", "plan", "if relapse", "safety plan", "prodrome plan"],
+      },
+      {
+        id: "s8",
+        name: "Evidence for CTO — contested and population-level",
+        category: "mental_health_act",
+        severity: "important",
+        clueInStem: "CTO review requested",
+        whyItMatters: "The evidence base for CTOs in preventing relapse is contested — individual patient factors, not population statistics, should drive this decision",
+        modelWording: "The evidence base for CTOs preventing relapse at the population level is equivocal — the clinical decision must rest on Marcus's individual circumstances, insight, and adherence pattern",
+        keywords: ["evidence", "CTO evidence", "research", "equivocal", "contested", "population", "individual", "evidence base"],
+      },
+      {
+        id: "s9",
+        name: "Paliperidone long-term risks — tardive dyskinesia",
+        category: "physical_health",
+        severity: "optional",
+        clueInStem: "On paliperidone depot for 18 months; stiffness reported",
+        whyItMatters: "Long-term antipsychotic depot use carries risk of tardive dyskinesia — informed consent for continued treatment should include this discussion",
+        modelWording: "Informed consent for continued paliperidone depot should include discussion of tardive dyskinesia risk with prolonged use — Marcus should understand both benefits and long-term risks",
+        keywords: ["tardive", "dyskinesia", "long-term risk", "depot risk", "informed consent", "TD"],
+      },
+    ],
+    priorityOrder: {
+      urgent: ["s1", "s2", "s3"],
+      secondary: ["s4", "s5", "s6", "s7"],
+      lowYield: ["s8", "s9"],
+    },
+    modelAnswer: `Least restrictive principle: After 18 months of adherence, stability, no admissions, and no violence to persons, there is a strong prima facie case for CTO discontinuation. Compulsion must be the least restrictive option available.
+
+Marcus's autonomy: He is demonstrating insight and voluntary agreement to continue medication — the ethical and legal basis for compulsion is substantially weakened. His right to self-determination is central to this decision.
+
+EPSE: Stiffness and fatigue on paliperidone depot are legitimate side effects requiring formal EPSE assessment (AIMS), dose review, and possible dose reduction or adjunct treatment — not dismissal.
+
+Functional recovery: Part-time employment, family reconnection, and community group participation are meaningful indicators of sustained wellness supporting CTO discontinuation.
+
+Relapse risk: The nature of the original episode must be reviewed — precipitants, severity, and prodromal features inform the individual relapse risk calculation.
+
+Mother's contact: Her anxiety is understandable and requires psychoeducation, but her separate contact cannot override Marcus's clinical and legal rights. Family engagement should be offered, not imposed.
+
+Advance care plan: Before the CTO lapses, a documented advance care plan — agreed early warning signs, relapse prevention strategies, and escalation pathway — should be co-developed with Marcus.`,
+  },
+
+  // ─── 9. CL PSYCHIATRY ────────────────────────────────────────────────────
+  {
+    id: "q9",
+    topic: "cl_psychiatry",
+    difficulty: "difficult",
+    title: "Medical Ward — Refusal to Accept Treatment and Diagnostic Uncertainty",
+    candidateRole: "Consultation-liaison psychiatry registrar",
+    setting: "Neurology ward, general hospital",
+    stem: `You are the consultation-liaison psychiatry registrar. You are asked to review Sandra, a 44-year-old woman who was admitted to the neurology ward three days ago after a collapse in a shopping centre. She has a known diagnosis of multiple sclerosis diagnosed eight years ago. She has been treated with interferon beta-1a. The neurology team is concerned because her MRI shows new lesions and she has developed new left-sided weakness.
+
+The neurology team wants to commence high-dose intravenous methylprednisolone. Sandra is refusing this treatment. She says: "I've done my research. Steroids make everything worse in the long run. My MS is my body — I can read it better than any scan can."
+
+The bedside nurse tells you that Sandra has been crying at night, refusing meals on two occasions, and becoming increasingly withdrawn. Sandra's husband is present and visibly distressed. He says to you privately: "She's been low since March when her best friend died of MS — they were diagnosed at the same time."
+
+The neurologist asks you two questions: does Sandra have capacity to refuse this treatment, and is she depressed?`,
+    totalMarks: 22,
+    signals: [
+      {
+        id: "s1",
+        name: "Capacity assessment — four-domain formal assessment required",
+        category: "capacity",
+        severity: "critical",
+        clueInStem: "Neurologist asks: does Sandra have capacity to refuse?",
+        whyItMatters: "A formal capacity assessment across all four domains is required — assuming incapacity because refusal seems unwise is an error",
+        relatedLegal: "Mental Capacity Act principles; treating physician's duty to assess capacity before overriding refusal",
+        modelWording: "I will conduct a formal capacity assessment across all four domains: understanding information about the proposed treatment, retaining it, weighing it against personal values, and communicating a decision. A decision appearing unwise does not constitute incapacity",
+        keywords: ["capac", "four domain", "understand", "retain", "weigh", "communicate", "formal assessment", "capacity assessment"],
+      },
+      {
+        id: "s2",
+        name: "Right to refuse if capacity intact — even life-altering consequences",
+        category: "consent_refusal",
+        severity: "critical",
+        clueInStem: "Sandra refuses steroids; has clearly articulated a belief-based rationale",
+        whyItMatters: "If Sandra retains capacity, her refusal is legally binding even if the treating team believes this will result in permanent disability",
+        modelWording: "If Sandra is found to have capacity for this decision, her refusal of methylprednisolone is legally binding. The clinical team must respect this and redirect to understanding her values and goals of care",
+        keywords: ["right to refuse", "legally binding", "capacitous refusal", "respect decision", "if she has capacity", "binding"],
+      },
+      {
+        id: "s3",
+        name: "Grief reaction — friend's death from MS as precipitant",
+        category: "diagnosis_formulation",
+        severity: "critical",
+        clueInStem: "Low since March when her best friend died of MS — diagnosed at the same time",
+        whyItMatters: "The death of a close friend with the same diagnosis represents an existential and traumatic loss — it may be shaping Sandra's catastrophic attribution about steroids",
+        modelWording: "The death of Sandra's best friend — her 'illness companion' — is a profound loss that may be generating hopelessness, survivor guilt, and catastrophic attribution about her own trajectory. This context is clinically essential",
+        keywords: ["grief", "friend died", "loss", "bereave", "MS friend", "same diagnosis", "existential", "survivor guilt", "hopeless"],
+      },
+      {
+        id: "s4",
+        name: "Depression — likely major depressive episode",
+        category: "diagnosis_formulation",
+        severity: "critical",
+        clueInStem: "Crying at night; refusing meals; increasingly withdrawn; low since March",
+        whyItMatters: "The neurovegetative symptoms — withdrawal, crying, reduced oral intake — in the context of a significant precipitant strongly suggest a major depressive episode",
+        modelWording: "Sandra's presentation — crying at night, refusal of meals, social withdrawal, low mood since March — is consistent with a major depressive episode, possibly complicating her capacity assessment",
+        keywords: ["depression", "major depressive", "MDE", "crying", "withdrawn", "refusing meal", "neurovegetat", "mood disorder"],
+      },
+      {
+        id: "s5",
+        name: "MS and depression — high comorbidity, organic contribution",
+        category: "physical_health",
+        severity: "important",
+        clueInStem: "MS diagnosis 8 years ago; new lesions on MRI",
+        whyItMatters: "Depression is the most common psychiatric comorbidity of MS, occurring in up to 50% of patients — both disease-related and as a psychological response to illness",
+        modelWording: "Depression complicates MS in up to 50% of cases — new MRI lesions may have organic neuropsychiatric contributions, alongside the psychological response to her friend's death",
+        keywords: ["MS depression", "comorbidity", "neuropsychiatric", "organic", "multiple sclerosis", "interferon", "fifty percent"],
+      },
+      {
+        id: "s6",
+        name: "Interferon-beta — associated with depression and flu-like symptoms",
+        category: "physical_health",
+        severity: "important",
+        clueInStem: "Treated with interferon beta-1a",
+        whyItMatters: "Interferon-beta is associated with depression and mood symptoms — this iatrogenic contribution to her low mood must be considered",
+        modelWording: "Interferon beta-1a is associated with depression and mood symptoms — her current medication may be contributing to her psychiatric presentation and requires review with the neurologist",
+        keywords: ["interferon", "interferon beta", "medication-induced", "iatrogenic", "depression", "interferon depression"],
+      },
+      {
+        id: "s7",
+        name: "Husband's distress — carer burden and collateral",
+        category: "family_carer",
+        severity: "important",
+        clueInStem: "Husband visibly distressed; shares information privately",
+        whyItMatters: "The husband is both an essential collateral source and a distressed carer who needs his own support",
+        modelWording: "The husband is a key collateral informant — his account of the timeline is clinically essential. He is also visibly distressed and requires acknowledgement and support",
+        keywords: ["husband", "collateral", "carer", "distressed", "family", "support", "carer burden"],
+      },
+      {
+        id: "s8",
+        name: "Clarifying Sandra's values and goals — not just her decision",
+        category: "diagnosis_formulation",
+        severity: "important",
+        clueInStem: "'My MS is my body — I can read it better than any scan can'",
+        whyItMatters: "Exploring the values and fears behind the refusal — not just the decision itself — is clinically and ethically essential",
+        modelWording: "Sandra's statement suggests she is asserting bodily autonomy and personal knowledge — understanding what she fears about steroids and what she values about her body and treatment is essential before any ethical or legal pathway is pursued",
+        keywords: ["values", "goals of care", "behind the refusal", "fears", "explore", "what does she want", "bodily autonomy", "understand her perspective"],
+      },
+      {
+        id: "s9",
+        name: "Depression impairing capacity — nuanced interaction",
+        category: "capacity",
+        severity: "important",
+        clueInStem: "Depressed; refusing treatment; possibly hopeless",
+        whyItMatters: "A major depressive episode can impair capacity through hopelessness, cognitive slowing, and inability to weigh future consequences — this interaction must be carefully assessed",
+        modelWording: "If depression is impairing Sandra's capacity — specifically through hopelessness reducing her ability to weigh long-term consequences — this is a treatable condition. Treating the depression may restore capacity and change her decision",
+        keywords: ["depression impair", "hopeless", "capacity impaired", "treat depression", "restore capacity", "impairment"],
+      },
+    ],
+    priorityOrder: {
+      urgent: ["s1", "s2", "s3", "s4"],
+      secondary: ["s5", "s6", "s7", "s9"],
+      lowYield: ["s8"],
+    },
+    modelAnswer: `Capacity assessment: I will conduct a formal four-domain capacity assessment — understanding, retaining, weighing, and communicating. A decision that appears unwise does not constitute incapacity.
+
+Right to refuse: If Sandra retains capacity, her refusal of methylprednisolone is legally binding — even if this results in permanent disability. This must be respected.
+
+Grief as precipitant: The death of her best friend with the same MS diagnosis is a profound existential loss — it is very likely shaping catastrophic and hopeless thinking about her own illness trajectory.
+
+Major depressive episode: Crying at night, refusing meals, and social withdrawal in the context of a significant precipitant are consistent with a major depressive episode requiring treatment in its own right.
+
+Depression impairing capacity: If hopelessness is impairing her ability to weigh long-term consequences, her depression may be affecting her capacity. Treating the depression may restore it — this is clinically important.
+
+MS-depression comorbidity: Depression occurs in up to 50% of MS patients, both as disease-related and psychologically driven. New lesions and interferon-beta use both contribute.
+
+Interferon-beta: This is associated with depression and must be reviewed with the neurology team.
+
+Husband: He is both a key collateral informant and a distressed carer requiring his own acknowledgement and support.`,
+  },
+
+  // ─── 10. SUBSTANCE USE ───────────────────────────────────────────────────
+  {
+    id: "q10",
+    topic: "substance_use",
+    difficulty: "difficult",
+    title: "Opioid Substitution Therapy — Pregnancy and Child Protection",
+    candidateRole: "Consultant psychiatrist, drug and alcohol service",
+    setting: "Drug and alcohol outpatient clinic",
+    stem: `You are a consultant psychiatrist working in a drug and alcohol outpatient service. You are reviewing Leanne, a 28-year-old woman who has been on methadone 80 mg daily for two years for heroin dependence. She has been stable, attending pick-ups reliably, and working part-time as a supermarket checkout operator.
+
+At today's appointment, Leanne discloses that she is ten weeks pregnant. She stopped telling you about her pregnancy earlier "because I was worried you'd take the baby." She is in a relationship with her partner Dean, who she describes as "supportive but he drinks every day." She has an older child — a 4-year-old son who lives with her mother following a child protection order three years ago. Leanne's urine drug screen today is positive for benzodiazepines; she says she has been taking her neighbour's diazepam "for anxiety about the pregnancy" for the past three weeks.
+
+She starts crying and says: "I want to do this right this time. I want to keep this baby."`,
+    totalMarks: 25,
+    signals: [
+      {
+        id: "s1",
+        name: "Benzodiazepine use in pregnancy — fetal risk",
+        category: "risk_vulnerable",
+        severity: "critical",
+        clueInStem: "10 weeks pregnant; positive benzodiazepine UDS; three weeks of illicit diazepam",
+        whyItMatters: "Benzodiazepine use in the first trimester carries teratogenic risk — fetal safety is an immediate concern requiring urgent obstetric referral",
+        modelWording: "Illicit benzodiazepine use at 10 weeks gestation is a fetal risk — first trimester teratogenicity, neonatal abstinence syndrome risk, and interaction with methadone must be addressed with urgent obstetric referral",
+        keywords: ["benzodiazepine", "pregnancy", "fetal", "teratogenic", "first trimester", "diazepam", "obstetric", "neonatal", "unborn"],
+      },
+      {
+        id: "s2",
+        name: "Methadone in pregnancy — dose review and obstetric coordination",
+        category: "physical_health",
+        severity: "critical",
+        clueInStem: "On methadone 80 mg; 10 weeks pregnant",
+        whyItMatters: "Methadone pharmacokinetics change significantly across pregnancy — dose review and obstetric coordination are essential; stopping OST is more dangerous than continuing",
+        modelWording: "Methadone dose will need review across the pregnancy as pharmacokinetics change. Urgent obstetric referral and coordination with a specialist perinatal drug and alcohol service is required",
+        keywords: ["methadone", "pregnancy", "dose review", "obstetric", "pharmacokinetic", "perinatal", "OST", "opioid substitution"],
+      },
+      {
+        id: "s3",
+        name: "Child protection notification — previous CP order, current pregnancy",
+        category: "child_protection",
+        severity: "critical",
+        clueInStem: "Older child with grandmother following CP order three years ago; currently pregnant; illicit drug use",
+        whyItMatters: "An existing child protection order, illicit substance use in pregnancy, and a partner who drinks daily create a threshold for notification regarding the unborn child",
+        relatedLegal: "Child Protection Act — unborn child notification; mandatory reporting if risk to unborn",
+        modelWording: "The combination of a previous child protection order, ongoing illicit benzodiazepine use in pregnancy, and a partner with daily alcohol use meets the threshold for notification to child protection regarding the unborn child in most jurisdictions",
+        keywords: ["child protection", "mandatory report", "notification", "unborn", "previous order", "CP order", "DOCS", "welfare", "notify"],
+      },
+      {
+        id: "s4",
+        name: "Delayed disclosure — fear of losing child drives concealment",
+        category: "diagnosis_formulation",
+        severity: "critical",
+        clueInStem: "'I was worried you'd take the baby'",
+        whyItMatters: "Leanne's fear of punitive response has led to a 10-week delay in disclosure — the therapeutic relationship must explicitly address this and counter punitive expectations to enable engagement",
+        modelWording: "Leanne's fear of losing her child has driven a 10-week delay in disclosure — this is a critical engagement issue. The therapeutic approach must explicitly address the non-punitive purpose of services and her motivation to parent",
+        keywords: ["fear", "concealment", "delayed disclosure", "worried", "take the baby", "engagement", "punitive", "therapeutic alliance"],
+      },
+      {
+        id: "s5",
+        name: "Neonatal abstinence syndrome — planning required",
+        category: "risk_vulnerable",
+        severity: "critical",
+        clueInStem: "On methadone 80 mg; 10 weeks pregnant",
+        whyItMatters: "The neonate will likely require NAS monitoring and management — antenatal planning with the paediatric team is essential",
+        modelWording: "The infant is at risk of neonatal abstinence syndrome — antenatal planning with the neonatal team for NAS monitoring, NICU readiness, and parenting support is essential",
+        keywords: ["NAS", "neonatal abstinence", "neonate", "withdrawal", "infant", "baby", "neonatal", "paediatric", "NICU"],
+      },
+      {
+        id: "s6",
+        name: "Partner's daily alcohol use — domestic risk and child safety",
+        category: "risk_vulnerable",
+        severity: "important",
+        clueInStem: "Dean drinks every day",
+        whyItMatters: "A partner with daily alcohol use represents a risk factor for domestic violence and parenting capacity — this must be assessed and not minimised",
+        modelWording: "Dean's daily alcohol use is a significant risk factor that requires assessment — domestic violence risk, parenting capacity, and impact on Leanne's own recovery must all be considered",
+        keywords: ["partner", "dean", "alcohol", "drinks every day", "domestic", "violence", "risk", "parenting capacity"],
+      },
+      {
+        id: "s7",
+        name: "Anxiety about pregnancy — assess for anxiety disorder",
+        category: "diagnosis_formulation",
+        severity: "important",
+        clueInStem: "Taking diazepam 'for anxiety about the pregnancy'",
+        whyItMatters: "Self-medicating anxiety with benzodiazepines indicates an untreated anxiety disorder — this must be formally assessed and addressed with safer alternatives",
+        modelWording: "Leanne's self-treatment of anxiety with illicit diazepam indicates an untreated anxiety disorder — formal assessment and evidence-based anxiety management without benzodiazepines is required",
+        keywords: ["anxiety", "anxiety disorder", "self-medic", "treat anxiety", "CBT", "anxiety management", "untreated"],
+      },
+      {
+        id: "s8",
+        name: "Leanne's motivation — parenting goal as a therapeutic lever",
+        category: "disposition",
+        severity: "important",
+        clueInStem: "'I want to do this right this time. I want to keep this baby.'",
+        whyItMatters: "Leanne's expressed motivation to parent this child is a powerful therapeutic lever — it should be explicitly acknowledged and used to drive engagement with treatment",
+        modelWording: "Leanne's desire to parent this child is a powerful and genuine motivator — this should be explicitly affirmed and used to build the therapeutic alliance and sustained engagement",
+        keywords: ["motivat", "want to keep", "therapeutic lever", "engagement", "parenting goal", "affirm", "positive", "motivation to parent"],
+      },
+      {
+        id: "s9",
+        name: "4-year-old with grandmother — relationship and contact assessment",
+        category: "family_carer",
+        severity: "important",
+        clueInStem: "4-year-old son lives with grandmother following CP order",
+        whyItMatters: "Leanne's older child's welfare and her relationship with him are clinically relevant — the impact of the previous CP order on this pregnancy must be understood",
+        modelWording: "The existing relationship with her 4-year-old, the previous CP order, and the grandmother's role all require assessment — they inform Leanne's current parenting capacity and the family context for this pregnancy",
+        keywords: ["older child", "son", "grandmother", "4-year-old", "previous", "contact", "CP order", "family context"],
+      },
+      {
+        id: "s10",
+        name: "Multidisciplinary perinatal team — obstetrics, D&A, social work, paediatrics",
+        category: "system_pressure",
+        severity: "important",
+        clueInStem: "Complex presentation: OST + pregnancy + illicit use + child protection history",
+        whyItMatters: "This presentation requires a coordinated multidisciplinary perinatal team — single-clinician management is insufficient",
+        modelWording: "Leanne's complexity requires a coordinated perinatal MDT: obstetrics, specialist perinatal drug and alcohol service, social work, paediatrics/neonatology, and child protection. A case conference should be planned",
+        keywords: ["MDT", "multidisciplinary", "team", "obstetric", "social work", "perinatal", "case conference", "coordinated", "paediatric"],
+      },
+    ],
+    priorityOrder: {
+      urgent: ["s1", "s2", "s3", "s5"],
+      secondary: ["s4", "s6", "s7", "s10"],
+      lowYield: ["s8", "s9"],
+    },
+    modelAnswer: `Fetal safety — benzodiazepine use: Illicit diazepam at 10 weeks gestation is a first-trimester fetal risk requiring immediate obstetric referral and urgent cessation with medical supervision.
+
+Methadone in pregnancy: Methadone pharmacokinetics change substantially across pregnancy — OST should continue (stopping is more dangerous), but dosing requires specialist obstetric and perinatal drug and alcohol coordination.
+
+Neonatal abstinence syndrome: Planning for NAS with the neonatal team is essential — NICU readiness, monitoring protocol, and parenting support must be arranged antenatally.
+
+Child protection notification: A previous CP order, ongoing illicit benzodiazepine use in pregnancy, and a partner with daily alcohol use meets the threshold for notification regarding the unborn child.
+
+Delayed disclosure: Leanne's 10-week delay in disclosing the pregnancy reflects fear of punitive response — this must be directly addressed to maintain the therapeutic alliance.
+
+Partner's alcohol use: Daily alcohol use by Dean requires assessment for domestic violence risk and parenting capacity.
+
+Anxiety: Self-medicating anxiety with illicit benzodiazepines indicates an untreated anxiety disorder requiring safe, evidence-based management.
+
+Leanne's motivation: Her expressed desire to parent this child is a genuine and powerful motivator — explicitly acknowledge and use this therapeutically.
+
+MDT: A perinatal case conference with obstetrics, perinatal drug and alcohol, social work, and neonatology is required — this is not a single-clinician case.`,
+  },
 ];
 
 // Filter by topic
