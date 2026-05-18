@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { useBrain, ExtractedItem, ExtractedItemStatus, UPLOAD_CATEGORY_LABELS } from "@/lib/brainStore";
+import { useBrain, ExtractedItem, ExtractedItemStatus } from "@/lib/brainStore";
+import { UPLOAD_CATEGORY_LABELS } from "@/lib/brainConstants";
 import { BrainLayout } from "./BrainLayout";
 import { CheckCircle, Archive, Trash2, Pencil, X, Save, ChevronDown, ChevronUp } from "lucide-react";
 

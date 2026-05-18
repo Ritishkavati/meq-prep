@@ -1,5 +1,6 @@
 import React from "react";
-import { useBrain, PROCESSING_LABELS } from "@/lib/brainStore";
+import { useBrain } from "@/lib/brainStore";
+import { PROCESSING_LABELS } from "@/lib/brainConstants";
 import { BrainLayout } from "./BrainLayout";
 import { Link } from "wouter";
 import { FileText, BookOpen, Map, Tag, Clock, CheckCircle, AlertCircle, Loader2, Upload, BookMarked, Link2 } from "lucide-react";

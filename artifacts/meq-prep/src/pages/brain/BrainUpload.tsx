@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react";
-import { useBrain, UPLOAD_CATEGORY_LABELS, PERMISSION_LABELS, PROCESSING_LABELS, UploadCategory, PermissionStatus, ProcessingStatus } from "@/lib/brainStore";
+import { useBrain, UploadCategory, PermissionStatus, ProcessingStatus } from "@/lib/brainStore";
+import { UPLOAD_CATEGORY_LABELS, PERMISSION_LABELS, PROCESSING_LABELS } from "@/lib/brainConstants";
 import { BrainLayout } from "./BrainLayout";
 import { Upload, FileText, X, CheckCircle, AlertCircle, Loader2, ChevronRight } from "lucide-react";
 
