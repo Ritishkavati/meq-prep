@@ -1,0 +1,174 @@
+Yes — this App Review Pack gives enough for me to assess the structure and help expand the question bank.
+
+Current state of the app:
+
+* It is **React + Vite + TypeScript + Tailwind**.
+* It has **local state only**, no backend, no database, and no AI generation yet.
+* The question bank is in `src/lib/quizData.ts`.
+* The marking engine is in `src/lib/quizEngine.ts`.
+* Current question volume is **27 total questions**, mostly **1–2 per topic**.
+* Target is **30 per topic**, meaning around **600 total questions** for the current 20 topics.
+* The marking is currently **keyword-based**, not semantic/AI-based. 
+
+## What I still need from Replit AI
+
+Ask Replit AI for **one more focused export**, not the whole app.
+
+Paste this:
+
+```text
+Please export the full contents of these files only:
+
+1. src/lib/quizData.ts
+2. src/lib/quizEngine.ts
+3. src/pages/QuizMode.tsx
+
+Also confirm:
+- the exact TopicKey union values
+- the exact DifficultyKey values
+- whether ids must be sequential like q28 or can use topic-based ids like ED-002
+- whether TypeScript accepts separate imported question files, for example edQuestions.ts, perinatalQuestions.ts, etc.
+
+Do not change the app yet.
+This is only for review and expansion by ChatGPT.
+```
+
+## Why I need those files
+
+The App Review Pack gives the schema, but to generate questions that Replit can paste without errors, I need:
+
+1. **Exact TypeScript types**
+
+   * Topic keys must match exactly, for example `cl_psychiatry` not `consultation_liaison`.
+
+2. **Existing ID pattern**
+
+   * I need to avoid duplicate IDs like `q28`.
+
+3. **Current import/export structure**
+
+   * The safest upgrade may be to split questions into topic files:
+
+     * `edQuestions.ts`
+     * `perinatalQuestions.ts`
+     * `qualityAssuranceQuestions.ts`
+     * `supervisionQuestions.ts`
+     * `documentationQuestions.ts`
+
+4. **Keyword matching logic**
+
+   * Because the app is not AI-based yet, every expected signal needs strong keyword coverage. Otherwise correct candidate answers may be marked as missed.
+
+## Can I generate 50 questions per section?
+
+Yes.
+
+But I recommend not doing **50 × 20 topics = 1000 questions** in one step. That will be too large and difficult for Replit AI to paste/debug.
+
+Better plan:
+
+### Phase 1 — fix high-yield missing sections first
+
+Start with 50 questions each for:
+
+1. **Quality Assessment & Quality Assurance**
+2. **Supervision & Feedback**
+3. **Documentation & Communication**
+4. **Discharge Summary / Report Review**
+5. **Emergency Department**
+6. **Perinatal Psychiatry**
+7. **Capacity & Mental Health Act**
+8. **Governance & Leadership**
+
+That gives you the most exam-relevant consultant-level spread first.
+
+### Phase 2 — expand remaining sections
+
+Then add 30–50 each for:
+
+* CL psychiatry
+* forensic
+* old age
+* child and adolescent
+* substance use
+* cultural safety
+* rural psychiatry
+* ethics/professionalism
+* psychotherapy/boundaries
+* MDT conflict/systems pressure
+* risk assessment
+
+## What I can produce for you
+
+Once you send `quizData.ts`, I can generate Replit-ready TypeScript blocks like:
+
+```ts
+{
+  id: "QA-001",
+  topic: "quality_assurance",
+  difficulty: "consultant",
+  title: "Lithium Toxicity Missed After Discharge",
+  candidateRole: "Director of psychiatry / supervising consultant",
+  setting: "Community mental health service and ED interface",
+  stem: `...`,
+  totalMarks: 25,
+  signals: [
+    {
+      id: "s1",
+      name: "Failure to act on lithium toxicity red flags",
+      category: "physical_health",
+      severity: "critical",
+      clueInStem: "The GP letter documented tremor, vomiting and confusion after lithium dose increase",
+      whyItMatters: "...",
+      modelWording: "...",
+      keywords: ["lithium", "toxicity", "tremor", "vomiting", "confusion"]
+    }
+  ],
+  priorityOrder: {
+    urgent: ["s1", "s2"],
+    secondary: ["s3", "s4"],
+    lowYield: ["s5"]
+  },
+  modelAnswer: `...`
+}
+```
+
+Each question will include:
+
+* consultant-level stem
+* diagnostic/system complexity
+* expected signal map
+* exact stem clues
+* critical/important/optional signal grading
+* traps
+* model wording
+* keyword array for the current marking engine
+* model answer
+
+## My quality rule for generating questions
+
+I will not just create generic psychiatry questions.
+
+Every question must satisfy this:
+
+> The stem must contain the clue.
+> The signal must quote the clue.
+> The model wording must explain why that clue matters.
+
+For example:
+
+Bad signal:
+
+> “Consider child protection.”
+
+Good signal:
+
+> “The phrase ‘she wants to leave to collect her two children’ plus psychosis, meth use, weapon carriage and refusal of care should trigger child safety assessment, collateral from the cousin, and possible child protection involvement.”
+
+## Next best step
+
+Send me the full `quizData.ts` first.
+
+Then I suggest I generate the first pack:
+
+> **50 Quality Assessment & Quality Assurance questions**, because your current app has only 2 in that section and this is one of the biggest missing consultant-level domains.

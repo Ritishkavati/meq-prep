@@ -6,3 +6,9 @@ id = "jS392EDsUKcMstxKpm6Ix"
 uri = "file://MEQ_PREP_APP_REVIEW_PACK.md"
 type = "text"
 title = "MEQ Prep — App Review Pack"
+
+[[outputs]]
+id = "dvPdKmuV6xHfs2ZFkBqva"
+uri = "file://MEQ_PREP_CODE_EXPORT.md"
+type = "text"
+title = "MEQ Prep — Code Export Pack"
