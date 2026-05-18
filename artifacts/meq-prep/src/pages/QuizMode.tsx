@@ -10,7 +10,7 @@ import {
 // DifficultyKey kept for store compatibility; difficulty UI removed from setup
 import {
   assessAnswer, createAttempt, saveAttempt, QuizResult,
-  CATEGORY_LABELS,
+  CATEGORY_LABELS, hasStemBeenAttempted,
 } from "@/lib/quizEngine";
 import {
   getNextStem, getTopicStats, resetTopicProgress, TopicStats,
@@ -145,12 +145,15 @@ function SetupScreen({
 
 // ─── Quiz screen ──────────────────────────────────────────────────────────────
 function QuizScreen({
-  stem, timeSecs, onSubmit,
+  stem, timeSecs, onSubmit, alreadyAttempted, onSkipToNext,
 }: {
   stem: QuizStem;
   timeSecs: number;
   onSubmit: (answer: string, timeUsed: number) => void;
+  alreadyAttempted: boolean;
+  onSkipToNext: () => void;
 }) {
+  const [skipDismissed, setSkipDismissed] = useState(false);
   const [answer, setAnswer] = useState("");
   const [timeLeft, setTimeLeft] = useState(timeSecs);
   const [started, setStarted] = useState(false);
@@ -227,6 +230,32 @@ function QuizScreen({
           {stem.stem}
         </div>
       </div>
+
+      {/* Already-attempted notice */}
+      {alreadyAttempted && !skipDismissed && (
+        <div className="flex items-center justify-between gap-3 bg-violet-50 border border-violet-200 rounded-xl px-4 py-3">
+          <div className="flex items-center gap-2 min-w-0">
+            <RotateCw className="w-4 h-4 text-violet-500 flex-shrink-0" />
+            <p className="text-sm text-violet-800 font-medium">
+              You've already attempted this stem.
+            </p>
+          </div>
+          <div className="flex items-center gap-2 flex-shrink-0">
+            <button
+              onClick={onSkipToNext}
+              className="flex items-center gap-1.5 bg-violet-600 text-white text-xs font-semibold px-3 py-1.5 rounded-lg hover:bg-violet-700 transition-colors"
+            >
+              <ArrowRight className="w-3.5 h-3.5" /> Skip to Next Quiz
+            </button>
+            <button
+              onClick={() => setSkipDismissed(true)}
+              className="text-xs text-violet-500 hover:text-violet-700 px-2 py-1.5 rounded transition-colors"
+            >
+              Dismiss
+            </button>
+          </div>
+        </div>
+      )}
 
       {/* timer */}
       <div className={`bg-white rounded-2xl border shadow-sm p-5 ${urgent ? "border-red-300 bg-red-50" : "border-card-border"}`}>
@@ -914,6 +943,7 @@ export default function QuizMode() {
   const [currentTimeSecs, setCurrentTimeSecs] = useState(180);
   const [result, setResult] = useState<QuizResult | null>(null);
   const [sessionProgress, setSessionProgress] = useState({ attempted: 0, available: 0 });
+  const [stemAlreadyAttempted, setStemAlreadyAttempted] = useState(false);
 
   function refreshProgress(topic: TopicKey) {
     const stats = getTopicStats(topic);
@@ -925,6 +955,7 @@ export default function QuizMode() {
     setCurrentStem(stem);
     setCurrentTopic(topic);
     setCurrentTimeSecs(timeSecs);
+    setStemAlreadyAttempted(hasStemBeenAttempted(stem.id));
     refreshProgress(topic);
     setPhase("quiz");
   }
@@ -943,6 +974,7 @@ export default function QuizMode() {
     const stem = getNextStem(currentTopic, undefined, currentStem?.id);
     setCurrentStem(stem);
     setResult(null);
+    setStemAlreadyAttempted(hasStemBeenAttempted(stem.id));
     refreshProgress(currentTopic);
     setPhase("quiz");
   }
@@ -983,7 +1015,13 @@ export default function QuizMode() {
       )}
 
       {phase === "quiz" && currentStem && (
-        <QuizScreen stem={currentStem} timeSecs={currentTimeSecs} onSubmit={handleSubmit} />
+        <QuizScreen
+          stem={currentStem}
+          timeSecs={currentTimeSecs}
+          onSubmit={handleSubmit}
+          alreadyAttempted={stemAlreadyAttempted}
+          onSkipToNext={handleNextQuestion}
+        />
       )}
       {phase === "results" && currentStem && result && (
         <ResultsScreen

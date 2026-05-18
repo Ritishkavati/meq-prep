@@ -456,6 +456,14 @@ export function loadAttempts(): QuizAttempt[] {
   }
 }
 
+export function hasStemBeenAttempted(stemId: string): boolean {
+  try {
+    return loadAttempts().some((a) => a.stemId === stemId);
+  } catch {
+    return false;
+  }
+}
+
 function uid(): string {
   return Math.random().toString(36).slice(2, 10);
 }
