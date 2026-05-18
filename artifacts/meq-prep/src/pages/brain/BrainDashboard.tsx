@@ -2,7 +2,7 @@ import React from "react";
 import { useBrain, PROCESSING_LABELS } from "@/lib/brainStore";
 import { BrainLayout } from "./BrainLayout";
 import { Link } from "wouter";
-import { FileText, BookOpen, Map, Tag, Clock, CheckCircle, AlertCircle, Loader2, Upload } from "lucide-react";
+import { FileText, BookOpen, Map, Tag, Clock, CheckCircle, AlertCircle, Loader2, Upload, BookMarked, Link2 } from "lucide-react";
 import { format } from "date-fns";
 
 function StatusBadge({ status }: { status: string }) {
@@ -119,6 +119,42 @@ export default function BrainDashboard() {
           >
             <Upload className="w-4 h-4" />
             Upload materials
+          </Link>
+        </div>
+
+        <div className="grid sm:grid-cols-2 gap-4">
+          <Link
+            href="/brain/ps/add"
+            className="bg-white rounded-2xl border border-card-border shadow-sm p-5 flex items-center gap-4 hover:border-accent hover:shadow-md transition-all group"
+          >
+            <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0 group-hover:bg-accent/20 transition-colors">
+              <BookMarked className="w-5 h-5 text-accent" />
+            </div>
+            <div>
+              <p className="font-serif font-bold text-primary text-sm">
+                Add RANZCP Position Statement
+              </p>
+              <p className="text-xs text-muted-foreground mt-0.5">
+                Record key principles, MEQ relevance and exam signals from official RANZCP policy.
+              </p>
+            </div>
+          </Link>
+
+          <Link
+            href="/brain/ps/import"
+            className="bg-white rounded-2xl border border-card-border shadow-sm p-5 flex items-center gap-4 hover:border-accent hover:shadow-md transition-all group"
+          >
+            <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
+              <Link2 className="w-5 h-5 text-primary" />
+            </div>
+            <div>
+              <p className="font-serif font-bold text-primary text-sm">
+                Import Position Statement Library
+              </p>
+              <p className="text-xs text-muted-foreground mt-0.5">
+                Store official RANZCP URLs or bulk-import from PDF, DOCX or CSV files.
+              </p>
+            </div>
           </Link>
         </div>
       </div>
