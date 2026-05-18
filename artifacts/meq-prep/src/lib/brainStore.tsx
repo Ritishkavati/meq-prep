@@ -270,6 +270,217 @@ const SEED_FILES: UploadedFile[] = [
       "ED", "Aboriginal", "child and adolescent", "group home", "polypharmacy",
     ],
   },
+
+  // ── Batch uploaded May 2026 ──
+  {
+    id: "f_meq_notes_1",
+    filename: "Course-Resources-MEQ_Notes_Part_I.pdf",
+    fileType: "pdf",
+    uploadCategory: "clinical_framework",
+    sourceName: "Psych Scene MEQ Course Resources",
+    year: "2024",
+    permissionStatus: "personal_study_only",
+    uploadedAt: new Date("2026-05-18T10:00:00"),
+    processingStatus: "ready",
+    topicTags: [
+      "ADHD", "adult ADHD", "methylphenidate", "atomoxetine", "dexamphetamine",
+      "ADHD comorbidity", "ADHD substance use", "neuroimaging", "dopamine", "CBT for ADHD",
+      "stimulant medication", "rating scales", "CAARS", "ASRS",
+    ],
+  },
+  {
+    id: "f_meq_notes_2",
+    filename: "Course-Resources-MEQ_Notes_Part_II.pdf",
+    fileType: "pdf",
+    uploadCategory: "clinical_framework",
+    sourceName: "Psych Scene MEQ Course Resources",
+    year: "2024",
+    permissionStatus: "personal_study_only",
+    uploadedAt: new Date("2026-05-18T10:01:00"),
+    processingStatus: "ready",
+    topicTags: [
+      "intellectual disability", "ID assessment", "challenging behaviour", "diagnostic overshadowing",
+      "functional analysis", "positive behaviour support", "somatising", "somatisation in children",
+      "communication ID", "capacity ID", "ABA", "PBS",
+    ],
+  },
+  {
+    id: "f_culture_soma",
+    filename: "Culture-somatisation-relationship.pdf",
+    fileType: "pdf",
+    uploadCategory: "marking_guide",
+    sourceName: "RANZCP MEQ Marking Guide (Adora — culture/somatisation)",
+    year: "2016",
+    permissionStatus: "personal_study_only",
+    uploadedAt: new Date("2026-05-18T10:02:00"),
+    processingStatus: "ready",
+    topicTags: [
+      "pseudoseizures", "functional neurological disorder", "CALD", "Filipino", "domestic violence",
+      "somatisation", "cultural safety", "marital conflict", "history taking", "marking guide",
+      "social stressors", "migration", "isolation",
+    ],
+  },
+  {
+    id: "f_dementia_carer",
+    filename: "Dementia-and-carer-burden.pdf",
+    fileType: "pdf",
+    uploadCategory: "marking_guide",
+    sourceName: "RANZCP August 2019 Writtens — MEQ 5",
+    year: "2019",
+    permissionStatus: "personal_study_only",
+    uploadedAt: new Date("2026-05-18T10:03:00"),
+    processingStatus: "ready",
+    topicTags: [
+      "dementia", "Alzheimer's", "aged persons mental health", "carer burden", "advance care planning",
+      "driving", "power of attorney", "behavioural BPSD", "agitation", "home management",
+      "cognitive stimulation", "alcohol in dementia", "marking guide",
+    ],
+  },
+  {
+    id: "f_eating_disorder",
+    filename: "Eating-disorder.pdf",
+    fileType: "pdf",
+    uploadCategory: "marking_guide",
+    sourceName: "RANZCP August 2018 Writtens — MEQ 5",
+    year: "2018",
+    permissionStatus: "personal_study_only",
+    uploadedAt: new Date("2026-05-18T10:04:00"),
+    processingStatus: "ready",
+    topicTags: [
+      "anorexia nervosa", "eating disorder", "adolescent", "child and adolescent", "BMI",
+      "cardiac instability", "electrolytes", "refeeding syndrome", "hospital admission criteria",
+      "amenorrhoea", "medical risk", "marking guide",
+    ],
+  },
+  {
+    id: "f_formulation",
+    filename: "Formulation2_MEQ-Lecture.pdf",
+    fileType: "pdf",
+    uploadCategory: "clinical_framework",
+    sourceName: "Psych Scene MEQ Formulation Lecture",
+    year: "2024",
+    permissionStatus: "personal_study_only",
+    uploadedAt: new Date("2026-05-18T10:05:00"),
+    processingStatus: "ready",
+    topicTags: [
+      "formulation", "biopsychosocial", "BPS formulation", "cultural formulation",
+      "attachment theory", "cognitive model", "depression CBT model", "anxiety model",
+      "bipolar CBT", "bulimia cognitive model", "Erikson", "psychodynamic formulation",
+      "cannabis psychosis", "neurodevelopmental hypothesis",
+    ],
+  },
+  {
+    id: "f_indigenous_trauma",
+    filename: "Indigenous-trauma-accountant-and-relationship-issues-dementia.pdf",
+    fileType: "pdf",
+    uploadCategory: "marking_guide",
+    sourceName: "RANZCP August 2017 Writtens — MEQ 1",
+    year: "2017",
+    permissionStatus: "personal_study_only",
+    uploadedAt: new Date("2026-05-18T10:06:00"),
+    processingStatus: "ready",
+    topicTags: [
+      "Indigenous", "Wiradjuri", "PTSD", "sexual assault", "cultural safety", "trauma",
+      "re-traumatisation", "rural psychiatry", "gender", "women's business",
+      "community mental health", "Aboriginal mental health worker", "marking guide",
+      "intergenerational trauma", "elder status",
+    ],
+  },
+  {
+    id: "f_mgmt_psych",
+    filename: "Management-of-Psychiatric-Disorders_MEQ.pdf",
+    fileType: "pdf",
+    uploadCategory: "clinical_framework",
+    sourceName: "Psych Scene MEQ Course — Management Notes",
+    year: "2024",
+    permissionStatus: "personal_study_only",
+    uploadedAt: new Date("2026-05-18T10:07:00"),
+    processingStatus: "ready",
+    topicTags: [
+      "GAD", "generalised anxiety disorder", "panic disorder", "PTSD management", "OCD management",
+      "CBT GAD", "SSRIs anxiety", "pregabalin", "relapse prevention", "GAD-7",
+      "risk domains", "management framework", "psychiatric disorders overview",
+    ],
+  },
+  {
+    id: "f_examiner_inst",
+    filename: "MEQ-Instructions-to-Examiners.pdf",
+    fileType: "pdf",
+    uploadCategory: "other",
+    sourceName: "RANZCP MEQ Examiner Instructions",
+    year: "2015",
+    permissionStatus: "personal_study_only",
+    uploadedAt: new Date("2026-05-18T10:08:00"),
+    processingStatus: "ready",
+    topicTags: [
+      "examiner instructions", "marking guide", "list", "outline", "discuss",
+      "marking criteria", "exam technique", "scoring key", "MEQ format",
+    ],
+  },
+  {
+    id: "f_prac_v1",
+    filename: "MEQ-Practice-Qs_Video-1.pdf",
+    fileType: "pdf",
+    uploadCategory: "old_meq_questions",
+    sourceName: "MEQ video series practice questions — Video 1",
+    year: "2024",
+    permissionStatus: "personal_study_only",
+    uploadedAt: new Date("2026-05-18T10:09:00"),
+    processingStatus: "ready",
+    topicTags: [
+      "PTSD", "childhood sexual abuse", "self-harm", "perinatal psychiatry",
+      "psychotropics in pregnancy", "sodium valproate", "refugee", "Serbia",
+      "CL psychiatry", "headache", "cultural identity",
+    ],
+  },
+  {
+    id: "f_prac_v2",
+    filename: "MEQ-Practice-Qs_Video-2.pdf",
+    fileType: "pdf",
+    uploadCategory: "old_meq_questions",
+    sourceName: "MEQ video series practice questions — Video 2",
+    year: "2024",
+    permissionStatus: "personal_study_only",
+    uploadedAt: new Date("2026-05-18T10:10:00"),
+    processingStatus: "ready",
+    topicTags: [
+      "dementia BPSD", "care staff education", "ABC chart", "bipolar", "CTO",
+      "risperidone", "lithium", "IPSRT", "CL pituitary", "pituitary carcinoma",
+      "mood lability organic", "family enmeshment",
+    ],
+  },
+  {
+    id: "f_prac_v3",
+    filename: "MEQ-Practice-Qs_Video-3.pdf",
+    fileType: "pdf",
+    uploadCategory: "old_meq_questions",
+    sourceName: "MEQ video series practice questions — Video 3",
+    year: "2024",
+    permissionStatus: "personal_study_only",
+    uploadedAt: new Date("2026-05-18T10:11:00"),
+    processingStatus: "ready",
+    topicTags: [
+      "impaired doctor", "AHPRA", "ethics", "delirium", "testamentary capacity",
+      "EPA", "encopresis", "child psychiatry", "domestic violence child",
+      "acute psychosis in family member", "CL ward aggression",
+    ],
+  },
+  {
+    id: "f_prac_v4",
+    filename: "MEQ-Practice-Qs_Video-4.pdf",
+    fileType: "pdf",
+    uploadCategory: "old_meq_questions",
+    sourceName: "MEQ video series practice questions — Video 4",
+    year: "2024",
+    permissionStatus: "personal_study_only",
+    uploadedAt: new Date("2026-05-18T10:12:00"),
+    processingStatus: "ready",
+    topicTags: [
+      "chronic fatigue syndrome", "sleep disorder", "delayed sleep phase", "adolescent",
+      "treatment-resistant depression", "ECT", "elderly depression", "psychotic depression",
+      "nortriptyline", "hypomania post-ECT", "nihilistic delusions",
+    ],
+  },
 ];
 
 const SEED_EXTRACTED: ExtractedItem[] = [
@@ -558,6 +769,218 @@ const SEED_EXTRACTED: ExtractedItem[] = [
       "Child protection; cultural safety; consent to treatment in state care; polypharmacy risk; Aboriginal and Torres Strait Islander cultural considerations",
     candidatePitfalls:
       "Labelling as conduct disorder without exploring trauma; ignoring cultural context; not critiquing polypharmacy",
+    status: "approved",
+  },
+  // ── From Culture-somatisation-relationship (Adora) ──
+  {
+    id: "e_adora_6_1",
+    fileId: "f_culture_soma",
+    scenario:
+      "Adora, 26yo Filipina woman, emigrated 5 years ago. Married to Jeff (works offshore 2 weeks/month). 4-year-old son Ben. Few friends, no family support. Ben has sleep difficulties. Marital conflict. Witnessed having a fit in supermarket; ED registrar believes pseudo-seizures.",
+    question: "Outline (list and justify) the salient features of the history you would like your registrar to focus on. (12 marks)",
+    marks: 12,
+    topic: "CL Psychiatry / Cultural / Somatisation",
+    stemNumber: 1,
+    expectedSignals: [
+      "Detailed description of the fit — features, previous seizure history, basis for pseudo-seizure conclusion",
+      "Characteristics of past episodes: injuries, incontinence, aura, postictal recovery, precipitants, secondary gain",
+      "History of depression and/or anxiety symptoms; neurovegetative disturbance",
+      "Alcohol and substance use",
+      "Past and current medication: anticonvulsants, psychotropics, over-the-counter",
+      "Clarification of current stressors: mother-child relationship, Ben's behaviour and sleep",
+      "Clarification of marital relationship: development, conflicts, domestic violence",
+      "Clarification of social circumstances: supports, housing, finances",
+      "Cultural issues and language differences — isolation as a migrant",
+    ],
+    examinerFocus:
+      "History must cover seizure description, psychiatric symptoms, social stressors, marital/domestic situation, and cultural isolation — each with justification",
+    riskLegalCultural:
+      "Pseudoseizures as somatisation of distress; domestic violence risk; cultural isolation; child wellbeing with overwhelmed mother",
+    candidatePitfalls:
+      "Focusing only on seizure description without exploring psychiatric, social, and cultural context; missing domestic violence; ignoring Ben's wellbeing",
+    status: "approved",
+  },
+  {
+    id: "e_adora_6_2",
+    fileId: "f_culture_soma",
+    scenario:
+      "Adora, 26yo Filipina. ED presentation with pseudo-seizures. Has few supports, marital conflict, sole parent for 2 weeks/month.",
+    question: "Outline (list and justify) the salient features of the examination you would like your registrar to focus on. (4 marks)",
+    marks: 4,
+    topic: "CL Psychiatry / Cultural / Somatisation",
+    stemNumber: 2,
+    expectedSignals: [
+      "Physical examination: evidence of injuries from fit; bruising from possible domestic violence; signs of alcohol/substance use",
+      "Mental state examination: no delirium or postictal confusion; pertinent psychopathology; interaction style",
+      "Contextual observations: information from ED staff on behaviour",
+    ],
+    examinerFocus:
+      "Physical exam must include domestic violence screening; mental state must exclude organic cause before psychiatric diagnosis",
+    riskLegalCultural:
+      "Domestic violence; capacity assessment; child protection if mother is significantly unwell",
+    candidatePitfalls:
+      "Only documenting MSE without physical exam; missing bruising as DV indicator; not seeking ED staff observations",
+    status: "approved",
+  },
+  // ── From Dementia-and-carer-burden Aug 2019 (Mrs Hilton) ──
+  {
+    id: "e_hilton_5_1",
+    fileId: "f_dementia_carer",
+    scenario:
+      "Mrs Hilton, 69yo retired school teacher. Referred by GP. Early dementia diagnosed by consultant psychiatrist. Mr Hilton wants to care for wife at home. Gradual changes over 2 years: social withdrawal, low mood, disorientation, forgetfulness, stove left on, sleep disturbance, increasing alcohol use.",
+    question: "Describe (list and explain) what information you can give Mr Hilton about how dementia is managed at home. (10 marks)",
+    marks: 10,
+    topic: "Old Age Psychiatry / Dementia / Carer",
+    stemNumber: 1,
+    expectedSignals: [
+      "Interventions to promote cognition and wellbeing: tailored recreational activities, gentle exercise, meaningful occupation",
+      "Group cognitive stimulation therapy for mild-to-moderate dementia",
+      "Group reminiscence therapy",
+      "Cognitive rehabilitation or OT to support functional ability",
+      "Biological: avoiding alcohol and anticholinergic medications; good medical and dental management; dementia medications",
+      "Psychological: information about dementia; supportive grief counselling for carer and patient",
+      "Social: strategies to relieve carer stress; support services for dementia (Alzheimer's Australia)",
+      "Legal: driving; capacity; financial management; Power of Attorney (health, welfare, property); Advance Care Planning",
+      "Environmental: stable daily routine; orientating cues; making home safe (stove, fire, hot water)",
+    ],
+    examinerFocus:
+      "Comprehensive biopsychosocial-legal home management; list without explanation receives no marks; driving and legal issues must be included",
+    riskLegalCultural:
+      "Driving safety; capacity; Power of Attorney; advance care planning; alcohol contributing to cognitive decline",
+    candidatePitfalls:
+      "List without explanation; omitting legal issues (driving, EPOA); ignoring alcohol contributing to dementia; not mentioning carer burden strategies",
+    status: "approved",
+  },
+  {
+    id: "e_hilton_5_2",
+    fileId: "f_dementia_carer",
+    scenario:
+      "Mrs Hilton, 69yo, early dementia. Mr Hilton requests advice about managing periods of agitation.",
+    question: "Outline (list and justify) the non-pharmacological strategies you would suggest to Mr Hilton. (8 marks)",
+    marks: 8,
+    topic: "Old Age Psychiatry / BPSD / Carer",
+    stemNumber: 2,
+    expectedSignals: [
+      "Prevention: reduce caffeine and alcohol; good sleep routine",
+      "Identify triggers and modify environment (reduce stimulation, noise, crowds)",
+      "Maintain daily routine and predictability",
+      "Distraction and redirection — music, activity, familiar objects",
+      "Validation therapy — acknowledge feelings rather than correct reality",
+      "Caregiver approach: calm tone, non-confrontational, avoid arguing",
+      "Respite care for carer",
+      "Education and support groups for Mr Hilton",
+    ],
+    examinerFocus:
+      "Non-pharmacological must come first; each strategy must be justified in context of dementia agitation",
+    riskLegalCultural:
+      "Carer burnout; risk of falls during agitation; patient dignity and autonomy in dementia",
+    candidatePitfalls:
+      "Immediately recommending medication; listing strategies without justification; ignoring carer's own burden",
+    status: "approved",
+  },
+  // ── From Eating-disorder Aug 2018 (Emily) ──
+  {
+    id: "e_emily_5_1",
+    fileId: "f_eating_disorder",
+    scenario:
+      "Emily, 14yo girl. 15kg weight loss over 6 months. Eating only leafy vegetables, jogging at least 1 hour/day. Amenorrhoeic 3 months. BMI 15 kg/m². Believes she is still overweight. Presents to community C&A clinic.",
+    question: "Outline (list and justify) the key aims of the initial assessment. (8 marks)",
+    marks: 8,
+    topic: "Child & Adolescent / Eating Disorder",
+    stemNumber: 1,
+    expectedSignals: [
+      "Immediate risk: medical risk; self-harm associated with psychological vulnerability; eating disorder behaviours (purging, laxatives, diet tablets)",
+      "Developmental and diagnostic issues: exclude comorbid anxiety, mood, cognitive effects; school and social functioning context",
+      "Legal framework: relevant legislation for treatment of a minor",
+      "Patient perspective: Emily's understanding of reason for attendance; capacity assessment — affects engagement",
+      "Family and social perspective: family context, support, capabilities, attitudes; parental response; family stressors",
+      "Treatment setting: balancing patient and family preference with risk minimisation",
+    ],
+    examinerFocus:
+      "Each aim must be justified — list without justification receives no marks; medical risk and capacity must be explicit",
+    riskLegalCultural:
+      "Medical risk (cardiac, electrolytes); legal framework for treating a minor; capacity for a 14-year-old; family engagement",
+    candidatePitfalls:
+      "Focusing only on diagnosis without addressing risk; not assessing family; ignoring legal/capacity dimension for a minor",
+    status: "approved",
+  },
+  {
+    id: "e_emily_5_2",
+    fileId: "f_eating_disorder",
+    scenario:
+      "Emily, 14yo, BMI 15, anorexia nervosa. Assessing whether hospital admission is required.",
+    question: "Outline (list and justify) the specific physical findings and investigations that would indicate that hospital admission may be required. (6 marks)",
+    marks: 6,
+    topic: "Child & Adolescent / Eating Disorder / Medical Risk",
+    stemNumber: 2,
+    expectedSignals: [
+      "Cardiac instability: postural tachycardia >20bpm, postural hypotension >10mmHg drop, HR <40 or >120, systolic BP <90 — cardiac muscle atrophy and sudden death risk",
+      "Temperature: hypothermia <35.5°C or cold extremities — impaired thermoregulation and mortality risk",
+      "Blood glucose: hypoglycaemia <3.0 mmol/L",
+      "Abnormal ECG: any arrhythmia, non-specific ST/T changes, prolonged QTc — torsades de pointes risk",
+      "Significant electrolyte abnormalities: sodium <130, hypokalaemia, hypophosphataemia — arrhythmia and refeeding risk",
+      "Other investigations: neutropenia <1.5, reduced albumin, elevated liver enzymes — infection and organ failure risk",
+      "BMI <14",
+    ],
+    examinerFocus:
+      "Each physical finding or investigation must be paired with its clinical justification; specific thresholds expected",
+    riskLegalCultural:
+      "Medical emergency criteria; refeeding syndrome; risk of sudden cardiac death; legal authority to admit a minor involuntarily",
+    candidatePitfalls:
+      "Listing findings without clinical thresholds or justification; missing electrolyte abnormalities and refeeding risk; not mentioning QTc",
+    status: "approved",
+  },
+  // ── From Indigenous-trauma Aug 2017 (Donna) ──
+  {
+    id: "e_donna_1_1",
+    fileId: "f_indigenous_trauma",
+    scenario:
+      "Donna, 56yo Wiradjuri woman. Seen urgently by visiting psychiatrist in rural town of 3000. Lost to care 2 years ago after anxiety/depression. Now re-presented: rapist released from jail 3 weeks ago after 22-year sentence, returned to town. Donna cannot leave home, not sleeping. Contacted police — found their response unhelpful. Not suicidal or psychotic.",
+    question: "Outline (list and justify) the cultural considerations relevant to your interaction with Donna. (10 marks)",
+    marks: 10,
+    topic: "Cultural Safety / Indigenous / Trauma",
+    stemNumber: 1,
+    expectedSignals: [
+      "Consider and offer involvement of a culturally appropriate support person, subject to Donna's approval; preparedness to defer to their advice",
+      "Establishing engagement in a culturally appropriate manner: verbal and non-verbal communication; bilateral cultural factors in the interaction",
+      "Gender aspects: 'women's business' in Indigenous culture; cultural chaperone if appropriate",
+      "Clarification of Indigenous Elder status of both Donna and her assailant and/or his family — social status implications",
+      "Awareness of cross-cultural and intergenerational trauma; elevated rates of community violence and sexual assault",
+      "Recognising the local community's experience of mental health services and government agencies — potential distrust",
+    ],
+    examinerFocus:
+      "Each cultural consideration must be justified — list without justification receives no marks; Elder status and community distrust of services are high-yield",
+    riskLegalCultural:
+      "Re-traumatisation risk; community safety (assailant in same small town); police response inadequacy; Intervention Order; cultural safety",
+    candidatePitfalls:
+      "Generic cultural sensitivity without linking to Wiradjuri-specific context; missing Elder status implications; ignoring community's distrust of services",
+    status: "approved",
+  },
+  {
+    id: "e_donna_1_2",
+    fileId: "f_indigenous_trauma",
+    scenario:
+      "Donna, 56yo Wiradjuri woman. Re-presenting after rapist's release. Cannot leave home. Not sleeping. Police unhelpful.",
+    question: "List the most important issues you wish to clarify in your review of this patient. (8 marks)",
+    marks: 8,
+    topic: "Cultural Safety / Indigenous / PTSD",
+    stemNumber: 2,
+    expectedSignals: [
+      "Clarification of current stressor — nature of the threat, contact risk with assailant",
+      "Clarification of previous trauma — extent of the assault and its aftermath",
+      "Role of the trauma especially with regard to the Indigenous person — intergenerational, community, cultural dimensions",
+      "Current psychiatric symptoms — PTSD, depression, anxiety, agoraphobia",
+      "Risk assessment — suicidal ideation, self-harm, hopelessness",
+      "Safety planning — practical safety in the community",
+      "Social supports — who knows, who can help, community connections",
+      "Previous mental health treatment and response",
+    ],
+    examinerFocus:
+      "Issues must be clinically and culturally specific; risk assessment and safety planning are essential; trauma history must be approached sensitively",
+    riskLegalCultural:
+      "Trauma re-activation; PTSD; safety in small community with assailant; police failure as systemic issue; cultural dimensions of trauma",
+    candidatePitfalls:
+      "Generic psychiatric review without specific cultural context; missing safety planning in the community; not addressing police inadequacy as a systemic issue",
     status: "approved",
   },
   // ── From MEQ Sample Questions ──

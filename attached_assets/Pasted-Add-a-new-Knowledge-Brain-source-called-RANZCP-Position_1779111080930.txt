@@ -1,0 +1,164 @@
+Add a new Knowledge Brain source called “RANZCP Position Statements”.
+
+Purpose:
+The app should learn from all official RANZCP position statements and use them to improve Quiz Mode, Daily MEQs, Exam Mode, signal maps, examiner feedback, and consultant-level reasoning.
+
+Important:
+Use only official RANZCP sources.
+Do not use unofficial summaries.
+Do not copy long passages verbatim into generated questions or feedback.
+Use position statements to understand principles, policy positions, ethical framing, service standards, cultural safety, psychiatrist role, governance, advocacy and systems reasoning.
+
+Create a new admin page:
+“RANZCP Position Statements Brain”
+
+This page should allow:
+
+1. Add official RANZCP position statement
+Fields:
+- Title
+- RANZCP reference number, e.g. PS #105
+- Topic tags
+- Last updated date
+- Published jurisdiction
+- Source URL
+- Status: current / rescinded / archived / unknown
+- Summary
+- Key principles
+- MEQ relevance
+- Consultant-level implications
+- Related signal categories
+
+2. Bulk upload/import
+Allow me to upload PDFs, DOCX, TXT or CSV files containing RANZCP position statements or summaries.
+
+3. Manual URL library
+Allow me to paste official RANZCP position statement links.
+The app should store the link and metadata.
+If web extraction is available, extract title, last updated date, reference number and body text.
+If extraction is not available, create placeholder cards that I can fill manually.
+
+4. Currency control
+For every position statement, track:
+- last updated date
+- date added to app
+- review due reminder
+- current or rescinded status
+- warning if older than 3 years
+- warning if marked rescinded
+
+5. Topic tagging
+Use tags such as:
+- Cultural safety
+- Trauma-informed practice
+- Suicide prevention
+- Rural psychiatry
+- Child and adolescent psychiatry
+- Forensic psychiatry
+- Addiction
+- ADHD
+- Gender diversity
+- Climate change
+- Disasters and crises
+- Role of psychiatrist
+- Mental health systems
+- Lived experience
+- Seclusion and restraint
+- Ethics
+- Governance
+- Families and carers
+- Aboriginal and Torres Strait Islander mental health
+- Māori mental health
+- Workforce
+- Professionalism
+
+6. Internal knowledge structure
+
+Create this data structure:
+
+ranzcp_position_statements:
+- id
+- title
+- reference_number
+- source_url
+- last_updated
+- published_region
+- status
+- topic_tags
+- full_text_or_notes
+- short_summary
+- key_principles
+- clinical_relevance
+- meq_relevance
+- consultant_level_implications
+- common_exam_signals
+- related_risk_domains
+- related_legal_domains
+- related_cultural_domains
+- related_system_domains
+- created_at
+- reviewed_at
+
+7. Integration with Quiz Mode
+
+When generating quiz stems, the app should use relevant RANZCP position statements to create more consultant-level stems.
+
+Examples:
+- Cultural safety statement should influence Aboriginal and Māori mental health stems.
+- Trauma-informed practice should influence ED, inpatient, restraint, refugee, family violence and child/adolescent stems.
+- Suicide prevention should influence risk, discharge, systems and family/carer questions.
+- Rural psychiatry should influence regional/resource-limited cases.
+- Role of psychiatrist statement should influence MDT leadership and consultant responsibility questions.
+- Mental health systems principles should influence governance and service pressure questions.
+
+8. Integration with marking
+
+When assessing the candidate’s answer, the AI should check whether the candidate identified position-statement-level issues where relevant.
+
+Examples:
+- Did the candidate recognise cultural safety rather than only “use interpreter”?
+- Did the candidate avoid retraumatisation?
+- Did the candidate include lived-experience or family/carer partnership where relevant?
+- Did the candidate show systems leadership, not just individual clinical management?
+- Did the candidate identify rural access/resource equity issues?
+- Did the candidate understand psychiatrist role in MDT conflict and governance?
+
+9. Strict feedback rule
+
+The app should not give generic feedback like:
+“Consider cultural factors.”
+
+Instead it should say:
+“The stem specifically gave Aboriginal/Māori/culturally relevant details. You should have identified cultural safety as a clinical and systems issue, not merely a communication preference. This affects engagement, coercion, family involvement, liaison, least restrictive care and risk management.”
+
+10. Citation/source display
+
+In feedback, show a small expandable section:
+“Relevant RANZCP principle used”
+
+This should include:
+- position statement title
+- reference number
+- last updated date
+- short principle summary
+- source link
+
+Do not overload the candidate during timed answering.
+Show this only after submission.
+
+11. Safety and copyright
+
+Add this disclaimer:
+“RANZCP materials are used for private educational preparation. Always check the current official RANZCP website for the latest version. Do not redistribute copyrighted content.”
+
+12. Current UI
+
+Add a button in Knowledge Brain:
+“Add RANZCP Position Statement”
+
+Add another button:
+“Import Position Statement Library”
+
+Keep the app design consistent with the current navy/teal exam portal style.
+
+Run the app and fix all errors.
