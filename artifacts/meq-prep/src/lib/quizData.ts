@@ -18,6 +18,7 @@ export type SignalCategory =
   | "mdt_conflict"
   | "system_pressure"
   | "governance"
+  | "ethics"
   | "disposition";
 
 export interface ExpectedSignal {
@@ -61,16 +62,24 @@ export type TopicKey =
   | "cultural_safety"
   | "substance_use"
   | "risk"
-  | "capacity_mha";
+  | "capacity_mha"
+  | "quality_assurance"
+  | "supervision"
+  | "documentation"
+  | "discharge_review"
+  | "mdt_systems"
+  | "rural"
+  | "psychotherapy"
+  | "ethics";
 
 export type DifficultyKey = "standard" | "difficult" | "consultant";
 
 export const TOPIC_LABELS: Record<TopicKey, string> = {
   random: "Random",
   ed: "Emergency Department",
-  perinatal: "Perinatal",
+  perinatal: "Perinatal Psychiatry",
   cl_psychiatry: "Consultation-Liaison",
-  forensic: "Forensic",
+  forensic: "Forensic Psychiatry",
   old_age: "Old Age Psychiatry",
   child_adolescent: "Child & Adolescent",
   governance: "Governance & Leadership",
@@ -78,6 +87,14 @@ export const TOPIC_LABELS: Record<TopicKey, string> = {
   substance_use: "Substance Use",
   risk: "Risk Assessment",
   capacity_mha: "Capacity & Mental Health Act",
+  quality_assurance: "Quality & Safety Review",
+  supervision: "Supervision & Feedback",
+  documentation: "Documentation & Communication",
+  discharge_review: "Discharge / Report Review",
+  mdt_systems: "MDT Conflict & Systems Pressure",
+  rural: "Rural & Resource-Limited",
+  psychotherapy: "Psychotherapy & Boundaries",
+  ethics: "Ethics & Professionalism",
 };
 
 export const DIFFICULTY_LABELS: Record<DifficultyKey, string> = {
@@ -1589,6 +1606,1599 @@ Anxiety: Self-medicating anxiety with illicit benzodiazepines indicates an untre
 Leanne's motivation: Her expressed desire to parent this child is a genuine and powerful motivator — explicitly acknowledge and use this therapeutically.
 
 MDT: A perinatal case conference with obstetrics, perinatal drug and alcohol, social work, and neonatology is required — this is not a single-clinician case.`,
+  },
+
+  // ─── 11. RISK ASSESSMENT ────────────────────────────────────────────────────
+  {
+    id: "q11",
+    topic: "risk",
+    difficulty: "consultant",
+    title: "Denied Suicidal Ideation — Contextual High-Risk Presentation",
+    candidateRole: "Consultant psychiatrist on call",
+    setting: "Emergency Department",
+    stem: `You are the on-call consultant psychiatrist. At 10 pm you receive a call from the ED registrar about Marcus, a 41-year-old man brought in by ambulance after his neighbour called 000, concerned he had not been seen for three days. On arrival Marcus is calm, well-dressed, and explicitly denies suicidal ideation. He tells the ED team he "just needed some time alone."
+
+The triage note documents: separated from his wife six weeks ago following his disclosure of a second extramarital affair; resigned from his job as a secondary school principal two weeks ago ("by mutual agreement"); his 17-year-old son has refused contact. His GP records show a recent consultation at which he collected a script for 100 tablets of temazepam — he cannot account for the whereabouts of these tablets. He denies alcohol use but there is a faint smell of alcohol noted by the ED nurse. He has no previous psychiatric history and no prior presentations.
+
+The ED registrar has completed a brief risk screening tool which is scored "low" and has phoned to ask if Marcus can be discharged with a GP follow-up letter.`,
+    totalMarks: 25,
+    signals: [
+      {
+        id: "s1",
+        name: "Explicit denial of SI does not negate contextual risk — anchoring bias",
+        category: "risk_self",
+        severity: "critical",
+        clueInStem: "Explicitly denies suicidal ideation; ED registrar scores 'low' on screening tool",
+        whyItMatters: "Standardised risk tools used without clinical formulation produce false-negative results in high-stakes presentations; denial of SI is not sufficient to discharge",
+        modelWording: "Marcus's explicit denial of suicidal ideation cannot be taken at face value in the context of acute psychosocial collapse. Risk screening tools do not replace clinical formulation.",
+        keywords: ["denial", "explicit denial", "context", "formul", "screening tool", "false negative", "clinical judgment", "not sufficient"],
+      },
+      {
+        id: "s2",
+        name: "Unaccounted temazepam — means access",
+        category: "risk_self",
+        severity: "critical",
+        clueInStem: "Script for 100 tablets of temazepam — cannot account for whereabouts",
+        whyItMatters: "Access to a lethal means with no account of location is a significant risk factor; safe storage or removal of means is a non-negotiable safety step",
+        relatedRisk: "100 temazepam tablets represents a potentially lethal quantity; overdose is a common method in male mid-life suicides",
+        modelWording: "The whereabouts of 100 temazepam tablets must be established before any discharge decision. This is an immediate means restriction task.",
+        keywords: ["temazepam", "tablet", "means", "lethal", "accounted", "medication", "means restriction", "safe storage"],
+      },
+      {
+        id: "s3",
+        name: "Acute psychosocial collapse — multiple concurrent losses",
+        category: "risk_self",
+        severity: "critical",
+        clueInStem: "Separated from wife six weeks ago; resigned from job two weeks ago; son refuses contact",
+        whyItMatters: "Three concurrent identity-defining losses in six weeks (marriage, career, parental relationship) represent a catastrophic psychosocial load; this pattern is a well-recognised precursor to male mid-life suicide",
+        modelWording: "Marcus has experienced three simultaneous major losses in six weeks: marital separation, career termination, and rupture with his son. This acute psychosocial collapse in a middle-aged man with no previous psychiatric contact represents high contextual suicide risk.",
+        keywords: ["loss", "separation", "job", "career", "son", "psychosocial", "concurrent", "multiple loss", "identity"],
+      },
+      {
+        id: "s4",
+        name: "Three-day isolation — possible planning behaviour",
+        category: "risk_self",
+        severity: "critical",
+        clueInStem: "Neighbour called 000 — not been seen for three days",
+        whyItMatters: "Self-isolation lasting days is a red flag for suicidal planning, particularly in a person who has recently experienced major losses",
+        modelWording: "Three days of uncharacteristic isolation prompted a welfare check — this must be explicitly interpreted as a possible indicator of suicidal planning or intent, not 'needing time alone'.",
+        keywords: ["isolation", "three days", "welfare check", "planning", "uncharacteristic", "not seen"],
+      },
+      {
+        id: "s5",
+        name: "Alcohol — undisclosed, clinical note conflicts with denial",
+        category: "substance_use",
+        severity: "important",
+        clueInStem: "Denies alcohol use; faint smell of alcohol noted by nurse",
+        whyItMatters: "Alcohol use disinhibits suicidal behaviour and impairs capacity to make a safe discharge plan; covert alcohol use in this context elevates risk further",
+        modelWording: "The nurse's observation of alcohol odour conflicts with Marcus's denial. This must be directly addressed — alcohol in the context of acute loss and means access significantly elevates immediate risk.",
+        keywords: ["alcohol", "smell", "deny", "covert", "substance", "disinhibit"],
+      },
+      {
+        id: "s6",
+        name: "Registrar supervision — inadequate risk assessment",
+        category: "governance",
+        severity: "important",
+        clueInStem: "ED registrar has scored 'low' and is asking for permission to discharge",
+        whyItMatters: "A consultant must not delegate risk judgment to a screening tool score; this is a non-delegable clinical decision requiring consultant assessment",
+        modelWording: "The registrar's use of a screening tool score to support discharge is a supervision and governance concern. This presentation requires direct consultant assessment, not a phone authorisation.",
+        keywords: ["registrar", "screening tool", "phone", "supervision", "consultant assessment", "non-delegable", "direct assessment"],
+      },
+      {
+        id: "s7",
+        name: "Shame and concealment — public identity, private collapse",
+        category: "diagnosis_formulation",
+        severity: "important",
+        clueInStem: "Principal of a secondary school; resigned by mutual agreement following disclosure of affair",
+        whyItMatters: "High public identity combined with private shameful disclosure (affairs) creates a risk of concealment; shame is an independent predictor of suicide in mid-life men",
+        modelWording: "Marcus held a high-profile leadership role. The combination of public identity, private shame, and career termination creates a significant shame-based suicide risk that may make him less likely to disclose intent.",
+        keywords: ["shame", "principal", "public", "identity", "conceal", "affair", "dishonour", "status loss"],
+      },
+    ],
+    priorityOrder: {
+      urgent: ["s2", "s1", "s3", "s4"],
+      secondary: ["s5", "s6"],
+      lowYield: ["s7"],
+    },
+    modelAnswer: `Immediate safety: Marcus's explicit denial of suicidal ideation cannot be accepted at face value. The contextual risk profile — three simultaneous major losses, three days of isolation, unaccounted lethal medication, covert alcohol use, and high public shame — constitutes a high-risk presentation requiring direct consultant assessment.
+
+Means restriction: The whereabouts of 100 temazepam tablets must be established immediately. This is non-negotiable. If they cannot be located, urgent safety measures including voluntary or involuntary admission must be considered.
+
+Risk formulation: This is not a "low risk" presentation. The combination of acute psychosocial collapse (marital, occupational, parental losses), male sex, age 41, no previous psychiatric contact, means access, isolation, and denied ideation in a shame-prone, high-functioning person is a recognised pattern for high-lethality suicide attempts.
+
+Supervision issue: The registrar's telephone request for discharge authorisation based on a screening tool score is not an acceptable risk management process. I will attend in person.
+
+Assessment: Full mental state examination, collateral from wife and/or neighbour, direct exploration of suicidal cognition, ideation, plan, intent, and rehearsal behaviour.`,
+  },
+
+  // ─── 12. QUALITY & SAFETY REVIEW ─────────────────────────────────────────
+  {
+    id: "q12",
+    topic: "quality_assurance",
+    difficulty: "consultant",
+    title: "Post-Discharge Suicide — Adverse Event Response",
+    candidateRole: "Director of psychiatry / senior consultant",
+    setting: "Inpatient psychiatric unit, metropolitan hospital",
+    stem: `It is Monday morning. You are the director of a 20-bed acute inpatient psychiatric unit. The clinical nurse consultant informs you that Kevin, a 38-year-old man admitted two weeks ago following a serious suicide attempt, was discharged on Friday afternoon by the on-call registrar without your knowledge. Kevin was found dead on Saturday night — his wife discovered him; he had hanged himself in the garage.
+
+You review the Friday discharge note: the registrar documented that Kevin "expressed readiness to go home" and "denied current suicidal ideation." The risk assessment section is a single line: "SI denied. Agreed to follow up with GP." There is no documentation of collateral contact with Kevin's wife, no safety plan, no relapse prevention plan, no next-of-kin notification, and no consultant review. The GP had not been notified. Kevin's wife says she was not contacted before discharge and was "shocked" when he arrived home on Friday.
+
+Your staff are distressed. A junior nurse who was on shift Friday tells you she had raised concerns to the registrar about Kevin's flat affect and early discharge.`,
+    totalMarks: 25,
+    signals: [
+      {
+        id: "s1",
+        name: "Open disclosure — immediate obligation to family",
+        category: "governance",
+        severity: "critical",
+        clueInStem: "Kevin's wife discovered him; she was not contacted before discharge",
+        whyItMatters: "Open disclosure is a professional, ethical, and organisational obligation following an adverse outcome. The family must be contacted promptly, honestly, and compassionately by a senior clinician.",
+        relatedLegal: "Open Disclosure standard (Australian Commission on Safety and Quality in Health Care); potential coronial inquiry; civil liability",
+        modelWording: "Open disclosure to Kevin's wife must occur urgently, led by a senior clinician. This includes an honest account of what happened, an expression of sincere condolences, and an explanation of what will be reviewed.",
+        keywords: ["open disclosure", "family", "wife", "contact", "honest", "disclosure", "condolence", "senior"],
+      },
+      {
+        id: "s2",
+        name: "Critical incident reporting — mandatory notification",
+        category: "governance",
+        severity: "critical",
+        clueInStem: "Patient died by suicide following discharge from psychiatric inpatient unit",
+        whyItMatters: "Unexpected death of a psychiatric patient following recent discharge is a mandatory reportable incident requiring immediate notification to hospital executive, safety and quality team, and potentially the coroner",
+        relatedLegal: "Coroners Act — death of a person in care or recently discharged from a health service is likely reportable; mandatory incident reporting obligations",
+        modelWording: "This is a mandatory critical incident. I must notify hospital executive, the patient safety and quality unit, and the coroner's office. The clinical record must be preserved.",
+        keywords: ["incident", "reportable", "mandatory", "coroner", "coronial", "executive", "notify", "report"],
+      },
+      {
+        id: "s3",
+        name: "Documentation failure — registrar's discharge note is clinically inadequate",
+        category: "governance",
+        severity: "critical",
+        clueInStem: "Risk assessment is a single line; no safety plan, no collateral, no consultant review documented",
+        whyItMatters: "The discharge note fails to meet minimum clinical standards. The risk assessment is not defensible. No safety plan, no family contact, no GP notification, no consultant sign-off.",
+        relatedLegal: "Medico-legal exposure for the registrar and the unit; potential finding of institutional negligence",
+        modelWording: "The registrar's discharge documentation is clinically and medico-legally inadequate: absent safety plan, absent collateral contact, absent GP notification, absent consultant review, and a single-line risk assessment.",
+        keywords: ["documentation", "inadequate", "safety plan", "collateral", "gp notification", "consultant review", "discharge note", "single line"],
+      },
+      {
+        id: "s4",
+        name: "Nurse's escalation was not acted on — safety reporting culture",
+        category: "governance",
+        severity: "critical",
+        clueInStem: "Junior nurse raised concerns about Kevin's flat affect and early discharge — registrar did not act",
+        whyItMatters: "Failure to act on a nursing escalation is a serious systems and safety culture failure; the nurse's concern was clinically relevant (flat affect post-attempt is a risk indicator)",
+        relatedSystem: "Speaking Up for Safety; closed-loop escalation policy; after-action support for distressed staff member",
+        modelWording: "The nursing escalation must be documented and taken seriously. Flat affect in a patient recovering from a serious attempt is a recognised risk indicator. The failure to act on this escalation is part of the clinical incident.",
+        keywords: ["nurse", "escalation", "speaking up", "flat affect", "not acted", "safety culture", "concern raised"],
+      },
+      {
+        id: "s5",
+        name: "Staff wellbeing — critical incident debriefing",
+        category: "mdt_conflict",
+        severity: "important",
+        clueInStem: "Staff are distressed",
+        whyItMatters: "Clinical staff exposed to a patient death require structured support — a critical incident debriefing must be organised, but this must not involve pressure to suppress concerns or collude with any cover-up",
+        modelWording: "A structured staff debriefing must be organised, led by an independent facilitator where possible. Staff are not to be discouraged from disclosing their concerns to the review process.",
+        keywords: ["staff", "debrief", "support", "distress", "wellbeing", "critical incident debrief"],
+      },
+      {
+        id: "s6",
+        name: "Root cause analysis — systems review",
+        category: "governance",
+        severity: "important",
+        clueInStem: "Discharged without consultant knowledge; no safety plan; no GP; no family contact",
+        whyItMatters: "Multiple system failures co-occurred — this is not a single-clinician error; a formal root cause analysis is required to identify contributing factors",
+        modelWording: "A formal root cause analysis must be commissioned. Contributing factors to investigate include: after-hours discharge policy, consultant notification expectations, discharge checklist compliance, supervision arrangements, and workload at time of discharge.",
+        keywords: ["root cause", "rca", "systems", "contributing factors", "formal review", "analysis", "policy"],
+      },
+    ],
+    priorityOrder: {
+      urgent: ["s1", "s2", "s4"],
+      secondary: ["s3", "s5"],
+      lowYield: ["s6"],
+    },
+    modelAnswer: `Open disclosure: My first priority is Kevin's wife. A senior clinician must contact her today — with sincere condolences, an honest account of what happened on Friday, and a clear explanation of the review that will occur.
+
+Mandatory reporting: I must notify hospital executive and the patient safety team immediately. This death is likely reportable to the coroner as a death of a person recently discharged from a psychiatric facility.
+
+Incident preservation: The medical record must be locked and preserved. No alterations are permissible.
+
+Documentation failure: The discharge note does not meet clinical or medico-legal standards. A single-line risk assessment with no safety plan, no family contact, no GP notification, and no consultant review is inadequate.
+
+Nursing escalation: The junior nurse's concern about flat affect and early discharge is clinically significant and must be formally documented as part of the incident. A flat affect post-serious attempt is a known risk indicator.
+
+Staff support: A structured critical incident debriefing must be organised for the Friday shift team. Staff must not be discouraged from raising concerns in the review process.
+
+Root cause analysis: A formal RCA is required to address systemic failures: after-hours discharge policy, consultant notification obligations, supervision arrangements, and discharge checklist compliance.`,
+  },
+
+  // ─── 13. QUALITY & SAFETY ────────────────────────────────────────────────
+  {
+    id: "q13",
+    topic: "quality_assurance",
+    difficulty: "consultant",
+    title: "Seclusion Documentation Failure and Governance Breach",
+    candidateRole: "Consultant psychiatrist, clinical lead",
+    setting: "Acute inpatient psychiatric unit",
+    stem: `You are the clinical lead of an acute psychiatric unit. On Monday morning you are reviewing the weekend incident log. You read that at 11:30 pm on Saturday, a 27-year-old man, Jarrah — an Aboriginal man admitted under the Mental Health Act for acute psychosis — was placed in seclusion for four hours following an altercation with a fellow patient. The seclusion was authorised by the on-call registrar.
+
+On reviewing the seclusion register you find:
+- No documentation that a consultant was contacted or that consultant authorisation was given
+- The nursing observations during seclusion are documented as "checked Q30 minutes" but no actual clinical entries appear in the medical record between 11:30 pm and 3:30 am
+- No post-seclusion review was completed before the next morning
+- There is no documentation of a review by an Aboriginal Liaison Officer or culturally appropriate support
+- The seclusion entry form does not include a reason for seclusion beyond "aggressive behaviour"
+- Jarrah is now refusing to engage with treating staff and has asked to leave the hospital
+
+You have received a phone call this morning from Jarrah's mother, a senior community elder, who is distressed and wants answers.`,
+    totalMarks: 22,
+    signals: [
+      {
+        id: "s1",
+        name: "Seclusion without consultant authorisation — governance breach",
+        category: "governance",
+        severity: "critical",
+        clueInStem: "No documentation that a consultant was contacted; authorised by registrar",
+        whyItMatters: "Under most state Mental Health Acts and policy frameworks, seclusion requires consultant authorisation or immediate notification; a registrar-only authorisation is a clinical governance breach",
+        relatedLegal: "Mental Health Act seclusion provisions; hospital policy; the National Mental Health Standards",
+        modelWording: "Seclusion was used without documented consultant authorisation. This represents a clinical governance breach requiring formal review and reporting.",
+        keywords: ["consultant authorisation", "authorisation", "registrar", "governance", "seclusion policy", "mental health act", "notification"],
+      },
+      {
+        id: "s2",
+        name: "Documentation failure — no monitoring entries during four-hour seclusion",
+        category: "governance",
+        severity: "critical",
+        clueInStem: "No clinical entries in medical record between 11:30 pm and 3:30 am; documented as 'checked Q30 minutes' only",
+        whyItMatters: "Absence of clinical entries during seclusion means there is no record of Jarrah's physical or mental state — this is both a safety failure and a medico-legal exposure",
+        modelWording: "Four hours of seclusion with no substantive clinical documentation constitutes a serious monitoring failure. Q30 minute checks must be individually documented with clinical content.",
+        keywords: ["documentation", "monitoring", "entries", "no record", "clinical note", "observation", "four hours"],
+      },
+      {
+        id: "s3",
+        name: "Cultural safety — no Aboriginal Liaison Officer, no culturally safe response",
+        category: "cultural_safety",
+        severity: "critical",
+        clueInStem: "Jarrah is an Aboriginal man; no Aboriginal Liaison Officer involvement documented",
+        whyItMatters: "Seclusion of an Aboriginal person without involvement of Aboriginal Liaison or culturally appropriate support represents a specific cultural safety failure; Aboriginal and Torres Strait Islander people are over-represented in seclusion statistics",
+        relatedCultural: "RANZCP Position Statement on Aboriginal and Torres Strait Islander Mental Health; NSQHS Cultural Safety Standard",
+        modelWording: "An Aboriginal Liaison Officer or equivalent culturally appropriate support must have been involved in Jarrah's care. The failure to document or involve cultural support in a seclusion episode involving an Aboriginal person is a specific cultural safety breach.",
+        keywords: ["aboriginal liaison", "cultural", "culturally safe", "aboriginal", "first nations", "indigenous", "cultural support"],
+      },
+      {
+        id: "s4",
+        name: "Post-seclusion review — not completed",
+        category: "governance",
+        severity: "critical",
+        clueInStem: "No post-seclusion review was completed before the next morning",
+        whyItMatters: "Post-seclusion review is a mandatory clinical obligation to assess impact on the patient, address any injuries, and debrief — its absence is a policy breach",
+        modelWording: "A post-seclusion review must occur within a defined timeframe (typically 1 hour of exit under most policies). This was not completed — this must be addressed in the incident review.",
+        keywords: ["post-seclusion", "review", "debrief", "mandatory", "injury", "after seclusion"],
+      },
+      {
+        id: "s5",
+        name: "Jarrah's refusal to engage — therapeutic rupture requiring repair",
+        category: "trauma",
+        severity: "important",
+        clueInStem: "Refusing to engage with treating staff and has asked to leave the hospital",
+        whyItMatters: "Seclusion may have been experienced as traumatic and/or as an act of state coercion by an Aboriginal man — his refusal to engage must be understood as a trauma and cultural response, not simply 'non-compliance'",
+        modelWording: "Jarrah's withdrawal from engagement following seclusion must be understood through a trauma and cultural lens — seclusion by state authorities may have profound historical resonance for an Aboriginal person. Therapeutic repair requires a culturally safe approach.",
+        keywords: ["therapeutic rupture", "trauma", "cultural", "repair", "withdrawal", "engage", "historical", "trust"],
+      },
+      {
+        id: "s6",
+        name: "Community elder — open disclosure and family engagement",
+        category: "family_carer",
+        severity: "important",
+        clueInStem: "Jarrah's mother, a senior community elder, is distressed and wants answers",
+        whyItMatters: "Jarrah's mother is both a family carer and a community leader — her concerns carry cultural and systemic weight; she deserves an honest, senior-level response",
+        modelWording: "I must respond personally to Jarrah's mother as a priority — as a family member and as a community elder, she deserves an honest account of what happened, what will be reviewed, and what will change.",
+        keywords: ["mother", "elder", "community", "open disclosure", "family", "honest", "senior response"],
+      },
+    ],
+    priorityOrder: {
+      urgent: ["s1", "s3", "s5"],
+      secondary: ["s2", "s4", "s6"],
+      lowYield: [],
+    },
+    modelAnswer: `Immediate: I must respond to Jarrah's mother today — honestly, with senior representation, and with cultural support if she requests it.
+
+Governance breach: Seclusion without consultant authorisation is a clinical governance breach. I must notify the hospital executive, patient safety team, and the mental health commission (jurisdiction-dependent). The seclusion register must be preserved.
+
+Cultural safety failure: The absence of any Aboriginal Liaison Officer involvement in a seclusion episode involving an Aboriginal man is a specific cultural safety breach. This must be named in the incident report and the review.
+
+Documentation: The absence of clinical monitoring entries during four hours of seclusion is a serious safety and medico-legal failure. Post-seclusion review was not completed.
+
+Jarrah: I will approach Jarrah directly — with cultural support — to acknowledge what happened, apologise for the failure of care, and ask what he needs to remain in hospital safely. His request to leave must be taken seriously and weighed against his ongoing clinical need under the MHA.
+
+Formal review: A mandatory critical incident report must be submitted. A formal review (RCA or clinical review) should examine: registrar supervision, seclusion policy awareness, Aboriginal Liaison availability after hours, and documentation standards.`,
+  },
+
+  // ─── 14. SUPERVISION & FEEDBACK ─────────────────────────────────────────
+  {
+    id: "q14",
+    topic: "supervision",
+    difficulty: "consultant",
+    title: "Registrar Requesting Discharge of Unsafe Patient",
+    candidateRole: "Consultant psychiatrist, supervising registrar",
+    setting: "Inpatient psychiatric unit — Tuesday afternoon supervision",
+    stem: `You are conducting your weekly supervision session with Dr Priya Sharma, a second-year advanced trainee. She presents a case for discharge planning: Callum, a 29-year-old man admitted three weeks ago following an overdose of 40 paracetamol tablets. Callum has a background of recurrent major depressive disorder and borderline personality disorder. He is now euthymic on venlafaxine 225 mg and says he wants to go home to "get back to normal."
+
+Dr Sharma presents a risk assessment of "low to moderate." When you ask her to walk you through her reasoning, she tells you: "He's engaged in sessions, his mood is improved, he denies SI, and he's motivated to go home." She has not contacted Callum's mother, who brought him in and is his listed emergency contact. She has not developed a written safety plan. She has not arranged community follow-up. She has not reviewed his previous inpatient presentations — you note on the system that there have been four prior admissions in three years, each following an overdose.
+
+Dr Sharma seems eager to discharge Callum because "the beds are full and there's pressure from the NUM."`,
+    totalMarks: 22,
+    signals: [
+      {
+        id: "s1",
+        name: "Risk formulation is inadequate — history not reviewed",
+        category: "risk_self",
+        severity: "critical",
+        clueInStem: "Four prior admissions in three years, each following an overdose — not reviewed by registrar",
+        whyItMatters: "A previous history of multiple overdoses is one of the strongest predictors of completed suicide; failure to review prior admissions before a discharge risk assessment is a significant clinical error",
+        modelWording: "Dr Sharma has not reviewed Callum's admission history. Four overdoses in three years is a high-risk pattern that must be central to any discharge formulation — this is not a low-risk presentation.",
+        keywords: ["history", "prior admission", "previous", "four", "overdose", "pattern", "not reviewed", "recurrent"],
+      },
+      {
+        id: "s2",
+        name: "No collateral contact — mother not contacted",
+        category: "collateral",
+        severity: "critical",
+        clueInStem: "Has not contacted Callum's mother, who brought him in and is listed emergency contact",
+        whyItMatters: "Discharge planning without family collateral in a patient with borderline personality disorder and recurrent suicidality is a clinical and safety failure",
+        modelWording: "Callum's mother brought him in and is his emergency contact. She has not been contacted. Family collateral is essential in recurrent suicidality — both for safety planning and for understanding the home environment he is returning to.",
+        keywords: ["collateral", "mother", "family", "contact", "emergency contact", "family", "not contacted"],
+      },
+      {
+        id: "s3",
+        name: "No written safety plan — omission in BPD/recurrent suicide risk",
+        category: "risk_self",
+        severity: "critical",
+        clueInStem: "She has not developed a written safety plan",
+        whyItMatters: "In a patient with BPD and four prior overdoses, a written collaborative safety plan is a minimum standard of care for discharge",
+        modelWording: "A written safety plan — co-developed with Callum, reviewed with his mother, and linked to community services — is a non-negotiable discharge component. This has not been completed.",
+        keywords: ["safety plan", "written", "collaborative", "discharge plan", "bpd", "safety planning"],
+      },
+      {
+        id: "s4",
+        name: "Bed pressure is driving clinical decision — systems pressure",
+        category: "system_pressure",
+        severity: "critical",
+        clueInStem: "Beds are full; pressure from the NUM",
+        whyItMatters: "Discharge of a high-risk patient driven by bed pressure rather than clinical readiness is a governance failure; the consultant must not yield to administrative pressure on safety decisions",
+        relatedSystem: "Bed management pressure; NUM authority does not override clinical judgment",
+        modelWording: "Bed pressure does not constitute a clinical reason for discharge. If Callum is not ready for safe discharge, I must document this clearly and advise the NUM that the decision is a clinical one, not an administrative one.",
+        keywords: ["bed pressure", "beds full", "num", "administrative", "pressure", "systems pressure", "clinical decision"],
+      },
+      {
+        id: "s5",
+        name: "Supervision obligation — teaching risk formulation, not authorising discharge",
+        category: "governance",
+        severity: "important",
+        clueInStem: "Supervision session; Dr Sharma presenting inadequate formulation",
+        whyItMatters: "The consultant's role is not to authorise the registrar's decision but to actively teach risk formulation and ensure patient safety; this requires direct corrective feedback",
+        modelWording: "This supervision session is a teaching opportunity. I must not simply override Dr Sharma — I must explain why her formulation is incomplete, guide her through the missing elements, and ensure she understands what a defensible discharge risk assessment requires.",
+        keywords: ["teach", "feedback", "supervision", "corrective", "formulation", "registrar", "guidance", "explain"],
+      },
+      {
+        id: "s6",
+        name: "Community follow-up not arranged",
+        category: "disposition",
+        severity: "important",
+        clueInStem: "She has not arranged community follow-up",
+        whyItMatters: "Post-discharge follow-up within 48–72 hours is an evidence-based suicide prevention intervention; its absence in a patient with recurrent suicidality is a gap in the safety plan",
+        modelWording: "Community follow-up must be arranged before discharge — an appointment within 48 hours with a community mental health clinician or outpatient psychiatry is the minimum standard.",
+        keywords: ["community", "follow-up", "outpatient", "48 hours", "72 hours", "appointment", "after discharge"],
+      },
+    ],
+    priorityOrder: {
+      urgent: ["s1", "s4", "s2"],
+      secondary: ["s3", "s5"],
+      lowYield: ["s6"],
+    },
+    modelAnswer: `Patient safety first: Callum is not ready for discharge. Four overdoses in three years is a high-risk recurrence pattern. The registrar has not reviewed prior admissions, has no collateral, has no safety plan, and no community follow-up.
+
+Corrective supervision: I will not simply override Dr Sharma. I will use this as a direct teaching session: walk through the missing elements, explain why each matters clinically and legally, and require her to redo the assessment with my guidance.
+
+Bed pressure: I will speak directly to the NUM and document clearly that Callum's ongoing admission is a clinical safety decision. Administrative pressure cannot override clinical judgment.
+
+Required before discharge: (1) Review of all prior admissions; (2) Collateral from mother; (3) Written safety plan co-developed with Callum; (4) Community MH follow-up within 48 hours; (5) GP letter.
+
+Documentation: My decision to not discharge must be documented, with clinical reasoning, in the medical record.`,
+  },
+
+  // ─── 15. SUPERVISION ───────────────────────────────────────────────────────
+  {
+    id: "q15",
+    topic: "supervision",
+    difficulty: "consultant",
+    title: "Registrar Using Culturally Unsafe Language in Case Presentation",
+    candidateRole: "Consultant psychiatrist, supervisor",
+    setting: "Grand rounds / case presentation, inpatient unit",
+    stem: `You are attending the weekly inpatient case review meeting. Dr James Nguyen, a first-year trainee, presents a 55-year-old Aboriginal man, David, who was admitted following an acute psychotic episode. During the presentation, Dr Nguyen uses the following phrases: "He's got a chaotic lifestyle," "non-compliant with medication," "his family is dysfunctional and not supportive," "classic presentation of someone who doesn't engage with services," and "probably has a personality disorder on top of everything."
+
+You observe that the two Aboriginal staff members present — a nursing aide and the Aboriginal Liaison Officer — both become visibly uncomfortable. One of them leaves the room. David's daughter, who had agreed to attend the meeting as part of his family-centred care plan, is also present. She becomes tearful.
+
+The rest of the clinical team continue engaging with Dr Nguyen's presentation as though nothing has happened. Dr Nguyen appears unaware of the impact.`,
+    totalMarks: 20,
+    signals: [
+      {
+        id: "s1",
+        name: "Intervene in the meeting — immediate interruption required",
+        category: "cultural_safety",
+        severity: "critical",
+        clueInStem: "David's daughter is present and tearful; Aboriginal staff are visibly uncomfortable; one leaves",
+        whyItMatters: "Allowing culturally unsafe language to continue in a meeting where David's daughter and Aboriginal staff are present causes active harm in real time; the consultant must intervene immediately",
+        modelWording: "I must interrupt the presentation respectfully but clearly. I will acknowledge David's daughter's distress, pause the meeting, and address what has happened — not after the meeting.",
+        keywords: ["intervene", "interrupt", "immediate", "pause", "real time", "stop", "halt", "meeting"],
+      },
+      {
+        id: "s2",
+        name: "Language used is culturally unsafe and stigmatising",
+        category: "cultural_safety",
+        severity: "critical",
+        clueInStem: "'Chaotic lifestyle', 'non-compliant', 'dysfunctional family', 'doesn't engage', 'personality disorder'",
+        whyItMatters: "These terms reflect a deficit-based, colonising frame that pathologises Aboriginal family systems and attribute failure-to-engage to the patient rather than to service inaccessibility; they constitute culturally unsafe clinical language",
+        relatedCultural: "RANZCP Position Statement on Aboriginal and Torres Strait Islander Mental Health; Cultural Safety principles",
+        modelWording: "The terms used reflect a deficit-framing inconsistent with trauma-informed and culturally safe care. 'Non-compliant' should be replaced with an exploration of barriers; 'chaotic lifestyle' must be reconsidered through a structural determinants lens.",
+        keywords: ["non-compliant", "chaotic", "deficit", "language", "culturally unsafe", "stigmatising", "framing", "colonising"],
+      },
+      {
+        id: "s3",
+        name: "David's daughter — family present, harmed by presentation",
+        category: "family_carer",
+        severity: "critical",
+        clueInStem: "David's daughter is present; becomes tearful",
+        whyItMatters: "A family member has experienced harm in a clinical meeting. Her experience must be directly acknowledged and she must be offered support",
+        modelWording: "David's daughter has been harmed by the language used about her family in a clinical meeting. I must speak to her directly, acknowledge what happened, and offer an apology on behalf of the team.",
+        keywords: ["daughter", "family", "tearful", "harmed", "acknowledge", "apology", "speak to her"],
+      },
+      {
+        id: "s4",
+        name: "Aboriginal staff impact — duty of care to staff",
+        category: "cultural_safety",
+        severity: "important",
+        clueInStem: "Aboriginal Liaison Officer and nursing aide visibly uncomfortable; one leaves the room",
+        whyItMatters: "Aboriginal staff are frequently exposed to culturally unsafe practices in clinical settings — their distress must be acknowledged and a safe debrief arranged",
+        modelWording: "I will follow up with both Aboriginal staff members after the meeting. Their distress is valid and their experience constitutes a workplace harm that must be acknowledged.",
+        keywords: ["aboriginal staff", "alo", "liaison officer", "staff impact", "debrief", "staff wellbeing", "harm"],
+      },
+      {
+        id: "s5",
+        name: "Corrective feedback to Dr Nguyen — teaching moment",
+        category: "governance",
+        severity: "important",
+        clueInStem: "Dr Nguyen appears unaware of the impact",
+        whyItMatters: "Dr Nguyen's unawareness is a training deficit, not a malicious act — corrective feedback must be given privately, specifically, and educationally, not punitively",
+        modelWording: "I will meet with Dr Nguyen privately after the meeting to provide specific, educational feedback on the language used, its cultural safety implications, and the impact on those in the room.",
+        keywords: ["feedback", "dr nguyen", "private", "educate", "teach", "corrective", "specific", "language"],
+      },
+      {
+        id: "s6",
+        name: "Team culture — the rest of the team did not intervene",
+        category: "governance",
+        severity: "important",
+        clueInStem: "Clinical team continue engaging as though nothing happened",
+        whyItMatters: "The failure of the entire team to respond reflects a cultural safety gap in team norms — this must be addressed at a team level, not just with the registrar",
+        modelWording: "The fact that no one in the team responded is itself a cultural safety problem. This must be raised at the next team meeting as a reflection on team norms and our collective responsibility.",
+        keywords: ["team", "culture", "norms", "collective", "nobody responded", "team level", "systemic"],
+      },
+    ],
+    priorityOrder: {
+      urgent: ["s1", "s3", "s2"],
+      secondary: ["s4", "s5"],
+      lowYield: ["s6"],
+    },
+    modelAnswer: `Immediate intervention: I will interrupt the presentation respectfully. I will acknowledge David's daughter directly, pause the meeting, and acknowledge that the language used has been harmful.
+
+Cultural safety breach: The terms "non-compliant," "chaotic lifestyle," "dysfunctional family," and "doesn't engage" reflect a deficit-based framing that is inconsistent with culturally safe care and pathologises Aboriginal family systems and help-seeking behaviour in a context of historical service inaccessibility.
+
+David's daughter: I will speak to her after the meeting, acknowledge the harm, and offer an apology on behalf of the clinical team.
+
+Aboriginal staff: I will follow up with both Aboriginal staff members to acknowledge their experience and ensure a safe debrief is available.
+
+Dr Nguyen (private feedback): I will meet with him privately to provide specific, educational, non-punitive feedback. His unawareness does not reduce the harm but informs the pedagogical response.
+
+Team reflection: At the next team meeting, I will raise the issue of team norms — not as punishment but as an opportunity to reflect on our collective responsibility to cultural safety.`,
+  },
+
+  // ─── 16. DOCUMENTATION & COMMUNICATION ─────────────────────────────────
+  {
+    id: "q16",
+    topic: "documentation",
+    difficulty: "consultant",
+    title: "Inadequate Capacity Assessment Documentation — Medication Refusal",
+    candidateRole: "Consultant psychiatrist reviewing registrar's note",
+    setting: "General medical ward — liaison psychiatry",
+    stem: `You are the consultation-liaison consultant. During your ward round you review the previous day's notes. You find an entry from your registrar, Dr Claire Wu, following a bedside consultation for a 78-year-old woman, Mrs Irene Papageorgiou, a Greek-born woman who has been in Australia for 50 years and is fluent in English. Mrs Papageorgiou has metastatic bowel cancer and has refused her third cycle of chemotherapy.
+
+Dr Wu's capacity assessment note reads in full:
+"Seen and assessed. Patient appears to understand her diagnosis. She said she doesn't want more chemo as she's tired of being sick. She seems to have capacity. Discussed with oncology — treatment will not proceed. Impression: capacity intact. Plan: discharge to palliative care."
+
+No formal four-domain assessment is documented. The note does not document which information was provided to the patient, whether it was confirmed understood, what alternatives were offered, what the patient said about risks of refusing, or whether her family was aware. There is no notation about the patient's cultural or spiritual background, whether her decision is consistent with her values, or whether a formal interpreter was offered despite the patient's Greek background. The oncology team has since proceeded with discharge planning.`,
+    totalMarks: 20,
+    signals: [
+      {
+        id: "s1",
+        name: "Capacity assessment not documented to standard — four domains absent",
+        category: "capacity",
+        severity: "critical",
+        clueInStem: "Note reads: 'appears to understand... seems to have capacity' — no four-domain documentation",
+        whyItMatters: "A legally defensible capacity assessment must document all four domains explicitly: understanding, retaining, using/weighing information, and communicating a decision",
+        relatedLegal: "Guardianship Act; common law capacity principles; medico-legal standard for refusal of life-sustaining treatment",
+        modelWording: "Dr Wu's note does not constitute a legally defensible capacity assessment. All four domains must be documented with specific evidence from the assessment.",
+        keywords: ["four domains", "understanding", "retain", "weigh", "communicate", "capacity assessment", "document", "legally defensible"],
+      },
+      {
+        id: "s2",
+        name: "Information not confirmed understood — validity of consent",
+        category: "capacity",
+        severity: "critical",
+        clueInStem: "Note does not document what information was provided or confirmed understood",
+        whyItMatters: "Capacity to refuse treatment depends on the patient having received and understood accurate information about diagnosis, prognosis, and consequences of refusal — this was not documented",
+        modelWording: "There is no documentation that Mrs Papageorgiou was given information about her prognosis, the likely trajectory without chemotherapy, or alternatives — and no confirmation that she understood this information.",
+        keywords: ["information provided", "understood", "prognosis", "consequences", "informed", "what was told"],
+      },
+      {
+        id: "s3",
+        name: "Cultural context — Greek-born; values and cultural background not explored",
+        category: "cultural_safety",
+        severity: "important",
+        clueInStem: "Greek-born; note makes no reference to cultural or spiritual background",
+        whyItMatters: "A capacity assessment for a life-limiting decision must include exploration of whether the decision is consistent with the patient's values, which may be shaped by cultural or religious background",
+        modelWording: "Mrs Papageorgiou's decision must be understood in the context of her cultural and spiritual values. Greek cultural traditions may influence her views on dying, family decision-making, and palliative care.",
+        keywords: ["cultural", "greek", "values", "spiritual", "background", "consistent", "culturally informed"],
+      },
+      {
+        id: "s4",
+        name: "Family awareness not documented",
+        category: "family_carer",
+        severity: "important",
+        clueInStem: "Note does not mention family awareness",
+        whyItMatters: "While a capacitous patient's decision is legally binding and family cannot override it, awareness of family dynamics and whether family have been involved in the decision is clinically and culturally important",
+        modelWording: "The documentation does not address whether family have been involved or are aware of Mrs Papageorgiou's decision. In culturally informed practice, this is important to document even if it does not alter the decision.",
+        keywords: ["family", "aware", "involved", "family decision", "next of kin"],
+      },
+      {
+        id: "s5",
+        name: "Interpreter offer not documented despite non-English background",
+        category: "cultural_safety",
+        severity: "important",
+        clueInStem: "Greek-born; no notation of interpreter offer",
+        whyItMatters: "Even if the patient is fluent in English, an offer of interpreter services should be documented for a life-limiting decision — it is best practice to document that the patient was given the option",
+        modelWording: "The documentation should note whether a professional interpreter was offered and whether Mrs Papageorgiou elected to proceed in English. This is particularly important for a capacity assessment involving a life-sustaining treatment refusal.",
+        keywords: ["interpreter", "language", "greek", "offered", "professional interpreter", "naati", "english"],
+      },
+      {
+        id: "s6",
+        name: "Action required — reassess and re-document before discharge proceeds",
+        category: "disposition",
+        severity: "critical",
+        clueInStem: "Oncology has proceeded with discharge planning",
+        whyItMatters: "Discharge to palliative care based on an inadequate capacity assessment exposes the hospital and team to significant medico-legal risk; the assessment must be repeated and properly documented before discharge",
+        modelWording: "I must conduct a proper capacity assessment and document it in full before discharge proceeds. I will inform the oncology team that the current documentation does not support discharge on the basis of a valid capacity determination.",
+        keywords: ["reassess", "re-document", "before discharge", "halt", "inform oncology", "valid", "discharge delayed"],
+      },
+    ],
+    priorityOrder: {
+      urgent: ["s1", "s6", "s2"],
+      secondary: ["s3", "s5"],
+      lowYield: ["s4"],
+    },
+    modelAnswer: `Documentation inadequacy: Dr Wu's note is not a legally defensible capacity assessment. It documents no four-domain assessment, no information given, no confirmation of understanding, and no exploration of cultural values.
+
+Immediate action: Discharge to palliative care must be paused. I will conduct a full capacity assessment today, with explicit documentation of all four domains, information provided and confirmed understood, consequences of refusal, and consistency with the patient's values.
+
+Cultural sensitivity: Mrs Papageorgiou's Greek background must be explored — not to challenge her decision, but to ensure it is genuinely her own and consistent with her values. An interpreter offer should be documented.
+
+If capacity confirmed: Her decision is legally binding. I will document this clearly. The note must also confirm that family awareness has been addressed.
+
+Teaching: I will meet with Dr Wu to review the standard for capacity documentation — particularly for life-sustaining treatment refusals, where the stakes and legal exposure are highest.`,
+  },
+
+  // ─── 17. DOCUMENTATION ───────────────────────────────────────────────────
+  {
+    id: "q17",
+    topic: "documentation",
+    difficulty: "consultant",
+    title: "GP Calls About Inadequate Discharge Summary",
+    candidateRole: "Consultant psychiatrist",
+    setting: "Outpatient clinic — following inpatient discharge",
+    stem: `You receive a phone call from Dr Sarah Adeyemi, a GP in a suburban practice. She is calling about her patient Reza, a 34-year-old Iranian man who was discharged from your inpatient unit five days ago following a four-week admission for a first episode of schizophrenia. Reza presented to Dr Adeyemi's clinic this morning "looking unwell."
+
+Dr Adeyemi is frustrated and concerned. She tells you: "I received a discharge summary but it doesn't tell me what his diagnosis is — it says 'psychotic disorder under investigation.' It doesn't tell me what medication he was started on or what dose. It doesn't mention that his family told me he's not taking his medication. It doesn't say what the follow-up plan is or who his case manager is. And I have no idea how to reach anyone if he deteriorates. His wife called me this morning saying he was 'acting strangely' again."
+
+You look up the discharge summary in the hospital system. It is a three-paragraph letter, written by the after-hours registrar at 11 pm on the day of discharge. It has no co-sign by a consultant.`,
+    totalMarks: 20,
+    signals: [
+      {
+        id: "s1",
+        name: "Immediate clinical concern — Reza is 'looking unwell' five days post-discharge",
+        category: "immediate_safety",
+        severity: "critical",
+        clueInStem: "Reza presenting to GP looking unwell; wife reporting strange behaviour; possibly not taking medication",
+        whyItMatters: "A patient five days post-discharge from a first psychotic episode who is already showing signs of deterioration requires immediate clinical review — not a phone discussion with the GP",
+        modelWording: "Reza must be reviewed urgently today — either by the community mental health team or directly. I will arrange this now. The GP call has identified a potential relapse in a vulnerable post-discharge period.",
+        keywords: ["urgent", "immediate review", "deteriorating", "relapse", "five days", "unwell", "medication", "not taking"],
+      },
+      {
+        id: "s2",
+        name: "Discharge summary is clinically inadequate",
+        category: "governance",
+        severity: "critical",
+        clueInStem: "No diagnosis; no medication details; no follow-up plan; no case manager; no emergency contact",
+        whyItMatters: "A discharge summary for a first-episode psychosis patient must include: confirmed diagnosis or working diagnosis with plan, medications with dose/rationale, relapse indicators, safety plan, follow-up appointments, and emergency contact numbers",
+        modelWording: "The discharge summary provided to Dr Adeyemi fails minimum standards for a psychiatric discharge letter. It omits diagnosis, medications, follow-up plan, case manager contact, and relapse indicators — all of which are essential.",
+        keywords: ["discharge summary", "inadequate", "diagnosis", "medication", "follow-up", "case manager", "emergency contact", "minimum standard"],
+      },
+      {
+        id: "s3",
+        name: "No consultant co-signature on discharge summary",
+        category: "governance",
+        severity: "important",
+        clueInStem: "Written by after-hours registrar at 11 pm; no co-sign by consultant",
+        whyItMatters: "Discharge summaries — particularly for complex psychiatric cases including first-episode psychosis — should be reviewed and co-signed by a consultant before or immediately after issue",
+        modelWording: "A discharge summary written by an after-hours registrar for a first-episode psychosis patient, without consultant review, represents a supervision and governance gap.",
+        keywords: ["consultant co-sign", "signature", "reviewed", "consultant review", "registrar", "oversight"],
+      },
+      {
+        id: "s4",
+        name: "Medication adherence failure — not captured, no plan",
+        category: "risk_self",
+        severity: "important",
+        clueInStem: "Family says he's not taking medication; not mentioned in summary",
+        whyItMatters: "Medication non-adherence in first-episode schizophrenia is the primary driver of relapse and long-term outcome; the discharge plan must address adherence strategies explicitly",
+        modelWording: "There is no documentation of medication adherence counselling, strategies for non-adherence, or family education. This omission may have contributed to Reza's current presentation.",
+        keywords: ["adherence", "medication", "non-adherence", "relapse", "family education", "take medication"],
+      },
+      {
+        id: "s5",
+        name: "Cultural context — first-episode psychosis in an Iranian man",
+        category: "cultural_safety",
+        severity: "important",
+        clueInStem: "34-year-old Iranian man; first episode of schizophrenia",
+        whyItMatters: "Cultural explanatory models for psychosis, family dynamics, stigma, and medication attitudes are highly relevant in a first-episode presentation and should be addressed in the discharge letter and community plan",
+        modelWording: "The discharge summary and community care plan should include reference to cultural context, family psychoeducation, and cultural explanatory models for Reza's illness — none of this is mentioned.",
+        keywords: ["cultural", "iranian", "explanatory model", "family psychoeducation", "stigma", "cultural context", "first episode"],
+      },
+      {
+        id: "s6",
+        name: "GP relationship — acknowledge and remediate",
+        category: "mdt_conflict",
+        severity: "important",
+        clueInStem: "Dr Adeyemi is frustrated and concerned",
+        whyItMatters: "A GP who has not received adequate discharge communication is a patient safety risk; the relationship must be repaired and a better communication process established",
+        modelWording: "I will apologise to Dr Adeyemi and take responsibility for the inadequate discharge communication. I will send a comprehensive addendum letter today and establish direct contact information for future emergencies.",
+        keywords: ["apologise", "gp", "repair", "communication", "addendum", "responsible", "remedy", "direct contact"],
+      },
+    ],
+    priorityOrder: {
+      urgent: ["s1", "s2"],
+      secondary: ["s3", "s4", "s6"],
+      lowYield: ["s5"],
+    },
+    modelAnswer: `Immediate: Reza must be reviewed today — I will arrange urgent community mental health contact or direct review given the report of deterioration five days post-discharge in a first-episode psychosis.
+
+Discharge summary: The letter issued to Dr Adeyemi is clinically inadequate. I take responsibility for this. I will send a comprehensive addendum today with: confirmed working diagnosis, medication and dose, relapse indicators, safety plan, case manager contact, outpatient appointment details, and emergency escalation pathway.
+
+GP communication: I will call Dr Adeyemi back with the above information, acknowledge the failure, and apologise. She should not have had to call to obtain basic clinical information about a patient recently discharged from our unit.
+
+Systems issues: After-hours discharge summaries for complex psychiatric cases must be reviewed by a consultant. I will raise this at the next governance meeting.
+
+Medication adherence: The wife's concern about medication must be urgently addressed in Reza's review today — depot or adherence support may need to be considered.`,
+  },
+
+  // ─── 18. DISCHARGE / REPORT REVIEW ───────────────────────────────────────
+  {
+    id: "q18",
+    topic: "discharge_review",
+    difficulty: "consultant",
+    title: "Reviewing a Registrar's Discharge Summary — Forensic Risk Omissions",
+    candidateRole: "Consultant forensic psychiatrist",
+    setting: "Forensic inpatient unit — co-sign review",
+    stem: `You are the consultant forensic psychiatrist. A discharge summary has been placed in your co-sign queue by Dr Michael Tan, a first-year registrar, for a 44-year-old man, Wayne, who is being discharged after a 12-week admission. Wayne has a background of schizophrenia, cannabis and methamphetamine use, a history of violence towards his mother when unwell, and a prior finding of not guilty by reason of mental illness (NGMI) for an assault offence six years ago — he was conditionally discharged from forensic supervision three years ago.
+
+The discharge summary is four paragraphs. It documents: discharge diagnosis (schizophrenia), medication (olanzapine 20 mg), and a single line "risk: reduced during admission." It does not mention Wayne's forensic history, the NGMI finding, his substance use history, or the history of violence towards his mother. It does not document a risk formulation. There is no relapse prevention plan. The only listed contact is a mobile number for "Wayne — please call to arrange follow-up."
+
+Wayne's mother has not been notified. There is no mention of whether a Housing and Accommodation Support Initiative (HASI) or forensic community support has been engaged.`,
+    totalMarks: 22,
+    signals: [
+      {
+        id: "s1",
+        name: "Forensic history absent from discharge summary",
+        category: "governance",
+        severity: "critical",
+        clueInStem: "NGMI finding six years ago; conditional discharge three years ago — absent from summary",
+        whyItMatters: "The forensic history is clinically essential in any discharge letter for a forensic patient — receiving clinicians must have this information to calibrate risk appropriately",
+        relatedLegal: "Forensic Mental Health Act; conditional discharge obligations; duty to inform treating team",
+        modelWording: "The NGMI finding and conditional forensic discharge history are clinically and legally essential inclusions in any discharge documentation for Wayne. Their absence is a serious omission.",
+        keywords: ["forensic history", "ngmi", "not guilty by reason", "conditional discharge", "forensic", "history of violence", "absent"],
+      },
+      {
+        id: "s2",
+        name: "Risk formulation absent — 'risk: reduced' is not a risk formulation",
+        category: "governance",
+        severity: "critical",
+        clueInStem: "Single line 'risk: reduced during admission' — no formulation",
+        whyItMatters: "For a forensic patient with a violence history, 'risk reduced during admission' is not a risk formulation — it describes inpatient behaviour only and does not address dynamic risk factors in the community context",
+        modelWording: "A risk formulation must address static, dynamic, and protective factors in the context of Wayne's community environment — his substance use vulnerability, family relationships, housing, and engagement with forensic supports.",
+        keywords: ["risk formulation", "static", "dynamic", "protective", "community", "absent", "not a formulation"],
+      },
+      {
+        id: "s3",
+        name: "Mother not notified — victim-adjacent person with safety relevance",
+        category: "family_carer",
+        severity: "critical",
+        clueInStem: "History of violence towards his mother; mother not notified",
+        whyItMatters: "Wayne's mother is both a carer and a person at risk — she must be notified of his discharge, involved in the safety plan, and offered support",
+        relatedLegal: "Public safety obligation; duty of care to identifiable third party at risk",
+        modelWording: "Wayne's mother — the identified victim of his previous violence — must be notified of his discharge and included in the safety and relapse prevention plan. This is both a clinical and a public safety obligation.",
+        keywords: ["mother", "notified", "victim", "at risk", "public safety", "third party", "notify"],
+      },
+      {
+        id: "s4",
+        name: "Follow-up plan is clinically inadequate — 'call Wayne' is not a plan",
+        category: "disposition",
+        severity: "critical",
+        clueInStem: "Only listed contact is 'Wayne — please call to arrange follow-up'",
+        whyItMatters: "Leaving follow-up to the patient's initiative is not a clinical follow-up plan — particularly for a forensic patient with schizophrenia and substance use history",
+        modelWording: "Follow-up for a forensic patient cannot be contingent on the patient initiating contact. An outpatient appointment, community forensic team contact, and assertive follow-up plan must be confirmed before discharge.",
+        keywords: ["follow-up", "community", "outpatient", "forensic community", "assertive", "confirmed", "plan", "not contingent"],
+      },
+      {
+        id: "s5",
+        name: "No co-sign until review — do not release this summary",
+        category: "governance",
+        severity: "critical",
+        clueInStem: "Summary in co-sign queue",
+        whyItMatters: "This summary must not be released as written. Co-signing a clinically inadequate forensic discharge summary creates medico-legal exposure and patient safety risk",
+        modelWording: "I will not co-sign this summary as written. I will return it to Dr Tan with specific required changes before release.",
+        keywords: ["co-sign", "not release", "return", "required changes", "must not", "reject", "hold"],
+      },
+    ],
+    priorityOrder: {
+      urgent: ["s5", "s1", "s3"],
+      secondary: ["s2", "s4"],
+      lowYield: [],
+    },
+    modelAnswer: `Hold: I will not co-sign this discharge summary as written. I will return it to Dr Tan with a list of required additions.
+
+Missing: (1) Full forensic history including NGMI and conditional discharge; (2) Substance use history; (3) Full risk formulation with static, dynamic, and protective factors; (4) Relapse prevention plan; (5) Notification to and involvement of Wayne's mother; (6) Specific follow-up appointments and forensic community team contact.
+
+Public safety: Wayne's mother is the identified target of his prior violence. Her notification is a public safety obligation, not just a courtesy.
+
+Teaching: I will use this as a direct supervision session with Dr Tan — explaining what a forensic discharge summary must include and why.
+
+Systems: After this review, I will discuss with the registrar group the minimum standards for forensic discharge documentation.`,
+  },
+
+  // ─── 19. DISCHARGE / REPORT REVIEW ────────────────────────────────────────
+  {
+    id: "q19",
+    topic: "discharge_review",
+    difficulty: "consultant",
+    title: "Reviewing a Perinatal Discharge Summary — Missing Child Safety Elements",
+    candidateRole: "Consultant perinatal psychiatrist",
+    setting: "Perinatal mental health unit — co-sign queue",
+    stem: `A discharge summary for Aisha, a 29-year-old woman, is awaiting your co-signature. Aisha was admitted to the mother-baby unit six weeks ago following a postpartum psychotic episode — her first psychiatric presentation — three weeks after the birth of her daughter Lily. She responded well to olanzapine and is being discharged with her baby.
+
+The discharge summary reads: "Aisha's mental state has significantly improved. She is currently euthymic and has good insight. She is bonding appropriately with Lily. Diagnosis: brief psychotic episode. Plan: continue olanzapine 10 mg. Follow up with perinatal outpatient clinic in 4 weeks. GP to monitor."
+
+It does not: name Lily, document a child safety assessment, mention parenting capacity observations, address medication in breastfeeding, document a relapse prevention plan specific to the perinatal context, address support at home, mention Aisha's partner or family, or include any contingency plan if Aisha deteriorates.
+
+You note that the referral documentation mentions Aisha arrived in Australia from Somalia three years ago, that she has no extended family in Australia, and that her husband "works long hours and was not involved in the admission."`,
+    totalMarks: 22,
+    signals: [
+      {
+        id: "s1",
+        name: "Child safety assessment absent — Lily not named or assessed",
+        category: "child_protection",
+        severity: "critical",
+        clueInStem: "Lily not named; no child safety assessment; no parenting capacity documentation",
+        whyItMatters: "Any discharge from a mother-baby unit requires explicit documentation of the infant's safety assessment, parenting capacity observations, and a child safeguarding plan if needed",
+        relatedLegal: "Children and Young Persons Act; mandatory reporting obligations; duty of care to vulnerable infant",
+        modelWording: "Lily must be named and a child safety assessment documented. This must include observations of parenting capacity, infant attachment, and an explicit statement about Lily's safety plan in the community.",
+        keywords: ["lily", "child", "infant", "safety", "child safety", "parenting capacity", "safeguarding", "name", "not named"],
+      },
+      {
+        id: "s2",
+        name: "Relapse in perinatal context — high-risk period not documented",
+        category: "risk_self",
+        severity: "critical",
+        clueInStem: "Postpartum psychosis; no relapse prevention plan for perinatal context",
+        whyItMatters: "Postpartum psychosis carries a high relapse risk (up to 50% in subsequent pregnancies and risk of recurrence postpartum) — a perinatal-specific relapse prevention plan is essential",
+        modelWording: "Aisha has had postpartum psychosis. A relapse prevention plan must address: early warning signs, crisis escalation pathway, contingency if she deteriorates at home, and specific plan for any future pregnancy.",
+        keywords: ["relapse", "postpartum", "perinatal", "early warning", "prevention", "risk postpartum", "future pregnancy", "contingency"],
+      },
+      {
+        id: "s3",
+        name: "Medication in breastfeeding not addressed",
+        category: "physical_health",
+        severity: "critical",
+        clueInStem: "Olanzapine 10 mg; baby present; breastfeeding not addressed",
+        whyItMatters: "The safety of olanzapine in breastfeeding must be explicitly addressed in the discharge plan — the decision to breastfeed or not, risks, and monitoring are all clinically required",
+        modelWording: "The discharge summary does not address olanzapine in the context of breastfeeding. This is an essential clinical discussion that must be documented — including the risk-benefit discussion and any decision made with Aisha.",
+        keywords: ["breastfeeding", "olanzapine", "medication", "breastfeed", "infant exposure", "lactation", "breast milk", "risk"],
+      },
+      {
+        id: "s4",
+        name: "Social isolation — no family, husband not involved, Somali background",
+        category: "cultural_safety",
+        severity: "critical",
+        clueInStem: "No extended family in Australia; husband not involved in admission; arrived from Somalia three years ago",
+        whyItMatters: "Aisha is being discharged into social isolation with a newborn, a first psychotic episode, and a husband who was absent throughout admission — this is a high-risk home environment for relapse and for the infant's safety",
+        modelWording: "Aisha is being discharged with no Australian family network, a husband who was not involved in care, and a newborn. The home support plan must be explicit — including who will be present, and what happens if she deteriorates when alone with Lily.",
+        keywords: ["social isolation", "no family", "husband", "absent", "support", "home", "alone", "network"],
+      },
+      {
+        id: "s5",
+        name: "Four-week follow-up is too long for a postpartum psychosis discharge",
+        category: "disposition",
+        severity: "important",
+        clueInStem: "Follow up with perinatal clinic in 4 weeks",
+        whyItMatters: "The highest-risk period post-discharge from a postpartum psychotic episode is the first 1-2 weeks; four weeks is too long a gap without community support or clinical contact",
+        modelWording: "Follow-up in four weeks is clinically insufficient for a postpartum psychosis discharge. Community perinatal team contact within 48-72 hours, and a clinical review within one week, is the standard of care.",
+        keywords: ["four weeks", "too long", "48 hours", "72 hours", "one week", "community", "perinatal", "follow-up"],
+      },
+    ],
+    priorityOrder: {
+      urgent: ["s1", "s3", "s4"],
+      secondary: ["s2", "s5"],
+      lowYield: [],
+    },
+    modelAnswer: `Hold: I will not co-sign this summary. I will return it to the registrar with a list of required additions before release.
+
+Child safety: Lily must be named and a child safety assessment documented — including parenting capacity observations during admission, infant attachment, and a specific plan for Lily's safety in the community.
+
+Breastfeeding: The olanzapine/breastfeeding decision must be explicitly documented — the discussion, the risks, and Aisha's informed decision.
+
+Relapse prevention: A perinatal-specific relapse prevention plan must be written — early warning signs, crisis escalation, contingency if she deteriorates at home, and guidance for any future pregnancy.
+
+Social isolation: The discharge plan must explicitly address Aisha's home support. Who will be present in the first weeks? What is the plan if she is alone with Lily and deteriorating?
+
+Follow-up: I will change the follow-up to 48-72 hours with the community perinatal team and within one week for outpatient review — not four weeks.`,
+  },
+
+  // ─── 20. MDT CONFLICT & SYSTEMS PRESSURE ─────────────────────────────────
+  {
+    id: "q20",
+    topic: "mdt_systems",
+    difficulty: "consultant",
+    title: "ED Physician Wants Psychiatric Patient Discharged — Consultant Disagrees",
+    candidateRole: "Consultant psychiatrist on call",
+    setting: "Emergency Department",
+    stem: `At 2 am you receive a call from Dr Peter Walsh, a senior emergency medicine consultant, who is blunt and irritated. He tells you that a psychiatric patient, Tyra, a 33-year-old woman, has been in the ED for seven hours. Tyra presented with an intentional overdose of her antidepressants (venlafaxine 375 mg — approximately 20 tablets). She has been medically cleared by the ED team. Dr Walsh states: "She's stable now, she says she's fine and wants to go home, she's done this before, and I need the bed. It's a three-hour wait outside."
+
+You have reviewed Tyra's file before calling back. She has had six presentations to this ED in the past 18 months — four of them overdoses. Her last admission was eight weeks ago for a serious attempt. She is not currently linked with any community mental health service. The previous attending consultant noted in her file: "high-frequency attender, consider personality disorder."
+
+Dr Walsh is pressuring you to give "clearance to discharge" over the phone without you attending.`,
+    totalMarks: 22,
+    signals: [
+      {
+        id: "s1",
+        name: "Refuse phone-only clearance — direct assessment required",
+        category: "risk_self",
+        severity: "critical",
+        clueInStem: "Pressuring consultant to give clearance over the phone without attending",
+        whyItMatters: "A telephone discharge clearance for a patient with six ED presentations including a serious attempt eight weeks ago is not clinically defensible — direct assessment is required",
+        modelWording: "I will not give telephone clearance for this patient. I will attend in person for direct assessment. A phone conversation does not constitute a psychiatric risk assessment.",
+        keywords: ["telephone clearance", "phone clearance", "direct assessment", "attend", "in person", "not defensible", "refuse"],
+      },
+      {
+        id: "s2",
+        name: "High-frequency attender — pattern recognition, not dismissal",
+        category: "risk_self",
+        severity: "critical",
+        clueInStem: "Six presentations in 18 months; four overdoses; 'done this before'",
+        whyItMatters: "Prior suicide attempts are the strongest predictor of completed suicide; high frequency of presentation increases, not decreases, clinical concern",
+        modelWording: "Tyra's pattern of six presentations including four overdoses does not make her 'low risk' — it is one of the strongest predictors of eventual completed suicide. Habituation bias must be explicitly resisted.",
+        keywords: ["prior attempt", "high frequency", "pattern", "habituation", "not low risk", "strongest predictor", "history"],
+      },
+      {
+        id: "s3",
+        name: "No community mental health linkage — a system failure",
+        category: "system_pressure",
+        severity: "critical",
+        clueInStem: "Not currently linked with any community mental health service",
+        whyItMatters: "A patient with six ED presentations in 18 months without community mental health linkage represents a system failure — the ED is functioning as the de facto mental health service",
+        relatedSystem: "Community mental health referral; case management; ED diversion; GP engagement",
+        modelWording: "Tyra has had six presentations without community mental health linkage. Discharge tonight without addressing this system gap will result in a seventh presentation. A care plan with named clinical contacts must be established.",
+        keywords: ["community mental health", "linkage", "not connected", "system failure", "no case manager", "ed as default"],
+      },
+      {
+        id: "s4",
+        name: "Personality disorder label — stigmatising and clinically incomplete",
+        category: "diagnosis_formulation",
+        severity: "important",
+        clueInStem: "'Consider personality disorder' noted — used to minimise risk",
+        whyItMatters: "A personality disorder diagnosis does not reduce suicide risk — patients with BPD have a lifetime suicide completion rate of approximately 10%; the label must not function as a reason to withhold assessment",
+        modelWording: "The notation 'consider personality disorder' must not function as a clinical reason to minimise this presentation. Patients with personality disorders remain at significant risk of completed suicide.",
+        keywords: ["personality disorder", "bpd", "stigma", "label", "minimise", "not a reason", "10 percent", "lifetime risk"],
+      },
+      {
+        id: "s5",
+        name: "Consultant authority — maintaining clinical independence from ED pressure",
+        category: "governance",
+        severity: "important",
+        clueInStem: "ED consultant pressuring for clearance",
+        whyItMatters: "A psychiatry consultant must not yield clinical judgment to bed pressure or ED colleague pressure — this decision must be documented as a clinical one, not a negotiated one",
+        modelWording: "I will attend in person. I understand the ED is under pressure, and I acknowledge Dr Walsh's concern for his department, but the clinical decision regarding Tyra's safety cannot be made by telephone or under administrative pressure.",
+        keywords: ["clinical independence", "pressure", "not yield", "attend", "document", "clinical decision", "professional"],
+      },
+    ],
+    priorityOrder: {
+      urgent: ["s1", "s2", "s3"],
+      secondary: ["s4", "s5"],
+      lowYield: [],
+    },
+    modelAnswer: `Direct assessment: I will attend in person. I will not give telephone clearance for a patient with six presentations including four overdoses and a serious attempt eight weeks ago.
+
+Clinical framing: I will acknowledge Dr Walsh's concerns. However, the clinical decision regarding Tyra's safety is mine to make and I will make it after direct assessment.
+
+Risk formulation: Prior suicide attempts are the strongest predictor of completed suicide. Tyra's pattern of high-frequency presentations increases, not decreases, my level of concern. Habituation bias in high-frequency presenters is a recognised cause of preventable deaths.
+
+Personality disorder: The previous clinician's notation does not reduce risk or change the clinical obligation to assess.
+
+System gap: Tyra has had six presentations without community mental health linkage. Regardless of tonight's disposition decision, I will ensure a referral for case management occurs before she leaves this ED.
+
+Documentation: I will document my decision and the basis for it, including the request for telephone clearance and my refusal.`,
+  },
+
+  // ─── 21. MDT CONFLICT ─────────────────────────────────────────────────────
+  {
+    id: "q21",
+    topic: "mdt_systems",
+    difficulty: "consultant",
+    title: "Nursing Unit Manager Pressuring Premature Discharge",
+    candidateRole: "Consultant psychiatrist, inpatient ward",
+    setting: "Acute inpatient psychiatric unit — morning meeting",
+    stem: `It is Monday morning. During the ward team meeting, the Nursing Unit Manager (NUM), Sandra, announces that there are 22 patients in a 20-bed unit. She states that the hospital has issued a "Code Yellow — Capacity Alert" and that all teams must review patients for discharge by midday. She singles out your patients: "These three need to go — Greg, Nasrin, and William. The registrar cleared Greg on Friday."
+
+You review the three patients:
+
+Greg, 52, admitted following a serious overdose one week ago. Marked improvement documented by the registrar. Currently euthymic, denies SI. No safety plan documented. No community follow-up arranged. No family contact made.
+
+Nasrin, 35, admitted ten days ago for acute psychosis secondary to bipolar I. Still responding to medication. Her mental state is partially settled but she remains thought-disordered and her insight is limited. She has two young children at home and her husband works in a fly-in-fly-out role — he is currently on rotation and unavailable for the next five days.
+
+William, 67, admitted two weeks ago for a severe depressive episode with psychotic features. He has begun to improve on ECT. He is halfway through his ECT course. His wife told the nursing staff last week that she is "afraid to have him home" and cannot manage him alone.
+
+Sandra tells you that if you do not clear these three patients by midday "it will escalate to the Medical Director."`,
+    totalMarks: 25,
+    signals: [
+      {
+        id: "s1",
+        name: "Clinical authority — beds do not override clinical judgment",
+        category: "system_pressure",
+        severity: "critical",
+        clueInStem: "Code Yellow; NUM telling consultant to discharge three named patients by midday",
+        whyItMatters: "A nursing unit manager does not have clinical authority to direct discharge decisions; the consultant's clinical judgment is not subordinate to administrative capacity management",
+        modelWording: "I acknowledge the bed pressure and will work collaboratively with the NUM to manage capacity, but discharge decisions for these three patients are clinical decisions made on clinical grounds. I will not discharge any patient who is not clinically safe to leave.",
+        keywords: ["clinical authority", "not subordinate", "clinical decision", "beds", "capacity management", "acknowledge", "collaborate"],
+      },
+      {
+        id: "s2",
+        name: "Greg — no safety plan, no follow-up: not safe to discharge",
+        category: "risk_self",
+        severity: "critical",
+        clueInStem: "No safety plan; no community follow-up; no family contact; one week post-serious overdose",
+        whyItMatters: "Greg is one week post-serious overdose with no safety plan and no follow-up in place — discharging him in this state repeats the documentation failures seen in many post-discharge suicides",
+        modelWording: "Greg cannot be safely discharged today. Before discharge he requires a written safety plan, confirmed community follow-up within 48-72 hours, family contact, and a GP letter.",
+        keywords: ["greg", "no safety plan", "no follow-up", "one week", "overdose", "not safe", "family contact"],
+      },
+      {
+        id: "s3",
+        name: "Nasrin — thought-disordered, limited insight, children unsupervised",
+        category: "risk_vulnerable",
+        severity: "critical",
+        clueInStem: "Thought-disordered; limited insight; two young children; husband away for five days",
+        whyItMatters: "Discharge of a thought-disordered mother with limited insight into an unsupervised parenting role constitutes a child safety risk and poses direct risk to Nasrin",
+        relatedRisk: "Child safety — two young children in care of a thought-disordered person; risk to Nasrin from limited insight",
+        modelWording: "Nasrin cannot be discharged into an unsupported home environment with two young children while thought-disordered and lacking insight. A child safety assessment and support plan is required before any discharge consideration.",
+        keywords: ["nasrin", "thought-disordered", "insight", "children", "child safety", "husband away", "unsupported", "not ready"],
+      },
+      {
+        id: "s4",
+        name: "William — mid-ECT course; wife unable to cope",
+        category: "risk_self",
+        severity: "critical",
+        clueInStem: "Halfway through ECT course; wife afraid to have him home; cannot manage alone",
+        whyItMatters: "Discharging a patient mid-ECT course for a severe psychotic depression, into a home where the carer has expressed she cannot manage, exposes both William and his wife to serious harm",
+        modelWording: "William is mid-ECT course for severe psychotic depression. His wife has explicitly told staff she cannot manage him at home. Early discharge would be clinically premature and potentially harmful to both William and his wife.",
+        keywords: ["william", "ect", "mid-course", "wife", "cannot cope", "psychotic depression", "premature", "carer"],
+      },
+      {
+        id: "s5",
+        name: "Document decision and escalate appropriately",
+        category: "governance",
+        severity: "important",
+        clueInStem: "Sandra threatens Medical Director escalation",
+        whyItMatters: "The consultant must document the clinical basis for each decision and escalate through clinical governance channels if required — not yield to administrative pressure",
+        modelWording: "I will document the clinical basis for my decisions regarding each patient clearly in their medical records. If this escalates to the Medical Director, I welcome that conversation — clinical safety decisions must be transparent and defensible.",
+        keywords: ["document", "medical director", "escalate", "governance", "clinical basis", "transparent", "defensible"],
+      },
+    ],
+    priorityOrder: {
+      urgent: ["s1", "s3", "s2"],
+      secondary: ["s4", "s5"],
+      lowYield: [],
+    },
+    modelAnswer: `Clinical authority: I acknowledge the Code Yellow and will actively work to facilitate safe discharges. I will not, however, discharge any patient who is clinically unsafe. Bed pressure is not a clinical reason for discharge.
+
+Greg: Not safe to discharge today. He is one week post-serious overdose with no safety plan and no follow-up. Before discharge: written safety plan, 48-hour community follow-up, family contact, and GP letter.
+
+Nasrin: Not safe to discharge. She is thought-disordered with limited insight and two young children at home. With her husband away for five days, discharge now creates a child safety risk. I will request a formal child safety consultation.
+
+William: Not safe to discharge mid-ECT. His wife has explicitly said she cannot manage him at home. Premature discharge of a patient mid-ECT course for psychotic depression is clinically unjustifiable.
+
+Escalation: I will document my decisions for all three patients with clinical reasoning. If this escalates to the Medical Director, I will engage — my decisions are transparent and defensible.
+
+Collaboration: I will work with the team to expedite safe discharges for any patients who are clinically ready.`,
+  },
+
+  // ─── 22. RURAL & RESOURCE-LIMITED ────────────────────────────────────────
+  {
+    id: "q22",
+    topic: "rural",
+    difficulty: "consultant",
+    title: "Videoconference Consultation — Rural Patient, No Inpatient Beds Within 200 km",
+    candidateRole: "Consultant psychiatrist, metropolitan hospital, providing telehealth to a rural ED",
+    setting: "Rural ED — telehealth consultation",
+    stem: `You are a metropolitan-based consultant psychiatrist providing after-hours telehealth to a rural ED 220 km away. At 9 pm you connect to assess Harry, a 58-year-old man who was brought in by his wife after she found a farewell letter and a loaded firearm in his study. Harry is a farmer who has been experiencing financial stress following three successive failed harvests. He has no previous psychiatric history.
+
+The rural ED has one doctor on — a junior ED registrar who completed her intern year 18 months ago. The nearest inpatient psychiatric bed is 220 km away in your city. The rural hospital has no inpatient psychiatric unit. The RFDS (Royal Flying Doctor Service) can transport but has a minimum four-hour wait. The local police have collected the firearm.
+
+Harry is composed and minimising on video — he says the letter was "just a way of processing" and he is "fine now." He and his wife are both well-known community figures. His wife looks distressed and is hovering in the background of the screen.
+
+The ED registrar quietly tells you (off camera) that Harry has been drinking — she estimates significantly — and that the waiting room is becoming overwhelmed with other patients.`,
+    totalMarks: 25,
+    signals: [
+      {
+        id: "s1",
+        name: "Farewell letter and firearms — high-lethality attempt was imminent",
+        category: "risk_self",
+        severity: "critical",
+        clueInStem: "Farewell letter found; loaded firearm in study; farmer with means access",
+        whyItMatters: "A farewell letter combined with access to a loaded firearm represents imminent high-lethality suicidal planning; this is a psychiatric emergency regardless of current denial",
+        modelWording: "The combination of a written farewell letter and access to a loaded firearm represents documented suicidal planning with lethal means. This is a high-lethality emergency regardless of Harry's current minimisation.",
+        keywords: ["farewell letter", "firearm", "loaded", "planning", "lethal means", "imminent", "high lethality", "means access"],
+      },
+      {
+        id: "s2",
+        name: "Minimisation in context of alcohol — assessment validity",
+        category: "risk_self",
+        severity: "critical",
+        clueInStem: "Significantly intoxicated; 'just a way of processing' and 'fine now'",
+        whyItMatters: "Assessment under significant alcohol intoxication cannot be used to establish psychiatric clearance; Harry's minimisation is clinically unreliable",
+        modelWording: "Harry's denial of suicidal intent cannot be taken at face value while significantly intoxicated. The assessment must be repeated when sober. He cannot be discharged tonight.",
+        keywords: ["alcohol", "intoxicated", "minimisation", "unreliable", "cannot assess", "not valid", "sober", "denial"],
+      },
+      {
+        id: "s3",
+        name: "Rural equity — distance must not determine clinical standard",
+        category: "system_pressure",
+        severity: "critical",
+        clueInStem: "220 km from nearest inpatient bed; no local psychiatric unit",
+        whyItMatters: "The absence of local inpatient capacity cannot lower the clinical standard of care; Harry's safety must be protected regardless of geographic barriers",
+        relatedSystem: "RFDS transport; rural psychiatric crisis pathway; metropolitan bed access via telehealth; voluntary admission options",
+        modelWording: "Harry's geographic location does not lower the clinical obligation to provide safe care. I must initiate RFDS transfer to the metropolitan inpatient unit. The four-hour wait is not a reason to discharge.",
+        keywords: ["rural", "distance", "geographic", "equity", "rfds", "transfer", "standard of care", "not lower"],
+      },
+      {
+        id: "s4",
+        name: "Firearms — confirm secured, explore other means access",
+        category: "risk_self",
+        severity: "critical",
+        clueInStem: "Police have collected the firearm",
+        whyItMatters: "Police collection of the firearm is an important immediate step but Harry, as a farmer, may have access to other firearms, agricultural chemicals, or other lethal means",
+        modelWording: "Police collection of the identified firearm is essential and has occurred. However, on a farm there may be additional licensed firearms, agricultural chemicals, and other means. The wife must be asked about all means access.",
+        keywords: ["firearms", "secured", "additional firearms", "means", "agricultural", "chemicals", "farm", "other means"],
+      },
+      {
+        id: "s5",
+        name: "Wife as collateral — distressed carer, safety planning partner",
+        category: "family_carer",
+        severity: "important",
+        clueInStem: "Wife is distressed, hovering in the background",
+        whyItMatters: "Harry's wife is a critical source of collateral and the person most likely to detect deterioration — she must be directly included in the safety planning conversation",
+        modelWording: "Harry's wife must be brought into the consultation. She found the letter and the firearm — she has critical information about his behaviour in the preceding days and about means access at the farm.",
+        keywords: ["wife", "collateral", "bring in", "include", "safety plan", "partner", "distressed"],
+      },
+      {
+        id: "s6",
+        name: "Junior ED registrar — supervision and support",
+        category: "governance",
+        severity: "important",
+        clueInStem: "Rural ED junior registrar; overwhelmed waiting room",
+        whyItMatters: "The ED registrar is a junior clinician managing a complex psychiatric crisis with no local psychiatric backup — she requires clear, directive support and should not be left to manage this independently",
+        modelWording: "I will give the ED registrar clear, explicit guidance: Harry is not to be discharged; RFDS is to be called now; his wife is to be brought in for collateral. I will remain on the line or available for callback.",
+        keywords: ["registrar", "support", "guidance", "directive", "clear instruction", "not alone", "supervision", "rural ed"],
+      },
+    ],
+    priorityOrder: {
+      urgent: ["s1", "s3", "s4"],
+      secondary: ["s2", "s5", "s6"],
+      lowYield: [],
+    },
+    modelAnswer: `Immediate: Harry is not to be discharged tonight. The farewell letter and loaded firearm confirm suicidal planning with lethal means. His current minimisation under significant alcohol intoxication is clinically unreliable.
+
+Means: Police have secured the identified firearm. I will ask the ED registrar to ask Harry's wife — with Harry's consent or as collateral — about additional firearms, agricultural chemicals, and other means access on the farm.
+
+Transfer: I will advise the ED registrar to contact RFDS immediately for psychiatric transfer to the metropolitan inpatient unit. The four-hour wait is not a reason to delay this process. Distance cannot lower the clinical standard.
+
+Wife: Harry's wife must be brought into the consultation. She is the primary collateral source and the person who found the letter. She must be included in safety planning and given information about what happens next.
+
+Reassessment: When Harry is sober — likely in the morning — a formal risk assessment must occur. Tonight's minimisation cannot be used to make a disposition decision.
+
+ED registrar: I will give her clear, directive guidance and remain available. She should not bear this clinical responsibility alone.`,
+  },
+
+  // ─── 23. RURAL ─────────────────────────────────────────────────────────────
+  {
+    id: "q23",
+    topic: "rural",
+    difficulty: "consultant",
+    title: "Rural Acute Psychosis — No Beds, No Medication, Cultural Complexity",
+    candidateRole: "Consultant psychiatrist providing regional telehealth",
+    setting: "Rural community health centre, 300 km from nearest psychiatric facility",
+    stem: `You are the regional telehealth psychiatrist. A community health nurse in a remote community calls you at 10 am about Rosa, a 24-year-old Aboriginal woman who has been acutely unwell for five days. Rosa is experiencing persecutory delusions, auditory hallucinations, disorganised behaviour, and has not slept or eaten in two days. She has been found walking on the road at night. Her family have been watching her and have not slept.
+
+Rosa has no previous psychiatric history. Her family believe her illness is the result of "wrong business" — a spiritual explanation with deep cultural meaning in their community. They are frightened and are divided — two family members want her to go to "the city hospital," others want a traditional healer to be involved first. Rosa herself oscillates between moments of lucidity where she pleads not to be sent away, and periods where she is floridly psychotic.
+
+The community health centre has no antipsychotic medication in stock. There is no police presence in the community. The only transport is a community bus driven by a volunteer, which takes four hours to the nearest town. The RFDS is available but for "emergencies only" and the nurse is uncertain if this qualifies. The nearest psychiatric bed is 300 km away.
+
+Rosa's family have told the nurse: "If you take her away she might never come back."`,
+    totalMarks: 25,
+    signals: [
+      {
+        id: "s1",
+        name: "Acute psychosis with safety risk — this is an emergency",
+        category: "immediate_safety",
+        severity: "critical",
+        clueInStem: "Walking on road at night; not sleeping or eating for two days; floridly psychotic",
+        whyItMatters: "An acutely psychotic person walking on roads at night with no sleep or food for two days is in immediate danger — this constitutes a medical emergency regardless of resource limitations",
+        modelWording: "Rosa's safety is immediately compromised — wandering on roads at night, not eating or sleeping, and floridly psychotic. This is a medical emergency. RFDS activation is justified.",
+        keywords: ["immediate safety", "road", "night", "emergency", "acute", "not sleeping", "not eating", "danger", "rfds"],
+      },
+      {
+        id: "s2",
+        name: "RFDS — this qualifies as an emergency, nurse must be supported",
+        category: "system_pressure",
+        severity: "critical",
+        clueInStem: "Nurse uncertain if situation qualifies for RFDS; 'emergencies only'",
+        whyItMatters: "Acute psychosis with safety risk absolutely qualifies for RFDS activation; the nurse needs the consultant to be unambiguous — equivocation in this context is dangerous",
+        modelWording: "I will tell the nurse directly: this is an emergency qualifying for RFDS activation. I will document this and be available to speak with the RFDS medical officer if needed.",
+        keywords: ["rfds", "activate", "emergency", "qualifies", "direct", "unambiguous", "support nurse", "rfds medical officer"],
+      },
+      {
+        id: "s3",
+        name: "Cultural safety — family's explanation of illness and traditional healing",
+        category: "cultural_safety",
+        severity: "critical",
+        clueInStem: "'Wrong business'; family divided; traditional healer",
+        whyItMatters: "The family's cultural explanatory model is not a barrier to be overcome — it reflects a legitimate cultural framework; coercive removal without cultural engagement will cause lasting harm to trust and to Rosa",
+        relatedCultural: "RANZCP Aboriginal and Torres Strait Islander Mental Health Position Statement; cultural safety in emergency",
+        modelWording: "The family's cultural explanation of Rosa's illness must be taken seriously, not dismissed. I will ask the nurse to involve the Aboriginal Health Worker and, if possible, the traditional healer — not instead of medical care, but alongside it where safe.",
+        keywords: ["wrong business", "cultural", "traditional healer", "cultural explanatory model", "aboriginal health worker", "not dismissed", "alongside"],
+      },
+      {
+        id: "s4",
+        name: "Family's fear of removal — historical context of institutionalisation",
+        category: "cultural_safety",
+        severity: "critical",
+        clueInStem: "'If you take her away she might never come back'",
+        whyItMatters: "This statement reflects a historically grounded fear of institutionalisation and removal that has no parallel in non-Indigenous contexts — it must be heard and addressed, not dismissed as non-compliance",
+        modelWording: "The family's fear that Rosa 'might never come back' is grounded in the lived experience of Aboriginal communities and institutional removal. This must be explicitly acknowledged and the plan for Rosa's return must be part of the conversation.",
+        keywords: ["never come back", "historical", "institutionalisation", "removal", "fear", "family", "acknowledge", "return"],
+      },
+      {
+        id: "s5",
+        name: "No medication available — advocate for emergency medication access",
+        category: "system_pressure",
+        severity: "important",
+        clueInStem: "No antipsychotic medication in stock at the community health centre",
+        whyItMatters: "The absence of antipsychotic medication in a remote community health centre is itself a rural equity failure; the consultant must advocate for emergency supply through the RFDS or another pathway",
+        relatedSystem: "Emergency supply; RFDS medication carry; rural formulary gap",
+        modelWording: "The absence of antipsychotic medication at the community health centre is a systems failure. I will ask the RFDS to carry emergency medication and advocate to the health service for a review of remote medication formularies.",
+        keywords: ["medication", "antipsychotic", "no stock", "rfds carry", "emergency supply", "rural formulary", "advocate"],
+      },
+      {
+        id: "s6",
+        name: "Family exhaustion — carer burden; they have not slept",
+        category: "family_carer",
+        severity: "important",
+        clueInStem: "Her family have been watching her and have not slept",
+        whyItMatters: "Rosa's family are sleep-deprived, frightened, and divided — their wellbeing is clinically relevant and their capacity to sustain safe observation is limited",
+        modelWording: "Rosa's family have not slept and are under extreme stress. Their capacity to safely supervise her for the hours until RFDS arrival must be assessed, and practical support offered where possible.",
+        keywords: ["family", "exhausted", "not slept", "carer burden", "capacity to supervise", "support"],
+      },
+    ],
+    priorityOrder: {
+      urgent: ["s1", "s2", "s4"],
+      secondary: ["s3", "s5", "s6"],
+      lowYield: [],
+    },
+    modelAnswer: `Emergency: Rosa is acutely psychotic, not eating or sleeping, and wandering on roads at night. This is a psychiatric emergency. I will advise the nurse to activate RFDS immediately — I will be available to speak to the RFDS medical officer to confirm.
+
+Family: I will ask the nurse to take time — even 20 minutes — to sit with the family before RFDS arrival. The statement "if you take her away she might never come back" must be heard. It reflects legitimate historical experience and must be addressed directly — with a plan for Rosa's community return built into the transfer process.
+
+Cultural safety: The Aboriginal Health Worker must be involved immediately. The traditional healer's involvement should not be excluded — if the family can arrange contact, this can proceed alongside, not instead of, medical emergency care.
+
+Medication: I will ask if the RFDS can carry an emergency antipsychotic dose. This gap in the community health formulary must be escalated.
+
+Family exhaustion: The family cannot safely supervise Rosa indefinitely. The nurse should assess their capacity to maintain observation safely until RFDS arrives and document this.
+
+Advocacy: After this episode, I will raise the absence of antipsychotic medication in this community with the regional health service.`,
+  },
+
+  // ─── 24. PSYCHOTHERAPY & BOUNDARIES ──────────────────────────────────────
+  {
+    id: "q24",
+    topic: "psychotherapy",
+    difficulty: "consultant",
+    title: "Registrar's Patient Develops Erotic Transference — Registrar Has Disclosed Personal Information",
+    candidateRole: "Consultant psychiatrist supervising a psychotherapy case",
+    setting: "Outpatient clinic — supervision session",
+    stem: `You are supervising Dr Ben Carter, a second-year advanced trainee conducting twice-weekly psychodynamic psychotherapy with Annalise, a 31-year-old woman with borderline personality disorder and a history of childhood sexual abuse. Ben presents the case at your monthly supervision meeting.
+
+He tells you that over the past two months Annalise has become increasingly "attached" to him. He notes she sends him messages via the hospital's patient portal outside session times — sometimes late at night — asking if he is "thinking about her." In the last session she told him directly that she was "in love with him" and that she "knew he felt the same way."
+
+When you ask Ben how he responded, he becomes visibly uncomfortable. He tells you that in that session he had disclosed to Annalise that he was "also finding the therapy sessions very meaningful" and that he "looked forward to their sessions." He has not told you this before. He appears anxious and adds: "I'm not sure I can keep seeing her — but I don't want to abandon her either."
+
+You also note that Ben has not documented the last four sessions in the medical record.`,
+    totalMarks: 22,
+    signals: [
+      {
+        id: "s1",
+        name: "Therapist self-disclosure in context of erotic transference — boundary violation",
+        category: "governance",
+        severity: "critical",
+        clueInStem: "Ben disclosed 'finding sessions meaningful' and 'looking forward to sessions' after Annalise declared love",
+        whyItMatters: "Reciprocal self-disclosure in response to an erotic transference declaration constitutes a boundary violation — it reinforces the patient's transference, distorts the therapeutic frame, and places both the patient and therapist at risk",
+        modelWording: "Ben's self-disclosure in this clinical context constitutes a boundary violation. It was not a technically neutral response — it validated the transference and distorted the therapeutic frame. This must be addressed directly.",
+        keywords: ["self-disclosure", "boundary violation", "erotic transference", "frame", "disclosure", "reciprocal", "not neutral"],
+      },
+      {
+        id: "s2",
+        name: "Undocumented sessions — four sessions absent from medical record",
+        category: "governance",
+        severity: "critical",
+        clueInStem: "Has not documented the last four sessions in the medical record",
+        whyItMatters: "Absent documentation may indicate the sessions were deliberately not recorded — possibly because of the content. This is a medico-legal and professional registration risk",
+        relatedLegal: "Medical record keeping obligations; AHPRA professional standards; potential disciplinary risk",
+        modelWording: "Four undocumented sessions in the context of an escalating transference and a subsequent disclosure is a serious professional concern. The absence of documentation must be addressed and the clinical content explored.",
+        keywords: ["undocumented", "not documented", "four sessions", "record", "absent", "not recorded", "documentation"],
+      },
+      {
+        id: "s3",
+        name: "Annalise's safety — BPD, sexual abuse history, attachment disruption",
+        category: "risk_self",
+        severity: "critical",
+        clueInStem: "BPD; history of childhood sexual abuse; intense attachment to therapist",
+        whyItMatters: "A woman with BPD and a history of childhood sexual abuse who has developed an intense erotic transference is at significant risk if the therapy is abruptly terminated or if the boundary violation escalates",
+        modelWording: "Annalise is clinically vulnerable. The erotic transference in the context of childhood sexual abuse and BPD must be managed carefully to avoid retraumatisation, particularly if the therapeutic relationship is to be transferred.",
+        keywords: ["annalise", "bpd", "sexual abuse", "risk", "vulnerable", "safe transfer", "trauma", "retraumatisation"],
+      },
+      {
+        id: "s4",
+        name: "Ben's wellbeing and registration — he may require professional support",
+        category: "governance",
+        severity: "important",
+        clueInStem: "Ben is visibly anxious and uncomfortable; this is the first time he has disclosed the self-disclosure",
+        whyItMatters: "Ben may be experiencing countertransference that he has not been able to bring to supervision — his concealment of the disclosure and the undocumented sessions suggests he is in distress",
+        modelWording: "Ben needs both supervisory and potentially personal support. His concealment of the disclosure suggests shame or fear. This must be approached supportively before it becomes punitive — though the professional obligations must be clearly named.",
+        keywords: ["ben", "wellbeing", "countertransference", "concealment", "support", "distress", "supervision", "anxiety"],
+      },
+      {
+        id: "s5",
+        name: "Transfer of care — must be managed, not abandonment",
+        category: "disposition",
+        severity: "important",
+        clueInStem: "'I don't want to abandon her either' — Ben is considering ending therapy",
+        whyItMatters: "Abrupt termination of a psychotherapy case with a patient who has BPD, childhood sexual abuse, and an unresolved erotic transference constitutes therapeutic abandonment — a carefully managed transfer of care must be planned",
+        modelWording: "Annalise cannot be abruptly discharged. A planned transfer of care must be organised — with a senior clinician managing the transition, a clear explanation to Annalise, and appropriate clinical handover.",
+        keywords: ["transfer", "not abandon", "planned", "senior", "transition", "handover", "managed", "not abrupt"],
+      },
+      {
+        id: "s6",
+        name: "AHPRA notification — professional obligation to consider",
+        category: "governance",
+        severity: "important",
+        clueInStem: "Boundary violation by a supervised trainee",
+        whyItMatters: "A boundary violation by a registered medical practitioner may engage mandatory or voluntary reporting obligations; the consultant must consider their own professional obligations",
+        relatedLegal: "AHPRA mandatory reporting; Medical Board Code of Conduct",
+        modelWording: "As the supervising consultant, I must consider my obligations under AHPRA mandatory reporting. The boundary violation must be documented and the medical defence organisation consulted. This is not a matter to manage solely within supervision.",
+        keywords: ["ahpra", "mandatory reporting", "professional obligation", "medical board", "reporting", "register", "mdo", "defence"],
+      },
+    ],
+    priorityOrder: {
+      urgent: ["s1", "s3", "s2"],
+      secondary: ["s4", "s5", "s6"],
+      lowYield: [],
+    },
+    modelAnswer: `Boundary violation: Ben's self-disclosure in response to an erotic transference declaration is a boundary violation. It was not clinically neutral and I must name this directly — supportively, not punitively — in supervision today.
+
+Undocumented sessions: Four sessions without documentation in this context is a serious professional concern. I must explore why they were not documented and the sessions must be retrospectively documented to the degree possible.
+
+Annalise's safety: My immediate clinical concern is Annalise. She is vulnerable — BPD, childhood sexual abuse, erotic transference. Ben cannot continue as her therapist. A planned transfer of care must be organised with a senior clinician. She must not be abandoned.
+
+Ben's wellbeing: I will approach Ben supportively first — he appears to be in distress and has been carrying this alone. However, professional obligations must be clearly named.
+
+AHPRA: I must consult my medical defence organisation about mandatory reporting obligations. A boundary violation by a supervised trainee involves my professional obligations as the supervisor.
+
+Documentation: I will document this supervision session in detail.`,
+  },
+
+  // ─── 25. PSYCHOTHERAPY ────────────────────────────────────────────────────
+  {
+    id: "q25",
+    topic: "psychotherapy",
+    difficulty: "consultant",
+    title: "Patient Discloses Ongoing Childhood Abuse — Mid-Therapy",
+    candidateRole: "Consultant psychiatrist conducting psychotherapy",
+    setting: "Outpatient psychotherapy session",
+    stem: `You are conducting a session with Jade, a 26-year-old woman with complex PTSD who has been in weekly trauma-focused CBT with you for six months. Jade was referred following a disclosure to her GP of childhood sexual abuse by her uncle, which ended when she was 14.
+
+In today's session, Jade becomes very distressed and discloses for the first time that the abuse did not end when she was 14. She tells you her uncle — who lives in the same suburb, is married with three children, and coaches the local junior football team — has been contacting her again over the past six months, "pushing her to meet." She adds: "I think he's doing it to other kids. There's a girl on his team — she's about twelve — who keeps showing up at his house. She told me she was going there to 'help with jobs around the house.'"
+
+Jade is terrified. She tells you: "Please don't tell anyone. I'll lose my family. I promise I will stop seeing you if you tell anyone."`,
+    totalMarks: 22,
+    signals: [
+      {
+        id: "s1",
+        name: "Mandatory reporting — reasonable suspicion of child at risk",
+        category: "child_protection",
+        severity: "critical",
+        clueInStem: "12-year-old girl attending uncle's home; uncle coaches junior football; contact with Jade ongoing",
+        whyItMatters: "The description of a 12-year-old girl attending the home of a known child sexual abuser constitutes a reasonable suspicion of child at risk under mandatory reporting legislation — this is a non-negotiable obligation",
+        relatedLegal: "Children and Young Persons Act (jurisdiction-specific); mandatory reporting obligation for registered health practitioners; does not require proof",
+        modelWording: "I have a mandatory reporting obligation. The description of a 12-year-old girl attending the home of a person who has disclosed a history of child sexual abuse constitutes reasonable grounds to suspect a child is at risk. I must report to child protective services.",
+        keywords: ["mandatory reporting", "mandatory report", "child at risk", "reasonable suspicion", "child protection", "obligation", "report"],
+      },
+      {
+        id: "s2",
+        name: "Confidentiality — limits must be explained, therapeutic frame maintained",
+        category: "ethics",
+        severity: "critical",
+        clueInStem: "'Please don't tell anyone. I will stop seeing you if you tell.'",
+        whyItMatters: "The limits of confidentiality must be clearly explained — mandatory reporting overrides therapeutic confidentiality; but the way this is managed will determine whether Jade stays in therapy",
+        modelWording: "I must be honest with Jade about the limits of confidentiality. I cannot promise confidentiality in this situation. I will explain what I am obligated to do, why, and how I will do it — and I will do everything I can to maintain our therapeutic relationship.",
+        keywords: ["confidentiality", "limits", "explain", "honest", "cannot promise", "mandatory", "therapeutic relationship", "honest"],
+      },
+      {
+        id: "s3",
+        name: "Jade's safety — ongoing contact from perpetrator",
+        category: "risk_self",
+        severity: "critical",
+        clueInStem: "Uncle has been contacting her again for six months, 'pushing her to meet'",
+        whyItMatters: "Jade is being actively pursued by her perpetrator — this is an ongoing safety risk that must be addressed in the safety plan regardless of the child protection report",
+        modelWording: "Jade is at ongoing risk from her uncle's contact. We must develop a safety plan addressing how she responds to his contact, who she can call, and what steps to take if he escalates.",
+        keywords: ["jade safety", "contact", "perpetrator", "ongoing", "safety plan", "ongoing risk", "uncle"],
+      },
+      {
+        id: "s4",
+        name: "Therapeutic rupture — managing the relationship through mandatory action",
+        category: "trauma",
+        severity: "important",
+        clueInStem: "'I will stop seeing you if you tell anyone'",
+        whyItMatters: "Jade's threat to leave therapy reflects a trauma response — her experience of disclosure leading to consequence; the therapeutic relationship must be maintained through transparency, not deception",
+        modelWording: "Jade's response to disclosure reflects her trauma history — the fear of loss following disclosure. I will name this compassionately, explain my obligations fully, and emphasise that I want to continue working with her through this.",
+        keywords: ["therapeutic rupture", "trauma response", "disclosure", "fear", "transparency", "relationship", "continue", "maintain"],
+      },
+      {
+        id: "s5",
+        name: "Do not allow Jade to leave without safety acknowledgement",
+        category: "immediate_safety",
+        severity: "important",
+        clueInStem: "Jade is distressed at the end of the session",
+        whyItMatters: "Jade has disclosed escalating contact from her abuser and significant distress — she must not leave the session without a safety check and an explicit plan for the next few days",
+        modelWording: "Before this session ends I must ensure Jade has a safety plan for the next 24-48 hours — who she can contact, what she does if her uncle contacts her, and a clear plan for our next appointment.",
+        keywords: ["safety check", "before leaving", "session end", "next 24 hours", "plan", "next appointment", "do not leave"],
+      },
+    ],
+    priorityOrder: {
+      urgent: ["s1", "s2", "s3"],
+      secondary: ["s4", "s5"],
+      lowYield: [],
+    },
+    modelAnswer: `Mandatory reporting: I must report to child protective services. The description of a 12-year-old girl making repeated visits to the home of a known child sexual abuser meets the threshold of reasonable suspicion of a child at risk. This is a non-negotiable obligation that cannot be set aside by therapeutic confidentiality.
+
+Transparency with Jade: I will tell Jade honestly what I am obligated to do, why, and how I will do it. I will not deceive her or allow her to believe I won't report. I will acknowledge how frightening this is and how much courage it took to tell me.
+
+Therapeutic relationship: Jade's threat to leave therapy is a trauma response — the anticipation that disclosure leads to loss. I will name this compassionately, explain the limits of confidentiality, and make clear that I want to continue working with her.
+
+Jade's safety: Her uncle has been contacting her for six months. Before she leaves today, we will develop a safety plan for her own protection.
+
+Session end: Jade must not leave without a safety plan and a confirmed next appointment.`,
+  },
+
+  // ─── 26. ETHICS & PROFESSIONALISM ────────────────────────────────────────
+  {
+    id: "q26",
+    topic: "ethics",
+    difficulty: "consultant",
+    title: "Capacitous Refusal of Life-Saving Treatment — Ethical Dilemma",
+    candidateRole: "Consultant psychiatrist — liaison",
+    setting: "General medical ward",
+    stem: `You are asked to review Arthur, a 71-year-old retired schoolteacher, on the oncology ward. Arthur was diagnosed three months ago with aggressive T-cell lymphoma. He has been told that without a bone marrow transplant (BMT), his prognosis is approximately 6 months. With BMT, there is a 40% five-year survival rate.
+
+Arthur has refused BMT. He was referred to you because the oncology team cannot "understand why someone would say no." Arthur tells you he has thought about this "very carefully" for three months. He says: "I watched my wife die in ICU after a BMT — tubes everywhere, no dignity. I won't do that to myself or to my children. I've had a good life. Six months of quality is better than years of suffering." He gives an articulate account of his diagnosis and prognosis, explains the risks and benefits of both options in accurate detail, and states he wants to spend his remaining time at home, gardening and with his family.
+
+His adult daughter, who is present, is tearful and tells you: "He's depressed — you need to do something. He's not the person he used to be."`,
+    totalMarks: 22,
+    signals: [
+      {
+        id: "s1",
+        name: "Capacity assessment — formal four-domain evaluation required",
+        category: "capacity",
+        severity: "critical",
+        clueInStem: "Referred because team 'cannot understand' refusal — capacity not formally assessed",
+        whyItMatters: "The oncology team's referral based on their inability to understand Arthur's choice implies a potential conflation of 'unwanted decision' with 'impaired capacity' — a formal, rigorous capacity assessment is required",
+        modelWording: "A referral framed around the team's inability to understand a patient's choice requires a careful capacity assessment — not to overturn the choice, but to ensure it is genuinely capacitous.",
+        keywords: ["capacity assessment", "four domains", "formal", "capacitous", "understanding", "retain", "weigh", "communicate"],
+      },
+      {
+        id: "s2",
+        name: "Capacity appears intact — articulate, consistent, values-grounded refusal",
+        category: "capacity",
+        severity: "critical",
+        clueInStem: "Articulate account of diagnosis, prognosis, risks and benefits; consistent over three months; grounded in specific experience",
+        whyItMatters: "Arthur's decision appears to meet all four domains of capacity — he understands, retains, applies the information to his own values, and communicates a clear decision; this must be explicitly documented",
+        modelWording: "Arthur's refusal of BMT appears to be a capacitous, values-congruent decision made after three months of deliberation. His decision is grounded in a specific lived experience (his wife's death) and is consistent and articulate across all four capacity domains.",
+        keywords: ["capacity intact", "capacitous", "values", "consistent", "deliberation", "three months", "articulate", "four domains met"],
+      },
+      {
+        id: "s3",
+        name: "Depression — must be assessed, must not be assumed to invalidate refusal",
+        category: "diagnosis_formulation",
+        severity: "critical",
+        clueInStem: "Daughter says 'he's depressed'; oncology team cannot 'understand why someone would say no'",
+        whyItMatters: "A major depressive episode with nihilistic features could impair capacity — but the presence of sadness or grief in the context of a life-limiting diagnosis does not constitute depression, and depression does not automatically invalidate capacity",
+        modelWording: "I will assess Arthur for major depressive disorder. However, adjustment disorder, grief, and appropriate anticipatory sadness do not constitute a depressive illness impairing capacity. Depression must be identified, not assumed.",
+        keywords: ["depression", "assess", "major depressive", "not assume", "grief", "adjustment", "does not invalidate", "nihilistic"],
+      },
+      {
+        id: "s4",
+        name: "Capacitous refusal is legally and ethically binding",
+        category: "consent_refusal",
+        severity: "critical",
+        clueInStem: "If capacity is confirmed, Arthur has the right to refuse BMT",
+        whyItMatters: "A capacitous adult has the right to refuse any medical treatment, including life-saving treatment — this is a fundamental principle of medical ethics and law",
+        relatedLegal: "Common law right to refuse treatment; Medical Treatment Act; autonomy principle in bioethics",
+        modelWording: "If Arthur is found to have capacity — which my assessment suggests — his refusal of BMT is legally and ethically binding. The clinical team's role is to support his decision, not to persuade him to change it.",
+        keywords: ["legally binding", "right to refuse", "capacitous", "autonomy", "binding", "cannot override", "legal right"],
+      },
+      {
+        id: "s5",
+        name: "Daughter's distress — address compassionately, separately from capacity",
+        category: "family_carer",
+        severity: "important",
+        clueInStem: "Daughter is tearful; attributes refusal to depression",
+        whyItMatters: "The daughter's distress is real and deserves acknowledgement — but her wish for her father to have treatment does not override his autonomous capacitous decision",
+        modelWording: "Arthur's daughter deserves compassionate acknowledgement of her distress. I will speak with her separately. I will explain what capacity means, and that her father's decision — however painful — is his to make.",
+        keywords: ["daughter", "distress", "acknowledge", "separate", "compassionate", "explain capacity", "his decision"],
+      },
+      {
+        id: "s6",
+        name: "Team education — unwanted decision ≠ impaired capacity",
+        category: "governance",
+        severity: "important",
+        clueInStem: "'Cannot understand why someone would say no' — team's frame for the referral",
+        whyItMatters: "The framing of the referral reveals a common clinical misconception — that refusing a treatment the team recommends implies impaired capacity; this must be explicitly addressed with the oncology team",
+        modelWording: "I will provide clear written feedback to the oncology team: an unwanted decision is not evidence of impaired capacity. Arthur's refusal is values-congruent, consistent, and articulate. Capacity assessment findings will be communicated clearly.",
+        keywords: ["team education", "unwanted decision", "not evidence", "capacity misconception", "team feedback", "oncology"],
+      },
+    ],
+    priorityOrder: {
+      urgent: ["s1", "s2", "s3"],
+      secondary: ["s4", "s5", "s6"],
+      lowYield: [],
+    },
+    modelAnswer: `Capacity assessment: I will conduct a formal four-domain capacity assessment. The referral framing ("cannot understand why") suggests the team may be conflating an unwanted decision with impaired capacity — these are distinct.
+
+Finding: Arthur's decision appears capacitous. He demonstrates understanding, retention, weighing of information against his explicit values, and clear communication. His decision has been consistent over three months and is grounded in the specific, lived experience of his wife's death.
+
+Depression: I will assess for major depressive disorder with nihilistic features — this is a legitimate clinical concern. However, grief and adjustment sadness do not constitute depression, and depression does not automatically invalidate capacity. If depressive illness is identified and treatment effective, reassessment of capacity is appropriate.
+
+If capacity confirmed: Arthur's refusal of BMT is legally and ethically binding. My role shifts to supporting him in exercising his autonomous choice, ensuring palliative care is optimised, and ensuring the clinical team understands this.
+
+Daughter: I will speak with her separately — with compassion. Her wish for her father to live does not override his legal right to refuse treatment.
+
+Team: I will communicate capacity findings clearly in writing, including an explanation of the distinction between an unwanted decision and impaired capacity.`,
+  },
+
+  // ─── 27. ETHICS ─────────────────────────────────────────────────────────────
+  {
+    id: "q27",
+    topic: "ethics",
+    difficulty: "consultant",
+    title: "Confidentiality vs Public Safety — Threat to Third Party",
+    candidateRole: "Consultant psychiatrist",
+    setting: "Outpatient clinic",
+    stem: `You are seeing Daniel, a 38-year-old man with a seven-year history of bipolar I disorder, in your outpatient clinic. He was hospitalised twice in the past — once for a manic episode with violent behaviour — and has been stable on lithium for three years. He has been seeing you for four years and the therapeutic relationship is strong.
+
+In today's appointment, Daniel tells you that he found out last week that his employer, Martin, gave a fraudulent reference that cost him a "life-changing" job opportunity. Daniel presents as euthymic — his mental state examination is normal. He tells you: "I have a plan. I've worked it all out. I'm going to wait until Martin is alone — I know where he parks — and I'm going to make sure he never ruins anyone else's life. I've thought about what I'll use."
+
+He adds: "I know I sound crazy. I'm not manic. I'm just — I've never been so certain about anything. And I'm telling you because I trust you. But you can't tell anyone, right? Doctor-patient confidentiality."`,
+    totalMarks: 22,
+    signals: [
+      {
+        id: "s1",
+        name: "Credible, specific threat to identifiable third party — duty to warn/protect",
+        category: "risk_others",
+        severity: "critical",
+        clueInStem: "Named target; identified location; described plan; expressed certainty and intent",
+        whyItMatters: "The threat is specific (named target, known location, planned method, declared intent) — this meets the threshold for a duty to protect or warn under most jurisdictions",
+        relatedLegal: "Duty to warn / duty to protect; Tarasoff principles as applied in Australian context; professional obligation to third party",
+        modelWording: "Daniel has named a specific target, identified his location, and described a plan — this is a credible, specific threat. I have a professional and potentially legal duty to take protective action.",
+        keywords: ["specific threat", "named target", "identifiable", "duty to warn", "duty to protect", "tarasoff", "legal obligation", "credible"],
+      },
+      {
+        id: "s2",
+        name: "Confidentiality — explicitly limited in cases of serious threat to others",
+        category: "ethics",
+        severity: "critical",
+        clueInStem: "'Doctor-patient confidentiality' — Daniel believes this prevents disclosure",
+        whyItMatters: "Confidentiality is not absolute — it is overridden by a serious, specific, and credible threat to an identifiable third party",
+        modelWording: "I must be honest with Daniel. Medical confidentiality is not absolute. When there is a credible, specific threat to a named person, I have an obligation that overrides confidentiality. I will explain this to him directly.",
+        keywords: ["confidentiality", "not absolute", "overrides", "limits", "honest", "explain", "specific threat", "named"],
+      },
+      {
+        id: "s3",
+        name: "Assess mental state rigorously — euthymia does not exclude risk",
+        category: "diagnosis_formulation",
+        severity: "critical",
+        clueInStem: "He says he is 'not manic'; MSE appears normal",
+        whyItMatters: "Premeditated violence is not limited to manic or psychotic states — a person with a history of violence who presents with a specific, planned threat in a euthymic state is potentially more dangerous, as they are organised and purposeful",
+        modelWording: "Daniel's statement that he is 'not manic' and the absence of frank psychosis does not reduce the risk. Organised, premeditated violence in a euthymic state may represent a higher-lethality risk than impulsive violence in acute psychosis.",
+        keywords: ["euthymic", "not manic", "premeditated", "organised", "euthymia does not exclude", "purposeful", "higher risk"],
+      },
+      {
+        id: "s4",
+        name: "Immediate action — de-escalate, explore, determine plan",
+        category: "immediate_safety",
+        severity: "critical",
+        clueInStem: "'I've thought about what I'll use'; 'never been so certain'",
+        whyItMatters: "The degree of planning described is significant — I must explore the plan in detail (what he intends to use, when, and the specificity of the plan) and attempt therapeutic de-escalation",
+        modelWording: "I will engage Daniel therapeutically — exploring the grievance, acknowledging the injustice he feels, and directly addressing the plan. I will ask him directly what he has 'worked out' and what he intends to use.",
+        keywords: ["de-escalate", "explore", "plan", "what will use", "therapeutic", "engage", "directly address", "grievance"],
+      },
+      {
+        id: "s5",
+        name: "Protective action — warn Martin, contact police if imminent",
+        category: "governance",
+        severity: "critical",
+        clueInStem: "Named target; 'I know where he parks'; planned timing",
+        whyItMatters: "If de-escalation is unsuccessful and the threat remains credible, I must take protective action — which may include warning Martin directly or contacting police",
+        relatedLegal: "Police notification; victim warning; legal basis for breach of confidentiality",
+        modelWording: "If therapeutic de-escalation is unsuccessful, I must contact police and potentially warn Martin. I will document my reasoning and consult my medical defence organisation.",
+        keywords: ["warn", "police", "contact", "protective action", "martin", "notify", "imminent"],
+      },
+      {
+        id: "s6",
+        name: "Therapeutic relationship — transparency before action",
+        category: "ethics",
+        severity: "important",
+        clueInStem: "Strong four-year therapeutic relationship; Daniel disclosed because he trusts the clinician",
+        whyItMatters: "The therapeutic relationship is an asset. Before taking external action, I must be transparent with Daniel about what I intend to do and why — this preserves the possibility of future therapeutic engagement",
+        modelWording: "Daniel has trusted me with this disclosure. Before I take any external action, I will tell him clearly what I must do and why. This maintains the therapeutic integrity of our relationship even under these circumstances.",
+        keywords: ["transparent", "tell daniel", "before action", "therapeutic relationship", "trust", "honesty", "explain"],
+      },
+    ],
+    priorityOrder: {
+      urgent: ["s1", "s3", "s4"],
+      secondary: ["s2", "s5", "s6"],
+      lowYield: [],
+    },
+    modelAnswer: `Immediate: This is a credible, specific threat to a named, identifiable individual. Named target, identified location, described timing, and declared intent — this is not an ambiguous communication.
+
+Therapeutic engagement: I will explore the threat fully, compassionately, in session. I will acknowledge the injustice Daniel feels. I will directly ask about the plan — what he intends to use, when, and how firm his intention is. I will attempt therapeutic de-escalation.
+
+Confidentiality: Daniel believes doctor-patient confidentiality prevents me from acting. I must be honest with him: medical confidentiality is not absolute. A specific, credible threat to a named person overrides this obligation. I will explain this to him directly — not as a threat, but as an honest account of my professional obligations.
+
+Mental state: Daniel's euthymia does not reduce the risk assessment. Organised, premeditated violence in a euthymic state is potentially more dangerous than impulsive violence in acute psychosis.
+
+Protective action: If de-escalation in session does not convincingly resolve the threat, I will contact police and consider whether Martin should be warned. I will document my reasoning fully and consult my medical defence organisation.
+
+Therapeutic relationship: I will tell Daniel what I intend to do before I do it. This is the ethically appropriate course and maintains the integrity of our relationship.`,
   },
 ];
 

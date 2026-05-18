@@ -1,0 +1,204 @@
+Yes, it is possible.
+
+But I need to be clear: I cannot directly see inside your Replit project unless you **paste/export the relevant files or data here**. Once you give me the app’s question bank, prompts, and structure, I can review quality and help you build **50 consultant-level practice situations per section** in a Replit-ready format.
+
+Right now, based on the interface code, the app still looks like a **front-end prototype**. It has only mock data such as:
+
+```js
+mockDailyQuestion
+signalChecklist
+examQuestions
+```
+
+It does **not yet have a real question bank brain**.
+
+## What I need from Replit AI
+
+Ask Replit AI to give you an **App Review Pack**.
+
+Paste this into Replit AI:
+
+```text
+Create an App Review Pack for ChatGPT to review and improve the MEQ Prep app.
+
+Do not change the app yet.
+
+Please provide the following:
+
+1. Full file tree of the project.
+
+2. Identify where the Quiz Mode questions are stored.
+If there is a question bank file, show the full file.
+If questions are hardcoded inside a component, show that component.
+
+3. Export the full current question bank as JSON.
+For every question include:
+- id
+- topic
+- subtopic
+- question_type
+- setting
+- candidate_role
+- difficulty
+- stem
+- expected signals
+- critical signals
+- important signals
+- optional signals
+- traps
+- examiner focus
+- model answer
+- feedback template
+
+4. Give topic counts:
+For each topic, show:
+- number of questions available
+- number approved
+- number needing review
+- number with missing expected signal map
+- number with no exact stem clue linked to expected signals
+
+5. Show the current Quiz Mode code.
+
+6. Show the current AI generation prompt, if any.
+
+7. Show the current AI marking/feedback prompt, if any.
+
+8. Show the current data schema for:
+- questions
+- expected signals
+- attempts
+- feedback
+- uploaded materials
+- knowledge brain
+
+9. Show 3 sample generated questions from each topic if available.
+
+10. Show 3 sample feedback outputs from Quiz Mode.
+
+11. List current limitations or errors in the app.
+
+Format the output clearly so I can copy it to ChatGPT for review.
+```
+
+## Minimum information I need
+
+If Replit gives too much, send me only these:
+
+1. **Question bank file**
+   Usually something like:
+
+```text
+questionBank.js
+questionBank.ts
+quizQuestions.json
+seedQuestions.ts
+```
+
+2. **Quiz Mode component**
+   Usually:
+
+```text
+QuizMode.jsx
+QuizPage.jsx
+App.jsx
+```
+
+3. **AI prompts**
+   Especially:
+
+```text
+generationPrompt
+markingPrompt
+feedbackPrompt
+```
+
+4. **Current topic list and question count**
+
+Example:
+
+```text
+Emergency Department: 1 question
+Perinatal: 1 question
+Governance: 0 questions
+Quality Assurance: 0 questions
+Supervision: 0 questions
+Documentation: 0 questions
+```
+
+5. **One full sample question with expected signals**
+
+That lets me judge quality.
+
+## What I will assess
+
+I will review whether each question has:
+
+* consultant-level complexity
+* more than one issue, not simple diagnosis
+* clear role for candidate
+* systems pressure
+* family/carer or MDT conflict
+* capacity/legal issue when relevant
+* cultural safety when relevant
+* governance/quality issue when relevant
+* exact clues in the stem
+* expected signal map linked to those clues
+* strict marking logic
+* no generic textbook style
+* no suggestive hints before submission
+
+The most important quality rule is this:
+
+> Every expected signal must have an exact clue in the stem.
+> If the clue is not in the stem, either remove the signal or rewrite the stem.
+
+## Can I add 50 questions per section?
+
+Yes. I can help generate **original fictional consultant-level questions** up to 50 per section.
+
+Best format would be:
+
+```js
+{
+  id: "ED-001",
+  topic: "Emergency Department",
+  subtopic: "agitation, psychosis, capacity, public safety",
+  question_type: "signal_detection",
+  setting: "Metropolitan ED overnight",
+  candidate_role: "Junior consultant psychiatrist on call",
+  difficulty: "consultant-level",
+  stem: "...",
+  time_limit_seconds: 180,
+  expected_signal_map: [
+    {
+      signal_name: "Possible acute psychosis with public safety risk",
+      category: "immediate safety",
+      severity: "critical",
+      exact_clue_from_stem: "Patient was carrying a knife and said staff were poisoning him",
+      why_given_in_the_question: "This tests whether the candidate recognises acute risk beyond diagnosis.",
+      clinical_implication: "Needs urgent safety containment and assessment.",
+      legal_implication: "May meet threshold for involuntary assessment if refusing care.",
+      expected_candidate_wording: "The knife plus persecutory belief indicates acute risk to others and need for immediate safety planning."
+    }
+  ],
+  traps: [
+    "Writing generic psychosis assessment without recognising weapon/public safety issue"
+  ],
+  examiner_focus: "Prioritisation, risk, legal threshold, ED safety and consultant leadership"
+}
+```
+
+## Best next step
+
+Ask Replit AI for the **App Review Pack** first. Then paste it here.
+
+Once I see the structure, I can help you create:
+
+* a better schema
+* 50 questions per topic
+* strict signal maps
+* scoring rules
+* consultant examiner feedback prompts
+* Replit-ready JSON or JavaScript seed file
+* a quality assurance checklist for generated questions

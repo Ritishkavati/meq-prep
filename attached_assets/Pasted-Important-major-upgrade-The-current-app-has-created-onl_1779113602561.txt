@@ -1,0 +1,475 @@
+Important major upgrade.
+
+The current app has created only one question/situation in each topic area. That is not enough.
+
+Build a proper consultant-level MEQ Quiz Mode question bank and generation system.
+
+Do not change the opening Candidate Registration page.
+Do not change the main visual style.
+Do not remove the three study modes.
+Focus on upgrading the Quiz Mode brain, question bank and navigation.
+
+MAIN REQUIREMENT
+
+Each topic area must have at least 30 different consultant-level situations.
+
+The app must not show the same question repeatedly.
+Add a “Next Question” button so the candidate can practise another question from the same topic.
+Add a “New Random Topic” button.
+Add a “Repeat Same Topic” button.
+Add a “Back to Study Modes” button.
+
+TOPIC AREAS
+
+Update the Quiz Mode topic list to include:
+
+1. Random
+2. Emergency Department
+3. Perinatal Psychiatry
+4. Consultation-Liaison Psychiatry
+5. Forensic Psychiatry
+6. Old Age Psychiatry
+7. Child & Adolescent Psychiatry
+8. Governance & Leadership
+9. Cultural Safety
+10. Substance Use
+11. Risk Assessment
+12. Capacity & Mental Health Act
+13. Quality Assessment & Quality Assurance
+14. Supervision & Feedback
+15. Documentation & Communication
+16. Discharge Summary / Report Review
+17. MDT Conflict & Systems Pressure
+18. Rural / Resource-Limited Psychiatry
+19. Psychotherapy / Therapeutic Boundaries
+20. Ethics & Professionalism
+
+QUESTION BANK REQUIREMENT
+
+Create a structured local question bank first.
+
+For each topic, create at least 30 different situations.
+
+Each situation must include:
+
+- id
+- topic
+- subtopic
+- setting
+- candidate_role
+- difficulty: standard / difficult / consultant-level
+- stem
+- hidden_complexity
+- expected_signal_map
+- critical_signals
+- important_signals
+- optional_signals
+- red_flags
+- misleading_or_low_yield_traps
+- examiner_focus
+- common_candidate_misses
+- model_signal_answer
+- strict_feedback_template
+- source_inspiration:
+  - uploaded_material
+  - RANZCP_position_statement
+  - RANZCP_training_assessment_concept
+  - contemporary_clinical_knowledge
+  - AI_generated_original
+
+IMPORTANT COPYRIGHT RULE
+
+Use uploaded old MEQ material and preparation material only to understand:
+- structure
+- complexity
+- topic spread
+- examiner focus
+- type of signals
+- common traps
+- marking style
+
+Do not copy old official questions verbatim.
+Generate new fictional original questions inspired by the patterns.
+
+QUESTION GENERATION QUALITY
+
+All questions must be consultant-level.
+
+They must not be simple diagnosis questions.
+
+Every stem should include several of the following:
+- diagnostic uncertainty
+- immediate safety issue
+- risk to self
+- risk to others
+- risk to child / unborn baby / vulnerable person
+- capacity issue
+- Mental Health Act issue
+- refusal of treatment
+- family or carer conflict
+- MDT disagreement
+- ED/inpatient/service pressure
+- rural or resource limitation
+- cultural safety issue
+- trauma-informed care issue
+- governance issue
+- documentation problem
+- supervision problem
+- quality/safety issue
+- public safety issue
+- ethical dilemma
+- communication failure
+
+QUIZ MODE FLOW
+
+Before submission:
+- Show only the stem.
+- Show the timer.
+- Show a blank free-text answer box.
+- Do not show expected signals.
+- Do not show checklist.
+- Do not show hints.
+- Do not show categories.
+
+Timer:
+- Add 2-minute and 3-minute options.
+- Candidate must press Start.
+- Add Stop/Pause.
+- Add Reset.
+- When time is over, show “Time finished” but allow submission.
+
+After submission:
+The app must analyse the candidate’s free-text answer against the expected signal map.
+
+Strict examiner feedback should show:
+
+1. Score
+- X / Y
+
+2. Overall judgement
+- Strong / borderline / weak
+
+3. Correctly identified signals
+For each:
+- candidate wording
+- matched expected signal
+- exact clue in the stem
+- why this mattered
+
+4. Critical missed signals
+For each:
+- missed signal
+- exact clue in the stem
+- why the candidate should have identified it
+- risk/legal/cultural/system implication
+- how it should have been written
+
+5. Unsupported or overcalled signals
+For each:
+- candidate claim
+- why it was not supported by the stem
+- corrected reasoning
+
+6. Priority ranking
+- most urgent signals
+- secondary signals
+- lower-yield signals
+
+7. Final corrected signal list
+Group by:
+- immediate safety
+- diagnosis/formulation
+- risk to self
+- risk to others
+- risk to child/unborn/vulnerable person
+- substance use
+- physical health
+- capacity
+- Mental Health Act
+- consent/refusal
+- cultural safety
+- trauma-informed care
+- family/carer conflict
+- child protection
+- collateral
+- MDT conflict
+- ED/inpatient/system pressure
+- quality and governance
+- supervision/documentation
+- disposition planning
+
+8. Consultant-level correction
+Write exactly what the candidate should have written in concise MEQ style.
+
+STRICT MARKING STYLE
+
+The examiner must not be suggestive.
+The examiner must not give generic psychiatry teaching.
+The examiner must not say “consider everything”.
+The examiner must only mark what is supported by the stem.
+For every missed signal, it must say exactly why that signal was present in the question.
+The feedback must say:
+“This was given in the stem because…”
+“This should have triggered…”
+“The clinical/legal/system implication is…”
+
+QUALITY ASSESSMENT & QUALITY ASSURANCE TOPIC
+
+Add at least 30 situations covering:
+
+- adverse event review
+- suicide after discharge
+- absconding from inpatient unit
+- seclusion/restraint governance
+- medication error
+- clozapine monitoring failure
+- lithium toxicity missed
+- delayed ED psychiatric review
+- family complaint
+- patient complaint
+- documentation failure
+- handover failure
+- risk assessment not updated
+- discharge against family concern
+- lack of cultural safety
+- failure to involve interpreter
+- failure to involve Aboriginal Liaison / Māori health support when relevant
+- incident reporting
+- open disclosure
+- morbidity and mortality meeting
+- root cause analysis
+- quality improvement cycle
+- audit
+- clinical governance committee
+- policy breach
+- supervision failure
+- registrar working beyond competence
+- unsafe workload / rostering
+- rural service gap
+- bed pressure leading to unsafe decision-making
+- medico-legal communication after adverse outcome
+
+SUPERVISION & FEEDBACK TOPIC
+
+Add at least 30 situations covering:
+
+- junior registrar asks for help in ED
+- registrar gives incomplete risk formulation
+- registrar writes poor case note
+- registrar misses capacity issue
+- registrar overuses diagnosis without formulation
+- registrar wants to discharge unsafe patient
+- registrar is distressed after adverse event
+- registrar conflict with ED
+- registrar conflict with family
+- registrar poor communication with GP
+- registrar poor discharge summary
+- registrar poor Mental Health Act documentation
+- registrar not using collateral
+- registrar uses culturally unsafe language
+- registrar lacks trauma-informed approach
+- registrar difficulty with boundary issue
+- registrar difficulty with psychotherapy frame
+- registrar overconfident despite limited competence
+- trainee bullying or intimidation
+- giving corrective feedback
+- balancing support and accountability
+- supervision documentation
+- escalating performance concerns
+- remediation plan
+- patient safety during trainee supervision
+- after-hours consultant supervision
+- remote supervision in rural setting
+- case-based discussion style feedback
+- observed interview feedback
+- supervision around seclusion/restraint decision
+
+DOCUMENTATION & COMMUNICATION TOPIC
+
+Add at least 30 situations covering:
+
+- wrong or incomplete case-sheet entry
+- poor MSE
+- poor risk assessment
+- poor capacity assessment
+- poor Mental Health Act form
+- poor discharge summary
+- poor GP letter
+- poor family meeting record
+- poor collateral documentation
+- poor medication rationale
+- poor clozapine/lithium monitoring record
+- missing safety plan
+- missing relapse prevention plan
+- missing child protection documentation
+- missing cultural safety plan
+- missing interpreter use documentation
+- unclear diagnosis vs formulation
+- unclear consultant decision-making
+- poor handover note
+- poor transfer-of-care note
+- poor seclusion/restraint documentation
+- poor behavioural support plan
+- poor forensic risk formulation
+- poor perinatal risk formulation
+- poor old age delirium documentation
+- poor capacity/refusal note in CL setting
+- poor communication to ED/medical team
+- poor communication to private psychiatrist
+- poor documentation after complaint
+- poor documentation after adverse event
+- poor documentation of supervision advice
+
+IMAGE-BASED / DOCUMENT-REVIEW QUESTIONS
+
+Add a new question type inside Quiz Mode:
+
+“Image / Document Review”
+
+This should allow uploaded image or text scenarios such as:
+- incorrect case-sheet screenshot
+- wrong discharge summary
+- poor risk assessment form
+- poor Mental Health Act documentation
+- poor registrar note
+- poor GP letter
+- poor family meeting summary
+- poor medication chart reasoning
+- poor safety plan
+- poor incident report
+
+The candidate must identify:
+- what is wrong
+- what is missing
+- what risk this creates
+- how to correct it
+- what feedback to give the registrar
+- what the consultant must document
+- whether escalation/governance action is needed
+
+For now, create placeholder sample document-review cases if upload processing is not ready.
+
+QUESTION NAVIGATION
+
+For Quiz Mode:
+- Add “Next Question” button after submission.
+- If topic is selected, Next Question should give a different question from the same topic.
+- Do not repeat the same question until all 30 in that topic have been attempted.
+- Show progress: “Question 4 of 30 in this topic”.
+- Add “Shuffle within topic”.
+- Add “Reset topic progress”.
+
+DATA ARCHITECTURE
+
+Create this local structure:
+
+questionBank = {
+  topicName: [
+    {
+      id,
+      topic,
+      subtopic,
+      setting,
+      candidate_role,
+      difficulty,
+      question_type,
+      stem,
+      expected_signal_map,
+      critical_signals,
+      important_signals,
+      optional_signals,
+      traps,
+      examiner_focus,
+      common_candidate_misses,
+      model_signal_answer
+    }
+  ]
+}
+
+For each expected signal:
+
+{
+  signal_name,
+  category,
+  severity: critical / important / optional,
+  exact_clue_from_stem,
+  why_given_in_the_question,
+  clinical_implication,
+  risk_implication,
+  legal_implication,
+  cultural_implication,
+  system_implication,
+  expected_candidate_wording
+}
+
+AI GENERATION
+
+If it is too large to manually write all 30 cases per topic now, create the architecture and add a generator function:
+
+generateThirtyConsultantLevelCases(topic)
+
+This function should generate and store 30 original fictional cases per topic using:
+- uploaded material
+- RANZCP position statements
+- RANZCP training and assessment concepts
+- contemporary clinical knowledge
+- prior MEQ patterns
+- consultant-level psychiatry reasoning
+
+Add a button in admin:
+“Generate 30 cases for this topic”
+
+Add another button:
+“Generate full question bank”
+
+Add quality control:
+Before adding a generated case to the bank, check:
+- Is it original?
+- Is it consultant-level?
+- Does it have diagnostic uncertainty?
+- Does it include systems/stakeholder complexity?
+- Does it include clear expected signals?
+- Does every expected signal have an exact stem clue?
+- Does it avoid copying uploaded material verbatim?
+- Does it avoid generic textbook questions?
+
+ADMIN REVIEW
+
+Add admin page:
+“Question Bank Quality Review”
+
+Show:
+- topic
+- number of questions
+- number approved
+- number needing review
+- duplicate warning
+- weak/generic question warning
+- missing signal map warning
+- missing exact-clue warning
+
+Allow:
+- edit
+- approve
+- archive
+- regenerate
+- duplicate check
+
+IMPORTANT INTERFACE FIX
+
+In Quiz Mode topic dropdown, do not make it look like there is only one question per area.
+Show:
+- number of available cases per topic
+- number attempted
+- number remaining
+
+Example:
+Emergency Department — 30 available, 2 attempted, 28 remaining
+
+FINAL REQUIREMENT
+
+Run the app.
+Fix all errors.
+Keep the design polished and consistent.
+Do not break the existing registration page.
+Do not show expected signals before submission.

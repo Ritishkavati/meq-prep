@@ -4,12 +4,15 @@ import { Header } from "@/components/Header";
 import { useCandidate } from "@/lib/store";
 import {
   TOPIC_LABELS, DIFFICULTY_LABELS, TopicKey, DifficultyKey,
-  getRandomStem, QuizStem, ExpectedSignal,
+  QuizStem, ExpectedSignal,
 } from "@/lib/quizData";
 import {
   assessAnswer, createAttempt, saveAttempt, QuizResult,
   CATEGORY_LABELS,
 } from "@/lib/quizEngine";
+import {
+  getNextStem, getTopicStats, resetTopicProgress, TopicStats,
+} from "@/lib/quizSessionStore";
 import {
   ArrowLeft, Play, Square, RotateCcw, Send, CheckCircle2,
   XCircle, AlertTriangle, ChevronDown, ChevronUp, Clock,
@@ -40,12 +43,16 @@ const SEVERITY_LABELS = {
 // ─── Setup screen ─────────────────────────────────────────────────────────────
 function SetupScreen({
   onGenerate,
+  getStats,
 }: {
   onGenerate: (topic: TopicKey, difficulty: DifficultyKey, timeSecs: number) => void;
+  getStats: (topic: TopicKey) => TopicStats;
 }) {
   const [topic, setTopic] = useState<TopicKey>("random");
   const [difficulty, setDifficulty] = useState<DifficultyKey>("standard");
   const [timeSecs, setTimeSecs] = useState(180);
+
+  const stats = getStats(topic);
 
   return (
     <div className="bg-card rounded-2xl border border-card-border shadow-sm p-6 md:p-8 max-w-2xl mx-auto">
@@ -73,6 +80,35 @@ function SetupScreen({
               <option key={k} value={k}>{v}</option>
             ))}
           </select>
+
+          {/* Topic-bank stats */}
+          <div className="flex items-center gap-4 px-1 pt-0.5">
+            <span className="text-xs text-muted-foreground">
+              <span className="font-semibold text-primary">{stats.available}</span> available
+            </span>
+            <span className="text-xs text-muted-foreground">·</span>
+            <span className="text-xs text-muted-foreground">
+              <span className="font-semibold text-amber-600">{stats.attempted}</span> attempted
+            </span>
+            <span className="text-xs text-muted-foreground">·</span>
+            <span className="text-xs text-muted-foreground">
+              <span className="font-semibold text-emerald-600">{stats.remaining}</span> remaining
+            </span>
+            {stats.remaining === 0 && stats.available > 0 && (
+              <span className="text-xs text-violet-600 font-medium ml-auto">
+                All done — will cycle
+              </span>
+            )}
+            {stats.attempted > 0 && (
+              <button
+                type="button"
+                onClick={() => { resetTopicProgress(topic); }}
+                className="text-xs text-muted-foreground hover:text-red-500 underline ml-auto transition-colors"
+              >
+                Reset progress
+              </button>
+            )}
+          </div>
         </div>
 
         <div className="grid grid-cols-2 gap-4">
@@ -576,13 +612,16 @@ function PSMarkingPanel({ result }: { result: import("@/lib/quizEngine").QuizRes
 
 // ─── Results screen ───────────────────────────────────────────────────────────
 function ResultsScreen({
-  stem, result, onTryAnother, onRepeatTopic, topic,
+  stem, result, topic, progress, onNextQuestion, onRepeatStem, onChangeTopic, onBackToModes,
 }: {
   stem: QuizStem;
   result: QuizResult;
-  onTryAnother: () => void;
-  onRepeatTopic: () => void;
   topic: TopicKey;
+  progress: { attempted: number; available: number };
+  onNextQuestion: () => void;
+  onRepeatStem: () => void;
+  onChangeTopic: () => void;
+  onBackToModes: () => void;
 }) {
   const [showModel, setShowModel] = useState(false);
 
@@ -819,26 +858,53 @@ function ResultsScreen({
         )}
       </div>
 
-      {/* Actions */}
-      <div className="flex flex-wrap gap-3 pb-8">
-        <button
-          onClick={onTryAnother}
-          className="flex items-center gap-2 bg-primary text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-primary/90 transition-colors"
-        >
-          <RotateCw className="w-4 h-4" /> Try another stem
-        </button>
-        <button
-          onClick={onRepeatTopic}
-          className="flex items-center gap-2 border-2 border-primary text-primary px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-primary hover:text-white transition-colors"
-        >
-          Repeat same topic
-        </button>
-        <Link
-          href="/phases"
-          className="flex items-center gap-2 border border-card-border text-muted-foreground px-5 py-2.5 rounded-lg text-sm font-semibold hover:text-primary transition-colors"
-        >
-          <ArrowLeft className="w-4 h-4" /> Back to study modes
-        </Link>
+      {/* Progress + Navigation */}
+      <div className="bg-card rounded-2xl border border-card-border shadow-sm p-5 space-y-4 pb-8">
+        {/* Progress bar */}
+        <div className="space-y-1.5">
+          <div className="flex items-center justify-between text-xs text-muted-foreground">
+            <span className="font-medium text-primary">
+              {TOPIC_LABELS[topic === "random" ? stem.topic : topic]}
+            </span>
+            <span>
+              {progress.attempted} of {progress.available} attempted
+            </span>
+          </div>
+          <div className="h-1.5 w-full bg-slate-100 rounded-full overflow-hidden">
+            <div
+              className="h-full bg-accent rounded-full transition-all"
+              style={{ width: `${progress.available > 0 ? (progress.attempted / progress.available) * 100 : 0}%` }}
+            />
+          </div>
+        </div>
+
+        {/* 4 navigation buttons */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <button
+            onClick={onNextQuestion}
+            className="flex items-center justify-center gap-2 bg-primary text-white px-5 py-3 rounded-xl text-sm font-semibold hover:bg-primary/90 transition-colors"
+          >
+            <ArrowRight className="w-4 h-4" /> Next Question
+          </button>
+          <button
+            onClick={onRepeatStem}
+            className="flex items-center justify-center gap-2 border-2 border-primary text-primary px-5 py-3 rounded-xl text-sm font-semibold hover:bg-primary hover:text-white transition-colors"
+          >
+            <RotateCw className="w-4 h-4" /> Repeat This Stem
+          </button>
+          <button
+            onClick={onChangeTopic}
+            className="flex items-center justify-center gap-2 border border-card-border text-primary px-5 py-3 rounded-xl text-sm font-semibold hover:bg-primary/5 transition-colors"
+          >
+            <ListChecks className="w-4 h-4" /> Change Topic
+          </button>
+          <button
+            onClick={onBackToModes}
+            className="flex items-center justify-center gap-2 border border-card-border text-muted-foreground px-5 py-3 rounded-xl text-sm font-semibold hover:text-primary transition-colors"
+          >
+            <ArrowLeft className="w-4 h-4" /> Back to Study Modes
+          </button>
+        </div>
       </div>
     </div>
   );
@@ -853,13 +919,20 @@ export default function QuizMode() {
   const [currentDifficulty, setCurrentDifficulty] = useState<DifficultyKey>("standard");
   const [currentTimeSecs, setCurrentTimeSecs] = useState(180);
   const [result, setResult] = useState<QuizResult | null>(null);
+  const [sessionProgress, setSessionProgress] = useState({ attempted: 0, available: 0 });
+
+  function refreshProgress(topic: TopicKey, difficulty: DifficultyKey) {
+    const stats = getTopicStats(topic, difficulty);
+    setSessionProgress({ attempted: stats.attempted, available: stats.available });
+  }
 
   function handleGenerate(topic: TopicKey, difficulty: DifficultyKey, timeSecs: number) {
-    const stem = getRandomStem(topic, difficulty);
+    const stem = getNextStem(topic, difficulty);
     setCurrentStem(stem);
     setCurrentTopic(topic);
     setCurrentDifficulty(difficulty);
     setCurrentTimeSecs(timeSecs);
+    refreshProgress(topic, difficulty);
     setPhase("quiz");
   }
 
@@ -869,21 +942,31 @@ export default function QuizMode() {
     setResult(r);
     const attempt = createAttempt(fullName, candidateNumber, currentStem, answer, r);
     saveAttempt(attempt);
+    refreshProgress(currentTopic, currentDifficulty);
     setPhase("results");
   }
 
-  function handleTryAnother() {
+  function handleNextQuestion() {
+    const stem = getNextStem(currentTopic, currentDifficulty, currentStem?.id);
+    setCurrentStem(stem);
+    setResult(null);
+    refreshProgress(currentTopic, currentDifficulty);
+    setPhase("quiz");
+  }
+
+  function handleRepeatStem() {
+    setResult(null);
+    setPhase("quiz");
+  }
+
+  function handleChangeTopic() {
     setCurrentStem(null);
     setResult(null);
     setPhase("setup");
   }
 
-  function handleRepeatTopic() {
-    if (!currentStem) { setPhase("setup"); return; }
-    const stem = getRandomStem(currentTopic, currentDifficulty);
-    setCurrentStem(stem);
-    setResult(null);
-    setPhase("quiz");
+  function handleBackToModes() {
+    window.location.href = "/phases";
   }
 
   return (
@@ -899,7 +982,12 @@ export default function QuizMode() {
         </Link>
       </div>
 
-      {phase === "setup" && <SetupScreen onGenerate={handleGenerate} />}
+      {phase === "setup" && (
+        <SetupScreen
+          onGenerate={handleGenerate}
+          getStats={(t) => getTopicStats(t)}
+        />
+      )}
       {phase === "quiz" && currentStem && (
         <QuizScreen stem={currentStem} timeSecs={currentTimeSecs} onSubmit={handleSubmit} />
       )}
@@ -908,8 +996,11 @@ export default function QuizMode() {
           stem={currentStem}
           result={result}
           topic={currentTopic}
-          onTryAnother={handleTryAnother}
-          onRepeatTopic={handleRepeatTopic}
+          progress={sessionProgress}
+          onNextQuestion={handleNextQuestion}
+          onRepeatStem={handleRepeatStem}
+          onChangeTopic={handleChangeTopic}
+          onBackToModes={handleBackToModes}
         />
       )}
 

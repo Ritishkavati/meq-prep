@@ -427,6 +427,7 @@ export const CATEGORY_LABELS: Record<SignalCategory, string> = {
   mdt_conflict: "MDT / Team Issues",
   system_pressure: "System / Resource Pressure",
   governance: "Governance",
+  ethics: "Ethics & Professionalism",
   disposition: "Disposition Planning",
 };
 
