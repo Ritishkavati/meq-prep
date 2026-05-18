@@ -13,6 +13,7 @@ import BrainReview from "@/pages/brain/BrainReview";
 import PSBrainDashboard from "@/pages/brain/PSBrainDashboard";
 import PSBrainAdd from "@/pages/brain/PSBrainAdd";
 import PSBrainImport from "@/pages/brain/PSBrainImport";
+import AIReviewExport from "@/pages/brain/AIReviewExport";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -29,6 +30,7 @@ function Router() {
       <Route path="/brain/ps" component={PSBrainDashboard} />
       <Route path="/brain/ps/add" component={PSBrainAdd} />
       <Route path="/brain/ps/import" component={PSBrainImport} />
+      <Route path="/brain/ai-export" component={AIReviewExport} />
       <Route component={NotFound} />
     </Switch>
   );

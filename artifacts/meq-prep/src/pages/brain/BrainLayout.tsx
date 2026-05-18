@@ -1,12 +1,13 @@
 import React from "react";
 import { Link, useLocation } from "wouter";
-import { Brain, Upload, FileSearch, LayoutDashboard, ArrowLeft, BookMarked } from "lucide-react";
+import { Brain, Upload, FileSearch, LayoutDashboard, ArrowLeft, BookMarked, Share2 } from "lucide-react";
 
 const navItems = [
   { href: "/brain", label: "Dashboard", icon: LayoutDashboard },
-  { href: "/brain/upload", label: "Upload Materials", icon: Upload },
-  { href: "/brain/review", label: "Review Extracted Content", icon: FileSearch },
+  { href: "/brain/upload", label: "Upload", icon: Upload },
+  { href: "/brain/review", label: "Review Content", icon: FileSearch },
   { href: "/brain/ps", label: "Position Statements", icon: BookMarked },
+  { href: "/brain/ai-export", label: "AI Export", icon: Share2 },
 ];
 
 export function BrainLayout({ children }: { children: React.ReactNode }) {

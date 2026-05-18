@@ -1,0 +1,150 @@
+Paste this into Replit AI first. This builds the **export/review pathway** so you can send app content to ChatGPT/Claude for review.
+
+```text
+Build this first: ChatGPT/Claude Review Export System.
+
+Goal:
+I want ChatGPT and Claude to directly review the app’s current Knowledge Brain, quiz questions, extracted materials, and generated stems. Since they cannot access the Replit app live, the app must create a clean export file that I can copy/paste or download and upload to ChatGPT/Claude.
+
+Do not change the Candidate Registration page.
+Do not change the three study modes.
+Do not change Quiz Mode logic yet.
+Build only the export/review pathway first.
+
+Add a new admin page or section inside Knowledge Brain called:
+
+“AI Review Export”
+
+Purpose:
+Export all app knowledge and question-bank content into a structured Markdown and JSON format for external review by ChatGPT/Claude.
+
+Add buttons:
+
+1. “Generate Review Export”
+2. “Copy Markdown Export”
+3. “Download Markdown”
+4. “Download JSON”
+5. “Copy Replit Import Instructions”
+
+The export must include:
+
+A. App overview
+- app name
+- current date/time
+- total uploaded files
+- total knowledge chunks
+- total extracted concepts
+- total quiz stems
+- topic counts
+- known limitations
+
+B. Uploaded material summary
+For each uploaded file:
+- file name
+- file type
+- category
+- source name
+- year
+- permission status
+- processing status
+- extraction errors if any
+
+C. Extracted knowledge concepts
+For each concept:
+- id
+- sourceFileId
+- topic
+- theme
+- clinical pattern
+- setting pattern
+- candidate role pattern
+- signal categories
+- expected signals
+- common misses
+- examiner focus
+- transformation rules
+- copyright status
+
+D. Current Quiz Mode question bank
+For each quiz stem:
+- id
+- topic
+- difficulty
+- title
+- candidateRole
+- setting
+- full stem
+- totalMarks
+- all signals
+- clueInStem for every signal
+- whyItMatters
+- modelWording
+- keywords
+- priorityOrder
+- modelAnswer
+
+E. Question quality audit
+For each question, automatically check:
+- missing signals
+- missing clueInStem
+- clueInStem not found inside stem
+- signal category not in valid union
+- fewer than 4 signals
+- no critical signal
+- no governance/system/cultural/legal complexity
+- duplicated title
+- duplicated stem wording
+- too generic model answer
+- topic mismatch
+
+F. External AI instructions
+Include this text in the export:
+
+“Please review this MEQ Prep app content. Focus only on Quiz Mode. Do not create Daily Practice or Full Exam content yet. Assess whether the question bank is consultant-level, whether each signal is supported by exact stem clues, whether marking keywords are adequate, and whether uploaded knowledge concepts are being transformed rather than copied. Reorganise the material into three modules: 1. Knowledge Extraction, 2. Original Quiz Case Generation, 3. Strict Signal-Based Marking.”
+
+G. Replit import instructions
+Generate a section explaining exactly where improved content should be pasted:
+- qaQuestions.ts → QA_STEMS
+- supervisionQuestions.ts → SUP_STEMS
+- documentationQuestions.ts → DOC_STEMS
+- dischargeReviewQuestions.ts → DIS_STEMS
+- edQuestions.ts → ED_STEMS
+- etc.
+
+Technical requirements:
+- Create helper function: buildAIReviewExport()
+- Create helper function: buildAIReviewJSON()
+- Create helper function: auditQuizStemQuality(stem)
+- Create helper function: auditAllQuizStems()
+- Export should be available as Markdown and JSON.
+- If no uploaded material is processed yet, still export current question bank and state clearly: “Uploaded material has not yet been transformed into knowledge concepts.”
+- Keep design consistent with navy/teal exam portal style.
+- Run the app and fix all errors.
+```
+
+Then paste this second prompt:
+
+```text
+After building the AI Review Export page, generate the first Markdown export from the app.
+
+I want to copy it into ChatGPT/Claude for content review.
+
+Make sure the export includes:
+1. Current question bank
+2. Topic counts
+3. Knowledge Brain material status
+4. Quality audit
+5. Current limitations
+6. Clear instructions for ChatGPT/Claude to reorganise the app into:
+   - Knowledge Extraction Module
+   - Original Quiz Case Generation Module
+   - Strict Signal-Based Marking Module
+```
+
+This is the correct sequence:
+
+**Step 1:** Build export system.
+**Step 2:** Export app brain/question bank.
+**Step 3:** Paste export here.
+**Step 4:** I review and reorganise the content.
+**Step 5:** Replit imports the improved content.
