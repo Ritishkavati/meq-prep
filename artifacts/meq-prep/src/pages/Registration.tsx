@@ -47,11 +47,11 @@ export default function Registration() {
             </div>
             
             <div className="space-y-2">
-              <label htmlFor="candidateNumber" className="block text-sm font-semibold text-primary">Candidate Number</label>
+              <label htmlFor="candidateNumber" className="block text-sm font-semibold text-primary">Registration Number</label>
               <input
                 id="candidateNumber"
                 type="text"
-                placeholder="e.g. MEQ-2026-0042"
+                placeholder="e.g. REG-2026-0042"
                 className="w-full h-12 px-4 rounded-lg border border-input bg-background focus:outline-none focus:ring-2 focus:ring-accent transition-all"
                 value={candidateNumber}
                 onChange={(e) => setCandidateNumber(e.target.value)}

@@ -26,7 +26,7 @@ export default function Phases() {
       
       <div className="bg-white rounded-lg shadow-sm border border-card-border p-4 flex flex-wrap gap-4 text-sm text-primary font-medium mb-8">
         <div>Candidate: <span className="font-normal text-muted-foreground">{fullName}</span></div>
-        {candidateNumber && <div>Number: <span className="font-normal text-muted-foreground">{candidateNumber}</span></div>}
+        {candidateNumber && <div>Registration number: <span className="font-normal text-muted-foreground">{candidateNumber}</span></div>}
         <div>Sitting: <span className="font-normal text-muted-foreground">{examYear}</span></div>
         <div className="ml-auto text-accent">{format(currentTime, "d MMM yyyy, h:mm a")}</div>
       </div>
