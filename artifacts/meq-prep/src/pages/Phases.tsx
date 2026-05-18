@@ -3,7 +3,9 @@ import { Link, useLocation } from "wouter";
 import { useCandidate } from "@/lib/store";
 import { Header } from "@/components/Header";
 import { format } from "date-fns";
-import { ListChecks, BookOpen, ClipboardList, ArrowRight, Brain } from "lucide-react";
+import { ListChecks, BookOpen, ClipboardList, ArrowRight, Brain, TrendingUp } from "lucide-react";
+import { getQuizModuleCompletion, getTotalQuizzesCompleted } from "@/lib/quizEngine";
+import { QUIZ_STEMS } from "@/lib/quizData";
 
 const modes = [
   {
@@ -36,6 +38,9 @@ export default function Phases() {
   const { fullName, candidateNumber, examYear } = useCandidate();
   const [, setLocation] = useLocation();
   const [currentTime, setCurrentTime] = useState(new Date());
+
+  const quizCompletion = getQuizModuleCompletion(candidateNumber ?? "", QUIZ_STEMS.length);
+  const totalQuizzesCompleted = getTotalQuizzesCompleted(candidateNumber ?? "");
 
   useEffect(() => {
     if (!fullName) {
@@ -118,6 +123,55 @@ export default function Phases() {
               {format(currentTime, "d MMM yyyy, h:mm:ss a")}
             </p>
           </div>
+        </div>
+      </div>
+
+      {/* Quiz Progress Card */}
+      <div className="bg-card rounded-2xl shadow-sm border border-card-border px-6 py-5 mt-4 space-y-4">
+        <div className="flex items-center justify-between">
+          <p className="font-serif font-bold text-primary flex items-center gap-2 text-sm">
+            <TrendingUp className="w-4 h-4 text-accent" />
+            Your Quiz Progress
+          </p>
+          <Link
+            href="/signals"
+            className="text-xs font-semibold text-accent hover:text-accent/80 flex items-center gap-1 transition-colors"
+          >
+            Continue <ArrowRight className="w-3 h-3" />
+          </Link>
+        </div>
+
+        {/* Stats row */}
+        <div className="grid grid-cols-3 gap-3 text-center">
+          <div className="bg-white rounded-xl border border-card-border px-3 py-3">
+            <p className="text-2xl font-bold text-primary">{totalQuizzesCompleted}</p>
+            <p className="text-xs text-muted-foreground mt-0.5">Quizzes completed</p>
+          </div>
+          <div className="bg-white rounded-xl border border-card-border px-3 py-3">
+            <p className="text-2xl font-bold text-primary">{quizCompletion.uniqueAttempted}</p>
+            <p className="text-xs text-muted-foreground mt-0.5">Unique stems tried</p>
+          </div>
+          <div className="bg-white rounded-xl border border-card-border px-3 py-3">
+            <p className="text-2xl font-bold text-accent">{quizCompletion.courseContribution.toFixed(1)}%</p>
+            <p className="text-xs text-muted-foreground mt-0.5">Course contribution</p>
+          </div>
+        </div>
+
+        {/* Progress bar toward 30% */}
+        <div className="space-y-1.5">
+          <div className="flex items-center justify-between text-xs text-muted-foreground">
+            <span>{quizCompletion.uniqueAttempted} of {quizCompletion.totalStems} questions attempted</span>
+            <span className="font-medium text-primary">{quizCompletion.courseContribution.toFixed(1)} / 30% of course</span>
+          </div>
+          <div className="h-2.5 w-full bg-slate-100 rounded-full overflow-hidden">
+            <div
+              className="h-full bg-accent rounded-full transition-all"
+              style={{ width: `${(quizCompletion.courseContribution / 30) * 100}%` }}
+            />
+          </div>
+          <p className="text-xs text-muted-foreground">
+            Quiz Mode accounts for 30% of total course completion. Progress is saved to your registration number.
+          </p>
         </div>
       </div>
 

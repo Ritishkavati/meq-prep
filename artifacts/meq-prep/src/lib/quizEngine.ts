@@ -479,6 +479,15 @@ export function getQuizModuleCompletion(
   return { uniqueAttempted, totalStems, quizModulePct, courseContribution };
 }
 
+export function getTotalQuizzesCompleted(registrationNumber: string): number {
+  if (!registrationNumber) return 0;
+  try {
+    return loadAttempts().filter((a) => a.registrationNumber === registrationNumber).length;
+  } catch {
+    return 0;
+  }
+}
+
 export function hasStemBeenAttempted(stemId: string): boolean {
   try {
     return loadAttempts().some((a) => a.stemId === stemId);

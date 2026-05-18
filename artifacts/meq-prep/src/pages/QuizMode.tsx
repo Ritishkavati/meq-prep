@@ -325,6 +325,17 @@ function QuizScreen({
         {!started && (
           <p className="text-center text-xs text-muted-foreground mt-2">Press Start to begin timing before submitting</p>
         )}
+
+        {/* Next Quiz shortcut — always visible */}
+        <div className="mt-4 pt-3 border-t border-card-border flex items-center justify-between">
+          <p className="text-xs text-muted-foreground">Skip this question and try a different one</p>
+          <button
+            onClick={onSkipToNext}
+            className="flex items-center gap-1.5 text-sm font-semibold text-accent hover:text-accent/80 transition-colors"
+          >
+            Next Quiz <ArrowRight className="w-3.5 h-3.5" />
+          </button>
+        </div>
       </div>
     </div>
   );
