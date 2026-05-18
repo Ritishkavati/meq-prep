@@ -3,7 +3,7 @@ import { Link, useLocation } from "wouter";
 import { useCandidate } from "@/lib/store";
 import { Header } from "@/components/Header";
 import { format } from "date-fns";
-import { ListChecks, BookOpen, ClipboardList, ArrowRight } from "lucide-react";
+import { ListChecks, BookOpen, ClipboardList, ArrowRight, Brain } from "lucide-react";
 
 const modes = [
   {
@@ -119,6 +119,25 @@ export default function Phases() {
             </p>
           </div>
         </div>
+      </div>
+
+      <div className="bg-card rounded-2xl shadow-sm border border-card-border px-6 py-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mt-4">
+        <div>
+          <p className="font-serif font-bold text-primary flex items-center gap-2">
+            <Brain className="w-4 h-4 text-accent" />
+            Knowledge Brain
+          </p>
+          <p className="text-sm text-muted-foreground mt-0.5">
+            Upload MEQ questions, marking guides and clinical frameworks to power your study sessions.
+          </p>
+        </div>
+        <Link
+          href="/brain"
+          className="flex-shrink-0 flex items-center gap-2 border-2 border-primary text-primary hover:bg-primary hover:text-white px-5 py-2.5 rounded-lg text-sm font-semibold transition-colors duration-200 whitespace-nowrap"
+        >
+          Open Knowledge Brain
+          <ArrowRight className="w-4 h-4" />
+        </Link>
       </div>
 
       <div className="text-center text-xs text-muted-foreground py-8">

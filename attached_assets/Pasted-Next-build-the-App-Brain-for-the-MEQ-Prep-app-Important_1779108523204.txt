@@ -1,0 +1,168 @@
+Next build the “App Brain” for the MEQ Prep app.
+
+Important:
+Do not change the current interface design.
+Do not remove the candidate registration page or the three study modes.
+Add a private document/material upload system that will later power the app’s MEQ questions, quiz signals, and examiner feedback.
+
+This should be a private educational knowledge base, not public content.
+
+Add a new admin-only section called “Knowledge Brain”.
+
+Purpose:
+The user will upload old MEQ questions, preparation notes, marking guides, personal model answers, clinical frameworks, and RANZCP-style preparation material.
+
+Important copyright rule:
+Do not reproduce uploaded copyrighted exam questions verbatim in generated practice mode.
+The app should use uploaded material to understand patterns, topics, marking style, signal types, and examiner expectations.
+When generating new questions, it must create original fictional MEQs inspired by themes and structure, not copied questions.
+
+Build interface first, with placeholder processing logic.
+
+Add these pages/components:
+
+1. Knowledge Brain Dashboard
+Show:
+- Total uploaded files
+- Total extracted questions
+- Total signal maps
+- Total topic tags
+- Last upload date
+- Processing status
+
+2. Upload Materials Page
+Allow upload of:
+- PDF
+- DOCX
+- TXT
+- Markdown
+- CSV
+
+Upload categories:
+- Old MEQ questions
+- Marking guide
+- Model answers
+- Personal notes
+- Clinical framework
+- Guidelines / reference material
+- Other
+
+For every upload, allow metadata:
+- Source name
+- Year
+- Exam type: MEQ
+- Topic tags
+- Permission status:
+  - Personal study only
+  - Original content
+  - Publicly usable
+  - Copyright restricted
+
+3. File Processing Status
+After upload, show:
+- Uploaded
+- Extracting text
+- Splitting into sections
+- Detecting MEQ stems
+- Detecting topic tags
+- Detecting key signals
+- Ready for retrieval
+- Error
+
+4. Extracted Content Review Page
+Show extracted items in editable cards:
+- Scenario/stem
+- Question
+- Marks
+- Topic
+- Stem number
+- Expected signals
+- Examiner focus
+- Risk/legal/cultural/system issues
+- Candidate pitfalls
+
+The user should be able to edit, approve, archive, or delete extracted items.
+
+5. Knowledge Brain Structure
+Create placeholder data structures for:
+
+uploaded_files:
+- id
+- filename
+- file_type
+- upload_category
+- source_name
+- year
+- permission_status
+- uploaded_at
+- processing_status
+
+knowledge_chunks:
+- id
+- file_id
+- chunk_text
+- chunk_type
+- topic_tags
+- source_reference
+- copyright_status
+
+meq_patterns:
+- id
+- source_file_id
+- setting
+- topic
+- stem_count
+- total_marks
+- common_signals
+- examiner_focus
+- common_missed_points
+- notes
+
+signal_maps:
+- id
+- topic
+- signal_name
+- signal_category
+- why_it_matters
+- related_risk
+- related_legal_issue
+- related_system_issue
+- sample_candidate_wording
+
+6. Add a new button somewhere appropriate:
+“Open Knowledge Brain”
+
+7. Later these three study modes should use the Knowledge Brain:
+
+Quiz Mode:
+Use the uploaded material to generate stems and expected signal maps.
+Candidate enters identified issues.
+App compares candidate answer against expected signals.
+App shows:
+- correctly identified signals
+- missed critical signals
+- overcalled/irrelevant signals
+- consultant-level correction
+
+Daily MEQs:
+Generate original fictional MEQ questions using patterns from the Knowledge Brain.
+Do not copy uploaded questions verbatim.
+
+Exam Mode:
+Generate a 5-question exam using the knowledge brain:
+- 125 marks total
+- 5 MEQs
+- each MEQ has 2–4 stems
+- topic diversity
+- realistic consultant-level complexity
+
+8. Add safety disclaimer:
+“This app is for private educational preparation. Uploaded materials may be copyrighted. Do not publish or redistribute restricted content.”
+
+9. Technical:
+For now, build frontend interface and placeholder state.
+Do not require real AI extraction yet.
+Do not require real database yet unless already set up.
+Make it clean, professional, and consistent with the current design.
+
+After building, run the app and fix any errors.
