@@ -456,6 +456,29 @@ export function loadAttempts(): QuizAttempt[] {
   }
 }
 
+export interface QuizModuleCompletion {
+  uniqueAttempted: number;
+  totalStems: number;
+  quizModulePct: number;   // 0–100 within the quiz module itself
+  courseContribution: number; // 0–30 course %
+}
+
+export function getQuizModuleCompletion(
+  registrationNumber: string,
+  totalStems: number
+): QuizModuleCompletion {
+  if (!registrationNumber || totalStems === 0) {
+    return { uniqueAttempted: 0, totalStems, quizModulePct: 0, courseContribution: 0 };
+  }
+  const attempts = loadAttempts().filter(
+    (a) => a.registrationNumber === registrationNumber
+  );
+  const uniqueAttempted = new Set(attempts.map((a) => a.stemId)).size;
+  const quizModulePct = Math.min((uniqueAttempted / totalStems) * 100, 100);
+  const courseContribution = Math.min((uniqueAttempted / totalStems) * 30, 30);
+  return { uniqueAttempted, totalStems, quizModulePct, courseContribution };
+}
+
 export function hasStemBeenAttempted(stemId: string): boolean {
   try {
     return loadAttempts().some((a) => a.stemId === stemId);

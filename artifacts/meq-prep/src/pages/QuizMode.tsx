@@ -4,13 +4,14 @@ import { Header } from "@/components/Header";
 import { useCandidate } from "@/lib/store";
 import {
   TOPIC_LABELS, DIFFICULTY_LABELS, TopicKey, DifficultyKey,
-  QuizStem, ExpectedSignal,
+  QuizStem, ExpectedSignal, QUIZ_STEMS,
 } from "@/lib/quizData";
 
 // DifficultyKey kept for store compatibility; difficulty UI removed from setup
 import {
   assessAnswer, createAttempt, saveAttempt, QuizResult,
   CATEGORY_LABELS, hasStemBeenAttempted,
+  getQuizModuleCompletion, QuizModuleCompletion,
 } from "@/lib/quizEngine";
 import {
   getNextStem, getTopicStats, resetTopicProgress, TopicStats,
@@ -626,16 +627,20 @@ function PSMarkingPanel({ result }: { result: import("@/lib/quizEngine").QuizRes
 
 // ─── Results screen ───────────────────────────────────────────────────────────
 function ResultsScreen({
-  stem, result, topic, progress, onNextQuestion, onRepeatStem, onChangeTopic, onBackToModes,
+  stem, result, topic, progress,
+  onNextRandom, onNextQuestion, onRepeatStem, onChangeTopic, onBackToModes,
+  courseCompletion,
 }: {
   stem: QuizStem;
   result: QuizResult;
   topic: TopicKey;
   progress: { attempted: number; available: number };
+  onNextRandom: () => void;
   onNextQuestion: () => void;
   onRepeatStem: () => void;
   onChangeTopic: () => void;
   onBackToModes: () => void;
+  courseCompletion: QuizModuleCompletion;
 }) {
   const [showModel, setShowModel] = useState(false);
 
@@ -655,16 +660,6 @@ function ResultsScreen({
 
   return (
     <div className="space-y-5 max-w-3xl mx-auto">
-      {/* Generate next quiz — top CTA */}
-      <div className="flex justify-end">
-        <button
-          onClick={onNextQuestion}
-          className="flex items-center gap-2 bg-primary text-white px-5 py-2.5 rounded-xl text-sm font-semibold hover:bg-primary/90 transition-colors shadow-sm"
-        >
-          <ArrowRight className="w-4 h-4" /> Generate Next Quiz
-        </button>
-      </div>
-
       {/* Score card */}
       <div className="bg-white rounded-2xl border border-card-border shadow-sm p-6">
         <h2 className="text-xl font-serif font-bold text-primary mb-4">Examiner Marking — Results</h2>
@@ -882,9 +877,54 @@ function ResultsScreen({
         )}
       </div>
 
-      {/* Progress + Navigation */}
-      <div className="bg-card rounded-2xl border border-card-border shadow-sm p-5 space-y-4 pb-8">
-        {/* Progress bar */}
+      {/* Course Progress — 30% calibration */}
+      <div className="bg-white rounded-2xl border border-card-border shadow-sm p-5 space-y-4">
+        <div className="flex items-center justify-between">
+          <div>
+            <h3 className="font-serif font-bold text-primary text-sm">Course Completion — Quiz Module</h3>
+            <p className="text-xs text-muted-foreground mt-0.5">
+              Quiz Mode contributes 30% of total course completion
+            </p>
+          </div>
+          <div className="text-right">
+            <span className="text-2xl font-bold text-accent">
+              {courseCompletion.courseContribution.toFixed(1)}%
+            </span>
+            <p className="text-xs text-muted-foreground">of course</p>
+          </div>
+        </div>
+
+        {/* Course progress bar */}
+        <div className="space-y-1">
+          <div className="flex items-center justify-between text-xs text-muted-foreground">
+            <span>0%</span>
+            <span className="font-medium text-primary">30% (Quiz Module complete)</span>
+          </div>
+          <div className="h-3 w-full bg-slate-100 rounded-full overflow-hidden relative">
+            <div
+              className="h-full bg-accent rounded-full transition-all"
+              style={{ width: `${(courseCompletion.courseContribution / 30) * 100}%` }}
+            />
+            {/* 30% marker */}
+            <div className="absolute right-0 top-0 h-full w-0.5 bg-slate-300" />
+          </div>
+          <div className="flex items-center justify-between text-xs text-muted-foreground">
+            <span>
+              {courseCompletion.uniqueAttempted} of {courseCompletion.totalStems} questions attempted
+            </span>
+            <span className="text-accent font-medium">
+              {courseCompletion.quizModulePct.toFixed(0)}% of quiz bank
+            </span>
+          </div>
+        </div>
+
+        <p className="text-xs text-muted-foreground italic border-t border-card-border pt-3">
+          Progress is linked to your registration number and persists across sessions.
+        </p>
+      </div>
+
+      {/* Topic progress + secondary nav */}
+      <div className="bg-card rounded-2xl border border-card-border shadow-sm p-5 space-y-4">
         <div className="space-y-1.5">
           <div className="flex items-center justify-between text-xs text-muted-foreground">
             <span className="font-medium text-primary">
@@ -902,33 +942,42 @@ function ResultsScreen({
           </div>
         </div>
 
-        {/* 4 navigation buttons */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <button
-            onClick={onNextQuestion}
-            className="flex items-center justify-center gap-2 bg-primary text-white px-5 py-3 rounded-xl text-sm font-semibold hover:bg-primary/90 transition-colors"
-          >
-            <ArrowRight className="w-4 h-4" /> Next Question
-          </button>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
           <button
             onClick={onRepeatStem}
-            className="flex items-center justify-center gap-2 border-2 border-primary text-primary px-5 py-3 rounded-xl text-sm font-semibold hover:bg-primary hover:text-white transition-colors"
+            className="flex items-center justify-center gap-2 border border-card-border text-primary px-4 py-2.5 rounded-xl text-sm font-semibold hover:bg-primary/5 transition-colors"
           >
-            <RotateCw className="w-4 h-4" /> Repeat This Stem
+            <RotateCw className="w-4 h-4" /> Repeat Stem
           </button>
           <button
             onClick={onChangeTopic}
-            className="flex items-center justify-center gap-2 border border-card-border text-primary px-5 py-3 rounded-xl text-sm font-semibold hover:bg-primary/5 transition-colors"
+            className="flex items-center justify-center gap-2 border border-card-border text-primary px-4 py-2.5 rounded-xl text-sm font-semibold hover:bg-primary/5 transition-colors"
           >
             <ListChecks className="w-4 h-4" /> Change Topic
           </button>
           <button
             onClick={onBackToModes}
-            className="flex items-center justify-center gap-2 border border-card-border text-muted-foreground px-5 py-3 rounded-xl text-sm font-semibold hover:text-primary transition-colors"
+            className="flex items-center justify-center gap-2 border border-card-border text-muted-foreground px-4 py-2.5 rounded-xl text-sm font-semibold hover:text-primary transition-colors"
           >
-            <ArrowLeft className="w-4 h-4" /> Back to Study Modes
+            <ArrowLeft className="w-4 h-4" /> Study Modes
           </button>
         </div>
+      </div>
+
+      {/* Independent: Next Quiz (always random) */}
+      <div className="bg-primary rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4 mb-8">
+        <div>
+          <p className="text-white font-serif font-bold text-lg">Ready for the next challenge?</p>
+          <p className="text-white/70 text-sm mt-0.5">
+            Generates a new random question from any topic.
+          </p>
+        </div>
+        <button
+          onClick={onNextRandom}
+          className="flex-shrink-0 flex items-center gap-2 bg-white text-primary font-bold px-6 py-3 rounded-xl hover:bg-white/90 transition-colors shadow-sm text-sm"
+        >
+          <ArrowRight className="w-4 h-4" /> Next Quiz
+        </button>
       </div>
     </div>
   );
@@ -976,6 +1025,16 @@ export default function QuizMode() {
     setResult(null);
     setStemAlreadyAttempted(hasStemBeenAttempted(stem.id));
     refreshProgress(currentTopic);
+    setPhase("quiz");
+  }
+
+  function handleNextRandom() {
+    const stem = getNextStem("random", undefined, currentStem?.id);
+    setCurrentStem(stem);
+    setCurrentTopic("random");
+    setResult(null);
+    setStemAlreadyAttempted(hasStemBeenAttempted(stem.id));
+    refreshProgress("random");
     setPhase("quiz");
   }
 
@@ -1029,10 +1088,12 @@ export default function QuizMode() {
           result={result}
           topic={currentTopic}
           progress={sessionProgress}
+          onNextRandom={handleNextRandom}
           onNextQuestion={handleNextQuestion}
           onRepeatStem={handleRepeatStem}
           onChangeTopic={handleChangeTopic}
           onBackToModes={handleBackToModes}
+          courseCompletion={getQuizModuleCompletion(candidateNumber, QUIZ_STEMS.length)}
         />
       )}
 
