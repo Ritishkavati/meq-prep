@@ -1,0 +1,120 @@
+Use the uploaded screenshot as the visual reference for the opening page.
+
+Build the first working interface of a web-based and mobile/PWA-ready app for MEQ exam preparation.
+
+Important: create the interface first only. Do not build backend, database, login, payments, or AI marking yet.
+
+App name: MEQ Prep
+Subtitle: Royal Australian & New Zealand College of Psychiatrists style exam preparation
+Add a visible disclaimer in small text: “Educational preparation tool only. Not an official RANZCP product.”
+
+Tech:
+- React
+- Tailwind CSS
+- Responsive layout for desktop, tablet and mobile
+- Clean medical exam portal style
+- Off-white/light grey background
+- Navy header
+- Teal accent colour
+- Large rounded cards
+- Professional typography
+- Minimal clutter
+
+Page 1: Candidate Registration page
+
+Make it look very similar to the uploaded screenshot.
+
+Top banner:
+- Dark navy rounded rectangle
+- Left side title: “RANZCP MEQ Prep”
+- “MEQ” should be teal
+- Subtitle: “Royal Australian & New Zealand College of Psychiatrists”
+- Right side teal pill badge: “EXAM PORTAL”
+
+Main card:
+Title: “Candidate Registration”
+Subtitle: “Enter your details to begin your study session”
+
+Fields:
+1. Full Name
+   Placeholder: “Dr. Jane Smith”
+
+2. Candidate Number
+   Placeholder: “e.g. MEQ-2026-0042”
+
+3. Exam Sitting Year
+   Placeholder/default: “2026”
+
+4. Session Date & Time
+   This should auto-pick from the user’s device.
+   Show two separate teal-tinted boxes:
+   - Date box with calendar icon
+   - Time box with clock icon
+   Time should update live every second.
+
+Button:
+“Begin Study Session”
+With arrow icon.
+Disable button until full name is entered.
+
+After clicking Begin Study Session, go to Page 2.
+
+Page 2: Study Phase Selection page
+
+Header should show:
+- Candidate name
+- Candidate number if entered
+- Exam sitting year
+- Current date/time
+
+Main heading:
+“Choose your MEQ training phase”
+
+Create three large cards:
+
+Card 1:
+Title: “1. Daily Practice Questions”
+Description:
+“Random MEQ-style daily question. Candidate writes a timed answer and receives examiner-style feedback.”
+Button: “Start Daily Practice”
+
+Card 2:
+Title: “2. Quiz: Identify the Signals”
+Description:
+“The app gives a stem. The candidate identifies all clinical, risk, legal, cultural, family, MDT and system signals. The app later compares answers with expected signals and shows missed points.”
+Button: “Start Signal Quiz”
+
+Card 3:
+Title: “3. Full Exam”
+Description:
+“Full exam simulation with 5 MEQs, total 125 marks. Each MEQ has 2–4 staged stems, usually 3 stems.”
+Button: “Start Full Exam”
+
+Create placeholder pages for each button:
+
+Daily Practice placeholder:
+- Show sample MEQ question card
+- Marks
+- Timer placeholder
+- Answer text area
+- Submit button
+
+Signal Quiz placeholder:
+- Show sample stem
+- Text area: “List all signals/issues you identify”
+- Checklist-style expected signals section
+- Button: “Assess Signals”
+- Missed signals placeholder
+
+Full Exam placeholder:
+- Show exam setup
+- 5 MEQs
+- Total 125 marks
+- Each MEQ has 2–4 stems
+- Table showing MEQ number, marks, number of stems
+- Button: “Begin Full Exam”
+
+Design must be polished and close to the uploaded screenshot.
+
+Make the app run successfully in Replit.
+After building, show me the preview.

@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "MEQ Prep"
+version = "1.0.0"
+id = "artifacts/meq-prep"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 19416
+
+[services.development]
+run = "pnpm --filter @workspace/meq-prep run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/meq-prep", "run", "build" ]
+publicDir = "artifacts/meq-prep/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "19416"
+BASE_PATH = "/"
