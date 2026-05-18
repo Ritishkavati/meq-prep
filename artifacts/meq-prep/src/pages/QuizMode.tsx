@@ -13,7 +13,7 @@ import {
 import {
   ArrowLeft, Play, Square, RotateCcw, Send, CheckCircle2,
   XCircle, AlertTriangle, ChevronDown, ChevronUp, Clock,
-  RotateCw, ListChecks, ArrowRight,
+  RotateCw, ListChecks, ArrowRight, BookMarked,
 } from "lucide-react";
 
 type Phase = "setup" | "quiz" | "results";
@@ -280,56 +280,294 @@ function QuizScreen({
 }
 
 // ─── Signal result card ───────────────────────────────────────────────────────
-function SignalCard({ signal, identified }: { signal: ExpectedSignal; identified: boolean }) {
+function SignalCard({
+  signal,
+  identified,
+  psLevelReason,
+  psStatement,
+}: {
+  signal: ExpectedSignal;
+  identified: boolean;
+  psLevelReason?: string;
+  psStatement?: string;
+}) {
   const [open, setOpen] = useState(false);
+  const [showPS, setShowPS] = useState(false);
+
   return (
-    <div className={`rounded-xl border ${identified ? "border-emerald-200 bg-emerald-50" : signal.severity === "critical" ? "border-red-200 bg-red-50" : "border-amber-200 bg-amber-50"} overflow-hidden`}>
+    <div
+      className={`rounded-xl border overflow-hidden ${
+        identified
+          ? "border-emerald-200 bg-emerald-50"
+          : signal.severity === "critical"
+          ? "border-red-200 bg-red-50"
+          : "border-amber-200 bg-amber-50"
+      }`}
+    >
       <button
         onClick={() => setOpen((v) => !v)}
         className="w-full flex items-start gap-3 p-4 text-left"
       >
         <div className="mt-0.5 flex-shrink-0">
-          {identified
-            ? <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-            : signal.severity === "critical"
-            ? <XCircle className="w-4 h-4 text-red-600" />
-            : <AlertTriangle className="w-4 h-4 text-amber-600" />}
+          {identified ? (
+            <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+          ) : signal.severity === "critical" ? (
+            <XCircle className="w-4 h-4 text-red-600" />
+          ) : (
+            <AlertTriangle className="w-4 h-4 text-amber-600" />
+          )}
         </div>
         <div className="flex-1 min-w-0">
           <div className="flex flex-wrap items-center gap-2 mb-0.5">
-            <span className={`text-xs font-semibold border px-2 py-0.5 rounded-full ${SEVERITY_COLOURS[signal.severity]}`}>
+            <span
+              className={`text-xs font-semibold border px-2 py-0.5 rounded-full ${SEVERITY_COLOURS[signal.severity]}`}
+            >
               {SEVERITY_LABELS[signal.severity]}
             </span>
             <span className="text-xs text-muted-foreground">{CATEGORY_LABELS[signal.category]}</span>
+            {psLevelReason && (
+              <span className="text-xs font-semibold text-violet-700 bg-violet-50 border border-violet-200 px-2 py-0.5 rounded-full">
+                PS-level
+              </span>
+            )}
           </div>
           <p className="text-sm font-medium text-primary">{signal.name}</p>
         </div>
         <div className="flex-shrink-0 ml-2">
-          {open ? <ChevronUp className="w-4 h-4 text-muted-foreground" /> : <ChevronDown className="w-4 h-4 text-muted-foreground" />}
+          {open ? (
+            <ChevronUp className="w-4 h-4 text-muted-foreground" />
+          ) : (
+            <ChevronDown className="w-4 h-4 text-muted-foreground" />
+          )}
         </div>
       </button>
+
       {open && (
-        <div className="px-4 pb-4 pt-0 space-y-3 border-t border-current/10">
+        <div className="px-4 pb-4 pt-0 space-y-4 border-t border-current/10">
+          {/* Part 1 */}
           <div>
-            <p className="text-xs font-semibold text-primary uppercase tracking-wider mb-1">Clue in stem</p>
-            <p className="text-xs italic text-muted-foreground">"{signal.clueInStem}"</p>
+            <p className="text-xs font-bold text-primary uppercase tracking-wider mb-1">
+              1 — Exact clue in stem
+            </p>
+            <p className="text-xs italic text-muted-foreground bg-white/70 rounded-lg px-3 py-2 border border-current/10">
+              "{signal.clueInStem}"
+            </p>
           </div>
+
+          {/* Part 2 — the signal name is already shown in the header, but repeat it for completeness */}
           <div>
-            <p className="text-xs font-semibold text-primary uppercase tracking-wider mb-1">Why it matters</p>
+            <p className="text-xs font-bold text-primary uppercase tracking-wider mb-1">
+              2 — Expected signal
+            </p>
+            <p className="text-xs text-primary font-medium">{signal.name}</p>
+            <p className="text-xs text-muted-foreground mt-0.5 italic">
+              Category: {CATEGORY_LABELS[signal.category]} · Severity: {SEVERITY_LABELS[signal.severity]}
+            </p>
+          </div>
+
+          {/* Part 3 */}
+          <div>
+            <p className="text-xs font-bold text-primary uppercase tracking-wider mb-1">
+              3 — Why it matters clinically
+            </p>
             <p className="text-xs text-primary leading-relaxed">{signal.whyItMatters}</p>
+            {(signal.relatedRisk || signal.relatedLegal) && (
+              <div className="mt-2 grid grid-cols-1 sm:grid-cols-2 gap-2">
+                {signal.relatedRisk && (
+                  <div className="bg-red-50 rounded px-2 py-1.5 border border-red-100">
+                    <p className="text-xs font-semibold text-red-700 mb-0.5">Risk</p>
+                    <p className="text-xs text-red-800">{signal.relatedRisk}</p>
+                  </div>
+                )}
+                {signal.relatedLegal && (
+                  <div className="bg-blue-50 rounded px-2 py-1.5 border border-blue-100">
+                    <p className="text-xs font-semibold text-blue-700 mb-0.5">Legal</p>
+                    <p className="text-xs text-blue-800">{signal.relatedLegal}</p>
+                  </div>
+                )}
+              </div>
+            )}
           </div>
-          {(signal.relatedRisk || signal.relatedLegal || signal.relatedCultural || signal.relatedSystem) && (
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-              {signal.relatedRisk && <div><p className="text-xs font-semibold text-muted-foreground mb-0.5">Risk</p><p className="text-xs">{signal.relatedRisk}</p></div>}
-              {signal.relatedLegal && <div><p className="text-xs font-semibold text-muted-foreground mb-0.5">Legal</p><p className="text-xs">{signal.relatedLegal}</p></div>}
-              {signal.relatedCultural && <div><p className="text-xs font-semibold text-muted-foreground mb-0.5">Cultural</p><p className="text-xs">{signal.relatedCultural}</p></div>}
-              {signal.relatedSystem && <div><p className="text-xs font-semibold text-muted-foreground mb-0.5">System</p><p className="text-xs">{signal.relatedSystem}</p></div>}
+
+          {/* Part 4 — PS level (only for missed PS-relevant signals) */}
+          {psLevelReason && !identified && (
+            <div className="rounded-lg border border-violet-200 bg-violet-50 overflow-hidden">
+              <button
+                onClick={() => setShowPS((v) => !v)}
+                className="w-full flex items-center justify-between px-3 py-2.5 text-left"
+              >
+                <div className="flex items-center gap-2">
+                  <BookMarked className="w-3.5 h-3.5 text-violet-600" />
+                  <p className="text-xs font-bold text-violet-800 uppercase tracking-wider">
+                    4 — Why it matters at consultant / RANZCP PS level
+                  </p>
+                </div>
+                {showPS ? (
+                  <ChevronUp className="w-3.5 h-3.5 text-violet-500" />
+                ) : (
+                  <ChevronDown className="w-3.5 h-3.5 text-violet-500" />
+                )}
+              </button>
+              {showPS && (
+                <div className="px-3 pb-3 space-y-2.5 border-t border-violet-200">
+                  <p className="text-xs text-violet-900 leading-relaxed pt-2">{psLevelReason}</p>
+                  {psStatement && (
+                    <div className="bg-white rounded px-3 py-2 border border-violet-200">
+                      <p className="text-xs font-semibold text-violet-700 mb-0.5">Relevant RANZCP principle</p>
+                      <p className="text-xs text-violet-900 italic">{psStatement}</p>
+                    </div>
+                  )}
+                </div>
+              )}
             </div>
           )}
+
+          {/* Part 4 acknowledged for identified PS-relevant signals */}
+          {psLevelReason && identified && (
+            <div className="rounded-lg border border-emerald-200 bg-emerald-50 px-3 py-2.5">
+              <div className="flex items-center gap-2 mb-1">
+                <BookMarked className="w-3.5 h-3.5 text-emerald-600" />
+                <p className="text-xs font-bold text-emerald-800 uppercase tracking-wider">
+                  RANZCP PS-level signal — identified
+                </p>
+              </div>
+              {psStatement && (
+                <p className="text-xs text-emerald-800 italic">{psStatement}</p>
+              )}
+            </div>
+          )}
+
+          {/* Part 5 */}
           <div className="bg-white rounded-lg p-3 border border-current/10">
-            <p className="text-xs font-semibold text-primary uppercase tracking-wider mb-1">Model wording</p>
+            <p className="text-xs font-bold text-primary uppercase tracking-wider mb-1">
+              5 — How the candidate should have written it
+            </p>
             <p className="text-xs text-primary italic leading-relaxed">{signal.modelWording}</p>
           </div>
+
+          {/* Cultural / System context */}
+          {(signal.relatedCultural || signal.relatedSystem) && (
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+              {signal.relatedCultural && (
+                <div className="bg-emerald-50 rounded px-2 py-1.5 border border-emerald-100">
+                  <p className="text-xs font-semibold text-emerald-700 mb-0.5">Cultural domain</p>
+                  <p className="text-xs text-emerald-800">{signal.relatedCultural}</p>
+                </div>
+              )}
+              {signal.relatedSystem && (
+                <div className="bg-purple-50 rounded px-2 py-1.5 border border-purple-100">
+                  <p className="text-xs font-semibold text-purple-700 mb-0.5">Systems domain</p>
+                  <p className="text-xs text-purple-800">{signal.relatedSystem}</p>
+                </div>
+              )}
+            </div>
+          )}
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ─── PS Marking Panel ─────────────────────────────────────────────────────────
+function PSMarkingPanel({ result }: { result: import("@/lib/quizEngine").QuizResult }) {
+  const [open, setOpen] = useState(true);
+
+  if (!result.hasPSLevel) return null;
+
+  const allGood = result.psDomainsMissed.length === 0 && result.psDomainsIdentified.length > 0;
+
+  return (
+    <div
+      className={`rounded-2xl border shadow-sm overflow-hidden ${
+        allGood
+          ? "border-violet-200 bg-violet-50"
+          : result.psDomainsMissed.length > 0
+          ? "border-violet-300 bg-violet-50"
+          : "border-card-border bg-white"
+      }`}
+    >
+      <button
+        onClick={() => setOpen((v) => !v)}
+        className="w-full flex items-center justify-between px-6 py-4 text-left"
+      >
+        <div className="flex items-center gap-3">
+          <BookMarked className="w-5 h-5 text-violet-600" />
+          <div>
+            <h3 className="font-serif font-bold text-primary text-base">
+              RANZCP Position Statement Level Marking
+            </h3>
+            <p className="text-xs text-muted-foreground">
+              Consultant-level awareness of RANZCP policy domains
+            </p>
+          </div>
+        </div>
+        {open ? (
+          <ChevronUp className="w-4 h-4 text-muted-foreground" />
+        ) : (
+          <ChevronDown className="w-4 h-4 text-muted-foreground" />
+        )}
+      </button>
+
+      {open && (
+        <div className="px-6 pb-5 space-y-4 border-t border-violet-200">
+          {/* Examiner summary */}
+          <div className="pt-4">
+            <p className="text-xs font-bold text-violet-800 uppercase tracking-wider mb-2">
+              Examiner assessment
+            </p>
+            <p className="text-sm text-violet-900 leading-relaxed">{result.examinerSummary}</p>
+          </div>
+
+          {/* PS domains grid */}
+          <div className="grid sm:grid-cols-2 gap-3">
+            {result.psDomainsIdentified.length > 0 && (
+              <div>
+                <p className="text-xs font-bold text-emerald-700 uppercase tracking-wider mb-2">
+                  PS domains — identified
+                </p>
+                <ul className="space-y-1.5">
+                  {result.psDomainsIdentified.map((d) => (
+                    <li key={d} className="flex items-center gap-2 text-xs text-emerald-800">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" />
+                      {d}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            {result.psDomainsMissed.length > 0 && (
+              <div>
+                <p className="text-xs font-bold text-red-700 uppercase tracking-wider mb-2">
+                  PS domains — missed
+                </p>
+                <ul className="space-y-1.5">
+                  {result.psDomainsMissed.map((d) => (
+                    <li key={d} className="flex items-center gap-2 text-xs text-red-800">
+                      <XCircle className="w-3.5 h-3.5 text-red-500 flex-shrink-0" />
+                      {d}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+
+          {/* Examiner rule reminder */}
+          <div className="bg-white rounded-lg border border-violet-200 px-4 py-3">
+            <p className="text-xs text-violet-800 leading-relaxed">
+              <strong>Examiner marking rule:</strong> The examiner marks only what the candidate wrote.
+              PS-level reasoning that is absent from the answer cannot be inferred or awarded.
+              Vague phrases such as "consider cultural factors," "involve the family," or "safety plan"
+              without substantive content will not attract PS-level marks.
+            </p>
+          </div>
+
+          {result.psDomainsMissed.length > 0 && (
+            <p className="text-xs text-violet-700 italic">
+              Expand the missed signal cards below to see the exact clue, expected signal,
+              clinical significance, PS-level reasoning, and model wording for each missed domain.
+            </p>
+          )}
         </div>
       )}
     </div>
@@ -396,6 +634,9 @@ function ResultsScreen({
         )}
       </div>
 
+      {/* PS-level marking panel */}
+      <PSMarkingPanel result={result} />
+
       {/* Priority ranking */}
       <div className="bg-white rounded-2xl border border-card-border shadow-sm p-6">
         <h3 className="font-serif font-bold text-primary mb-3">Signal Priority Ranking</h3>
@@ -460,7 +701,13 @@ function ResultsScreen({
           </h3>
           <div className="space-y-2">
             {identified.map((m) => (
-              <SignalCard key={m.signal.id} signal={m.signal} identified />
+              <SignalCard
+                key={m.signal.id}
+                signal={m.signal}
+                identified
+                psLevelReason={m.psLevelReason}
+                psStatement={m.psStatement}
+              />
             ))}
           </div>
         </div>
@@ -474,9 +721,18 @@ function ResultsScreen({
             Critical missed signals ({result.criticalMissed.length})
           </h3>
           <div className="space-y-2">
-            {result.criticalMissed.map((sig) => (
-              <SignalCard key={sig.id} signal={sig} identified={false} />
-            ))}
+            {result.criticalMissed.map((sig) => {
+              const match = result.matches.find((m) => m.signal.id === sig.id);
+              return (
+                <SignalCard
+                  key={sig.id}
+                  signal={sig}
+                  identified={false}
+                  psLevelReason={match?.psLevelReason}
+                  psStatement={match?.psStatement}
+                />
+              );
+            })}
           </div>
         </div>
       )}
@@ -489,9 +745,18 @@ function ResultsScreen({
             Missed signals ({result.importantMissed.length})
           </h3>
           <div className="space-y-2">
-            {result.importantMissed.map((sig) => (
-              <SignalCard key={sig.id} signal={sig} identified={false} />
-            ))}
+            {result.importantMissed.map((sig) => {
+              const match = result.matches.find((m) => m.signal.id === sig.id);
+              return (
+                <SignalCard
+                  key={sig.id}
+                  signal={sig}
+                  identified={false}
+                  psLevelReason={match?.psLevelReason}
+                  psStatement={match?.psStatement}
+                />
+              );
+            })}
           </div>
         </div>
       )}
@@ -499,14 +764,38 @@ function ResultsScreen({
       {/* Overcalled */}
       {result.overcalled.length > 0 && (
         <div className="bg-white rounded-2xl border border-card-border shadow-sm p-6">
-          <h3 className="font-serif font-bold text-primary mb-3">Overcalled / vague terms noted</h3>
-          <ul className="space-y-2">
+          <h3 className="font-serif font-bold text-primary mb-1">Vague and overcalled terms</h3>
+          <p className="text-xs text-muted-foreground mb-4">
+            The examiner noted the following terms in your answer that are too generic, too vague,
+            or below consultant level to attract marks without substantive elaboration.
+          </p>
+          <ul className="space-y-3">
             {result.overcalled.map((oc, i) => (
-              <li key={i} className="flex items-start gap-2 text-sm">
-                <AlertTriangle className="w-4 h-4 text-amber-500 flex-shrink-0 mt-0.5" />
+              <li
+                key={i}
+                className={`flex items-start gap-3 rounded-lg px-4 py-3 border text-sm ${
+                  oc.isPSLevel
+                    ? "bg-violet-50 border-violet-200"
+                    : "bg-amber-50 border-amber-200"
+                }`}
+              >
+                <AlertTriangle
+                  className={`w-4 h-4 flex-shrink-0 mt-0.5 ${
+                    oc.isPSLevel ? "text-violet-500" : "text-amber-500"
+                  }`}
+                />
                 <div>
-                  <span className="font-medium text-primary">"{oc.text}"</span>
-                  <span className="text-muted-foreground"> — {oc.reason}</span>
+                  <span className={`font-semibold ${oc.isPSLevel ? "text-violet-900" : "text-primary"}`}>
+                    "{oc.text}"
+                  </span>
+                  {oc.isPSLevel && (
+                    <span className="ml-2 text-xs font-semibold text-violet-700 bg-violet-100 border border-violet-200 px-1.5 py-0.5 rounded-full">
+                      PS-level
+                    </span>
+                  )}
+                  <p className={`mt-1 text-xs leading-relaxed ${oc.isPSLevel ? "text-violet-800" : "text-muted-foreground"}`}>
+                    {oc.reason}
+                  </p>
                 </div>
               </li>
             ))}
