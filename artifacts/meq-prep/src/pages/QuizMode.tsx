@@ -6,6 +6,8 @@ import {
   TOPIC_LABELS, DIFFICULTY_LABELS, TopicKey, DifficultyKey,
   QuizStem, ExpectedSignal,
 } from "@/lib/quizData";
+
+// DifficultyKey kept for store compatibility; difficulty UI removed from setup
 import {
   assessAnswer, createAttempt, saveAttempt, QuizResult,
   CATEGORY_LABELS,
@@ -45,11 +47,10 @@ function SetupScreen({
   onGenerate,
   getStats,
 }: {
-  onGenerate: (topic: TopicKey, difficulty: DifficultyKey, timeSecs: number) => void;
+  onGenerate: (topic: TopicKey, timeSecs: number) => void;
   getStats: (topic: TopicKey) => TopicStats;
 }) {
   const [topic, setTopic] = useState<TopicKey>("random");
-  const [difficulty, setDifficulty] = useState<DifficultyKey>("standard");
   const [timeSecs, setTimeSecs] = useState(180);
 
   const stats = getStats(topic);
@@ -111,34 +112,18 @@ function SetupScreen({
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-4">
-          <div className="space-y-2">
-            <label className="block text-xs font-semibold text-primary uppercase tracking-wider">
-              Difficulty
-            </label>
-            <select
-              value={difficulty}
-              onChange={(e) => setDifficulty(e.target.value as DifficultyKey)}
-              className="w-full h-11 px-3 rounded-lg border border-input bg-background text-sm focus:outline-none focus:ring-2 focus:ring-accent"
-            >
-              {(Object.entries(DIFFICULTY_LABELS) as [DifficultyKey, string][]).map(([k, v]) => (
-                <option key={k} value={k}>{v}</option>
-              ))}
-            </select>
-          </div>
-          <div className="space-y-2">
-            <label className="block text-xs font-semibold text-primary uppercase tracking-wider">
-              Time limit
-            </label>
-            <select
-              value={timeSecs}
-              onChange={(e) => setTimeSecs(Number(e.target.value))}
-              className="w-full h-11 px-3 rounded-lg border border-input bg-background text-sm focus:outline-none focus:ring-2 focus:ring-accent"
-            >
-              <option value={120}>2 minutes</option>
-              <option value={180}>3 minutes</option>
-            </select>
-          </div>
+        <div className="space-y-2">
+          <label className="block text-xs font-semibold text-primary uppercase tracking-wider">
+            Time limit
+          </label>
+          <select
+            value={timeSecs}
+            onChange={(e) => setTimeSecs(Number(e.target.value))}
+            className="w-full h-11 px-3 rounded-lg border border-input bg-background text-sm focus:outline-none focus:ring-2 focus:ring-accent"
+          >
+            <option value={120}>2 minutes</option>
+            <option value={180}>3 minutes</option>
+          </select>
         </div>
 
         <div className="bg-amber-50 border border-amber-200 rounded-lg px-4 py-3 text-xs text-amber-800 leading-relaxed">
@@ -148,7 +133,7 @@ function SetupScreen({
         </div>
 
         <button
-          onClick={() => onGenerate(topic, difficulty, timeSecs)}
+          onClick={() => onGenerate(topic, timeSecs)}
           className="w-full flex items-center justify-center gap-2 bg-primary text-white py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
         >
           Generate Quiz Stem <ArrowRight className="w-4 h-4" />
@@ -641,6 +626,16 @@ function ResultsScreen({
 
   return (
     <div className="space-y-5 max-w-3xl mx-auto">
+      {/* Generate next quiz — top CTA */}
+      <div className="flex justify-end">
+        <button
+          onClick={onNextQuestion}
+          className="flex items-center gap-2 bg-primary text-white px-5 py-2.5 rounded-xl text-sm font-semibold hover:bg-primary/90 transition-colors shadow-sm"
+        >
+          <ArrowRight className="w-4 h-4" /> Generate Next Quiz
+        </button>
+      </div>
+
       {/* Score card */}
       <div className="bg-white rounded-2xl border border-card-border shadow-sm p-6">
         <h2 className="text-xl font-serif font-bold text-primary mb-4">Examiner Marking — Results</h2>
@@ -916,23 +911,21 @@ export default function QuizMode() {
   const [phase, setPhase] = useState<Phase>("setup");
   const [currentStem, setCurrentStem] = useState<QuizStem | null>(null);
   const [currentTopic, setCurrentTopic] = useState<TopicKey>("random");
-  const [currentDifficulty, setCurrentDifficulty] = useState<DifficultyKey>("standard");
   const [currentTimeSecs, setCurrentTimeSecs] = useState(180);
   const [result, setResult] = useState<QuizResult | null>(null);
   const [sessionProgress, setSessionProgress] = useState({ attempted: 0, available: 0 });
 
-  function refreshProgress(topic: TopicKey, difficulty: DifficultyKey) {
-    const stats = getTopicStats(topic, difficulty);
+  function refreshProgress(topic: TopicKey) {
+    const stats = getTopicStats(topic);
     setSessionProgress({ attempted: stats.attempted, available: stats.available });
   }
 
-  function handleGenerate(topic: TopicKey, difficulty: DifficultyKey, timeSecs: number) {
-    const stem = getNextStem(topic, difficulty);
+  function handleGenerate(topic: TopicKey, timeSecs: number) {
+    const stem = getNextStem(topic);
     setCurrentStem(stem);
     setCurrentTopic(topic);
-    setCurrentDifficulty(difficulty);
     setCurrentTimeSecs(timeSecs);
-    refreshProgress(topic, difficulty);
+    refreshProgress(topic);
     setPhase("quiz");
   }
 
@@ -942,15 +935,15 @@ export default function QuizMode() {
     setResult(r);
     const attempt = createAttempt(fullName, candidateNumber, currentStem, answer, r);
     saveAttempt(attempt);
-    refreshProgress(currentTopic, currentDifficulty);
+    refreshProgress(currentTopic);
     setPhase("results");
   }
 
   function handleNextQuestion() {
-    const stem = getNextStem(currentTopic, currentDifficulty, currentStem?.id);
+    const stem = getNextStem(currentTopic, undefined, currentStem?.id);
     setCurrentStem(stem);
     setResult(null);
-    refreshProgress(currentTopic, currentDifficulty);
+    refreshProgress(currentTopic);
     setPhase("quiz");
   }
 
@@ -988,6 +981,7 @@ export default function QuizMode() {
           getStats={(t) => getTopicStats(t)}
         />
       )}
+
       {phase === "quiz" && currentStem && (
         <QuizScreen stem={currentStem} timeSecs={currentTimeSecs} onSubmit={handleSubmit} />
       )}
