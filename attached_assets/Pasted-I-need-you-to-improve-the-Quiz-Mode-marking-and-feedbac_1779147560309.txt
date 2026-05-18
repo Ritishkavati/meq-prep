@@ -1,0 +1,46 @@
+I need you to improve the Quiz Mode marking and feedback system. Do not change the stem display, timer, or candidate registration. Only improve what happens AFTER the candidate clicks "Submit answer for marking".
+
+Here is exactly what should happen after submission:
+
+STEP 1 — SIGNAL MATCHING
+Take the candidate's free-text answer and compare it against the master signal list for that question. For each signal in the master list, check if the candidate mentioned it using keyword matching against the signal's keywords array.
+
+STEP 2 — FEEDBACK SCREEN
+Replace the current feedback with a new structured results screen showing these sections:
+
+A) SCORE BANNER at the top
+- Show: "You identified X of Y signals"
+- Show percentage
+- Show a rating:
+  * 80-100% = "Examiner-level thinking ✓"
+  * 60-79% = "Borderline pass — review missed signals"
+  * Below 60% = "Needs work — study the missed signals below"
+- Show CRITICAL signals found vs missed separately (e.g. "4/6 critical signals found")
+
+B) SIGNALS YOU IDENTIFIED ✅
+For each signal the candidate DID mention:
+- Show the signal title in green
+- Show why it matters (the whyItMatters field)
+- Show the exact clue from the stem (clueInStem field)
+- Show the signal priority (CRITICAL / IMPORTANT / OPTIONAL)
+
+C) SIGNALS YOU MISSED ❌
+For each signal the candidate did NOT mention:
+- Show the signal title in red
+- Show the exact clue from the stem they should have spotted (clueInStem)
+- Show why it matters (whyItMatters)
+- Show what a consultant would say (modelWording)
+- Mark CRITICAL missed signals with a warning ⚠️
+
+D) EXAMINER FEEDBACK SUMMARY
+At the bottom show:
+- Total marks available for this question
+- Estimated marks achieved (based on signal % hit, weighted so CRITICAL signals = 2 points, IMPORTANT = 1 point, OPTIONAL = 0.5 points)
+- The full model answer (modelAnswer field) in a collapsible section labelled "Show consultant model answer"
+
+STEP 3 — AFTER FEEDBACK
+Keep the existing "Next Quiz" button so they can continue practising.
+
+The candidate writes their answer as bullet points or free text — the matching should be generous, using substring matching against the keywords array for each signal. If ANY keyword from a signal's keywords array appears in the candidate's answer text, count that signal as identified.
+
+Please implement this and make sure it works for all questions in all topic files.

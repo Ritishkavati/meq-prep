@@ -341,191 +341,63 @@ function QuizScreen({
   );
 }
 
-// ─── Signal result card ───────────────────────────────────────────────────────
-function SignalCard({
-  signal,
-  identified,
-  psLevelReason,
-  psStatement,
-}: {
-  signal: ExpectedSignal;
-  identified: boolean;
-  psLevelReason?: string;
-  psStatement?: string;
-}) {
-  const [open, setOpen] = useState(false);
-  const [showPS, setShowPS] = useState(false);
-
+// ─── Identified signal card ────────────────────────────────────────────────────
+function IdentifiedCard({ signal }: { signal: ExpectedSignal }) {
   return (
-    <div
-      className={`rounded-xl border overflow-hidden ${
-        identified
-          ? "border-emerald-200 bg-emerald-50"
-          : signal.severity === "critical"
-          ? "border-red-200 bg-red-50"
-          : "border-amber-200 bg-amber-50"
-      }`}
-    >
-      <button
-        onClick={() => setOpen((v) => !v)}
-        className="w-full flex items-start gap-3 p-4 text-left"
-      >
-        <div className="mt-0.5 flex-shrink-0">
-          {identified ? (
-            <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-          ) : signal.severity === "critical" ? (
-            <XCircle className="w-4 h-4 text-red-600" />
-          ) : (
-            <AlertTriangle className="w-4 h-4 text-amber-600" />
-          )}
-        </div>
-        <div className="flex-1 min-w-0">
-          <div className="flex flex-wrap items-center gap-2 mb-0.5">
-            <span
-              className={`text-xs font-semibold border px-2 py-0.5 rounded-full ${SEVERITY_COLOURS[signal.severity]}`}
-            >
-              {SEVERITY_LABELS[signal.severity]}
-            </span>
-            <span className="text-xs text-muted-foreground">{CATEGORY_LABELS[signal.category]}</span>
-            {psLevelReason && (
-              <span className="text-xs font-semibold text-violet-700 bg-violet-50 border border-violet-200 px-2 py-0.5 rounded-full">
-                PS-level
-              </span>
-            )}
-          </div>
-          <p className="text-sm font-medium text-primary">{signal.name}</p>
-        </div>
-        <div className="flex-shrink-0 ml-2">
-          {open ? (
-            <ChevronUp className="w-4 h-4 text-muted-foreground" />
-          ) : (
-            <ChevronDown className="w-4 h-4 text-muted-foreground" />
-          )}
-        </div>
-      </button>
+    <div className="rounded-xl border border-emerald-200 bg-emerald-50 p-4 space-y-2.5">
+      <div className="flex flex-wrap items-center gap-2">
+        <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
+        <span className="text-sm font-semibold text-emerald-900">{signal.name}</span>
+        <span className={`ml-auto text-xs font-semibold border px-2 py-0.5 rounded-full ${SEVERITY_COLOURS[signal.severity]}`}>
+          {SEVERITY_LABELS[signal.severity]}
+        </span>
+      </div>
+      <div className="bg-white/60 rounded-lg px-3 py-2 border border-emerald-100">
+        <p className="text-xs font-semibold text-emerald-700 mb-0.5 uppercase tracking-wider">Clue in stem</p>
+        <p className="text-xs text-emerald-900 italic">"{signal.clueInStem}"</p>
+      </div>
+      <p className="text-xs text-emerald-900 leading-relaxed">{signal.whyItMatters}</p>
+    </div>
+  );
+}
 
-      {open && (
-        <div className="px-4 pb-4 pt-0 space-y-4 border-t border-current/10">
-          {/* Part 1 */}
-          <div>
-            <p className="text-xs font-bold text-primary uppercase tracking-wider mb-1">
-              1 — Exact clue in stem
-            </p>
-            <p className="text-xs italic text-muted-foreground bg-white/70 rounded-lg px-3 py-2 border border-current/10">
-              "{signal.clueInStem}"
-            </p>
-          </div>
+// ─── Missed signal card ────────────────────────────────────────────────────────
+function MissedCard({ signal }: { signal: ExpectedSignal }) {
+  const isCritical = signal.severity === "critical";
+  return (
+    <div className={`rounded-xl border p-4 space-y-2.5 ${isCritical ? "border-red-200 bg-red-50" : "border-amber-200 bg-amber-50"}`}>
+      <div className="flex flex-wrap items-center gap-2">
+        {isCritical ? (
+          <XCircle className="w-4 h-4 text-red-600 flex-shrink-0" />
+        ) : (
+          <AlertTriangle className="w-4 h-4 text-amber-600 flex-shrink-0" />
+        )}
+        <span className={`text-sm font-semibold ${isCritical ? "text-red-900" : "text-amber-900"}`}>
+          {signal.name}
+        </span>
+        {isCritical && (
+          <span className="text-xs font-bold text-red-700 ml-auto">⚠️ CRITICAL</span>
+        )}
+        {!isCritical && (
+          <span className={`ml-auto text-xs font-semibold border px-2 py-0.5 rounded-full ${SEVERITY_COLOURS[signal.severity]}`}>
+            {SEVERITY_LABELS[signal.severity]}
+          </span>
+        )}
+      </div>
 
-          {/* Part 2 — the signal name is already shown in the header, but repeat it for completeness */}
-          <div>
-            <p className="text-xs font-bold text-primary uppercase tracking-wider mb-1">
-              2 — Expected signal
-            </p>
-            <p className="text-xs text-primary font-medium">{signal.name}</p>
-            <p className="text-xs text-muted-foreground mt-0.5 italic">
-              Category: {CATEGORY_LABELS[signal.category]} · Severity: {SEVERITY_LABELS[signal.severity]}
-            </p>
-          </div>
+      <div className={`rounded-lg px-3 py-2 border ${isCritical ? "bg-white/60 border-red-100" : "bg-white/60 border-amber-100"}`}>
+        <p className={`text-xs font-semibold mb-0.5 uppercase tracking-wider ${isCritical ? "text-red-700" : "text-amber-700"}`}>
+          Clue you should have spotted
+        </p>
+        <p className={`text-xs italic ${isCritical ? "text-red-900" : "text-amber-900"}`}>"{signal.clueInStem}"</p>
+      </div>
 
-          {/* Part 3 */}
-          <div>
-            <p className="text-xs font-bold text-primary uppercase tracking-wider mb-1">
-              3 — Why it matters clinically
-            </p>
-            <p className="text-xs text-primary leading-relaxed">{signal.whyItMatters}</p>
-            {(signal.relatedRisk || signal.relatedLegal) && (
-              <div className="mt-2 grid grid-cols-1 sm:grid-cols-2 gap-2">
-                {signal.relatedRisk && (
-                  <div className="bg-red-50 rounded px-2 py-1.5 border border-red-100">
-                    <p className="text-xs font-semibold text-red-700 mb-0.5">Risk</p>
-                    <p className="text-xs text-red-800">{signal.relatedRisk}</p>
-                  </div>
-                )}
-                {signal.relatedLegal && (
-                  <div className="bg-blue-50 rounded px-2 py-1.5 border border-blue-100">
-                    <p className="text-xs font-semibold text-blue-700 mb-0.5">Legal</p>
-                    <p className="text-xs text-blue-800">{signal.relatedLegal}</p>
-                  </div>
-                )}
-              </div>
-            )}
-          </div>
+      <p className={`text-xs leading-relaxed ${isCritical ? "text-red-900" : "text-amber-900"}`}>{signal.whyItMatters}</p>
 
-          {/* Part 4 — PS level (only for missed PS-relevant signals) */}
-          {psLevelReason && !identified && (
-            <div className="rounded-lg border border-violet-200 bg-violet-50 overflow-hidden">
-              <button
-                onClick={() => setShowPS((v) => !v)}
-                className="w-full flex items-center justify-between px-3 py-2.5 text-left"
-              >
-                <div className="flex items-center gap-2">
-                  <BookMarked className="w-3.5 h-3.5 text-violet-600" />
-                  <p className="text-xs font-bold text-violet-800 uppercase tracking-wider">
-                    4 — Why it matters at consultant / RANZCP PS level
-                  </p>
-                </div>
-                {showPS ? (
-                  <ChevronUp className="w-3.5 h-3.5 text-violet-500" />
-                ) : (
-                  <ChevronDown className="w-3.5 h-3.5 text-violet-500" />
-                )}
-              </button>
-              {showPS && (
-                <div className="px-3 pb-3 space-y-2.5 border-t border-violet-200">
-                  <p className="text-xs text-violet-900 leading-relaxed pt-2">{psLevelReason}</p>
-                  {psStatement && (
-                    <div className="bg-white rounded px-3 py-2 border border-violet-200">
-                      <p className="text-xs font-semibold text-violet-700 mb-0.5">Relevant RANZCP principle</p>
-                      <p className="text-xs text-violet-900 italic">{psStatement}</p>
-                    </div>
-                  )}
-                </div>
-              )}
-            </div>
-          )}
-
-          {/* Part 4 acknowledged for identified PS-relevant signals */}
-          {psLevelReason && identified && (
-            <div className="rounded-lg border border-emerald-200 bg-emerald-50 px-3 py-2.5">
-              <div className="flex items-center gap-2 mb-1">
-                <BookMarked className="w-3.5 h-3.5 text-emerald-600" />
-                <p className="text-xs font-bold text-emerald-800 uppercase tracking-wider">
-                  RANZCP PS-level signal — identified
-                </p>
-              </div>
-              {psStatement && (
-                <p className="text-xs text-emerald-800 italic">{psStatement}</p>
-              )}
-            </div>
-          )}
-
-          {/* Part 5 */}
-          <div className="bg-white rounded-lg p-3 border border-current/10">
-            <p className="text-xs font-bold text-primary uppercase tracking-wider mb-1">
-              5 — How the candidate should have written it
-            </p>
-            <p className="text-xs text-primary italic leading-relaxed">{signal.modelWording}</p>
-          </div>
-
-          {/* Cultural / System context */}
-          {(signal.relatedCultural || signal.relatedSystem) && (
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-              {signal.relatedCultural && (
-                <div className="bg-emerald-50 rounded px-2 py-1.5 border border-emerald-100">
-                  <p className="text-xs font-semibold text-emerald-700 mb-0.5">Cultural domain</p>
-                  <p className="text-xs text-emerald-800">{signal.relatedCultural}</p>
-                </div>
-              )}
-              {signal.relatedSystem && (
-                <div className="bg-purple-50 rounded px-2 py-1.5 border border-purple-100">
-                  <p className="text-xs font-semibold text-purple-700 mb-0.5">Systems domain</p>
-                  <p className="text-xs text-purple-800">{signal.relatedSystem}</p>
-                </div>
-              )}
-            </div>
-          )}
-        </div>
-      )}
+      <div className="bg-white rounded-lg px-3 py-2.5 border border-slate-200">
+        <p className="text-xs font-semibold text-slate-600 mb-0.5 uppercase tracking-wider">What a consultant would say</p>
+        <p className="text-xs text-slate-800 italic leading-relaxed">{signal.modelWording}</p>
+      </div>
     </div>
   );
 }
@@ -657,214 +529,137 @@ function ResultsScreen({
 
   const identified = result.matches.filter((m) => m.identified);
   const missed = result.matches.filter((m) => !m.identified);
+  const totalSignals = result.matches.length;
 
-  const judgementStyles = {
-    strong: "text-emerald-700 bg-emerald-50 border-emerald-200",
-    borderline: "text-amber-700 bg-amber-50 border-amber-200",
-    weak: "text-red-700 bg-red-50 border-red-200",
-  };
-  const judgementLabels = {
-    strong: "Strong",
-    borderline: "Borderline",
-    weak: "Weak",
-  };
+  const criticalTotal = result.matches.filter((m) => m.signal.severity === "critical").length;
+  const criticalFound = result.matches.filter((m) => m.identified && m.signal.severity === "critical").length;
+
+  // Weighted marks: critical=2, important=1, optional=0.5
+  const WEIGHTS: Record<string, number> = { critical: 2, important: 1, optional: 0.5 };
+  const totalWeighted = result.matches.reduce((s, m) => s + (WEIGHTS[m.signal.severity] ?? 1), 0);
+  const earnedWeighted = result.matches.filter((m) => m.identified).reduce((s, m) => s + (WEIGHTS[m.signal.severity] ?? 1), 0);
+  const estimatedMarks = totalWeighted > 0
+    ? Math.round((earnedWeighted / totalWeighted) * stem.totalMarks)
+    : 0;
+
+  // Rating thresholds per spec
+  let ratingLabel: string;
+  let ratingStyle: string;
+  if (result.percentage >= 80) {
+    ratingLabel = "Examiner-level thinking ✓";
+    ratingStyle = "text-emerald-700 bg-emerald-50 border-emerald-300";
+  } else if (result.percentage >= 60) {
+    ratingLabel = "Borderline pass — review missed signals";
+    ratingStyle = "text-amber-700 bg-amber-50 border-amber-300";
+  } else {
+    ratingLabel = "Needs work — study the missed signals below";
+    ratingStyle = "text-red-700 bg-red-50 border-red-300";
+  }
 
   return (
     <div className="space-y-5 max-w-3xl mx-auto">
-      {/* Score card */}
-      <div className="bg-white rounded-2xl border border-card-border shadow-sm p-6">
-        <h2 className="text-xl font-serif font-bold text-primary mb-4">Examiner Marking — Results</h2>
-        <div className="flex flex-wrap gap-4 items-start">
-          <div className="text-center">
-            <p className="text-4xl font-bold text-primary">{result.score}</p>
-            <p className="text-xs text-muted-foreground">/ {result.maxScore} marks</p>
-          </div>
-          <div className="text-center">
-            <p className="text-4xl font-bold text-primary">{result.percentage}%</p>
-            <p className="text-xs text-muted-foreground">signals identified</p>
+
+      {/* ── A) SCORE BANNER ─────────────────────────────────────────────────── */}
+      <div className="bg-white rounded-2xl border border-card-border shadow-sm p-6 space-y-4">
+        <h2 className="text-xl font-serif font-bold text-primary">Examiner Marking — Results</h2>
+
+        {/* Main counts */}
+        <div className="flex flex-wrap gap-6 items-center">
+          <div>
+            <p className="text-4xl font-bold text-primary">{identified.length}<span className="text-2xl text-muted-foreground font-normal"> / {totalSignals}</span></p>
+            <p className="text-xs text-muted-foreground mt-0.5">signals identified</p>
           </div>
           <div>
-            <span className={`inline-flex text-sm font-semibold border px-3 py-1 rounded-full ${judgementStyles[result.judgement]}`}>
-              {judgementLabels[result.judgement]} performance
+            <p className="text-4xl font-bold text-primary">{result.percentage}<span className="text-2xl text-muted-foreground font-normal">%</span></p>
+            <p className="text-xs text-muted-foreground mt-0.5">signal coverage</p>
+          </div>
+          <div className="flex flex-col gap-1.5">
+            <span className={`inline-flex text-sm font-semibold border px-3 py-1 rounded-full ${ratingStyle}`}>
+              {ratingLabel}
             </span>
-            <p className="text-xs text-muted-foreground mt-1">
-              Time used: {fmtTime(result.timeUsed)}
-            </p>
+            <p className="text-xs text-muted-foreground">Time used: {fmtTime(result.timeUsed)}</p>
           </div>
         </div>
 
-        {result.criticalMissed.length > 0 && (
-          <div className="mt-4 p-3 bg-red-50 border border-red-200 rounded-lg">
-            <p className="text-xs font-semibold text-red-700">
-              {result.criticalMissed.length} critical signal{result.criticalMissed.length > 1 ? "s" : ""} missed —
-              in a real MEQ this would significantly affect your mark.
-            </p>
-          </div>
-        )}
-      </div>
-
-      {/* PS-level marking panel */}
-      <PSMarkingPanel result={result} />
-
-      {/* Priority ranking */}
-      <div className="bg-white rounded-2xl border border-card-border shadow-sm p-6">
-        <h3 className="font-serif font-bold text-primary mb-3">Signal Priority Ranking</h3>
-        <div className="grid md:grid-cols-3 gap-4 text-xs">
-          <div>
-            <p className="font-semibold text-red-700 uppercase tracking-wider mb-2">Urgent</p>
-            <ul className="space-y-1">
-              {stem.priorityOrder.urgent.map((id) => {
-                const sig = stem.signals.find((s) => s.id === id);
-                if (!sig) return null;
-                const found = result.matches.find((m) => m.signal.id === id)?.identified;
-                return (
-                  <li key={id} className={`flex items-start gap-1.5 ${found ? "text-primary" : "text-red-600"}`}>
-                    <span className="mt-0.5">{found ? "✓" : "✗"}</span>
-                    <span>{sig.name}</span>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-          <div>
-            <p className="font-semibold text-amber-700 uppercase tracking-wider mb-2">Secondary</p>
-            <ul className="space-y-1">
-              {stem.priorityOrder.secondary.map((id) => {
-                const sig = stem.signals.find((s) => s.id === id);
-                if (!sig) return null;
-                const found = result.matches.find((m) => m.signal.id === id)?.identified;
-                return (
-                  <li key={id} className={`flex items-start gap-1.5 ${found ? "text-primary" : "text-amber-700"}`}>
-                    <span className="mt-0.5">{found ? "✓" : "–"}</span>
-                    <span>{sig.name}</span>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-          <div>
-            <p className="font-semibold text-muted-foreground uppercase tracking-wider mb-2">Low yield</p>
-            <ul className="space-y-1 text-muted-foreground">
-              {stem.priorityOrder.lowYield.map((id) => {
-                const sig = stem.signals.find((s) => s.id === id);
-                if (!sig) return null;
-                const found = result.matches.find((m) => m.signal.id === id)?.identified;
-                return (
-                  <li key={id} className="flex items-start gap-1.5">
-                    <span className="mt-0.5">{found ? "✓" : "·"}</span>
-                    <span>{sig.name}</span>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
+        {/* Critical signals summary */}
+        <div className={`flex items-center gap-3 rounded-lg px-4 py-3 border text-sm ${
+          criticalFound === criticalTotal
+            ? "bg-emerald-50 border-emerald-200"
+            : "bg-red-50 border-red-200"
+        }`}>
+          {criticalFound === criticalTotal ? (
+            <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
+          ) : (
+            <XCircle className="w-4 h-4 text-red-600 flex-shrink-0" />
+          )}
+          <p className={`font-semibold ${criticalFound === criticalTotal ? "text-emerald-800" : "text-red-800"}`}>
+            {criticalFound}/{criticalTotal} critical signals found
+            {criticalFound < criticalTotal && " — missing critical signals significantly affects your mark"}
+          </p>
         </div>
       </div>
 
-      {/* Correctly identified */}
+      {/* ── B) SIGNALS YOU IDENTIFIED ───────────────────────────────────────── */}
       {identified.length > 0 && (
         <div>
           <h3 className="font-serif font-bold text-primary mb-3 flex items-center gap-2">
             <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-            Correctly identified signals ({identified.length})
+            Signals you identified ✅ ({identified.length})
           </h3>
-          <div className="space-y-2">
+          <div className="space-y-2.5">
             {identified.map((m) => (
-              <SignalCard
-                key={m.signal.id}
-                signal={m.signal}
-                identified
-                psLevelReason={m.psLevelReason}
-                psStatement={m.psStatement}
-              />
+              <IdentifiedCard key={m.signal.id} signal={m.signal} />
             ))}
           </div>
         </div>
       )}
 
-      {/* Critical missed */}
-      {result.criticalMissed.length > 0 && (
+      {/* ── C) SIGNALS YOU MISSED ───────────────────────────────────────────── */}
+      {missed.length > 0 && (
         <div>
           <h3 className="font-serif font-bold text-red-700 mb-3 flex items-center gap-2">
             <XCircle className="w-4 h-4" />
-            Critical missed signals ({result.criticalMissed.length})
+            Signals you missed ❌ ({missed.length})
           </h3>
-          <div className="space-y-2">
-            {result.criticalMissed.map((sig) => {
-              const match = result.matches.find((m) => m.signal.id === sig.id);
-              return (
-                <SignalCard
-                  key={sig.id}
-                  signal={sig}
-                  identified={false}
-                  psLevelReason={match?.psLevelReason}
-                  psStatement={match?.psStatement}
-                />
-              );
-            })}
+          <div className="space-y-2.5">
+            {/* Critical first */}
+            {missed
+              .filter((m) => m.signal.severity === "critical")
+              .map((m) => (
+                <MissedCard key={m.signal.id} signal={m.signal} />
+              ))}
+            {/* Then important + optional */}
+            {missed
+              .filter((m) => m.signal.severity !== "critical")
+              .map((m) => (
+                <MissedCard key={m.signal.id} signal={m.signal} />
+              ))}
           </div>
         </div>
       )}
 
-      {/* Important missed */}
-      {result.importantMissed.length > 0 && (
-        <div>
-          <h3 className="font-serif font-bold text-amber-700 mb-3 flex items-center gap-2">
-            <AlertTriangle className="w-4 h-4" />
-            Missed signals ({result.importantMissed.length})
-          </h3>
-          <div className="space-y-2">
-            {result.importantMissed.map((sig) => {
-              const match = result.matches.find((m) => m.signal.id === sig.id);
-              return (
-                <SignalCard
-                  key={sig.id}
-                  signal={sig}
-                  identified={false}
-                  psLevelReason={match?.psLevelReason}
-                  psStatement={match?.psStatement}
-                />
-              );
-            })}
-          </div>
-        </div>
-      )}
-
-      {/* Overcalled */}
+      {/* Overcalled vague terms */}
       {result.overcalled.length > 0 && (
-        <div className="bg-white rounded-2xl border border-card-border shadow-sm p-6">
-          <h3 className="font-serif font-bold text-primary mb-1">Vague and overcalled terms</h3>
-          <p className="text-xs text-muted-foreground mb-4">
-            The examiner noted the following terms in your answer that are too generic, too vague,
-            or below consultant level to attract marks without substantive elaboration.
+        <div className="bg-white rounded-2xl border border-card-border shadow-sm p-5">
+          <h3 className="font-serif font-bold text-primary mb-1 text-sm">Vague / overcalled terms in your answer</h3>
+          <p className="text-xs text-muted-foreground mb-3">
+            These phrases were too generic to attract marks without substantive elaboration.
           </p>
-          <ul className="space-y-3">
+          <ul className="space-y-2.5">
             {result.overcalled.map((oc, i) => (
               <li
                 key={i}
-                className={`flex items-start gap-3 rounded-lg px-4 py-3 border text-sm ${
-                  oc.isPSLevel
-                    ? "bg-violet-50 border-violet-200"
-                    : "bg-amber-50 border-amber-200"
+                className={`flex items-start gap-3 rounded-lg px-3 py-2.5 border text-xs ${
+                  oc.isPSLevel ? "bg-violet-50 border-violet-200" : "bg-amber-50 border-amber-200"
                 }`}
               >
-                <AlertTriangle
-                  className={`w-4 h-4 flex-shrink-0 mt-0.5 ${
-                    oc.isPSLevel ? "text-violet-500" : "text-amber-500"
-                  }`}
-                />
+                <AlertTriangle className={`w-3.5 h-3.5 flex-shrink-0 mt-0.5 ${oc.isPSLevel ? "text-violet-500" : "text-amber-500"}`} />
                 <div>
-                  <span className={`font-semibold ${oc.isPSLevel ? "text-violet-900" : "text-primary"}`}>
-                    "{oc.text}"
-                  </span>
+                  <span className={`font-semibold ${oc.isPSLevel ? "text-violet-900" : "text-primary"}`}>"{oc.text}"</span>
                   {oc.isPSLevel && (
-                    <span className="ml-2 text-xs font-semibold text-violet-700 bg-violet-100 border border-violet-200 px-1.5 py-0.5 rounded-full">
-                      PS-level
-                    </span>
+                    <span className="ml-2 text-xs font-semibold text-violet-700 bg-violet-100 border border-violet-200 px-1.5 py-0.5 rounded-full">PS-level</span>
                   )}
-                  <p className={`mt-1 text-xs leading-relaxed ${oc.isPSLevel ? "text-violet-800" : "text-muted-foreground"}`}>
-                    {oc.reason}
-                  </p>
+                  <p className={`mt-0.5 leading-relaxed ${oc.isPSLevel ? "text-violet-800" : "text-muted-foreground"}`}>{oc.reason}</p>
                 </div>
               </li>
             ))}
@@ -872,78 +667,86 @@ function ResultsScreen({
         </div>
       )}
 
-      {/* Model answer */}
-      <div className="bg-white rounded-2xl border border-card-border shadow-sm p-6">
-        <button
-          onClick={() => setShowModel((v) => !v)}
-          className="w-full flex items-center justify-between text-left"
-        >
-          <h3 className="font-serif font-bold text-primary">Examiner correction — model answer</h3>
-          {showModel ? <ChevronUp className="w-4 h-4 text-muted-foreground" /> : <ChevronDown className="w-4 h-4 text-muted-foreground" />}
-        </button>
-        {showModel && (
-          <div className="mt-4 bg-primary/4 rounded-xl p-5 text-sm text-primary leading-relaxed whitespace-pre-line">
-            {stem.modelAnswer}
+      {/* PS-level marking panel */}
+      <PSMarkingPanel result={result} />
+
+      {/* ── D) EXAMINER FEEDBACK SUMMARY ────────────────────────────────────── */}
+      <div className="bg-white rounded-2xl border border-card-border shadow-sm p-6 space-y-4">
+        <h3 className="font-serif font-bold text-primary">Examiner Feedback Summary</h3>
+
+        {/* Marks grid */}
+        <div className="grid grid-cols-3 gap-3 text-center">
+          <div className="bg-slate-50 rounded-xl border border-slate-200 px-3 py-4">
+            <p className="text-2xl font-bold text-primary">{stem.totalMarks}</p>
+            <p className="text-xs text-muted-foreground mt-0.5">marks available</p>
           </div>
-        )}
+          <div className="bg-accent/8 rounded-xl border border-accent/20 px-3 py-4">
+            <p className="text-2xl font-bold text-accent">{estimatedMarks}</p>
+            <p className="text-xs text-muted-foreground mt-0.5">estimated marks</p>
+          </div>
+          <div className="bg-slate-50 rounded-xl border border-slate-200 px-3 py-4">
+            <p className="text-2xl font-bold text-primary">{result.percentage}%</p>
+            <p className="text-xs text-muted-foreground mt-0.5">signal hit rate</p>
+          </div>
+        </div>
+
+        <p className="text-xs text-muted-foreground">
+          Estimated marks weighted: Critical = 2 pts · Important = 1 pt · Optional = 0.5 pt
+        </p>
+
+        {/* Collapsible model answer */}
+        <div className="border border-card-border rounded-xl overflow-hidden">
+          <button
+            onClick={() => setShowModel((v) => !v)}
+            className="w-full flex items-center justify-between px-4 py-3 text-left bg-slate-50 hover:bg-slate-100 transition-colors"
+          >
+            <span className="text-sm font-semibold text-primary">Show consultant model answer</span>
+            {showModel
+              ? <ChevronUp className="w-4 h-4 text-muted-foreground" />
+              : <ChevronDown className="w-4 h-4 text-muted-foreground" />
+            }
+          </button>
+          {showModel && (
+            <div className="px-5 py-4 bg-primary/3 text-sm text-primary leading-relaxed whitespace-pre-line border-t border-card-border">
+              {stem.modelAnswer}
+            </div>
+          )}
+        </div>
       </div>
 
-      {/* Course Progress — 30% calibration */}
-      <div className="bg-white rounded-2xl border border-card-border shadow-sm p-5 space-y-4">
+      {/* Course progress */}
+      <div className="bg-white rounded-2xl border border-card-border shadow-sm p-5 space-y-3">
         <div className="flex items-center justify-between">
           <div>
             <h3 className="font-serif font-bold text-primary text-sm">Course Completion — Quiz Module</h3>
-            <p className="text-xs text-muted-foreground mt-0.5">
-              Quiz Mode contributes 30% of total course completion
-            </p>
+            <p className="text-xs text-muted-foreground mt-0.5">Quiz Mode contributes 30% of total course completion</p>
           </div>
           <div className="text-right">
-            <span className="text-2xl font-bold text-accent">
-              {courseCompletion.courseContribution.toFixed(1)}%
-            </span>
+            <span className="text-2xl font-bold text-accent">{courseCompletion.courseContribution.toFixed(1)}%</span>
             <p className="text-xs text-muted-foreground">of course</p>
           </div>
         </div>
-
-        {/* Course progress bar */}
-        <div className="space-y-1">
-          <div className="flex items-center justify-between text-xs text-muted-foreground">
-            <span>0%</span>
-            <span className="font-medium text-primary">30% (Quiz Module complete)</span>
-          </div>
-          <div className="h-3 w-full bg-slate-100 rounded-full overflow-hidden relative">
-            <div
-              className="h-full bg-accent rounded-full transition-all"
-              style={{ width: `${(courseCompletion.courseContribution / 30) * 100}%` }}
-            />
-            {/* 30% marker */}
-            <div className="absolute right-0 top-0 h-full w-0.5 bg-slate-300" />
-          </div>
-          <div className="flex items-center justify-between text-xs text-muted-foreground">
-            <span>
-              {courseCompletion.uniqueAttempted} of {courseCompletion.totalStems} questions attempted
-            </span>
-            <span className="text-accent font-medium">
-              {courseCompletion.quizModulePct.toFixed(0)}% of quiz bank
-            </span>
-          </div>
+        <div className="h-2.5 w-full bg-slate-100 rounded-full overflow-hidden relative">
+          <div
+            className="h-full bg-accent rounded-full transition-all"
+            style={{ width: `${(courseCompletion.courseContribution / 30) * 100}%` }}
+          />
+          <div className="absolute right-0 top-0 h-full w-0.5 bg-slate-300" />
         </div>
-
-        <p className="text-xs text-muted-foreground italic border-t border-card-border pt-3">
-          Progress is linked to your registration number and persists across sessions.
-        </p>
+        <div className="flex items-center justify-between text-xs text-muted-foreground">
+          <span>{courseCompletion.uniqueAttempted} of {courseCompletion.totalStems} questions attempted</span>
+          <span className="text-accent font-medium">{courseCompletion.quizModulePct.toFixed(0)}% of quiz bank</span>
+        </div>
       </div>
 
-      {/* Topic progress + secondary nav */}
+      {/* Secondary nav */}
       <div className="bg-card rounded-2xl border border-card-border shadow-sm p-5 space-y-4">
         <div className="space-y-1.5">
           <div className="flex items-center justify-between text-xs text-muted-foreground">
             <span className="font-medium text-primary">
               {TOPIC_LABELS[topic === "random" ? stem.topic : topic]}
             </span>
-            <span>
-              {progress.attempted} of {progress.available} attempted
-            </span>
+            <span>{progress.attempted} of {progress.available} attempted</span>
           </div>
           <div className="h-1.5 w-full bg-slate-100 rounded-full overflow-hidden">
             <div
@@ -952,7 +755,6 @@ function ResultsScreen({
             />
           </div>
         </div>
-
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
           <button
             onClick={onRepeatStem}
@@ -975,19 +777,17 @@ function ResultsScreen({
         </div>
       </div>
 
-      {/* Independent: Next Quiz (always random) */}
+      {/* Next Quiz CTA */}
       <div className="bg-primary rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4 mb-8">
         <div>
           <p className="text-white font-serif font-bold text-lg">Ready for the next challenge?</p>
-          <p className="text-white/70 text-sm mt-0.5">
-            Generates a new random question from any topic.
-          </p>
+          <p className="text-white/70 text-sm mt-0.5">Generates a new random question from any topic.</p>
         </div>
         <button
           onClick={onNextRandom}
           className="flex-shrink-0 flex items-center gap-2 bg-white text-primary font-bold px-6 py-3 rounded-xl hover:bg-white/90 transition-colors shadow-sm text-sm"
         >
-          <ArrowRight className="w-4 h-4" /> Next Quiz
+          <ArrowRight className="w-4 h-4" /> Next Quiz (Random)
         </button>
       </div>
     </div>
