@@ -103,9 +103,21 @@ export const DIFFICULTY_LABELS: Record<DifficultyKey, string> = {
   consultant: "Consultant-level",
 };
 
+// ─── Topic-file imports ───────────────────────────────────────────────────────
+import { QA_STEMS } from "./questions/qaQuestions";
+import { SUP_STEMS } from "./questions/supervisionQuestions";
+import { DOC_STEMS } from "./questions/documentationQuestions";
+import { DIS_STEMS } from "./questions/dischargeReviewQuestions";
+import { ED_STEMS } from "./questions/edQuestions";
+import { PER_STEMS } from "./questions/perinatalQuestions";
+import { CAP_STEMS } from "./questions/capacityMhaQuestions";
+import { GOV_STEMS } from "./questions/governanceQuestions";
+import { RISK_STEMS } from "./questions/riskQuestions";
+import { MDT_STEMS } from "./questions/mdtSystemsQuestions";
+
 // ─── STEMS ───────────────────────────────────────────────────────────────────
 
-export const QUIZ_STEMS: QuizStem[] = [
+const ORIGINAL_STEMS: QuizStem[] = [
   // ─── 1. CULTURAL SAFETY / CL ─────────────────────────────────────────────
   {
     id: "q1",
@@ -3200,6 +3212,21 @@ Protective action: If de-escalation in session does not convincingly resolve the
 
 Therapeutic relationship: I will tell Daniel what I intend to do before I do it. This is the ethically appropriate course and maintains the integrity of our relationship.`,
   },
+];
+
+// ─── Merged question bank ─────────────────────────────────────────────────────
+export const QUIZ_STEMS: QuizStem[] = [
+  ...ORIGINAL_STEMS,
+  ...QA_STEMS,
+  ...SUP_STEMS,
+  ...DOC_STEMS,
+  ...DIS_STEMS,
+  ...ED_STEMS,
+  ...PER_STEMS,
+  ...CAP_STEMS,
+  ...GOV_STEMS,
+  ...RISK_STEMS,
+  ...MDT_STEMS,
 ];
 
 // Filter by topic

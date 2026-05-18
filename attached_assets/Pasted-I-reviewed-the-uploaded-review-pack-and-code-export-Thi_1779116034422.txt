@@ -1,0 +1,131 @@
+I reviewed the uploaded review pack and code export. This is enough to start improving the app question quality.
+
+Your app currently has:
+
+* **27 total quiz stems**
+* mostly **1–2 questions per topic**
+* target is **30 per topic**, around **600 questions**
+* no AI generation yet
+* deterministic keyword-based marking only
+* question bank lives in `src/lib/quizData.ts`
+* marking engine lives in `src/lib/quizEngine.ts` 
+
+The code export confirms we can safely use **topic-based IDs** like `QA-001`, `SUP-001`, `DOC-001`, and it recommends splitting questions into separate files such as `qaQuestions.ts`, `supervisionQuestions.ts`, and `documentationQuestions.ts`. 
+
+## My assessment
+
+The app structure is good. The weakness is not interface now — it is **question-bank volume and semantic marking quality**.
+
+Current limitation:
+
+> Even if the question is good, the app may mark a correct answer as missed if the candidate uses wording not present in the `keywords[]` array. The code export confirms matching is pure substring matching. 
+
+So when I generate questions, I need to give each signal:
+
+* exact clue from the stem
+* 5–8 realistic keywords
+* consultant-level model wording
+* critical / important / optional severity
+* model answer
+* no generic signals
+
+## Best next step in Replit
+
+Before adding 50 questions, tell Replit to restructure the question bank into topic files. Paste this:
+
+```text
+Prepare the app for large question-bank expansion.
+
+Do not change the interface or user flow.
+
+Create a new folder:
+
+src/lib/questions/
+
+Create these files:
+
+1. qaQuestions.ts
+2. supervisionQuestions.ts
+3. documentationQuestions.ts
+4. dischargeReviewQuestions.ts
+5. edQuestions.ts
+6. perinatalQuestions.ts
+7. capacityMhaQuestions.ts
+8. governanceQuestions.ts
+9. riskQuestions.ts
+10. mdtSystemsQuestions.ts
+
+Each file should import QuizStem from "../quizData".
+
+Example:
+
+import { QuizStem } from "../quizData";
+
+export const QA_STEMS: QuizStem[] = [];
+
+Then update quizData.ts so the existing q1–q27 questions remain working, but the new topic files are imported and spread into QUIZ_STEMS.
+
+Example:
+
+import { QA_STEMS } from "./questions/qaQuestions";
+import { SUP_STEMS } from "./questions/supervisionQuestions";
+
+export const QUIZ_STEMS: QuizStem[] = [
+  ...ORIGINAL_STEMS,
+  ...QA_STEMS,
+  ...SUP_STEMS,
+];
+
+Do not delete existing questions.
+Do not rename existing q1–q27 IDs.
+Run the app and fix all TypeScript/import errors.
+```
+
+## Generation order I recommend
+
+Start with these first because they are most consultant-level and currently underdeveloped:
+
+1. `quality_assurance`
+2. `supervision`
+3. `documentation`
+4. `discharge_review`
+5. `ed`
+6. `perinatal`
+7. `capacity_mha`
+8. `governance`
+
+The code export also lists this as the recommended Phase 1 order. 
+
+## What I can now generate
+
+I can now generate Replit-ready TypeScript files like:
+
+```ts
+export const QA_STEMS: QuizStem[] = [
+  {
+    id: "QA-001",
+    topic: "quality_assurance",
+    difficulty: "consultant",
+    title: "...",
+    candidateRole: "...",
+    setting: "...",
+    stem: `...`,
+    totalMarks: 25,
+    signals: [...],
+    priorityOrder: {...},
+    modelAnswer: `...`
+  }
+];
+```
+
+Each question will follow your app’s quality rule:
+
+> every `clueInStem` must quote exact words from the stem, and no signal should be generic or unsupported. 
+
+## Suggested first pack
+
+Start with:
+
+> **Quality Assessment & Quality Assurance — QA-001 to QA-010**
+
+Then test in Replit before adding the next 40. That avoids a huge debugging mess.
