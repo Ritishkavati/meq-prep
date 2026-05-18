@@ -4,7 +4,7 @@ import { BrainProvider } from "@/lib/brainStore";
 import Registration from "@/pages/Registration";
 import Phases from "@/pages/Phases";
 import DailyPractice from "@/pages/DailyPractice";
-import SignalQuiz from "@/pages/SignalQuiz";
+import QuizMode from "@/pages/QuizMode";
 import FullExam from "@/pages/FullExam";
 import BrainDashboard from "@/pages/brain/BrainDashboard";
 import BrainUpload from "@/pages/brain/BrainUpload";
@@ -17,7 +17,7 @@ function Router() {
       <Route path="/" component={Registration} />
       <Route path="/phases" component={Phases} />
       <Route path="/daily" component={DailyPractice} />
-      <Route path="/signals" component={SignalQuiz} />
+      <Route path="/signals" component={QuizMode} />
       <Route path="/exam" component={FullExam} />
       <Route path="/brain" component={BrainDashboard} />
       <Route path="/brain/upload" component={BrainUpload} />

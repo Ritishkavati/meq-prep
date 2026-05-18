@@ -1,0 +1,235 @@
+Now build the working Quiz Mode brain and interface.
+
+Important:
+Do not change the Candidate Registration page.
+Do not change the three-mode selection page except the Quiz Mode button should open this new Quiz Mode.
+This should still be private educational preparation only.
+
+Core idea:
+Quiz Mode is not an answer-writing MEQ. It is a “signal detection” mode.
+The app gives an MEQ-style stem. Candidate has 2–3 minutes to identify all the hidden issues/signals in the stem.
+After submission, the app marks strictly like a consultant examiner.
+
+Very important:
+Before submission, do NOT show the expected signals or checklist.
+The candidate should not be guided or prompted.
+Only show the question stem and a blank answer box.
+Expected signals must appear only after the candidate submits.
+
+Quiz Mode flow:
+
+1. Quiz setup screen
+Show:
+- Topic selector: Random / ED / Perinatal / CL Psychiatry / Forensic / Old Age / Child & Adolescent / Governance / Cultural Safety / Substance Use / Risk / Capacity & Mental Health Act
+- Difficulty selector: Standard / Difficult / Consultant-level
+- Time selector: 2 minutes / 3 minutes
+- Button: “Generate Quiz Stem”
+
+2. Generate Quiz Stem
+The app should generate an original MEQ-style stem using:
+- uploaded old MEQ questions
+- uploaded marking guides
+- uploaded preparation material
+- uploaded model answers
+- uploaded clinical frameworks
+- contemporary psychiatry knowledge
+- Australian/NZ consultant-level practice reasoning
+
+Copyright rule:
+Do not copy old uploaded exam questions verbatim.
+Use uploaded material to understand patterns, complexity, themes, stem structure, examiner focus and signal types.
+Generate original fictional stems that feel similar in structure and complexity to real MEQ-style questions.
+
+3. Quiz screen
+Show:
+- MEQ-style stem
+- setting
+- candidate role
+- complexity cues
+- stakeholder conflict if relevant
+- systems/resource issue if relevant
+- timer box
+- Start button
+- Stop button
+- Reset button
+- Submit answer button
+- Text area: “List all signals/issues you identify from this stem”
+
+Timer:
+- Candidate gets maximum 2–3 minutes depending on selected setting.
+- Timer should not start automatically.
+- Candidate presses Start.
+- Stop pauses the timer.
+- Submit is allowed after start.
+- When time reaches zero, show “Time finished” but allow submission.
+- Record time used.
+
+4. Candidate answer
+Candidate writes free text only.
+Do not use checkbox selection before submission.
+Do not show signal hints.
+Do not show categories before submission.
+The candidate must independently identify the signals.
+
+5. AI analysis after submission
+After submission, send to AI:
+- generated stem
+- candidate answer
+- expected signal map
+- topic
+- difficulty
+- time used
+- uploaded knowledge brain context
+
+AI must act as a strict consultant psychiatrist examiner, not a tutor.
+
+Feedback must be structured like this:
+
+Score:
+- X / Y
+
+Overall judgement:
+- Strong / borderline / weak
+
+Signals correctly identified:
+For each:
+- Candidate wording
+- Correct signal
+- Why this was present in the stem
+- Why it matters clinically
+
+Critical missed signals:
+For each:
+- Missed signal
+- Exact clue from the stem
+- Why the candidate should have identified it
+- What risk/legal/cultural/system implication it carries
+
+Incorrect or overcalled signals:
+For each:
+- Candidate claim
+- Why it is not supported by the stem
+- How to correct the reasoning
+
+Examiner correction:
+- What the candidate should have written
+- Use concise consultant-level wording
+
+Priority ranking:
+- Which signals were most urgent
+- Which signals were secondary
+- Which signals were low-yield
+
+Final corrected signal list:
+- Immediate safety signals
+- Diagnostic/formulation signals
+- Risk signals
+- Capacity/legal signals
+- Cultural safety signals
+- Family/carer signals
+- MDT/system/governance signals
+- Treatment/disposition signals
+
+Strict examiner rules:
+- Do not give generic psychiatry teaching.
+- Do not say “consider everything” unless the stem supports it.
+- For every missed point, explain the exact phrase or fact in the stem that should have triggered it.
+- Mark based on what is written, not what the candidate probably meant.
+- Penalise vague wording.
+- Penalise generic lists.
+- Penalise failure to use vignette details.
+- Reward specific linkage: “This clue means this risk/legal/system issue.”
+- Be direct and consultant-level.
+- Do not over-reassure.
+
+6. Expected signal map
+For every generated quiz stem, internally create an expected signal map before showing the stem.
+
+Signal map should include:
+- signal name
+- category
+- exact clue in stem
+- why it matters
+- severity: critical / important / optional
+- related risk
+- related legal issue
+- related cultural issue
+- related family/carer issue
+- related MDT/system issue
+- model candidate wording
+
+Categories:
+- immediate safety
+- diagnosis/formulation
+- risk to self
+- risk to others
+- risk to child/unborn baby/vulnerable person
+- substance use
+- physical health
+- capacity
+- Mental Health Act
+- consent/refusal
+- cultural safety
+- trauma-informed care
+- family/carer conflict
+- child protection
+- collateral
+- MDT conflict
+- ED/inpatient/system pressure
+- governance
+- disposition planning
+
+7. Knowledge Brain integration
+Add placeholder or real retrieval logic depending on current setup.
+
+The app should search uploaded material for:
+- similar MEQ patterns
+- common topic areas
+- previous examiner signals
+- marking guide themes
+- common missed points
+- consultant-level phrasing
+
+Then generate a new original quiz stem and expected signal map.
+
+If real document retrieval is not ready yet, create a clean placeholder architecture:
+- getRelevantKnowledge(topic, difficulty)
+- generateQuizStem(context)
+- generateExpectedSignalMap(stem, context)
+- assessCandidateSignals(stem, expectedSignalMap, candidateAnswer)
+
+8. Interface after submission
+Show results in a strict marking panel:
+- Score card
+- Correctly identified signals
+- Missed critical signals in red/amber
+- Unsupported/overcalled points
+- Corrected consultant-level answer
+- “Try another stem” button
+- “Repeat same topic” button
+- “Back to study modes” button
+
+9. Save attempt locally for now
+Store:
+- candidate name
+- registration number
+- topic
+- difficulty
+- stem
+- candidate answer
+- expected signals
+- score
+- missed critical signals
+- time used
+- date/time
+
+10. Keep design consistent
+Use:
+- navy header
+- teal accents
+- off-white background
+- large rounded white cards
+- strict exam portal feel
+- no clutter
+
+Run the app and fix all errors.
