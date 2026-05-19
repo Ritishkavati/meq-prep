@@ -14,7 +14,7 @@ import {
   getQuizModuleCompletion, QuizModuleCompletion,
 } from "@/lib/quizEngine";
 import {
-  getNextStem, getTopicStats, resetTopicProgress, TopicStats,
+  getNextStem, getTopicStats, TopicStats,
 } from "@/lib/quizSessionStore";
 import {
   ArrowLeft, Play, Square, RotateCcw, Send, CheckCircle2,
@@ -46,15 +46,13 @@ const SEVERITY_LABELS = {
 // ─── Setup screen ─────────────────────────────────────────────────────────────
 function SetupScreen({
   onGenerate,
-  getStats,
+  globalProgress,
 }: {
   onGenerate: (topic: TopicKey, timeSecs: number) => void;
-  getStats: (topic: TopicKey) => TopicStats;
+  globalProgress: { completed: number; total: number };
 }) {
   const [topic, setTopic] = useState<TopicKey>("random");
   const [timeSecs, setTimeSecs] = useState(180);
-
-  const stats = getStats(topic);
 
   return (
     <div className="bg-card rounded-2xl border border-card-border shadow-sm p-6 md:p-8 max-w-2xl mx-auto">
@@ -83,33 +81,15 @@ function SetupScreen({
             ))}
           </select>
 
-          {/* Topic-bank stats */}
-          <div className="flex items-center gap-4 px-1 pt-0.5">
+          {/* Global progress */}
+          <div className="flex items-center gap-2 px-1 pt-1">
             <span className="text-xs text-muted-foreground">
-              <span className="font-semibold text-primary">{stats.available}</span> available
+              Your progress:{" "}
+              <span className="font-semibold text-primary">{globalProgress.completed}</span>
+              {" "}of{" "}
+              <span className="font-semibold text-primary">{globalProgress.total}</span>
+              {" "}questions completed
             </span>
-            <span className="text-xs text-muted-foreground">·</span>
-            <span className="text-xs text-muted-foreground">
-              <span className="font-semibold text-amber-600">{stats.attempted}</span> attempted
-            </span>
-            <span className="text-xs text-muted-foreground">·</span>
-            <span className="text-xs text-muted-foreground">
-              <span className="font-semibold text-emerald-600">{stats.remaining}</span> remaining
-            </span>
-            {stats.remaining === 0 && stats.available > 0 && (
-              <span className="text-xs text-violet-600 font-medium ml-auto">
-                All done — will cycle
-              </span>
-            )}
-            {stats.attempted > 0 && (
-              <button
-                type="button"
-                onClick={() => { resetTopicProgress(topic); }}
-                className="text-xs text-muted-foreground hover:text-red-500 underline ml-auto transition-colors"
-              >
-                Reset progress
-              </button>
-            )}
           </div>
         </div>
 
@@ -326,16 +306,13 @@ function QuizScreen({
           <p className="text-center text-xs text-muted-foreground mt-2">Press Start to begin timing before submitting</p>
         )}
 
-        {/* Next Quiz shortcut — always visible */}
-        <div className="mt-4 pt-3 border-t border-card-border flex items-center justify-between">
-          <p className="text-xs text-muted-foreground">Skip this question and try a different one</p>
-          <button
-            onClick={onSkipToNext}
-            className="flex items-center gap-1.5 text-sm font-semibold text-accent hover:text-accent/80 transition-colors"
-          >
-            Next Quiz <ArrowRight className="w-3.5 h-3.5" />
-          </button>
-        </div>
+        {/* Skip / Next — prominent button below submit */}
+        <button
+          onClick={onSkipToNext}
+          className="mt-3 w-full flex items-center justify-center gap-2 border-2 border-slate-300 text-muted-foreground py-2.5 rounded-lg text-sm font-semibold hover:border-primary hover:text-primary transition-colors"
+        >
+          Skip — try a different question <ArrowRight className="w-3.5 h-3.5" />
+        </button>
       </div>
     </div>
   );
@@ -627,6 +604,22 @@ function ResultsScreen({
             {criticalFound < criticalTotal && " — missing critical signals significantly affects your mark"}
           </p>
         </div>
+      </div>
+
+      {/* ── NEXT CTA — shown immediately after results ──────────────────────── */}
+      <div className="flex flex-col sm:flex-row gap-2">
+        <button
+          onClick={onNextRandom}
+          className="flex-1 flex items-center justify-center gap-2 bg-primary text-white py-3 rounded-xl font-bold hover:bg-primary/90 transition-colors"
+        >
+          <ArrowRight className="w-4 h-4" /> Next Quiz — Random
+        </button>
+        <button
+          onClick={onNextQuestion}
+          className="flex-1 flex items-center justify-center gap-2 bg-white border-2 border-primary text-primary py-3 rounded-xl font-semibold hover:bg-primary/5 transition-colors"
+        >
+          <ArrowRight className="w-4 h-4" /> Next — Same Topic
+        </button>
       </div>
 
       {/* ── B) SIGNALS YOU IDENTIFIED ───────────────────────────────────────── */}
@@ -955,7 +948,10 @@ export default function QuizMode() {
       {phase === "setup" && (
         <SetupScreen
           onGenerate={handleGenerate}
-          getStats={(t) => getTopicStats(t)}
+          globalProgress={{
+            completed: getQuizModuleCompletion(candidateNumber, QUIZ_STEMS.length).uniqueAttempted,
+            total: QUIZ_STEMS.length,
+          }}
         />
       )}
 

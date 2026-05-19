@@ -1,4 +1,4 @@
-import { QuizStem, ExpectedSignal, SignalCategory } from "./quizData";
+import { QuizStem, ExpectedSignal, SignalCategory, TopicKey, TOPIC_LABELS } from "./quizData";
 
 export interface SignalMatch {
   signal: ExpectedSignal;
@@ -518,5 +518,83 @@ export function createAttempt(
     candidateAnswer: answer,
     result,
     timestamp: new Date(),
+  };
+}
+
+// ─── Candidate performance feedback ───────────────────────────────────────────
+
+export interface CandidateFeedback {
+  weakCategories: { label: string; hitRate: number }[];
+  strongCategories: { label: string; hitRate: number }[];
+  weakTopics: { topic: string; label: string; avgScore: number }[];
+  avgPercentage: number;
+  totalAttempts: number;
+}
+
+export function getCandidateFeedback(registrationNumber: string): CandidateFeedback {
+  const empty: CandidateFeedback = {
+    weakCategories: [],
+    strongCategories: [],
+    weakTopics: [],
+    avgPercentage: 0,
+    totalAttempts: 0,
+  };
+  if (!registrationNumber) return empty;
+
+  const attempts = loadAttempts().filter(
+    (a) => a.registrationNumber === registrationNumber
+  );
+  if (attempts.length === 0) return empty;
+
+  const catStats: Record<string, { hits: number; total: number }> = {};
+  const topicStats: Record<string, { scoreSum: number; count: number }> = {};
+  let scoreSum = 0;
+
+  for (const attempt of attempts) {
+    scoreSum += attempt.result.percentage;
+    for (const match of attempt.result.matches) {
+      const cat = match.signal.category;
+      if (!catStats[cat]) catStats[cat] = { hits: 0, total: 0 };
+      catStats[cat].total++;
+      if (match.identified) catStats[cat].hits++;
+    }
+    const t = attempt.topic;
+    if (!topicStats[t]) topicStats[t] = { scoreSum: 0, count: 0 };
+    topicStats[t].scoreSum += attempt.result.percentage;
+    topicStats[t].count++;
+  }
+
+  const avgPercentage = Math.round(scoreSum / attempts.length);
+
+  const allCats = Object.entries(catStats)
+    .filter(([, v]) => v.total >= 2)
+    .map(([cat, v]) => ({
+      label: CATEGORY_LABELS[cat as SignalCategory] ?? cat,
+      hitRate: Math.round((v.hits / v.total) * 100),
+    }))
+    .sort((a, b) => a.hitRate - b.hitRate);
+
+  const weakCategories = allCats.filter((c) => c.hitRate < 55).slice(0, 5);
+  const strongCategories = allCats
+    .filter((c) => c.hitRate >= 75)
+    .slice(-3)
+    .reverse();
+
+  const weakTopics = Object.entries(topicStats)
+    .map(([topic, v]) => ({
+      topic,
+      label: TOPIC_LABELS[topic as TopicKey] ?? topic,
+      avgScore: Math.round(v.scoreSum / v.count),
+    }))
+    .filter((t) => t.avgScore < 60)
+    .sort((a, b) => a.avgScore - b.avgScore)
+    .slice(0, 4);
+
+  return {
+    weakCategories,
+    strongCategories,
+    weakTopics,
+    avgPercentage,
+    totalAttempts: attempts.length,
   };
 }
