@@ -1,0 +1,1589 @@
+[
+{
+id: "CAP-001",
+topic: "capacity_mha",
+difficulty: "consultant",
+title: "Elderly patient refusing dialysis",
+candidateRole: "Consultant psychiatrist, consultation-liaison service",
+setting: "Renal ward in a tertiary hospital",
+stem: `You are the consultant psychiatrist asked to urgently review Mr Howard, an 81-year-old man with vascular dementia, chronic kidney disease and recurrent delirium, admitted with fluid overload and hyperkalaemia. The renal team recommends urgent dialysis, but Mr Howard is refusing and repeatedly pulling at his cannula.
+
+Mr Howard says, “The dialysis machine is a punishment device and you are trying to drain me dry.” He cannot explain what potassium is or what may happen without dialysis. At times he recognises his daughter but later asks why his deceased wife has not visited.
+
+His daughter holds enduring power of attorney and says, “Dad always said he never wanted machines keeping him alive.” His son disagrees and says, “You have to do everything or I’ll complain.” The renal consultant says dialysis is needed tonight, but the ward team is unsure whether to proceed against Mr Howard’s objection.`,
+  totalMarks: 22,
+  signals: [
+    {
+      id: "s1",
+      name: "Decision-specific capacity impaired by cognition and beliefs",
+      category: "capacity",
+      severity: "critical",
+      clueInStem: "The dialysis machine is a punishment device and you are trying to drain me dry.",
+      whyItMatters: "Delusional or confused beliefs may impair appreciation and weighing of dialysis risks; missing this may lead to wrongly treating refusal as capacitous.",
+      modelWording: "Assess decision-specific capacity to refuse dialysis, focusing on understanding, retention, appreciation and weighing of the immediate medical risks.",
+      keywords: ["decision-specific capacity", "dialysis refusal", "appreciation", "weighing information", "vascular dementia", "delirium"],
+    },
+    {
+      id: "s2",
+      name: "Immediate life-threatening physical risk",
+      category: "physical_health",
+      severity: "critical",
+      clueInStem: "dialysis is needed tonight",
+      whyItMatters: "Urgent hyperkalaemia may require emergency treatment authority rather than prolonged family debate.",
+      modelWording: "Clarify medical urgency with renal team because imminent risk from hyperkalaemia may justify emergency treatment if capacity is absent.",
+      keywords: ["hyperkalaemia", "urgent dialysis", "medical emergency", "renal failure", "emergency treatment", "life-threatening risk"],
+    },
+    {
+      id: "s3",
+      name: "Substitute decision-maker conflict",
+      category: "family_carer",
+      severity: "important",
+      clueInStem: "Dad always said he never wanted machines keeping him alive.",
+      whyItMatters: "Past wishes are relevant but must be interpreted in context of current reversibility, urgency and legal authority.",
+      modelWording: "Clarify the daughter’s legal authority and explore prior expressed wishes while distinguishing chronic end-of-life preferences from reversible emergency treatment.",
+      keywords: ["enduring power of attorney", "substitute decision-maker", "prior wishes", "advance care planning", "family conflict"],
+    },
+    {
+      id: "s4",
+      name: "Possible delirium causing fluctuating capacity",
+      category: "diagnosis_formulation",
+      severity: "important",
+      clueInStem: "later asks why his deceased wife has not visited.",
+      whyItMatters: "Delirium can fluctuate and may temporarily remove capacity, requiring reassessment after medical stabilisation.",
+      modelWording: "Assess for delirium superimposed on dementia because fluctuating cognition may be driving refusal and behavioural disturbance.",
+      keywords: ["delirium", "fluctuating cognition", "dementia", "orientation", "medical precipitants", "capacity fluctuation"],
+    },
+    {
+      id: "s5",
+      name: "Least restrictive approach to treatment",
+      category: "ethics",
+      severity: "important",
+      clueInStem: "pulling at his cannula",
+      whyItMatters: "Treatment against objection may require sedation or restraint; consultant must minimise harm and coercion.",
+      modelWording: "Use the least restrictive method to deliver urgent care, including reassurance, family presence, analgesia and restraint only if necessary and proportionate.",
+      keywords: ["least restrictive", "restraint", "sedation", "proportionality", "dignity", "urgent care"],
+    },
+    {
+      id: "s6",
+      name: "Documentation of defensible legal reasoning",
+      category: "governance",
+      severity: "optional",
+      clueInStem: "I’ll complain.",
+      whyItMatters: "Family dispute increases medico-legal risk and requires clear documentation of capacity, urgency and legal basis.",
+      modelWording: "Document capacity findings, medical urgency, substitute decision-maker discussions and legal rationale for proceeding or not proceeding.",
+      keywords: ["documentation", "legal basis", "complaint risk", "family disagreement", "defensible decision", "capacity record"],
+    },
+  ],
+  priorityOrder: {
+    urgent: ["s1", "s2"],
+    secondary: ["s3", "s4", "s5"],
+    lowYield: ["s6"],
+  },
+  modelAnswer: `Capacity/medical urgency:
+
+* Assess decision-specific capacity to refuse dialysis because cognition and persecutory beliefs appear to impair understanding, appreciation and weighing.
+* Clarify with renal team the immediacy of hyperkalaemia/fluid overload risk and whether delay risks death or irreversible harm.
+* Assess delirium superimposed on dementia and treat reversible contributors.
+
+Legal/ethical:
+
+* If capacity is absent and risk is imminent, consider emergency treatment authority/common law or local guardianship framework.
+* Apply least restrictive principles: explanation, familiar support, calm setting, analgesia, minimal restraint/sedation only if proportionate.
+
+Family/substitute decision-making:
+
+* Clarify daughter’s EPOA authority and prior expressed wishes.
+* Manage sibling disagreement through a senior family discussion but do not allow family conflict to delay emergency treatment.
+
+Governance:
+
+* Document capacity assessment, urgency, legal basis, family discussions, risks of action/inaction and review plan.`,
+  },
+  {
+  id: "CAP-002",
+  topic: "capacity_mha",
+  difficulty: "consultant",
+  title: "Adolescent refusing admission after overdose",
+  candidateRole: "Consultant psychiatrist, child and adolescent consultation-liaison service",
+  setting: "Regional emergency department",
+  stem: `You are supervising a Stage 2 registrar assessing Leila, a 16-year-old boarding school student brought to ED after ingesting an uncertain quantity of fluoxetine and paracetamol. She initially denied overdose but later told nursing staff, “I took enough to sleep and maybe not wake up.”
+
+Leila refuses blood tests, NAC treatment and mental health admission. She says, “I understand my liver could fail, but that is my choice.” She becomes angry when staff contact her aunt and says, “No one has the right to lock me up.” Her teacher has returned to the boarding school, and her aunt says Leila is “dramatic but clever” and should be discharged if she promises to be safe.
+
+The ED consultant is concerned because the timing of ingestion is unclear. The registrar asks whether Leila is Gillick competent because she is articulate and can repeat the medical risks.`,
+  totalMarks: 22,
+  signals: [
+    {
+      id: "s1",
+      name: "Apparent understanding does not equal capacity",
+      category: "capacity",
+      severity: "critical",
+      clueInStem: "I understand my liver could fail, but that is my choice.",
+      whyItMatters: "A suicidal adolescent may repeat information but be unable to weigh consequences due to hopelessness, ambivalence or acute crisis.",
+      modelWording: "Assess Gillick competence/capacity by testing appreciation and weighing, not merely factual repetition of risk.",
+      keywords: ["Gillick competence", "adolescent capacity", "weighing information", "suicidal crisis", "treatment refusal"],
+    },
+    {
+      id: "s2",
+      name: "Unclear overdose timing requires urgent medical treatment",
+      category: "physical_health",
+      severity: "critical",
+      clueInStem: "the timing of ingestion is unclear.",
+      whyItMatters: "Delayed paracetamol treatment may cause hepatic failure; medical stabilisation cannot wait for a perfect psychiatric assessment.",
+      modelWording: "Prioritise urgent toxicology assessment and NAC where indicated because uncertain paracetamol timing creates potentially life-threatening risk.",
+      keywords: ["paracetamol overdose", "NAC", "toxicology", "hepatic failure", "uncertain timing", "medical stabilisation"],
+    },
+    {
+      id: "s3",
+      name: "Suicidal intent and concealment",
+      category: "risk_self",
+      severity: "important",
+      clueInStem: "I took enough to sleep and maybe not wake up.",
+      whyItMatters: "Ambivalent suicidal intent and initial denial increase concern about ongoing risk and unreliable self-report.",
+      modelWording: "Formulate risk based on ambivalent suicidal intent, concealment, overdose uncertainty and current refusal of treatment.",
+      keywords: ["suicidal intent", "ambivalence", "concealment", "overdose risk", "unreliable history", "acute risk"],
+    },
+    {
+      id: "s4",
+      name: "MHA/minor treatment pathway",
+      category: "mental_health_act",
+      severity: "important",
+      clueInStem: "No one has the right to lock me up.",
+      whyItMatters: "Refusal of life-saving care may require use of mental health, guardianship or emergency medical powers depending on jurisdiction.",
+      modelWording: "Consider applicable minor consent, emergency treatment and Mental Health Act pathways if acute mental disorder impairs safe refusal.",
+      keywords: ["Mental Health Act", "minor consent", "emergency treatment", "involuntary assessment", "legal framework"],
+    },
+    {
+      id: "s5",
+      name: "Collateral minimisation",
+      category: "collateral",
+      severity: "important",
+      clueInStem: "dramatic but clever",
+      whyItMatters: "Family minimisation may lead to unsafe discharge unless balanced with objective risk and school collateral.",
+      modelWording: "Seek broader collateral from school, family and GP while not relying on minimising collateral to justify discharge.",
+      keywords: ["collateral", "family minimisation", "school", "GP", "discharge risk", "boarding school"],
+    },
+    {
+      id: "s6",
+      name: "Discharge pressure without supervision",
+      category: "disposition",
+      severity: "optional",
+      clueInStem: "should be discharged if she promises to be safe.",
+      whyItMatters: "A safety promise is not a discharge plan, especially after overdose and treatment refusal.",
+      modelWording: "Do not rely on a promise of safety; disposition requires medical clearance, risk formulation, supervision and follow-up.",
+      keywords: ["promise of safety", "safe discharge", "supervision", "follow-up", "risk formulation"],
+    },
+  ],
+  priorityOrder: {
+    urgent: ["s1", "s2"],
+    secondary: ["s3", "s4", "s5"],
+    lowYield: ["s6"],
+  },
+  modelAnswer: `Immediate safety/physical health:
+
+* Prioritise ED toxicology management, bloods and NAC if indicated because timing/quantity is unclear.
+* Manage absconding/refusal risk with safe observation and senior ED liaison.
+
+Capacity/legal:
+
+* Assess Gillick competence/capacity specifically for refusing overdose treatment and admission.
+* Do not equate articulate repetition with capacity; assess appreciation, weighing, stability of choice and effect of suicidality.
+* Consider emergency treatment, parental/guardian authority and Mental Health Act pathways if capacity is absent or acute mental disorder drives refusal.
+
+Risk/collateral:
+
+* Assess suicidal intent, ambivalence, concealment, access to further medication and protective factors.
+* Obtain collateral from school, aunt, GP and prior mental health providers.
+
+Disposition:
+
+* No discharge based only on a promise of safety.
+* Disposition requires medical clearance, acute risk formulation, supervision, means restriction and CAMHS follow-up/admission plan.`,
+  },
+  {
+  id: "CAP-003",
+  topic: "capacity_mha",
+  difficulty: "consultant",
+  title: "CTO renewal and least restrictive care",
+  candidateRole: "Consultant psychiatrist, community treatment team",
+  setting: "Urban community mental health service",
+  stem: `You are the consultant psychiatrist reviewing a community treatment order renewal for Sam, a 37-year-old man with schizophrenia and past relapses associated with stopping depot antipsychotic medication. He has been stable for 18 months on a CTO, lives independently and works part-time.
+
+Sam says, “I only take the injection because you people threaten me with hospital.” He reports tiredness, sexual dysfunction and weight gain. His case manager supports renewal because “he will definitely relapse if we remove it.” Sam’s sister says he has been reliable with appointments and has not used cannabis for over a year.
+
+The registrar asks whether renewal is justified because Sam still lacks insight and says he would prefer tablets. The tribunal hearing is in one week, and the team has not documented any recent attempt at a voluntary treatment plan.`,
+  totalMarks: 22,
+  signals: [
+    {
+      id: "s1",
+      name: "Least restrictive principle central to CTO renewal",
+      category: "mental_health_act",
+      severity: "critical",
+      clueInStem: "the team has not documented any recent attempt at a voluntary treatment plan.",
+      whyItMatters: "A CTO must not be renewed by inertia; failure to test voluntary care undermines legal defensibility.",
+      modelWording: "Review whether ongoing CTO is the least restrictive option and document attempts to negotiate voluntary treatment.",
+      keywords: ["CTO renewal", "least restrictive", "voluntary treatment", "legal threshold", "tribunal", "defensibility"],
+    },
+    {
+      id: "s2",
+      name: "Coercion affecting alliance and consent",
+      category: "consent_refusal",
+      severity: "critical",
+      clueInStem: "I only take the injection because you people threaten me with hospital.",
+      whyItMatters: "Perceived coercion may damage engagement and requires explicit consideration of autonomy and alternatives.",
+      modelWording: "Explore perceived coercion and seek collaborative consent to treatment where possible despite CTO history.",
+      keywords: ["coercion", "treatment alliance", "consent", "autonomy", "collaborative care", "depot"],
+    },
+    {
+      id: "s3",
+      name: "Relapse history relevant but not sufficient",
+      category: "risk_self",
+      severity: "important",
+      clueInStem: "past relapses associated with stopping depot antipsychotic medication.",
+      whyItMatters: "Historical relapse risk is relevant, but current functioning and supports must also be weighed.",
+      modelWording: "Balance historical relapse risk against current stability, adherence, supports and willingness to consider alternatives.",
+      keywords: ["relapse history", "medication non-adherence", "current stability", "risk formulation", "supports"],
+    },
+    {
+      id: "s4",
+      name: "Medication side effects driving refusal",
+      category: "physical_health",
+      severity: "important",
+      clueInStem: "tiredness, sexual dysfunction and weight gain.",
+      whyItMatters: "Ignoring adverse effects increases resistance and weakens least restrictive treatment planning.",
+      modelWording: "Address side effects and consider dose, medication or formulation changes to improve voluntary adherence.",
+      keywords: ["side effects", "weight gain", "sexual dysfunction", "metabolic risk", "adherence", "shared decision-making"],
+    },
+    {
+      id: "s5",
+      name: "Collateral supports possible step-down",
+      category: "collateral",
+      severity: "important",
+      clueInStem: "reliable with appointments",
+      whyItMatters: "Reliable engagement and abstinence may support a trial of less restrictive care.",
+      modelWording: "Use collateral about sustained appointment attendance and cannabis abstinence to assess feasibility of voluntary treatment.",
+      keywords: ["collateral", "sister", "appointment adherence", "cannabis abstinence", "step-down", "community supports"],
+    },
+    {
+      id: "s6",
+      name: "Team inertia and risk aversion",
+      category: "mdt_conflict",
+      severity: "optional",
+      clueInStem: "he will definitely relapse if we remove it.",
+      whyItMatters: "Overconfident prediction may reflect team risk aversion rather than evidence-based legal reasoning.",
+      modelWording: "Challenge risk-averse assumptions and require evidence-based justification for ongoing coercion.",
+      keywords: ["risk aversion", "team inertia", "evidence", "coercion", "clinical justification", "MDT"],
+    },
+  ],
+  priorityOrder: {
+    urgent: ["s1", "s2"],
+    secondary: ["s3", "s4", "s5"],
+    lowYield: ["s6"],
+  },
+  modelAnswer: `Legal/least restrictive:
+
+* Review whether statutory criteria for CTO renewal are currently met.
+* Specifically address least restrictive care and whether voluntary treatment has been genuinely attempted.
+
+Clinical risk:
+
+* Consider relapse history, previous harm, adherence pattern, substance use and early warning signs.
+* Balance this against 18 months stability, work, independent living and collateral reliability.
+
+Consent/treatment planning:
+
+* Explore Sam’s perceived coercion and side effects.
+* Offer shared decision-making: dose review, side-effect management, depot alternatives, oral trial if safe, relapse plan.
+
+MDT/tribunal:
+
+* Convene MDT review before tribunal.
+* Avoid renewal by inertia or unsupported prediction.
+* Prepare defensible evidence, including risks, alternatives considered and reasons for any CTO recommendation.
+
+Documentation:
+
+* Record Sam’s views, capacity/consent, side effects, collateral, least restrictive reasoning and review plan.`,
+  },
+  {
+  id: "CAP-004",
+  topic: "capacity_mha",
+  difficulty: "consultant",
+  title: "Psychotic patient refusing antipsychotic treatment",
+  candidateRole: "Consultant psychiatrist, acute inpatient unit",
+  setting: "Locked acute psychiatric ward",
+  stem: `You are the consultant psychiatrist responsible for an acute inpatient unit.
+
+Omar is a 28-year-old man admitted involuntarily after threatening neighbours with a metal pole. He has persecutory delusions and auditory hallucinations. He refuses antipsychotic medication, saying, “The tablets are trackers that will let them control my thoughts.” He accepts food and physical observations but refuses all psychiatric medication.
+
+His father says Omar became unwell after stopping risperidone depot three months ago. The registrar asks whether Omar’s refusal means he has capacity because he can clearly say “no.” Nursing staff report escalating intimidation of other patients, including standing over an elderly patient and saying, “You are one of them.”
+
+The unit is full, and staff are asking whether medication can be given by force tonight.`,
+  totalMarks: 22,
+  signals: [
+    {
+      id: "s1",
+      name: "Refusal driven by psychotic belief",
+      category: "capacity",
+      severity: "critical",
+      clueInStem: "The tablets are trackers that will let them control my thoughts.",
+      whyItMatters: "A clear refusal does not equal capacity if delusions impair appreciation and reasoning.",
+      modelWording: "Assess whether persecutory delusions impair Omar’s capacity to refuse antipsychotic treatment.",
+      keywords: ["psychotic refusal", "persecutory delusion", "capacity", "appreciation", "reasoning", "antipsychotic"],
+    },
+    {
+      id: "s2",
+      name: "Risk to others on ward",
+      category: "risk_others",
+      severity: "critical",
+      clueInStem: "You are one of them.",
+      whyItMatters: "Threatening behaviour toward vulnerable inpatients increases urgency for containment and treatment.",
+      modelWording: "Assess immediate risk to others, especially vulnerable patients, and adjust observation and containment accordingly.",
+      keywords: ["risk to others", "threatening behaviour", "vulnerable patients", "ward safety", "containment"],
+    },
+    {
+      id: "s3",
+      name: "Mental Health Act treatment authority",
+      category: "mental_health_act",
+      severity: "important",
+      clueInStem: "admitted involuntarily",
+      whyItMatters: "Involuntary status may permit treatment under statutory criteria but does not remove need for proportionality and documentation.",
+      modelWording: "Clarify statutory authority for involuntary treatment and ensure treatment is necessary, proportionate and least restrictive.",
+      keywords: ["involuntary treatment", "Mental Health Act", "treatment authority", "least restrictive", "statutory criteria"],
+    },
+    {
+      id: "s4",
+      name: "Collateral evidence of relapse after depot cessation",
+      category: "collateral",
+      severity: "important",
+      clueInStem: "stopping risperidone depot three months ago.",
+      whyItMatters: "Collateral links non-adherence to relapse and informs treatment choice and relapse planning.",
+      modelWording: "Use collateral regarding depot cessation and relapse to support formulation and treatment planning.",
+      keywords: ["collateral", "depot cessation", "relapse", "risperidone", "family information", "treatment planning"],
+    },
+    {
+      id: "s5",
+      name: "Force medication threshold",
+      category: "ethics",
+      severity: "important",
+      clueInStem: "medication can be given by force tonight.",
+      whyItMatters: "Forced medication is high-risk and should not be driven by staff anxiety alone.",
+      modelWording: "Use forced medication only if legally authorised, clinically necessary, proportionate and after less restrictive options fail.",
+      keywords: ["forced medication", "proportionality", "staff anxiety", "least restrictive", "coercion", "restraint"],
+    },
+    {
+      id: "s6",
+      name: "System pressure should not drive coercion",
+      category: "system_pressure",
+      severity: "optional",
+      clueInStem: "The unit is full",
+      whyItMatters: "Bed pressure must not become the rationale for coercive treatment.",
+      modelWording: "Acknowledge unit pressure but base treatment decisions on clinical risk, legal authority and necessity.",
+      keywords: ["unit full", "bed pressure", "coercion", "clinical necessity", "governance"],
+    },
+  ],
+  priorityOrder: {
+    urgent: ["s1", "s2"],
+    secondary: ["s3", "s4", "s5"],
+    lowYield: ["s6"],
+  },
+  modelAnswer: `Capacity/legal:
+
+* Assess capacity to refuse antipsychotic medication; clear refusal is not sufficient if delusions impair appreciation/weighing.
+* Confirm MHA treatment authority and local procedural requirements for involuntary medication.
+
+Risk/immediate safety:
+
+* Review Omar urgently due to escalating intimidation and risk to vulnerable patients.
+* Increase observation, separate from vulnerable patients and create a ward safety plan.
+
+Treatment:
+
+* Offer oral medication first with clear explanation.
+* Consider medication history, prior depot response and side effects.
+* Forced medication only if legally authorised, necessary, proportionate and least restrictive options fail.
+
+Collateral/MDT:
+
+* Use father’s collateral to establish relapse pattern.
+* Lead MDT plan to ensure consistent communication and reduce reactive coercion.
+
+Documentation:
+
+* Record capacity reasoning, risk to others, legal authority, alternatives tried, rationale for any coercive treatment and review plan.`,
+  },
+  {
+  id: "CAP-005",
+  topic: "capacity_mha",
+  difficulty: "consultant",
+  title: "Dementia patient refusing residential care",
+  candidateRole: "Consultant psychiatrist, old age psychiatry service",
+  setting: "Geriatric assessment ward",
+  stem: `You are the old age psychiatry consultant asked to assess Mrs Bell, a 77-year-old woman with Alzheimer’s disease admitted after being found wandering at night in heavy rain. OT assessment shows she leaves the stove on, misses medications and cannot manage finances.
+
+Mrs Bell insists on returning home and says, “I have lived there for fifty years and I am not going to a prison.” She cannot recall being found by police and repeatedly asks when her husband is coming, although he died six years ago. Her daughter wants residential care, but her son says, “She has a right to make bad decisions.”
+
+The geriatrician believes discharge home alone is unsafe. Social work says guardianship may be required, but the family wants a decision today because the residential care bed may be lost.`,
+  totalMarks: 22,
+  signals: [
+    {
+      id: "s1",
+      name: "Accommodation capacity impaired by memory and appreciation",
+      category: "capacity",
+      severity: "critical",
+      clueInStem: "She cannot recall being found by police",
+      whyItMatters: "Inability to retain and appreciate recent risk events undermines capacity for accommodation decisions.",
+      modelWording: "Assess decision-specific capacity regarding accommodation, focusing on retention and appreciation of home safety risks.",
+      keywords: ["accommodation capacity", "Alzheimer disease", "retention", "appreciation", "home safety", "decision-specific"],
+    },
+    {
+      id: "s2",
+      name: "High vulnerability if discharged home",
+      category: "risk_vulnerable",
+      severity: "critical",
+      clueInStem: "wandering at night in heavy rain.",
+      whyItMatters: "Wandering, medication mismanagement and stove risk create serious foreseeable harm.",
+      modelWording: "Recognise high vulnerability from wandering, self-neglect, medication mismanagement and environmental hazards.",
+      keywords: ["wandering", "self-neglect", "home risk", "medication mismanagement", "vulnerability", "unsafe discharge"],
+    },
+    {
+      id: "s3",
+      name: "Guardianship pathway",
+      category: "governance",
+      severity: "important",
+      clueInStem: "guardianship may be required",
+      whyItMatters: "Restrictive placement requires proper legal process if capacity is absent and family disagreement persists.",
+      modelWording: "Consider guardianship/tribunal pathway for accommodation decisions if Mrs Bell lacks capacity and no valid substitute decision-maker can decide.",
+      keywords: ["guardianship", "tribunal", "substitute decision-maker", "residential care", "legal process"],
+    },
+    {
+      id: "s4",
+      name: "Autonomy versus safety conflict",
+      category: "ethics",
+      severity: "important",
+      clueInStem: "She has a right to make bad decisions.",
+      whyItMatters: "Consultant must distinguish capacitous unwise decisions from incapacitous decisions with serious risk.",
+      modelWording: "Differentiate an unwise capacitous decision from incapacity due to dementia impairing appreciation of risk.",
+      keywords: ["autonomy", "unwise decision", "incapacity", "safety", "ethical balance", "least restrictive"],
+    },
+    {
+      id: "s5",
+      name: "Time pressure from residential bed",
+      category: "system_pressure",
+      severity: "important",
+      clueInStem: "the residential care bed may be lost.",
+      whyItMatters: "System pressure should not shortcut capacity assessment or legal process.",
+      modelWording: "Acknowledge placement pressure but ensure capacity assessment and legal steps are completed defensibly.",
+      keywords: ["placement pressure", "residential bed", "capacity assessment", "legal process", "defensible decision"],
+    },
+    {
+      id: "s6",
+      name: "Family disagreement affecting disposition",
+      category: "family_carer",
+      severity: "optional",
+      clueInStem: "Her daughter wants residential care, but her son says",
+      whyItMatters: "Family conflict may delay safe discharge planning and requires structured communication.",
+      modelWording: "Hold a family meeting to explain capacity, risk and least restrictive options while avoiding alignment with one relative.",
+      keywords: ["family disagreement", "family meeting", "communication", "disposition", "least restrictive", "neutrality"],
+    },
+  ],
+  priorityOrder: {
+    urgent: ["s1", "s2"],
+    secondary: ["s3", "s4", "s5"],
+    lowYield: ["s6"],
+  },
+  modelAnswer: `Capacity:
+
+* Assess decision-specific capacity for accommodation and care.
+* Focus on understanding, retention, appreciation and weighing of risks of returning home alone.
+
+Risk:
+
+* Integrate OT and collateral evidence: wandering, stove risk, missed medications, finances and vulnerability.
+* Do not treat “wanting home” as sufficient if she cannot appreciate foreseeable harm.
+
+Legal/ethical:
+
+* Distinguish unwise capacitous choice from incapacity due to dementia.
+* Apply least restrictive care: consider increased home supports only if realistically safe.
+* If unsafe and capacity absent, pursue substitute decision-maker/guardianship pathway.
+
+Family/system:
+
+* Conduct family meeting to explain capacity and risk.
+* Do not let residential bed pressure shortcut legal process.
+* Document assessment, risks, alternatives considered and rationale for disposition.`,
+  },
+  {
+  id: "GOV-001",
+  topic: "governance",
+  difficulty: "consultant",
+  title: "Impaired colleague and mandatory reporting",
+  candidateRole: "Consultant psychiatrist, clinical director of mental health",
+  setting: "Public mental health service",
+  stem: `You are the clinical director of a public mental health service.
+
+A senior registrar tells you confidentially that Dr Lane, a consultant psychiatrist, appeared intoxicated during an after-hours shift and gave confusing verbal orders for rapid tranquillisation. Nursing staff say Dr Lane smelled of alcohol and later wrote incomplete notes. One nurse says, “I was scared to question him because he is the consultant.”
+
+Dr Lane calls you the next morning and says, “I had one drink at dinner and people are exaggerating because they don’t like me.” He asks you not to escalate because he is going through a divorce. The hospital executive wants the matter handled quietly to avoid reputational damage.
+
+You must decide how to respond while ensuring patient safety, fairness to Dr Lane and compliance with professional obligations.`,
+  totalMarks: 22,
+  signals: [
+    {
+      id: "s1",
+      name: "Potential impairment affecting patient safety",
+      category: "immediate_safety",
+      severity: "critical",
+      clueInStem: "appeared intoxicated during an after-hours shift",
+      whyItMatters: "Possible impairment while practising creates immediate risk to patients and may require removal from clinical duties.",
+      modelWording: "Prioritise patient safety by assessing whether Dr Lane is fit for duty and preventing further unsupervised clinical practice until clarified.",
+      keywords: ["impaired colleague", "fitness for duty", "patient safety", "intoxication", "clinical duties", "risk"],
+    },
+    {
+      id: "s2",
+      name: "Mandatory reporting threshold",
+      category: "governance",
+      severity: "critical",
+      clueInStem: "gave confusing verbal orders for rapid tranquillisation.",
+      whyItMatters: "Practising while impaired and issuing unsafe orders may meet mandatory notification thresholds depending on jurisdiction.",
+      modelWording: "Consider mandatory notification obligations if impairment placed the public at substantial risk of harm.",
+      keywords: ["mandatory reporting", "AHPRA", "substantial risk", "professional obligations", "unsafe practice", "notification"],
+    },
+    {
+      id: "s3",
+      name: "Power imbalance silencing staff",
+      category: "mdt_conflict",
+      severity: "important",
+      clueInStem: "I was scared to question him because he is the consultant.",
+      whyItMatters: "Hierarchy can suppress safety concerns and requires explicit support for speaking up.",
+      modelWording: "Support staff who raised concerns and address hierarchy-related barriers to escalation.",
+      keywords: ["speaking up", "hierarchy", "staff safety", "nursing concerns", "clinical governance"],
+    },
+    {
+      id: "s4",
+      name: "Executive pressure to minimise issue",
+      category: "system_pressure",
+      severity: "important",
+      clueInStem: "handled quietly to avoid reputational damage.",
+      whyItMatters: "Reputation management must not override statutory obligations or patient safety.",
+      modelWording: "Resist pressure to minimise the incident and follow formal governance and professional reporting processes.",
+      keywords: ["executive pressure", "reputation", "governance process", "transparency", "professional duty"],
+    },
+    {
+      id: "s5",
+      name: "Fair process for colleague",
+      category: "ethics",
+      severity: "important",
+      clueInStem: "people are exaggerating because they don’t like me.",
+      whyItMatters: "Natural justice requires factual inquiry, support and non-punitive handling while protecting patients.",
+      modelWording: "Ensure procedural fairness while separating support for Dr Lane from patient safety and reporting duties.",
+      keywords: ["procedural fairness", "natural justice", "colleague support", "non-punitive", "confidentiality"],
+    },
+    {
+      id: "s6",
+      name: "Documentation and incident record",
+      category: "governance",
+      severity: "optional",
+      clueInStem: "incomplete notes.",
+      whyItMatters: "Incomplete notes increase clinical and medico-legal risk, especially around sedation decisions.",
+      modelWording: "Secure relevant documentation, medication records and incident reports to support review and patient follow-up.",
+      keywords: ["documentation", "incident report", "sedation orders", "medication record", "audit trail"],
+    },
+  ],
+  priorityOrder: {
+    urgent: ["s1", "s2"],
+    secondary: ["s3", "s4", "s5"],
+    lowYield: ["s6"],
+  },
+  modelAnswer: `Immediate safety:
+
+* Ensure Dr Lane is not providing unsupervised clinical care until fitness for duty is clarified.
+* Review affected patients, rapid tranquillisation orders and observations.
+
+Governance/reporting:
+
+* Escalate through hospital clinical governance and medical administration.
+* Consider mandatory notification if impairment created substantial risk to the public.
+* Do not allow reputational pressure to suppress required reporting.
+
+Fairness/support:
+
+* Speak with Dr Lane, offer support and occupational health pathway.
+* Maintain procedural fairness and confidentiality within limits.
+
+Team:
+
+* Support nursing/registrar staff who raised concerns.
+* Address hierarchy and speaking-up culture.
+
+Documentation:
+
+* Record factual concerns, actions taken, patient reviews, reporting decisions and rationale.`,
+  },
+  {
+  id: "GOV-002",
+  topic: "governance",
+  difficulty: "consultant",
+  title: "Serious medication error and open disclosure",
+  candidateRole: "Consultant psychiatrist, inpatient unit clinical lead",
+  setting: "Acute psychiatric inpatient ward",
+  stem: `You are the consultant psychiatrist leading an acute inpatient ward.
+
+A 54-year-old woman, Helen, was inadvertently given clozapine 300 mg at night instead of quetiapine 300 mg due to a medication chart transcription error. She became hypotensive, fell overnight and sustained a fractured wrist. The night nurse says, “I thought pharmacy had checked it.” The registrar says he copied the medication list from a previous discharge summary without confirming it.
+
+Helen’s daughter arrives angry and says, “No one told us this was your mistake.” The hospital risk manager asks you to prepare for open disclosure but warns that “we should avoid admitting liability.” Staff are distressed and blaming each other.
+
+You are asked to manage the immediate clinical consequences and lead the incident response.`,
+  totalMarks: 22,
+  signals: [
+    {
+      id: "s1",
+      name: "Immediate clinical harm from medication error",
+      category: "immediate_safety",
+      severity: "critical",
+      clueInStem: "became hypotensive, fell overnight and sustained a fractured wrist.",
+      whyItMatters: "Patient harm requires urgent medical review, monitoring and prevention of further adverse events.",
+      modelWording: "Prioritise Helen’s clinical stabilisation, falls management and monitoring for clozapine-related adverse effects.",
+      keywords: ["medication error", "hypotension", "fall", "fracture", "clinical review", "adverse event"],
+    },
+    {
+      id: "s2",
+      name: "Open disclosure required",
+      category: "governance",
+      severity: "critical",
+      clueInStem: "No one told us this was your mistake.",
+      whyItMatters: "Failure to disclose worsens harm, complaint risk and ethical breach.",
+      modelWording: "Conduct timely open disclosure with apology, factual explanation, known consequences and next steps.",
+      keywords: ["open disclosure", "apology", "transparency", "family communication", "adverse event", "duty of candour"],
+    },
+    {
+      id: "s3",
+      name: "Systems error not individual blame only",
+      category: "governance",
+      severity: "important",
+      clueInStem: "pharmacy had checked it.",
+      whyItMatters: "Blame culture prevents learning; root cause analysis must examine prescribing, transcription and checking systems.",
+      modelWording: "Frame the incident as requiring systems review rather than premature individual blame.",
+      keywords: ["systems error", "root cause analysis", "medication safety", "transcription error", "blame culture"],
+    },
+    {
+      id: "s4",
+      name: "Registrar practice and supervision issue",
+      category: "governance",
+      severity: "important",
+      clueInStem: "copied the medication list from a previous discharge summary without confirming it.",
+      whyItMatters: "Unsafe prescribing practice requires supervision, education and possible remediation.",
+      modelWording: "Review registrar prescribing practice and supervision while ensuring learning and accountability.",
+      keywords: ["supervision", "prescribing safety", "medication reconciliation", "registrar", "remediation"],
+    },
+    {
+      id: "s5",
+      name: "Risk manager advice must not prevent honesty",
+      category: "ethics",
+      severity: "important",
+      clueInStem: "avoid admitting liability.",
+      whyItMatters: "Open disclosure can be honest without speculative blame; avoiding truth undermines trust.",
+      modelWording: "Provide factual disclosure and apology for harm without speculating beyond known facts or assigning premature liability.",
+      keywords: ["liability", "truthfulness", "ethics", "open disclosure", "factual communication"],
+    },
+    {
+      id: "s6",
+      name: "Staff distress and team functioning",
+      category: "mdt_conflict",
+      severity: "optional",
+      clueInStem: "Staff are distressed and blaming each other.",
+      whyItMatters: "Team distress can impair ongoing safety and requires containment and debriefing.",
+      modelWording: "Support staff debriefing and psychological safety while maintaining accountability and patient-centred focus.",
+      keywords: ["staff debrief", "psychological safety", "team conflict", "accountability", "patient safety"],
+    },
+  ],
+  priorityOrder: {
+    urgent: ["s1", "s2"],
+    secondary: ["s3", "s4", "s5"],
+    lowYield: ["s6"],
+  },
+  modelAnswer: `Immediate clinical care:
+
+* Ensure Helen receives urgent medical review, observations, falls/fracture management and monitoring for clozapine effects.
+* Correct medication chart and prevent further dosing errors.
+
+Open disclosure:
+
+* Meet Helen/family promptly with senior staff.
+* Acknowledge the error, apologise for harm, explain known facts and outline next steps.
+
+Governance:
+
+* Complete incident notification.
+* Initiate medication safety review/root cause analysis.
+* Examine prescribing, transcription, pharmacy checking, nursing administration and handover systems.
+
+Supervision:
+
+* Review registrar prescribing practice and supervision needs.
+* Avoid scapegoating but address unsafe practice.
+
+Team:
+
+* Debrief staff, reduce blame culture and reinforce medication reconciliation standards.
+
+Documentation:
+
+* Record clinical care, disclosure, incident actions, family communication and review plan.`,
+  },
+  {
+  id: "GOV-003",
+  topic: "governance",
+  difficulty: "consultant",
+  title: "Executive pressure to discharge unsafe patient",
+  candidateRole: "Consultant psychiatrist, acute inpatient unit",
+  setting: "Overcrowded metropolitan inpatient service",
+  stem: `You are the consultant psychiatrist on an acute inpatient unit during severe bed pressure.
+
+Tariq is a 32-year-old man with schizoaffective disorder admitted after threatening his ex-partner while believing she was “infected by demons.” He remains guarded, intermittently hostile and has refused family meetings. Yesterday he told a nurse, “When I leave, I know where she lives.”
+
+The hospital executive director phones you and says, “We need this bed today; ED is breaching targets and he is no longer floridly psychotic.” The bed manager suggests discharge to temporary accommodation with crisis follow-up. The registrar is uncomfortable but says, “Maybe we can document that he denies intent.”
+
+Tariq’s ex-partner has an active family violence order and has not been contacted because staff are unsure about confidentiality.`,
+  totalMarks: 22,
+  signals: [
+    {
+      id: "s1",
+      name: "Explicit threat to identifiable person",
+      category: "risk_others",
+      severity: "critical",
+      clueInStem: "When I leave, I know where she lives.",
+      whyItMatters: "A specific threat to an identifiable victim creates serious risk and potential duty to protect/warn considerations.",
+      modelWording: "Treat the statement as a specific dynamic risk to an identifiable person requiring urgent risk formulation and protective action.",
+      keywords: ["specific threat", "identifiable victim", "violence risk", "dynamic risk", "duty to protect", "family violence"],
+    },
+    {
+      id: "s2",
+      name: "Executive pressure compromising clinical independence",
+      category: "system_pressure",
+      severity: "critical",
+      clueInStem: "We need this bed today",
+      whyItMatters: "Bed pressure must not override clinical safety or legal duties.",
+      modelWording: "Maintain clinical independence and refuse discharge if risk cannot be safely managed despite executive pressure.",
+      keywords: ["executive pressure", "bed pressure", "clinical independence", "unsafe discharge", "risk management"],
+    },
+    {
+      id: "s3",
+      name: "False reassurance from denial of intent",
+      category: "risk_others",
+      severity: "important",
+      clueInStem: "document that he denies intent.",
+      whyItMatters: "Denial does not negate contextual and behavioural risk indicators.",
+      modelWording: "Do not rely on denial of intent when recent threats, guardedness and family violence context indicate ongoing risk.",
+      keywords: ["denial of intent", "contextual risk", "guardedness", "violence formulation", "discharge risk"],
+    },
+    {
+      id: "s4",
+      name: "Family violence and victim safety",
+      category: "risk_vulnerable",
+      severity: "important",
+      clueInStem: "active family violence order",
+      whyItMatters: "Victim safety planning and possible information-sharing may be required despite confidentiality concerns.",
+      modelWording: "Consider family violence risk, victim safety planning and lawful information-sharing where serious risk exists.",
+      keywords: ["family violence", "victim safety", "information sharing", "confidentiality", "protective action"],
+    },
+    {
+      id: "s5",
+      name: "Inadequate disposition plan",
+      category: "disposition",
+      severity: "important",
+      clueInStem: "temporary accommodation with crisis follow-up.",
+      whyItMatters: "Crisis follow-up may be inadequate for specific violence risk and active psychosis.",
+      modelWording: "Reject disposition plans that do not address specific violence risk, victim protection and treatment adherence.",
+      keywords: ["temporary accommodation", "crisis follow-up", "discharge planning", "violence risk", "treatment adherence"],
+    },
+    {
+      id: "s6",
+      name: "Defensible documentation under pressure",
+      category: "governance",
+      severity: "optional",
+      clueInStem: "ED is breaching targets",
+      whyItMatters: "Performance targets may later be scrutinised if adverse outcome occurs.",
+      modelWording: "Document clinical reasoning, executive pressure, risk factors, protective actions and rationale for admission/discharge decision.",
+      keywords: ["documentation", "targets", "defensible decision", "governance", "adverse outcome", "clinical reasoning"],
+    },
+  ],
+  priorityOrder: {
+    urgent: ["s1", "s2"],
+    secondary: ["s3", "s4", "s5"],
+    lowYield: ["s6"],
+  },
+  modelAnswer: `Immediate risk:
+
+* Review Tariq and treat the statement as a specific threat to an identifiable person.
+* Reassess psychosis, hostility, access to victim, insight, substance use and capacity for safety planning.
+
+Victim/public safety:
+
+* Consider lawful information-sharing, police/family violence liaison and victim safety planning.
+* Do not allow confidentiality uncertainty to prevent action where serious risk exists.
+
+Disposition:
+
+* Do not discharge solely due to bed pressure.
+* Temporary accommodation/crisis follow-up is inadequate unless it specifically manages violence risk.
+
+Leadership/governance:
+
+* Inform executive that clinical discharge is unsafe at this stage.
+* Escalate bed pressure through appropriate channels without compromising care.
+
+Documentation:
+
+* Record threat, risk formulation, executive pressure, protective actions, legal considerations and discharge rationale.`,
+  },
+  {
+  id: "GOV-004",
+  topic: "governance",
+  difficulty: "consultant",
+  title: "Registrar working beyond competence",
+  candidateRole: "Consultant psychiatrist, training supervisor and unit consultant",
+  setting: "Regional inpatient and emergency psychiatry service",
+  stem: `You are the consultant psychiatrist supervising a Stage 1 registrar in a regional service.
+
+Over two weeks, several nurses report that the registrar has been making independent decisions overnight without calling for help, including discharging a suicidal patient from ED and prescribing rapid tranquillisation without physical observations. The registrar says, “I thought consultants expected us to cope independently.”
+
+Last night a patient required ICU transfer after oversedation. The registrar did not call you until after the transfer and later documented, “Consultant aware,” although you had not been contacted. The NUM says staff have lost confidence and now bypass the registrar.
+
+The director of training asks you to manage the patient safety issue while supporting the registrar’s training.`,
+  totalMarks: 22,
+  signals: [
+    {
+      id: "s1",
+      name: "Patient harm from unsupervised practice",
+      category: "immediate_safety",
+      severity: "critical",
+      clueInStem: "required ICU transfer after oversedation.",
+      whyItMatters: "Actual harm means immediate review of supervision, scope of practice and affected patient care.",
+      modelWording: "Prioritise patient safety by reviewing the adverse event and restricting independent high-risk decisions until competence is assured.",
+      keywords: ["patient harm", "ICU transfer", "oversedation", "scope of practice", "patient safety", "supervision"],
+    },
+    {
+      id: "s2",
+      name: "False documentation",
+      category: "governance",
+      severity: "critical",
+      clueInStem: "Consultant aware",
+      whyItMatters: "Inaccurate documentation is a serious professionalism and medico-legal issue.",
+      modelWording: "Address inaccurate documentation directly as a professionalism and governance concern requiring correction and escalation.",
+      keywords: ["false documentation", "professionalism", "medico-legal", "clinical record", "governance", "integrity"],
+    },
+    {
+      id: "s3",
+      name: "Supervision failure and unclear escalation culture",
+      category: "governance",
+      severity: "important",
+      clueInStem: "I thought consultants expected us to cope independently.",
+      whyItMatters: "Unsafe independence may reflect both trainee judgement and system supervision failures.",
+      modelWording: "Clarify supervision expectations, escalation thresholds and after-hours support responsibilities.",
+      keywords: ["supervision", "escalation thresholds", "Stage 1 registrar", "training", "after-hours", "competence"],
+    },
+    {
+      id: "s4",
+      name: "Medication safety breach",
+      category: "physical_health",
+      severity: "important",
+      clueInStem: "rapid tranquillisation without physical observations.",
+      whyItMatters: "Sedation without monitoring risks respiratory compromise, hypotension and death.",
+      modelWording: "Review rapid tranquillisation practice and ensure mandatory physical monitoring is embedded.",
+      keywords: ["rapid tranquillisation", "physical observations", "sedation safety", "monitoring", "medication safety"],
+    },
+    {
+      id: "s5",
+      name: "Team loss of confidence",
+      category: "mdt_conflict",
+      severity: "important",
+      clueInStem: "staff have lost confidence",
+      whyItMatters: "Bypassing the registrar fragments care and worsens safety unless leadership restores clear roles.",
+      modelWording: "Restore team safety by clarifying roles, escalation pathways and supervised decision-making arrangements.",
+      keywords: ["team confidence", "bypassing", "MDT", "role clarity", "communication", "safety culture"],
+    },
+    {
+      id: "s6",
+      name: "Training support and remediation",
+      category: "ethics",
+      severity: "optional",
+      clueInStem: "supporting the registrar’s training.",
+      whyItMatters: "Patient safety must be balanced with fair remediation rather than punitive abandonment.",
+      modelWording: "Develop a remediation and supervision plan that supports learning while protecting patients.",
+      keywords: ["remediation", "training support", "fairness", "competence", "supervision plan", "education"],
+    },
+  ],
+  priorityOrder: {
+    urgent: ["s1", "s2"],
+    secondary: ["s3", "s4", "s5"],
+    lowYield: ["s6"],
+  },
+  modelAnswer: `Immediate safety:
+
+* Review affected patients, especially ICU transfer case and recent ED discharge.
+* Restrict registrar from independent high-risk decisions until reviewed.
+
+Governance:
+
+* Lodge incident review for oversedation.
+* Address inaccurate “consultant aware” documentation; correct record and escalate as required.
+
+Supervision:
+
+* Meet registrar urgently.
+* Clarify escalation expectations, rapid tranquillisation policy, discharge thresholds and documentation standards.
+* Increase direct supervision and after-hours check-ins.
+
+Training:
+
+* Involve director of training.
+* Develop remediation plan: observed assessments, prescribing review, feedback, competence milestones.
+
+MDT:
+
+* Meet NUM/team to restore safe escalation pathways.
+* Ensure staff know when and how to contact consultant directly.
+
+Documentation:
+
+* Record patient safety actions, supervision plan, registrar discussion and governance escalation.`,
+  },
+  {
+  id: "GOV-005",
+  topic: "governance",
+  difficulty: "consultant",
+  title: "Coronial inquiry and defensible documentation",
+  candidateRole: "Consultant psychiatrist, community mental health team clinical lead",
+  setting: "Community mental health service after patient death",
+  stem: `You are the consultant psychiatrist clinical lead of a community mental health team.
+
+Daniel, a 41-year-old man with recurrent depression and alcohol dependence, died by suicide two days after discharge from crisis team follow-up. The file notes state “denies suicidal ideation, low risk,” but there is no documented formulation. His partner had phoned the team the day before death saying, “He has given away his tools and keeps saying we’ll be better off without him.”
+
+A junior clinician documented the call as “partner anxious” and no senior review occurred. The family has requested records and says, “You ignored our warning.” The service manager tells you a coronial investigation is likely and asks you to review the case.
+
+Staff are distressed and worried about blame. You must lead the immediate response, documentation review and service learning process.`,
+  totalMarks: 22,
+  signals: [
+    {
+      id: "s1",
+      name: "Missed collateral warning signs",
+      category: "collateral",
+      severity: "critical",
+      clueInStem: "He has given away his tools and keeps saying we’ll be better off without him.",
+      whyItMatters: "Preparatory behaviour and burdensomeness statements are high-risk warning signs; missing collateral may be a major systems failure.",
+      modelWording: "Identify the partner’s collateral as significant dynamic suicide risk requiring senior review and safety action.",
+      keywords: ["collateral warning", "preparatory behaviour", "burdensomeness", "suicide risk", "senior review", "family call"],
+    },
+    {
+      id: "s2",
+      name: "Inadequate risk formulation documentation",
+      category: "governance",
+      severity: "critical",
+      clueInStem: "denies suicidal ideation, low risk",
+      whyItMatters: "A denial-based risk label is not defensible without formulation, context and rationale.",
+      modelWording: "Critique reliance on denial of suicidal ideation and absence of documented risk formulation.",
+      keywords: ["risk formulation", "denial of suicidal ideation", "documentation", "defensibility", "coronial inquiry", "low risk"],
+    },
+    {
+      id: "s3",
+      name: "Need for immediate postvention and family response",
+      category: "family_carer",
+      severity: "important",
+      clueInStem: "You ignored our warning.",
+      whyItMatters: "Family communication must be compassionate, transparent and coordinated without speculative defensiveness.",
+      modelWording: "Provide compassionate family contact, acknowledge distress, explain review process and avoid premature conclusions.",
+      keywords: ["postvention", "family communication", "open disclosure", "complaint", "bereavement", "transparency"],
+    },
+    {
+      id: "s4",
+      name: "Senior review escalation failure",
+      category: "governance",
+      severity: "important",
+      clueInStem: "no senior review occurred.",
+      whyItMatters: "Failure to escalate collateral risk indicates possible service process gap.",
+      modelWording: "Review escalation processes for high-risk collateral calls and after-hours clinical decision-making.",
+      keywords: ["senior review", "escalation failure", "service process", "clinical governance", "risk call"],
+    },
+    {
+      id: "s5",
+      name: "Staff distress and blame anxiety",
+      category: "mdt_conflict",
+      severity: "important",
+      clueInStem: "Staff are distressed and worried about blame.",
+      whyItMatters: "A just culture response supports staff while preserving accountability and learning.",
+      modelWording: "Use a just culture approach: support staff, preserve records and focus on systems learning.",
+      keywords: ["just culture", "staff support", "blame", "debrief", "systems learning", "psychological safety"],
+    },
+    {
+      id: "s6",
+      name: "Records request and coronial process",
+      category: "governance",
+      severity: "optional",
+      clueInStem: "a coronial investigation is likely",
+      whyItMatters: "Records must be preserved, factual and managed through appropriate governance/legal channels.",
+      modelWording: "Preserve records and coordinate information release through appropriate legal and governance processes.",
+      keywords: ["coronial investigation", "records request", "preserve records", "legal process", "documentation review"],
+    },
+  ],
+  priorityOrder: {
+    urgent: ["s1", "s2"],
+    secondary: ["s3", "s4", "s5"],
+    lowYield: ["s6"],
+  },
+  modelAnswer: `Immediate response:
+
+* Confirm facts, preserve records and notify governance processes.
+* Support family with compassionate contact and explain review process without speculation.
+
+Clinical review:
+
+* Identify partner’s call as significant missed collateral: giving away tools and burdensomeness statements.
+* Critique “denies SI, low risk” as inadequate without dynamic formulation.
+
+Governance:
+
+* Initiate serious incident review/root cause analysis.
+* Review triage, collateral handling, senior escalation and crisis discharge processes.
+* Prepare for coronial process through formal channels.
+
+Staff:
+
+* Provide debrief and support using just culture.
+* Avoid scapegoating but maintain accountability.
+
+Documentation:
+
+* Record factual timeline, actions taken, family communication, staff support and planned service improvements.`,
+  },
+  {
+  id: "RISK-001",
+  topic: "risk",
+  difficulty: "consultant",
+  title: "Contextual suicide risk despite denial",
+  candidateRole: "Consultant psychiatrist, emergency psychiatry service",
+  setting: "Metropolitan emergency department",
+  stem: `You are the consultant psychiatrist asked to advise an ED registrar about Mr Cole, a 52-year-old separated man brought in by police after sitting in his car outside his former workplace for several hours.
+
+Mr Cole denies suicidal ideation and says, “I’m not stupid enough to say anything that gets me locked up.” He lost his job two weeks ago after an investigation into misconduct. His ex-wife reports he has been drinking heavily, giving away tools and saying, “The kids will be better off without me.” Police found a hose and tape in the boot of his car, which he says were “for gardening.”
+
+The ED is overcrowded, and Mr Cole wants to leave. The registrar says he is calm, denies intent and does not meet criteria for admission. His ex-wife is frightened but says she cannot stay involved because “he blames me for everything.”`,
+  totalMarks: 22,
+  signals: [
+    {
+      id: "s1",
+      name: "Denial unreliable in high-risk context",
+      category: "risk_self",
+      severity: "critical",
+      clueInStem: "I’m not stupid enough to say anything that gets me locked up.",
+      whyItMatters: "This suggests strategic denial and invalidates reliance on self-report alone.",
+      modelWording: "Do not rely on denial of suicidal ideation where the patient implies concealment and collateral indicates high dynamic risk.",
+      keywords: ["suicide denial", "concealment", "dynamic risk", "self-report", "contextual risk", "ED assessment"],
+    },
+    {
+      id: "s2",
+      name: "Preparatory behaviour and means",
+      category: "risk_self",
+      severity: "critical",
+      clueInStem: "Police found a hose and tape in the boot of his car",
+      whyItMatters: "Potential means consistent with suicide method require serious risk formulation.",
+      modelWording: "Treat hose and tape in the car, combined with recent losses and collateral, as possible preparatory behaviour.",
+      keywords: ["preparatory behaviour", "means", "suicide plan", "carbon monoxide", "police collateral", "lethality"],
+    },
+    {
+      id: "s3",
+      name: "Major psychosocial loss",
+      category: "diagnosis_formulation",
+      severity: "important",
+      clueInStem: "lost his job two weeks ago",
+      whyItMatters: "Recent shame, unemployment and separation increase acute suicide risk.",
+      modelWording: "Formulate recent job loss, shame and relationship breakdown as acute precipitants.",
+      keywords: ["job loss", "shame", "separation", "acute stressor", "male suicide", "precipitant"],
+    },
+    {
+      id: "s4",
+      name: "Alcohol increasing impulsivity",
+      category: "substance_use",
+      severity: "important",
+      clueInStem: "drinking heavily",
+      whyItMatters: "Alcohol increases impulsivity, disinhibition and near-term suicide risk.",
+      modelWording: "Assess alcohol intoxication/dependence because it increases impulsivity and undermines safety planning.",
+      keywords: ["alcohol", "impulsivity", "disinhibition", "suicide risk", "intoxication", "withdrawal"],
+    },
+    {
+      id: "s5",
+      name: "Collateral indicates burdensomeness",
+      category: "collateral",
+      severity: "important",
+      clueInStem: "The kids will be better off without me.",
+      whyItMatters: "Perceived burdensomeness is a concerning suicide risk marker.",
+      modelWording: "Give significant weight to ex-wife’s collateral regarding burdensomeness and giving away possessions.",
+      keywords: ["collateral", "burdensomeness", "giving away possessions", "ex-wife", "warning signs"],
+    },
+    {
+      id: "s6",
+      name: "ED pressure and unsafe discharge risk",
+      category: "system_pressure",
+      severity: "optional",
+      clueInStem: "The ED is overcrowded",
+      whyItMatters: "Crowding must not lower threshold for unsafe discharge.",
+      modelWording: "Acknowledge ED pressure but base disposition on risk formulation, not denial or access block.",
+      keywords: ["ED overcrowding", "disposition", "unsafe discharge", "access block", "risk formulation"],
+    },
+  ],
+  priorityOrder: {
+    urgent: ["s1", "s2"],
+    secondary: ["s3", "s4", "s5"],
+    lowYield: ["s6"],
+  },
+  modelAnswer: `Risk formulation:
+
+* Treat this as high contextual suicide risk despite denial.
+* Weight concealment, possible means, job loss, alcohol, burdensomeness and giving away possessions.
+
+Assessment:
+
+* Assess intent, planning, access to means, intoxication, depression, shame, protective factors and capacity to collaborate.
+* Obtain collateral from ex-wife, police, GP and workplace where appropriate.
+
+Immediate safety:
+
+* Prevent premature departure until risk assessment complete.
+* Remove means and consider observation.
+
+Disposition:
+
+* If acute risk remains high or assessment unreliable, consider admission/involuntary assessment depending on jurisdiction.
+* Do not discharge based only on calm presentation or denial.
+
+Documentation:
+
+* Record why denial is unreliable, collateral, means, dynamic risks and rationale for disposition.`,
+  },
+  {
+  id: "RISK-002",
+  topic: "risk",
+  difficulty: "consultant",
+  title: "Domestic violence risk with psychiatric comorbidity",
+  candidateRole: "Consultant psychiatrist, community crisis team",
+  setting: "Crisis assessment at police station and home environment",
+  stem: `You are the consultant psychiatrist supervising a crisis team assessing Victor, a 39-year-old man with PTSD, alcohol dependence and recurrent depression. Police brought him in after his partner called emergency services during an argument.
+
+Victor says, “I only grabbed her phone because she was trying to ruin my life.” His partner reports escalating controlling behaviour, threats to kill himself if she leaves, and yesterday he said, “If I can’t have the kids, no one will.” Victor has access to hunting knives and has recently been sleeping in his car outside the family home.
+
+Victor denies intent to harm anyone and says he just needs diazepam. The junior clinician focuses on suicide risk, but police ask whether he is safe to return home. His partner is in the waiting room with two young children and says she is afraid to go home.`,
+  totalMarks: 22,
+  signals: [
+    {
+      id: "s1",
+      name: "Threat to children and partner",
+      category: "risk_others",
+      severity: "critical",
+      clueInStem: "If I can’t have the kids, no one will.",
+      whyItMatters: "This is a high-risk coercive threat involving vulnerable children and potential familicide dynamics.",
+      modelWording: "Treat threats involving partner and children as serious risk to others requiring immediate safety planning.",
+      keywords: ["domestic violence", "familicide risk", "threats to children", "risk to partner", "coercive control", "violence risk"],
+    },
+    {
+      id: "s2",
+      name: "Victim and child safety",
+      category: "risk_vulnerable",
+      severity: "critical",
+      clueInStem: "she is afraid to go home.",
+      whyItMatters: "Partner and children may need immediate safety planning, refuge, police involvement and child protection consideration.",
+      modelWording: "Prioritise safety of partner and children through police/family violence services and child protection pathways as indicated.",
+      keywords: ["victim safety", "children", "family violence services", "police", "child protection", "safety planning"],
+    },
+    {
+      id: "s3",
+      name: "Coercive control minimised by patient",
+      category: "diagnosis_formulation",
+      severity: "important",
+      clueInStem: "I only grabbed her phone",
+      whyItMatters: "Minimisation is common in domestic violence and should not reduce risk concern.",
+      modelWording: "Recognise minimisation of coercive control and do not rely solely on Victor’s account.",
+      keywords: ["coercive control", "minimisation", "partner collateral", "domestic abuse", "risk formulation"],
+    },
+    {
+      id: "s4",
+      name: "Alcohol and weapon access",
+      category: "substance_use",
+      severity: "important",
+      clueInStem: "access to hunting knives",
+      whyItMatters: "Alcohol dependence plus weapon access increases impulsive serious harm risk.",
+      modelWording: "Assess alcohol use, intoxication and access to weapons as major dynamic violence risk factors.",
+      keywords: ["alcohol dependence", "weapons", "hunting knives", "impulsivity", "violence risk", "disinhibition"],
+    },
+    {
+      id: "s5",
+      name: "Suicide risk linked to coercion",
+      category: "risk_self",
+      severity: "important",
+      clueInStem: "threats to kill himself if she leaves",
+      whyItMatters: "Suicide threats may represent both genuine self-risk and coercive control.",
+      modelWording: "Assess suicide risk while recognising suicidal threats may function as coercive control.",
+      keywords: ["suicide threats", "coercive control", "self-harm", "relationship separation", "risk formulation"],
+    },
+    {
+      id: "s6",
+      name: "Benzodiazepine-seeking in high-risk context",
+      category: "physical_health",
+      severity: "optional",
+      clueInStem: "he just needs diazepam.",
+      whyItMatters: "Diazepam may worsen disinhibition in alcohol dependence and violence risk.",
+      modelWording: "Avoid reflexive benzodiazepine prescribing due to alcohol dependence, disinhibition and safety concerns.",
+      keywords: ["diazepam", "benzodiazepine", "alcohol", "disinhibition", "sedation", "violence"],
+    },
+  ],
+  priorityOrder: {
+    urgent: ["s1", "s2"],
+    secondary: ["s3", "s4", "s5"],
+    lowYield: ["s6"],
+  },
+  modelAnswer: `Immediate safety:
+
+* Prioritise partner and child safety, not only Victor’s mental state.
+* Liaise with police/family violence services and consider child protection notification.
+
+Risk to others:
+
+* Treat threats involving children as serious and specific.
+* Assess access to weapons, alcohol, stalking, separation, prior violence and breach risk.
+
+Self-risk:
+
+* Assess suicide risk but recognise suicide threats may also be coercive control.
+
+Assessment:
+
+* Obtain separate collateral from partner and police.
+* Do not rely on Victor’s minimising account.
+
+Disposition:
+
+* Do not support return home unless safety risks are addressed.
+* Consider involuntary assessment/admission if mental disorder plus risk criteria met.
+
+Treatment:
+
+* Avoid diazepam as simple solution; address alcohol, PTSD/depression and violence risk.`,
+  },
+  {
+  id: "RISK-003",
+  topic: "risk",
+  difficulty: "consultant",
+  title: "Post-discharge suicide review",
+  candidateRole: "Consultant psychiatrist, inpatient unit morbidity and mortality review lead",
+  setting: "Acute inpatient service clinical review meeting",
+  stem: `You are the consultant psychiatrist asked to lead a review after Nina, a 34-year-old woman with bipolar disorder and alcohol misuse, died by suicide three days after discharge from the acute ward.
+
+The discharge summary stated, “Nina denied suicidal ideation and requested discharge.” However, nursing notes from the day before discharge recorded that she was pacing, tearful and said, “My children would be safer without me.” Her partner had phoned the ward saying she had been searching online for “painless ways to die.”
+
+The registrar documented that Nina had capacity and was “future focused” because she wanted to attend a custody hearing. There was no documented family meeting, safety plan or handover to community team. Staff are upset and asking whether anything could have been done differently.`,
+  totalMarks: 22,
+  signals: [
+    {
+      id: "s1",
+      name: "Missed dynamic suicide warning",
+      category: "risk_self",
+      severity: "critical",
+      clueInStem: "My children would be safer without me.",
+      whyItMatters: "Burdensomeness and affective distress shortly before discharge are acute warning signs.",
+      modelWording: "Identify burdensomeness, distress and online suicide searching as dynamic risk factors requiring delayed discharge or enhanced plan.",
+      keywords: ["burdensomeness", "dynamic risk", "suicide warning", "discharge risk", "bipolar disorder", "distress"],
+    },
+    {
+      id: "s2",
+      name: "Collateral not integrated",
+      category: "collateral",
+      severity: "critical",
+      clueInStem: "searching online for “painless ways to die.”",
+      whyItMatters: "Collateral indicated active planning and should have changed risk formulation.",
+      modelWording: "Give partner collateral significant weight and integrate it into risk formulation before discharge.",
+      keywords: ["collateral", "online searching", "suicide planning", "partner call", "risk formulation"],
+    },
+    {
+      id: "s3",
+      name: "Over-reliance on denial",
+      category: "governance",
+      severity: "important",
+      clueInStem: "Nina denied suicidal ideation and requested discharge.",
+      whyItMatters: "Documentation is weak if based on denial without synthesis of contradictory evidence.",
+      modelWording: "Critique reliance on denial of suicidal ideation without reconciling contradictory nursing and family information.",
+      keywords: ["denial", "documentation", "contradictory evidence", "defensible formulation", "suicide review"],
+    },
+    {
+      id: "s4",
+      name: "Custody hearing as stressor, not only future focus",
+      category: "diagnosis_formulation",
+      severity: "important",
+      clueInStem: "wanted to attend a custody hearing.",
+      whyItMatters: "Custody hearing may increase acute risk and should not be simplistically treated as protective.",
+      modelWording: "Formulate custody hearing as both future orientation and acute stressor requiring careful risk planning.",
+      keywords: ["custody hearing", "future focus", "acute stressor", "bipolar disorder", "family court"],
+    },
+    {
+      id: "s5",
+      name: "Failed transition of care",
+      category: "disposition",
+      severity: "important",
+      clueInStem: "no documented family meeting, safety plan or handover",
+      whyItMatters: "Poor discharge handover is a known high-risk transition failure.",
+      modelWording: "Identify discharge planning failure: no family meeting, safety plan or community handover despite dynamic risk.",
+      keywords: ["transition of care", "safety plan", "handover", "family meeting", "post-discharge risk"],
+    },
+    {
+      id: "s6",
+      name: "Learning review not blame",
+      category: "governance",
+      severity: "optional",
+      clueInStem: "asking whether anything could have been done differently.",
+      whyItMatters: "A just culture review supports learning and staff wellbeing while identifying system gaps.",
+      modelWording: "Lead a just culture review focused on risk formulation, discharge process and systems improvement.",
+      keywords: ["just culture", "M&M review", "systems learning", "staff support", "governance"],
+    },
+  ],
+  priorityOrder: {
+    urgent: ["s1", "s2"],
+    secondary: ["s3", "s4", "s5"],
+    lowYield: ["s6"],
+  },
+  modelAnswer: `What went wrong:
+
+* Dynamic risk signs were not integrated: burdensomeness, pacing, tearfulness and online suicide searching.
+* Collateral was not weighted adequately.
+* Denial of suicidal ideation was overvalued.
+
+Discharge failure:
+
+* Custody hearing was treated as protective but may have been an acute stressor.
+* No family meeting, safety plan or community handover was documented.
+
+Governance:
+
+* Lead a just culture review, not blame.
+* Review discharge decision-making, collateral escalation, senior review and documentation standards.
+
+Learning:
+
+* Require risk formulation rather than “low risk/denies SI.”
+* Strengthen transition-of-care processes for high-risk discharge.
+
+Staff/family:
+
+* Support staff distress.
+* Manage family communication through open disclosure/review process.`,
+  },
+  {
+  id: "RISK-004",
+  topic: "risk",
+  difficulty: "consultant",
+  title: "Older woman with self-neglect and capacity concerns",
+  candidateRole: "Consultant psychiatrist, old age community mental health service",
+  setting: "Home visit after GP referral",
+  stem: `You are the old age psychiatrist asked to conduct an urgent home visit for Mrs Singh, a 78-year-old widow referred by her GP for self-neglect.
+
+The house smells strongly of urine, there is spoiled food in the kitchen, and neighbours report she has been leaving the front door open overnight. Mrs Singh says, “I am managing perfectly; everyone should mind their own business.” She has lost weight, missed diabetes appointments and cannot explain her insulin regimen.
+
+Her daughter lives interstate and says, “Mum will never agree to help, but she was always independent.” The GP is worried about cognitive decline and depression, but Mrs Singh refuses blood tests, home care and hospital assessment.`,
+  totalMarks: 22,
+  signals: [
+    {
+      id: "s1",
+      name: "Severe self-neglect",
+      category: "risk_vulnerable",
+      severity: "critical",
+      clueInStem: "spoiled food in the kitchen",
+      whyItMatters: "Environmental neglect, malnutrition and unsafe home conditions create serious vulnerability.",
+      modelWording: "Recognise severe self-neglect with environmental hazards, poor nutrition and impaired capacity for self-care.",
+      keywords: ["self-neglect", "environmental risk", "spoiled food", "vulnerability", "home safety", "malnutrition"],
+    },
+    {
+      id: "s2",
+      name: "Capacity to refuse care questionable",
+      category: "capacity",
+      severity: "critical",
+      clueInStem: "cannot explain her insulin regimen.",
+      whyItMatters: "Inability to understand essential diabetes treatment may indicate impaired capacity for refusing medical and support care.",
+      modelWording: "Assess decision-specific capacity to refuse medical assessment and home supports, including understanding of diabetes risk.",
+      keywords: ["capacity", "refusal of care", "diabetes", "insulin", "decision-specific", "self-care"],
+    },
+    {
+      id: "s3",
+      name: "Physical health risk",
+      category: "physical_health",
+      severity: "important",
+      clueInStem: "missed diabetes appointments",
+      whyItMatters: "Unmanaged diabetes, weight loss and poor hygiene may require urgent medical assessment.",
+      modelWording: "Assess urgent physical health risks including diabetes complications, dehydration, infection and malnutrition.",
+      keywords: ["diabetes", "weight loss", "infection", "dehydration", "medical assessment", "frailty"],
+    },
+    {
+      id: "s4",
+      name: "Possible dementia or depression",
+      category: "diagnosis_formulation",
+      severity: "important",
+      clueInStem: "cognitive decline and depression",
+      whyItMatters: "Underlying reversible or treatable conditions may drive self-neglect and refusal.",
+      modelWording: "Assess for dementia, depression, delirium and grief contributing to self-neglect and poor insight.",
+      keywords: ["dementia", "depression", "delirium", "grief", "poor insight", "self-neglect"],
+    },
+    {
+      id: "s5",
+      name: "Refusal of support and need for least restrictive plan",
+      category: "consent_refusal",
+      severity: "important",
+      clueInStem: "refuses blood tests, home care and hospital assessment.",
+      whyItMatters: "A consultant must balance autonomy with serious foreseeable harm and consider legal pathways if capacity absent.",
+      modelWording: "Use least restrictive engagement first but consider guardianship/emergency assessment if incapacity and serious risk are present.",
+      keywords: ["refusal", "home care", "least restrictive", "guardianship", "hospital assessment", "autonomy"],
+    },
+    {
+      id: "s6",
+      name: "Remote family collateral",
+      category: "family_carer",
+      severity: "optional",
+      clueInStem: "she was always independent.",
+      whyItMatters: "Longstanding independence may obscure recent decline; collateral helps establish change from baseline.",
+      modelWording: "Obtain collateral to distinguish lifelong independence from new functional decline and risk.",
+      keywords: ["collateral", "daughter", "baseline functioning", "functional decline", "independence"],
+    },
+  ],
+  priorityOrder: {
+    urgent: ["s1", "s2"],
+    secondary: ["s3", "s4", "s5"],
+    lowYield: ["s6"],
+  },
+  modelAnswer: `Risk/physical health:
+
+* Recognise severe self-neglect: unsafe environment, spoiled food, urine smell, missed appointments and weight loss.
+* Assess urgent medical risks: diabetes complications, infection, dehydration, malnutrition.
+
+Capacity:
+
+* Assess decision-specific capacity to refuse blood tests, home care and hospital assessment.
+* Focus on understanding and appreciation of diabetes/self-neglect consequences.
+
+Formulation:
+
+* Assess dementia, depression, delirium, grief and social isolation.
+
+Management:
+
+* Engage respectfully and use least restrictive supports first.
+* Involve GP, daughter, aged care assessment, social work and community nursing.
+* If incapacity plus serious risk, consider emergency assessment/guardianship pathways.
+
+Documentation:
+
+* Record home conditions, capacity findings, risks, refusals, collateral and legal rationale.`,
+  },
+  {
+  id: "RISK-005",
+  topic: "risk",
+  difficulty: "consultant",
+  title: "First episode psychosis and violence risk",
+  candidateRole: "Consultant psychiatrist, early psychosis service",
+  setting: "Emergency department and early psychosis intake",
+  stem: `You are the consultant psychiatrist supervising an early psychosis assessment.
+
+Jayden is a 19-year-old man brought to ED by police after neighbours reported him shouting on the street with a baseball bat. He says, “The people upstairs are sending signals into my room.” His mother reports three months of social withdrawal, cannabis use, poor sleep and increasing suspicion.
+
+Jayden denies wanting to hurt anyone but says, “If they come through the ceiling, I’ll protect myself.” Police report he swung the bat at a neighbour’s door but did not strike anyone. His mother is frightened and says, “He has never been like this before, but I can’t take him home tonight.”
+
+The registrar asks whether this is simply cannabis intoxication and whether Jayden can be discharged with early psychosis follow-up.`,
+  totalMarks: 22,
+  signals: [
+    {
+      id: "s1",
+      name: "Psychosis-linked defensive violence risk",
+      category: "risk_others",
+      severity: "critical",
+      clueInStem: "If they come through the ceiling, I’ll protect myself.",
+      whyItMatters: "Persecutory beliefs can create defensive aggression even when the patient denies intent.",
+      modelWording: "Formulate violence risk as linked to persecutory delusions and perceived need for self-defence.",
+      keywords: ["persecutory delusions", "defensive violence", "risk to others", "first episode psychosis", "threat perception"],
+    },
+    {
+      id: "s2",
+      name: "Weapon use and recent violence behaviour",
+      category: "immediate_safety",
+      severity: "critical",
+      clueInStem: "baseball bat",
+      whyItMatters: "Weapon access and bat-related behaviour require immediate safety planning and containment.",
+      modelWording: "Treat recent weapon use as a major dynamic risk factor requiring safe containment and means removal.",
+      keywords: ["weapon access", "baseball bat", "violence risk", "means removal", "containment", "police"],
+    },
+    {
+      id: "s3",
+      name: "First episode psychosis formulation",
+      category: "diagnosis_formulation",
+      severity: "important",
+      clueInStem: "three months of social withdrawal",
+      whyItMatters: "Gradual functional decline suggests emerging psychotic disorder, not merely intoxication.",
+      modelWording: "Assess first episode psychosis versus substance-induced psychosis, noting three-month functional decline.",
+      keywords: ["first episode psychosis", "functional decline", "social withdrawal", "differential diagnosis", "early psychosis"],
+    },
+    {
+      id: "s4",
+      name: "Cannabis as risk modifier",
+      category: "substance_use",
+      severity: "important",
+      clueInStem: "cannabis use",
+      whyItMatters: "Cannabis may precipitate or worsen psychosis and violence risk through paranoia.",
+      modelWording: "Assess cannabis use as a contributor to psychosis, disinhibition and relapse/violence risk.",
+      keywords: ["cannabis", "substance-induced psychosis", "paranoia", "disinhibition", "risk modifier"],
+    },
+    {
+      id: "s5",
+      name: "Family cannot safely supervise",
+      category: "family_carer",
+      severity: "important",
+      clueInStem: "I can’t take him home tonight.",
+      whyItMatters: "Discharge relying on family supervision is unsafe when carers are frightened and unable to manage risk.",
+      modelWording: "Do not discharge to mother if she is frightened and unable to provide safe supervision.",
+      keywords: ["family supervision", "carer fear", "unsafe discharge", "home risk", "support capacity"],
+    },
+    {
+      id: "s6",
+      name: "Inadequate outpatient-only plan",
+      category: "disposition",
+      severity: "optional",
+      clueInStem: "discharged with early psychosis follow-up.",
+      whyItMatters: "Follow-up alone may be insufficient after weapon-related behaviour and active persecutory psychosis.",
+      modelWording: "Consider admission or intensive crisis containment rather than routine outpatient follow-up given active psychosis and weapon-related risk.",
+      keywords: ["early psychosis follow-up", "admission", "crisis containment", "outpatient plan", "active psychosis"],
+    },
+  ],
+  priorityOrder: {
+    urgent: ["s1", "s2"],
+    secondary: ["s3", "s4", "s5"],
+    lowYield: ["s6"],
+  },
+  modelAnswer: `Immediate safety:
+
+* Treat weapon-related behaviour and persecutory beliefs as significant acute risk.
+* Ensure means removal, police collateral and safe ED containment.
+
+Risk formulation:
+
+* Violence risk is defensive and psychosis-driven despite denial of intent.
+* Assess access to weapons, target identification, substance use, sleep deprivation and command hallucinations.
+
+Diagnosis:
+
+* Assess first episode psychosis versus cannabis-induced psychosis.
+* Three-month decline suggests emerging psychotic disorder.
+
+Family/disposition:
+
+* Mother cannot safely supervise tonight.
+* Routine discharge with follow-up is insufficient if active psychosis and weapon-related risk persist.
+* Consider admission/involuntary assessment if criteria met.
+
+Treatment:
+
+* Engage youth-friendly approach, involve family, commence early psychosis pathway and address cannabis use.`,
+  }
+  ]
