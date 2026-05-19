@@ -19,7 +19,7 @@ import {
 import {
   ArrowLeft, Play, Square, RotateCcw, Send, CheckCircle2,
   XCircle, AlertTriangle, ChevronDown, ChevronUp, Clock,
-  RotateCw, ListChecks, ArrowRight, BookMarked,
+  RotateCw, ListChecks, ArrowRight, BookMarked, Loader2, Sparkles,
 } from "lucide-react";
 
 type Phase = "setup" | "quiz" | "results";
@@ -510,12 +510,13 @@ function PSMarkingPanel({ result }: { result: import("@/lib/quizEngine").QuizRes
 
 // ─── Results screen ───────────────────────────────────────────────────────────
 function ResultsScreen({
-  stem, result, topic, progress,
+  stem, result, candidateAnswer, topic, progress,
   onNextRandom, onNextQuestion, onRepeatStem, onChangeTopic, onBackToModes,
   courseCompletion,
 }: {
   stem: QuizStem;
   result: QuizResult;
+  candidateAnswer: string;
   topic: TopicKey;
   progress: { attempted: number; available: number };
   onNextRandom: () => void;
@@ -526,6 +527,35 @@ function ResultsScreen({
   courseCompletion: QuizModuleCompletion;
 }) {
   const [showModel, setShowModel] = useState(false);
+  const [aiFeedback, setAiFeedback] = useState<string | null>(null);
+  const [aiFeedbackLoading, setAiFeedbackLoading] = useState(false);
+  const [aiFeedbackError, setAiFeedbackError] = useState(false);
+
+  const handleGetAiFeedback = useCallback(async () => {
+    setAiFeedbackLoading(true);
+    setAiFeedbackError(false);
+    try {
+      const missedSignals = result.matches
+        .filter((m) => !m.identified)
+        .map((m) => m.signal.name);
+      const response = await fetch("/api/ai-feedback", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          stem: stem.stem,
+          candidateAnswer,
+          missedSignals,
+        }),
+      });
+      if (!response.ok) throw new Error("Request failed");
+      const data = await response.json() as { feedback?: string };
+      setAiFeedback(data.feedback ?? "AI feedback unavailable");
+    } catch {
+      setAiFeedbackError(true);
+    } finally {
+      setAiFeedbackLoading(false);
+    }
+  }, [stem.stem, result.matches, candidateAnswer]);
 
   const identified = result.matches.filter((m) => m.identified);
   const missed = result.matches.filter((m) => !m.identified);
@@ -714,6 +744,49 @@ function ResultsScreen({
         </div>
       </div>
 
+      {/* ── E) AI EXAMINER FEEDBACK ─────────────────────────────────────────── */}
+      <div className="bg-white rounded-2xl border border-card-border shadow-sm p-6 space-y-4">
+        <div className="flex items-center gap-2">
+          <Sparkles className="w-4 h-4 text-accent" />
+          <h3 className="font-serif font-bold text-primary">AI Examiner Feedback</h3>
+        </div>
+
+        {!aiFeedback && !aiFeedbackError && (
+          <div className="flex flex-col items-start gap-3">
+            <p className="text-xs text-muted-foreground">
+              Get personalised examiner-level feedback on your answer from Claude AI — specific to what you missed and why it matters clinically.
+            </p>
+            <button
+              onClick={handleGetAiFeedback}
+              disabled={aiFeedbackLoading}
+              className="inline-flex items-center gap-2 bg-primary text-white text-sm font-semibold px-4 py-2 rounded-lg hover:bg-primary/90 disabled:opacity-60 disabled:cursor-not-allowed transition-colors"
+            >
+              {aiFeedbackLoading ? (
+                <>
+                  <Loader2 className="w-4 h-4 animate-spin" />
+                  Generating feedback…
+                </>
+              ) : (
+                <>
+                  <Sparkles className="w-4 h-4" />
+                  Get AI Feedback
+                </>
+              )}
+            </button>
+          </div>
+        )}
+
+        {aiFeedbackError && (
+          <p className="text-sm text-muted-foreground italic">AI feedback unavailable — please try again.</p>
+        )}
+
+        {aiFeedback && (
+          <div className="bg-primary/4 border border-primary/15 rounded-xl px-5 py-4">
+            <p className="text-sm text-primary leading-relaxed whitespace-pre-line">{aiFeedback}</p>
+          </div>
+        )}
+      </div>
+
       {/* Course progress */}
       <div className="bg-white rounded-2xl border border-card-border shadow-sm p-5 space-y-3">
         <div className="flex items-center justify-between">
@@ -802,6 +875,7 @@ export default function QuizMode() {
   const [currentTopic, setCurrentTopic] = useState<TopicKey>("random");
   const [currentTimeSecs, setCurrentTimeSecs] = useState(180);
   const [result, setResult] = useState<QuizResult | null>(null);
+  const [lastCandidateAnswer, setLastCandidateAnswer] = useState("");
   const [sessionProgress, setSessionProgress] = useState({ attempted: 0, available: 0 });
   const [stemAlreadyAttempted, setStemAlreadyAttempted] = useState(false);
 
@@ -824,6 +898,7 @@ export default function QuizMode() {
     if (!currentStem) return;
     const r = assessAnswer(currentStem, answer, timeUsed);
     setResult(r);
+    setLastCandidateAnswer(answer);
     const attempt = createAttempt(fullName, candidateNumber, currentStem, answer, r);
     saveAttempt(attempt);
     refreshProgress(currentTopic);
@@ -897,6 +972,7 @@ export default function QuizMode() {
         <ResultsScreen
           stem={currentStem}
           result={result}
+          candidateAnswer={lastCandidateAnswer}
           topic={currentTopic}
           progress={sessionProgress}
           onNextRandom={handleNextRandom}
