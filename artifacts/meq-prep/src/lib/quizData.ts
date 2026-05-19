@@ -123,6 +123,7 @@ import { OA_STEMS } from "./questions/oldAgeQuestions";
 import { RU_STEMS } from "./questions/ruralQuestions";
 import { ETH_STEMS } from "./questions/ethicsQuestions";
 import { CL_STEMS } from "./questions/clPsychiatryQuestions";
+import { FINAL_ELITE_MEQ_BANK } from "./questions/finalEliteMEQBank";
 
 // ─── STEMS ───────────────────────────────────────────────────────────────────
 
@@ -3245,6 +3246,7 @@ export const QUIZ_STEMS: QuizStem[] = [
   ...RU_STEMS,
   ...ETH_STEMS,
   ...CL_STEMS,
+  ...FINAL_ELITE_MEQ_BANK,
 ];
 
 // Filter by topic

@@ -1,0 +1,15311 @@
+import type { QuizStem } from "../quizData";
+
+/**
+ * FINAL_ELITE_MEQ_BANK
+ * 110 consultant-level RANZCP MEQ call cases.
+ *
+ * Design standard:
+ * - live consultant decision under pressure
+ * - tempting unsafe shortcut
+ * - legal/policy hinge
+ * - vulnerable third party
+ * - cultural/family/system tension
+ * - defensible disposition and documentation
+ *
+ * Do not clinically rewrite this file inside Replit Agent.
+ */
+
+export const FINAL_ELITE_MEQ_BANK: QuizStem[] = [
+  {
+    "id": "FINAL-001",
+    "topic": "risk",
+    "difficulty": "consultant",
+    "title": "Denied suicidality with concealed lethal preparation",
+    "candidateRole": "consultant psychiatrist on call to a metropolitan ED",
+    "setting": "The ED is overcrowded and the registrar is asking for phone advice at 1:20 am",
+    "stem": "You are the consultant psychiatrist on call to a metropolitan ED. The ED is overcrowded and the registrar is asking for phone advice at 1:20 am.\n\nMr Cole, a 52-year-old separated man, was brought by police after sitting for hours in his car outside his former workplace with a hose and tape in the boot. Mr Cole says, \"I am not stupid enough to say anything that gets me locked up.\" \n\nThe ED consultant says, \"He denies suicidal intent and we need the cubicle.\" The registrar asks, \"Can I discharge if he contracts for safety?\" His ex-wife says, \"The kids will be better off without me.\" He is from a rural farming community and says everyone will know if he is admitted.\n\nPolice says, \"We cannot stay here all night.\" You must decide whether he can leave ED tonight or requires involuntary/voluntary containment.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "denial-based discharge — unsafe shortcut under pressure",
+        "category": "risk_self",
+        "severity": "critical",
+        "clueInStem": "He denies suicidal intent and we need the cubicle.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass concealed high-context suicide risk despite denial, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'He denies suicidal intent and we need the cubicle.' without first formulating concealed high-context suicide risk despite denial, immediate safety and a defensible disposition.",
+        "keywords": [
+          "denial-based discharge",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "concealed high-context suicide risk despite denial — core clinical formulation",
+        "category": "risk_self",
+        "severity": "critical",
+        "clueInStem": "I am not stupid enough to say anything that gets me locked up.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around concealed high-context suicide risk despite denial, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "concealed high-context suicide risk despite denial",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "capacity and safe discharge after self-harm risk — legal/policy hinge",
+        "category": "mental_health_act",
+        "severity": "critical",
+        "clueInStem": "Can I discharge if he contracts for safety?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "capacity and safe discharge after self-harm risk",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "children and ex-partner affected by suicide and blame — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "The kids will be better off without me.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect children and ex-partner affected by suicide and blame, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "children and ex-partner affected by suicide and blame",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "collateral",
+        "severity": "important",
+        "clueInStem": "We cannot stay here all night.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether he can leave ED tonight or requires involuntary/voluntary containment",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'He denies suicidal intent and we need the cubicle.' without first addressing immediate safety, concealed high-context suicide risk despite denial, and legal authority.\n- Identify the live decision: whether he can leave ED tonight or requires involuntary/voluntary containment.\n\nClinical formulation:\n- Formulate the case around concealed high-context suicide risk despite denial rather than a generic diagnostic list.\n- Link the patient's statement 'I am not stupid enough to say anything that gets me locked up.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address capacity and safe discharge after self-harm risk using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect children and ex-partner affected by suicide and blame; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-002",
+    "topic": "capacity_mha",
+    "difficulty": "consultant",
+    "title": "Psychotic refusal of dialysis with immediate medical risk",
+    "candidateRole": "CL consultant psychiatrist in a tertiary hospital",
+    "setting": "Renal ward calls at 6 pm with a time-critical treatment refusal",
+    "stem": "You are the CL consultant psychiatrist in a tertiary hospital. Renal ward calls at 6 pm with a time-critical treatment refusal.\n\nRaj, a 43-year-old man with schizoaffective disorder and renal failure, has missed three dialysis sessions and is hyperkalaemic but is trying to leave the ward. Raj says, \"The machine is poisoning my blood because immigration put trackers in it.\" \n\nThe renal consultant says, \"He could arrest tonight, just sedate him.\" The ward team asks, \"Does the Mental Health Act let us dialyse him?\" His sister says, \"He stopped medication because he thought we were poisoning him.\" His family are recent migrants and fear hospital bills and immigration consequences.\n\nThe bed manager says, \"We cannot keep security here all evening.\" You must decide whether to treat against objection, under what legal basis, and with what safeguards.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "sedation to force treatment — unsafe shortcut under pressure",
+        "category": "physical_health",
+        "severity": "critical",
+        "clueInStem": "He could arrest tonight, just sedate him.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass psychosis-driven refusal of life-saving dialysis, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'He could arrest tonight, just sedate him.' without first formulating psychosis-driven refusal of life-saving dialysis, immediate safety and a defensible disposition.",
+        "keywords": [
+          "sedation to force treatment",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "psychosis-driven refusal of life-saving dialysis — core clinical formulation",
+        "category": "capacity",
+        "severity": "critical",
+        "clueInStem": "The machine is poisoning my blood because immigration put trackers in it.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around psychosis-driven refusal of life-saving dialysis, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "psychosis-driven refusal of life-saving dialysis",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "emergency treatment authority versus MHA — legal/policy hinge",
+        "category": "mental_health_act",
+        "severity": "critical",
+        "clueInStem": "Does the Mental Health Act let us dialyse him?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "emergency treatment authority versus MHA",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "family collateral about relapse and treatment refusal — vulnerable person safety",
+        "category": "collateral",
+        "severity": "important",
+        "clueInStem": "He stopped medication because he thought we were poisoning him.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect family collateral about relapse and treatment refusal, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "family collateral about relapse and treatment refusal",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "We cannot keep security here all evening.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to treat against objection, under what legal basis, and with what safegu",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'He could arrest tonight, just sedate him.' without first addressing immediate safety, psychosis-driven refusal of life-saving dialysis, and legal authority.\n- Identify the live decision: whether to treat against objection, under what legal basis, and with what safeguards.\n\nClinical formulation:\n- Formulate the case around psychosis-driven refusal of life-saving dialysis rather than a generic diagnostic list.\n- Link the patient's statement 'The machine is poisoning my blood because immigration put trackers in it.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address emergency treatment authority versus MHA using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect family collateral about relapse and treatment refusal; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-003",
+    "topic": "risk",
+    "difficulty": "consultant",
+    "title": "Domestic violence perpetrator with suicidal coercion",
+    "candidateRole": "consultant psychiatrist supervising a crisis team",
+    "setting": "Police station telehealth review late Friday evening",
+    "stem": "You are the consultant psychiatrist supervising a crisis team. Police station telehealth review late Friday evening.\n\nVictor, a 39-year-old man with PTSD and alcohol dependence, was detained after his partner called police during a violent argument. Victor says, \"If I cannot have the kids, no one will.\" \n\nPolice says, \"He is calm now and wants to go home.\" The crisis clinician asks, \"Is this just relationship conflict rather than MHA?\" His partner says, \"I am afraid to go home with the children.\" The family belong to a small faith community where separation is heavily stigmatised.\n\nVictor says, \"I only threatened myself so she would listen.\" You must decide whether to support return home, arrange police/family violence protection, or pursue mental health assessment.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "calm presentation discharge shortcut — unsafe shortcut under pressure",
+        "category": "risk_others",
+        "severity": "critical",
+        "clueInStem": "He is calm now and wants to go home.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass coercive family violence with risk to others, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'He is calm now and wants to go home.' without first formulating coercive family violence with risk to others, immediate safety and a defensible disposition.",
+        "keywords": [
+          "calm presentation discharge shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "coercive family violence with risk to others — core clinical formulation",
+        "category": "risk_others",
+        "severity": "critical",
+        "clueInStem": "If I cannot have the kids, no one will.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around coercive family violence with risk to others, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "coercive family violence with risk to others",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "MHA threshold and family violence safety — legal/policy hinge",
+        "category": "mental_health_act",
+        "severity": "critical",
+        "clueInStem": "Is this just relationship conflict rather than MHA?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "MHA threshold and family violence safety",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "partner and children at imminent risk — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "I am afraid to go home with the children.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect partner and children at imminent risk, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "partner and children at imminent risk",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "family_carer",
+        "severity": "important",
+        "clueInStem": "I only threatened myself so she would listen.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to support return home, arrange police/family violence protection, or pu",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'He is calm now and wants to go home.' without first addressing immediate safety, coercive family violence with risk to others, and legal authority.\n- Identify the live decision: whether to support return home, arrange police/family violence protection, or pursue mental health assessment.\n\nClinical formulation:\n- Formulate the case around coercive family violence with risk to others rather than a generic diagnostic list.\n- Link the patient's statement 'If I cannot have the kids, no one will.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address MHA threshold and family violence safety using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect partner and children at imminent risk; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-004",
+    "topic": "capacity_mha",
+    "difficulty": "consultant",
+    "title": "Adolescent overdose, articulate refusal and boarding-school pressure",
+    "candidateRole": "consultant child and adolescent psychiatrist on call",
+    "setting": "Regional ED with no CAMHS bed available",
+    "stem": "You are the consultant child and adolescent psychiatrist on call. Regional ED with no CAMHS bed available.\n\nLeila, a 16-year-old boarding-school student, took an uncertain quantity of paracetamol and fluoxetine and now refuses NAC and admission. Leila says, \"I understand my liver could fail, but that is my choice.\" \n\nThe ED doctor says, \"She is articulate, so she can refuse.\" The registrar asks, \"Can we use the Act if she is Gillick competent?\" Her aunt says, \"She is dramatic but clever; discharge her if she promises.\" Leila is an international student and fears her parents overseas will be told.\n\nThe school deputy says, \"We cannot keep a staff member here overnight.\" You must decide whether to continue treatment and admission despite refusal and uncertain overdose risk.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "articulate-capacity shortcut — unsafe shortcut under pressure",
+        "category": "capacity",
+        "severity": "critical",
+        "clueInStem": "She is articulate, so she can refuse.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass adolescent suicidal refusal with apparent understanding, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'She is articulate, so she can refuse.' without first formulating adolescent suicidal refusal with apparent understanding, immediate safety and a defensible disposition.",
+        "keywords": [
+          "articulate-capacity shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "adolescent suicidal refusal with apparent understanding — core clinical formulation",
+        "category": "risk_self",
+        "severity": "critical",
+        "clueInStem": "I understand my liver could fail, but that is my choice.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around adolescent suicidal refusal with apparent understanding, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "adolescent suicidal refusal with apparent understanding",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "minor consent, capacity and MHA — legal/policy hinge",
+        "category": "consent_refusal",
+        "severity": "critical",
+        "clueInStem": "Can we use the Act if she is Gillick competent?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "minor consent, capacity and MHA",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "unsafe minimising carer and lack of supervision — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "She is dramatic but clever; discharge her if she promises.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect unsafe minimising carer and lack of supervision, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "unsafe minimising carer and lack of supervision",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "collateral",
+        "severity": "important",
+        "clueInStem": "We cannot keep a staff member here overnight.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to continue treatment and admission despite refusal and uncertain overdo",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'She is articulate, so she can refuse.' without first addressing immediate safety, adolescent suicidal refusal with apparent understanding, and legal authority.\n- Identify the live decision: whether to continue treatment and admission despite refusal and uncertain overdose risk.\n\nClinical formulation:\n- Formulate the case around adolescent suicidal refusal with apparent understanding rather than a generic diagnostic list.\n- Link the patient's statement 'I understand my liver could fail, but that is my choice.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address minor consent, capacity and MHA using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect unsafe minimising carer and lack of supervision; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-005",
+    "topic": "risk",
+    "difficulty": "consultant",
+    "title": "First episode psychosis with weapon and family unable to supervise",
+    "candidateRole": "consultant psychiatrist for early psychosis intake",
+    "setting": "Busy ED with police requesting disposition",
+    "stem": "You are the consultant psychiatrist for early psychosis intake. Busy ED with police requesting disposition.\n\nJayden, a 19-year-old man, was brought after swinging a baseball bat at a neighbour's door while shouting about cameras in smoke alarms. Jayden says, \"If they come through the ceiling, I will protect myself.\" \n\nThe ED registrar says, \"He denies wanting to hurt anyone, so early psychosis can see him tomorrow.\" Police asks, \"Do you want us to leave or keep him under guard?\" His mother says, \"I cannot take him home tonight.\" His family are ashamed and say mental illness is not discussed in their community.\n\nThe ED flow coordinator says, \"There are no mental health beds and he is only nineteen.\" You must decide whether admission, involuntary assessment, or intensive crisis containment is required.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "denial-based outpatient shortcut — unsafe shortcut under pressure",
+        "category": "risk_others",
+        "severity": "critical",
+        "clueInStem": "He denies wanting to hurt anyone, so early psychosis can see him tomorrow.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass persecutory psychosis causing defensive violence risk, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'He denies wanting to hurt anyone, so early psychosis can see him tomorrow.' without first formulating persecutory psychosis causing defensive violence risk, immediate safety and a defensible disposition.",
+        "keywords": [
+          "denial-based outpatient shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "persecutory psychosis causing defensive violence risk — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "If they come through the ceiling, I will protect myself.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around persecutory psychosis causing defensive violence risk, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "persecutory psychosis causing defensive violence risk",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "MHA assessment and police involvement — legal/policy hinge",
+        "category": "mental_health_act",
+        "severity": "critical",
+        "clueInStem": "Do you want us to leave or keep him under guard?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "MHA assessment and police involvement",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "family cannot supervise weapon-related risk — vulnerable person safety",
+        "category": "family_carer",
+        "severity": "important",
+        "clueInStem": "I cannot take him home tonight.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect family cannot supervise weapon-related risk, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "family cannot supervise weapon-related risk",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "There are no mental health beds and he is only nineteen.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether admission, involuntary assessment, or intensive crisis containment is re",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'He denies wanting to hurt anyone, so early psychosis can see him tomorrow.' without first addressing immediate safety, persecutory psychosis causing defensive violence risk, and legal authority.\n- Identify the live decision: whether admission, involuntary assessment, or intensive crisis containment is required.\n\nClinical formulation:\n- Formulate the case around persecutory psychosis causing defensive violence risk rather than a generic diagnostic list.\n- Link the patient's statement 'If they come through the ceiling, I will protect myself.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address MHA assessment and police involvement using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect family cannot supervise weapon-related risk; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-006",
+    "topic": "capacity_mha",
+    "difficulty": "consultant",
+    "title": "Mania in pregnancy refusing fetal monitoring and admission",
+    "candidateRole": "consultant perinatal psychiatrist covering ED",
+    "setting": "Metropolitan ED at 2 am with obstetrics, police and psychiatry present",
+    "stem": "You are the consultant perinatal psychiatrist covering ED. Metropolitan ED at 2 am with obstetrics, police and psychiatry present.\n\nMaya, a 34-year-old Aboriginal woman at 32 weeks gestation, was brought by police after burning baby clothes and refusing fetal monitoring. Maya says, \"The baby is chosen and hospital machines will steal its spirit.\" \n\nThe ED consultant says, \"She is calmer now; can we discharge with her mother?\" Obstetrics asks, \"Can we monitor the fetus against her wishes?\" Her 8-year-old son says, \"He was crying in the house when police arrived.\" She says child protection stole her sister's children and refuses to speak with non-Aboriginal staff.\n\nHer mother says, \"You are punishing her for being Aboriginal.\" You must decide whether to involuntarily admit, how to manage fetal assessment, and how to protect children.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "calm-now discharge shortcut — unsafe shortcut under pressure",
+        "category": "risk_vulnerable",
+        "severity": "critical",
+        "clueInStem": "She is calmer now; can we discharge with her mother?",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass manic psychosis impairing maternal-fetal decisions, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'She is calmer now; can we discharge with her mother?' without first formulating manic psychosis impairing maternal-fetal decisions, immediate safety and a defensible disposition.",
+        "keywords": [
+          "calm-now discharge shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "manic psychosis impairing maternal-fetal decisions — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "The baby is chosen and hospital machines will steal its spirit.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around manic psychosis impairing maternal-fetal decisions, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "manic psychosis impairing maternal-fetal decisions",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "maternal capacity and emergency obstetric care — legal/policy hinge",
+        "category": "capacity",
+        "severity": "critical",
+        "clueInStem": "Can we monitor the fetus against her wishes?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "maternal capacity and emergency obstetric care",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "existing child and unborn baby safety — vulnerable person safety",
+        "category": "child_protection",
+        "severity": "important",
+        "clueInStem": "He was crying in the house when police arrived.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect existing child and unborn baby safety, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "existing child and unborn baby safety",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "You are punishing her for being Aboriginal.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to involuntarily admit, how to manage fetal assessment, and how to prote",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'She is calmer now; can we discharge with her mother?' without first addressing immediate safety, manic psychosis impairing maternal-fetal decisions, and legal authority.\n- Identify the live decision: whether to involuntarily admit, how to manage fetal assessment, and how to protect children.\n\nClinical formulation:\n- Formulate the case around manic psychosis impairing maternal-fetal decisions rather than a generic diagnostic list.\n- Link the patient's statement 'The baby is chosen and hospital machines will steal its spirit.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address maternal capacity and emergency obstetric care using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect existing child and unborn baby safety; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-007",
+    "topic": "risk",
+    "difficulty": "consultant",
+    "title": "Personality disorder label after venlafaxine overdose and bed pressure",
+    "candidateRole": "consultant psychiatrist on call to ED",
+    "setting": "Metropolitan ED after eight-hour access block",
+    "stem": "You are the consultant psychiatrist on call to ED. Metropolitan ED after eight-hour access block.\n\nTyra, a 33-year-old woman, presented after taking twenty venlafaxine tablets and now says she wants to leave. Tyra says, \"If I stay here I will just get worse.\" \n\nThe ED physician says, \"She has done this before and I need the bed.\" The registrar asks, \"Can I document personality disorder and discharge?\" Her sister says, \"I am terrified and cannot take her home.\" Tyra is a transgender woman who says ED staff repeatedly use the wrong name.\n\nNursing staff says, \"She refuses every plan we offer.\" You must decide whether to discharge, admit briefly, or create a crisis alternative that is safe and non-rejecting.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "habituation and bed-pressure shortcut — unsafe shortcut under pressure",
+        "category": "risk_self",
+        "severity": "critical",
+        "clueInStem": "She has done this before and I need the bed.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass acute-on-chronic self-harm risk with invalidating care, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'She has done this before and I need the bed.' without first formulating acute-on-chronic self-harm risk with invalidating care, immediate safety and a defensible disposition.",
+        "keywords": [
+          "habituation and bed-pressure shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "acute-on-chronic self-harm risk with invalidating care — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "If I stay here I will just get worse.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around acute-on-chronic self-harm risk with invalidating care, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "acute-on-chronic self-harm risk with invalidating care",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "disposition and diagnostic stigma — legal/policy hinge",
+        "category": "disposition",
+        "severity": "critical",
+        "clueInStem": "Can I document personality disorder and discharge?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "disposition and diagnostic stigma",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "carer unable to supervise discharge — vulnerable person safety",
+        "category": "family_carer",
+        "severity": "important",
+        "clueInStem": "I am terrified and cannot take her home.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect carer unable to supervise discharge, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "carer unable to supervise discharge",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "She refuses every plan we offer.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to discharge, admit briefly, or create a crisis alternative that is safe",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'She has done this before and I need the bed.' without first addressing immediate safety, acute-on-chronic self-harm risk with invalidating care, and legal authority.\n- Identify the live decision: whether to discharge, admit briefly, or create a crisis alternative that is safe and non-rejecting.\n\nClinical formulation:\n- Formulate the case around acute-on-chronic self-harm risk with invalidating care rather than a generic diagnostic list.\n- Link the patient's statement 'If I stay here I will just get worse.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address disposition and diagnostic stigma using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect carer unable to supervise discharge; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-008",
+    "topic": "capacity_mha",
+    "difficulty": "consultant",
+    "title": "Dementia patient refusing residential care from ED after wandering",
+    "candidateRole": "old age psychiatrist on call",
+    "setting": "ED observation bay with ACAT, family and police waiting",
+    "stem": "You are the old age psychiatrist on call. ED observation bay with ACAT, family and police waiting.\n\nMrs Bell, a 77-year-old woman with Alzheimer disease, was found wandering in heavy rain and now insists on going home alone. Mrs Bell says, \"I have lived there fifty years and I am not going to a prison.\" \n\nHer son says, \"She has a right to make bad decisions.\" Social work asks, \"Can we hold her here until guardianship?\" Police says, \"She was on the highway in the rain.\" Mrs Bell is a devout Catholic and believes residential care means abandonment by family.\n\nHer daughter says, \"If we lose the bed today, she will never get placed.\" You must decide whether she has accommodation capacity and what lawful safe disposition is possible.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "autonomy shortcut without capacity analysis — unsafe shortcut under pressure",
+        "category": "capacity",
+        "severity": "critical",
+        "clueInStem": "She has a right to make bad decisions.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass dementia-related refusal of safe accommodation, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'She has a right to make bad decisions.' without first formulating dementia-related refusal of safe accommodation, immediate safety and a defensible disposition.",
+        "keywords": [
+          "autonomy shortcut without capacity analysis",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "dementia-related refusal of safe accommodation — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "I have lived there fifty years and I am not going to a prison.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around dementia-related refusal of safe accommodation, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "dementia-related refusal of safe accommodation",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "guardianship and least restrictive detention — legal/policy hinge",
+        "category": "governance",
+        "severity": "critical",
+        "clueInStem": "Can we hold her here until guardianship?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "guardianship and least restrictive detention",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "vulnerability from wandering and exposure — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "She was on the highway in the rain.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect vulnerability from wandering and exposure, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "vulnerability from wandering and exposure",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "family_carer",
+        "severity": "important",
+        "clueInStem": "If we lose the bed today, she will never get placed.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether she has accommodation capacity and what lawful safe disposition is possi",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'She has a right to make bad decisions.' without first addressing immediate safety, dementia-related refusal of safe accommodation, and legal authority.\n- Identify the live decision: whether she has accommodation capacity and what lawful safe disposition is possible.\n\nClinical formulation:\n- Formulate the case around dementia-related refusal of safe accommodation rather than a generic diagnostic list.\n- Link the patient's statement 'I have lived there fifty years and I am not going to a prison.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address guardianship and least restrictive detention using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect vulnerability from wandering and exposure; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-009",
+    "topic": "risk",
+    "difficulty": "consultant",
+    "title": "Alcohol withdrawal, head injury and threats in remote cells",
+    "candidateRole": "consultant psychiatrist providing remote advice",
+    "setting": "Small rural police station and clinic with one nurse on call",
+    "stem": "You are the consultant psychiatrist providing remote advice. Small rural police station and clinic with one nurse on call.\n\nNoah, a 40-year-old Aboriginal man, was arrested after threatening his partner with a shovel while intoxicated and now has a head injury. Noah says, \"I only scared her because she was taking the kids.\" \n\nPolice says, \"He can sleep it off in the cells.\" The nurse asks, \"Do we have to medically clear him before police custody?\" His partner says, \"If he comes back tonight, someone will die.\" Community leaders want the matter handled inside community.\n\nHis aunt says, \"His brother's suicide broke him.\" You must decide whether he needs medical transfer, psychiatric assessment, police protection or child safety action.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "custody-as-care shortcut — unsafe shortcut under pressure",
+        "category": "risk_others",
+        "severity": "critical",
+        "clueInStem": "He can sleep it off in the cells.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass alcohol-related family violence with possible brain injury, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'He can sleep it off in the cells.' without first formulating alcohol-related family violence with possible brain injury, immediate safety and a defensible disposition.",
+        "keywords": [
+          "custody-as-care shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "alcohol-related family violence with possible brain injury — core clinical formulation",
+        "category": "substance_use",
+        "severity": "critical",
+        "clueInStem": "I only scared her because she was taking the kids.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around alcohol-related family violence with possible brain injury, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "alcohol-related family violence with possible brain injury",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "medical risk and custody safety policy — legal/policy hinge",
+        "category": "physical_health",
+        "severity": "critical",
+        "clueInStem": "Do we have to medically clear him before police custody?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "medical risk and custody safety policy",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "partner and children at lethal family violence risk — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "If he comes back tonight, someone will die.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect partner and children at lethal family violence risk, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "partner and children at lethal family violence risk",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "His brother's suicide broke him.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether he needs medical transfer, psychiatric assessment, police protection or ",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'He can sleep it off in the cells.' without first addressing immediate safety, alcohol-related family violence with possible brain injury, and legal authority.\n- Identify the live decision: whether he needs medical transfer, psychiatric assessment, police protection or child safety action.\n\nClinical formulation:\n- Formulate the case around alcohol-related family violence with possible brain injury rather than a generic diagnostic list.\n- Link the patient's statement 'I only scared her because she was taking the kids.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address medical risk and custody safety policy using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect partner and children at lethal family violence risk; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-010",
+    "topic": "capacity_mha",
+    "difficulty": "consultant",
+    "title": "Refusal of antipsychotic on inpatient ward with escalating intimidation",
+    "candidateRole": "consultant psychiatrist for acute inpatient unit",
+    "setting": "Locked inpatient ward during evening nursing escalation",
+    "stem": "You are the consultant psychiatrist for acute inpatient unit. Locked inpatient ward during evening nursing escalation.\n\nOmar, a 28-year-old man admitted involuntarily, is refusing antipsychotic medication and standing over vulnerable patients. Omar says, \"The tablets are trackers that will let them control my thoughts.\" \n\nNurses says, \"Can we inject him tonight so the ward settles?\" The registrar asks, \"Does involuntary admission automatically allow treatment?\" An elderly patient says, \"He told me I am one of them.\" Omar's father says the family was previously traumatised by restraint in hospital.\n\nThe bed manager says, \"We cannot staff special observations all night.\" You must decide whether involuntary treatment is lawful, necessary and least restrictive tonight.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "forced medication shortcut — unsafe shortcut under pressure",
+        "category": "risk_others",
+        "severity": "critical",
+        "clueInStem": "Can we inject him tonight so the ward settles?",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass psychosis-driven refusal of treatment, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'Can we inject him tonight so the ward settles?' without first formulating psychosis-driven refusal of treatment, immediate safety and a defensible disposition.",
+        "keywords": [
+          "forced medication shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "psychosis-driven refusal of treatment — core clinical formulation",
+        "category": "capacity",
+        "severity": "critical",
+        "clueInStem": "The tablets are trackers that will let them control my thoughts.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around psychosis-driven refusal of treatment, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "psychosis-driven refusal of treatment",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "MHA treatment authority and proportionality — legal/policy hinge",
+        "category": "mental_health_act",
+        "severity": "critical",
+        "clueInStem": "Does involuntary admission automatically allow treatment?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "MHA treatment authority and proportionality",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "vulnerable inpatient safety — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "He told me I am one of them.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect vulnerable inpatient safety, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "vulnerable inpatient safety",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "trauma",
+        "severity": "important",
+        "clueInStem": "We cannot staff special observations all night.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether involuntary treatment is lawful, necessary and least restrictive tonight",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'Can we inject him tonight so the ward settles?' without first addressing immediate safety, psychosis-driven refusal of treatment, and legal authority.\n- Identify the live decision: whether involuntary treatment is lawful, necessary and least restrictive tonight.\n\nClinical formulation:\n- Formulate the case around psychosis-driven refusal of treatment rather than a generic diagnostic list.\n- Link the patient's statement 'The tablets are trackers that will let them control my thoughts.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address MHA treatment authority and proportionality using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect vulnerable inpatient safety; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-011",
+    "topic": "perinatal",
+    "difficulty": "consultant",
+    "title": "Postpartum psychosis with no mother-baby bed",
+    "candidateRole": "perinatal consultant psychiatrist on call",
+    "setting": "ED and postnatal ward on Saturday night",
+    "stem": "You are the perinatal consultant psychiatrist on call. ED and postnatal ward on Saturday night.\n\nSana, a 31-year-old woman 10 days postpartum, has slept less than two hours for four nights and was found praying over the bassinet. Sana says, \"This baby is not safe in my hands tonight.\" \n\nBed manager says, \"There is no mother-baby bed in the state.\" Registrar asks, \"Can crisis follow her at home if her mother supervises?\" The baby says, \"I cannot be alone with him.\" Her mother speaks Dari only and no interpreter is on site.\n\nPartner says, \"Hospital will make her worse.\" You must decide whether to admit without a mother-baby bed and how to protect the infant.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "resource-driven discharge shortcut — unsafe shortcut under pressure",
+        "category": "risk_vulnerable",
+        "severity": "critical",
+        "clueInStem": "There is no mother-baby bed in the state.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass postpartum psychosis and infant safety, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'There is no mother-baby bed in the state.' without first formulating postpartum psychosis and infant safety, immediate safety and a defensible disposition.",
+        "keywords": [
+          "resource-driven discharge shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "postpartum psychosis and infant safety — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "This baby is not safe in my hands tonight.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around postpartum psychosis and infant safety, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "postpartum psychosis and infant safety",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "MHA/admission threshold in postpartum illness — legal/policy hinge",
+        "category": "capacity",
+        "severity": "critical",
+        "clueInStem": "Can crisis follow her at home if her mother supervises?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "MHA/admission threshold in postpartum illness",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "newborn safety — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "I cannot be alone with him.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect newborn safety, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "newborn safety",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "Hospital will make her worse.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to admit without a mother-baby bed and how to protect the infant",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'There is no mother-baby bed in the state.' without first addressing immediate safety, postpartum psychosis and infant safety, and legal authority.\n- Identify the live decision: whether to admit without a mother-baby bed and how to protect the infant.\n\nClinical formulation:\n- Formulate the case around postpartum psychosis and infant safety rather than a generic diagnostic list.\n- Link the patient's statement 'This baby is not safe in my hands tonight.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address MHA/admission threshold in postpartum illness using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect newborn safety; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-012",
+    "topic": "perinatal",
+    "difficulty": "consultant",
+    "title": "Antenatal depression with family violence and medication refusal",
+    "candidateRole": "perinatal psychiatrist in outpatient clinic",
+    "setting": "Urgent antenatal clinic review at 18 weeks",
+    "stem": "You are the perinatal psychiatrist in outpatient clinic. Urgent antenatal clinic review at 18 weeks.\n\nMei, a 32-year-old Chinese-Australian woman, stopped sertraline after reading online about fetal harm and now has passive suicidal thoughts. Mei says, \"Everyone would be better off without me.\" \n\nHer husband says, \"She is fine and does not need tablets.\" Obstetrician asks, \"Can you document that antidepressants are unsafe?\" The fetus says, \"The scan shows mild growth restriction.\" Her mother speaks no English and Mei fears shame in her family.\n\nMei says, \"Please do not write down that he pushes me.\" You must decide whether to restart treatment, address violence, and document safely.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "partner minimisation shortcut — unsafe shortcut under pressure",
+        "category": "risk_vulnerable",
+        "severity": "critical",
+        "clueInStem": "She is fine and does not need tablets.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass antenatal depression with suicidal thoughts and medication misinformation, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'She is fine and does not need tablets.' without first formulating antenatal depression with suicidal thoughts and medication misinformation, immediate safety and a defensible disposition.",
+        "keywords": [
+          "partner minimisation shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "antenatal depression with suicidal thoughts and medication misinformation — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "Everyone would be better off without me.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around antenatal depression with suicidal thoughts and medication misinformation, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "antenatal depression with suicidal thoughts and medication misinformation",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "informed consent and medication risk-benefit — legal/policy hinge",
+        "category": "capacity",
+        "severity": "critical",
+        "clueInStem": "Can you document that antidepressants are unsafe?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "informed consent and medication risk-benefit",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "unborn baby wellbeing — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "The scan shows mild growth restriction.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect unborn baby wellbeing, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "unborn baby wellbeing",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "Please do not write down that he pushes me.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to restart treatment, address violence, and document safely",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'She is fine and does not need tablets.' without first addressing immediate safety, antenatal depression with suicidal thoughts and medication misinformation, and legal authority.\n- Identify the live decision: whether to restart treatment, address violence, and document safely.\n\nClinical formulation:\n- Formulate the case around antenatal depression with suicidal thoughts and medication misinformation rather than a generic diagnostic list.\n- Link the patient's statement 'Everyone would be better off without me.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address informed consent and medication risk-benefit using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect unborn baby wellbeing; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-013",
+    "topic": "perinatal",
+    "difficulty": "consultant",
+    "title": "OCD intrusive infant harm thoughts misread as child protection",
+    "candidateRole": "perinatal psychiatrist in outpatient service",
+    "setting": "Six-week postpartum urgent GP referral",
+    "stem": "You are the perinatal psychiatrist in outpatient service. Six-week postpartum urgent GP referral.\n\nGrace, a 27-year-old first-time mother, has intrusive thoughts of dropping or stabbing her baby and is terrified by them. Grace says, \"I would never do it; the thoughts horrify me.\" \n\nGP says, \"I am worried she may harm the baby.\" Registrar asks, \"Should we notify child protection now?\" Her baby says, \"I check him for hours to make sure he is alive.\" Grace's family comes from a community where mental illness is seen as dangerous motherhood.\n\nGrace says, \"My husband will take him away if he knows.\" You must decide whether to distinguish OCD from psychosis and plan safe treatment.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "automatic child protection shortcut — unsafe shortcut under pressure",
+        "category": "risk_vulnerable",
+        "severity": "critical",
+        "clueInStem": "I am worried she may harm the baby.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass ego-dystonic perinatal OCD versus psychosis, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'I am worried she may harm the baby.' without first formulating ego-dystonic perinatal OCD versus psychosis, immediate safety and a defensible disposition.",
+        "keywords": [
+          "automatic child protection shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "ego-dystonic perinatal OCD versus psychosis — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "I would never do it; the thoughts horrify me.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around ego-dystonic perinatal OCD versus psychosis, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "ego-dystonic perinatal OCD versus psychosis",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "safeguarding threshold and infant risk — legal/policy hinge",
+        "category": "capacity",
+        "severity": "critical",
+        "clueInStem": "Should we notify child protection now?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "safeguarding threshold and infant risk",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "infant safety with maternal compulsions — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "I check him for hours to make sure he is alive.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect infant safety with maternal compulsions, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "infant safety with maternal compulsions",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "My husband will take him away if he knows.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to distinguish OCD from psychosis and plan safe treatment",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'I am worried she may harm the baby.' without first addressing immediate safety, ego-dystonic perinatal OCD versus psychosis, and legal authority.\n- Identify the live decision: whether to distinguish OCD from psychosis and plan safe treatment.\n\nClinical formulation:\n- Formulate the case around ego-dystonic perinatal OCD versus psychosis rather than a generic diagnostic list.\n- Link the patient's statement 'I would never do it; the thoughts horrify me.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address safeguarding threshold and infant risk using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect infant safety with maternal compulsions; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-014",
+    "topic": "perinatal",
+    "difficulty": "consultant",
+    "title": "Bipolar pregnancy stopping lithium and forensic relapse history",
+    "candidateRole": "perinatal psychiatrist",
+    "setting": "Antenatal clinic at 14 weeks",
+    "stem": "You are the perinatal psychiatrist. Antenatal clinic at 14 weeks.\n\nNatasha, a 34-year-old woman with bipolar I disorder, stopped lithium four weeks ago without telling obstetrics. Natasha says, \"I feel fine and I do not need medication in pregnancy.\" \n\nPartner says, \"Last time she stopped lithium she was manic within six weeks.\" Obstetrician asks, \"If she used lithium we need fetal cardiac screening.\" Her niece says, \"She assaulted a family member during the last mania.\" Natasha says medication conflicts with her identity as a natural mother.\n\nNatasha says, \"Lithium will poison the baby.\" You must decide whether to restart lithium or alternative treatment and coordinate obstetric risk.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "collateral-driven relapse warning — unsafe shortcut under pressure",
+        "category": "risk_vulnerable",
+        "severity": "critical",
+        "clueInStem": "Last time she stopped lithium she was manic within six weeks.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass euthymic period masking high relapse risk, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'Last time she stopped lithium she was manic within six weeks.' without first formulating euthymic period masking high relapse risk, immediate safety and a defensible disposition.",
+        "keywords": [
+          "collateral-driven relapse warning",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "euthymic period masking high relapse risk — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "I feel fine and I do not need medication in pregnancy.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around euthymic period masking high relapse risk, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "euthymic period masking high relapse risk",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "perinatal medication disclosure and consent — legal/policy hinge",
+        "category": "capacity",
+        "severity": "critical",
+        "clueInStem": "If she used lithium we need fetal cardiac screening.",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "perinatal medication disclosure and consent",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "risk to others during relapse — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "She assaulted a family member during the last mania.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect risk to others during relapse, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "risk to others during relapse",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "Lithium will poison the baby.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to restart lithium or alternative treatment and coordinate obstetric ris",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'Last time she stopped lithium she was manic within six weeks.' without first addressing immediate safety, euthymic period masking high relapse risk, and legal authority.\n- Identify the live decision: whether to restart lithium or alternative treatment and coordinate obstetric risk.\n\nClinical formulation:\n- Formulate the case around euthymic period masking high relapse risk rather than a generic diagnostic list.\n- Link the patient's statement 'I feel fine and I do not need medication in pregnancy.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address perinatal medication disclosure and consent using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect risk to others during relapse; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-015",
+    "topic": "perinatal",
+    "difficulty": "consultant",
+    "title": "Methadone pregnancy, child protection fear and NAS planning",
+    "candidateRole": "perinatal addiction psychiatrist",
+    "setting": "Linked antenatal and opioid treatment clinic",
+    "stem": "You are the perinatal addiction psychiatrist. Linked antenatal and opioid treatment clinic.\n\nAlana, a 29-year-old woman 30 weeks pregnant, is on methadone and intermittently using benzodiazepines. Alana says, \"Methadone is the only reason I am not using heroin.\" \n\nObstetric registrar says, \"Should we reduce methadone before delivery?\" Social worker asks, \"Do we need child protection now?\" The unborn baby says, \"I do not want the baby labelled an addict.\" Her partner uses heroin and was verbally aggressive at clinic.\n\nAlana says, \"If child protection hears, they will take my baby.\" You must decide whether to maintain methadone, plan NAS and protect maternal-infant safety.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "dose-reduction shortcut — unsafe shortcut under pressure",
+        "category": "risk_vulnerable",
+        "severity": "critical",
+        "clueInStem": "Should we reduce methadone before delivery?",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass opioid maintenance as protective harm reduction, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'Should we reduce methadone before delivery?' without first formulating opioid maintenance as protective harm reduction, immediate safety and a defensible disposition.",
+        "keywords": [
+          "dose-reduction shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "opioid maintenance as protective harm reduction — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "Methadone is the only reason I am not using heroin.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around opioid maintenance as protective harm reduction, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "opioid maintenance as protective harm reduction",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "child protection thresholds and engagement — legal/policy hinge",
+        "category": "capacity",
+        "severity": "critical",
+        "clueInStem": "Do we need child protection now?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "child protection thresholds and engagement",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "non-stigmatising NAS planning — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "I do not want the baby labelled an addict.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect non-stigmatising NAS planning, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "non-stigmatising NAS planning",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "If child protection hears, they will take my baby.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to maintain methadone, plan NAS and protect maternal-infant safety",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'Should we reduce methadone before delivery?' without first addressing immediate safety, opioid maintenance as protective harm reduction, and legal authority.\n- Identify the live decision: whether to maintain methadone, plan NAS and protect maternal-infant safety.\n\nClinical formulation:\n- Formulate the case around opioid maintenance as protective harm reduction rather than a generic diagnostic list.\n- Link the patient's statement 'Methadone is the only reason I am not using heroin.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address child protection thresholds and engagement using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect non-stigmatising NAS planning; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-016",
+    "topic": "perinatal",
+    "difficulty": "consultant",
+    "title": "Postnatal depression with intrusive suicidality and partner coercion",
+    "candidateRole": "perinatal crisis consultant",
+    "setting": "Home visit requested by maternal child health nurse",
+    "stem": "You are the perinatal crisis consultant. Home visit requested by maternal child health nurse.\n\nAisha, a 24-year-old mother eight weeks postpartum, has stopped attending baby checks and says she cannot sleep or feed herself. Aisha says, \"The baby would be better with someone else.\" \n\nHer partner says, \"She is just lazy and needs to stop complaining.\" Nurse asks, \"Can we leave if the baby looks physically well?\" The infant says, \"The nappies have not been changed since yesterday.\" Aisha is a recent migrant and fears visa consequences if services attend.\n\nMother-in-law says, \"In our family we do not talk about depression.\" You must decide whether urgent admission/support or child protection action is needed.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "partner invalidation shortcut — unsafe shortcut under pressure",
+        "category": "risk_vulnerable",
+        "severity": "critical",
+        "clueInStem": "She is just lazy and needs to stop complaining.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass postnatal depression with maternal suicide and infant care risk, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'She is just lazy and needs to stop complaining.' without first formulating postnatal depression with maternal suicide and infant care risk, immediate safety and a defensible disposition.",
+        "keywords": [
+          "partner invalidation shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "postnatal depression with maternal suicide and infant care risk — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "The baby would be better with someone else.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around postnatal depression with maternal suicide and infant care risk, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "postnatal depression with maternal suicide and infant care risk",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "infant welfare and safeguarding — legal/policy hinge",
+        "category": "capacity",
+        "severity": "critical",
+        "clueInStem": "Can we leave if the baby looks physically well?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "infant welfare and safeguarding",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "infant neglect risk — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "The nappies have not been changed since yesterday.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect infant neglect risk, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "infant neglect risk",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "In our family we do not talk about depression.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether urgent admission/support or child protection action is needed",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'She is just lazy and needs to stop complaining.' without first addressing immediate safety, postnatal depression with maternal suicide and infant care risk, and legal authority.\n- Identify the live decision: whether urgent admission/support or child protection action is needed.\n\nClinical formulation:\n- Formulate the case around postnatal depression with maternal suicide and infant care risk rather than a generic diagnostic list.\n- Link the patient's statement 'The baby would be better with someone else.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address infant welfare and safeguarding using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect infant neglect risk; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-017",
+    "topic": "perinatal",
+    "difficulty": "consultant",
+    "title": "Mother with psychosis refusing baby examination",
+    "candidateRole": "perinatal psychiatrist on call",
+    "setting": "Postnatal ward at 2 am",
+    "stem": "You are the perinatal psychiatrist on call. Postnatal ward at 2 am.\n\nJenna, a 19-year-old woman three days postpartum, refuses to let midwives examine the baby and believes staff are contaminated. Jenna says, \"If you touch him, you will infect his soul.\" \n\nMidwife says, \"Can security hold her while we check the baby?\" Registrar asks, \"Does she have capacity to refuse baby checks?\" The newborn says, \"He has not fed for eight hours.\" Jenna is from a strict religious community and fears spiritual contamination.\n\nHer father says, \"Hospital is corrupting her faith.\" You must decide whether to protect neonatal health while using least restrictive maternal care.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "coercive examination shortcut — unsafe shortcut under pressure",
+        "category": "risk_vulnerable",
+        "severity": "critical",
+        "clueInStem": "Can security hold her while we check the baby?",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass psychotic belief preventing neonatal care, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'Can security hold her while we check the baby?' without first formulating psychotic belief preventing neonatal care, immediate safety and a defensible disposition.",
+        "keywords": [
+          "coercive examination shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "psychotic belief preventing neonatal care — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "If you touch him, you will infect his soul.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around psychotic belief preventing neonatal care, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "psychotic belief preventing neonatal care",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "maternal capacity and infant treatment authority — legal/policy hinge",
+        "category": "capacity",
+        "severity": "critical",
+        "clueInStem": "Does she have capacity to refuse baby checks?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "maternal capacity and infant treatment authority",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "neonatal medical risk — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "He has not fed for eight hours.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect neonatal medical risk, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "neonatal medical risk",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "Hospital is corrupting her faith.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to protect neonatal health while using least restrictive maternal care",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'Can security hold her while we check the baby?' without first addressing immediate safety, psychotic belief preventing neonatal care, and legal authority.\n- Identify the live decision: whether to protect neonatal health while using least restrictive maternal care.\n\nClinical formulation:\n- Formulate the case around psychotic belief preventing neonatal care rather than a generic diagnostic list.\n- Link the patient's statement 'If you touch him, you will infect his soul.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address maternal capacity and infant treatment authority using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect neonatal medical risk; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-018",
+    "topic": "perinatal",
+    "difficulty": "consultant",
+    "title": "Severe hyperemesis, depression and termination request",
+    "candidateRole": "perinatal CL psychiatrist",
+    "setting": "Obstetric medical ward",
+    "stem": "You are the perinatal CL psychiatrist. Obstetric medical ward.\n\nPriya, a 30-year-old woman at 11 weeks gestation, has hyperemesis, dehydration and depressive symptoms, and requests termination urgently. Priya says, \"I would rather die than keep vomiting like this.\" \n\nObstetric registrar says, \"Can psychiatry say she is not competent to terminate?\" Husband asks, \"Our religion does not allow termination.\" The fetus says, \"The pregnancy is wanted by the family, not by me now.\" Priya's family insists decisions must be made collectively.\n\nPriya says, \"Do not tell my mother I asked for this.\" You must decide whether capacity is intact and how to manage confidentiality and family pressure.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "paternalistic capacity shortcut — unsafe shortcut under pressure",
+        "category": "risk_vulnerable",
+        "severity": "critical",
+        "clueInStem": "Can psychiatry say she is not competent to terminate?",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass depression, suffering and reproductive decision-making, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'Can psychiatry say she is not competent to terminate?' without first formulating depression, suffering and reproductive decision-making, immediate safety and a defensible disposition.",
+        "keywords": [
+          "paternalistic capacity shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "depression, suffering and reproductive decision-making — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "I would rather die than keep vomiting like this.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around depression, suffering and reproductive decision-making, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "depression, suffering and reproductive decision-making",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "capacity, consent and reproductive autonomy — legal/policy hinge",
+        "category": "capacity",
+        "severity": "critical",
+        "clueInStem": "Our religion does not allow termination.",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "capacity, consent and reproductive autonomy",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "maternal-fetal ethical tension — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "The pregnancy is wanted by the family, not by me now.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect maternal-fetal ethical tension, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "maternal-fetal ethical tension",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "Do not tell my mother I asked for this.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether capacity is intact and how to manage confidentiality and family pressure",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'Can psychiatry say she is not competent to terminate?' without first addressing immediate safety, depression, suffering and reproductive decision-making, and legal authority.\n- Identify the live decision: whether capacity is intact and how to manage confidentiality and family pressure.\n\nClinical formulation:\n- Formulate the case around depression, suffering and reproductive decision-making rather than a generic diagnostic list.\n- Link the patient's statement 'I would rather die than keep vomiting like this.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address capacity, consent and reproductive autonomy using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect maternal-fetal ethical tension; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-019",
+    "topic": "perinatal",
+    "difficulty": "consultant",
+    "title": "Perinatal relapse after child removal threat",
+    "candidateRole": "perinatal psychiatrist",
+    "setting": "Family birth planning meeting with child protection",
+    "stem": "You are the perinatal psychiatrist. Family birth planning meeting with child protection.\n\nLouise, a 37-year-old Aboriginal woman with bipolar disorder, is 36 weeks pregnant and has previous child removal during mania. Louise says, \"They will steal this baby too, so I will run before labour.\" \n\nChild protection worker says, \"We may need a removal plan at birth.\" Registrar asks, \"Can we detain her now to prevent absconding?\" The unborn baby says, \"I will give birth alone if I have to.\" Louise asks for Aboriginal midwife and grandmother to be involved.\n\nGrandmother says, \"You need to work with us, not around us.\" You must decide whether to create a culturally safe birth/safety plan without unnecessary coercion.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "removal-first shortcut — unsafe shortcut under pressure",
+        "category": "risk_vulnerable",
+        "severity": "critical",
+        "clueInStem": "We may need a removal plan at birth.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass trauma and relapse risk around child protection, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'We may need a removal plan at birth.' without first formulating trauma and relapse risk around child protection, immediate safety and a defensible disposition.",
+        "keywords": [
+          "removal-first shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "trauma and relapse risk around child protection — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "They will steal this baby too, so I will run before labour.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around trauma and relapse risk around child protection, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "trauma and relapse risk around child protection",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "MHA threshold and least restrictive perinatal planning — legal/policy hinge",
+        "category": "capacity",
+        "severity": "critical",
+        "clueInStem": "Can we detain her now to prevent absconding?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "MHA threshold and least restrictive perinatal planning",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "unborn baby and maternal risk from disengagement — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "I will give birth alone if I have to.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect unborn baby and maternal risk from disengagement, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "unborn baby and maternal risk from disengagement",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "You need to work with us, not around us.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to create a culturally safe birth/safety plan without unnecessary coerci",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'We may need a removal plan at birth.' without first addressing immediate safety, trauma and relapse risk around child protection, and legal authority.\n- Identify the live decision: whether to create a culturally safe birth/safety plan without unnecessary coercion.\n\nClinical formulation:\n- Formulate the case around trauma and relapse risk around child protection rather than a generic diagnostic list.\n- Link the patient's statement 'They will steal this baby too, so I will run before labour.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address MHA threshold and least restrictive perinatal planning using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect unborn baby and maternal risk from disengagement; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-020",
+    "topic": "perinatal",
+    "difficulty": "consultant",
+    "title": "Postpartum mania and driving with infant",
+    "candidateRole": "perinatal psychiatrist covering crisis team",
+    "setting": "Community urgent review after police welfare check",
+    "stem": "You are the perinatal psychiatrist covering crisis team. Community urgent review after police welfare check.\n\nEmily, a 28-year-old woman two weeks postpartum, has been driving around at night with her newborn because she believes she is starting a business empire. Emily says, \"Sleep is for ordinary mothers; my baby and I are chosen.\" \n\nPartner says, \"She is energetic, not unwell, and hates hospitals.\" Police asks, \"Can we just take her licence and leave?\" The baby says, \"The baby was unrestrained in the back seat.\" Emily belongs to a wellness community that rejects medication and promotes extreme sleep deprivation retreats.\n\nFriend says, \"Medication will destroy her gift.\" You must decide whether urgent admission and infant protection are required.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "minimising family shortcut — unsafe shortcut under pressure",
+        "category": "risk_vulnerable",
+        "severity": "critical",
+        "clueInStem": "She is energetic, not unwell, and hates hospitals.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass postpartum mania with infant endangerment, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'She is energetic, not unwell, and hates hospitals.' without first formulating postpartum mania with infant endangerment, immediate safety and a defensible disposition.",
+        "keywords": [
+          "minimising family shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "postpartum mania with infant endangerment — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "Sleep is for ordinary mothers; my baby and I are chosen.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around postpartum mania with infant endangerment, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "postpartum mania with infant endangerment",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "public safety and MHA assessment — legal/policy hinge",
+        "category": "capacity",
+        "severity": "critical",
+        "clueInStem": "Can we just take her licence and leave?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "public safety and MHA assessment",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "infant immediate safety — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "The baby was unrestrained in the back seat.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect infant immediate safety, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "infant immediate safety",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "Medication will destroy her gift.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether urgent admission and infant protection are required",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'She is energetic, not unwell, and hates hospitals.' without first addressing immediate safety, postpartum mania with infant endangerment, and legal authority.\n- Identify the live decision: whether urgent admission and infant protection are required.\n\nClinical formulation:\n- Formulate the case around postpartum mania with infant endangerment rather than a generic diagnostic list.\n- Link the patient's statement 'Sleep is for ordinary mothers; my baby and I are chosen.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address public safety and MHA assessment using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect infant immediate safety; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-021",
+    "topic": "child_adolescent",
+    "difficulty": "consultant",
+    "title": "Refugee school refusal and interpreter/consent failure",
+    "candidateRole": "CAMHS consultant psychiatrist",
+    "setting": "Urgent school welfare meeting",
+    "stem": "You are the CAMHS consultant psychiatrist. Urgent school welfare meeting.\n\nHamid, a 16-year-old Syrian refugee boy, has not attended school for six weeks after panic attacks during fire alarms. Hamid says, \"School is not safe; soldiers come when bells ring.\" \n\nFather says, \"He is lazy and must be forced back.\" School principal asks, \"Can you certify him fit or unfit today?\" His younger sister says, \"He screams at night and she hides.\" His brother is interpreting because professional interpreters are unavailable.\n\nHamid says, \"If people know what happened, my family will be ashamed.\" You must decide whether to treat trauma while managing school, consent and family pressure.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "behavioural-laziness shortcut — unsafe shortcut under pressure",
+        "category": "immediate_safety",
+        "severity": "critical",
+        "clueInStem": "He is lazy and must be forced back.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass PTSD-driven school refusal, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'He is lazy and must be forced back.' without first formulating PTSD-driven school refusal, immediate safety and a defensible disposition.",
+        "keywords": [
+          "behavioural-laziness shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "PTSD-driven school refusal — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "School is not safe; soldiers come when bells ring.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around PTSD-driven school refusal, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "PTSD-driven school refusal",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "consent, confidentiality and school obligations — legal/policy hinge",
+        "category": "capacity",
+        "severity": "critical",
+        "clueInStem": "Can you certify him fit or unfit today?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "consent, confidentiality and school obligations",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "sibling trauma exposure — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "He screams at night and she hides.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect sibling trauma exposure, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "sibling trauma exposure",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "If people know what happened, my family will be ashamed.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to treat trauma while managing school, consent and family pressure",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'He is lazy and must be forced back.' without first addressing immediate safety, PTSD-driven school refusal, and legal authority.\n- Identify the live decision: whether to treat trauma while managing school, consent and family pressure.\n\nClinical formulation:\n- Formulate the case around PTSD-driven school refusal rather than a generic diagnostic list.\n- Link the patient's statement 'School is not safe; soldiers come when bells ring.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address consent, confidentiality and school obligations using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect sibling trauma exposure; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-022",
+    "topic": "child_adolescent",
+    "difficulty": "consultant",
+    "title": "Aboriginal boy ADHD dispute and polypharmacy",
+    "candidateRole": "child psychiatrist in regional neurodevelopment clinic",
+    "setting": "Case conference with school, paediatrics and grandmother",
+    "stem": "You are the child psychiatrist in regional neurodevelopment clinic. Case conference with school, paediatrics and grandmother.\n\nJayden, a 12-year-old Aboriginal boy, is prescribed stimulant, clonidine and risperidone for aggression at school. Jayden says, \"I get scared when men yell because it sounds like home.\" \n\nPaediatrician says, \"Increase the stimulant; school cannot cope.\" School asks, \"Can we remove his aide if medication is optimised?\" Grandmother says, \"Every time he is upset they add another tablet.\" No Aboriginal health worker or OT has been involved.\n\nTeacher says, \"He chooses to be defiant.\" You must decide whether to re-formulate trauma/ADHD and safely rationalise medication.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "medication-escalation shortcut — unsafe shortcut under pressure",
+        "category": "immediate_safety",
+        "severity": "critical",
+        "clueInStem": "Increase the stimulant; school cannot cope.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass trauma mimicking ADHD/aggression, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'Increase the stimulant; school cannot cope.' without first formulating trauma mimicking ADHD/aggression, immediate safety and a defensible disposition.",
+        "keywords": [
+          "medication-escalation shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "trauma mimicking ADHD/aggression — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "I get scared when men yell because it sounds like home.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around trauma mimicking ADHD/aggression, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "trauma mimicking ADHD/aggression",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "reasonable adjustments and safeguarding — legal/policy hinge",
+        "category": "capacity",
+        "severity": "critical",
+        "clueInStem": "Can we remove his aide if medication is optimised?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "reasonable adjustments and safeguarding",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "child exposed to polypharmacy risk — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "Every time he is upset they add another tablet.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect child exposed to polypharmacy risk, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "child exposed to polypharmacy risk",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "He chooses to be defiant.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to re-formulate trauma/ADHD and safely rationalise medication",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'Increase the stimulant; school cannot cope.' without first addressing immediate safety, trauma mimicking ADHD/aggression, and legal authority.\n- Identify the live decision: whether to re-formulate trauma/ADHD and safely rationalise medication.\n\nClinical formulation:\n- Formulate the case around trauma mimicking ADHD/aggression rather than a generic diagnostic list.\n- Link the patient's statement 'I get scared when men yell because it sounds like home.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address reasonable adjustments and safeguarding using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect child exposed to polypharmacy risk; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-023",
+    "topic": "child_adolescent",
+    "difficulty": "consultant",
+    "title": "Anorexia medical instability and family conflict",
+    "candidateRole": "CAMHS eating disorder consultant",
+    "setting": "Paediatric ward with urgent refeeding decision",
+    "stem": "You are the CAMHS eating disorder consultant. Paediatric ward with urgent refeeding decision.\n\nSophie, a 15-year-old girl with anorexia nervosa, has bradycardia, hypokalaemia and refuses nasogastric feeding. Sophie says, \"I know I might die, but gaining weight would be worse.\" \n\nFather says, \"Hospital is making her dramatic; discharge to a dietitian.\" Paediatric consultant asks, \"Can psychiatry authorise feeding against her wishes?\" Mother says, \"I cannot keep her alive at home.\" The family belongs to a close religious community and fears gossip.\n\nSophie says, \"I will run away if you force me.\" You must decide whether life-saving refeeding requires legal coercion and how to contain absconding.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "minimising discharge shortcut — unsafe shortcut under pressure",
+        "category": "immediate_safety",
+        "severity": "critical",
+        "clueInStem": "Hospital is making her dramatic; discharge to a dietitian.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass anorexic cognition impairing capacity, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'Hospital is making her dramatic; discharge to a dietitian.' without first formulating anorexic cognition impairing capacity, immediate safety and a defensible disposition.",
+        "keywords": [
+          "minimising discharge shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "anorexic cognition impairing capacity — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "I know I might die, but gaining weight would be worse.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around anorexic cognition impairing capacity, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "anorexic cognition impairing capacity",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "legal authority for involuntary treatment — legal/policy hinge",
+        "category": "capacity",
+        "severity": "critical",
+        "clueInStem": "Can psychiatry authorise feeding against her wishes?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "legal authority for involuntary treatment",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "carer inability and medical risk — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "I cannot keep her alive at home.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect carer inability and medical risk, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "carer inability and medical risk",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "I will run away if you force me.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether life-saving refeeding requires legal coercion and how to contain abscond",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'Hospital is making her dramatic; discharge to a dietitian.' without first addressing immediate safety, anorexic cognition impairing capacity, and legal authority.\n- Identify the live decision: whether life-saving refeeding requires legal coercion and how to contain absconding.\n\nClinical formulation:\n- Formulate the case around anorexic cognition impairing capacity rather than a generic diagnostic list.\n- Link the patient's statement 'I know I might die, but gaining weight would be worse.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address legal authority for involuntary treatment using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect carer inability and medical risk; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-024",
+    "topic": "child_adolescent",
+    "difficulty": "consultant",
+    "title": "Gender diverse youth, parental rejection and MHA",
+    "candidateRole": "CAMHS consultant on call",
+    "setting": "ED crisis assessment at night",
+    "stem": "You are the CAMHS consultant on call. ED crisis assessment at night.\n\nAlex, a 17-year-old gender-diverse young person, presents with depression and tablets hidden at home after family rejection. Alex says, \"I cannot survive another night in that house.\" \n\nMother says, \"This is internet influence; we are taking her home.\" Registrar asks, \"Can we call parents against their wishes because they are under 18?\" Friend says, \"They have tablets hidden in their bedroom.\" Alex asks staff to use they/them pronouns and fears being outed in their faith community.\n\nFather says, \"You are not my child if this continues.\" You must decide whether to admit or find safe alternative without unsafe outing.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "unsafe parental discharge shortcut — unsafe shortcut under pressure",
+        "category": "immediate_safety",
+        "severity": "critical",
+        "clueInStem": "This is internet influence; we are taking her home.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass suicide risk driven by family rejection, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'This is internet influence; we are taking her home.' without first formulating suicide risk driven by family rejection, immediate safety and a defensible disposition.",
+        "keywords": [
+          "unsafe parental discharge shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "suicide risk driven by family rejection — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "I cannot survive another night in that house.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around suicide risk driven by family rejection, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "suicide risk driven by family rejection",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "minor confidentiality and MHA — legal/policy hinge",
+        "category": "capacity",
+        "severity": "critical",
+        "clueInStem": "Can we call parents against their wishes because they are under 18?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "minor confidentiality and MHA",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "means access and peer collateral — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "They have tablets hidden in their bedroom.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect means access and peer collateral, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "means access and peer collateral",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "You are not my child if this continues.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to admit or find safe alternative without unsafe outing",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'This is internet influence; we are taking her home.' without first addressing immediate safety, suicide risk driven by family rejection, and legal authority.\n- Identify the live decision: whether to admit or find safe alternative without unsafe outing.\n\nClinical formulation:\n- Formulate the case around suicide risk driven by family rejection rather than a generic diagnostic list.\n- Link the patient's statement 'I cannot survive another night in that house.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address minor confidentiality and MHA using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect means access and peer collateral; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-025",
+    "topic": "child_adolescent",
+    "difficulty": "consultant",
+    "title": "Autistic adolescent meltdown mistaken for violence",
+    "candidateRole": "CAMHS consultant to ED",
+    "setting": "ED after school restraint incident",
+    "stem": "You are the CAMHS consultant to ED. ED after school restraint incident.\n\nNoah, a 13-year-old autistic boy, was restrained at school after throwing chairs during a fire alarm drill. Noah says, \"The alarm felt like knives in my head.\" \n\nPolice says, \"He assaulted staff, so he needs consequences.\" ED registrar asks, \"Can we sedate him if he refuses examination?\" Younger students says, \"Children were hiding in the corridor.\" His parents are migrants and say autism is shameful in their community.\n\nTeacher says, \"He is manipulative and knows what he is doing.\" You must decide whether to formulate neurodevelopmental distress and prevent punitive escalation.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "criminalising-meltdown shortcut — unsafe shortcut under pressure",
+        "category": "immediate_safety",
+        "severity": "critical",
+        "clueInStem": "He assaulted staff, so he needs consequences.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass sensory overload and autistic distress, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'He assaulted staff, so he needs consequences.' without first formulating sensory overload and autistic distress, immediate safety and a defensible disposition.",
+        "keywords": [
+          "criminalising-meltdown shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "sensory overload and autistic distress — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "The alarm felt like knives in my head.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around sensory overload and autistic distress, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "sensory overload and autistic distress",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "consent, restraint and disability policy — legal/policy hinge",
+        "category": "capacity",
+        "severity": "critical",
+        "clueInStem": "Can we sedate him if he refuses examination?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "consent, restraint and disability policy",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "risk to others during dysregulation — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "Children were hiding in the corridor.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect risk to others during dysregulation, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "risk to others during dysregulation",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "He is manipulative and knows what he is doing.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to formulate neurodevelopmental distress and prevent punitive escalation",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'He assaulted staff, so he needs consequences.' without first addressing immediate safety, sensory overload and autistic distress, and legal authority.\n- Identify the live decision: whether to formulate neurodevelopmental distress and prevent punitive escalation.\n\nClinical formulation:\n- Formulate the case around sensory overload and autistic distress rather than a generic diagnostic list.\n- Link the patient's statement 'The alarm felt like knives in my head.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address consent, restraint and disability policy using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect risk to others during dysregulation; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-026",
+    "topic": "child_adolescent",
+    "difficulty": "consultant",
+    "title": "Adolescent psychosis, cannabis and family stigma",
+    "candidateRole": "early psychosis consultant",
+    "setting": "CAMHS intake after ED psychosis presentation",
+    "stem": "You are the early psychosis consultant. CAMHS intake after ED psychosis presentation.\n\nRavi, a 16-year-old boy, has three months of withdrawal, cannabis use and persecutory beliefs about classmates. Ravi says, \"They are recording me through the school laptops.\" \n\nFather says, \"It is just weed and bad friends.\" Registrar asks, \"Does he meet involuntary criteria if parents refuse admission?\" Younger brother says, \"He sleeps with a knife under the pillow.\" The family fears community gossip about mental illness and marriage prospects.\n\nMother says, \"Please do not tell the school anything.\" You must decide whether to admit/engage and manage confidentiality, school and weapon risk.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "substance-only shortcut — unsafe shortcut under pressure",
+        "category": "immediate_safety",
+        "severity": "critical",
+        "clueInStem": "It is just weed and bad friends.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass first episode psychosis versus substance-related paranoia, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'It is just weed and bad friends.' without first formulating first episode psychosis versus substance-related paranoia, immediate safety and a defensible disposition.",
+        "keywords": [
+          "substance-only shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "first episode psychosis versus substance-related paranoia — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "They are recording me through the school laptops.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around first episode psychosis versus substance-related paranoia, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "first episode psychosis versus substance-related paranoia",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "MHA for minors and parental disagreement — legal/policy hinge",
+        "category": "capacity",
+        "severity": "critical",
+        "clueInStem": "Does he meet involuntary criteria if parents refuse admission?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "MHA for minors and parental disagreement",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "family violence/weapon risk — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "He sleeps with a knife under the pillow.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect family violence/weapon risk, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "family violence/weapon risk",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "Please do not tell the school anything.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to admit/engage and manage confidentiality, school and weapon risk",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'It is just weed and bad friends.' without first addressing immediate safety, first episode psychosis versus substance-related paranoia, and legal authority.\n- Identify the live decision: whether to admit/engage and manage confidentiality, school and weapon risk.\n\nClinical formulation:\n- Formulate the case around first episode psychosis versus substance-related paranoia rather than a generic diagnostic list.\n- Link the patient's statement 'They are recording me through the school laptops.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address MHA for minors and parental disagreement using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect family violence/weapon risk; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-027",
+    "topic": "child_adolescent",
+    "difficulty": "consultant",
+    "title": "Complex trauma, NSSI and placement breakdown",
+    "candidateRole": "CAMHS consultant for child protection liaison",
+    "setting": "Residential care placement review",
+    "stem": "You are the CAMHS consultant for child protection liaison. Residential care placement review.\n\nMia, a 15-year-old in out-of-home care, has repeated cutting and absconding after staff changes at the group home. Mia says, \"I cut so someone comes before I disappear.\" \n\nResidential manager says, \"We are giving notice; she is too hard.\" Child protection worker asks, \"Can you admit her until we find a placement?\" Younger residents says, \"She tells them how to cut safely.\" Mia is Aboriginal and has lost contact with kinship family.\n\nMia says, \"Every adult leaves; you will too.\" You must decide whether admission is clinically indicated versus urgent placement/stability plan.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "placement rejection shortcut — unsafe shortcut under pressure",
+        "category": "immediate_safety",
+        "severity": "critical",
+        "clueInStem": "We are giving notice; she is too hard.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass attachment-driven self-harm and absconding, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'We are giving notice; she is too hard.' without first formulating attachment-driven self-harm and absconding, immediate safety and a defensible disposition.",
+        "keywords": [
+          "placement rejection shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "attachment-driven self-harm and absconding — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "I cut so someone comes before I disappear.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around attachment-driven self-harm and absconding, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "attachment-driven self-harm and absconding",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "hospital as placement substitute — legal/policy hinge",
+        "category": "capacity",
+        "severity": "critical",
+        "clueInStem": "Can you admit her until we find a placement?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "hospital as placement substitute",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "risk to vulnerable peers — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "She tells them how to cut safely.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect risk to vulnerable peers, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "risk to vulnerable peers",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "Every adult leaves; you will too.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether admission is clinically indicated versus urgent placement/stability plan",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'We are giving notice; she is too hard.' without first addressing immediate safety, attachment-driven self-harm and absconding, and legal authority.\n- Identify the live decision: whether admission is clinically indicated versus urgent placement/stability plan.\n\nClinical formulation:\n- Formulate the case around attachment-driven self-harm and absconding rather than a generic diagnostic list.\n- Link the patient's statement 'I cut so someone comes before I disappear.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address hospital as placement substitute using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect risk to vulnerable peers; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-028",
+    "topic": "child_adolescent",
+    "difficulty": "consultant",
+    "title": "Eating disorder in transgender adolescent and parental conflict",
+    "candidateRole": "CAMHS consultant",
+    "setting": "Paediatric admission for malnutrition",
+    "stem": "You are the CAMHS consultant. Paediatric admission for malnutrition.\n\nSam, a 16-year-old transgender boy, has restrictive eating, bradycardia and parents arguing about gender identity. Sam says, \"If my body changes any more, I cannot live in it.\" \n\nFather says, \"This gender nonsense caused the eating disorder.\" Paediatrics asks, \"Can we refeed over his objection?\" Nurse says, \"He refuses gowns and examinations.\" Sam requests he/him pronouns and privacy from extended family.\n\nMother says, \"We just need him to eat like a girl again.\" You must decide whether to deliver gender-affirming eating disorder treatment under medical risk.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "invalidating-cause shortcut — unsafe shortcut under pressure",
+        "category": "immediate_safety",
+        "severity": "critical",
+        "clueInStem": "This gender nonsense caused the eating disorder.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass gender dysphoria intertwined with eating disorder risk, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'This gender nonsense caused the eating disorder.' without first formulating gender dysphoria intertwined with eating disorder risk, immediate safety and a defensible disposition.",
+        "keywords": [
+          "invalidating-cause shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "gender dysphoria intertwined with eating disorder risk — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "If my body changes any more, I cannot live in it.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around gender dysphoria intertwined with eating disorder risk, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "gender dysphoria intertwined with eating disorder risk",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "capacity and involuntary refeeding — legal/policy hinge",
+        "category": "capacity",
+        "severity": "critical",
+        "clueInStem": "Can we refeed over his objection?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "capacity and involuntary refeeding",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "dignity and medical care conflict — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "He refuses gowns and examinations.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect dignity and medical care conflict, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "dignity and medical care conflict",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "We just need him to eat like a girl again.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to deliver gender-affirming eating disorder treatment under medical risk",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'This gender nonsense caused the eating disorder.' without first addressing immediate safety, gender dysphoria intertwined with eating disorder risk, and legal authority.\n- Identify the live decision: whether to deliver gender-affirming eating disorder treatment under medical risk.\n\nClinical formulation:\n- Formulate the case around gender dysphoria intertwined with eating disorder risk rather than a generic diagnostic list.\n- Link the patient's statement 'If my body changes any more, I cannot live in it.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address capacity and involuntary refeeding using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect dignity and medical care conflict; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-029",
+    "topic": "child_adolescent",
+    "difficulty": "consultant",
+    "title": "Indigenous youth justice, suicidality and custody",
+    "candidateRole": "forensic CAMHS consultant",
+    "setting": "Youth detention health unit after self-harm",
+    "stem": "You are the forensic CAMHS consultant. Youth detention health unit after self-harm.\n\nKobi, a 15-year-old Aboriginal boy, tied a sheet around his neck after being placed in isolation for fighting. Kobi says, \"I would rather die than stay in that room.\" \n\nDetention officer says, \"He is using self-harm to avoid consequences.\" Health nurse asks, \"Can we keep him in isolation for observation?\" Cellmate says, \"His uncle died in custody too.\" No Aboriginal mental health worker is available until Monday.\n\nKobi says, \"No one here listens to our mob.\" You must decide whether isolation should stop and how to manage suicide risk in custody.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "manipulation shortcut — unsafe shortcut under pressure",
+        "category": "immediate_safety",
+        "severity": "critical",
+        "clueInStem": "He is using self-harm to avoid consequences.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass custody-related suicide risk, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'He is using self-harm to avoid consequences.' without first formulating custody-related suicide risk, immediate safety and a defensible disposition.",
+        "keywords": [
+          "manipulation shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "custody-related suicide risk — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "I would rather die than stay in that room.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around custody-related suicide risk, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "custody-related suicide risk",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "least restrictive custody safety — legal/policy hinge",
+        "category": "capacity",
+        "severity": "critical",
+        "clueInStem": "Can we keep him in isolation for observation?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "least restrictive custody safety",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "trauma and vulnerable detainee risk — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "His uncle died in custody too.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect trauma and vulnerable detainee risk, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "trauma and vulnerable detainee risk",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "No one here listens to our mob.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether isolation should stop and how to manage suicide risk in custody",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'He is using self-harm to avoid consequences.' without first addressing immediate safety, custody-related suicide risk, and legal authority.\n- Identify the live decision: whether isolation should stop and how to manage suicide risk in custody.\n\nClinical formulation:\n- Formulate the case around custody-related suicide risk rather than a generic diagnostic list.\n- Link the patient's statement 'I would rather die than stay in that room.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address least restrictive custody safety using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect trauma and vulnerable detainee risk; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-030",
+    "topic": "child_adolescent",
+    "difficulty": "consultant",
+    "title": "16yo medical refusal with chronic illness and parental coercion",
+    "candidateRole": "CAMHS CL consultant",
+    "setting": "Paediatric diabetes ward",
+    "stem": "You are the CAMHS CL consultant. Paediatric diabetes ward.\n\nLina, a 16-year-old girl with type 1 diabetes, is refusing insulin after family conflict and weight concerns. Lina says, \"Insulin makes me fat; I do not care if I die.\" \n\nFather says, \"She needs discipline, not psychiatry.\" Paediatrician asks, \"Can we force insulin if she refuses?\" Younger sister says, \"She copies everything Lina does.\" The family fasts for religious reasons and Lina says diabetes rules make her impure.\n\nMother says, \"Do not document eating disorder; it will shame us.\" You must decide whether refusal is capacitous and how to treat medical/eating risk.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "discipline shortcut — unsafe shortcut under pressure",
+        "category": "immediate_safety",
+        "severity": "critical",
+        "clueInStem": "She needs discipline, not psychiatry.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass capacity, eating disorder and diabetic risk, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'She needs discipline, not psychiatry.' without first formulating capacity, eating disorder and diabetic risk, immediate safety and a defensible disposition.",
+        "keywords": [
+          "discipline shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "capacity, eating disorder and diabetic risk — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "Insulin makes me fat; I do not care if I die.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around capacity, eating disorder and diabetic risk, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "capacity, eating disorder and diabetic risk",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "capacity and emergency treatment — legal/policy hinge",
+        "category": "capacity",
+        "severity": "critical",
+        "clueInStem": "Can we force insulin if she refuses?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "capacity and emergency treatment",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "sibling vulnerability to disordered eating — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "She copies everything Lina does.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect sibling vulnerability to disordered eating, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "sibling vulnerability to disordered eating",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "Do not document eating disorder; it will shame us.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether refusal is capacitous and how to treat medical/eating risk",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'She needs discipline, not psychiatry.' without first addressing immediate safety, capacity, eating disorder and diabetic risk, and legal authority.\n- Identify the live decision: whether refusal is capacitous and how to treat medical/eating risk.\n\nClinical formulation:\n- Formulate the case around capacity, eating disorder and diabetic risk rather than a generic diagnostic list.\n- Link the patient's statement 'Insulin makes me fat; I do not care if I die.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address capacity and emergency treatment using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect sibling vulnerability to disordered eating; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-031",
+    "topic": "old_age",
+    "difficulty": "consultant",
+    "title": "Dementia driving and financial abuse",
+    "candidateRole": "old age psychiatrist",
+    "setting": "Memory clinic family meeting",
+    "stem": "You are the old age psychiatrist. Memory clinic family meeting.\n\nMrs Chen, an 82-year-old Mandarin-speaking woman, has dementia and a police report after leaving a collision scene. Mrs Chen says, \"The road moved behind me.\" \n\nDaughter says, \"Write that she lacks capacity so we can sell the house.\" GP asks, \"Can you declare her globally incapable?\" Pedestrians says, \"She drove across the footpath near the shops.\" Her son is interpreting despite conflict over money.\n\nDaughter says, \"Fees will take everything if we delay.\" You must decide whether to notify driving authority and assess capacity/abuse independently.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "financial-capacity shortcut — unsafe shortcut under pressure",
+        "category": "risk_vulnerable",
+        "severity": "critical",
+        "clueInStem": "Write that she lacks capacity so we can sell the house.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass dementia-related driving risk and impaired insight, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'Write that she lacks capacity so we can sell the house.' without first formulating dementia-related driving risk and impaired insight, immediate safety and a defensible disposition.",
+        "keywords": [
+          "financial-capacity shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "dementia-related driving risk and impaired insight — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "The road moved behind me.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around dementia-related driving risk and impaired insight, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "dementia-related driving risk and impaired insight",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "decision-specific capacity — legal/policy hinge",
+        "category": "capacity",
+        "severity": "critical",
+        "clueInStem": "Can you declare her globally incapable?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "decision-specific capacity",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "public safety — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "She drove across the footpath near the shops.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect public safety, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "public safety",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "Fees will take everything if we delay.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to notify driving authority and assess capacity/abuse independently",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'Write that she lacks capacity so we can sell the house.' without first addressing immediate safety, dementia-related driving risk and impaired insight, and legal authority.\n- Identify the live decision: whether to notify driving authority and assess capacity/abuse independently.\n\nClinical formulation:\n- Formulate the case around dementia-related driving risk and impaired insight rather than a generic diagnostic list.\n- Link the patient's statement 'The road moved behind me.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address decision-specific capacity using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect public safety; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-032",
+    "topic": "old_age",
+    "difficulty": "consultant",
+    "title": "Delirium misdiagnosed as dementia with anticholinergic burden",
+    "candidateRole": "old age CL psychiatrist",
+    "setting": "Medical ward after falls and urinary retention",
+    "stem": "You are the old age CL psychiatrist. Medical ward after falls and urinary retention.\n\nMr Patel, a 78-year-old Gujarati-speaking man, became acutely confused after admission and is pulling lines. Mr Patel says, \"Thieves are taking my blood.\" \n\nMedical registrar says, \"He has dementia, please chart risperidone.\" Nurse asks, \"Can we restrain him overnight?\" Daughter says, \"Dad was shopping alone last week.\" He has only been assessed in English and has no hearing aids.\n\nWife says, \"He is terrified because no one speaks to him properly.\" You must decide whether to diagnose/treat delirium and reduce restraint/medication harm.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "dementia-label shortcut — unsafe shortcut under pressure",
+        "category": "risk_vulnerable",
+        "severity": "critical",
+        "clueInStem": "He has dementia, please chart risperidone.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass delirium with paranoid misperceptions, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'He has dementia, please chart risperidone.' without first formulating delirium with paranoid misperceptions, immediate safety and a defensible disposition.",
+        "keywords": [
+          "dementia-label shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "delirium with paranoid misperceptions — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "Thieves are taking my blood.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around delirium with paranoid misperceptions, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "delirium with paranoid misperceptions",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "restraint policy and delirium care — legal/policy hinge",
+        "category": "capacity",
+        "severity": "critical",
+        "clueInStem": "Can we restrain him overnight?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "restraint policy and delirium care",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "baseline collateral and reversibility — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "Dad was shopping alone last week.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect baseline collateral and reversibility, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "baseline collateral and reversibility",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "He is terrified because no one speaks to him properly.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to diagnose/treat delirium and reduce restraint/medication harm",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'He has dementia, please chart risperidone.' without first addressing immediate safety, delirium with paranoid misperceptions, and legal authority.\n- Identify the live decision: whether to diagnose/treat delirium and reduce restraint/medication harm.\n\nClinical formulation:\n- Formulate the case around delirium with paranoid misperceptions rather than a generic diagnostic list.\n- Link the patient's statement 'Thieves are taking my blood.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address restraint policy and delirium care using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect baseline collateral and reversibility; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-033",
+    "topic": "old_age",
+    "difficulty": "consultant",
+    "title": "Residential care BPSD and chemical restraint",
+    "candidateRole": "old age outreach psychiatrist",
+    "setting": "Residential aged care behaviour review",
+    "stem": "You are the old age outreach psychiatrist. Residential aged care behaviour review.\n\nMrs Nguyen, an 85-year-old Vietnamese-speaking woman, pushes staff away during showering and refuses meals. Mrs Nguyen says, \"I am ashamed; no men.\" \n\nFacility manager says, \"Approve regular quetiapine; staffing is short.\" GP asks, \"Is this consent if the EPOA agrees to sedation?\" Mrs Nguyen says, \"My wrists hurt.\" No interpreter has been used and male carers provide showering.\n\nDaughter says, \"She was a midwife and privacy mattered to her.\" You must decide whether to approve medication or require behaviour/safeguarding plan.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "chemical-restraint shortcut — unsafe shortcut under pressure",
+        "category": "risk_vulnerable",
+        "severity": "critical",
+        "clueInStem": "Approve regular quetiapine; staffing is short.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass cultural/modesty formulation of BPSD, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'Approve regular quetiapine; staffing is short.' without first formulating cultural/modesty formulation of BPSD, immediate safety and a defensible disposition.",
+        "keywords": [
+          "chemical-restraint shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "cultural/modesty formulation of BPSD — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "I am ashamed; no men.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around cultural/modesty formulation of BPSD, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "cultural/modesty formulation of BPSD",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "chemical restraint consent and policy — legal/policy hinge",
+        "category": "capacity",
+        "severity": "critical",
+        "clueInStem": "Is this consent if the EPOA agrees to sedation?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "chemical restraint consent and policy",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "restraint injury and vulnerable resident safety — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "My wrists hurt.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect restraint injury and vulnerable resident safety, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "restraint injury and vulnerable resident safety",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "She was a midwife and privacy mattered to her.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to approve medication or require behaviour/safeguarding plan",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'Approve regular quetiapine; staffing is short.' without first addressing immediate safety, cultural/modesty formulation of BPSD, and legal authority.\n- Identify the live decision: whether to approve medication or require behaviour/safeguarding plan.\n\nClinical formulation:\n- Formulate the case around cultural/modesty formulation of BPSD rather than a generic diagnostic list.\n- Link the patient's statement 'I am ashamed; no men.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address chemical restraint consent and policy using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect restraint injury and vulnerable resident safety; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-034",
+    "topic": "old_age",
+    "difficulty": "consultant",
+    "title": "ECT capacity and family media threat",
+    "candidateRole": "old age inpatient consultant",
+    "setting": "Older adult unit with severe psychotic depression",
+    "stem": "You are the old age inpatient consultant. Older adult unit with severe psychotic depression.\n\nMr O'Brien, a 75-year-old man, has lost 12 kg, refuses food and is recommended ECT. Mr O'Brien says, \"I deserve to die because I ruined my family.\" \n\nSon says, \"ECT is barbaric and I will go to the media.\" Registrar asks, \"Can his wife sign for ECT?\" Wife says, \"I cannot sign his brain away.\" He is Catholic and asks if ECT is punishment.\n\nMr O'Brien says, \"Do whatever she says; I cannot think.\" You must decide whether ECT can proceed and how to manage legal/family conflict.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "media-pressure shortcut — unsafe shortcut under pressure",
+        "category": "risk_vulnerable",
+        "severity": "critical",
+        "clueInStem": "ECT is barbaric and I will go to the media.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass psychotic depression with life-threatening self-neglect, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'ECT is barbaric and I will go to the media.' without first formulating psychotic depression with life-threatening self-neglect, immediate safety and a defensible disposition.",
+        "keywords": [
+          "media-pressure shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "psychotic depression with life-threatening self-neglect — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "I deserve to die because I ruined my family.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around psychotic depression with life-threatening self-neglect, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "psychotic depression with life-threatening self-neglect",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "ECT consent law and capacity — legal/policy hinge",
+        "category": "capacity",
+        "severity": "critical",
+        "clueInStem": "Can his wife sign for ECT?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "ECT consent law and capacity",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "carer distress and substitute pressure — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "I cannot sign his brain away.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect carer distress and substitute pressure, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "carer distress and substitute pressure",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "Do whatever she says; I cannot think.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether ECT can proceed and how to manage legal/family conflict",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'ECT is barbaric and I will go to the media.' without first addressing immediate safety, psychotic depression with life-threatening self-neglect, and legal authority.\n- Identify the live decision: whether ECT can proceed and how to manage legal/family conflict.\n\nClinical formulation:\n- Formulate the case around psychotic depression with life-threatening self-neglect rather than a generic diagnostic list.\n- Link the patient's statement 'I deserve to die because I ruined my family.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address ECT consent law and capacity using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect carer distress and substitute pressure; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-035",
+    "topic": "old_age",
+    "difficulty": "consultant",
+    "title": "End-of-life refusal and family disagreement",
+    "candidateRole": "palliative CL psychiatrist",
+    "setting": "Oncology ward with bowel obstruction",
+    "stem": "You are the palliative CL psychiatrist. Oncology ward with bowel obstruction.\n\nMrs Davies, an 80-year-old woman, has metastatic cancer and refuses high-risk palliative surgery. Mrs Davies says, \"More days in ICU is not living.\" \n\nSon says, \"She is depressed; make her have surgery.\" Surgeon asks, \"Can you declare incapacity so we can operate?\" Daughter says, \"She always said no machines.\" She is a devout Buddhist and asks for her monk.\n\nSon says, \"Our family cannot accept giving up.\" You must decide whether refusal is capacitous and how to support family/goals of care.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "family-coercion shortcut — unsafe shortcut under pressure",
+        "category": "risk_vulnerable",
+        "severity": "critical",
+        "clueInStem": "She is depressed; make her have surgery.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass values-based refusal of life-prolonging treatment, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'She is depressed; make her have surgery.' without first formulating values-based refusal of life-prolonging treatment, immediate safety and a defensible disposition.",
+        "keywords": [
+          "family-coercion shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "values-based refusal of life-prolonging treatment — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "More days in ICU is not living.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around values-based refusal of life-prolonging treatment, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "values-based refusal of life-prolonging treatment",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "capacity to refuse life-saving treatment — legal/policy hinge",
+        "category": "capacity",
+        "severity": "critical",
+        "clueInStem": "Can you declare incapacity so we can operate?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "capacity to refuse life-saving treatment",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "prior wishes collateral — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "She always said no machines.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect prior wishes collateral, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "prior wishes collateral",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "Our family cannot accept giving up.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether refusal is capacitous and how to support family/goals of care",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'She is depressed; make her have surgery.' without first addressing immediate safety, values-based refusal of life-prolonging treatment, and legal authority.\n- Identify the live decision: whether refusal is capacitous and how to support family/goals of care.\n\nClinical formulation:\n- Formulate the case around values-based refusal of life-prolonging treatment rather than a generic diagnostic list.\n- Link the patient's statement 'More days in ICU is not living.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address capacity to refuse life-saving treatment using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect prior wishes collateral; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-036",
+    "topic": "old_age",
+    "difficulty": "consultant",
+    "title": "Self-neglect, diabetes and refusal of help",
+    "candidateRole": "old age community psychiatrist",
+    "setting": "Urgent home visit with GP and council",
+    "stem": "You are the old age community psychiatrist. Urgent home visit with GP and council.\n\nMrs Singh, a 79-year-old widow, lives alone with spoiled food, urine smell and missed insulin. Mrs Singh says, \"Everyone should mind their own business.\" \n\nCouncil worker says, \"If she refuses, we close the case.\" GP asks, \"Can we admit her against her will?\" Neighbour says, \"Her door is open all night.\" Her daughter overseas says independence is everything in their culture.\n\nMrs Singh says, \"My husband handled medicines; he is still coming back.\" You must decide whether she has capacity and what least restrictive safeguarding is needed.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "refusal-as-closure shortcut — unsafe shortcut under pressure",
+        "category": "risk_vulnerable",
+        "severity": "critical",
+        "clueInStem": "If she refuses, we close the case.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass self-neglect with possible impaired capacity, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'If she refuses, we close the case.' without first formulating self-neglect with possible impaired capacity, immediate safety and a defensible disposition.",
+        "keywords": [
+          "refusal-as-closure shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "self-neglect with possible impaired capacity — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "Everyone should mind their own business.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around self-neglect with possible impaired capacity, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "self-neglect with possible impaired capacity",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "capacity/refusal and guardianship — legal/policy hinge",
+        "category": "capacity",
+        "severity": "critical",
+        "clueInStem": "Can we admit her against her will?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "capacity/refusal and guardianship",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "vulnerability and environmental risk — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "Her door is open all night.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect vulnerability and environmental risk, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "vulnerability and environmental risk",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "My husband handled medicines; he is still coming back.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether she has capacity and what least restrictive safeguarding is needed",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'If she refuses, we close the case.' without first addressing immediate safety, self-neglect with possible impaired capacity, and legal authority.\n- Identify the live decision: whether she has capacity and what least restrictive safeguarding is needed.\n\nClinical formulation:\n- Formulate the case around self-neglect with possible impaired capacity rather than a generic diagnostic list.\n- Link the patient's statement 'Everyone should mind their own business.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address capacity/refusal and guardianship using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect vulnerability and environmental risk; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-037",
+    "topic": "old_age",
+    "difficulty": "consultant",
+    "title": "Late-onset psychosis or elder abuse",
+    "candidateRole": "old age psychiatrist",
+    "setting": "Community urgent review after police call",
+    "stem": "You are the old age psychiatrist. Community urgent review after police call.\n\nMr Green, an 81-year-old man, believes his carer is stealing and has barricaded himself inside. Mr Green says, \"She is poisoning my tea to get the house.\" \n\nCarer says, \"He is demented; sedate him so I can manage.\" Police asks, \"Can we force entry under mental health powers?\" Mr Green says, \"I have bruises but I fall.\" He is from a veteran community and distrusts government services.\n\nNeighbour says, \"The carer changed the locks last month.\" You must decide whether to assess psychosis, capacity and elder abuse safely.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "carer-convenience sedation shortcut — unsafe shortcut under pressure",
+        "category": "risk_vulnerable",
+        "severity": "critical",
+        "clueInStem": "He is demented; sedate him so I can manage.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass paranoia versus possible elder abuse, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'He is demented; sedate him so I can manage.' without first formulating paranoia versus possible elder abuse, immediate safety and a defensible disposition.",
+        "keywords": [
+          "carer-convenience sedation shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "paranoia versus possible elder abuse — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "She is poisoning my tea to get the house.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around paranoia versus possible elder abuse, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "paranoia versus possible elder abuse",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "MHA and emergency access — legal/policy hinge",
+        "category": "capacity",
+        "severity": "critical",
+        "clueInStem": "Can we force entry under mental health powers?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "MHA and emergency access",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "possible vulnerable adult abuse — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "I have bruises but I fall.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect possible vulnerable adult abuse, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "possible vulnerable adult abuse",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "The carer changed the locks last month.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to assess psychosis, capacity and elder abuse safely",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'He is demented; sedate him so I can manage.' without first addressing immediate safety, paranoia versus possible elder abuse, and legal authority.\n- Identify the live decision: whether to assess psychosis, capacity and elder abuse safely.\n\nClinical formulation:\n- Formulate the case around paranoia versus possible elder abuse rather than a generic diagnostic list.\n- Link the patient's statement 'She is poisoning my tea to get the house.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address MHA and emergency access using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect possible vulnerable adult abuse; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-038",
+    "topic": "old_age",
+    "difficulty": "consultant",
+    "title": "Migrant elder refusing residential care after wandering",
+    "candidateRole": "old age psychiatrist",
+    "setting": "Geriatric ward discharge meeting",
+    "stem": "You are the old age psychiatrist. Geriatric ward discharge meeting.\n\nMrs Haddad, an 84-year-old Arabic-speaking woman, has dementia and was found at a train station trying to go to her childhood home overseas. Mrs Haddad says, \"My real home is not this place.\" \n\nSon says, \"Just keep her here until the nursing home bed opens.\" Social worker asks, \"Do we need guardianship if family agree?\" Grandchild says, \"She leaves the stove on when we sleep.\" No interpreter has been used because family prefer to translate.\n\nDaughter says, \"Residential care will shame us in our community.\" You must decide whether she has accommodation capacity and safest lawful discharge.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "hospital-as-holding shortcut — unsafe shortcut under pressure",
+        "category": "risk_vulnerable",
+        "severity": "critical",
+        "clueInStem": "Just keep her here until the nursing home bed opens.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass dementia, grief and displacement affecting capacity, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'Just keep her here until the nursing home bed opens.' without first formulating dementia, grief and displacement affecting capacity, immediate safety and a defensible disposition.",
+        "keywords": [
+          "hospital-as-holding shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "dementia, grief and displacement affecting capacity — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "My real home is not this place.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around dementia, grief and displacement affecting capacity, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "dementia, grief and displacement affecting capacity",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "guardianship and accommodation capacity — legal/policy hinge",
+        "category": "capacity",
+        "severity": "critical",
+        "clueInStem": "Do we need guardianship if family agree?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "guardianship and accommodation capacity",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "home safety risk — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "She leaves the stove on when we sleep.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect home safety risk, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "home safety risk",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "Residential care will shame us in our community.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether she has accommodation capacity and safest lawful discharge",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'Just keep her here until the nursing home bed opens.' without first addressing immediate safety, dementia, grief and displacement affecting capacity, and legal authority.\n- Identify the live decision: whether she has accommodation capacity and safest lawful discharge.\n\nClinical formulation:\n- Formulate the case around dementia, grief and displacement affecting capacity rather than a generic diagnostic list.\n- Link the patient's statement 'My real home is not this place.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address guardianship and accommodation capacity using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect home safety risk; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-039",
+    "topic": "old_age",
+    "difficulty": "consultant",
+    "title": "Older man with firearms, depression and rural culture",
+    "candidateRole": "old age psychiatrist",
+    "setting": "Rural GP urgent consult",
+    "stem": "You are the old age psychiatrist. Rural GP urgent consult.\n\nBill, a 76-year-old farmer, has depression after drought and refuses to surrender firearms. Bill says, \"A man without his rifle is already dead.\" \n\nGP says, \"He denies suicidal thoughts, so I cannot push it.\" Police asks, \"What is our authority around firearms?\" Wife says, \"He sits in the shed with the gun safe open.\" Firearms are central to his rural identity and community status.\n\nBill says, \"Do not tell the neighbours I am seeing psychiatry.\" You must decide whether to manage firearm access, suicide risk and confidentiality.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "denial-of-SI shortcut — unsafe shortcut under pressure",
+        "category": "risk_vulnerable",
+        "severity": "critical",
+        "clueInStem": "He denies suicidal thoughts, so I cannot push it.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass suicide risk and identity tied to firearms, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'He denies suicidal thoughts, so I cannot push it.' without first formulating suicide risk and identity tied to firearms, immediate safety and a defensible disposition.",
+        "keywords": [
+          "denial-of-SI shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "suicide risk and identity tied to firearms — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "A man without his rifle is already dead.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around suicide risk and identity tied to firearms, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "suicide risk and identity tied to firearms",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "public safety/firearms legal pathway — legal/policy hinge",
+        "category": "capacity",
+        "severity": "critical",
+        "clueInStem": "What is our authority around firearms?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "public safety/firearms legal pathway",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "immediate family safety concern — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "He sits in the shed with the gun safe open.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect immediate family safety concern, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "immediate family safety concern",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "Do not tell the neighbours I am seeing psychiatry.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to manage firearm access, suicide risk and confidentiality",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'He denies suicidal thoughts, so I cannot push it.' without first addressing immediate safety, suicide risk and identity tied to firearms, and legal authority.\n- Identify the live decision: whether to manage firearm access, suicide risk and confidentiality.\n\nClinical formulation:\n- Formulate the case around suicide risk and identity tied to firearms rather than a generic diagnostic list.\n- Link the patient's statement 'A man without his rifle is already dead.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address public safety/firearms legal pathway using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect immediate family safety concern; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-040",
+    "topic": "old_age",
+    "difficulty": "consultant",
+    "title": "Capacity for financial decision with fluctuating delirium",
+    "candidateRole": "old age CL psychiatrist",
+    "setting": "Surgical ward after hip fracture",
+    "stem": "You are the old age CL psychiatrist. Surgical ward after hip fracture.\n\nMrs Rossi, an 88-year-old Italian-speaking woman, is delirious post-operatively and her nephew brings property transfer papers. Mrs Rossi says, \"I don't know what I signed; I was in pain.\" \n\nNephew says, \"She agreed yesterday; just witness it.\" Nurse asks, \"Can we stop visitors if we suspect exploitation?\" Mrs Rossi says, \"My pension card is missing.\" No interpreter was used and the nephew speaks for her.\n\nNephew says, \"In our family we handle these things privately.\" You must decide whether to assess capacity, protect records and escalate abuse concerns.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "witnessing-signature shortcut — unsafe shortcut under pressure",
+        "category": "risk_vulnerable",
+        "severity": "critical",
+        "clueInStem": "She agreed yesterday; just witness it.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass delirium and financial capacity vulnerability, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'She agreed yesterday; just witness it.' without first formulating delirium and financial capacity vulnerability, immediate safety and a defensible disposition.",
+        "keywords": [
+          "witnessing-signature shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "delirium and financial capacity vulnerability — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "I don't know what I signed; I was in pain.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around delirium and financial capacity vulnerability, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "delirium and financial capacity vulnerability",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "safeguarding and visitor restriction — legal/policy hinge",
+        "category": "capacity",
+        "severity": "critical",
+        "clueInStem": "Can we stop visitors if we suspect exploitation?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "safeguarding and visitor restriction",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "possible financial exploitation — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "My pension card is missing.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect possible financial exploitation, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "possible financial exploitation",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "In our family we handle these things privately.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to assess capacity, protect records and escalate abuse concerns",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'She agreed yesterday; just witness it.' without first addressing immediate safety, delirium and financial capacity vulnerability, and legal authority.\n- Identify the live decision: whether to assess capacity, protect records and escalate abuse concerns.\n\nClinical formulation:\n- Formulate the case around delirium and financial capacity vulnerability rather than a generic diagnostic list.\n- Link the patient's statement 'I don't know what I signed; I was in pain.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address safeguarding and visitor restriction using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect possible financial exploitation; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-041",
+    "topic": "cl_psychiatry",
+    "difficulty": "consultant",
+    "title": "Cancer refusal with depressive guilt",
+    "candidateRole": "psycho-oncology CL consultant",
+    "setting": "Oncology ward urgent chemotherapy decision",
+    "stem": "You are the psycho-oncology CL consultant. Oncology ward urgent chemotherapy decision.\n\nMaria, a 46-year-old woman with newly diagnosed lymphoma, refuses curative chemotherapy amid severe depression. Maria says, \"I deserve this cancer; treatment is wasted on me.\" \n\nOncologist says, \"Delay will reduce cure; can we override her?\" Registrar asks, \"Does depression automatically remove capacity?\" Husband says, \"Last month she was begging to start treatment.\" Her mother prefers traditional healer remedies from their community.\n\nMaria says, \"Do not involve my husband; he should find someone better.\" You must decide whether refusal is capacitous and how to treat depression urgently.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "override-without-process shortcut — unsafe shortcut under pressure",
+        "category": "physical_health",
+        "severity": "critical",
+        "clueInStem": "Delay will reduce cure; can we override her?",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass depression impairing capacity to refuse chemotherapy, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'Delay will reduce cure; can we override her?' without first formulating depression impairing capacity to refuse chemotherapy, immediate safety and a defensible disposition.",
+        "keywords": [
+          "override-without-process shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "depression impairing capacity to refuse chemotherapy — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "I deserve this cancer; treatment is wasted on me.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around depression impairing capacity to refuse chemotherapy, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "depression impairing capacity to refuse chemotherapy",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "capacity and substitute decision pathway — legal/policy hinge",
+        "category": "capacity",
+        "severity": "critical",
+        "clueInStem": "Does depression automatically remove capacity?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "capacity and substitute decision pathway",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "state-dependent refusal collateral — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "Last month she was begging to start treatment.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect state-dependent refusal collateral, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "state-dependent refusal collateral",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "Do not involve my husband; he should find someone better.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether refusal is capacitous and how to treat depression urgently",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'Delay will reduce cure; can we override her?' without first addressing immediate safety, depression impairing capacity to refuse chemotherapy, and legal authority.\n- Identify the live decision: whether refusal is capacitous and how to treat depression urgently.\n\nClinical formulation:\n- Formulate the case around depression impairing capacity to refuse chemotherapy rather than a generic diagnostic list.\n- Link the patient's statement 'I deserve this cancer; treatment is wasted on me.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address capacity and substitute decision pathway using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect state-dependent refusal collateral; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-042",
+    "topic": "cl_psychiatry",
+    "difficulty": "consultant",
+    "title": "ICU fluctuating capacity and family demanding everything",
+    "candidateRole": "ICU CL psychiatrist",
+    "setting": "ICU family meeting after septic shock",
+    "stem": "You are the ICU CL psychiatrist. ICU family meeting after septic shock.\n\nMr Singh, a 62-year-old Punjabi-speaking man, is intermittently awake after multi-organ failure and gives inconsistent wishes. Mr Singh says, \"No more tubes; let me go.\" \n\nWife says, \"Our faith says you must continue everything.\" ICU consultant asks, \"Can he refuse dialysis today?\" Daughter says, \"He said he never wanted machines.\" Family has interpreted because staff say he understands enough English.\n\nSon says, \"Stopping treatment is killing him.\" You must decide whether to determine capacity and guide goals-of-care lawfully.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "religious-demand shortcut — unsafe shortcut under pressure",
+        "category": "physical_health",
+        "severity": "critical",
+        "clueInStem": "Our faith says you must continue everything.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass fluctuating ICU capacity and possible delirium, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'Our faith says you must continue everything.' without first formulating fluctuating ICU capacity and possible delirium, immediate safety and a defensible disposition.",
+        "keywords": [
+          "religious-demand shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "fluctuating ICU capacity and possible delirium — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "No more tubes; let me go.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around fluctuating ICU capacity and possible delirium, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "fluctuating ICU capacity and possible delirium",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "capacity for life-sustaining treatment — legal/policy hinge",
+        "category": "capacity",
+        "severity": "critical",
+        "clueInStem": "Can he refuse dialysis today?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "capacity for life-sustaining treatment",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "prior wishes conflict — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "He said he never wanted machines.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect prior wishes conflict, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "prior wishes conflict",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "Stopping treatment is killing him.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to determine capacity and guide goals-of-care lawfully",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'Our faith says you must continue everything.' without first addressing immediate safety, fluctuating ICU capacity and possible delirium, and legal authority.\n- Identify the live decision: whether to determine capacity and guide goals-of-care lawfully.\n\nClinical formulation:\n- Formulate the case around fluctuating ICU capacity and possible delirium rather than a generic diagnostic list.\n- Link the patient's statement 'No more tubes; let me go.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address capacity for life-sustaining treatment using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect prior wishes conflict; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-043",
+    "topic": "cl_psychiatry",
+    "difficulty": "consultant",
+    "title": "Chronic pain opioid dependence and staff splitting",
+    "candidateRole": "CL pain psychiatrist",
+    "setting": "Surgical ward after repeated negative investigations",
+    "stem": "You are the CL pain psychiatrist. Surgical ward after repeated negative investigations.\n\nRosa, a 39-year-old woman with chronic abdominal pain, requests IV fentanyl while on high-dose oxycodone. Rosa says, \"No one believes me because I have trauma and take opioids.\" \n\nSurgical registrar says, \"She is manipulating us.\" Pain team asks, \"Can we stop all opioids today?\" Partner says, \"She will buy tablets on the street.\" Male staff examinations trigger flashbacks from childhood sexual abuse.\n\nNurse says, \"Half the team gives extra doses and half refuses.\" You must decide whether to create a unified trauma-informed pain/addiction plan.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "stigma shortcut — unsafe shortcut under pressure",
+        "category": "physical_health",
+        "severity": "critical",
+        "clueInStem": "She is manipulating us.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass functional pain, trauma and opioid dependence, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'She is manipulating us.' without first formulating functional pain, trauma and opioid dependence, immediate safety and a defensible disposition.",
+        "keywords": [
+          "stigma shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "functional pain, trauma and opioid dependence — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "No one believes me because I have trauma and take opioids.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around functional pain, trauma and opioid dependence, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "functional pain, trauma and opioid dependence",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "opioid withdrawal and harm reduction — legal/policy hinge",
+        "category": "capacity",
+        "severity": "critical",
+        "clueInStem": "Can we stop all opioids today?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "opioid withdrawal and harm reduction",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "overdose/illicit use risk — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "She will buy tablets on the street.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect overdose/illicit use risk, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "overdose/illicit use risk",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "Half the team gives extra doses and half refuses.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to create a unified trauma-informed pain/addiction plan",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'She is manipulating us.' without first addressing immediate safety, functional pain, trauma and opioid dependence, and legal authority.\n- Identify the live decision: whether to create a unified trauma-informed pain/addiction plan.\n\nClinical formulation:\n- Formulate the case around functional pain, trauma and opioid dependence rather than a generic diagnostic list.\n- Link the patient's statement 'No one believes me because I have trauma and take opioids.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address opioid withdrawal and harm reduction using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect overdose/illicit use risk; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-044",
+    "topic": "cl_psychiatry",
+    "difficulty": "consultant",
+    "title": "Transplant listing and alcohol relapse",
+    "candidateRole": "transplant psychiatry consultant",
+    "setting": "Liver transplant selection meeting",
+    "stem": "You are the transplant psychiatry consultant. Liver transplant selection meeting.\n\nPeter, a 51-year-old man with cirrhosis, has relapsed to alcohol while being assessed for transplant. Peter says, \"If I am not listed, I may as well drink myself to death.\" \n\nHepatologist says, \"He broke the rules; decline him.\" Coordinator asks, \"Can psychiatry certify motivation?\" Wife says, \"I hide bottles because I cannot watch him die.\" Peter is from a community where alcohol use is hidden due to shame.\n\nBrother says, \"Do not put alcoholism in the letter.\" You must decide whether to balance transplant candidacy, addiction treatment and risk.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "punitive-delisting shortcut — unsafe shortcut under pressure",
+        "category": "physical_health",
+        "severity": "critical",
+        "clueInStem": "He broke the rules; decline him.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass suicide risk and alcohol use in transplant context, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'He broke the rules; decline him.' without first formulating suicide risk and alcohol use in transplant context, immediate safety and a defensible disposition.",
+        "keywords": [
+          "punitive-delisting shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "suicide risk and alcohol use in transplant context — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "If I am not listed, I may as well drink myself to death.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around suicide risk and alcohol use in transplant context, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "suicide risk and alcohol use in transplant context",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "transplant ethics and capacity of commitment — legal/policy hinge",
+        "category": "capacity",
+        "severity": "critical",
+        "clueInStem": "Can psychiatry certify motivation?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "transplant ethics and capacity of commitment",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "carer burnout and safety — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "I hide bottles because I cannot watch him die.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect carer burnout and safety, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "carer burnout and safety",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "Do not put alcoholism in the letter.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to balance transplant candidacy, addiction treatment and risk",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'He broke the rules; decline him.' without first addressing immediate safety, suicide risk and alcohol use in transplant context, and legal authority.\n- Identify the live decision: whether to balance transplant candidacy, addiction treatment and risk.\n\nClinical formulation:\n- Formulate the case around suicide risk and alcohol use in transplant context rather than a generic diagnostic list.\n- Link the patient's statement 'If I am not listed, I may as well drink myself to death.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address transplant ethics and capacity of commitment using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect carer burnout and safety; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-045",
+    "topic": "cl_psychiatry",
+    "difficulty": "consultant",
+    "title": "Functional seizures and unsafe discharge conflict",
+    "candidateRole": "CL psychiatrist",
+    "setting": "Neurology ward with repeated functional seizure admissions",
+    "stem": "You are the CL psychiatrist. Neurology ward with repeated functional seizure admissions.\n\nAnika, a 22-year-old woman, has functional seizures after trauma and is demanding ICU monitoring. Anika says, \"If you discharge me, you are saying I am faking.\" \n\nNeurology registrar says, \"There is nothing neurological, discharge her.\" ED asks, \"Can we refuse future ambulances?\" Mother says, \"She stops breathing at home and I panic.\" Anika's community views psychological illness as weakness.\n\nNurse says, \"Staff are exhausted and do not know what to do.\" You must decide whether to provide safe explanation, plan and non-iatrogenic disposition.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "dismissive-discharge shortcut — unsafe shortcut under pressure",
+        "category": "physical_health",
+        "severity": "critical",
+        "clueInStem": "There is nothing neurological, discharge her.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass functional neurological disorder with validation challenge, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'There is nothing neurological, discharge her.' without first formulating functional neurological disorder with validation challenge, immediate safety and a defensible disposition.",
+        "keywords": [
+          "dismissive-discharge shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "functional neurological disorder with validation challenge — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "If you discharge me, you are saying I am faking.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around functional neurological disorder with validation challenge, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "functional neurological disorder with validation challenge",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "policy/ethics around frequent presentations — legal/policy hinge",
+        "category": "capacity",
+        "severity": "critical",
+        "clueInStem": "Can we refuse future ambulances?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "policy/ethics around frequent presentations",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "family anxiety and safety-seeking — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "She stops breathing at home and I panic.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect family anxiety and safety-seeking, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "family anxiety and safety-seeking",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "Staff are exhausted and do not know what to do.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to provide safe explanation, plan and non-iatrogenic disposition",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'There is nothing neurological, discharge her.' without first addressing immediate safety, functional neurological disorder with validation challenge, and legal authority.\n- Identify the live decision: whether to provide safe explanation, plan and non-iatrogenic disposition.\n\nClinical formulation:\n- Formulate the case around functional neurological disorder with validation challenge rather than a generic diagnostic list.\n- Link the patient's statement 'If you discharge me, you are saying I am faking.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address policy/ethics around frequent presentations using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect family anxiety and safety-seeking; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-046",
+    "topic": "cl_psychiatry",
+    "difficulty": "consultant",
+    "title": "Eating disorder on medical ward resisting refeeding",
+    "candidateRole": "CL psychiatrist",
+    "setting": "Medical ward managing severe electrolyte disturbance",
+    "stem": "You are the CL psychiatrist. Medical ward managing severe electrolyte disturbance.\n\nTara, a 24-year-old woman with anorexia, has hypophosphataemia and refuses phosphate and feeds. Tara says, \"A low phosphate is proof I am finally clean.\" \n\nMedical team says, \"She is adult and refusing; can we discharge?\" Registrar asks, \"Can we use the MHA for refeeding?\" Partner says, \"She faints when she showers.\" Tara is a competitive dancer and her community praises thinness.\n\nDietitian says, \"She bargains every gram of feed.\" You must decide whether to treat medically against refusal and with what legal safeguards.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "autonomy-discharge shortcut — unsafe shortcut under pressure",
+        "category": "physical_health",
+        "severity": "critical",
+        "clueInStem": "She is adult and refusing; can we discharge?",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass anorexic cognition and medical risk, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'She is adult and refusing; can we discharge?' without first formulating anorexic cognition and medical risk, immediate safety and a defensible disposition.",
+        "keywords": [
+          "autonomy-discharge shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "anorexic cognition and medical risk — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "A low phosphate is proof I am finally clean.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around anorexic cognition and medical risk, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "anorexic cognition and medical risk",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "legal basis for compulsory treatment — legal/policy hinge",
+        "category": "capacity",
+        "severity": "critical",
+        "clueInStem": "Can we use the MHA for refeeding?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "legal basis for compulsory treatment",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "immediate medical vulnerability — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "She faints when she showers.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect immediate medical vulnerability, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "immediate medical vulnerability",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "She bargains every gram of feed.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to treat medically against refusal and with what legal safeguards",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'She is adult and refusing; can we discharge?' without first addressing immediate safety, anorexic cognition and medical risk, and legal authority.\n- Identify the live decision: whether to treat medically against refusal and with what legal safeguards.\n\nClinical formulation:\n- Formulate the case around anorexic cognition and medical risk rather than a generic diagnostic list.\n- Link the patient's statement 'A low phosphate is proof I am finally clean.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address legal basis for compulsory treatment using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect immediate medical vulnerability; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-047",
+    "topic": "cl_psychiatry",
+    "difficulty": "consultant",
+    "title": "Delirium, restraint and family complaint",
+    "candidateRole": "CL old age psychiatrist",
+    "setting": "Orthopaedic ward after hip surgery",
+    "stem": "You are the CL old age psychiatrist. Orthopaedic ward after hip surgery.\n\nMr Wilson, an 83-year-old man, is hallucinating and pulling drains after oxycodone and urinary retention. Mr Wilson says, \"There are rats in the walls.\" \n\nOrthopaedic registrar says, \"Chart haloperidol so he stops delaying rehab.\" Daughter asks, \"Why is he tied to the bed?\" Patient says, \"I cannot hear anyone.\" His hearing aids are in the bedside drawer and no family member was called.\n\nNUM says, \"We do not have staff for one-to-one.\" You must decide whether to treat delirium causes and reduce restraint under system pressure.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "sedation-for-flow shortcut — unsafe shortcut under pressure",
+        "category": "physical_health",
+        "severity": "critical",
+        "clueInStem": "Chart haloperidol so he stops delaying rehab.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass postoperative delirium, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'Chart haloperidol so he stops delaying rehab.' without first formulating postoperative delirium, immediate safety and a defensible disposition.",
+        "keywords": [
+          "sedation-for-flow shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "postoperative delirium — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "There are rats in the walls.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around postoperative delirium, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "postoperative delirium",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "restraint governance and least restrictive care — legal/policy hinge",
+        "category": "capacity",
+        "severity": "critical",
+        "clueInStem": "Why is he tied to the bed?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "restraint governance and least restrictive care",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "sensory impairment vulnerability — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "I cannot hear anyone.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect sensory impairment vulnerability, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "sensory impairment vulnerability",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "We do not have staff for one-to-one.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to treat delirium causes and reduce restraint under system pressure",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'Chart haloperidol so he stops delaying rehab.' without first addressing immediate safety, postoperative delirium, and legal authority.\n- Identify the live decision: whether to treat delirium causes and reduce restraint under system pressure.\n\nClinical formulation:\n- Formulate the case around postoperative delirium rather than a generic diagnostic list.\n- Link the patient's statement 'There are rats in the walls.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address restraint governance and least restrictive care using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect sensory impairment vulnerability; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-048",
+    "topic": "cl_psychiatry",
+    "difficulty": "consultant",
+    "title": "Capacity after stroke and aphasia",
+    "candidateRole": "CL psychiatrist",
+    "setting": "Stroke unit discharge planning meeting",
+    "stem": "You are the CL psychiatrist. Stroke unit discharge planning meeting.\n\nMr Liu, a 68-year-old Mandarin-speaking man with aphasia, refuses rehabilitation and points toward the exit. Mr Liu says, \"Home, home, no hospital.\" \n\nRehab consultant says, \"He lacks capacity because he cannot explain.\" Wife asks, \"Can I sign him into rehab?\" Son says, \"He falls whenever he stands.\" No speech pathologist or interpreter has assisted the capacity assessment.\n\nWife says, \"In our family, I decide health matters.\" You must decide whether capacity can be assessed with communication supports and how to plan rehab.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "aphasia-incapacity shortcut — unsafe shortcut under pressure",
+        "category": "physical_health",
+        "severity": "critical",
+        "clueInStem": "He lacks capacity because he cannot explain.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass communication impairment versus refusal, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'He lacks capacity because he cannot explain.' without first formulating communication impairment versus refusal, immediate safety and a defensible disposition.",
+        "keywords": [
+          "aphasia-incapacity shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "communication impairment versus refusal — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "Home, home, no hospital.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around communication impairment versus refusal, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "communication impairment versus refusal",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "substitute decision-making — legal/policy hinge",
+        "category": "capacity",
+        "severity": "critical",
+        "clueInStem": "Can I sign him into rehab?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "substitute decision-making",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "physical vulnerability — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "He falls whenever he stands.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect physical vulnerability, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "physical vulnerability",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "In our family, I decide health matters.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether capacity can be assessed with communication supports and how to plan reh",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'He lacks capacity because he cannot explain.' without first addressing immediate safety, communication impairment versus refusal, and legal authority.\n- Identify the live decision: whether capacity can be assessed with communication supports and how to plan rehab.\n\nClinical formulation:\n- Formulate the case around communication impairment versus refusal rather than a generic diagnostic list.\n- Link the patient's statement 'Home, home, no hospital.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address substitute decision-making using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect physical vulnerability; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-049",
+    "topic": "cl_psychiatry",
+    "difficulty": "consultant",
+    "title": "Cardiac device deactivation request",
+    "candidateRole": "CL psychiatrist",
+    "setting": "Cardiology ward ethics consult",
+    "stem": "You are the CL psychiatrist. Cardiology ward ethics consult.\n\nMr Allen, a 59-year-old man with end-stage heart failure, requests ICD deactivation after repeated shocks. Mr Allen says, \"Every shock feels like being tortured back to life.\" \n\nDaughter says, \"Turning it off is suicide; stop him.\" Cardiologist asks, \"Can psychiatry clear capacity today?\" Wife says, \"He has said this for months.\" He is a veteran and says endurance is valued in his community.\n\nChaplain says, \"The family wants spiritual guidance first.\" You must decide whether request is capacitous and how to support family/ethics.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "suicide-label shortcut — unsafe shortcut under pressure",
+        "category": "physical_health",
+        "severity": "critical",
+        "clueInStem": "Turning it off is suicide; stop him.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass values-based refusal of device therapy, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'Turning it off is suicide; stop him.' without first formulating values-based refusal of device therapy, immediate safety and a defensible disposition.",
+        "keywords": [
+          "suicide-label shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "values-based refusal of device therapy — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "Every shock feels like being tortured back to life.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around values-based refusal of device therapy, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "values-based refusal of device therapy",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "capacity for device deactivation — legal/policy hinge",
+        "category": "capacity",
+        "severity": "critical",
+        "clueInStem": "Can psychiatry clear capacity today?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "capacity for device deactivation",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "stable preference collateral — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "He has said this for months.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect stable preference collateral, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "stable preference collateral",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "The family wants spiritual guidance first.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether request is capacitous and how to support family/ethics",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'Turning it off is suicide; stop him.' without first addressing immediate safety, values-based refusal of device therapy, and legal authority.\n- Identify the live decision: whether request is capacitous and how to support family/ethics.\n\nClinical formulation:\n- Formulate the case around values-based refusal of device therapy rather than a generic diagnostic list.\n- Link the patient's statement 'Every shock feels like being tortured back to life.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address capacity for device deactivation using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect stable preference collateral; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-050",
+    "topic": "cl_psychiatry",
+    "difficulty": "consultant",
+    "title": "HIV treatment refusal and psychosis",
+    "candidateRole": "CL psychiatrist",
+    "setting": "Infectious diseases ward",
+    "stem": "You are the CL psychiatrist. Infectious diseases ward.\n\nMichael, a 33-year-old man with HIV and psychosis, refuses antiretrovirals and believes tablets broadcast his location. Michael says, \"The tablets tell the government where I am.\" \n\nID consultant says, \"Just depot him and restart antivirals.\" Registrar asks, \"Can MHA force HIV treatment?\" Partner says, \"He has not told his family his status.\" Michael is from a community with severe HIV stigma.\n\nNurse says, \"He wants to leave before results come back.\" You must decide whether capacity is impaired and what legal/ethical path applies.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "treatment-collapse shortcut — unsafe shortcut under pressure",
+        "category": "physical_health",
+        "severity": "critical",
+        "clueInStem": "Just depot him and restart antivirals.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass psychosis impairing medical treatment decisions, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'Just depot him and restart antivirals.' without first formulating psychosis impairing medical treatment decisions, immediate safety and a defensible disposition.",
+        "keywords": [
+          "treatment-collapse shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "psychosis impairing medical treatment decisions — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "The tablets tell the government where I am.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around psychosis impairing medical treatment decisions, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "psychosis impairing medical treatment decisions",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "MHA versus medical treatment authority — legal/policy hinge",
+        "category": "capacity",
+        "severity": "critical",
+        "clueInStem": "Can MHA force HIV treatment?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "MHA versus medical treatment authority",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "confidentiality and partner safety — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "He has not told his family his status.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect confidentiality and partner safety, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "confidentiality and partner safety",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "He wants to leave before results come back.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether capacity is impaired and what legal/ethical path applies",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'Just depot him and restart antivirals.' without first addressing immediate safety, psychosis impairing medical treatment decisions, and legal authority.\n- Identify the live decision: whether capacity is impaired and what legal/ethical path applies.\n\nClinical formulation:\n- Formulate the case around psychosis impairing medical treatment decisions rather than a generic diagnostic list.\n- Link the patient's statement 'The tablets tell the government where I am.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address MHA versus medical treatment authority using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect confidentiality and partner safety; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-051",
+    "topic": "forensic",
+    "difficulty": "consultant",
+    "title": "Erotomanic stalking with identified victim",
+    "candidateRole": "community forensic psychiatrist",
+    "setting": "Urgent CMHT risk meeting",
+    "stem": "You are the community forensic psychiatrist. Urgent CMHT risk meeting.\n\nMarcus, a 44-year-old man with schizophrenia, has sent hundreds of messages to a newsreader and attended the studio twice. Marcus says, \"She smiles because she knows I am watching.\" \n\nCase manager says, \"He denies intent, so confidentiality prevents warning.\" Police asks, \"We need a direct threat before acting.\" The husband says, \"He is the obstacle; obstacles get removed.\" Marcus has stopped depot and is drinking again.\n\nMarcus says, \"I just need five minutes alone with her.\" You must decide whether to breach confidentiality, use MHA/CTO, and protect victims.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "confidentiality shortcut — unsafe shortcut under pressure",
+        "category": "risk_others",
+        "severity": "critical",
+        "clueInStem": "He denies intent, so confidentiality prevents warning.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass erotomanic fixation with stalking, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'He denies intent, so confidentiality prevents warning.' without first formulating erotomanic fixation with stalking, immediate safety and a defensible disposition.",
+        "keywords": [
+          "confidentiality shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "erotomanic fixation with stalking — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "She smiles because she knows I am watching.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around erotomanic fixation with stalking, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "erotomanic fixation with stalking",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "duty to protect versus police threshold — legal/policy hinge",
+        "category": "ethics",
+        "severity": "critical",
+        "clueInStem": "We need a direct threat before acting.",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "duty to protect versus police threshold",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "identified rival victim — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "He is the obstacle; obstacles get removed.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect identified rival victim, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "identified rival victim",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "I just need five minutes alone with her.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to breach confidentiality, use MHA/CTO, and protect victims",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'He denies intent, so confidentiality prevents warning.' without first addressing immediate safety, erotomanic fixation with stalking, and legal authority.\n- Identify the live decision: whether to breach confidentiality, use MHA/CTO, and protect victims.\n\nClinical formulation:\n- Formulate the case around erotomanic fixation with stalking rather than a generic diagnostic list.\n- Link the patient's statement 'She smiles because she knows I am watching.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address duty to protect versus police threshold using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect identified rival victim; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-052",
+    "topic": "forensic",
+    "difficulty": "consultant",
+    "title": "NGMI and fitness confused by solicitor",
+    "candidateRole": "forensic psychiatrist",
+    "setting": "Court-ordered assessment in prison clinic",
+    "stem": "You are the forensic psychiatrist. Court-ordered assessment in prison clinic.\n\nArun, a 31-year-old man charged with stabbing a stranger, is psychotic and suspicious of his lawyer. Arun says, \"The man was a demon wearing human skin.\" \n\nSolicitor says, \"Just say he is NGMI.\" Magistrate asks, \"Comment on fitness to stand trial.\" Alleged victim says, \"He stabbed me without warning at a bus stop.\" Arun speaks limited English and uses religious idioms from his community.\n\nArun says, \"My lawyer works for the demons.\" You must decide whether to assess fitness and mental impairment separately and independently.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "legal-conclusion shortcut — unsafe shortcut under pressure",
+        "category": "risk_others",
+        "severity": "critical",
+        "clueInStem": "Just say he is NGMI.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass offence-related psychosis and legal standards, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'Just say he is NGMI.' without first formulating offence-related psychosis and legal standards, immediate safety and a defensible disposition.",
+        "keywords": [
+          "legal-conclusion shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "offence-related psychosis and legal standards — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "The man was a demon wearing human skin.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around offence-related psychosis and legal standards, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "offence-related psychosis and legal standards",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "fitness versus criminal responsibility — legal/policy hinge",
+        "category": "ethics",
+        "severity": "critical",
+        "clueInStem": "Comment on fitness to stand trial.",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "fitness versus criminal responsibility",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "public safety and victim impact — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "He stabbed me without warning at a bus stop.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect public safety and victim impact, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "public safety and victim impact",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "My lawyer works for the demons.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to assess fitness and mental impairment separately and independently",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'Just say he is NGMI.' without first addressing immediate safety, offence-related psychosis and legal standards, and legal authority.\n- Identify the live decision: whether to assess fitness and mental impairment separately and independently.\n\nClinical formulation:\n- Formulate the case around offence-related psychosis and legal standards rather than a generic diagnostic list.\n- Link the patient's statement 'The man was a demon wearing human skin.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address fitness versus criminal responsibility using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect public safety and victim impact; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-053",
+    "topic": "forensic",
+    "difficulty": "consultant",
+    "title": "Conditional discharge breach and victim proximity",
+    "candidateRole": "forensic psychiatrist",
+    "setting": "Tribunal review for conditionally discharged patient",
+    "stem": "You are the forensic psychiatrist. Tribunal review for conditionally discharged patient.\n\nMalik, a 38-year-old forensic patient, missed drug screens and was seen near the victim's street. Malik says, \"Everyone deserves a night off; I am not a prisoner.\" \n\nSupport worker says, \"He is mostly fine; recall seems harsh.\" Tribunal asks, \"Does this breach require recall?\" Victim says, \"I need to know if he is near my suburb.\" Malik's family says recall would shame the family and ruin reintegration.\n\nPolice says, \"He was near the index offence location.\" You must decide whether to tighten conditions or recall based on dynamic risk.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "minimise-breach shortcut — unsafe shortcut under pressure",
+        "category": "risk_others",
+        "severity": "critical",
+        "clueInStem": "He is mostly fine; recall seems harsh.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass minimisation of forensic conditions, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'He is mostly fine; recall seems harsh.' without first formulating minimisation of forensic conditions, immediate safety and a defensible disposition.",
+        "keywords": [
+          "minimise-breach shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "minimisation of forensic conditions — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "Everyone deserves a night off; I am not a prisoner.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around minimisation of forensic conditions, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "minimisation of forensic conditions",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "conditional discharge threshold — legal/policy hinge",
+        "category": "ethics",
+        "severity": "critical",
+        "clueInStem": "Does this breach require recall?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "conditional discharge threshold",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "victim safety and notification — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "I need to know if he is near my suburb.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect victim safety and notification, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "victim safety and notification",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "He was near the index offence location.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to tighten conditions or recall based on dynamic risk",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'He is mostly fine; recall seems harsh.' without first addressing immediate safety, minimisation of forensic conditions, and legal authority.\n- Identify the live decision: whether to tighten conditions or recall based on dynamic risk.\n\nClinical formulation:\n- Formulate the case around minimisation of forensic conditions rather than a generic diagnostic list.\n- Link the patient's statement 'Everyone deserves a night off; I am not a prisoner.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address conditional discharge threshold using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect victim safety and notification; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-054",
+    "topic": "forensic",
+    "difficulty": "consultant",
+    "title": "Family violence, psychosis and firearms licence",
+    "candidateRole": "forensic/community consultant",
+    "setting": "Rural police-MH joint meeting",
+    "stem": "You are the forensic/community consultant. Rural police-MH joint meeting.\n\nGareth, a 47-year-old man with delusional disorder, has accused his ex-partner of poisoning his children and owns firearms. Gareth says, \"She is killing my bloodline.\" \n\nGP says, \"He is polite in clinic and denies intent.\" Police asks, \"Can we remove firearms without admission?\" Children says, \"Dad says Mum is dangerous and we must hide.\" The family are known in a small rural community with firearm culture.\n\nGareth says, \"Taking my rifles is persecution.\" You must decide whether to manage firearms, victim safety and involuntary assessment.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "polite-denial shortcut — unsafe shortcut under pressure",
+        "category": "risk_others",
+        "severity": "critical",
+        "clueInStem": "He is polite in clinic and denies intent.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass delusional family violence risk, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'He is polite in clinic and denies intent.' without first formulating delusional family violence risk, immediate safety and a defensible disposition.",
+        "keywords": [
+          "polite-denial shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "delusional family violence risk — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "She is killing my bloodline.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around delusional family violence risk, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "delusional family violence risk",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "firearms and MHA/legal coordination — legal/policy hinge",
+        "category": "ethics",
+        "severity": "critical",
+        "clueInStem": "Can we remove firearms without admission?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "firearms and MHA/legal coordination",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "children in coercive delusional conflict — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "Dad says Mum is dangerous and we must hide.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect children in coercive delusional conflict, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "children in coercive delusional conflict",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "Taking my rifles is persecution.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to manage firearms, victim safety and involuntary assessment",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'He is polite in clinic and denies intent.' without first addressing immediate safety, delusional family violence risk, and legal authority.\n- Identify the live decision: whether to manage firearms, victim safety and involuntary assessment.\n\nClinical formulation:\n- Formulate the case around delusional family violence risk rather than a generic diagnostic list.\n- Link the patient's statement 'She is killing my bloodline.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address firearms and MHA/legal coordination using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect children in coercive delusional conflict; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-055",
+    "topic": "forensic",
+    "difficulty": "consultant",
+    "title": "Stalking by health professional patient",
+    "candidateRole": "forensic psychiatrist",
+    "setting": "Private-practice risk consultation",
+    "stem": "You are the forensic psychiatrist. Private-practice risk consultation.\n\nDr Liam, a 39-year-old surgeon with erotomanic beliefs, is stalking a theatre nurse and using hospital systems to view her roster. Dr Liam says, \"The roster proves she wants me to find her.\" \n\nHospital executive says, \"Keep this quiet because he is high profile.\" Medical director asks, \"Do we notify AHPRA or police?\" The nurse says, \"I am frightened to come to work.\" The hospital culture protects senior doctors and discourages complaints.\n\nDr Liam says, \"If she complains, her career is finished.\" You must decide whether to protect victim, report, and manage professional risk.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "reputation shortcut — unsafe shortcut under pressure",
+        "category": "risk_others",
+        "severity": "critical",
+        "clueInStem": "Keep this quiet because he is high profile.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass professional access-enabled stalking, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'Keep this quiet because he is high profile.' without first formulating professional access-enabled stalking, immediate safety and a defensible disposition.",
+        "keywords": [
+          "reputation shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "professional access-enabled stalking — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "The roster proves she wants me to find her.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around professional access-enabled stalking, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "professional access-enabled stalking",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "mandatory reporting and duty to protect — legal/policy hinge",
+        "category": "ethics",
+        "severity": "critical",
+        "clueInStem": "Do we notify AHPRA or police?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "mandatory reporting and duty to protect",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "identified workplace victim safety — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "I am frightened to come to work.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect identified workplace victim safety, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "identified workplace victim safety",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "If she complains, her career is finished.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to protect victim, report, and manage professional risk",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'Keep this quiet because he is high profile.' without first addressing immediate safety, professional access-enabled stalking, and legal authority.\n- Identify the live decision: whether to protect victim, report, and manage professional risk.\n\nClinical formulation:\n- Formulate the case around professional access-enabled stalking rather than a generic diagnostic list.\n- Link the patient's statement 'The roster proves she wants me to find her.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address mandatory reporting and duty to protect using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect identified workplace victim safety; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-056",
+    "topic": "forensic",
+    "difficulty": "consultant",
+    "title": "Arson risk in psychosis and housing pressure",
+    "candidateRole": "forensic liaison psychiatrist",
+    "setting": "Community housing risk panel",
+    "stem": "You are the forensic liaison psychiatrist. Community housing risk panel.\n\nEddie, a 29-year-old man with schizophrenia, has burned papers in his unit to remove demons. Eddie says, \"Fire is the only clean thing.\" \n\nHousing officer says, \"Evict him and the risk is ours no longer.\" CMHT asks, \"Can we compel depot to keep housing?\" Neighbours says, \"Smoke came under our door while children slept.\" Eddie is an Aboriginal man who distrusts services after past police removals.\n\nElder says, \"Work with family or he will disappear.\" You must decide whether to manage fire risk without making homelessness worse.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "eviction shortcut — unsafe shortcut under pressure",
+        "category": "risk_others",
+        "severity": "critical",
+        "clueInStem": "Evict him and the risk is ours no longer.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass psychosis-linked arson risk, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'Evict him and the risk is ours no longer.' without first formulating psychosis-linked arson risk, immediate safety and a defensible disposition.",
+        "keywords": [
+          "eviction shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "psychosis-linked arson risk — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "Fire is the only clean thing.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around psychosis-linked arson risk, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "psychosis-linked arson risk",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "MHA/CTO and housing policy — legal/policy hinge",
+        "category": "ethics",
+        "severity": "critical",
+        "clueInStem": "Can we compel depot to keep housing?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "MHA/CTO and housing policy",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "public and child safety — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "Smoke came under our door while children slept.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect public and child safety, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "public and child safety",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "Work with family or he will disappear.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to manage fire risk without making homelessness worse",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'Evict him and the risk is ours no longer.' without first addressing immediate safety, psychosis-linked arson risk, and legal authority.\n- Identify the live decision: whether to manage fire risk without making homelessness worse.\n\nClinical formulation:\n- Formulate the case around psychosis-linked arson risk rather than a generic diagnostic list.\n- Link the patient's statement 'Fire is the only clean thing.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address MHA/CTO and housing policy using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect public and child safety; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-057",
+    "topic": "forensic",
+    "difficulty": "consultant",
+    "title": "Sexual disinhibition in dementia and resident safety",
+    "candidateRole": "forensic old age psychiatrist",
+    "setting": "Residential aged care urgent review",
+    "stem": "You are the forensic old age psychiatrist. Residential aged care urgent review.\n\nMr Brooks, a 73-year-old man with frontotemporal dementia, has entered female residents' rooms at night. Mr Brooks says, \"I thought she was my wife.\" \n\nFacility manager says, \"Transfer him to psych before families sue.\" GP asks, \"Can we use chemical restraint?\" Female resident says, \"I am scared to sleep.\" The family says discussing sexuality is shameful in their culture.\n\nDaughter says, \"He would be horrified if he knew.\" You must decide whether to protect residents while using least restrictive dementia care.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "liability-transfer shortcut — unsafe shortcut under pressure",
+        "category": "risk_others",
+        "severity": "critical",
+        "clueInStem": "Transfer him to psych before families sue.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass neurocognitive sexual disinhibition, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'Transfer him to psych before families sue.' without first formulating neurocognitive sexual disinhibition, immediate safety and a defensible disposition.",
+        "keywords": [
+          "liability-transfer shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "neurocognitive sexual disinhibition — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "I thought she was my wife.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around neurocognitive sexual disinhibition, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "neurocognitive sexual disinhibition",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "restraint and consent policy — legal/policy hinge",
+        "category": "ethics",
+        "severity": "critical",
+        "clueInStem": "Can we use chemical restraint?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "restraint and consent policy",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "vulnerable co-resident safety — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "I am scared to sleep.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect vulnerable co-resident safety, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "vulnerable co-resident safety",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "He would be horrified if he knew.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to protect residents while using least restrictive dementia care",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'Transfer him to psych before families sue.' without first addressing immediate safety, neurocognitive sexual disinhibition, and legal authority.\n- Identify the live decision: whether to protect residents while using least restrictive dementia care.\n\nClinical formulation:\n- Formulate the case around neurocognitive sexual disinhibition rather than a generic diagnostic list.\n- Link the patient's statement 'I thought she was my wife.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address restraint and consent policy using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect vulnerable co-resident safety; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-058",
+    "topic": "forensic",
+    "difficulty": "consultant",
+    "title": "Threat to politician from manic patient",
+    "candidateRole": "forensic/community consultant",
+    "setting": "ED after police bring patient with manifesto",
+    "stem": "You are the forensic/community consultant. ED after police bring patient with manifesto.\n\nAmelia, a 42-year-old woman with bipolar disorder, has been emailing threats to a local MP during mania. Amelia says, \"God elected me to remove the corrupt one.\" \n\nRegistrar says, \"She is articulate and political, not psychotic.\" Police asks, \"Do we need to warn the MP's office?\" MP staff says, \"She came to the electorate office yesterday.\" Amelia belongs to an activist community suspicious of psychiatry.\n\nAmelia says, \"Hospitalising me is political persecution.\" You must decide whether to use MHA, warn/protect, and respect political/cultural context.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "political-speech shortcut — unsafe shortcut under pressure",
+        "category": "risk_others",
+        "severity": "critical",
+        "clueInStem": "She is articulate and political, not psychotic.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass mania with targeted public figure threat, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'She is articulate and political, not psychotic.' without first formulating mania with targeted public figure threat, immediate safety and a defensible disposition.",
+        "keywords": [
+          "political-speech shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "mania with targeted public figure threat — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "God elected me to remove the corrupt one.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around mania with targeted public figure threat, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "mania with targeted public figure threat",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "duty to protect/warn — legal/policy hinge",
+        "category": "ethics",
+        "severity": "critical",
+        "clueInStem": "Do we need to warn the MP's office?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "duty to protect/warn",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "approach behaviour and staff safety — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "She came to the electorate office yesterday.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect approach behaviour and staff safety, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "approach behaviour and staff safety",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "Hospitalising me is political persecution.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to use MHA, warn/protect, and respect political/cultural context",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'She is articulate and political, not psychotic.' without first addressing immediate safety, mania with targeted public figure threat, and legal authority.\n- Identify the live decision: whether to use MHA, warn/protect, and respect political/cultural context.\n\nClinical formulation:\n- Formulate the case around mania with targeted public figure threat rather than a generic diagnostic list.\n- Link the patient's statement 'God elected me to remove the corrupt one.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address duty to protect/warn using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect approach behaviour and staff safety; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-059",
+    "topic": "forensic",
+    "difficulty": "consultant",
+    "title": "Prisoner self-harm and custodial minimisation",
+    "candidateRole": "forensic psychiatrist",
+    "setting": "Correctional health unit",
+    "stem": "You are the forensic psychiatrist. Correctional health unit.\n\nTane, a 23-year-old Māori prisoner, has repeatedly ligatured after segregation and says he hears his dead brother. Tane says, \"I will leave this place the way my brother did.\" \n\nCorrectional officer says, \"He does this to get out of segregation.\" Health nurse asks, \"Can we keep him in observation cell naked?\" Cellmate says, \"His brother died in custody.\" No Māori health worker is available today.\n\nTane says, \"No one listens to Māori men in here.\" You must decide whether to remove segregation, treat psychosis/trauma and manage custody risk.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "manipulation shortcut — unsafe shortcut under pressure",
+        "category": "risk_others",
+        "severity": "critical",
+        "clueInStem": "He does this to get out of segregation.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass custodial suicide risk and trauma, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'He does this to get out of segregation.' without first formulating custodial suicide risk and trauma, immediate safety and a defensible disposition.",
+        "keywords": [
+          "manipulation shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "custodial suicide risk and trauma — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "I will leave this place the way my brother did.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around custodial suicide risk and trauma, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "custodial suicide risk and trauma",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "least restrictive custody observation — legal/policy hinge",
+        "category": "ethics",
+        "severity": "critical",
+        "clueInStem": "Can we keep him in observation cell naked?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "least restrictive custody observation",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "trauma and vulnerable prisoner risk — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "His brother died in custody.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect trauma and vulnerable prisoner risk, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "trauma and vulnerable prisoner risk",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "No one listens to Māori men in here.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to remove segregation, treat psychosis/trauma and manage custody risk",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'He does this to get out of segregation.' without first addressing immediate safety, custodial suicide risk and trauma, and legal authority.\n- Identify the live decision: whether to remove segregation, treat psychosis/trauma and manage custody risk.\n\nClinical formulation:\n- Formulate the case around custodial suicide risk and trauma rather than a generic diagnostic list.\n- Link the patient's statement 'I will leave this place the way my brother did.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address least restrictive custody observation using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect trauma and vulnerable prisoner risk; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-060",
+    "topic": "forensic",
+    "difficulty": "consultant",
+    "title": "Fitness to drive in psychosis with professional driver",
+    "candidateRole": "forensic/community psychiatrist",
+    "setting": "Community review after bus depot incident",
+    "stem": "You are the forensic/community psychiatrist. Community review after bus depot incident.\n\nSalim, a 50-year-old bus driver with relapse of psychosis, believes passengers are agents and nearly crashed a bus. Salim says, \"The route was a trap; I had to brake hard.\" \n\nEmployer says, \"We need him cleared by Monday.\" Licensing body asks, \"Should we suspend commercial driving?\" Passengers says, \"Children were on the bus.\" Salim fears losing work will shame his family and threaten visa stability.\n\nWife says, \"If he loses work, we lose everything.\" You must decide whether to report driving risk and manage livelihood/family pressure.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "fitness-clearance shortcut — unsafe shortcut under pressure",
+        "category": "risk_others",
+        "severity": "critical",
+        "clueInStem": "We need him cleared by Monday.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass psychosis affecting occupational public safety, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'We need him cleared by Monday.' without first formulating psychosis affecting occupational public safety, immediate safety and a defensible disposition.",
+        "keywords": [
+          "fitness-clearance shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "psychosis affecting occupational public safety — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "The route was a trap; I had to brake hard.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around psychosis affecting occupational public safety, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "psychosis affecting occupational public safety",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "public safety reporting obligations — legal/policy hinge",
+        "category": "ethics",
+        "severity": "critical",
+        "clueInStem": "Should we suspend commercial driving?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "public safety reporting obligations",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "public/child passenger safety — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "Children were on the bus.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect public/child passenger safety, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "public/child passenger safety",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "If he loses work, we lose everything.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to report driving risk and manage livelihood/family pressure",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'We need him cleared by Monday.' without first addressing immediate safety, psychosis affecting occupational public safety, and legal authority.\n- Identify the live decision: whether to report driving risk and manage livelihood/family pressure.\n\nClinical formulation:\n- Formulate the case around psychosis affecting occupational public safety rather than a generic diagnostic list.\n- Link the patient's statement 'The route was a trap; I had to brake hard.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address public safety reporting obligations using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect public/child passenger safety; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-061",
+    "topic": "rural",
+    "difficulty": "consultant",
+    "title": "Remote psychosis RFDS no meds",
+    "candidateRole": "remote consultant psychiatrist",
+    "setting": "Remote Aboriginal clinic call at night",
+    "stem": "You are the remote consultant psychiatrist. Remote Aboriginal clinic call at night.\n\nJarrah, a 26-year-old Aboriginal man, is walking near the highway yelling about demon trucks. Jarrah says, \"The old people told me the trucks are demons.\" \n\nPolice says, \"We can put him in cells until he settles.\" RFDS asks, \"Will psychiatry certify urgent risk?\" Grandmother says, \"If you fly him out alone, he will not come back to us.\" The clinic has no antipsychotic medication and one nurse overnight.\n\nCousin says, \"He used ice from town yesterday.\" You must decide whether to activate RFDS and how to plan culturally safe transfer.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "cells shortcut — unsafe shortcut under pressure",
+        "category": "system_pressure",
+        "severity": "critical",
+        "clueInStem": "We can put him in cells until he settles.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass acute psychosis with highway risk, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'We can put him in cells until he settles.' without first formulating acute psychosis with highway risk, immediate safety and a defensible disposition.",
+        "keywords": [
+          "cells shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "acute psychosis with highway risk — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "The old people told me the trucks are demons.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around acute psychosis with highway risk, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "acute psychosis with highway risk",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "MHA transport threshold — legal/policy hinge",
+        "category": "mental_health_act",
+        "severity": "critical",
+        "clueInStem": "Will psychiatry certify urgent risk?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "MHA transport threshold",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "cultural connection and engagement — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "If you fly him out alone, he will not come back to us.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect cultural connection and engagement, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "cultural connection and engagement",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "He used ice from town yesterday.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to activate RFDS and how to plan culturally safe transfer",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'We can put him in cells until he settles.' without first addressing immediate safety, acute psychosis with highway risk, and legal authority.\n- Identify the live decision: whether to activate RFDS and how to plan culturally safe transfer.\n\nClinical formulation:\n- Formulate the case around acute psychosis with highway risk rather than a generic diagnostic list.\n- Link the patient's statement 'The old people told me the trucks are demons.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address MHA transport threshold using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect cultural connection and engagement; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-062",
+    "topic": "rural",
+    "difficulty": "consultant",
+    "title": "Rural ED overdose no bed telehealth",
+    "candidateRole": "telepsychiatry consultant",
+    "setting": "Small rural ED overnight",
+    "stem": "You are the telepsychiatry consultant. Small rural ED overnight.\n\nMaddie, a 19-year-old Aboriginal woman, took forty paracetamol tablets after a breakup. Maddie says, \"I just want to go home and sleep.\" \n\nED GP says, \"There are no psych beds, so phone follow-up is all we have.\" Nurse asks, \"I have never done an overnight suicide watch.\" Auntie says, \"She asked for me but I am ninety minutes away.\" Her father is a local police officer and asks for privacy.\n\nFather says, \"Do not put this in her record.\" You must decide whether to hold/transfer and document despite rural constraints.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "no-bed discharge shortcut — unsafe shortcut under pressure",
+        "category": "system_pressure",
+        "severity": "critical",
+        "clueInStem": "There are no psych beds, so phone follow-up is all we have.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass minimising high-risk overdose, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'There are no psych beds, so phone follow-up is all we have.' without first formulating minimising high-risk overdose, immediate safety and a defensible disposition.",
+        "keywords": [
+          "no-bed discharge shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "minimising high-risk overdose — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "I just want to go home and sleep.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around minimising high-risk overdose, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "minimising high-risk overdose",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "safe observation governance — legal/policy hinge",
+        "category": "mental_health_act",
+        "severity": "critical",
+        "clueInStem": "I have never done an overnight suicide watch.",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "safe observation governance",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "cultural/family protective support — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "She asked for me but I am ninety minutes away.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect cultural/family protective support, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "cultural/family protective support",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "Do not put this in her record.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to hold/transfer and document despite rural constraints",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'There are no psych beds, so phone follow-up is all we have.' without first addressing immediate safety, minimising high-risk overdose, and legal authority.\n- Identify the live decision: whether to hold/transfer and document despite rural constraints.\n\nClinical formulation:\n- Formulate the case around minimising high-risk overdose rather than a generic diagnostic list.\n- Link the patient's statement 'I just want to go home and sleep.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address safe observation governance using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect cultural/family protective support; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-063",
+    "topic": "rural",
+    "difficulty": "consultant",
+    "title": "Regional involuntary transfer 300km",
+    "candidateRole": "regional consultant psychiatrist",
+    "setting": "Hospital ED with nearest authorised bed 300 km away",
+    "stem": "You are the regional consultant psychiatrist. Hospital ED with nearest authorised bed 300 km away.\n\nLiam, a 31-year-old man with mania, drove at high speed through town saying God exempted him from road rules. Liam says, \"God told me road rules do not apply.\" \n\nAmbulance says, \"Transfer cannot happen until morning.\" ED doctor asks, \"Can we sedate him overnight?\" Mother says, \"He gets worse when police are around.\" Liam identifies as Aboriginal and asks for his uncle.\n\nUncle says, \"Let me talk him down before cuffs.\" You must decide whether to detain safely overnight and transfer lawfully.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "delay-as-wait shortcut — unsafe shortcut under pressure",
+        "category": "system_pressure",
+        "severity": "critical",
+        "clueInStem": "Transfer cannot happen until morning.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass mania causing public safety risk, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'Transfer cannot happen until morning.' without first formulating mania causing public safety risk, immediate safety and a defensible disposition.",
+        "keywords": [
+          "delay-as-wait shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "mania causing public safety risk — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "God told me road rules do not apply.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around mania causing public safety risk, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "mania causing public safety risk",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "sedation and MHA transport — legal/policy hinge",
+        "category": "mental_health_act",
+        "severity": "critical",
+        "clueInStem": "Can we sedate him overnight?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "sedation and MHA transport",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "least restrictive culturally informed containment — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "He gets worse when police are around.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect least restrictive culturally informed containment, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "least restrictive culturally informed containment",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "Let me talk him down before cuffs.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to detain safely overnight and transfer lawfully",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'Transfer cannot happen until morning.' without first addressing immediate safety, mania causing public safety risk, and legal authority.\n- Identify the live decision: whether to detain safely overnight and transfer lawfully.\n\nClinical formulation:\n- Formulate the case around mania causing public safety risk rather than a generic diagnostic list.\n- Link the patient's statement 'God told me road rules do not apply.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address sedation and MHA transport using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect least restrictive culturally informed containment; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-064",
+    "topic": "rural",
+    "difficulty": "consultant",
+    "title": "Remote alcohol violence and community pressure",
+    "candidateRole": "rural psychiatrist",
+    "setting": "Remote clinic/police joint call",
+    "stem": "You are the rural psychiatrist. Remote clinic/police joint call.\n\nNoah, a 40-year-old Aboriginal man, threatened his partner with a shovel while intoxicated. Noah says, \"I only scared her because she was taking the kids.\" \n\nCommunity leader says, \"Handle it inside community.\" Police asks, \"Can he sober up in cells?\" Partner says, \"If he comes back tonight, someone will die.\" His brother died by suicide and he has a head injury history.\n\nAunt says, \"He drinks when grief takes him.\" You must decide whether to protect family, manage intoxication and respect community role.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "community-pressure shortcut — unsafe shortcut under pressure",
+        "category": "system_pressure",
+        "severity": "critical",
+        "clueInStem": "Handle it inside community.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass alcohol-related family violence, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'Handle it inside community.' without first formulating alcohol-related family violence, immediate safety and a defensible disposition.",
+        "keywords": [
+          "community-pressure shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "alcohol-related family violence — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "I only scared her because she was taking the kids.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around alcohol-related family violence, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "alcohol-related family violence",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "custody and medical clearance — legal/policy hinge",
+        "category": "mental_health_act",
+        "severity": "critical",
+        "clueInStem": "Can he sober up in cells?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "custody and medical clearance",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "victim/children immediate safety — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "If he comes back tonight, someone will die.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect victim/children immediate safety, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "victim/children immediate safety",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "He drinks when grief takes him.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to protect family, manage intoxication and respect community role",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'Handle it inside community.' without first addressing immediate safety, alcohol-related family violence, and legal authority.\n- Identify the live decision: whether to protect family, manage intoxication and respect community role.\n\nClinical formulation:\n- Formulate the case around alcohol-related family violence rather than a generic diagnostic list.\n- Link the patient's statement 'I only scared her because she was taking the kids.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address custody and medical clearance using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect victim/children immediate safety; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-065",
+    "topic": "rural",
+    "difficulty": "consultant",
+    "title": "Rural complex PTSD no safe telehealth",
+    "candidateRole": "regional psychiatrist",
+    "setting": "Rural community clinic",
+    "stem": "You are the regional psychiatrist. Rural community clinic.\n\nEmma, a 42-year-old woman with complex PTSD, has no local trauma specialist and unreliable internet. Emma says, \"If they hear me talking on video, I am not safe.\" \n\nService manager says, \"We do not provide long-term therapy here.\" GP asks, \"Can psychiatry take over alprazolam scripts?\" Daughter says, \"She stays home from school to watch Mum.\" Emma lives beside her ex-partner's family in a small town.\n\nEmma says, \"Every new clinician makes me retell it then leaves.\" You must decide whether to provide trauma-informed stepped care despite rural limits.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "service-boundary shortcut — unsafe shortcut under pressure",
+        "category": "system_pressure",
+        "severity": "critical",
+        "clueInStem": "We do not provide long-term therapy here.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass telehealth unsafe due to family violence proximity, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'We do not provide long-term therapy here.' without first formulating telehealth unsafe due to family violence proximity, immediate safety and a defensible disposition.",
+        "keywords": [
+          "service-boundary shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "telehealth unsafe due to family violence proximity — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "If they hear me talking on video, I am not safe.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around telehealth unsafe due to family violence proximity, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "telehealth unsafe due to family violence proximity",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "benzodiazepine governance — legal/policy hinge",
+        "category": "mental_health_act",
+        "severity": "critical",
+        "clueInStem": "Can psychiatry take over alprazolam scripts?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "benzodiazepine governance",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "young-carer safeguarding — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "She stays home from school to watch Mum.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect young-carer safeguarding, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "young-carer safeguarding",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "Every new clinician makes me retell it then leaves.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to provide trauma-informed stepped care despite rural limits",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'We do not provide long-term therapy here.' without first addressing immediate safety, telehealth unsafe due to family violence proximity, and legal authority.\n- Identify the live decision: whether to provide trauma-informed stepped care despite rural limits.\n\nClinical formulation:\n- Formulate the case around telehealth unsafe due to family violence proximity rather than a generic diagnostic list.\n- Link the patient's statement 'If they hear me talking on video, I am not safe.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address benzodiazepine governance using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect young-carer safeguarding; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-066",
+    "topic": "rural",
+    "difficulty": "consultant",
+    "title": "Remote perinatal psychosis and weathered-in transfer",
+    "candidateRole": "remote perinatal consultant",
+    "setting": "Island community clinic during cyclone warning",
+    "stem": "You are the remote perinatal consultant. Island community clinic during cyclone warning.\n\nLani, a 30-year-old woman seven days postpartum, believes the baby is cursed and refuses feeding. Lani says, \"The sea wants him back.\" \n\nNurse says, \"The plane cannot land until morning, so family must manage.\" Midwife asks, \"Can we separate mother and baby without an order?\" Baby says, \"He has not fed for ten hours.\" The community elder says cultural/spiritual explanation must be respected.\n\nGrandmother says, \"Do not send her away alone.\" You must decide whether to contain locally overnight and plan culturally safe retrieval.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "weather-delay shortcut — unsafe shortcut under pressure",
+        "category": "system_pressure",
+        "severity": "critical",
+        "clueInStem": "The plane cannot land until morning, so family must manage.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass postpartum psychosis with infant neglect risk, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'The plane cannot land until morning, so family must manage.' without first formulating postpartum psychosis with infant neglect risk, immediate safety and a defensible disposition.",
+        "keywords": [
+          "weather-delay shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "postpartum psychosis with infant neglect risk — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "The sea wants him back.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around postpartum psychosis with infant neglect risk, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "postpartum psychosis with infant neglect risk",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "infant safety and legal authority — legal/policy hinge",
+        "category": "mental_health_act",
+        "severity": "critical",
+        "clueInStem": "Can we separate mother and baby without an order?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "infant safety and legal authority",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "newborn medical risk — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "He has not fed for ten hours.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect newborn medical risk, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "newborn medical risk",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "Do not send her away alone.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to contain locally overnight and plan culturally safe retrieval",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'The plane cannot land until morning, so family must manage.' without first addressing immediate safety, postpartum psychosis with infant neglect risk, and legal authority.\n- Identify the live decision: whether to contain locally overnight and plan culturally safe retrieval.\n\nClinical formulation:\n- Formulate the case around postpartum psychosis with infant neglect risk rather than a generic diagnostic list.\n- Link the patient's statement 'The sea wants him back.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address infant safety and legal authority using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect newborn medical risk; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-067",
+    "topic": "rural",
+    "difficulty": "consultant",
+    "title": "Farmer firearms suicide risk and stigma",
+    "candidateRole": "rural psychiatrist",
+    "setting": "GP telehealth consult in drought-affected town",
+    "stem": "You are the rural psychiatrist. GP telehealth consult in drought-affected town.\n\nBill, a 76-year-old farmer, is depressed, drinking and sleeping beside his gun safe. Bill says, \"A man without his rifle is already dead.\" \n\nGP says, \"He denies suicidality, so we cannot remove guns.\" Police asks, \"What is our authority around firearms?\" Wife says, \"He sits in the shed with the gun safe open.\" Firearms are central to his rural identity and community status.\n\nBill says, \"Do not let the town know I am weak.\" You must decide whether to restrict firearms and manage suicide risk without shaming.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "denial shortcut — unsafe shortcut under pressure",
+        "category": "system_pressure",
+        "severity": "critical",
+        "clueInStem": "He denies suicidality, so we cannot remove guns.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass firearms-related suicide risk, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'He denies suicidality, so we cannot remove guns.' without first formulating firearms-related suicide risk, immediate safety and a defensible disposition.",
+        "keywords": [
+          "denial shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "firearms-related suicide risk — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "A man without his rifle is already dead.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around firearms-related suicide risk, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "firearms-related suicide risk",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "firearms safety pathway — legal/policy hinge",
+        "category": "mental_health_act",
+        "severity": "critical",
+        "clueInStem": "What is our authority around firearms?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "firearms safety pathway",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "spouse collateral and immediate risk — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "He sits in the shed with the gun safe open.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect spouse collateral and immediate risk, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "spouse collateral and immediate risk",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "Do not let the town know I am weak.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to restrict firearms and manage suicide risk without shaming",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'He denies suicidality, so we cannot remove guns.' without first addressing immediate safety, firearms-related suicide risk, and legal authority.\n- Identify the live decision: whether to restrict firearms and manage suicide risk without shaming.\n\nClinical formulation:\n- Formulate the case around firearms-related suicide risk rather than a generic diagnostic list.\n- Link the patient's statement 'A man without his rifle is already dead.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address firearms safety pathway using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect spouse collateral and immediate risk; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-068",
+    "topic": "rural",
+    "difficulty": "consultant",
+    "title": "Rural Aboriginal elder delirium not dementia",
+    "candidateRole": "rural CL psychiatrist",
+    "setting": "Small hospital ward with no geriatrician",
+    "stem": "You are the rural CL psychiatrist. Small hospital ward with no geriatrician.\n\nAunty May, a 79-year-old Aboriginal elder, is confused after infection and staff think it is dementia. Aunty May says, \"This place is not my country.\" \n\nNurse says, \"She is aggressive; give something strong.\" Doctor asks, \"Can we transfer her 500km for behaviour?\" Family says, \"She was leading community meetings last week.\" No Aboriginal Liaison Officer is available overnight.\n\nGranddaughter says, \"She calms when family speak language.\" You must decide whether to treat delirium locally with cultural supports.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "sedation shortcut — unsafe shortcut under pressure",
+        "category": "system_pressure",
+        "severity": "critical",
+        "clueInStem": "She is aggressive; give something strong.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass delirium plus cultural dislocation, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'She is aggressive; give something strong.' without first formulating delirium plus cultural dislocation, immediate safety and a defensible disposition.",
+        "keywords": [
+          "sedation shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "delirium plus cultural dislocation — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "This place is not my country.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around delirium plus cultural dislocation, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "delirium plus cultural dislocation",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "transfer versus local delirium care — legal/policy hinge",
+        "category": "mental_health_act",
+        "severity": "critical",
+        "clueInStem": "Can we transfer her 500km for behaviour?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "transfer versus local delirium care",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "baseline collateral — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "She was leading community meetings last week.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect baseline collateral, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "baseline collateral",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "She calms when family speak language.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to treat delirium locally with cultural supports",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'She is aggressive; give something strong.' without first addressing immediate safety, delirium plus cultural dislocation, and legal authority.\n- Identify the live decision: whether to treat delirium locally with cultural supports.\n\nClinical formulation:\n- Formulate the case around delirium plus cultural dislocation rather than a generic diagnostic list.\n- Link the patient's statement 'This place is not my country.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address transfer versus local delirium care using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect baseline collateral; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-069",
+    "topic": "rural",
+    "difficulty": "consultant",
+    "title": "Rural child abuse disclosure with no paediatric bed",
+    "candidateRole": "CAMHS consultant by telehealth",
+    "setting": "Rural ED after school disclosure",
+    "stem": "You are the CAMHS consultant by telehealth. Rural ED after school disclosure.\n\nElla, a 13-year-old girl, told school she self-harmed after stepfather came into her room. Ella says, \"I cut so I would not feel him touching me.\" \n\nED GP says, \"The wound is superficial and there is no paediatric bed.\" Police asks, \"Can she go home while we investigate?\" Younger sibling says, \"My brother still sleeps in that house.\" The family belongs to a small community where disclosure may spread quickly.\n\nMother says, \"You will destroy our family if you report.\" You must decide whether to ensure safe placement and forensic/medical pathway.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "superficial-wound shortcut — unsafe shortcut under pressure",
+        "category": "system_pressure",
+        "severity": "critical",
+        "clueInStem": "The wound is superficial and there is no paediatric bed.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass sexual trauma and self-harm, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'The wound is superficial and there is no paediatric bed.' without first formulating sexual trauma and self-harm, immediate safety and a defensible disposition.",
+        "keywords": [
+          "superficial-wound shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "sexual trauma and self-harm — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "I cut so I would not feel him touching me.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around sexual trauma and self-harm, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "sexual trauma and self-harm",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "child protection and forensic safety — legal/policy hinge",
+        "category": "mental_health_act",
+        "severity": "critical",
+        "clueInStem": "Can she go home while we investigate?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "child protection and forensic safety",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "sibling safety risk — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "My brother still sleeps in that house.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect sibling safety risk, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "sibling safety risk",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "You will destroy our family if you report.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to ensure safe placement and forensic/medical pathway",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'The wound is superficial and there is no paediatric bed.' without first addressing immediate safety, sexual trauma and self-harm, and legal authority.\n- Identify the live decision: whether to ensure safe placement and forensic/medical pathway.\n\nClinical formulation:\n- Formulate the case around sexual trauma and self-harm rather than a generic diagnostic list.\n- Link the patient's statement 'I cut so I would not feel him touching me.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address child protection and forensic safety using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect sibling safety risk; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-070",
+    "topic": "rural",
+    "difficulty": "consultant",
+    "title": "Remote CTO breach and cultural return-to-country",
+    "candidateRole": "rural community psychiatrist",
+    "setting": "Remote outreach clinic",
+    "stem": "You are the rural community psychiatrist. Remote outreach clinic.\n\nThomas, a 34-year-old Aboriginal man on CTO, has missed depot since returning to country for sorry business. Thomas says, \"The clinic is not where my spirit should be right now.\" \n\nCase manager says, \"Breach him; he is non-compliant.\" Tribunal officer asks, \"Is recall the least restrictive option?\" Grandmother says, \"He needs ceremony and medicine, both.\" There is no visiting psychiatrist for three weeks.\n\nThomas says, \"If police come, I will run bush.\" You must decide whether to enforce CTO or adapt culturally safe treatment.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "breach shortcut — unsafe shortcut under pressure",
+        "category": "system_pressure",
+        "severity": "critical",
+        "clueInStem": "Breach him; he is non-compliant.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass cultural obligations and relapse risk, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'Breach him; he is non-compliant.' without first formulating cultural obligations and relapse risk, immediate safety and a defensible disposition.",
+        "keywords": [
+          "breach shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "cultural obligations and relapse risk — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "The clinic is not where my spirit should be right now.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around cultural obligations and relapse risk, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "cultural obligations and relapse risk",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "CTO legal threshold — legal/policy hinge",
+        "category": "mental_health_act",
+        "severity": "critical",
+        "clueInStem": "Is recall the least restrictive option?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "CTO legal threshold",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "family/cultural protective factors — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "He needs ceremony and medicine, both.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect family/cultural protective factors, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "family/cultural protective factors",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "If police come, I will run bush.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to enforce CTO or adapt culturally safe treatment",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'Breach him; he is non-compliant.' without first addressing immediate safety, cultural obligations and relapse risk, and legal authority.\n- Identify the live decision: whether to enforce CTO or adapt culturally safe treatment.\n\nClinical formulation:\n- Formulate the case around cultural obligations and relapse risk rather than a generic diagnostic list.\n- Link the patient's statement 'The clinic is not where my spirit should be right now.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address CTO legal threshold using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect family/cultural protective factors; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-071",
+    "topic": "governance",
+    "difficulty": "consultant",
+    "title": "Impaired colleague intoxicated on shift",
+    "candidateRole": "clinical director of mental health",
+    "setting": "After-hours incident review",
+    "stem": "You are the clinical director of mental health. After-hours incident review.\n\nDr K, a consultant psychiatrist, appeared intoxicated and ordered IM sedation without review. Dr K says, \"I am going through a divorce; please do not destroy my career.\" \n\nExecutive says, \"Handle this quietly; we cannot lose another consultant.\" Nurse manager asks, \"Is this mandatory reporting?\" Sedated patient says, \"He never came into the seclusion area.\" A nurse feared challenging him because he signs performance reviews.\n\nNurse says, \"I was afraid to challenge him.\" You must decide whether to remove from duty, investigate and report.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "reputation/workforce shortcut — unsafe shortcut under pressure",
+        "category": "governance",
+        "severity": "critical",
+        "clueInStem": "Handle this quietly; we cannot lose another consultant.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass impaired colleague with patient safety risk, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'Handle this quietly; we cannot lose another consultant.' without first formulating impaired colleague with patient safety risk, immediate safety and a defensible disposition.",
+        "keywords": [
+          "reputation/workforce shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "impaired colleague with patient safety risk — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "I am going through a divorce; please do not destroy my career.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around impaired colleague with patient safety risk, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "impaired colleague with patient safety risk",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "AHPRA/mandatory notification threshold — legal/policy hinge",
+        "category": "governance",
+        "severity": "critical",
+        "clueInStem": "Is this mandatory reporting?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "AHPRA/mandatory notification threshold",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "patient harmed by unsafe order — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "He never came into the seclusion area.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect patient harmed by unsafe order, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "patient harmed by unsafe order",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "mdt_conflict",
+        "severity": "important",
+        "clueInStem": "I was afraid to challenge him.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to remove from duty, investigate and report",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'Handle this quietly; we cannot lose another consultant.' without first addressing immediate safety, impaired colleague with patient safety risk, and legal authority.\n- Identify the live decision: whether to remove from duty, investigate and report.\n\nClinical formulation:\n- Formulate the case around impaired colleague with patient safety risk rather than a generic diagnostic list.\n- Link the patient's statement 'I am going through a divorce; please do not destroy my career.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address AHPRA/mandatory notification threshold using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect patient harmed by unsafe order; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-072",
+    "topic": "governance",
+    "difficulty": "consultant",
+    "title": "Medication error clozapine open disclosure",
+    "candidateRole": "inpatient consultant clinical lead",
+    "setting": "Acute ward after serious medication error",
+    "stem": "You are the inpatient consultant clinical lead. Acute ward after serious medication error.\n\nHelen, a 54-year-old woman, received clozapine instead of quetiapine, became hypotensive and fractured her wrist. Helen says, \"No one told us this was your mistake.\" \n\nRisk manager says, \"Avoid admitting liability.\" Registrar asks, \"Do we incident report if pharmacy also missed it?\" Helen says, \"I fell because I could not stand.\" Staff are blaming each other across nursing, pharmacy and medicine.\n\nNurse says, \"I thought pharmacy checked it.\" You must decide whether to manage harm, disclose and investigate systems.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "defensive-disclosure shortcut — unsafe shortcut under pressure",
+        "category": "governance",
+        "severity": "critical",
+        "clueInStem": "Avoid admitting liability.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass open disclosure after medication harm, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'Avoid admitting liability.' without first formulating open disclosure after medication harm, immediate safety and a defensible disposition.",
+        "keywords": [
+          "defensive-disclosure shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "open disclosure after medication harm — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "No one told us this was your mistake.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around open disclosure after medication harm, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "open disclosure after medication harm",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "incident governance and systems review — legal/policy hinge",
+        "category": "governance",
+        "severity": "critical",
+        "clueInStem": "Do we incident report if pharmacy also missed it?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "incident governance and systems review",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "patient harm and physical safety — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "I fell because I could not stand.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect patient harm and physical safety, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "patient harm and physical safety",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "mdt_conflict",
+        "severity": "important",
+        "clueInStem": "I thought pharmacy checked it.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to manage harm, disclose and investigate systems",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'Avoid admitting liability.' without first addressing immediate safety, open disclosure after medication harm, and legal authority.\n- Identify the live decision: whether to manage harm, disclose and investigate systems.\n\nClinical formulation:\n- Formulate the case around open disclosure after medication harm rather than a generic diagnostic list.\n- Link the patient's statement 'No one told us this was your mistake.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address incident governance and systems review using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect patient harm and physical safety; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-073",
+    "topic": "governance",
+    "difficulty": "consultant",
+    "title": "Executive pressure unsafe discharge",
+    "candidateRole": "inpatient consultant psychiatrist",
+    "setting": "Acute unit with access block",
+    "stem": "You are the inpatient consultant psychiatrist. Acute unit with access block.\n\nTariq, a 32-year-old man with schizoaffective disorder, has threatened an ex-partner during psychosis and remains guarded. Tariq says, \"When I leave, I know where she lives.\" \n\nExecutive director says, \"We need this bed today.\" Registrar asks, \"Can we document that he denies intent?\" Ex-partner says, \"There is an active family violence order.\" Tariq is from a migrant family who fears police involvement.\n\nBed manager says, \"ED is breaching targets.\" You must decide whether to refuse discharge and escalate victim safety/legal actions.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "executive-pressure shortcut — unsafe shortcut under pressure",
+        "category": "governance",
+        "severity": "critical",
+        "clueInStem": "We need this bed today.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass specific threat to identifiable victim, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'We need this bed today.' without first formulating specific threat to identifiable victim, immediate safety and a defensible disposition.",
+        "keywords": [
+          "executive-pressure shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "specific threat to identifiable victim — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "When I leave, I know where she lives.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around specific threat to identifiable victim, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "specific threat to identifiable victim",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "defensible documentation and duty to protect — legal/policy hinge",
+        "category": "governance",
+        "severity": "critical",
+        "clueInStem": "Can we document that he denies intent?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "defensible documentation and duty to protect",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "identified victim safety — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "There is an active family violence order.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect identified victim safety, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "identified victim safety",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "mdt_conflict",
+        "severity": "important",
+        "clueInStem": "ED is breaching targets.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to refuse discharge and escalate victim safety/legal actions",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'We need this bed today.' without first addressing immediate safety, specific threat to identifiable victim, and legal authority.\n- Identify the live decision: whether to refuse discharge and escalate victim safety/legal actions.\n\nClinical formulation:\n- Formulate the case around specific threat to identifiable victim rather than a generic diagnostic list.\n- Link the patient's statement 'When I leave, I know where she lives.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address defensible documentation and duty to protect using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect identified victim safety; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-074",
+    "topic": "governance",
+    "difficulty": "consultant",
+    "title": "Registrar beyond competence and false consultant aware",
+    "candidateRole": "consultant supervisor",
+    "setting": "Regional service after ICU oversedation",
+    "stem": "You are the consultant supervisor. Regional service after ICU oversedation.\n\nStage 1 registrar, Dr Lee, prescribed rapid tranquillisation without observations and a patient went to ICU. Stage 1 registrar says, \"Consultant aware.\" \n\nNUM says, \"Staff now bypass the registrar.\" Director of Training asks, \"Is this remediation or notification?\" Patient says, \"I woke up in ICU and no one explained.\" The registrar says independence was expected in the service culture.\n\nRegistrar says, \"I thought consultants wanted us to cope.\" You must decide whether to restrict duties, remediate and investigate.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "workaround shortcut — unsafe shortcut under pressure",
+        "category": "governance",
+        "severity": "critical",
+        "clueInStem": "Staff now bypass the registrar.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass false documentation and supervision failure, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'Staff now bypass the registrar.' without first formulating false documentation and supervision failure, immediate safety and a defensible disposition.",
+        "keywords": [
+          "workaround shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "false documentation and supervision failure — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "Consultant aware.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around false documentation and supervision failure, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "false documentation and supervision failure",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "training governance and professional conduct — legal/policy hinge",
+        "category": "governance",
+        "severity": "critical",
+        "clueInStem": "Is this remediation or notification?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "training governance and professional conduct",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "patient harm and open disclosure — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "I woke up in ICU and no one explained.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect patient harm and open disclosure, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "patient harm and open disclosure",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "mdt_conflict",
+        "severity": "important",
+        "clueInStem": "I thought consultants wanted us to cope.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to restrict duties, remediate and investigate",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'Staff now bypass the registrar.' without first addressing immediate safety, false documentation and supervision failure, and legal authority.\n- Identify the live decision: whether to restrict duties, remediate and investigate.\n\nClinical formulation:\n- Formulate the case around false documentation and supervision failure rather than a generic diagnostic list.\n- Link the patient's statement 'Consultant aware.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address training governance and professional conduct using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect patient harm and open disclosure; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-075",
+    "topic": "governance",
+    "difficulty": "consultant",
+    "title": "Social media privacy breach by registrar",
+    "candidateRole": "consultant training supervisor",
+    "setting": "Acute inpatient unit governance meeting",
+    "stem": "You are the consultant training supervisor. Acute inpatient unit governance meeting.\n\nA Stage 2 registrar, posted about an involuntary patient on social media with identifying details. A Stage 2 registrar says, \"It was anonymous; I was just venting.\" \n\nService manager says, \"Delete the screenshots and handle it informally.\" Whanau liaison asks, \"Do we need open disclosure with the whānau?\" Patient says, \"You people are making fun of me.\" The patient is a Māori woman and whānau already distrust services.\n\nRegistrar says, \"Everyone posts de-identified things.\" You must decide whether to preserve evidence, disclose and remediate/report.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "cover-up shortcut — unsafe shortcut under pressure",
+        "category": "governance",
+        "severity": "critical",
+        "clueInStem": "Delete the screenshots and handle it informally.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass privacy breach minimisation, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'Delete the screenshots and handle it informally.' without first formulating privacy breach minimisation, immediate safety and a defensible disposition.",
+        "keywords": [
+          "cover-up shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "privacy breach minimisation — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "It was anonymous; I was just venting.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around privacy breach minimisation, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "privacy breach minimisation",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "privacy/open disclosure governance — legal/policy hinge",
+        "category": "governance",
+        "severity": "critical",
+        "clueInStem": "Do we need open disclosure with the whānau?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "privacy/open disclosure governance",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "vulnerable involuntary patient harm — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "You people are making fun of me.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect vulnerable involuntary patient harm, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "vulnerable involuntary patient harm",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "mdt_conflict",
+        "severity": "important",
+        "clueInStem": "Everyone posts de-identified things.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to preserve evidence, disclose and remediate/report",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'Delete the screenshots and handle it informally.' without first addressing immediate safety, privacy breach minimisation, and legal authority.\n- Identify the live decision: whether to preserve evidence, disclose and remediate/report.\n\nClinical formulation:\n- Formulate the case around privacy breach minimisation rather than a generic diagnostic list.\n- Link the patient's statement 'It was anonymous; I was just venting.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address privacy/open disclosure governance using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect vulnerable involuntary patient harm; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-076",
+    "topic": "governance",
+    "difficulty": "consultant",
+    "title": "Boundary violation in psychotherapy",
+    "candidateRole": "psychotherapy supervisor consultant",
+    "setting": "Community psychotherapy program",
+    "stem": "You are the psychotherapy supervisor consultant. Community psychotherapy program.\n\nA registrar, has met a trauma patient after hours at cafes with no documentation. A registrar says, \"She needed someone who would not abandon her.\" \n\nService manager says, \"Transfer her quietly before fellowship review.\" Training director asks, \"Does this require notification?\" Patient says, \"If he gets in trouble, I will cut myself.\" The patient has complex trauma and chronic self-harm.\n\nRegistrar says, \"I was being flexible and therapeutic.\" You must decide whether to stop contact, protect patient and escalate governance.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "quiet-transfer shortcut — unsafe shortcut under pressure",
+        "category": "governance",
+        "severity": "critical",
+        "clueInStem": "Transfer her quietly before fellowship review.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass boundary-rationalisation, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'Transfer her quietly before fellowship review.' without first formulating boundary-rationalisation, immediate safety and a defensible disposition.",
+        "keywords": [
+          "quiet-transfer shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "boundary-rationalisation — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "She needed someone who would not abandon her.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around boundary-rationalisation, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "boundary-rationalisation",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "boundary/professional governance — legal/policy hinge",
+        "category": "governance",
+        "severity": "critical",
+        "clueInStem": "Does this require notification?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "boundary/professional governance",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "self-harm during boundary repair — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "If he gets in trouble, I will cut myself.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect self-harm during boundary repair, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "self-harm during boundary repair",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "mdt_conflict",
+        "severity": "important",
+        "clueInStem": "I was being flexible and therapeutic.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to stop contact, protect patient and escalate governance",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'Transfer her quietly before fellowship review.' without first addressing immediate safety, boundary-rationalisation, and legal authority.\n- Identify the live decision: whether to stop contact, protect patient and escalate governance.\n\nClinical formulation:\n- Formulate the case around boundary-rationalisation rather than a generic diagnostic list.\n- Link the patient's statement 'She needed someone who would not abandon her.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address boundary/professional governance using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect self-harm during boundary repair; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-077",
+    "topic": "governance",
+    "difficulty": "consultant",
+    "title": "Coronial review after discharge suicide",
+    "candidateRole": "unit clinical lead",
+    "setting": "Serious incident meeting",
+    "stem": "You are the unit clinical lead. Serious incident meeting.\n\nNikhil, a 38-year-old man, died by suicide 36 hours after discharge from the acute ward. Nikhil says, \"You discharged the bed, not the patient.\" \n\nRegistrar says, \"I only did what the bed manager asked.\" Service manager asks, \"What do we give the coroner?\" Partner says, \"He was giving away tools and saying I will be free soon.\" The wrong GP received the discharge summary.\n\nNurse says, \"The ward was desperate for a bed.\" You must decide whether to lead serious incident review and support family/staff.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "blame-shifting shortcut — unsafe shortcut under pressure",
+        "category": "governance",
+        "severity": "critical",
+        "clueInStem": "I only did what the bed manager asked.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass family complaint and open disclosure, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'I only did what the bed manager asked.' without first formulating family complaint and open disclosure, immediate safety and a defensible disposition.",
+        "keywords": [
+          "blame-shifting shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "family complaint and open disclosure — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "You discharged the bed, not the patient.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around family complaint and open disclosure, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "family complaint and open disclosure",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "coronial documentation governance — legal/policy hinge",
+        "category": "governance",
+        "severity": "critical",
+        "clueInStem": "What do we give the coroner?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "coronial documentation governance",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "ignored suicide warning collateral — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "He was giving away tools and saying I will be free soon.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect ignored suicide warning collateral, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "ignored suicide warning collateral",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "mdt_conflict",
+        "severity": "important",
+        "clueInStem": "The ward was desperate for a bed.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to lead serious incident review and support family/staff",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'I only did what the bed manager asked.' without first addressing immediate safety, family complaint and open disclosure, and legal authority.\n- Identify the live decision: whether to lead serious incident review and support family/staff.\n\nClinical formulation:\n- Formulate the case around family complaint and open disclosure rather than a generic diagnostic list.\n- Link the patient's statement 'You discharged the bed, not the patient.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address coronial documentation governance using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect ignored suicide warning collateral; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-078",
+    "topic": "governance",
+    "difficulty": "consultant",
+    "title": "Complaint after culturally unsafe police transfer",
+    "candidateRole": "clinical director",
+    "setting": "Community service complaint meeting",
+    "stem": "You are the clinical director. Community service complaint meeting.\n\nA patient's family has complained, that an Aboriginal man was discharged from crisis care and died in police custody. A patient's family has complained says, \"You treated him like a criminal, not a patient.\" \n\nExecutive says, \"Do not say sorry until legal approves.\" Complaint officer asks, \"Is this AHPRA or internal review?\" Family says, \"He begged not to be taken by police.\" No Aboriginal liaison was contacted before police transfer.\n\nStaff member says, \"We were scared and short-staffed.\" You must decide whether to conduct open disclosure, cultural review and governance escalation.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "defensive complaint shortcut — unsafe shortcut under pressure",
+        "category": "governance",
+        "severity": "critical",
+        "clueInStem": "Do not say sorry until legal approves.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass culturally unsafe care allegation, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'Do not say sorry until legal approves.' without first formulating culturally unsafe care allegation, immediate safety and a defensible disposition.",
+        "keywords": [
+          "defensive complaint shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "culturally unsafe care allegation — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "You treated him like a criminal, not a patient.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around culturally unsafe care allegation, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "culturally unsafe care allegation",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "complaint and regulatory governance — legal/policy hinge",
+        "category": "governance",
+        "severity": "critical",
+        "clueInStem": "Is this AHPRA or internal review?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "complaint and regulatory governance",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "vulnerable patient and family harm — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "He begged not to be taken by police.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect vulnerable patient and family harm, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "vulnerable patient and family harm",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "mdt_conflict",
+        "severity": "important",
+        "clueInStem": "We were scared and short-staffed.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to conduct open disclosure, cultural review and governance escalation",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'Do not say sorry until legal approves.' without first addressing immediate safety, culturally unsafe care allegation, and legal authority.\n- Identify the live decision: whether to conduct open disclosure, cultural review and governance escalation.\n\nClinical formulation:\n- Formulate the case around culturally unsafe care allegation rather than a generic diagnostic list.\n- Link the patient's statement 'You treated him like a criminal, not a patient.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address complaint and regulatory governance using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect vulnerable patient and family harm; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-079",
+    "topic": "governance",
+    "difficulty": "consultant",
+    "title": "Policy conflict: seclusion target versus ward violence",
+    "candidateRole": "medical director consultant",
+    "setting": "Governance meeting after restraint incident",
+    "stem": "You are the medical director consultant. Governance meeting after restraint incident.\n\nThe ward team, secluded a psychotic patient after assaulting another patient, breaching seclusion reduction targets. The ward team says, \"He punched an elderly patient before we could move anyone.\" \n\nExecutive says, \"Our seclusion numbers cannot go up this month.\" Quality manager asks, \"Was policy breached?\" Elderly patient says, \"I am frightened to sleep on the ward.\" Staff feel blamed by a culture focused on KPIs.\n\nNurse says, \"We are told never to seclude, then blamed when someone is hurt.\" You must decide whether to balance safety, least restrictive care and governance learning.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "metric-driven shortcut — unsafe shortcut under pressure",
+        "category": "governance",
+        "severity": "critical",
+        "clueInStem": "Our seclusion numbers cannot go up this month.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass immediate ward safety versus restraint minimisation, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'Our seclusion numbers cannot go up this month.' without first formulating immediate ward safety versus restraint minimisation, immediate safety and a defensible disposition.",
+        "keywords": [
+          "metric-driven shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "immediate ward safety versus restraint minimisation — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "He punched an elderly patient before we could move anyone.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around immediate ward safety versus restraint minimisation, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "immediate ward safety versus restraint minimisation",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "seclusion/restraint governance — legal/policy hinge",
+        "category": "governance",
+        "severity": "critical",
+        "clueInStem": "Was policy breached?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "seclusion/restraint governance",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "vulnerable inpatient safety — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "I am frightened to sleep on the ward.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect vulnerable inpatient safety, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "vulnerable inpatient safety",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "mdt_conflict",
+        "severity": "important",
+        "clueInStem": "We are told never to seclude, then blamed when someone is hurt.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to balance safety, least restrictive care and governance learning",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'Our seclusion numbers cannot go up this month.' without first addressing immediate safety, immediate ward safety versus restraint minimisation, and legal authority.\n- Identify the live decision: whether to balance safety, least restrictive care and governance learning.\n\nClinical formulation:\n- Formulate the case around immediate ward safety versus restraint minimisation rather than a generic diagnostic list.\n- Link the patient's statement 'He punched an elderly patient before we could move anyone.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address seclusion/restraint governance using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect vulnerable inpatient safety; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-080",
+    "topic": "governance",
+    "difficulty": "consultant",
+    "title": "Mandatory reporting for sexual boundary concerns",
+    "candidateRole": "clinical director and supervisor",
+    "setting": "Private hospital governance call",
+    "stem": "You are the clinical director and supervisor. Private hospital governance call.\n\nA senior psychiatrist, is alleged to have sent intimate messages to a current patient. A senior psychiatrist says, \"He said I was special and no one understood us.\" \n\nHospital CEO says, \"He is our main admitting doctor; keep this contained.\" Medical board liaison asks, \"Does this meet mandatory notification?\" Patient says, \"I feel responsible if he loses his job.\" The patient has BPD and trauma, and staff are minimising her credibility.\n\nColleague says, \"She is a difficult patient who exaggerates.\" You must decide whether to protect patient, remove clinician and report.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "reputation shortcut — unsafe shortcut under pressure",
+        "category": "governance",
+        "severity": "critical",
+        "clueInStem": "He is our main admitting doctor; keep this contained.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass sexual boundary exploitation, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'He is our main admitting doctor; keep this contained.' without first formulating sexual boundary exploitation, immediate safety and a defensible disposition.",
+        "keywords": [
+          "reputation shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "sexual boundary exploitation — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "He said I was special and no one understood us.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around sexual boundary exploitation, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "sexual boundary exploitation",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "mandatory reporting threshold — legal/policy hinge",
+        "category": "governance",
+        "severity": "critical",
+        "clueInStem": "Does this meet mandatory notification?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "mandatory reporting threshold",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "vulnerable patient guilt and dependence — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "I feel responsible if he loses his job.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect vulnerable patient guilt and dependence, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "vulnerable patient guilt and dependence",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "mdt_conflict",
+        "severity": "important",
+        "clueInStem": "She is a difficult patient who exaggerates.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to protect patient, remove clinician and report",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'He is our main admitting doctor; keep this contained.' without first addressing immediate safety, sexual boundary exploitation, and legal authority.\n- Identify the live decision: whether to protect patient, remove clinician and report.\n\nClinical formulation:\n- Formulate the case around sexual boundary exploitation rather than a generic diagnostic list.\n- Link the patient's statement 'He said I was special and no one understood us.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address mandatory reporting threshold using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect vulnerable patient guilt and dependence; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-081",
+    "topic": "psychotherapy",
+    "difficulty": "consultant",
+    "title": "BPD inpatient splitting bed pressure",
+    "candidateRole": "inpatient consultant psychiatrist",
+    "setting": "Monday ward bed meeting",
+    "stem": "You are the inpatient consultant psychiatrist. Monday ward bed meeting.\n\nAlicia, a 29-year-old woman with BPD and trauma, cut superficially after leave refusal and threatened the team. Alicia says, \"If you discharge me, my blood is on your hands.\" \n\nBed manager says, \"Discharge her by midday; ED has psychosis waiting.\" Registrar asks, \"Should we keep her until she denies suicidal thoughts?\" Mother says, \"Every discharge makes her worse.\" Nursing team is split between rescue and rejection.\n\nNurse says, \"She is taking a bed from real patients.\" You must decide whether to provide structured discharge without nihilism or dependency.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "bed-pressure shortcut — unsafe shortcut under pressure",
+        "category": "risk_self",
+        "severity": "critical",
+        "clueInStem": "Discharge her by midday; ED has psychosis waiting.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass acute-on-chronic suicide risk and splitting, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'Discharge her by midday; ED has psychosis waiting.' without first formulating acute-on-chronic suicide risk and splitting, immediate safety and a defensible disposition.",
+        "keywords": [
+          "bed-pressure shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "acute-on-chronic suicide risk and splitting — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "If you discharge me, my blood is on your hands.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around acute-on-chronic suicide risk and splitting, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "acute-on-chronic suicide risk and splitting",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "risk formulation versus false endpoint — legal/policy hinge",
+        "category": "ethics",
+        "severity": "critical",
+        "clueInStem": "Should we keep her until she denies suicidal thoughts?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "risk formulation versus false endpoint",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "family anxiety sustaining admission pressure — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "Every discharge makes her worse.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect family anxiety sustaining admission pressure, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "family anxiety sustaining admission pressure",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "mdt_conflict",
+        "severity": "important",
+        "clueInStem": "She is taking a bed from real patients.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to provide structured discharge without nihilism or dependency",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'Discharge her by midday; ED has psychosis waiting.' without first addressing immediate safety, acute-on-chronic suicide risk and splitting, and legal authority.\n- Identify the live decision: whether to provide structured discharge without nihilism or dependency.\n\nClinical formulation:\n- Formulate the case around acute-on-chronic suicide risk and splitting rather than a generic diagnostic list.\n- Link the patient's statement 'If you discharge me, my blood is on your hands.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address risk formulation versus false endpoint using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect family anxiety sustaining admission pressure; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-082",
+    "topic": "psychotherapy",
+    "difficulty": "consultant",
+    "title": "Community BPD dependency and unsafe emails",
+    "candidateRole": "community psychiatrist",
+    "setting": "CMHT review after ED presentations",
+    "stem": "You are the community psychiatrist. CMHT review after ED presentations.\n\nNathan, a 35-year-old man with BPD and alcohol misuse, misses appointments but sends crisis emails to one care coordinator. Nathan says, \"You are the only person stopping me ending it.\" \n\nRegistrar says, \"Close his file; he is not engaging.\" Care coordinator asks, \"Can I block him from my personal phone?\" Partner says, \"He drinks and cuts when you do not reply.\" The team labels him manipulative and avoids discussing countertransference.\n\nNathan says, \"If you set limits, you prove you do not care.\" You must decide whether to create team-based boundaries and maintain engagement.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "punitive-discharge shortcut — unsafe shortcut under pressure",
+        "category": "risk_self",
+        "severity": "critical",
+        "clueInStem": "Close his file; he is not engaging.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass dependency and boundary diffusion, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'Close his file; he is not engaging.' without first formulating dependency and boundary diffusion, immediate safety and a defensible disposition.",
+        "keywords": [
+          "punitive-discharge shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "dependency and boundary diffusion — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "You are the only person stopping me ending it.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around dependency and boundary diffusion, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "dependency and boundary diffusion",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "professional boundaries and duty of care — legal/policy hinge",
+        "category": "ethics",
+        "severity": "critical",
+        "clueInStem": "Can I block him from my personal phone?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "professional boundaries and duty of care",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "acute risk linked to service boundaries — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "He drinks and cuts when you do not reply.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect acute risk linked to service boundaries, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "acute risk linked to service boundaries",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "mdt_conflict",
+        "severity": "important",
+        "clueInStem": "If you set limits, you prove you do not care.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to create team-based boundaries and maintain engagement",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'Close his file; he is not engaging.' without first addressing immediate safety, dependency and boundary diffusion, and legal authority.\n- Identify the live decision: whether to create team-based boundaries and maintain engagement.\n\nClinical formulation:\n- Formulate the case around dependency and boundary diffusion rather than a generic diagnostic list.\n- Link the patient's statement 'You are the only person stopping me ending it.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address professional boundaries and duty of care using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect acute risk linked to service boundaries; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-083",
+    "topic": "psychotherapy",
+    "difficulty": "consultant",
+    "title": "Chronic NSSI ED therapeutic nihilism",
+    "candidateRole": "ED psychiatry consultant",
+    "setting": "Friday night ED access block",
+    "stem": "You are the ED psychiatry consultant. Friday night ED access block.\n\nJordan, a 26-year-old non-binary person, presents after cutting their thigh following relationship conflict. Jordan says, \"Cutting stops me doing something worse.\" \n\nED consultant says, \"We cannot admit every time they cut.\" Registrar asks, \"It is superficial, so can they leave?\" Partner says, \"I cannot supervise tonight.\" Jordan reports repeated misgendering in ED.\n\nNurse says, \"They refuse every plan then complain.\" You must decide whether to manage acute-on-chronic risk without rejection.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "therapeutic nihilism shortcut — unsafe shortcut under pressure",
+        "category": "risk_self",
+        "severity": "critical",
+        "clueInStem": "We cannot admit every time they cut.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass NSSI as affect regulation with escalation risk, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'We cannot admit every time they cut.' without first formulating NSSI as affect regulation with escalation risk, immediate safety and a defensible disposition.",
+        "keywords": [
+          "therapeutic nihilism shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "NSSI as affect regulation with escalation risk — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "Cutting stops me doing something worse.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around NSSI as affect regulation with escalation risk, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "NSSI as affect regulation with escalation risk",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "risk formulation and disposition — legal/policy hinge",
+        "category": "ethics",
+        "severity": "critical",
+        "clueInStem": "It is superficial, so can they leave?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "risk formulation and disposition",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "carer exhaustion and unsafe discharge — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "I cannot supervise tonight.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect carer exhaustion and unsafe discharge, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "carer exhaustion and unsafe discharge",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "mdt_conflict",
+        "severity": "important",
+        "clueInStem": "They refuse every plan then complain.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to manage acute-on-chronic risk without rejection",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'We cannot admit every time they cut.' without first addressing immediate safety, NSSI as affect regulation with escalation risk, and legal authority.\n- Identify the live decision: whether to manage acute-on-chronic risk without rejection.\n\nClinical formulation:\n- Formulate the case around NSSI as affect regulation with escalation risk rather than a generic diagnostic list.\n- Link the patient's statement 'Cutting stops me doing something worse.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address risk formulation and disposition using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect carer exhaustion and unsafe discharge; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-084",
+    "topic": "psychotherapy",
+    "difficulty": "consultant",
+    "title": "Eating disorder and personality dynamics on medical ward",
+    "candidateRole": "CL psychiatrist",
+    "setting": "Medical ward with conflict around NG feeding",
+    "stem": "You are the CL psychiatrist. Medical ward with conflict around NG feeding.\n\nClare, a 24-year-old woman with anorexia and BPD traits, pulls NG tubes and alternates idealising and abusing staff. Clare says, \"You are the only nurse who cares; everyone else wants me fat.\" \n\nMedical consultant says, \"Use restraint and get the feeds in.\" Registrar asks, \"Does capacity matter if BMI is critical?\" Roommate says, \"She tells me how to hide food.\" Staff are divided between punitive limits and rescue overnight feeds.\n\nNurse says, \"I cannot keep being her favourite.\" You must decide whether to maintain medical safety and unified therapeutic frame.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "force-first shortcut — unsafe shortcut under pressure",
+        "category": "risk_self",
+        "severity": "critical",
+        "clueInStem": "Use restraint and get the feeds in.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass splitting around life-saving feeding, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'Use restraint and get the feeds in.' without first formulating splitting around life-saving feeding, immediate safety and a defensible disposition.",
+        "keywords": [
+          "force-first shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "splitting around life-saving feeding — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "You are the only nurse who cares; everyone else wants me fat.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around splitting around life-saving feeding, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "splitting around life-saving feeding",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "capacity/emergency treatment and proportionality — legal/policy hinge",
+        "category": "ethics",
+        "severity": "critical",
+        "clueInStem": "Does capacity matter if BMI is critical?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "capacity/emergency treatment and proportionality",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "vulnerable co-patient risk — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "She tells me how to hide food.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect vulnerable co-patient risk, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "vulnerable co-patient risk",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "mdt_conflict",
+        "severity": "important",
+        "clueInStem": "I cannot keep being her favourite.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to maintain medical safety and unified therapeutic frame",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'Use restraint and get the feeds in.' without first addressing immediate safety, splitting around life-saving feeding, and legal authority.\n- Identify the live decision: whether to maintain medical safety and unified therapeutic frame.\n\nClinical formulation:\n- Formulate the case around splitting around life-saving feeding rather than a generic diagnostic list.\n- Link the patient's statement 'You are the only nurse who cares; everyone else wants me fat.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address capacity/emergency treatment and proportionality using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect vulnerable co-patient risk; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-085",
+    "topic": "psychotherapy",
+    "difficulty": "consultant",
+    "title": "Complex PTSD admission request as safety behaviour",
+    "candidateRole": "trauma service consultant",
+    "setting": "Community crisis review",
+    "stem": "You are the trauma service consultant. Community crisis review.\n\nEmma, a 41-year-old woman with complex PTSD, requests admission whenever trauma memories intensify. Emma says, \"Hospital is the only place I do not feel contaminated.\" \n\nCrisis team says, \"Admit her or she will complain.\" Registrar asks, \"Can we refuse admission if she threatens self-harm?\" Teen daughter says, \"I stay home so Mum does not disappear.\" Emma's community treats sexual trauma disclosure as shameful.\n\nEmma says, \"Every discharge feels like being abandoned again.\" You must decide whether to contain risk without reinforcing admission dependency.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "complaint-driven admission shortcut — unsafe shortcut under pressure",
+        "category": "risk_self",
+        "severity": "critical",
+        "clueInStem": "Admit her or she will complain.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass trauma safety behaviour and dependency, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'Admit her or she will complain.' without first formulating trauma safety behaviour and dependency, immediate safety and a defensible disposition.",
+        "keywords": [
+          "complaint-driven admission shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "trauma safety behaviour and dependency — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "Hospital is the only place I do not feel contaminated.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around trauma safety behaviour and dependency, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "trauma safety behaviour and dependency",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "duty of care and least restrictive care — legal/policy hinge",
+        "category": "ethics",
+        "severity": "critical",
+        "clueInStem": "Can we refuse admission if she threatens self-harm?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "duty of care and least restrictive care",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "young carer risk — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "I stay home so Mum does not disappear.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect young carer risk, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "young carer risk",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "mdt_conflict",
+        "severity": "important",
+        "clueInStem": "Every discharge feels like being abandoned again.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to contain risk without reinforcing admission dependency",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'Admit her or she will complain.' without first addressing immediate safety, trauma safety behaviour and dependency, and legal authority.\n- Identify the live decision: whether to contain risk without reinforcing admission dependency.\n\nClinical formulation:\n- Formulate the case around trauma safety behaviour and dependency rather than a generic diagnostic list.\n- Link the patient's statement 'Hospital is the only place I do not feel contaminated.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address duty of care and least restrictive care using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect young carer risk; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-086",
+    "topic": "psychotherapy",
+    "difficulty": "consultant",
+    "title": "Countertransference after patient complaint",
+    "candidateRole": "consultant psychotherapist",
+    "setting": "Therapy program review after complaint",
+    "stem": "You are the consultant psychotherapist. Therapy program review after complaint.\n\nMr Ahmed, a 38-year-old man with narcissistic traits and depression, complained that his therapist humiliated him and now threatens litigation. Mr Ahmed says, \"You will all regret disrespecting me.\" \n\nTherapist says, \"He is impossible; discharge him.\" Manager asks, \"Do we write only factual notes from now on?\" Wife says, \"He has been saying life is over.\" Cultural expectations of respect and shame are central to his distress.\n\nMr Ahmed says, \"In my community, this insult destroys a man.\" You must decide whether to manage complaint, risk and therapeutic rupture.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "countertransference discharge shortcut — unsafe shortcut under pressure",
+        "category": "risk_self",
+        "severity": "critical",
+        "clueInStem": "He is impossible; discharge him.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass narcissistic injury and risk/escalation, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'He is impossible; discharge him.' without first formulating narcissistic injury and risk/escalation, immediate safety and a defensible disposition.",
+        "keywords": [
+          "countertransference discharge shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "narcissistic injury and risk/escalation — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "You will all regret disrespecting me.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around narcissistic injury and risk/escalation, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "narcissistic injury and risk/escalation",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "defensive documentation ethics — legal/policy hinge",
+        "category": "ethics",
+        "severity": "critical",
+        "clueInStem": "Do we write only factual notes from now on?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "defensive documentation ethics",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "suicide risk behind complaint — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "He has been saying life is over.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect suicide risk behind complaint, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "suicide risk behind complaint",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "mdt_conflict",
+        "severity": "important",
+        "clueInStem": "In my community, this insult destroys a man.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to manage complaint, risk and therapeutic rupture",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'He is impossible; discharge him.' without first addressing immediate safety, narcissistic injury and risk/escalation, and legal authority.\n- Identify the live decision: whether to manage complaint, risk and therapeutic rupture.\n\nClinical formulation:\n- Formulate the case around narcissistic injury and risk/escalation rather than a generic diagnostic list.\n- Link the patient's statement 'You will all regret disrespecting me.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address defensive documentation ethics using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect suicide risk behind complaint; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-087",
+    "topic": "psychotherapy",
+    "difficulty": "consultant",
+    "title": "Dependent personality and medically unexplained symptoms",
+    "candidateRole": "CL psychiatrist",
+    "setting": "Frequent attender clinic MDT",
+    "stem": "You are the CL psychiatrist. Frequent attender clinic MDT.\n\nLaura, a 45-year-old woman, presents weekly with chest pain after reassurance and demands admission. Laura says, \"If you send me home, I will be alone with my body.\" \n\nCardiology says, \"Ban her from ED unless troponin positive.\" Registrar asks, \"Can we make a behavioural contract?\" Adult son says, \"I left work again to sit with her.\" Laura's family culture expects children to care for parents at all times.\n\nLaura says, \"Good doctors keep me until I feel safe.\" You must decide whether to create compassionate boundaries and reduce iatrogenic care.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "exclusion shortcut — unsafe shortcut under pressure",
+        "category": "risk_self",
+        "severity": "critical",
+        "clueInStem": "Ban her from ED unless troponin positive.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass dependency and somatic anxiety, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'Ban her from ED unless troponin positive.' without first formulating dependency and somatic anxiety, immediate safety and a defensible disposition.",
+        "keywords": [
+          "exclusion shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "dependency and somatic anxiety — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "If you send me home, I will be alone with my body.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around dependency and somatic anxiety, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "dependency and somatic anxiety",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "ethics of frequent-attender plan — legal/policy hinge",
+        "category": "ethics",
+        "severity": "critical",
+        "clueInStem": "Can we make a behavioural contract?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "ethics of frequent-attender plan",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "carer burden — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "I left work again to sit with her.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect carer burden, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "carer burden",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "mdt_conflict",
+        "severity": "important",
+        "clueInStem": "Good doctors keep me until I feel safe.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to create compassionate boundaries and reduce iatrogenic care",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'Ban her from ED unless troponin positive.' without first addressing immediate safety, dependency and somatic anxiety, and legal authority.\n- Identify the live decision: whether to create compassionate boundaries and reduce iatrogenic care.\n\nClinical formulation:\n- Formulate the case around dependency and somatic anxiety rather than a generic diagnostic list.\n- Link the patient's statement 'If you send me home, I will be alone with my body.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address ethics of frequent-attender plan using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect carer burden; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-088",
+    "topic": "psychotherapy",
+    "difficulty": "consultant",
+    "title": "Hoarding risk and autonomy",
+    "candidateRole": "old age/community psychiatrist",
+    "setting": "Home visit with council and fire service",
+    "stem": "You are the old age/community psychiatrist. Home visit with council and fire service.\n\nMr Evans, a 66-year-old man with hoarding disorder, lives with blocked exits, mice and newspapers near heaters. Mr Evans says, \"These papers are my memory; throwing them is killing me.\" \n\nCouncil says, \"Clear the house by force tomorrow.\" Fire officer asks, \"Can we declare him incapable?\" Neighbour says, \"Smoke comes through the wall where children sleep.\" Mr Evans is socially isolated and distrusts authorities after eviction history.\n\nMr Evans says, \"If you touch anything, I will not survive.\" You must decide whether to balance autonomy, capacity, fire risk and engagement.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "coercive-cleanout shortcut — unsafe shortcut under pressure",
+        "category": "risk_self",
+        "severity": "critical",
+        "clueInStem": "Clear the house by force tomorrow.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass hoarding formulation and identity, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'Clear the house by force tomorrow.' without first formulating hoarding formulation and identity, immediate safety and a defensible disposition.",
+        "keywords": [
+          "coercive-cleanout shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "hoarding formulation and identity — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "These papers are my memory; throwing them is killing me.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around hoarding formulation and identity, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "hoarding formulation and identity",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "capacity and public safety powers — legal/policy hinge",
+        "category": "ethics",
+        "severity": "critical",
+        "clueInStem": "Can we declare him incapable?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "capacity and public safety powers",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "neighbour/child fire risk — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "Smoke comes through the wall where children sleep.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect neighbour/child fire risk, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "neighbour/child fire risk",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "mdt_conflict",
+        "severity": "important",
+        "clueInStem": "If you touch anything, I will not survive.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to balance autonomy, capacity, fire risk and engagement",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'Clear the house by force tomorrow.' without first addressing immediate safety, hoarding formulation and identity, and legal authority.\n- Identify the live decision: whether to balance autonomy, capacity, fire risk and engagement.\n\nClinical formulation:\n- Formulate the case around hoarding formulation and identity rather than a generic diagnostic list.\n- Link the patient's statement 'These papers are my memory; throwing them is killing me.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address capacity and public safety powers using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect neighbour/child fire risk; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-089",
+    "topic": "psychotherapy",
+    "difficulty": "consultant",
+    "title": "Therapy boundary request from suicidal patient",
+    "candidateRole": "consultant supervisor",
+    "setting": "Outpatient psychotherapy supervision",
+    "stem": "You are the consultant supervisor. Outpatient psychotherapy supervision.\n\nA trainee therapist, asks to give a chronically suicidal patient their personal number. A trainee therapist says, \"If I cannot text you, I will die.\" \n\nTrainee says, \"It feels cruel not to be available.\" Supervisor group asks, \"Is refusal abandonment?\" Partner says, \"She checks the phone all night.\" The patient has cultural history of institutional abandonment.\n\nPatient says, \"Rules are how people leave me.\" You must decide whether to set boundaries while maintaining safety plan.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "rescue shortcut — unsafe shortcut under pressure",
+        "category": "risk_self",
+        "severity": "critical",
+        "clueInStem": "It feels cruel not to be available.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass dependency and suicide risk in therapy frame, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'It feels cruel not to be available.' without first formulating dependency and suicide risk in therapy frame, immediate safety and a defensible disposition.",
+        "keywords": [
+          "rescue shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "dependency and suicide risk in therapy frame — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "If I cannot text you, I will die.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around dependency and suicide risk in therapy frame, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "dependency and suicide risk in therapy frame",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "therapeutic boundaries and duty of care — legal/policy hinge",
+        "category": "ethics",
+        "severity": "critical",
+        "clueInStem": "Is refusal abandonment?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "therapeutic boundaries and duty of care",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "relationship/carer harm — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "She checks the phone all night.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect relationship/carer harm, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "relationship/carer harm",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "mdt_conflict",
+        "severity": "important",
+        "clueInStem": "Rules are how people leave me.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to set boundaries while maintaining safety plan",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'It feels cruel not to be available.' without first addressing immediate safety, dependency and suicide risk in therapy frame, and legal authority.\n- Identify the live decision: whether to set boundaries while maintaining safety plan.\n\nClinical formulation:\n- Formulate the case around dependency and suicide risk in therapy frame rather than a generic diagnostic list.\n- Link the patient's statement 'If I cannot text you, I will die.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address therapeutic boundaries and duty of care using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect relationship/carer harm; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-090",
+    "topic": "psychotherapy",
+    "difficulty": "consultant",
+    "title": "Personality disorder and violence threat in staff split",
+    "candidateRole": "inpatient consultant psychiatrist",
+    "setting": "Acute ward after staff assault",
+    "stem": "You are the inpatient consultant psychiatrist. Acute ward after staff assault.\n\nRenee, a 32-year-old woman with complex trauma and BPD, slapped a nurse after being told discharge was delayed. Renee says, \"You lied like everyone who traps me.\" \n\nNurse manager says, \"Discharge her today for staff safety.\" Registrar asks, \"Can we use the MHA for violence if she is not psychotic?\" Junior nurse says, \"I am scared she will target me.\" Renee is an Aboriginal woman with past institutional abuse.\n\nRenee says, \"Hospitals are where people get taken.\" You must decide whether to protect staff without retaliatory discharge.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "punitive-discharge shortcut — unsafe shortcut under pressure",
+        "category": "risk_self",
+        "severity": "critical",
+        "clueInStem": "Discharge her today for staff safety.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass trauma-related threat response and aggression, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'Discharge her today for staff safety.' without first formulating trauma-related threat response and aggression, immediate safety and a defensible disposition.",
+        "keywords": [
+          "punitive-discharge shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "trauma-related threat response and aggression — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "You lied like everyone who traps me.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around trauma-related threat response and aggression, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "trauma-related threat response and aggression",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "MHA/risk threshold and capacity — legal/policy hinge",
+        "category": "ethics",
+        "severity": "critical",
+        "clueInStem": "Can we use the MHA for violence if she is not psychotic?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "MHA/risk threshold and capacity",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "staff safety and therapeutic relationship — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "I am scared she will target me.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect staff safety and therapeutic relationship, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "staff safety and therapeutic relationship",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "mdt_conflict",
+        "severity": "important",
+        "clueInStem": "Hospitals are where people get taken.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to protect staff without retaliatory discharge",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'Discharge her today for staff safety.' without first addressing immediate safety, trauma-related threat response and aggression, and legal authority.\n- Identify the live decision: whether to protect staff without retaliatory discharge.\n\nClinical formulation:\n- Formulate the case around trauma-related threat response and aggression rather than a generic diagnostic list.\n- Link the patient's statement 'You lied like everyone who traps me.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address MHA/risk threshold and capacity using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect staff safety and therapeutic relationship; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-091",
+    "topic": "substance_use",
+    "difficulty": "consultant",
+    "title": "Alcohol cirrhosis capacity refusal",
+    "candidateRole": "addiction CL psychiatrist",
+    "setting": "Hepatology ward",
+    "stem": "You are the addiction CL psychiatrist. Hepatology ward.\n\nPeter, a 57-year-old man with decompensated cirrhosis, refuses lactulose, withdrawal care and wants to self-discharge to drink. Peter says, \"I know I am dying, so let me drink.\" \n\nMedical registrar says, \"He is choosing alcohol, so let him leave.\" Hepatologist asks, \"Can we treat encephalopathy against refusal?\" Wife says, \"When he sobers up he wants treatment.\" His family sees addiction as moral failure and is exhausted.\n\nDaughter says, \"Can you force rehab this time?\" You must decide whether capacity is present and how to use harm reduction.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "moralising-discharge shortcut — unsafe shortcut under pressure",
+        "category": "substance_use",
+        "severity": "critical",
+        "clueInStem": "He is choosing alcohol, so let him leave.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass alcohol dependence, demoralisation and fluctuating capacity, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'He is choosing alcohol, so let him leave.' without first formulating alcohol dependence, demoralisation and fluctuating capacity, immediate safety and a defensible disposition.",
+        "keywords": [
+          "moralising-discharge shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "alcohol dependence, demoralisation and fluctuating capacity — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "I know I am dying, so let me drink.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around alcohol dependence, demoralisation and fluctuating capacity, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "alcohol dependence, demoralisation and fluctuating capacity",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "capacity and emergency treatment — legal/policy hinge",
+        "category": "capacity",
+        "severity": "critical",
+        "clueInStem": "Can we treat encephalopathy against refusal?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "capacity and emergency treatment",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "state-dependent collateral — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "When he sobers up he wants treatment.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect state-dependent collateral, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "state-dependent collateral",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "Can you force rehab this time?",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether capacity is present and how to use harm reduction",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'He is choosing alcohol, so let him leave.' without first addressing immediate safety, alcohol dependence, demoralisation and fluctuating capacity, and legal authority.\n- Identify the live decision: whether capacity is present and how to use harm reduction.\n\nClinical formulation:\n- Formulate the case around alcohol dependence, demoralisation and fluctuating capacity rather than a generic diagnostic list.\n- Link the patient's statement 'I know I am dying, so let me drink.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address capacity and emergency treatment using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect state-dependent collateral; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-092",
+    "topic": "substance_use",
+    "difficulty": "consultant",
+    "title": "Meth psychosis versus primary psychosis violence",
+    "candidateRole": "ED consultant psychiatrist",
+    "setting": "ED short stay after barricade incident",
+    "stem": "You are the ED consultant psychiatrist. ED short stay after barricade incident.\n\nKai, a 25-year-old man, barricaded his room after meth use but has six months decline. Kai says, \"Neighbours put cameras in the smoke alarm.\" \n\nED registrar says, \"Let him sleep it off and discharge.\" Police asks, \"Do we need to stay if he denies intent?\" Father says, \"He mutters even when he is not using.\" Family fears shame and wants no mental health record.\n\nKai says, \"If they come in, I will be ready.\" You must decide whether ongoing psychosis/risk requires admission after intoxication clears.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "intoxication-only shortcut — unsafe shortcut under pressure",
+        "category": "substance_use",
+        "severity": "critical",
+        "clueInStem": "Let him sleep it off and discharge.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass methamphetamine psychosis versus primary psychosis, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'Let him sleep it off and discharge.' without first formulating methamphetamine psychosis versus primary psychosis, immediate safety and a defensible disposition.",
+        "keywords": [
+          "intoxication-only shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "methamphetamine psychosis versus primary psychosis — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "Neighbours put cameras in the smoke alarm.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around methamphetamine psychosis versus primary psychosis, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "methamphetamine psychosis versus primary psychosis",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "violence risk and MHA threshold — legal/policy hinge",
+        "category": "capacity",
+        "severity": "critical",
+        "clueInStem": "Do we need to stay if he denies intent?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "violence risk and MHA threshold",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "collateral diagnostic uncertainty — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "He mutters even when he is not using.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect collateral diagnostic uncertainty, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "collateral diagnostic uncertainty",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "If they come in, I will be ready.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether ongoing psychosis/risk requires admission after intoxication clears",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'Let him sleep it off and discharge.' without first addressing immediate safety, methamphetamine psychosis versus primary psychosis, and legal authority.\n- Identify the live decision: whether ongoing psychosis/risk requires admission after intoxication clears.\n\nClinical formulation:\n- Formulate the case around methamphetamine psychosis versus primary psychosis rather than a generic diagnostic list.\n- Link the patient's statement 'Neighbours put cameras in the smoke alarm.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address violence risk and MHA threshold using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect collateral diagnostic uncertainty; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-093",
+    "topic": "substance_use",
+    "difficulty": "consultant",
+    "title": "Opioid dependence pregnancy with partner violence",
+    "candidateRole": "perinatal addiction psychiatrist",
+    "setting": "Antenatal opioid treatment service",
+    "stem": "You are the perinatal addiction psychiatrist. Antenatal opioid treatment service.\n\nAlana, a 29-year-old woman 30 weeks pregnant, uses methadone, intermittent benzodiazepines and fears child protection. Alana says, \"Methadone is why I am not using heroin.\" \n\nObstetric registrar says, \"Reduce it to prevent neonatal withdrawal.\" Social worker asks, \"Should child protection be notified now?\" Unborn baby says, \"I do not want the baby labelled an addict.\" Partner uses heroin and was aggressive at clinic.\n\nAlana says, \"If they hear methadone, they will take my baby.\" You must decide whether to maintain treatment and plan infant safety.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "fetal-risk shortcut — unsafe shortcut under pressure",
+        "category": "substance_use",
+        "severity": "critical",
+        "clueInStem": "Reduce it to prevent neonatal withdrawal.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass methadone maintenance as protective, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'Reduce it to prevent neonatal withdrawal.' without first formulating methadone maintenance as protective, immediate safety and a defensible disposition.",
+        "keywords": [
+          "fetal-risk shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "methadone maintenance as protective — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "Methadone is why I am not using heroin.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around methadone maintenance as protective, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "methadone maintenance as protective",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "child protection threshold — legal/policy hinge",
+        "category": "capacity",
+        "severity": "critical",
+        "clueInStem": "Should child protection be notified now?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "child protection threshold",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "NAS planning and stigma — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "I do not want the baby labelled an addict.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect NAS planning and stigma, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "NAS planning and stigma",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "If they hear methadone, they will take my baby.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to maintain treatment and plan infant safety",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'Reduce it to prevent neonatal withdrawal.' without first addressing immediate safety, methadone maintenance as protective, and legal authority.\n- Identify the live decision: whether to maintain treatment and plan infant safety.\n\nClinical formulation:\n- Formulate the case around methadone maintenance as protective rather than a generic diagnostic list.\n- Link the patient's statement 'Methadone is why I am not using heroin.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address child protection threshold using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect NAS planning and stigma; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-094",
+    "topic": "substance_use",
+    "difficulty": "consultant",
+    "title": "Benzodiazepine dependence in elderly faller",
+    "candidateRole": "old age addiction psychiatrist",
+    "setting": "Falls clinic and GP case conference",
+    "stem": "You are the old age addiction psychiatrist. Falls clinic and GP case conference.\n\nMrs Brown, a 74-year-old woman, takes diazepam nightly, drinks wine and has recurrent falls. Mrs Brown says, \"The tablets are the only way I sleep since my husband died.\" \n\nGP says, \"She will complain if we taper.\" Daughter asks, \"Can we hide the tablets?\" Grandchild says, \"She fell while babysitting me.\" Her church community discourages talking about alcohol use.\n\nMrs Brown says, \"Do not tell my daughter about the wine.\" You must decide whether to reduce harm while respecting autonomy/confidentiality.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "avoidance shortcut — unsafe shortcut under pressure",
+        "category": "substance_use",
+        "severity": "critical",
+        "clueInStem": "She will complain if we taper.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass benzodiazepine dependence, grief and falls, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'She will complain if we taper.' without first formulating benzodiazepine dependence, grief and falls, immediate safety and a defensible disposition.",
+        "keywords": [
+          "avoidance shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "benzodiazepine dependence, grief and falls — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "The tablets are the only way I sleep since my husband died.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around benzodiazepine dependence, grief and falls, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "benzodiazepine dependence, grief and falls",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "consent and medication control — legal/policy hinge",
+        "category": "capacity",
+        "severity": "critical",
+        "clueInStem": "Can we hide the tablets?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "consent and medication control",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "child safety and falls risk — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "She fell while babysitting me.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect child safety and falls risk, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "child safety and falls risk",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "Do not tell my daughter about the wine.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to reduce harm while respecting autonomy/confidentiality",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'She will complain if we taper.' without first addressing immediate safety, benzodiazepine dependence, grief and falls, and legal authority.\n- Identify the live decision: whether to reduce harm while respecting autonomy/confidentiality.\n\nClinical formulation:\n- Formulate the case around benzodiazepine dependence, grief and falls rather than a generic diagnostic list.\n- Link the patient's statement 'The tablets are the only way I sleep since my husband died.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address consent and medication control using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect child safety and falls risk; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-095",
+    "topic": "substance_use",
+    "difficulty": "consultant",
+    "title": "GHB dependence and ICU admissions",
+    "candidateRole": "addiction psychiatrist",
+    "setting": "ED after recurrent coma presentations",
+    "stem": "You are the addiction psychiatrist. ED after recurrent coma presentations.\n\nLachlan, a 28-year-old man, has repeated GHB overdoses and wants discharge once awake. Lachlan says, \"I only blacked out; I know my limits.\" \n\nED consultant says, \"He wakes up every time; discharge him.\" Registrar asks, \"Can we detain for addiction alone?\" Partner says, \"I find him blue and not breathing.\" Lachlan is a gay man who distrusts services after prior stigma.\n\nLachlan says, \"Do not lecture me about my scene.\" You must decide whether to manage withdrawal/overdose risk and engagement.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "normalisation shortcut — unsafe shortcut under pressure",
+        "category": "substance_use",
+        "severity": "critical",
+        "clueInStem": "He wakes up every time; discharge him.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass GHB dependence and overdose risk, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'He wakes up every time; discharge him.' without first formulating GHB dependence and overdose risk, immediate safety and a defensible disposition.",
+        "keywords": [
+          "normalisation shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "GHB dependence and overdose risk — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "I only blacked out; I know my limits.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around GHB dependence and overdose risk, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "GHB dependence and overdose risk",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "MHA/capacity limits — legal/policy hinge",
+        "category": "capacity",
+        "severity": "critical",
+        "clueInStem": "Can we detain for addiction alone?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "MHA/capacity limits",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "near-fatal vulnerable carer context — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "I find him blue and not breathing.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect near-fatal vulnerable carer context, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "near-fatal vulnerable carer context",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "Do not lecture me about my scene.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to manage withdrawal/overdose risk and engagement",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'He wakes up every time; discharge him.' without first addressing immediate safety, GHB dependence and overdose risk, and legal authority.\n- Identify the live decision: whether to manage withdrawal/overdose risk and engagement.\n\nClinical formulation:\n- Formulate the case around GHB dependence and overdose risk rather than a generic diagnostic list.\n- Link the patient's statement 'I only blacked out; I know my limits.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address MHA/capacity limits using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect near-fatal vulnerable carer context; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-096",
+    "topic": "substance_use",
+    "difficulty": "consultant",
+    "title": "Cannabis medicinal request in psychosis",
+    "candidateRole": "community psychiatrist",
+    "setting": "Family meeting after psychotic relapse",
+    "stem": "You are the community psychiatrist. Family meeting after psychotic relapse.\n\nTom, a 22-year-old man with schizophrenia, has restarted cannabis after family obtained medicinal cannabis from GP. Tom says, \"Cannabis is natural and stops the voices stressing me.\" \n\nMother says, \"The GP prescribed it, so chart it.\" Registrar asks, \"Can we tell the GP to stop prescribing?\" Younger brother says, \"He threatens me when he smokes.\" Family distrusts antipsychotics due to cultural beliefs about medication dependence.\n\nFather says, \"Your tablets made him a zombie.\" You must decide whether to refuse cannabis, liaise with GP and manage risk.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "medical-cannabis shortcut — unsafe shortcut under pressure",
+        "category": "substance_use",
+        "severity": "critical",
+        "clueInStem": "The GP prescribed it, so chart it.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass cannabis worsening psychosis risk, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'The GP prescribed it, so chart it.' without first formulating cannabis worsening psychosis risk, immediate safety and a defensible disposition.",
+        "keywords": [
+          "medical-cannabis shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "cannabis worsening psychosis risk — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "Cannabis is natural and stops the voices stressing me.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around cannabis worsening psychosis risk, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "cannabis worsening psychosis risk",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "shared care, consent and duty — legal/policy hinge",
+        "category": "capacity",
+        "severity": "critical",
+        "clueInStem": "Can we tell the GP to stop prescribing?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "shared care, consent and duty",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "family safety risk — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "He threatens me when he smokes.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect family safety risk, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "family safety risk",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "Your tablets made him a zombie.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to refuse cannabis, liaise with GP and manage risk",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'The GP prescribed it, so chart it.' without first addressing immediate safety, cannabis worsening psychosis risk, and legal authority.\n- Identify the live decision: whether to refuse cannabis, liaise with GP and manage risk.\n\nClinical formulation:\n- Formulate the case around cannabis worsening psychosis risk rather than a generic diagnostic list.\n- Link the patient's statement 'Cannabis is natural and stops the voices stressing me.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address shared care, consent and duty using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect family safety risk; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-097",
+    "topic": "substance_use",
+    "difficulty": "consultant",
+    "title": "Stimulant prescribing in ADHD with substance diversion",
+    "candidateRole": "adult ADHD psychiatrist",
+    "setting": "Private clinic urgent review",
+    "stem": "You are the adult ADHD psychiatrist. Private clinic urgent review.\n\nBen, a 30-year-old man with ADHD and meth use, demands dexamphetamine dose increase after lost scripts. Ben says, \"I focus better when I take extra before work.\" \n\nEmployer says, \"Clear him for machinery work tomorrow.\" GP asks, \"Can I keep prescribing if you recommend it?\" Co-worker says, \"He was jittery operating equipment.\" Ben says FIFO culture normalises stimulants and secrecy.\n\nBen says, \"If you do not prescribe, I will get it elsewhere.\" You must decide whether to prescribe, restrict, or treat substance use first.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "fitness shortcut — unsafe shortcut under pressure",
+        "category": "substance_use",
+        "severity": "critical",
+        "clueInStem": "Clear him for machinery work tomorrow.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass ADHD versus stimulant misuse/diversion, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'Clear him for machinery work tomorrow.' without first formulating ADHD versus stimulant misuse/diversion, immediate safety and a defensible disposition.",
+        "keywords": [
+          "fitness shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "ADHD versus stimulant misuse/diversion — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "I focus better when I take extra before work.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around ADHD versus stimulant misuse/diversion, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "ADHD versus stimulant misuse/diversion",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "prescribing governance and safety — legal/policy hinge",
+        "category": "capacity",
+        "severity": "critical",
+        "clueInStem": "Can I keep prescribing if you recommend it?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "prescribing governance and safety",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "public/workplace safety — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "He was jittery operating equipment.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect public/workplace safety, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "public/workplace safety",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "If you do not prescribe, I will get it elsewhere.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to prescribe, restrict, or treat substance use first",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'Clear him for machinery work tomorrow.' without first addressing immediate safety, ADHD versus stimulant misuse/diversion, and legal authority.\n- Identify the live decision: whether to prescribe, restrict, or treat substance use first.\n\nClinical formulation:\n- Formulate the case around ADHD versus stimulant misuse/diversion rather than a generic diagnostic list.\n- Link the patient's statement 'I focus better when I take extra before work.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address prescribing governance and safety using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect public/workplace safety; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-098",
+    "topic": "substance_use",
+    "difficulty": "consultant",
+    "title": "Alcohol withdrawal in pregnant woman",
+    "candidateRole": "perinatal addiction CL psychiatrist",
+    "setting": "Medical ward with obstetric review",
+    "stem": "You are the perinatal addiction CL psychiatrist. Medical ward with obstetric review.\n\nNadia, a 33-year-old woman 24 weeks pregnant, is withdrawing from alcohol and refuses diazepam due to fetal fears. Nadia says, \"Medication will poison my baby.\" \n\nObstetric resident says, \"Avoid benzodiazepines in pregnancy.\" Nurse asks, \"Can she leave if she refuses?\" Fetus says, \"She is tremulous and hypertensive.\" Nadia fears child protection and comes from a community where women drinking is taboo.\n\nNadia says, \"If anyone knows, I am finished.\" You must decide whether to treat withdrawal safely and maintain engagement.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "over-avoidance shortcut — unsafe shortcut under pressure",
+        "category": "substance_use",
+        "severity": "critical",
+        "clueInStem": "Avoid benzodiazepines in pregnancy.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass alcohol withdrawal and fetal/maternal risk, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'Avoid benzodiazepines in pregnancy.' without first formulating alcohol withdrawal and fetal/maternal risk, immediate safety and a defensible disposition.",
+        "keywords": [
+          "over-avoidance shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "alcohol withdrawal and fetal/maternal risk — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "Medication will poison my baby.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around alcohol withdrawal and fetal/maternal risk, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "alcohol withdrawal and fetal/maternal risk",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "capacity and emergency treatment — legal/policy hinge",
+        "category": "capacity",
+        "severity": "critical",
+        "clueInStem": "Can she leave if she refuses?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "capacity and emergency treatment",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "maternal-fetal medical risk — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "She is tremulous and hypertensive.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect maternal-fetal medical risk, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "maternal-fetal medical risk",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "If anyone knows, I am finished.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to treat withdrawal safely and maintain engagement",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'Avoid benzodiazepines in pregnancy.' without first addressing immediate safety, alcohol withdrawal and fetal/maternal risk, and legal authority.\n- Identify the live decision: whether to treat withdrawal safely and maintain engagement.\n\nClinical formulation:\n- Formulate the case around alcohol withdrawal and fetal/maternal risk rather than a generic diagnostic list.\n- Link the patient's statement 'Medication will poison my baby.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address capacity and emergency treatment using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect maternal-fetal medical risk; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-099",
+    "topic": "substance_use",
+    "difficulty": "consultant",
+    "title": "Clozapine patient smoking cessation toxicity",
+    "candidateRole": "CL/addiction psychiatrist",
+    "setting": "Medical ward after pneumonia admission",
+    "stem": "You are the CL/addiction psychiatrist. Medical ward after pneumonia admission.\n\nRafi, a 45-year-old man on clozapine, stopped smoking abruptly in hospital and is sedated with high clozapine level. Rafi says, \"I did not smoke because nurses said it is banned.\" \n\nMedical team says, \"He is just negative and sedated.\" Registrar asks, \"Should we restart cigarettes to fix it?\" Roommate says, \"He nearly fell twice overnight.\" Rafi's family sees smoking as shameful and wants it hidden.\n\nMother says, \"Do not put smoking in the discharge letter.\" You must decide whether to manage clozapine levels, nicotine and disclosure.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "misattribution shortcut — unsafe shortcut under pressure",
+        "category": "substance_use",
+        "severity": "critical",
+        "clueInStem": "He is just negative and sedated.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass clozapine toxicity after smoking cessation, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'He is just negative and sedated.' without first formulating clozapine toxicity after smoking cessation, immediate safety and a defensible disposition.",
+        "keywords": [
+          "misattribution shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "clozapine toxicity after smoking cessation — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "I did not smoke because nurses said it is banned.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around clozapine toxicity after smoking cessation, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "clozapine toxicity after smoking cessation",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "medication management policy — legal/policy hinge",
+        "category": "capacity",
+        "severity": "critical",
+        "clueInStem": "Should we restart cigarettes to fix it?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "medication management policy",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "falls/vulnerable inpatient risk — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "He nearly fell twice overnight.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect falls/vulnerable inpatient risk, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "falls/vulnerable inpatient risk",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "Do not put smoking in the discharge letter.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to manage clozapine levels, nicotine and disclosure",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'He is just negative and sedated.' without first addressing immediate safety, clozapine toxicity after smoking cessation, and legal authority.\n- Identify the live decision: whether to manage clozapine levels, nicotine and disclosure.\n\nClinical formulation:\n- Formulate the case around clozapine toxicity after smoking cessation rather than a generic diagnostic list.\n- Link the patient's statement 'I did not smoke because nurses said it is banned.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address medication management policy using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect falls/vulnerable inpatient risk; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-100",
+    "topic": "substance_use",
+    "difficulty": "consultant",
+    "title": "Dual diagnosis homelessness and depot refusal",
+    "candidateRole": "community addiction psychiatrist",
+    "setting": "Assertive outreach under bridge accommodation",
+    "stem": "You are the community addiction psychiatrist. Assertive outreach under bridge accommodation.\n\nShane, a 36-year-old man with schizophrenia and opioid use, refuses depot and sleeps rough near a railway line. Shane says, \"The depot makes me slow when I need to stay awake.\" \n\nTeam leader says, \"Breach the CTO; he is non-compliant.\" Housing worker asks, \"Can housing require depot?\" Public transport worker says, \"He walks on the tracks at night.\" Shane is Aboriginal and distrusts hostels after assaults.\n\nShane says, \"Shelters are more dangerous than the street.\" You must decide whether to integrate housing, harm reduction and MHA.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "coercion shortcut — unsafe shortcut under pressure",
+        "category": "substance_use",
+        "severity": "critical",
+        "clueInStem": "Breach the CTO; he is non-compliant.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass treatment refusal shaped by homelessness survival, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'Breach the CTO; he is non-compliant.' without first formulating treatment refusal shaped by homelessness survival, immediate safety and a defensible disposition.",
+        "keywords": [
+          "coercion shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "treatment refusal shaped by homelessness survival — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "The depot makes me slow when I need to stay awake.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around treatment refusal shaped by homelessness survival, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "treatment refusal shaped by homelessness survival",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "coercive treatment/housing ethics — legal/policy hinge",
+        "category": "capacity",
+        "severity": "critical",
+        "clueInStem": "Can housing require depot?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "coercive treatment/housing ethics",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "public/self safety risk — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "He walks on the tracks at night.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect public/self safety risk, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "public/self safety risk",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "Shelters are more dangerous than the street.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to integrate housing, harm reduction and MHA",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'Breach the CTO; he is non-compliant.' without first addressing immediate safety, treatment refusal shaped by homelessness survival, and legal authority.\n- Identify the live decision: whether to integrate housing, harm reduction and MHA.\n\nClinical formulation:\n- Formulate the case around treatment refusal shaped by homelessness survival rather than a generic diagnostic list.\n- Link the patient's statement 'The depot makes me slow when I need to stay awake.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address coercive treatment/housing ethics using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect public/self safety risk; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-101",
+    "topic": "mdt_systems",
+    "difficulty": "consultant",
+    "title": "Treatment-resistant schizophrenia NDIS vocational rehab",
+    "candidateRole": "community rehabilitation consultant psychiatrist",
+    "setting": "NDIS case conference",
+    "stem": "You are the community rehabilitation consultant psychiatrist. NDIS case conference.\n\nEthan, a 23-year-old man with treatment-resistant schizophrenia, has persistent negative symptoms and stopped supported work after paranoia. Ethan says, \"Everyone talks about recovery but no one thinks I can do anything.\" \n\nSupport coordinator says, \"The package is wasted because he will not engage.\" Registrar asks, \"Should we just focus on relapse prevention?\" Mother says, \"We organise everything and we are exhausted.\" Ethan wants graphic design study but fears stigma in his community.\n\nFather says, \"He should accept disability pension forever.\" You must decide whether to balance clozapine care, NDIS and vocational recovery.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "engagement-blame shortcut — unsafe shortcut under pressure",
+        "category": "system_pressure",
+        "severity": "critical",
+        "clueInStem": "The package is wasted because he will not engage.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass recovery-oriented TRS rehabilitation, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'The package is wasted because he will not engage.' without first formulating recovery-oriented TRS rehabilitation, immediate safety and a defensible disposition.",
+        "keywords": [
+          "engagement-blame shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "recovery-oriented TRS rehabilitation — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "Everyone talks about recovery but no one thinks I can do anything.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around recovery-oriented TRS rehabilitation, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "recovery-oriented TRS rehabilitation",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "functional recovery versus risk-only care — legal/policy hinge",
+        "category": "ethics",
+        "severity": "critical",
+        "clueInStem": "Should we just focus on relapse prevention?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "functional recovery versus risk-only care",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "carer burnout and overfunctioning — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "We organise everything and we are exhausted.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect carer burnout and overfunctioning, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "carer burnout and overfunctioning",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "family_carer",
+        "severity": "important",
+        "clueInStem": "He should accept disability pension forever.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to balance clozapine care, NDIS and vocational recovery",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'The package is wasted because he will not engage.' without first addressing immediate safety, recovery-oriented TRS rehabilitation, and legal authority.\n- Identify the live decision: whether to balance clozapine care, NDIS and vocational recovery.\n\nClinical formulation:\n- Formulate the case around recovery-oriented TRS rehabilitation rather than a generic diagnostic list.\n- Link the patient's statement 'Everyone talks about recovery but no one thinks I can do anything.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address functional recovery versus risk-only care using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect carer burnout and overfunctioning; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-102",
+    "topic": "mdt_systems",
+    "difficulty": "consultant",
+    "title": "Bipolar repeated admissions carer burnout adherence",
+    "candidateRole": "community psychiatrist",
+    "setting": "Continuing care relapse-prevention meeting",
+    "stem": "You are the community psychiatrist. Continuing care relapse-prevention meeting.\n\nMaria, a 48-year-old woman with bipolar I, has seven admissions after stopping lithium during hypomania. Maria says, \"Lithium takes away who I am.\" \n\nCase manager says, \"Increase monitoring until she complies.\" Registrar asks, \"Is assertive follow-up justified if she is voluntary?\" Husband says, \"I cannot keep hiding the car keys every year.\" Maria's business community praises her hypomanic productivity.\n\nMaria says, \"I need energy to start my company.\" You must decide whether to create collaborative relapse plan preserving autonomy.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "paternalistic-monitoring shortcut — unsafe shortcut under pressure",
+        "category": "system_pressure",
+        "severity": "critical",
+        "clueInStem": "Increase monitoring until she complies.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass identity-based medication ambivalence, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'Increase monitoring until she complies.' without first formulating identity-based medication ambivalence, immediate safety and a defensible disposition.",
+        "keywords": [
+          "paternalistic-monitoring shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "identity-based medication ambivalence — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "Lithium takes away who I am.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around identity-based medication ambivalence, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "identity-based medication ambivalence",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "autonomy and assertive care — legal/policy hinge",
+        "category": "ethics",
+        "severity": "critical",
+        "clueInStem": "Is assertive follow-up justified if she is voluntary?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "autonomy and assertive care",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "carer burnout and public safety — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "I cannot keep hiding the car keys every year.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect carer burnout and public safety, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "carer burnout and public safety",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "family_carer",
+        "severity": "important",
+        "clueInStem": "I need energy to start my company.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to create collaborative relapse plan preserving autonomy",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'Increase monitoring until she complies.' without first addressing immediate safety, identity-based medication ambivalence, and legal authority.\n- Identify the live decision: whether to create collaborative relapse plan preserving autonomy.\n\nClinical formulation:\n- Formulate the case around identity-based medication ambivalence rather than a generic diagnostic list.\n- Link the patient's statement 'Lithium takes away who I am.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address autonomy and assertive care using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect carer burnout and public safety; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-103",
+    "topic": "mdt_systems",
+    "difficulty": "consultant",
+    "title": "Autistic adult in community mislabelled non-compliant",
+    "candidateRole": "community psychiatrist",
+    "setting": "NDIS/CMHT joint review",
+    "stem": "You are the community psychiatrist. NDIS/CMHT joint review.\n\nAri, a 27-year-old autistic adult with anxiety, misses appointments after sensory overload and is threatened with discharge. Ari says, \"The waiting room feels like a siren in my skin.\" \n\nService manager says, \"Close the file; they do not engage.\" NDIS coordinator asks, \"Can supports require psychiatric attendance?\" Mother says, \"They shut down for days after appointments.\" Ari is non-binary and says services ignore pronouns and sensory needs.\n\nAri says, \"I am not refusing help; I am refusing harm.\" You must decide whether to adapt care rather than discharge.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "non-engagement shortcut — unsafe shortcut under pressure",
+        "category": "system_pressure",
+        "severity": "critical",
+        "clueInStem": "Close the file; they do not engage.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass autism-related access barrier, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'Close the file; they do not engage.' without first formulating autism-related access barrier, immediate safety and a defensible disposition.",
+        "keywords": [
+          "non-engagement shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "autism-related access barrier — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "The waiting room feels like a siren in my skin.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around autism-related access barrier, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "autism-related access barrier",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "consent and service access policy — legal/policy hinge",
+        "category": "ethics",
+        "severity": "critical",
+        "clueInStem": "Can supports require psychiatric attendance?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "consent and service access policy",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "functional vulnerability — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "They shut down for days after appointments.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect functional vulnerability, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "functional vulnerability",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "family_carer",
+        "severity": "important",
+        "clueInStem": "I am not refusing help; I am refusing harm.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to adapt care rather than discharge",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'Close the file; they do not engage.' without first addressing immediate safety, autism-related access barrier, and legal authority.\n- Identify the live decision: whether to adapt care rather than discharge.\n\nClinical formulation:\n- Formulate the case around autism-related access barrier rather than a generic diagnostic list.\n- Link the patient's statement 'The waiting room feels like a siren in my skin.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address consent and service access policy using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect functional vulnerability; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-104",
+    "topic": "mdt_systems",
+    "difficulty": "consultant",
+    "title": "Clozapine refusal after myocarditis scare",
+    "candidateRole": "community psychosis consultant",
+    "setting": "Clozapine review clinic",
+    "stem": "You are the community psychosis consultant. Clozapine review clinic.\n\nDaniel, a 33-year-old man with TRS, stopped clozapine after chest pain scare and is relapsing. Daniel says, \"I would rather hear voices than die from the tablets.\" \n\nRegistrar says, \"Depot is easier; just switch.\" Cardiologist asks, \"Can clozapine restart safely?\" Sister says, \"He stops eating when voices worsen.\" Family believes clozapine is experimental and dangerous.\n\nFather says, \"You are testing drugs on him.\" You must decide whether to balance cardiac risk, relapse and informed consent.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "simplistic-switch shortcut — unsafe shortcut under pressure",
+        "category": "system_pressure",
+        "severity": "critical",
+        "clueInStem": "Depot is easier; just switch.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass risk-benefit refusal after adverse effect fear, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'Depot is easier; just switch.' without first formulating risk-benefit refusal after adverse effect fear, immediate safety and a defensible disposition.",
+        "keywords": [
+          "simplistic-switch shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "risk-benefit refusal after adverse effect fear — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "I would rather hear voices than die from the tablets.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around risk-benefit refusal after adverse effect fear, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "risk-benefit refusal after adverse effect fear",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "physical monitoring and consent — legal/policy hinge",
+        "category": "ethics",
+        "severity": "critical",
+        "clueInStem": "Can clozapine restart safely?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "physical monitoring and consent",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "self-neglect vulnerability — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "He stops eating when voices worsen.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect self-neglect vulnerability, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "self-neglect vulnerability",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "family_carer",
+        "severity": "important",
+        "clueInStem": "You are testing drugs on him.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to balance cardiac risk, relapse and informed consent",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'Depot is easier; just switch.' without first addressing immediate safety, risk-benefit refusal after adverse effect fear, and legal authority.\n- Identify the live decision: whether to balance cardiac risk, relapse and informed consent.\n\nClinical formulation:\n- Formulate the case around risk-benefit refusal after adverse effect fear rather than a generic diagnostic list.\n- Link the patient's statement 'I would rather hear voices than die from the tablets.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address physical monitoring and consent using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect self-neglect vulnerability; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-105",
+    "topic": "mdt_systems",
+    "difficulty": "consultant",
+    "title": "Long-stay inpatient rehabilitation and institutionalisation",
+    "candidateRole": "rehabilitation consultant psychiatrist",
+    "setting": "Long-stay unit discharge planning meeting",
+    "stem": "You are the rehabilitation consultant psychiatrist. Long-stay unit discharge planning meeting.\n\nPaul, a 52-year-old man with schizophrenia, has been inpatient for nine months despite stable symptoms. Paul says, \"I do not know how to live outside now.\" \n\nWard team says, \"Keep him until housing is perfect.\" Housing provider asks, \"Can we refuse because he smokes cannabis sometimes?\" Roommate says, \"He depends on nurses for everything.\" Paul is from a migrant family who believe hospital means shame.\n\nBrother says, \"If neighbours know, he cannot come home.\" You must decide whether to step down safely despite imperfect housing.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "zero-risk shortcut — unsafe shortcut under pressure",
+        "category": "system_pressure",
+        "severity": "critical",
+        "clueInStem": "Keep him until housing is perfect.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass institutionalisation and recovery planning, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'Keep him until housing is perfect.' without first formulating institutionalisation and recovery planning, immediate safety and a defensible disposition.",
+        "keywords": [
+          "zero-risk shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "institutionalisation and recovery planning — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "I do not know how to live outside now.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around institutionalisation and recovery planning, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "institutionalisation and recovery planning",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "disability discrimination/housing risk — legal/policy hinge",
+        "category": "ethics",
+        "severity": "critical",
+        "clueInStem": "Can we refuse because he smokes cannabis sometimes?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "disability discrimination/housing risk",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "functional vulnerability — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "He depends on nurses for everything.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect functional vulnerability, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "functional vulnerability",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "family_carer",
+        "severity": "important",
+        "clueInStem": "If neighbours know, he cannot come home.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to step down safely despite imperfect housing",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'Keep him until housing is perfect.' without first addressing immediate safety, institutionalisation and recovery planning, and legal authority.\n- Identify the live decision: whether to step down safely despite imperfect housing.\n\nClinical formulation:\n- Formulate the case around institutionalisation and recovery planning rather than a generic diagnostic list.\n- Link the patient's statement 'I do not know how to live outside now.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address disability discrimination/housing risk using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect functional vulnerability; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-106",
+    "topic": "mdt_systems",
+    "difficulty": "consultant",
+    "title": "Personality disorder community exclusion after complaints",
+    "candidateRole": "service consultant psychiatrist",
+    "setting": "CMHT governance review",
+    "stem": "You are the service consultant psychiatrist. CMHT governance review.\n\nLara, a 34-year-old woman with BPD, has made multiple complaints and is now proposed for discharge. Lara says, \"Complaints are the only way anyone listens.\" \n\nTeam leader says, \"Discharge her; she is abusing the service.\" Governance officer asks, \"Can we restrict contact under behaviour policy?\" Partner says, \"She overdoses after complaint responses.\" Lara is a survivor of institutional abuse and distrusts formal letters.\n\nLara says, \"Your policies are just abandonment with logos.\" You must decide whether to set boundaries without unsafe exclusion.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "punitive-discharge shortcut — unsafe shortcut under pressure",
+        "category": "system_pressure",
+        "severity": "critical",
+        "clueInStem": "Discharge her; she is abusing the service.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass complaints as communication and risk, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'Discharge her; she is abusing the service.' without first formulating complaints as communication and risk, immediate safety and a defensible disposition.",
+        "keywords": [
+          "punitive-discharge shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "complaints as communication and risk — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "Complaints are the only way anyone listens.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around complaints as communication and risk, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "complaints as communication and risk",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "reasonable boundaries and duty of care — legal/policy hinge",
+        "category": "ethics",
+        "severity": "critical",
+        "clueInStem": "Can we restrict contact under behaviour policy?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "reasonable boundaries and duty of care",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "risk linked to service rupture — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "She overdoses after complaint responses.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect risk linked to service rupture, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "risk linked to service rupture",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "family_carer",
+        "severity": "important",
+        "clueInStem": "Your policies are just abandonment with logos.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to set boundaries without unsafe exclusion",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'Discharge her; she is abusing the service.' without first addressing immediate safety, complaints as communication and risk, and legal authority.\n- Identify the live decision: whether to set boundaries without unsafe exclusion.\n\nClinical formulation:\n- Formulate the case around complaints as communication and risk rather than a generic diagnostic list.\n- Link the patient's statement 'Complaints are the only way anyone listens.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address reasonable boundaries and duty of care using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect risk linked to service rupture; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-107",
+    "topic": "mdt_systems",
+    "difficulty": "consultant",
+    "title": "Forensic community reintegration and victim notification",
+    "candidateRole": "forensic rehabilitation psychiatrist",
+    "setting": "Supported accommodation review",
+    "stem": "You are the forensic rehabilitation psychiatrist. Supported accommodation review.\n\nMalik, a 38-year-old forensic patient, is conditionally discharged and wants less supervision to work night shifts. Malik says, \"I need a normal life or I will stop trying.\" \n\nSupport worker says, \"He has been good; remove conditions.\" Tribunal asks, \"What level of supervision is proportionate?\" Victim says, \"I want to know if he works near my street.\" Family says ongoing restrictions shame them in community.\n\nMalik says, \"Every condition tells people I am dangerous.\" You must decide whether to balance recovery, conditions and victim safety.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "over-optimistic shortcut — unsafe shortcut under pressure",
+        "category": "system_pressure",
+        "severity": "critical",
+        "clueInStem": "He has been good; remove conditions.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass recovery versus forensic risk, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'He has been good; remove conditions.' without first formulating recovery versus forensic risk, immediate safety and a defensible disposition.",
+        "keywords": [
+          "over-optimistic shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "recovery versus forensic risk — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "I need a normal life or I will stop trying.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around recovery versus forensic risk, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "recovery versus forensic risk",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "conditional discharge governance — legal/policy hinge",
+        "category": "ethics",
+        "severity": "critical",
+        "clueInStem": "What level of supervision is proportionate?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "conditional discharge governance",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "victim safety — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "I want to know if he works near my street.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect victim safety, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "victim safety",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "family_carer",
+        "severity": "important",
+        "clueInStem": "Every condition tells people I am dangerous.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to balance recovery, conditions and victim safety",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'He has been good; remove conditions.' without first addressing immediate safety, recovery versus forensic risk, and legal authority.\n- Identify the live decision: whether to balance recovery, conditions and victim safety.\n\nClinical formulation:\n- Formulate the case around recovery versus forensic risk rather than a generic diagnostic list.\n- Link the patient's statement 'I need a normal life or I will stop trying.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address conditional discharge governance using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect victim safety; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-108",
+    "topic": "mdt_systems",
+    "difficulty": "consultant",
+    "title": "Eating disorder transition CAMHS to adult service",
+    "candidateRole": "transition consultant psychiatrist",
+    "setting": "Joint CAMHS-adult handover meeting",
+    "stem": "You are the transition consultant psychiatrist. Joint CAMHS-adult handover meeting.\n\nZoe, a 17-year-old with anorexia and autism, will age out of CAMHS in six weeks while medically unstable. Zoe says, \"If adult services make me retell everything, I will stop coming.\" \n\nAdult team says, \"We cannot accept until she is eighteen.\" Paediatrician asks, \"Who is responsible if she deteriorates?\" Mother says, \"I have been the service coordinator for years.\" Zoe needs predictable communication and sensory accommodations.\n\nZoe says, \"Change makes my eating worse.\" You must decide whether to create shared transition plan despite service boundaries.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "age-boundary shortcut — unsafe shortcut under pressure",
+        "category": "system_pressure",
+        "severity": "critical",
+        "clueInStem": "We cannot accept until she is eighteen.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass transition risk and autism needs, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'We cannot accept until she is eighteen.' without first formulating transition risk and autism needs, immediate safety and a defensible disposition.",
+        "keywords": [
+          "age-boundary shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "transition risk and autism needs — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "If adult services make me retell everything, I will stop coming.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around transition risk and autism needs, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "transition risk and autism needs",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "governance of transition — legal/policy hinge",
+        "category": "ethics",
+        "severity": "critical",
+        "clueInStem": "Who is responsible if she deteriorates?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "governance of transition",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "carer burden — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "I have been the service coordinator for years.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect carer burden, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "carer burden",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "family_carer",
+        "severity": "important",
+        "clueInStem": "Change makes my eating worse.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to create shared transition plan despite service boundaries",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'We cannot accept until she is eighteen.' without first addressing immediate safety, transition risk and autism needs, and legal authority.\n- Identify the live decision: whether to create shared transition plan despite service boundaries.\n\nClinical formulation:\n- Formulate the case around transition risk and autism needs rather than a generic diagnostic list.\n- Link the patient's statement 'If adult services make me retell everything, I will stop coming.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address governance of transition using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect carer burden; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-109",
+    "topic": "mdt_systems",
+    "difficulty": "consultant",
+    "title": "Older adult depression and social prescribing limits",
+    "candidateRole": "community old age psychiatrist",
+    "setting": "Rural primary care case conference",
+    "stem": "You are the community old age psychiatrist. Rural primary care case conference.\n\nMr Harris, a 72-year-old widower, has depression, alcohol use and refuses antidepressants, asking only for men's shed referral. Mr Harris says, \"Talking is for people who still matter.\" \n\nGP says, \"Social prescribing is safer than medication.\" Nurse asks, \"Can he refuse all treatment if he is losing weight?\" Daughter says, \"He gives away tools and says he is done.\" Rural culture values stoicism and not burdening family.\n\nMr Harris says, \"Do not make me a mental patient.\" You must decide whether to combine social, medical and suicide risk interventions.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "under-treatment shortcut — unsafe shortcut under pressure",
+        "category": "system_pressure",
+        "severity": "critical",
+        "clueInStem": "Social prescribing is safer than medication.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass late-life depression and masculine shame, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'Social prescribing is safer than medication.' without first formulating late-life depression and masculine shame, immediate safety and a defensible disposition.",
+        "keywords": [
+          "under-treatment shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "late-life depression and masculine shame — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "Talking is for people who still matter.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around late-life depression and masculine shame, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "late-life depression and masculine shame",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "capacity and self-neglect — legal/policy hinge",
+        "category": "ethics",
+        "severity": "critical",
+        "clueInStem": "Can he refuse all treatment if he is losing weight?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "capacity and self-neglect",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "suicide warning collateral — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "He gives away tools and says he is done.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect suicide warning collateral, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "suicide warning collateral",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "family_carer",
+        "severity": "important",
+        "clueInStem": "Do not make me a mental patient.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to combine social, medical and suicide risk interventions",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'Social prescribing is safer than medication.' without first addressing immediate safety, late-life depression and masculine shame, and legal authority.\n- Identify the live decision: whether to combine social, medical and suicide risk interventions.\n\nClinical formulation:\n- Formulate the case around late-life depression and masculine shame rather than a generic diagnostic list.\n- Link the patient's statement 'Talking is for people who still matter.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address capacity and self-neglect using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect suicide warning collateral; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  },
+  {
+    "id": "FINAL-110",
+    "topic": "mdt_systems",
+    "difficulty": "consultant",
+    "title": "Neurocognitive disorder and NDIS dispute in young adult",
+    "candidateRole": "neuropsychiatry rehabilitation consultant",
+    "setting": "NDIS appeal preparation meeting",
+    "stem": "You are the neuropsychiatry rehabilitation consultant. NDIS appeal preparation meeting.\n\nMason, a 29-year-old man after traumatic brain injury, has disinhibition, aggression and loss of supports after NDIS plan cut. Mason says, \"I hit people before I know I am angry.\" \n\nNDIS planner says, \"He looks physically fine, so supports are reduced.\" Mother asks, \"Can we use the Mental Health Act to force supports?\" Support worker says, \"I cannot safely work alone with him.\" Mason is Māori and wants whānau involved in planning.\n\nMason says, \"Forms do not show who I was before.\" You must decide whether to advocate functional supports while managing risk.",
+    "totalMarks": 25,
+    "signals": [
+      {
+        "id": "s1",
+        "name": "invisible-disability shortcut — unsafe shortcut under pressure",
+        "category": "system_pressure",
+        "severity": "critical",
+        "clueInStem": "He looks physically fine, so supports are reduced.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass TBI-related impulsivity and violence risk, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'He looks physically fine, so supports are reduced.' without first formulating TBI-related impulsivity and violence risk, immediate safety and a defensible disposition.",
+        "keywords": [
+          "invisible-disability shortcut",
+          "unsafe shortcut",
+          "time pressure",
+          "consultant decision",
+          "do not shortcut",
+          "disposition",
+          "safety",
+          "defensible"
+        ]
+      },
+      {
+        "id": "s2",
+        "name": "TBI-related impulsivity and violence risk — core clinical formulation",
+        "category": "diagnosis_formulation",
+        "severity": "critical",
+        "clueInStem": "I hit people before I know I am angry.",
+        "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
+        "modelWording": "Formulate the presentation around TBI-related impulsivity and violence risk, linking the patient's words to risk, capacity, treatment and disposition.",
+        "keywords": [
+          "TBI-related impulsivity and violence risk",
+          "formulation",
+          "clinical signal",
+          "dynamic risk",
+          "mental state",
+          "function",
+          "consultant reasoning"
+        ]
+      },
+      {
+        "id": "s3",
+        "name": "MHA versus disability support law — legal/policy hinge",
+        "category": "ethics",
+        "severity": "critical",
+        "clueInStem": "Can we use the Mental Health Act to force supports?",
+        "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
+        "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
+        "keywords": [
+          "MHA versus disability support law",
+          "legal threshold",
+          "least restrictive",
+          "policy",
+          "capacity",
+          "MHA",
+          "documentation",
+          "authority"
+        ]
+      },
+      {
+        "id": "s4",
+        "name": "staff safety and support risk — vulnerable person safety",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "I cannot safely work alone with him.",
+        "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
+        "modelWording": "Explicitly assess and protect staff safety and support risk, including immediate safety, collateral and escalation pathways.",
+        "keywords": [
+          "staff safety and support risk",
+          "vulnerable person",
+          "safety",
+          "collateral",
+          "safeguarding",
+          "third party",
+          "risk",
+          "protection"
+        ]
+      },
+      {
+        "id": "s5",
+        "name": "Cultural/family context affecting safety and engagement",
+        "category": "family_carer",
+        "severity": "important",
+        "clueInStem": "Forms do not show who I was before.",
+        "whyItMatters": "Family, cultural, identity or community context can either support recovery or create unsafe pressure; ignoring it makes disposition unrealistic.",
+        "modelWording": "Address the family/cultural pressure directly while maintaining patient safety, autonomy, confidentiality and least restrictive care.",
+        "keywords": [
+          "family pressure",
+          "cultural safety",
+          "engagement",
+          "collateral",
+          "support",
+          "mistrust",
+          "identity",
+          "community"
+        ]
+      },
+      {
+        "id": "s6",
+        "name": "Governance and defensible documentation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "whether to advocate functional supports while managing risk",
+        "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
+        "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
+        "keywords": [
+          "documentation",
+          "governance",
+          "consultant leadership",
+          "escalation",
+          "defensible decision",
+          "MDT",
+          "system pressure",
+          "accountability"
+        ]
+      }
+    ],
+    "priorityOrder": {
+      "urgent": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "secondary": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "lowYield": []
+    },
+    "modelAnswer": "Immediate consultant decision:\n- Do not accept the unsafe shortcut of 'He looks physically fine, so supports are reduced.' without first addressing immediate safety, TBI-related impulsivity and violence risk, and legal authority.\n- Identify the live decision: whether to advocate functional supports while managing risk.\n\nClinical formulation:\n- Formulate the case around TBI-related impulsivity and violence risk rather than a generic diagnostic list.\n- Link the patient's statement 'I hit people before I know I am angry.' to dynamic risk, capacity, engagement and treatment.\n\nLegal / ethical / policy:\n- Address MHA versus disability support law using the relevant Act, capacity framework, confidentiality/safeguarding rules or institutional policy.\n- Apply least restrictive care and document why alternatives are safe or unsafe.\n\nVulnerable person / family / cultural context:\n- Actively protect staff safety and support risk; do not assume family or community pressure equals safety.\n- Address cultural, trauma, identity and family factors explicitly, using interpreters/liaison or culturally safe supports where relevant.\n\nDisposition and governance:\n- Make a clear disposition plan with responsible clinician, follow-up, escalation triggers and communication to key stakeholders.\n- Document clinical reasoning, collateral, legal basis, system pressure, rejected unsafe options and contingency plan."
+  }
+];
+
+export default FINAL_ELITE_MEQ_BANK;

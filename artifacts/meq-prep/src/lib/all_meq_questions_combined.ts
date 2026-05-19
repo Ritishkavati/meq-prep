@@ -19,6 +19,7 @@ import { OA_STEMS } from "./questions/oldAgeQuestions";
 import { RU_STEMS } from "./questions/ruralQuestions";
 import { ETH_STEMS } from "./questions/ethicsQuestions";
 import { CL_STEMS } from "./questions/clPsychiatryQuestions";
+import { FINAL_ELITE_MEQ_BANK } from "./questions/finalEliteMEQBank";
 
 export type { QuizStem };
 
@@ -43,6 +44,7 @@ export const ALL_MEQ_QUESTIONS: QuizStem[] = [
   ...RU_STEMS,
   ...ETH_STEMS,
   ...CL_STEMS,
+  ...FINAL_ELITE_MEQ_BANK,
 ];
 
 export default ALL_MEQ_QUESTIONS;
