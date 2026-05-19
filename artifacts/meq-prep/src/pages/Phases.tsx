@@ -1,15 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { Link, useLocation } from "wouter";
 import { useCandidate } from "@/lib/store";
 import { Header } from "@/components/Header";
 import {
   ListChecks, BookOpen, ClipboardList, ArrowRight,
   TrendingUp, Target, AlertCircle, CheckCircle2, BarChart2,
+  ChevronDown, ChevronUp, History,
 } from "lucide-react";
 import {
   getQuizModuleCompletion, getTotalQuizzesCompleted, getCandidateFeedback,
+  loadAttempts, type QuizAttempt,
 } from "@/lib/quizEngine";
-import { QUIZ_STEMS } from "@/lib/quizData";
+import { QUIZ_STEMS, TOPIC_LABELS, type TopicKey } from "@/lib/quizData";
 
 function getModeCount(key: string): number {
   try { return parseInt(localStorage.getItem(key) ?? "0", 10) || 0; } catch { return 0; }
@@ -27,6 +29,22 @@ export default function Phases() {
   const quizCompletion = getQuizModuleCompletion(candidateNumber ?? "", QUIZ_STEMS.length);
   const totalQuizzesCompleted = getTotalQuizzesCompleted(candidateNumber ?? "");
   const feedback = getCandidateFeedback(candidateNumber ?? "");
+  const [showAllAttempted, setShowAllAttempted] = useState(false);
+
+  const attemptedStems = useMemo(() => {
+    if (!candidateNumber) return [] as QuizAttempt[];
+    const all = loadAttempts().filter((a) => a.registrationNumber === candidateNumber);
+    const latest = new Map<string, QuizAttempt>();
+    for (const a of all) {
+      const existing = latest.get(a.stemId);
+      if (!existing || new Date(a.timestamp) > new Date(existing.timestamp)) {
+        latest.set(a.stemId, a);
+      }
+    }
+    return Array.from(latest.values()).sort(
+      (a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime()
+    );
+  }, [candidateNumber]);
 
   useEffect(() => {
     if (!fullName) setLocation("/");
@@ -104,6 +122,69 @@ export default function Phases() {
           <span>Quiz module = 30% of course</span>
         </div>
       </div>
+
+      {/* ── Questions answered ───────────────────────────────────────────────── */}
+      {attemptedStems.length > 0 && (() => {
+        const PAGE = 8;
+        const visible = showAllAttempted ? attemptedStems : attemptedStems.slice(0, PAGE);
+        return (
+          <div className="bg-card rounded-2xl border border-card-border shadow-sm mb-6 overflow-hidden">
+            <div className="flex items-center justify-between px-6 py-4 border-b border-card-border">
+              <p className="font-serif font-bold text-primary flex items-center gap-2 text-sm">
+                <History className="w-4 h-4 text-accent" />
+                Questions You've Answered
+              </p>
+              <span className="text-xs font-semibold text-accent bg-accent/10 px-2.5 py-1 rounded-full">
+                {attemptedStems.length} of {QUIZ_STEMS.length}
+              </span>
+            </div>
+
+            <div className="divide-y divide-card-border">
+              {visible.map((a) => {
+                const pct = a.result.percentage;
+                const scoreColour =
+                  pct >= 80 ? "text-emerald-700 bg-emerald-50 border-emerald-200"
+                  : pct >= 60 ? "text-amber-700 bg-amber-50 border-amber-200"
+                  : "text-red-700 bg-red-50 border-red-200";
+                const dot =
+                  pct >= 80 ? "bg-emerald-500"
+                  : pct >= 60 ? "bg-amber-400"
+                  : "bg-red-500";
+                const date = new Intl.DateTimeFormat("en-AU", {
+                  day: "numeric", month: "short", year: "numeric",
+                }).format(new Date(a.timestamp));
+                return (
+                  <div key={a.stemId} className="flex items-center gap-3 px-6 py-3 hover:bg-slate-50/60 transition-colors">
+                    <span className={`w-2 h-2 rounded-full flex-shrink-0 ${dot}`} />
+                    <div className="flex-1 min-w-0">
+                      <p className="text-sm font-medium text-primary truncate">{a.stemTitle}</p>
+                      <p className="text-xs text-muted-foreground mt-0.5">
+                        {TOPIC_LABELS[a.topic as TopicKey] ?? a.topic} · {date}
+                      </p>
+                    </div>
+                    <span className={`flex-shrink-0 text-xs font-bold border px-2 py-0.5 rounded-full ${scoreColour}`}>
+                      {pct}%
+                    </span>
+                  </div>
+                );
+              })}
+            </div>
+
+            {attemptedStems.length > PAGE && (
+              <button
+                onClick={() => setShowAllAttempted((v) => !v)}
+                className="w-full flex items-center justify-center gap-1.5 py-3 text-xs font-semibold text-muted-foreground hover:text-primary border-t border-card-border hover:bg-slate-50 transition-colors"
+              >
+                {showAllAttempted ? (
+                  <><ChevronUp className="w-3.5 h-3.5" /> Show less</>
+                ) : (
+                  <><ChevronDown className="w-3.5 h-3.5" /> Show all {attemptedStems.length} questions</>
+                )}
+              </button>
+            )}
+          </div>
+        );
+      })()}
 
       {/* ── Study mode cards ─────────────────────────────────────────────────── */}
       <h2 className="text-lg font-serif font-bold text-primary mb-3">
