@@ -1,0 +1,540 @@
+```typescript
+// Reviewed source: :contentReference[oaicite:0]{index=0}
+
+// PASS: PER-001
+
+export const FIXED_STEMS: QuizStem[] = [
+  {
+    id: "PER-002",
+    topic: "perinatal",
+    difficulty: "consultant",
+    title: "Antenatal Depression — Medication, Fetal Risk and Domestic Violence",
+    candidateRole: "Consultant psychiatrist, perinatal mental health service",
+    setting: "Perinatal outpatient clinic, metropolitan hospital",
+    stem: `You are the consultant psychiatrist in a perinatal mental health service. You are reviewing Mei, a 32-year-old Chinese-Australian woman referred by her obstetrician at 18 weeks gestation. She has a history of recurrent major depressive disorder and was stable on sertraline 100mg before conception. She stopped sertraline at six weeks gestation "because I read online it harms the baby."
+
+Mei reports worsening low mood, inability to sleep, poor appetite and passive suicidal ideation: "Sometimes I think everyone would be better off without me." Her husband has accompanied her today but sits with his arms crossed and answers questions directed at Mei before she can respond. When Mei is seen alone, she becomes tearful and quietly discloses that her husband has been "pushing and grabbing" her during arguments since the pregnancy began. She asks you not to document this.
+
+The obstetrician's referral letter notes the fetus has mild growth restriction on the last scan. Mei's mother, who is visiting from China, is the only local support and speaks no English.`,
+    totalMarks: 25,
+    signals: [
+      {
+        id: "s1",
+        name: "Domestic violence — immediate safety planning",
+        category: "immediate_safety",
+        severity: "critical",
+        clueInStem: "her husband has been \"pushing and grabbing\" her during arguments since the pregnancy began.",
+        whyItMatters: "Physical violence during pregnancy increases maternal, fetal and postnatal risk. If missed, the assessment may focus only on depression and medication while failing to address the immediate safety threat.",
+        modelWording: "Mei's disclosure of physical violence during pregnancy is an immediate safety priority: assess frequency, escalation, coercive control, injury, weapons, safe contact method and urgent family violence supports.",
+        keywords: ["domestic violence", "family violence", "pushing and grabbing", "pregnancy violence", "coercive control", "safety plan", "safe contact", "immediate safety"],
+      },
+      {
+        id: "s2",
+        name: "Passive suicidal ideation in pregnancy",
+        category: "risk_self",
+        severity: "critical",
+        clueInStem: "Sometimes I think everyone would be better off without me.",
+        whyItMatters: "Passive suicidal ideation in pregnancy with untreated depression, domestic violence and isolation may represent significant dynamic risk to Mei and the fetus.",
+        modelWording: "Assess suicidal risk directly, including intent, plan, means, hopelessness, protective factors, attachment to pregnancy and capacity to engage in a safety plan.",
+        keywords: ["passive suicidal ideation", "better off without me", "maternal suicide", "risk assessment", "intent", "plan", "protective factors", "pregnancy"],
+      },
+      {
+        id: "s3",
+        name: "Medication misinformation and untreated depression risk",
+        category: "physical_health",
+        severity: "critical",
+        clueInStem: "because I read online it harms the baby.",
+        whyItMatters: "Stopping sertraline based on online misinformation risks relapse of depression, worsening nutrition, suicidality, impaired antenatal care and fetal growth concerns.",
+        modelWording: "Provide balanced risk-benefit counselling: the risks of untreated antenatal depression, including suicidality and fetal growth concerns, must be weighed against the generally reassuring reproductive safety data for sertraline.",
+        keywords: ["sertraline", "misinformation", "untreated depression", "risk-benefit", "antidepressant pregnancy", "fetal growth restriction", "antenatal depression", "medication safety"],
+      },
+      {
+        id: "s4",
+        name: "Coercive control in consultation",
+        category: "collateral",
+        severity: "important",
+        clueInStem: "sits with his arms crossed and answers questions directed at Mei before she can respond.",
+        whyItMatters: "A partner answering for the patient is a red flag for coercive control and makes partner collateral unreliable unless assessed separately.",
+        modelWording: "The husband's behaviour is a red flag for coercive control; Mei must be seen alone at each review and collateral from him should be treated cautiously.",
+        keywords: ["coercive control", "answers for patient", "seen alone", "partner behaviour", "collateral unreliable", "consultation red flag", "domestic violence", "safety"],
+      },
+      {
+        id: "s5",
+        name: "Cultural and language context",
+        category: "cultural_safety",
+        severity: "important",
+        clueInStem: "Mei's mother, who is visiting from China, is the only local support and speaks no English.",
+        whyItMatters: "Culture, language, stigma and family roles may influence disclosure, safety planning, medication beliefs and support availability.",
+        modelWording: "Use culturally safe engagement and a professional interpreter for Mei's mother if involved; explore beliefs about depression, medication, pregnancy and family violence without assumptions.",
+        keywords: ["Chinese-Australian", "mother from China", "no English", "interpreter", "cultural safety", "stigma", "family role", "medication beliefs"],
+      },
+      {
+        id: "s6",
+        name: "Fetal growth restriction and maternal distress",
+        category: "risk_vulnerable",
+        severity: "important",
+        clueInStem: "the fetus has mild growth restriction on the last scan.",
+        whyItMatters: "Fetal growth restriction in the context of untreated depression, poor appetite and violence requires obstetric coordination and maternal safety planning.",
+        modelWording: "Coordinate with obstetrics because fetal growth restriction may be worsened by untreated depression, nutritional compromise, stress and family violence.",
+        keywords: ["fetal growth restriction", "fetal wellbeing", "obstetric liaison", "poor appetite", "maternal stress", "violence in pregnancy", "unborn baby", "scan"],
+      },
+      {
+        id: "s7",
+        name: "Limits of confidentiality and documentation",
+        category: "ethics",
+        severity: "important",
+        clueInStem: "She asks you not to document this.",
+        whyItMatters: "Clinically relevant safety information cannot simply be omitted, but documentation must be thoughtful because unsafe disclosure can increase risk.",
+        modelWording: "Explain that I cannot omit clinically relevant safety information, but I will discuss how it is documented, who can access it, and how to minimise risk to Mei.",
+        keywords: ["confidentiality", "documentation", "not document", "medical record", "duty of care", "safety information", "ethics", "risk of disclosure"],
+      },
+    ],
+    priorityOrder: {
+      urgent: ["s1", "s2", "s3"],
+      secondary: ["s4", "s5", "s6"],
+      lowYield: ["s7"],
+    },
+    modelAnswer: `Immediate safety:
+- Mei's disclosure of physical violence during pregnancy is the immediate priority. Assess frequency, escalation, injuries, weapons, coercive control, safe contact method and urgent family violence support.
+- See Mei alone at every appointment because her husband's behaviour suggests coercive control.
+
+Risk:
+- Assess suicidal ideation directly: intent, plan, means, hopelessness, protective factors, attachment to pregnancy and ability to use a safety plan.
+
+Medication and pregnancy:
+- Correct misinformation about sertraline using balanced risk-benefit counselling.
+- Explain that untreated antenatal depression carries risks including worsening suicidality, impaired nutrition, antenatal disengagement and possible fetal growth effects.
+- Discuss restarting sertraline if clinically appropriate.
+
+Fetal/obstetric:
+- Liaise with obstetrics regarding fetal growth restriction and maternal safety risks.
+
+Cultural/family:
+- Explore cultural beliefs about depression, medication and family violence without assumptions.
+- If Mei wants her mother involved, use a professional interpreter and assess whether she is a safe support.
+
+Ethics/documentation:
+- Explain that clinically relevant safety information cannot be omitted, but document carefully and collaboratively to reduce risk.`,
+  },
+
+  {
+    id: "PER-003",
+    topic: "perinatal",
+    difficulty: "consultant",
+    title: "Perinatal OCD — Intrusive Thoughts About Harming Infant",
+    candidateRole: "Consultant psychiatrist, perinatal mental health outpatient service",
+    setting: "Perinatal outpatient clinic",
+    stem: `You are the consultant psychiatrist in a perinatal mental health service. You are reviewing Grace, a 27-year-old first-time mother referred by her GP at six weeks postpartum. Her baby son Oliver is with her in the clinic.
+
+Grace is tearful and has been reluctant to speak. She eventually discloses that she has been having intrusive thoughts about harming Oliver — specifically about dropping him or stabbing him with kitchen knives. She says, "I would never do it. These thoughts terrify me. I spend hours checking on him to make sure he is okay. I have hidden all the sharp objects in the house." She has not told her husband because "he will think I am a monster and take Oliver away."
+
+Her GP's referral letter notes she had significant health anxiety before the pregnancy and took fluoxetine for two years in her mid-twenties. The GP writes: "please assess — very worried she may be at risk of harming the baby."
+
+Grace has not slept more than two to three hours per night since the birth. She appears anxious and exhausted but her mental state is otherwise unremarkable. She is breastfeeding and is highly distressed by the prospect of medication.`,
+    totalMarks: 22,
+    signals: [
+      {
+        id: "s1",
+        name: "Perinatal OCD pattern",
+        category: "diagnosis_formulation",
+        severity: "critical",
+        clueInStem: "These thoughts terrify me. I spend hours checking on him to make sure he is okay.",
+        whyItMatters: "Ego-dystonic intrusive thoughts with checking and avoidance strongly suggest perinatal OCD rather than psychotic intent to harm the infant.",
+        modelWording: "Formulate this as likely perinatal OCD: intrusive ego-dystonic harm thoughts, marked distress, checking rituals and avoidance.",
+        keywords: ["perinatal OCD", "ego-dystonic", "intrusive thoughts", "checking", "avoidance", "harm obsessions", "postpartum anxiety", "not psychosis"],
+      },
+      {
+        id: "s2",
+        name: "Differentiate from postpartum psychosis",
+        category: "diagnosis_formulation",
+        severity: "critical",
+        clueInStem: "I would never do it. These thoughts terrify me.",
+        whyItMatters: "Postpartum psychosis with command hallucinations or delusional beliefs would require urgent safety action; OCD requires a different risk formulation and treatment plan.",
+        modelWording: "Explicitly exclude postpartum psychosis by assessing hallucinations, delusions, mood elevation, confusion and whether thoughts are experienced as commands or beliefs.",
+        keywords: ["postpartum psychosis", "command hallucinations", "delusions", "ego-syntonic", "ego-dystonic", "differential diagnosis", "infant safety", "mania"],
+      },
+      {
+        id: "s3",
+        name: "Child protection threshold not automatically met",
+        category: "child_protection",
+        severity: "critical",
+        clueInStem: "please assess — very worried she may be at risk of harming the baby.",
+        whyItMatters: "Mislabeling ego-dystonic OCD thoughts as child protection risk may traumatise Grace, worsen shame and reduce help-seeking.",
+        modelWording: "Ego-dystonic intrusive thoughts with active avoidance and no intent do not automatically meet child protection threshold, but infant safety should still be assessed and documented.",
+        keywords: ["child protection", "threshold", "infant safety", "no intent", "ego-dystonic", "GP concern", "safeguarding", "perinatal OCD"],
+      },
+      {
+        id: "s4",
+        name: "Severe sleep deprivation",
+        category: "physical_health",
+        severity: "important",
+        clueInStem: "has not slept more than two to three hours per night since the birth.",
+        whyItMatters: "Sleep deprivation worsens anxiety, obsessional thinking and risk of deterioration in the postpartum period.",
+        modelWording: "Address sleep urgently because severe sleep deprivation is maintaining anxiety/OCD symptoms and increases perinatal deterioration risk.",
+        keywords: ["sleep deprivation", "two to three hours", "postpartum sleep", "anxiety", "OCD maintenance", "exhaustion", "deterioration", "partner support"],
+      },
+      {
+        id: "s5",
+        name: "Shame and partner exclusion",
+        category: "family_carer",
+        severity: "important",
+        clueInStem: "he will think I am a monster and take Oliver away.",
+        whyItMatters: "Shame and fear of losing the baby may prevent disclosure, reduce support and delay treatment.",
+        modelWording: "With Grace's consent, involve her husband with psychoeducation that intrusive ego-dystonic thoughts are treatable OCD symptoms, not evidence that she is dangerous.",
+        keywords: ["shame", "husband", "partner involvement", "psychoeducation", "fear of removal", "monster", "support", "therapeutic alliance"],
+      },
+      {
+        id: "s6",
+        name: "Medication concern during breastfeeding",
+        category: "consent_refusal",
+        severity: "important",
+        clueInStem: "She is breastfeeding and is highly distressed by the prospect of medication.",
+        whyItMatters: "Medication fear may prevent effective treatment unless addressed with respectful, balanced information about breastfeeding and SSRI options.",
+        modelWording: "Discuss CBT/ERP as first-line and provide balanced information about SSRIs compatible with breastfeeding if symptoms are moderate to severe or functionally impairing.",
+        keywords: ["breastfeeding", "medication fear", "SSRI", "fluoxetine", "sertraline", "CBT", "ERP", "informed decision"],
+      },
+    ],
+    priorityOrder: {
+      urgent: ["s1", "s2", "s3"],
+      secondary: ["s4", "s5", "s6"],
+      lowYield: [],
+    },
+    modelAnswer: `Diagnosis/formulation:
+- This is most consistent with perinatal OCD: ego-dystonic intrusive harm thoughts, marked distress, checking and avoidance.
+- Explicitly exclude postpartum psychosis, mania, command hallucinations, delusions and depressive psychosis.
+
+Infant safety:
+- Assess infant safety and document protective behaviours.
+- Ego-dystonic intrusive thoughts with no intent and active avoidance do not automatically meet child protection threshold.
+
+Treatment:
+- Offer psychoeducation to reduce shame.
+- Recommend CBT with ERP as first-line.
+- Discuss SSRI options if symptoms are severe or impairing, including breastfeeding risk-benefit information and her previous response to fluoxetine.
+
+Sleep/family:
+- Address severe sleep deprivation as an immediate maintaining factor.
+- With Grace's consent, involve her husband to provide support and reduce stigma.
+
+Follow-up:
+- Arrange close perinatal follow-up and clear escalation plan if thoughts become ego-syntonic, psychotic symptoms emerge, or infant care becomes unsafe.`,
+  },
+
+  {
+    id: "PER-004",
+    topic: "perinatal",
+    difficulty: "consultant",
+    title: "Bipolar Disorder in Pregnancy — Medication Dilemma and Consent",
+    candidateRole: "Consultant psychiatrist, perinatal mental health service",
+    setting: "Perinatal outpatient clinic, 14 weeks gestation",
+    stem: `You are the consultant psychiatrist in a perinatal mental health service. You are reviewing Natasha, a 34-year-old woman at 14 weeks gestation with a 10-year history of bipolar I disorder. She has had three severe manic episodes, one of which required a forensic psychiatric admission after she assaulted a family member. She has been stable on lithium 800mg daily for four years.
+
+Natasha tells you she stopped lithium four weeks ago "because I read that it causes heart defects." She has not told her obstetrician. She says, "I feel completely fine. I don't think I need medication in pregnancy." Her partner is visibly worried and says, "Last time she stopped lithium without telling anyone, she was manic within six weeks. I can't go through that again."
+
+An urgent FBC and lithium level are pending. The obstetrician calls while you are in the consultation and says, "If she is on lithium we need to know — there are cardiac screening implications."`,
+    totalMarks: 25,
+    signals: [
+      {
+        id: "s1",
+        name: "Lithium cessation and high relapse risk",
+        category: "immediate_safety",
+        severity: "critical",
+        clueInStem: "Last time she stopped lithium without telling anyone, she was manic within six weeks.",
+        whyItMatters: "Recent lithium cessation in severe bipolar I disorder creates a time-sensitive relapse risk, especially with a prior pattern of relapse after stopping.",
+        modelWording: "Treat lithium cessation four weeks ago as high-risk and time-sensitive because prior cessation led to mania within six weeks.",
+        keywords: ["lithium cessation", "bipolar I", "relapse risk", "mania", "six weeks", "pregnancy", "forensic admission", "urgent review"],
+      },
+      {
+        id: "s2",
+        name: "Misinformation and informed consent",
+        category: "consent_refusal",
+        severity: "critical",
+        clueInStem: "because I read that it causes heart defects.",
+        whyItMatters: "Natasha's decision appears based on incomplete risk information; she needs balanced counselling about fetal risks of lithium versus relapse risks of untreated bipolar disorder.",
+        modelWording: "Provide balanced counselling about lithium in pregnancy, including absolute fetal cardiac risk, monitoring options and the risks of untreated bipolar relapse.",
+        keywords: ["lithium", "heart defects", "Ebstein anomaly", "absolute risk", "informed consent", "misinformation", "risk-benefit", "fetal monitoring"],
+      },
+      {
+        id: "s3",
+        name: "Obstetric communication and fetal screening",
+        category: "governance",
+        severity: "critical",
+        clueInStem: "If she is on lithium we need to know — there are cardiac screening implications.",
+        whyItMatters: "Obstetrics requires accurate medication exposure history to plan fetal cardiac screening and antenatal monitoring.",
+        modelWording: "With Natasha's consent, communicate lithium exposure, cessation timing and relapse risk to obstetrics today for coordinated fetal cardiac screening and care planning.",
+        keywords: ["obstetric liaison", "cardiac screening", "lithium exposure", "fetal echo", "antenatal care", "consent to share", "coordination", "governance"],
+      },
+      {
+        id: "s4",
+        name: "Partner collateral and carer distress",
+        category: "collateral",
+        severity: "important",
+        clueInStem: "I can't go through that again.",
+        whyItMatters: "The partner's collateral provides relapse timing and indicates carer burden, both relevant to risk planning.",
+        modelWording: "Use partner collateral to establish relapse pattern after lithium cessation and acknowledge his carer distress in the plan.",
+        keywords: ["partner collateral", "carer distress", "relapse pattern", "six weeks", "family support", "collateral history", "risk planning", "previous episode"],
+      },
+      {
+        id: "s5",
+        name: "Current denial of need for medication",
+        category: "diagnosis_formulation",
+        severity: "important",
+        clueInStem: "I feel completely fine. I don't think I need medication in pregnancy.",
+        whyItMatters: "Feeling well after stopping lithium may falsely reassure Natasha and clinicians before relapse emerges.",
+        modelWording: "Explain that current euthymia does not remove relapse risk; prevention is the aim because relapse in pregnancy can rapidly become high-risk.",
+        keywords: ["euthymic", "does not need medication", "relapse prevention", "insight", "bipolar disorder", "pregnancy", "risk formulation", "prevention"],
+      },
+      {
+        id: "s6",
+        name: "Forensic history and advance planning",
+        category: "mental_health_act",
+        severity: "important",
+        clueInStem: "one of which required a forensic psychiatric admission after she assaulted a family member.",
+        whyItMatters: "Past severe mania with violence makes relapse planning essential, including early warning signs and legal/least restrictive pathways if she deteriorates.",
+        modelWording: "Develop an advance relapse plan now, including early warning signs, preferred treatments, supports, obstetric liaison and least restrictive response if capacity/risk deteriorates.",
+        keywords: ["forensic admission", "violence history", "advance care plan", "Mental Health Act", "early warning signs", "least restrictive", "mania relapse", "risk to others"],
+      },
+    ],
+    priorityOrder: {
+      urgent: ["s1", "s2", "s3"],
+      secondary: ["s4", "s5", "s6"],
+      lowYield: [],
+    },
+    modelAnswer: `Immediate risk:
+- Lithium cessation four weeks ago is time-sensitive because prior cessation led to mania within six weeks.
+- Severe bipolar I history, including forensic admission, means relapse in pregnancy could create risks to Natasha, fetus and others.
+
+Consent/risk-benefit:
+- Natasha stopped lithium based on incomplete information.
+- Provide balanced counselling about lithium fetal cardiac risk, available monitoring and the substantial risks of untreated bipolar relapse.
+
+Obstetric coordination:
+- With Natasha's consent, inform obstetrics today about lithium exposure, cessation timing and relapse risk so fetal cardiac screening and antenatal monitoring can be planned.
+
+Collateral/family:
+- Use partner collateral to establish relapse pattern and acknowledge his carer distress.
+- Involve him in relapse planning if Natasha agrees.
+
+Management:
+- Discuss restarting lithium with monitoring versus alternatives, noting limitations of alternatives for mania prevention.
+- Develop an advance relapse plan including early warning signs, rapid review, preferred medication, supports and least restrictive crisis pathway.
+
+Documentation:
+- Record counselling, Natasha's preferences, obstetric communication, partner collateral and agreed plan.`,
+  },
+
+  // PASS: SYS-001
+
+  {
+    id: "SYS-002",
+    topic: "mdt_systems",
+    difficulty: "consultant",
+    title: "ED Physician Demands Discharge of High-Risk Patient — 2am Conflict",
+    candidateRole: "Consultant psychiatrist on call",
+    setting: "Metropolitan Emergency Department, 2am",
+    stem: `You are the consultant psychiatrist on call. At 2am you receive a call from Dr James Walsh, a senior ED consultant, who is blunt and irritated. He tells you a psychiatric patient, Tyra, a 33-year-old woman, has been in the ED for eight hours. Tyra presented after an intentional overdose of venlafaxine 375mg — approximately 20 tablets. She has been medically cleared. Dr Walsh states: "She's stable now, she says she's fine and wants to go home, she's done this before, and I need the bed."
+
+You review Tyra's file before calling back. She has had seven presentations to this ED in the past 18 months — five of them overdoses. Her last admission was six weeks ago following a serious attempt. She is not currently linked to any community mental health service. The previous attending consultant noted "high-frequency attender, likely personality disorder."
+
+Dr Walsh is pressuring you to give "telephone clearance to discharge" without attending. Tyra's sister — her only social support — has told the nurse she is "terrified" and cannot take Tyra home tonight as she has young children.`,
+    totalMarks: 22,
+    signals: [
+      {
+        id: "s1",
+        name: "Telephone discharge clearance is indefensible",
+        category: "immediate_safety",
+        severity: "critical",
+        clueInStem: "telephone clearance to discharge",
+        whyItMatters: "Telephone clearance without direct assessment is unsafe and indefensible in a patient with recurrent overdoses and recent serious attempt.",
+        modelWording: "I will not provide telephone clearance; Tyra requires direct psychiatric assessment before any discharge decision.",
+        keywords: ["telephone clearance", "direct assessment", "attend in person", "not defensible", "discharge clearance", "consultant responsibility", "high risk", "ED"],
+      },
+      {
+        id: "s2",
+        name: "Repeated overdoses increase risk, not reduce it",
+        category: "risk_self",
+        severity: "critical",
+        clueInStem: "seven presentations to this ED in the past 18 months — five of them overdoses.",
+        whyItMatters: "High-frequency self-harm can create habituation bias, but recurrent attempts are a major predictor of future suicide.",
+        modelWording: "Five overdoses in 18 months increases concern; repeated presentations should trigger structured risk formulation, not dismissal.",
+        keywords: ["repeated overdose", "prior attempts", "habituation bias", "high-frequency attender", "suicide risk", "venlafaxine overdose", "recent attempt", "dynamic risk"],
+      },
+      {
+        id: "s3",
+        name: "No community linkage despite repeated presentations",
+        category: "system_pressure",
+        severity: "critical",
+        clueInStem: "not currently linked to any community mental health service.",
+        whyItMatters: "Repeated ED presentations without community care indicate a system gap and make discharge without linkage unsafe.",
+        modelWording: "Seven ED presentations without community mental health linkage is a systems failure; referral and follow-up must be arranged before discharge if discharge occurs.",
+        keywords: ["no community linkage", "community mental health", "system failure", "case management", "referral", "follow-up", "ED default", "continuity of care"],
+      },
+      {
+        id: "s4",
+        name: "Personality disorder label must not minimise risk",
+        category: "diagnosis_formulation",
+        severity: "important",
+        clueInStem: "high-frequency attender, likely personality disorder.",
+        whyItMatters: "A personality disorder label can lead to stigma and underestimation of suicide risk if used as a discharge rationale.",
+        modelWording: "Do not allow the label 'likely personality disorder' to minimise the obligation to assess acute-on-chronic suicide risk.",
+        keywords: ["personality disorder", "BPD", "stigma", "acute-on-chronic risk", "high-frequency attender", "risk minimisation", "diagnostic label", "therapeutic nihilism"],
+      },
+      {
+        id: "s5",
+        name: "Only support cannot supervise",
+        category: "family_carer",
+        severity: "important",
+        clueInStem: "terrified",
+        whyItMatters: "Discharge plans relying on family supervision are unsafe when the only identified support is frightened and unavailable.",
+        modelWording: "Tyra's sister cannot be used as the safety plan tonight; her fear and inability to supervise increase discharge risk.",
+        keywords: ["sister", "terrified", "cannot take home", "no supervision", "no safety net", "family support", "carer unavailable", "discharge risk"],
+      },
+      {
+        id: "s6",
+        name: "Bed pressure and clinical independence",
+        category: "governance",
+        severity: "important",
+        clueInStem: "I need the bed.",
+        whyItMatters: "ED access pressure is real but cannot determine psychiatric disposition for a high-risk patient.",
+        modelWording: "Acknowledge ED pressure while maintaining clinical independence and documenting the rationale for direct assessment and disposition.",
+        keywords: ["bed pressure", "clinical independence", "ED pressure", "governance", "documentation", "professional responsibility", "unsafe discharge", "access block"],
+      },
+    ],
+    priorityOrder: {
+      urgent: ["s1", "s2", "s3"],
+      secondary: ["s4", "s5", "s6"],
+      lowYield: [],
+    },
+    modelAnswer: `Immediate consultant response:
+- I will not provide telephone clearance.
+- I will attend or arrange direct senior psychiatric assessment because this is a high-risk discharge decision.
+
+Risk formulation:
+- Repeated overdoses and a serious attempt six weeks ago increase risk; they do not make the presentation routine.
+- Assess acute-on-chronic suicide risk, intent, planning, intoxication, access to medication, triggers and ability to safety plan.
+
+Diagnostic/contextual formulation:
+- Do not allow a personality disorder label to minimise risk or justify therapeutic nihilism.
+
+Systems/disposition:
+- The absence of community mental health linkage after seven ED presentations is a systems failure.
+- If discharged, Tyra requires confirmed follow-up, safety plan, means restriction and crisis pathway before leaving ED.
+
+Family/carer:
+- Sister cannot be relied upon for supervision because she is terrified and unable to take Tyra home.
+
+Governance:
+- Acknowledge ED bed pressure but maintain clinical independence and document the request for telephone clearance, refusal, assessment and rationale.`,
+  },
+
+  {
+    id: "SYS-003",
+    topic: "mdt_systems",
+    difficulty: "consultant",
+    title: "Inpatient Bed Pressure — Three Unsafe Discharges Requested by NUM",
+    candidateRole: "Consultant psychiatrist, acute inpatient unit",
+    setting: "Acute inpatient psychiatric unit — Monday morning ward meeting",
+    stem: `It is Monday morning. During the ward team meeting, the Nursing Unit Manager Sandra announces that there are 22 patients in a 20-bed unit. She states the hospital has issued a "Code Yellow — Capacity Alert" and all teams must review patients for discharge by midday. She singles out your patients: "These three need to go — Greg, Nasrin, and William."
+
+You review the three patients:
+
+Greg, 52, admitted one week ago following a serious paracetamol overdose. Marked improvement documented by the registrar. Currently euthymic, denies SI. No safety plan documented. No community follow-up arranged. No family contact made.
+
+Nasrin, 35, admitted 10 days ago for acute psychosis secondary to bipolar I. Still responding to antipsychotic medication. Thought-disordered with limited insight. Two young children at home. Husband is currently on a fly-in-fly-out rotation and unavailable for five days.
+
+William, 67, admitted two weeks ago for severe psychotic depression. Halfway through an ECT course with early improvement. His wife told nursing staff last week she is "afraid to have him home" and cannot manage him alone.
+
+Sandra tells you: "If you do not clear these three by midday, it will escalate to the Medical Director."`,
+    totalMarks: 25,
+    signals: [
+      {
+        id: "s1",
+        name: "Discharge remains a clinical decision",
+        category: "system_pressure",
+        severity: "critical",
+        clueInStem: "If you do not clear these three by midday, it will escalate to the Medical Director.",
+        whyItMatters: "Administrative pressure must not override consultant responsibility for safe, defensible discharge decisions.",
+        modelWording: "Acknowledge Code Yellow and work collaboratively, but discharge decisions remain clinical and I will not discharge unsafe patients to meet capacity targets.",
+        keywords: ["Code Yellow", "capacity alert", "bed pressure", "clinical decision", "Medical Director", "unsafe discharge", "consultant responsibility", "system pressure"],
+      },
+      {
+        id: "s2",
+        name: "Greg lacks minimum post-overdose discharge planning",
+        category: "risk_self",
+        severity: "critical",
+        clueInStem: "No safety plan documented. No community follow-up arranged. No family contact made.",
+        whyItMatters: "Discharging after serious overdose without safety plan, follow-up or family contact is unsafe and poorly defensible.",
+        modelWording: "Greg cannot be discharged until there is a documented safety plan, confirmed rapid follow-up, means restriction and appropriate collateral/family involvement.",
+        keywords: ["Greg", "paracetamol overdose", "no safety plan", "no follow-up", "no family contact", "post-discharge suicide", "means restriction", "rapid follow-up"],
+      },
+      {
+        id: "s3",
+        name: "Nasrin presents child safety and relapse risk",
+        category: "risk_vulnerable",
+        severity: "critical",
+        clueInStem: "Husband is currently on a fly-in-fly-out rotation and unavailable for five days.",
+        whyItMatters: "A thought-disordered mother with limited insight and no available adult support creates risks to her children and herself if discharged prematurely.",
+        modelWording: "Nasrin cannot be discharged into sole care of two young children while thought-disordered and without adult support; child safety and relapse planning must be addressed first.",
+        keywords: ["Nasrin", "thought-disordered", "limited insight", "two young children", "husband unavailable", "child safety", "bipolar psychosis", "unsupported discharge"],
+      },
+      {
+        id: "s4",
+        name: "William is mid-ECT with carer unable to cope",
+        category: "disposition",
+        severity: "critical",
+        clueInStem: "Halfway through an ECT course with early improvement.",
+        whyItMatters: "Premature discharge during ECT for psychotic depression risks relapse, incomplete treatment and unsafe burden on spouse.",
+        modelWording: "William should not be discharged mid-ECT unless there is a clinically justified continuation plan and his wife can safely support him, which she has said she cannot.",
+        keywords: ["William", "ECT", "mid-ECT", "psychotic depression", "carer unable", "wife afraid", "premature discharge", "continuation plan"],
+      },
+      {
+        id: "s5",
+        name: "Carer fear is a safety signal",
+        category: "family_carer",
+        severity: "important",
+        clueInStem: "afraid to have him home",
+        whyItMatters: "Carer fear and inability to manage should be treated as clinically relevant collateral, not an inconvenience to discharge flow.",
+        modelWording: "William's wife's fear is clinically relevant collateral and must be incorporated into disposition planning.",
+        keywords: ["wife afraid", "carer fear", "cannot manage", "collateral", "family_carer", "home safety", "disposition", "support capacity"],
+      },
+      {
+        id: "s6",
+        name: "Document and escalate transparently",
+        category: "governance",
+        severity: "important",
+        clueInStem: "it will escalate to the Medical Director.",
+        whyItMatters: "Clear documentation and transparent escalation protect patients and the service when capacity pressure conflicts with clinical safety.",
+        modelWording: "Document the clinical rationale for each decision and welcome Medical Director review as a governance discussion about safe capacity management.",
+        keywords: ["documentation", "Medical Director", "governance", "escalation", "defensible decision", "clinical rationale", "capacity management", "transparency"],
+      },
+    ],
+    priorityOrder: {
+      urgent: ["s1", "s2", "s3"],
+      secondary: ["s4", "s5", "s6"],
+      lowYield: [],
+    },
+    modelAnswer: `Leadership/system pressure:
+- Acknowledge the Code Yellow and collaborate to identify safe discharges.
+- State clearly that discharge decisions remain clinical; bed pressure is not a clinical indication for discharge.
+
+Greg:
+- Not safe for discharge today.
+- Serious overdose one week ago with no safety plan, follow-up or family contact.
+- Requires documented safety plan, means restriction, collateral/family contact and confirmed rapid community follow-up.
+
+Nasrin:
+- Not safe for discharge while thought-disordered with limited insight and two young children at home.
+- Husband is unavailable for five days, creating child safety and relapse risks.
+- Requires child safety consideration, family/support plan and further stabilisation.
+
+William:
+- Not safe for routine discharge mid-ECT for severe psychotic depression.
+- Wife's fear and inability to manage are clinically relevant collateral.
+- Requires completion/continuation ECT plan and safe carer/discharge arrangements.
+
+Governance:
+- Document rationale for each decision.
+- Escalate transparently to the Medical Director if required and frame this as safe capacity management, not a personal conflict.`,
+  },
+];
+```
