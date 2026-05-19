@@ -8,11 +8,11 @@ export const DOC_STEMS: QuizStem[] = [
     title: "Inadequate Discharge Summary — First Episode Psychosis",
     candidateRole: "Consultant psychiatrist, inpatient unit",
     setting: "Acute inpatient psychiatric unit, metropolitan hospital",
-    stem: `You are the consultant psychiatrist on an acute inpatient unit. It is Monday morning. You receive a call from Dr Sarah Adeyemi, a GP in a suburban practice, who is frustrated and concerned. She tells you her patient Reza, a 34-year-old Iranian man, was discharged from your unit five days ago following a four-week admission for first episode schizophrenia. Reza has just presented to her clinic looking unwell.
+    stem: `You are the consultant psychiatrist on an acute inpatient unit. You receive a call from Dr Sarah Adeyemi, a GP, who is frustrated. Her patient Reza, a 34-year-old Iranian man, was discharged from your unit five days ago after a four-week admission for first episode schizophrenia. He has just presented to her clinic looking unwell.
 
-Dr Adeyemi tells you: "The discharge summary doesn't tell me what his diagnosis is — it says 'psychotic disorder under investigation.' It doesn't list his medications or doses. There's no follow-up plan and no case manager named. I have no idea who to call if he deteriorates tonight."
+Dr Adeyemi tells you: "The discharge summary doesn't tell me his diagnosis — it says 'psychotic disorder under investigation.' No medications, no doses, no follow-up plan, no case manager. I have no idea who to call if he deteriorates tonight."
 
-You look up the discharge summary. It is three paragraphs written by the after-hours registrar at 11pm on the day of discharge. It has not been co-signed by a consultant. Reza's wife called the clinic this morning saying he has stopped taking his tablets and has been "acting strangely" since yesterday.
+You check the summary. Three paragraphs, written by the after-hours registrar at 11pm on the day of discharge. No consultant co-signature. Reza's wife called this morning — he has stopped his tablets and has been "acting strangely" since yesterday.
 
 Outline the issues you would identify and the actions you would take. A list without justification will not be awarded marks.`,
     totalMarks: 22,
@@ -23,89 +23,65 @@ Outline the issues you would identify and the actions you would take. A list wit
         category: "immediate_safety",
         severity: "critical",
         clueInStem: "Reza has just presented to her clinic looking unwell",
-        whyItMatters: "A patient five days post-discharge from first episode psychosis who is already showing signs of deterioration and non-adherence requires urgent clinical review today — not a phone discussion with the GP. This is the first priority before any governance response.",
-        modelWording: "Reza must be reviewed urgently today — I will arrange immediate community mental health contact or direct review. The GP call has identified a potential relapse in the highest-risk post-discharge period for first episode psychosis.",
-        keywords: ["urgent", "immediate review", "deteriorat", "relapse", "five days", "unwell", "not taking medication", "today", "review now", "clinical review"],
+        whyItMatters: "A patient five days post-discharge from first episode psychosis who is already deteriorating and non-adherent requires urgent review today — not a phone discussion. The post-discharge period carries the highest relapse risk.",
+        modelWording: "Reza must be reviewed urgently today. I will arrange immediate community mental health contact or direct review — this is a potential relapse in the highest-risk post-discharge period for first episode psychosis.",
+        keywords: ["urgent", "immediate review", "deteriorat", "relapse", "five days", "unwell", "not taking", "today", "clinical review"],
       },
       {
         id: "s2",
-        name: "Discharge summary is clinically inadequate — minimum standards not met",
+        name: "Discharge summary fails minimum clinical standards",
         category: "governance",
         severity: "critical",
-        clueInStem: "doesn't tell me what his diagnosis is — it says 'psychotic disorder under investigation.' It doesn't list his medications or doses. There's no follow-up plan",
-        whyItMatters: "A discharge summary for first episode psychosis must contain: confirmed working diagnosis, medications with doses and rationale, relapse indicators, safety plan, follow-up appointments with dates, case manager contact, and emergency escalation pathway. This summary fails every minimum standard and has directly contributed to Reza's current deterioration.",
-        modelWording: "The discharge summary provided to Dr Adeyemi fails minimum clinical standards. It omits working diagnosis, medications, follow-up plan, case manager contact, and relapse indicators — every element essential for safe community management of first episode psychosis.",
-        keywords: ["inadequate", "discharge summary", "minimum standard", "diagnosis", "medication", "follow-up", "case manager", "fails", "incomplete", "poor documentation"],
+        clueInStem: "doesn't tell me his diagnosis — it says psychotic disorder under investigation. No medications, no doses, no follow-up plan, no case manager",
+        whyItMatters: "A discharge summary for first episode psychosis must contain working diagnosis, medications with doses, relapse indicators, safety plan, follow-up appointments, case manager contact, and emergency escalation. This summary fails every minimum standard and has directly contributed to Reza's deterioration.",
+        modelWording: "The discharge summary fails minimum clinical standards — no working diagnosis, no medications, no follow-up plan, no case manager. I take responsibility. I will send a comprehensive addendum today.",
+        keywords: ["inadequate", "minimum standard", "diagnosis", "medication", "follow-up", "case manager", "fails", "incomplete", "poor documentation"],
       },
       {
         id: "s3",
         name: "No consultant co-signature — supervision failure",
         category: "governance",
         severity: "critical",
-        clueInStem: "written by the after-hours registrar at 11pm on the day of discharge. It has not been co-signed by a consultant",
-        whyItMatters: "Discharge summaries for complex psychiatric cases — especially first episode psychosis — must be reviewed and co-signed by a consultant before or immediately after issue. An after-hours registrar writing an unsupervised discharge letter for a patient with first episode schizophrenia is a supervision and governance failure.",
-        modelWording: "A discharge summary for first episode psychosis written by an after-hours registrar without consultant review or co-signature is a supervision failure. Complex psychiatric discharges require consultant oversight regardless of time of day.",
-        keywords: ["co-sign", "consultant review", "registrar", "unsupervised", "supervision", "after hours", "oversight", "co-signature", "consultant sign"],
+        clueInStem: "written by the after-hours registrar at 11pm on the day of discharge. No consultant co-signature",
+        whyItMatters: "Discharge summaries for complex psychiatric cases must be reviewed and co-signed by a consultant. An after-hours registrar writing an unsupervised discharge letter for first episode schizophrenia is a supervision failure.",
+        modelWording: "A discharge summary for first episode psychosis written by an after-hours registrar without consultant co-signature is a supervision failure. Complex psychiatric discharges require consultant oversight regardless of time.",
+        keywords: ["co-sign", "consultant review", "registrar", "unsupervised", "supervision", "after hours", "oversight"],
       },
       {
         id: "s4",
-        name: "Medication non-adherence — must be addressed urgently",
+        name: "Medication non-adherence — urgent clinical priority",
         category: "risk_self",
         severity: "critical",
-        clueInStem: "stopped taking his tablets and has been acting strangely since yesterday",
-        whyItMatters: "Non-adherence in the first weeks after discharge from first episode psychosis is the primary driver of relapse and long-term outcome. The discharge plan must have addressed adherence strategies — it clearly did not. This omission has directly contributed to the current presentation.",
-        modelWording: "Non-adherence to antipsychotic medication five days post-discharge from first episode psychosis is a medical emergency — relapse risk is highest in the first weeks. The discharge plan failed to address adherence strategies, and this must be urgently corrected in today's review.",
-        keywords: ["non-adherence", "not taking", "stopped medication", "adherence", "relapse", "tablets", "medication", "first episode", "post-discharge"],
+        clueInStem: "stopped his tablets and has been acting strangely since yesterday",
+        whyItMatters: "Non-adherence in the first weeks after discharge from first episode psychosis is the primary driver of relapse. The discharge plan clearly failed to address adherence strategies.",
+        modelWording: "Non-adherence five days post-discharge from first episode psychosis is a medical emergency — relapse risk is highest in the first weeks. Today's review must address adherence urgently, including consideration of depot antipsychotic.",
+        keywords: ["non-adherence", "not taking", "stopped", "adherence", "relapse", "depot", "medication"],
       },
       {
         id: "s5",
-        name: "Cultural context — Iranian man, first episode, family dynamics",
-        category: "cultural_safety",
-        severity: "important",
-        clueInStem: "34-year-old Iranian man",
-        whyItMatters: "Cultural explanatory models for psychosis, family dynamics, stigma around psychiatric diagnosis, and medication attitudes are highly relevant in a first episode presentation. The discharge letter and community care plan should address cultural context and family psychoeducation — neither is mentioned.",
-        modelWording: "The discharge summary and community care plan make no reference to cultural context or family psychoeducation. For Reza as an Iranian man with first episode psychosis, cultural explanatory models for illness, stigma, and family involvement must be explicitly addressed in the community plan.",
-        keywords: ["cultural", "iranian", "family", "psychoeducation", "stigma", "cultural context", "explanatory model", "family engagement"],
-      },
-      {
-        id: "s6",
         name: "GP relationship — acknowledge failure, send addendum today",
         category: "mdt_conflict",
         severity: "important",
         clueInStem: "Dr Adeyemi is frustrated and concerned",
-        whyItMatters: "A GP who has not received adequate discharge communication is a patient safety risk and a professional relationship that requires repair. The GP is the primary contact for Reza in the community — this relationship must be urgently restored.",
-        modelWording: "I will call Dr Adeyemi back, acknowledge the failure, and take responsibility. I will send a comprehensive addendum letter today with working diagnosis, medications and doses, relapse indicators, case manager contact, outpatient appointment, and emergency escalation pathway.",
-        keywords: ["apologise", "gp", "repair", "addendum", "letter today", "acknowledge", "responsible", "remedy", "direct contact", "call back"],
-      },
-      {
-        id: "s7",
-        name: "Systems issue — after-hours discharge policy must be reviewed",
-        category: "governance",
-        severity: "important",
-        clueInStem: "written by the after-hours registrar at 11pm",
-        whyItMatters: "After-hours discharge of complex psychiatric patients without consultant oversight is a systemic issue — this is not the first time it will have happened. A governance review of after-hours discharge policy is required.",
-        modelWording: "After-hours discharge summaries for complex psychiatric cases must be reviewed by a consultant. I will raise this at the next governance meeting — this is a system issue, not just an individual registrar error.",
-        keywords: ["system", "policy", "after hours", "governance", "discharge policy", "consultant oversight", "systemic", "governance meeting", "review policy"],
+        whyItMatters: "A GP without adequate discharge information is a patient safety risk. This relationship must be urgently repaired — the GP is Reza's primary community contact.",
+        modelWording: "I will call Dr Adeyemi back, acknowledge the failure, and send a comprehensive addendum letter today with all missing clinical information.",
+        keywords: ["apologise", "gp", "addendum", "letter today", "acknowledge", "responsible", "remedy", "call back"],
       },
     ],
     priorityOrder: {
       urgent: ["s1", "s2", "s3", "s4"],
-      secondary: ["s5", "s6"],
-      lowYield: ["s7"],
+      secondary: ["s5"],
+      lowYield: [],
     },
-    modelAnswer: `Immediate: Reza must be reviewed today. I will arrange urgent community mental health contact or direct review — a patient five days post-discharge from first episode psychosis who has stopped medication and is deteriorating cannot wait.
+    modelAnswer: `Immediate: Reza must be reviewed today — five days post-discharge, stopped medication, deteriorating. I will arrange urgent community mental health contact now.
 
-Discharge summary failure: The letter issued to Dr Adeyemi fails every minimum clinical standard. It contains no working diagnosis, no medications, no follow-up plan, no case manager contact, and no relapse indicators. I take responsibility for this. I will send a comprehensive addendum today.
+Discharge summary failure: The letter fails every minimum standard. No diagnosis, no medications, no follow-up, no case manager. I take responsibility and will send a comprehensive addendum today.
 
-GP communication: I will call Dr Adeyemi back immediately, acknowledge the failure, and provide all missing information by letter today — working diagnosis, medications and doses, relapse indicators, case manager name and contact, outpatient appointment details, and emergency escalation pathway.
+GP: I will call Dr Adeyemi immediately, acknowledge the failure, and provide all missing information — working diagnosis, medications and doses, relapse indicators, case manager contact, outpatient appointment, and emergency escalation.
 
-Supervision failure: A discharge summary for first episode psychosis written by an after-hours registrar without consultant co-signature is a supervision failure. This is non-negotiable for complex psychiatric discharges.
+Supervision failure: After-hours registrar discharge letter for first episode psychosis without consultant co-signature is a supervision failure. This will be raised at the next governance meeting.
 
-Medication adherence: Non-adherence five days post-discharge from first episode psychosis is the highest-risk scenario for relapse — today's review must address adherence strategies urgently, including consideration of depot medication.
-
-Cultural context: Reza's Iranian background must be addressed in the community plan — cultural explanatory models, family psychoeducation, and stigma around psychiatric diagnosis are clinically relevant and were absent from the discharge letter.
-
-Systems: After-hours discharge policy for complex psychiatric patients requires a governance review — I will raise this at the next clinical governance meeting.`,
+Adherence: Today's urgent review must address non-adherence — depot antipsychotic should be considered.`,
   },
 
   {

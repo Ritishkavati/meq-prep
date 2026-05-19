@@ -5,14 +5,12 @@ export const DIS_STEMS: QuizStem[] = [
     id: "DIS-001",
     topic: "discharge_review",
     difficulty: "consultant",
-    title: "Forensic Discharge Summary — Critical Omissions Before Co-Sign",
+    title: "Forensic Discharge Summary — Do Not Co-Sign",
     candidateRole: "Consultant forensic psychiatrist",
     setting: "Forensic inpatient unit — co-sign review queue",
-    stem: `You are the consultant forensic psychiatrist. A discharge summary has been placed in your co-sign queue by Dr Michael Tan, a first-year registrar, for Wayne, a 44-year-old man being discharged after a 12-week admission. Wayne has a background of schizophrenia, cannabis and methamphetamine use, a history of violence towards his mother when unwell, and a prior finding of not guilty by reason of mental illness (NGMI) for an assault offence six years ago — he was conditionally discharged from forensic supervision three years ago.
+    stem: `You are the consultant forensic psychiatrist. A discharge summary is in your co-sign queue from Dr Michael Tan, a first-year registrar, for Wayne, a 44-year-old man being discharged after a 12-week admission. Wayne has schizophrenia, cannabis and methamphetamine use, a history of violence towards his mother when unwell, and a prior not guilty by reason of mental illness (NGMI) finding for assault six years ago.
 
-The discharge summary is four paragraphs. It documents: discharge diagnosis (schizophrenia), current medication (olanzapine 20mg), and a single line: "risk: reduced during admission." It does not mention Wayne's forensic history, the NGMI finding, his substance use history, or the history of violence towards his mother. There is no risk formulation. There is no relapse prevention plan. The only follow-up contact listed is: "Wayne — please call to arrange follow-up."
-
-Wayne's mother has not been notified of the discharge. There is no reference to forensic community support or housing. The registrar has asked you to co-sign the document.
+The four-paragraph summary documents: diagnosis (schizophrenia), medication (olanzapine 20mg), and one line: "risk: reduced during admission." It does not mention the NGMI finding, forensic history, substance use, or violence history. There is no risk formulation and no relapse prevention plan. Follow-up reads: "Wayne — please call to arrange follow-up." Wayne's mother has not been notified. No forensic community support or housing is mentioned.
 
 Outline what you would do and why. A list without justification will not be awarded marks.`,
     totalMarks: 22,
@@ -22,76 +20,62 @@ Outline what you would do and why. A list without justification will not be awar
         name: "Do not co-sign — summary is clinically and legally inadequate",
         category: "governance",
         severity: "critical",
-        clueInStem: "The registrar has asked you to co-sign the document",
-        whyItMatters: "Co-signing a clinically inadequate forensic discharge summary transfers consultant accountability to a document that could directly contribute to harm. A co-signed letter is taken as consultant approval of its contents — this summary is not approvable as written.",
-        modelWording: "I will not co-sign this discharge summary as written. I will return it to Dr Tan with a specific list of required additions before it is released. Co-signing an inadequate forensic discharge letter creates medico-legal exposure and patient safety risk.",
-        keywords: ["not co-sign", "will not sign", "return", "required changes", "must not", "reject", "hold", "co-sign", "inadequate", "before release"],
+        clueInStem: "A discharge summary has been placed in your co-sign queue",
+        whyItMatters: "Co-signing this summary transfers consultant accountability to a document that could directly contribute to harm. A co-signed letter is taken as consultant approval — this summary cannot be approved as written.",
+        modelWording: "I will not co-sign this discharge summary. I will return it to Dr Tan with a specific list of required additions before it is released.",
+        keywords: ["not co-sign", "will not sign", "return", "required changes", "reject", "hold", "inadequate", "before release"],
       },
       {
         id: "s2",
-        name: "Forensic history absent — NGMI and conditional discharge essential inclusions",
+        name: "Forensic history absent — NGMI essential inclusion",
         category: "governance",
         severity: "critical",
-        clueInStem: "It does not mention Wayne's forensic history, the NGMI finding",
-        whyItMatters: "Any clinician receiving a discharge letter for a forensic patient must know the forensic history to calibrate risk appropriately. The NGMI finding and history of conditional forensic supervision are not optional details — their absence means the receiving clinician is managing Wayne without critical clinical and legal context.",
-        modelWording: "The NGMI finding six years ago and the conditional forensic discharge three years ago are essential clinical and legal inclusions in any discharge documentation for Wayne. Their absence means the receiving clinician has no forensic context and cannot manage risk appropriately.",
-        keywords: ["forensic history", "NGMI", "not guilty by reason", "conditional discharge", "forensic", "absent", "essential", "must include", "receiving clinician"],
+        clueInStem: "It does not mention the NGMI finding, forensic history",
+        whyItMatters: "Any clinician receiving a discharge letter for a forensic patient must know the forensic history to calibrate risk. The NGMI finding and forensic supervision history are essential — their absence means the receiving clinician manages Wayne without critical legal and clinical context.",
+        modelWording: "The NGMI finding and conditional forensic discharge history are essential inclusions. Their absence means the receiving clinician cannot manage Wayne's risk appropriately.",
+        keywords: ["forensic history", "NGMI", "not guilty by reason", "conditional discharge", "absent", "essential", "must include"],
       },
       {
         id: "s3",
-        name: "Risk formulation absent — 'risk reduced' is not a risk assessment",
+        name: "Risk reduced is not a risk formulation",
         category: "governance",
         severity: "critical",
-        clueInStem: "a single line: 'risk: reduced during admission'",
-        whyItMatters: "For a forensic patient with a history of violence, 'risk reduced during admission' describes inpatient behaviour only — it says nothing about community risk. A proper risk formulation addresses static factors (NGMI, prior violence), dynamic factors (substance use, adherence, housing), and protective factors in the specific community context.",
-        modelWording: "A risk formulation for a forensic patient must address static, dynamic, and protective factors in the community environment. 'Risk reduced during admission' is an observation about behaviour in a controlled setting — it is not a community risk formulation and cannot substitute for one.",
-        keywords: ["risk formulation", "static", "dynamic", "protective", "not a formulation", "community risk", "risk reduced", "inadequate", "absent", "formulation"],
+        clueInStem: "risk: reduced during admission",
+        whyItMatters: "'Risk reduced during admission' describes controlled inpatient behaviour — not community risk. A proper formulation addresses static factors, dynamic factors including substance use, and protective factors in the specific community context.",
+        modelWording: "A risk formulation for a forensic patient must address static, dynamic, and protective factors in the community environment. 'Risk reduced during admission' is not a community risk formulation.",
+        keywords: ["risk formulation", "static", "dynamic", "protective", "not a formulation", "community risk", "formulation absent"],
       },
       {
         id: "s4",
         name: "Mother not notified — identified victim, public safety obligation",
         category: "family_carer",
         severity: "critical",
-        clueInStem: "history of violence towards his mother when unwell. Wayne's mother has not been notified of the discharge",
-        whyItMatters: "Wayne's mother is both the identified target of his prior violence and potentially his primary carer on discharge. She must be notified of his discharge and involved in the safety and relapse prevention plan — failure to notify her is both a clinical and public safety failure.",
-        modelWording: "Wayne's mother is the identified victim of his prior violence. She must be notified of his discharge — this is both a clinical obligation and a public safety one. She must also be offered involvement in the safety and relapse prevention plan.",
-        keywords: ["mother", "notify", "notified", "victim", "at risk", "public safety", "third party", "family", "prior violence", "must notify"],
+        clueInStem: "history of violence towards his mother. Wayne's mother has not been notified",
+        whyItMatters: "Wayne's mother is both the identified victim of his prior violence and potentially his primary carer. Failing to notify her of his discharge is both a clinical and public safety failure.",
+        modelWording: "Wayne's mother is the identified victim of his prior violence. She must be notified of his discharge and offered involvement in the safety and relapse prevention plan.",
+        keywords: ["mother", "notify", "victim", "at risk", "public safety", "prior violence", "must notify", "family"],
       },
       {
         id: "s5",
-        name: "Follow-up plan is clinically inadequate — patient-initiated contact is not a plan",
+        name: "Patient-initiated follow-up is not a plan",
         category: "disposition",
         severity: "critical",
         clueInStem: "Wayne — please call to arrange follow-up",
-        whyItMatters: "For a forensic patient with schizophrenia, substance use, and a history of violence, leaving follow-up to the patient's initiative is not a clinical plan — it is an absence of planning. The highest-risk period for forensic patients is immediately post-discharge. An assertive follow-up plan with named contacts and confirmed appointments is mandatory.",
-        modelWording: "Leaving follow-up contingent on Wayne calling to arrange an appointment is not a clinical follow-up plan for a forensic patient. Confirmed outpatient appointments, community forensic team contact, assertive follow-up dates, and pharmacy arrangements for medication must all be documented before discharge.",
-        keywords: ["follow-up", "assertive", "confirmed appointment", "not a plan", "forensic community", "community team", "patient initiated", "inadequate", "named contact"],
-      },
-      {
-        id: "s6",
-        name: "Teaching — what a forensic discharge summary must contain",
-        category: "governance",
-        severity: "important",
-        clueInStem: "first-year registrar",
-        whyItMatters: "Dr Tan is a first-year registrar — this is a teaching opportunity. He needs to understand not just what to add, but why forensic discharge documentation has a higher standard than general psychiatry and what legal and clinical consequences flow from inadequate documentation.",
-        modelWording: "I will use this as a direct supervision session with Dr Tan — explaining what a forensic discharge summary must include, why each element matters clinically and legally, and the consequences for Wayne, his mother, and the treating team if documentation fails.",
-        keywords: ["teach", "supervision", "registrar", "dr tan", "educate", "explain", "first year", "what must include", "teaching opportunity"],
+        whyItMatters: "For a forensic patient with schizophrenia and a violence history, leaving follow-up to patient initiative is not a plan. Confirmed outpatient appointments, community forensic team contact, and assertive follow-up are mandatory.",
+        modelWording: "Leaving follow-up contingent on Wayne calling is not acceptable for a forensic patient. Confirmed appointments, community forensic team contact, and assertive follow-up dates must be in place before discharge.",
+        keywords: ["follow-up", "assertive", "confirmed", "not a plan", "forensic community", "patient initiated", "inadequate"],
       },
     ],
     priorityOrder: {
       urgent: ["s1", "s2", "s3", "s4", "s5"],
-      secondary: ["s6"],
+      secondary: [],
       lowYield: [],
     },
-    modelAnswer: `I will not co-sign this discharge summary. I will return it to Dr Tan with a specific list of required additions before it is released.
+    modelAnswer: `I will not co-sign this summary. I will return it to Dr Tan with required additions before release.
 
-Missing elements that must be added: (1) Full forensic history including the NGMI finding six years ago and conditional forensic discharge three years ago; (2) Complete substance use history with current status; (3) Full risk formulation with static, dynamic, and protective factors in the community context — not inpatient behaviour; (4) Relapse prevention plan with early warning signs and escalation pathway; (5) Confirmed outpatient appointments and forensic community team contact details; (6) Notification to and involvement of Wayne's mother in the safety plan.
+Missing: Full forensic history including NGMI finding; complete substance use history; proper risk formulation with static, dynamic, and protective community factors; relapse prevention plan; confirmed follow-up appointments and forensic community team contact; notification to and involvement of Wayne's mother.
 
-Wayne's mother: She is the identified victim of his prior violence and cannot be excluded from discharge planning. She must be notified and her involvement in the safety plan documented.
-
-Follow-up: "Wayne — please call to arrange follow-up" is not a follow-up plan for a forensic patient. Confirmed appointments, assertive outreach contacts, pharmacy arrangements, and community forensic team contact must all be in place before discharge.
-
-Teaching: I will supervise Dr Tan in rewriting this summary — explaining why forensic discharge documentation has a higher clinical and legal standard, and what the consequences are if this level of detail is absent.`,
+Teaching: I will supervise Dr Tan in rewriting this — explaining why forensic discharge documentation has a higher standard and what the consequences are if it fails.`,
   },
 
   {
