@@ -496,6 +496,57 @@ export function hasStemBeenAttempted(stemId: string): boolean {
   }
 }
 
+// ─── Saved responses (explicit profile saves) ──────────────────────────────────
+export interface SavedResponse {
+  stemId: string;
+  stemTitle: string;
+  topic: string;
+  answer: string;
+  score: number;         // percentage 0–100
+  estimatedMarks: number;
+  totalMarks: number;
+  savedAt: string;       // ISO string
+}
+
+const SAVED_RESPONSES_KEY = "meq_saved_responses";
+
+export function saveQuizResponse(data: SavedResponse): void {
+  try {
+    const existing = loadSavedResponses().filter((r) => r.stemId !== data.stemId);
+    existing.unshift(data);
+    localStorage.setItem(SAVED_RESPONSES_KEY, JSON.stringify(existing.slice(0, 200)));
+  } catch {
+    // localStorage unavailable
+  }
+}
+
+export function loadSavedResponses(): SavedResponse[] {
+  try {
+    const raw = localStorage.getItem(SAVED_RESPONSES_KEY);
+    if (!raw) return [];
+    return JSON.parse(raw) as SavedResponse[];
+  } catch {
+    return [];
+  }
+}
+
+export function deleteSavedResponse(stemId: string): void {
+  try {
+    const existing = loadSavedResponses().filter((r) => r.stemId !== stemId);
+    localStorage.setItem(SAVED_RESPONSES_KEY, JSON.stringify(existing));
+  } catch {
+    // localStorage unavailable
+  }
+}
+
+export function isStemResponseSaved(stemId: string): boolean {
+  try {
+    return loadSavedResponses().some((r) => r.stemId === stemId);
+  } catch {
+    return false;
+  }
+}
+
 function uid(): string {
   return Math.random().toString(36).slice(2, 10);
 }

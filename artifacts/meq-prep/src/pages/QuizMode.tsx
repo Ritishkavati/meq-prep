@@ -12,6 +12,7 @@ import {
   assessAnswer, createAttempt, saveAttempt, QuizResult,
   CATEGORY_LABELS, hasStemBeenAttempted,
   getQuizModuleCompletion, QuizModuleCompletion,
+  saveQuizResponse, deleteSavedResponse, isStemResponseSaved,
 } from "@/lib/quizEngine";
 import {
   getNextStem, getTopicStats, TopicStats,
@@ -20,6 +21,7 @@ import {
   ArrowLeft, Play, Square, RotateCcw, Send, CheckCircle2,
   XCircle, AlertTriangle, ChevronDown, ChevronUp, Clock,
   RotateCw, ListChecks, ArrowRight, BookMarked, Loader2, Sparkles,
+  FileText, Bookmark, BookmarkCheck, Trash2, PenLine,
 } from "lucide-react";
 
 type Phase = "setup" | "quiz" | "results";
@@ -126,16 +128,17 @@ function SetupScreen({
 
 // ─── Quiz screen ──────────────────────────────────────────────────────────────
 function QuizScreen({
-  stem, timeSecs, onSubmit, alreadyAttempted, onSkipToNext,
+  stem, timeSecs, onSubmit, alreadyAttempted, onSkipToNext, initialAnswer,
 }: {
   stem: QuizStem;
   timeSecs: number;
   onSubmit: (answer: string, timeUsed: number) => void;
   alreadyAttempted: boolean;
   onSkipToNext: () => void;
+  initialAnswer?: string;
 }) {
   const [skipDismissed, setSkipDismissed] = useState(false);
-  const [answer, setAnswer] = useState("");
+  const [answer, setAnswer] = useState(initialAnswer ?? "");
   const [timeLeft, setTimeLeft] = useState(timeSecs);
   const [started, setStarted] = useState(false);
   const [paused, setPaused] = useState(false);
@@ -485,11 +488,125 @@ function PSMarkingPanel({ result }: { result: import("@/lib/quizEngine").QuizRes
   );
 }
 
+// ─── Your Written Response panel ──────────────────────────────────────────────
+function YourResponsePanel({
+  stem, candidateAnswer, result, onRewrite,
+}: {
+  stem: QuizStem;
+  candidateAnswer: string;
+  result: QuizResult;
+  onRewrite: () => void;
+}) {
+  const [open, setOpen] = useState(true);
+  const [savedState, setSavedState] = useState<"unsaved" | "saved" | "deleted">(
+    () => isStemResponseSaved(stem.id) ? "saved" : "unsaved"
+  );
+
+  // Weighted marks for the save payload
+  const WEIGHTS: Record<string, number> = { critical: 2, important: 1, optional: 0.5 };
+  const totalWeighted = result.matches.reduce((s, m) => s + (WEIGHTS[m.signal.severity] ?? 1), 0);
+  const earnedWeighted = result.matches.filter((m) => m.identified).reduce((s, m) => s + (WEIGHTS[m.signal.severity] ?? 1), 0);
+  const estimatedMarks = totalWeighted > 0 ? Math.round((earnedWeighted / totalWeighted) * stem.totalMarks) : 0;
+
+  function handleSave() {
+    saveQuizResponse({
+      stemId: stem.id,
+      stemTitle: stem.title,
+      topic: stem.topic,
+      answer: candidateAnswer,
+      score: result.percentage,
+      estimatedMarks,
+      totalMarks: stem.totalMarks,
+      savedAt: new Date().toISOString(),
+    });
+    setSavedState("saved");
+  }
+
+  function handleDelete() {
+    deleteSavedResponse(stem.id);
+    setSavedState("deleted");
+  }
+
+  return (
+    <div className="bg-white rounded-2xl border border-card-border shadow-sm overflow-hidden">
+      <button
+        onClick={() => setOpen((v) => !v)}
+        className="w-full flex items-center justify-between px-6 py-4 text-left hover:bg-slate-50 transition-colors"
+      >
+        <div className="flex items-center gap-3">
+          <FileText className="w-5 h-5 text-accent flex-shrink-0" />
+          <div>
+            <h3 className="font-serif font-bold text-primary text-base">Your Written Response</h3>
+            <p className="text-xs text-muted-foreground">Review what you submitted — then rewrite, save, or delete</p>
+          </div>
+        </div>
+        {open ? <ChevronUp className="w-4 h-4 text-muted-foreground" /> : <ChevronDown className="w-4 h-4 text-muted-foreground" />}
+      </button>
+
+      {open && (
+        <div className="px-6 pb-5 space-y-4 border-t border-card-border">
+          {/* The candidate's answer */}
+          <div className="mt-4 bg-slate-50 border border-slate-200 rounded-xl px-5 py-4 text-sm text-primary leading-relaxed whitespace-pre-wrap min-h-[80px]">
+            {candidateAnswer.trim() || <span className="text-muted-foreground italic">No response submitted.</span>}
+          </div>
+
+          {/* Action row */}
+          <div className="flex flex-wrap gap-2">
+            {/* Rewrite */}
+            <button
+              onClick={onRewrite}
+              className="flex items-center gap-2 border-2 border-primary text-primary text-sm font-semibold px-4 py-2 rounded-lg hover:bg-primary/5 transition-colors"
+            >
+              <PenLine className="w-4 h-4" /> Rewrite Response
+            </button>
+
+            {/* Save / Saved */}
+            {savedState !== "saved" && (
+              <button
+                onClick={handleSave}
+                className="flex items-center gap-2 bg-accent text-white text-sm font-semibold px-4 py-2 rounded-lg hover:bg-accent/90 transition-colors"
+              >
+                <Bookmark className="w-4 h-4" /> Save to Profile
+              </button>
+            )}
+            {savedState === "saved" && (
+              <span className="flex items-center gap-2 bg-emerald-50 border border-emerald-200 text-emerald-700 text-sm font-semibold px-4 py-2 rounded-lg">
+                <BookmarkCheck className="w-4 h-4" /> Saved to Profile
+              </span>
+            )}
+
+            {/* Delete */}
+            {savedState !== "deleted" && (
+              <button
+                onClick={handleDelete}
+                className="flex items-center gap-2 border border-red-200 text-red-600 text-sm font-semibold px-4 py-2 rounded-lg hover:bg-red-50 transition-colors"
+              >
+                <Trash2 className="w-4 h-4" /> Delete Response
+              </button>
+            )}
+            {savedState === "deleted" && (
+              <span className="flex items-center gap-2 text-muted-foreground text-sm px-2 py-2">
+                Response deleted.
+              </span>
+            )}
+          </div>
+
+          {savedState === "saved" && (
+            <p className="text-xs text-emerald-700 bg-emerald-50 border border-emerald-100 rounded-lg px-3 py-2">
+              This response is saved to your profile under <strong>Quiz History</strong>. You can review all saved responses in the Review section.
+            </p>
+          )}
+        </div>
+      )}
+    </div>
+  );
+}
+
 // ─── Results screen ───────────────────────────────────────────────────────────
 function ResultsScreen({
   stem, result, candidateAnswer, topic, progress,
   onNextRandom, onNextQuestion, onRepeatStem, onChangeTopic, onBackToModes,
-  courseCompletion,
+  onRewrite, courseCompletion,
 }: {
   stem: QuizStem;
   result: QuizResult;
@@ -501,6 +618,7 @@ function ResultsScreen({
   onRepeatStem: () => void;
   onChangeTopic: () => void;
   onBackToModes: () => void;
+  onRewrite: () => void;
   courseCompletion: QuizModuleCompletion;
 }) {
   const [showModel, setShowModel] = useState(false);
@@ -605,6 +723,14 @@ function ResultsScreen({
           </p>
         </div>
       </div>
+
+      {/* ── YOUR WRITTEN RESPONSE ────────────────────────────────────────────── */}
+      <YourResponsePanel
+        stem={stem}
+        candidateAnswer={candidateAnswer}
+        result={result}
+        onRewrite={onRewrite}
+      />
 
       {/* ── NEXT CTA — shown immediately after results ──────────────────────── */}
       <div className="flex flex-col sm:flex-row gap-2">
@@ -871,6 +997,7 @@ export default function QuizMode() {
   const [lastCandidateAnswer, setLastCandidateAnswer] = useState("");
   const [sessionProgress, setSessionProgress] = useState({ attempted: 0, available: 0 });
   const [stemAlreadyAttempted, setStemAlreadyAttempted] = useState(false);
+  const [prefilledAnswer, setPrefilledAnswer] = useState<string | undefined>(undefined);
 
   function refreshProgress(topic: TopicKey) {
     const stats = getTopicStats(topic);
@@ -918,6 +1045,13 @@ export default function QuizMode() {
   }
 
   function handleRepeatStem() {
+    setPrefilledAnswer(undefined);
+    setResult(null);
+    setPhase("quiz");
+  }
+
+  function handleRewrite() {
+    setPrefilledAnswer(lastCandidateAnswer);
     setResult(null);
     setPhase("quiz");
   }
@@ -962,6 +1096,7 @@ export default function QuizMode() {
           onSubmit={handleSubmit}
           alreadyAttempted={stemAlreadyAttempted}
           onSkipToNext={handleNextQuestion}
+          initialAnswer={prefilledAnswer}
         />
       )}
       {phase === "results" && currentStem && result && (
@@ -976,6 +1111,7 @@ export default function QuizMode() {
           onRepeatStem={handleRepeatStem}
           onChangeTopic={handleChangeTopic}
           onBackToModes={handleBackToModes}
+          onRewrite={handleRewrite}
           courseCompletion={getQuizModuleCompletion(candidateNumber, QUIZ_STEMS.length)}
         />
       )}
