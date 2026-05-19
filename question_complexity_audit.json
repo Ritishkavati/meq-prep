@@ -3,11 +3,11 @@
     "generated": "2026-05-19",
     "auditor": "MEQ Prep complexity audit agent",
     "rubric": {
+      "10": "Exam-ceiling level — 10+ signals, all domains active, no safe easy answer exists",
       "1-3": "Junior registrar level — single-layer, obvious answer, no competing values",
       "4-5": "Competent registrar level — 2-3 competing considerations, some ambiguity",
       "6-7": "Senior registrar level — multiple signal layers, governance/legal nuance required",
-      "8-9": "Consultant RANZCP MEQ level — 5+ concurrent pressures, defensible disposition under real ambiguity",
-      "10": "Exam-ceiling level — 10+ signals, all domains active, no safe easy answer exists"
+      "8-9": "Consultant RANZCP MEQ level — 5+ concurrent pressures, defensible disposition under real ambiguity"
     },
     "flags": [
       "live_decision_under_pressure",
@@ -18,15 +18,15 @@
       "consultant_leadership",
       "defensible_disposition"
     ],
-    "totalQuestionsAudited": 121,
+    "totalQuestionsAudited": 102,
     "sources": {
       "ORIGINAL_STEMS": 27,
-      "topic_files": 94
-    }
+      "topic_files": 75
+    },
+    "lastUpdated": "2026-05-19",
+    "note": "All 27 ORIGINAL_STEMS + all topic file questions audited. ID fixes: q9→q10, q13→q14, q24→q20. Added: q9, q13, q18, q19, q24."
   },
-
   "questions": [
-
     {
       "id": "q1",
       "title": "Sudanese Refugee — Medical Ward Refusal",
@@ -52,7 +52,6 @@
         "defensible_disposition"
       ]
     },
-
     {
       "id": "q2",
       "title": "Young Man — High-Lethality Overdose in ED",
@@ -75,7 +74,6 @@
         "defensible_disposition"
       ]
     },
-
     {
       "id": "q3",
       "title": "Postpartum Psychosis — Capgras Delusion, Infanticide Risk",
@@ -100,7 +98,6 @@
         "defensible_disposition"
       ]
     },
-
     {
       "id": "q4",
       "title": "Impaired Registrar — Supervisor Concern",
@@ -126,7 +123,6 @@
         "defensible_disposition"
       ]
     },
-
     {
       "id": "q5",
       "title": "Dementia — Elder Abuse and Capacity",
@@ -152,7 +148,6 @@
         "defensible_disposition"
       ]
     },
-
     {
       "id": "q6",
       "title": "Stalking and Morbid Jealousy — Depot Cessation, Identified Victim",
@@ -179,7 +174,6 @@
         "defensible_disposition"
       ]
     },
-
     {
       "id": "q7",
       "title": "Aboriginal Adolescent — Complex Trauma and Polypharmacy",
@@ -204,7 +198,6 @@
         "defensible_disposition"
       ]
     },
-
     {
       "id": "q8",
       "title": "CTO Review — First Episode Psychosis, Recovery and Rights",
@@ -230,10 +223,53 @@
         "defensible_disposition"
       ]
     },
-
     {
       "id": "q9",
-      "title": "OST in Pregnancy — Benzodiazepine Use, Child Protection History",
+      "topic": "cl_psychiatry",
+      "title": "Medical Ward — Refusal to Accept Treatment and Diagnostic Uncertainty",
+      "sourceFile": "quizData.ts (ORIGINAL_STEMS)",
+      "complexity": {
+        "score": 8,
+        "rationale": "Capacity-depression-grief triple intersection: formal four-domain capacity assessment, MDE complicating capacity, grief for an \"illness companion\" with same diagnosis, iatrogenic contribution (interferon-beta), and a distressed husband — all under competing legal and clinical obligations.",
+        "activeDomains": [
+          "capacity_law",
+          "diagnosis_formulation",
+          "physical_health",
+          "family_carer",
+          "ethics"
+        ],
+        "signalCount": 9,
+        "difficulty": "consultant",
+        "totalMarks": 22,
+        "keyFlags": [
+          "legal_policy_hinge",
+          "unsafe_tempting_shortcut",
+          "mdt_family_system_conflict"
+        ]
+      },
+      "strengths": [
+        "Depression-impairs-capacity interaction is a rare high-value teaching point",
+        "Interferon-beta as iatrogenic depression contribution is a specific knowledge test",
+        "Grief for illness companion with same diagnosis is psychologically sophisticated",
+        "Husband dual role (collateral + distressed carer) adds system complexity",
+        "Bodily autonomy vs clinical duty tension is well-calibrated"
+      ],
+      "weaknesses": [
+        "Hospital setting is well-trodden — less distinctive than community scenarios",
+        "Nine signals at 22 marks is slightly low-density compared to q1/q2",
+        "No governance or mandatory reporting angle"
+      ],
+      "missingLayers": [
+        "No cultural or linguistic complexity in Sandra's background",
+        "No third-party risk or public safety element",
+        "No systems or resource-constraint pressure"
+      ],
+      "rewritePriority": "low",
+      "rewriteRationale": "Solid consultant-level question. The depression-capacity interaction and interferon contribution make it distinctively educational."
+    },
+    {
+      "id": "q10",
+      "title": "Opioid Substitution Therapy — Pregnancy and Child Protection",
       "topic": "substance_use",
       "source": "ORIGINAL_STEMS",
       "difficulty": "consultant",
@@ -255,7 +291,6 @@
         "defensible_disposition"
       ]
     },
-
     {
       "id": "q11",
       "title": "Denied Suicidal Ideation — Contextual High-Risk Presentation",
@@ -279,7 +314,6 @@
         "defensible_disposition"
       ]
     },
-
     {
       "id": "q12",
       "title": "Post-Discharge Suicide — Adverse Event Response",
@@ -304,10 +338,52 @@
         "defensible_disposition"
       ]
     },
-
     {
       "id": "q13",
-      "title": "Premature Discharge Under Bed Pressure — Supervision Failure",
+      "topic": "governance",
+      "title": "Seclusion Documentation Failure and Governance Breach",
+      "sourceFile": "quizData.ts (ORIGINAL_STEMS)",
+      "complexity": {
+        "score": 9,
+        "rationale": "Six concurrent governance and cultural safety failures in a single seclusion episode: consultant authorisation absent, no monitoring documentation over four hours, no post-seclusion review, no Aboriginal Liaison involvement, Aboriginal patient now refusing engagement, community elder demanding answers. Candidate must act as clinical lead across all domains simultaneously.",
+        "activeDomains": [
+          "governance",
+          "cultural_safety",
+          "trauma",
+          "family_carer",
+          "documentation"
+        ],
+        "signalCount": 6,
+        "difficulty": "consultant",
+        "totalMarks": 22,
+        "keyFlags": [
+          "live_decision_under_pressure",
+          "legal_policy_hinge",
+          "vulnerable_third_party",
+          "consultant_leadership"
+        ]
+      },
+      "strengths": [
+        "Aboriginal cultural safety integrated directly into governance failure — not an add-on",
+        "Seclusion is a high-stakes MEQ topic with specific legislative and policy requirements",
+        "Community elder as stakeholder tests senior communication and open disclosure skills",
+        "Jarrah's refusal to engage framed as trauma/cultural response — not \"non-compliance\"",
+        "Requires candidate to act as clinical lead on patient, staff, governance, and family axes simultaneously"
+      ],
+      "weaknesses": [
+        "Six signals feels compact for a 22-mark question — some signals are closely linked",
+        "No direct patient interaction required — purely operational and governance focus"
+      ],
+      "missingLayers": [
+        "No registrar or junior staff teaching/debrief component",
+        "Jarrah's ongoing mental state and MHA status not foregrounded as a concurrent clinical risk"
+      ],
+      "rewritePriority": "none",
+      "rewriteRationale": "Rare and valuable governance-cultural safety intersection. One of the strongest cultural safety questions in the bank."
+    },
+    {
+      "id": "q14",
+      "title": "Registrar Requesting Discharge of Unsafe Patient",
       "topic": "supervision",
       "source": "ORIGINAL_STEMS",
       "difficulty": "consultant",
@@ -330,7 +406,6 @@
         "defensible_disposition"
       ]
     },
-
     {
       "id": "q15",
       "title": "Registrar Using Culturally Unsafe Language in Case Presentation",
@@ -355,7 +430,6 @@
         "consultant_leadership"
       ]
     },
-
     {
       "id": "q16",
       "title": "Inadequate Capacity Assessment Documentation — Medication Refusal",
@@ -379,7 +453,6 @@
         "defensible_disposition"
       ]
     },
-
     {
       "id": "q17",
       "title": "GP Calls About Inadequate Discharge Summary",
@@ -403,7 +476,6 @@
         "defensible_disposition"
       ]
     },
-
     {
       "id": "q21",
       "title": "Nursing Unit Manager Pressuring Premature Discharge — Code Yellow",
@@ -431,7 +503,6 @@
         "defensible_disposition"
       ]
     },
-
     {
       "id": "q22",
       "title": "Rural Telehealth — Farewell Letter, Loaded Firearm, Alcohol Intoxication",
@@ -455,7 +526,6 @@
         "defensible_disposition"
       ]
     },
-
     {
       "id": "q23",
       "title": "Rural Aboriginal Acute Psychosis — No Medication, Family Divided, RFDS Uncertainty",
@@ -463,7 +533,7 @@
       "source": "ORIGINAL_STEMS",
       "difficulty": "consultant",
       "signalCount": 7,
-        "complexityScore": 9,
+      "complexityScore": 9,
       "scoringRationale": "Road safety, no medication in stock, family divided (traditional healer vs city hospital), Rosa's oscillating lucidity (consent/assent issue), nurse's uncertainty about RFDS qualification, 300 km to beds, and 'if you take her away she might never come back' as a community trust signal. One of the most nuanced cultural safety emergency questions in the bank.",
       "weaknesses": [],
       "missingLayers": [
@@ -480,10 +550,97 @@
         "defensible_disposition"
       ]
     },
-
     {
-      "id": "q24",
-      "title": "High-Frequency Attender — Telephone Clearance Refused",
+      "id": "q18",
+      "topic": "discharge_review",
+      "title": "Reviewing a Registrar's Discharge Summary — Forensic Risk Omissions",
+      "sourceFile": "quizData.ts (ORIGINAL_STEMS)",
+      "complexity": {
+        "score": 8,
+        "rationale": "Co-sign review for a forensic patient discharge with five critical omissions: absent forensic history, \"risk: reduced\" standing in for a formulation, mother (identified prior victim) not notified, self-initiated follow-up for a patient with schizophrenia. Candidate must refuse to co-sign and specify required corrections while exercising a teaching obligation.",
+        "activeDomains": [
+          "governance",
+          "risk_other",
+          "family_carer",
+          "documentation",
+          "supervision"
+        ],
+        "signalCount": 5,
+        "difficulty": "consultant",
+        "totalMarks": 22,
+        "keyFlags": [
+          "legal_policy_hinge",
+          "vulnerable_third_party",
+          "consultant_leadership",
+          "defensible_disposition"
+        ]
+      },
+      "strengths": [
+        "Forensic NGMI history + conditional discharge creates a specific high-stakes documentation context",
+        "Mother as identified prior victim and now unnotified third party is clinically and legally loaded",
+        "\"Risk: reduced during admission\" as a non-formulation is an excellent trap for candidates who accept superficial risk statements",
+        "Co-sign refusal is a distinctive consultant action that candidates must explicitly name"
+      ],
+      "weaknesses": [
+        "Five signals at 22 marks is low-density",
+        "No direct clinical contact with Wayne — purely supervisory and documentation role",
+        "Substance use history listed in stem but not richly interrogated in signals"
+      ],
+      "missingLayers": [
+        "No immediate community safety concern requiring urgent action",
+        "No cultural complexity in Wayne's background",
+        "No MDT conflict or systems pressure angle"
+      ],
+      "rewritePriority": "low",
+      "rewriteRationale": "Well-constructed forensic documentation scenario. Consider adding 1-2 signals on substance use risk factors in the community context."
+    },
+    {
+      "id": "q19",
+      "topic": "discharge_review",
+      "title": "Reviewing a Perinatal Discharge Summary — Missing Child Safety Elements",
+      "sourceFile": "quizData.ts (ORIGINAL_STEMS)",
+      "complexity": {
+        "score": 9,
+        "rationale": "Co-sign review for a postpartum psychosis discharge with five critical omissions: Lily not named/assessed, breastfeeding/olanzapine undocumented, relapse prevention plan absent, social isolation (Somali background, no family, absent husband) unaddressed, four-week follow-up clinically insufficient. Each omission carries independent medico-legal and clinical weight.",
+        "activeDomains": [
+          "child_protection",
+          "physical_health",
+          "cultural_safety",
+          "risk_self",
+          "disposition"
+        ],
+        "signalCount": 5,
+        "difficulty": "consultant",
+        "totalMarks": 22,
+        "keyFlags": [
+          "vulnerable_third_party",
+          "legal_policy_hinge",
+          "consultant_leadership",
+          "mdt_family_system_conflict"
+        ]
+      },
+      "strengths": [
+        "Lily not named in the summary is a powerful framing device — infant is invisible in her own safety plan",
+        "Breastfeeding + olanzapine is a specific clinical knowledge test with medico-legal weight",
+        "Social isolation (Somali background, no family, absent husband) integrates cultural and social vulnerability elegantly",
+        "Postpartum psychosis relapse risk and future pregnancy planning is often overlooked",
+        "Four-week follow-up trap correctly identifies a dangerous but common documentation error"
+      ],
+      "weaknesses": [
+        "Five signals at 22 marks is low-density — could support 7-8 signals",
+        "Husband's absence not interrogated (family violence screening absent)",
+        "No child protection notification decision point — arguably should be present"
+      ],
+      "missingLayers": [
+        "Interpreter needs and consent process in Somali refugee context not addressed in signals",
+        "No explicit mandatory reporting decision despite significant child safety gaps"
+      ],
+      "rewritePriority": "medium",
+      "rewriteRationale": "Excellent concept with signal-density gap. Adding a mandatory reporting decision point and a family violence screening signal would raise this to score 10 territory."
+    },
+    {
+      "id": "q20",
+      "title": "ED Physician Wants Psychiatric Patient Discharged — Consultant Disagrees",
       "topic": "risk",
       "source": "ORIGINAL_STEMS",
       "difficulty": "consultant",
@@ -506,7 +663,50 @@
         "defensible_disposition"
       ]
     },
-
+    {
+      "id": "q24",
+      "topic": "psychotherapy",
+      "title": "Registrar's Patient Develops Erotic Transference — Registrar Has Disclosed Personal Information",
+      "sourceFile": "quizData.ts (ORIGINAL_STEMS)",
+      "complexity": {
+        "score": 9,
+        "rationale": "Six signals spanning boundary violation (self-disclosure in erotic transference), four undocumented sessions with medico-legal implications, a vulnerable BPD/CSA survivor at risk of retraumatisation, a distressed registrar carrying concealed shame, AHPRA mandatory reporting obligation, and the challenge of a planned transfer of care for an attachment-disrupted patient.",
+        "activeDomains": [
+          "governance",
+          "risk_self",
+          "supervision",
+          "ethics",
+          "documentation"
+        ],
+        "signalCount": 6,
+        "difficulty": "consultant",
+        "totalMarks": 22,
+        "keyFlags": [
+          "legal_policy_hinge",
+          "vulnerable_third_party",
+          "mdt_family_system_conflict",
+          "consultant_leadership"
+        ]
+      },
+      "strengths": [
+        "Erotic transference + reciprocal self-disclosure is the most legally dangerous boundary scenario in psychotherapy MEQs",
+        "Four undocumented sessions creates independent medico-legal pressure",
+        "Annalise's BPD + childhood sexual abuse history makes premature termination a genuine clinical risk",
+        "Ben's distress and concealment requires candidate to balance pastoral support with professional accountability",
+        "AHPRA mandatory reporting obligation is often missed — high discriminatory value",
+        "Transfer vs abandonment distinction is a sophisticated psychotherapy competency test"
+      ],
+      "weaknesses": [
+        "Boundary violation is relatively clear-cut — ambiguity is in how to respond, not whether it occurred",
+        "No third-party at physical risk — clinical risk is psychological"
+      ],
+      "missingLayers": [
+        "No cultural complexity in either Ben or Annalise's background",
+        "No systems/institutional pressure as a complicating factor"
+      ],
+      "rewritePriority": "none",
+      "rewriteRationale": "One of the strongest psychotherapy questions in the bank. Six-domain concurrent pressure makes this genuinely exam-ceiling for the topic."
+    },
     {
       "id": "q25",
       "title": "Psychotherapy — Mandatory Reporting, Therapeutic Rupture (Jade)",
@@ -531,7 +731,6 @@
         "defensible_disposition"
       ]
     },
-
     {
       "id": "q26",
       "title": "Capacitous Refusal of Life-Saving Treatment — Ethical Dilemma",
@@ -557,7 +756,6 @@
         "defensible_disposition"
       ]
     },
-
     {
       "id": "q27",
       "title": "Confidentiality vs Public Safety — Specific Threat to Named Third Party",
@@ -581,7 +779,6 @@
         "defensible_disposition"
       ]
     },
-
     {
       "id": "RISK-001",
       "title": "High-Lethality Suicidal Ideation with Means Access",
@@ -606,7 +803,6 @@
         "defensible_disposition"
       ]
     },
-
     {
       "id": "RISK-002",
       "title": "Homicidal Risk in Acute Psychosis — Identified Victim",
@@ -632,7 +828,6 @@
         "defensible_disposition"
       ]
     },
-
     {
       "id": "RISK-003",
       "title": "Risk Assessment in a Remote Setting",
@@ -658,7 +853,6 @@
         "defensible_disposition"
       ]
     },
-
     {
       "id": "RISK-004",
       "title": "BPD and Chronic Suicidality — Acute on Chronic Risk",
@@ -683,7 +877,6 @@
         "defensible_disposition"
       ]
     },
-
     {
       "id": "RISK-005",
       "title": "Fire-Setting Behaviour — Risk Formulation",
@@ -710,7 +903,6 @@
         "defensible_disposition"
       ]
     },
-
     {
       "id": "CAP-001",
       "title": "MHA Assessment for Involuntary Admission",
@@ -735,7 +927,6 @@
         "defensible_disposition"
       ]
     },
-
     {
       "id": "CAP-002",
       "title": "Capacity for Risky Lifestyle Choices",
@@ -760,7 +951,6 @@
         "defensible_disposition"
       ]
     },
-
     {
       "id": "CAP-003",
       "title": "Advance Directive vs Current Incapacity",
@@ -784,7 +974,6 @@
         "defensible_disposition"
       ]
     },
-
     {
       "id": "CAP-004",
       "title": "MHA — Refusing ECT in Severe Depression",
@@ -809,7 +998,6 @@
         "defensible_disposition"
       ]
     },
-
     {
       "id": "CAP-005",
       "title": "Guardianship and Substitute Decision-Making",
@@ -833,7 +1021,6 @@
         "consultant_leadership"
       ]
     },
-
     {
       "id": "CS-001",
       "title": "Aboriginal Patient Refuses Assessment — Cultural Safety Crisis",
@@ -857,7 +1044,6 @@
         "consultant_leadership"
       ]
     },
-
     {
       "id": "CS-002",
       "title": "CALD Patient — Refugee Trauma and Interpreter Complexity",
@@ -882,7 +1068,6 @@
         "consultant_leadership"
       ]
     },
-
     {
       "id": "CS-003",
       "title": "Cultural Explanatory Model Conflict with Biomedical Framework",
@@ -906,7 +1091,6 @@
         "consultant_leadership"
       ]
     },
-
     {
       "id": "FOR-001",
       "title": "Court Psychiatric Report — Fitness to Stand Trial",
@@ -930,7 +1114,6 @@
         "defensible_disposition"
       ]
     },
-
     {
       "id": "FOR-002",
       "title": "Dangerous Offender Assessment — Extended Supervision Order",
@@ -955,7 +1138,6 @@
         "defensible_disposition"
       ]
     },
-
     {
       "id": "FOR-003",
       "title": "Not Guilty by Mental Impairment Assessment",
@@ -980,7 +1162,6 @@
         "defensible_disposition"
       ]
     },
-
     {
       "id": "SYS-001",
       "title": "MDT Conflict About Discharge",
@@ -1005,7 +1186,6 @@
         "defensible_disposition"
       ]
     },
-
     {
       "id": "SYS-002",
       "title": "Systems Advocacy — Inadequate Community Resources",
@@ -1030,7 +1210,6 @@
         "consultant_leadership"
       ]
     },
-
     {
       "id": "SYS-003",
       "title": "Family Conflict with MDT Treatment Plan",
@@ -1055,7 +1234,6 @@
         "defensible_disposition"
       ]
     },
-
     {
       "id": "PER-001",
       "title": "Antidepressant in Pregnancy — Risk-Benefit Formulation",
@@ -1079,7 +1257,6 @@
         "defensible_disposition"
       ]
     },
-
     {
       "id": "PER-002",
       "title": "Postpartum Psychosis — Community Identification and Emergency Response",
@@ -1105,7 +1282,6 @@
         "defensible_disposition"
       ]
     },
-
     {
       "id": "PER-003",
       "title": "Perinatal Bipolar — Mood Stabiliser Risk in Third Trimester",
@@ -1129,7 +1305,6 @@
         "defensible_disposition"
       ]
     },
-
     {
       "id": "SU-001",
       "title": "Alcohol Detoxification and Liver Disease",
@@ -1153,7 +1328,6 @@
         "defensible_disposition"
       ]
     },
-
     {
       "id": "SU-002",
       "title": "Stimulant-Induced Psychosis vs Primary Psychosis",
@@ -1177,7 +1351,6 @@
         "defensible_disposition"
       ]
     },
-
     {
       "id": "SU-003",
       "title": "Opioid Dependence and Chronic Pain — OST Decision",
@@ -1201,7 +1374,6 @@
         "defensible_disposition"
       ]
     },
-
     {
       "id": "GOV-001",
       "title": "Complaint About a Colleague — Mandatory vs Voluntary Reporting",
@@ -1225,7 +1397,6 @@
         "consultant_leadership"
       ]
     },
-
     {
       "id": "GOV-002",
       "title": "Adverse Event Review — RCA Participation",
@@ -1248,7 +1419,6 @@
         "consultant_leadership"
       ]
     },
-
     {
       "id": "GOV-003",
       "title": "Privacy Breach — Electronic Health Record Access",
@@ -1272,7 +1442,6 @@
         "legal_policy_hinge"
       ]
     },
-
     {
       "id": "GOV-004",
       "title": "Clinical Audit — Presenting Unfavourable Results",
@@ -1297,7 +1466,6 @@
         "consultant_leadership"
       ]
     },
-
     {
       "id": "GOV-005",
       "title": "Prescribing Governance — Off-Label Antipsychotic in an Elderly Patient",
@@ -1322,7 +1490,6 @@
         "defensible_disposition"
       ]
     },
-
     {
       "id": "ED-001",
       "title": "ED Liaison — Acute Self-Harm, High Distress",
@@ -1349,7 +1516,6 @@
         "defensible_disposition"
       ]
     },
-
     {
       "id": "ED-002",
       "title": "ED — Acute Psychosis and Violence Risk",
@@ -1374,7 +1540,6 @@
         "consultant_leadership"
       ]
     },
-
     {
       "id": "ED-003",
       "title": "ED — High-Frequency Attender",
@@ -1399,7 +1564,6 @@
         "consultant_leadership"
       ]
     },
-
     {
       "id": "QA-001",
       "title": "RCA Participation — Medication Error",
@@ -1423,7 +1587,6 @@
         "consultant_leadership"
       ]
     },
-
     {
       "id": "QA-002",
       "title": "Morbidity and Mortality Review — Post-Discharge Suicide",
@@ -1447,7 +1610,6 @@
         "consultant_leadership"
       ]
     },
-
     {
       "id": "QA-003",
       "title": "Clinical Audit Leadership — Implementing Change",
@@ -1471,7 +1633,6 @@
         "consultant_leadership"
       ]
     },
-
     {
       "id": "QA-004",
       "title": "Incident Report After Near-Miss — Narcotic Diversion",
@@ -1496,7 +1657,6 @@
         "consultant_leadership"
       ]
     },
-
     {
       "id": "PSY-001",
       "title": "Transference Management — Erotic Transference",
@@ -1520,7 +1680,6 @@
         "consultant_leadership"
       ]
     },
-
     {
       "id": "PSY-002",
       "title": "Boundary Violations — Clinician Receives Significant Gift",
@@ -1542,7 +1701,6 @@
         "consultant_leadership"
       ]
     },
-
     {
       "id": "PSY-003",
       "title": "Therapy Termination — Abandonment vs Appropriate Ending",
@@ -1566,7 +1724,6 @@
         "defensible_disposition"
       ]
     },
-
     {
       "id": "DIS-001",
       "title": "High-Risk Discharge Planning — Complex Social Situation",
@@ -1590,7 +1747,6 @@
         "defensible_disposition"
       ]
     },
-
     {
       "id": "DIS-002",
       "title": "Premature Discharge — Bed Pressure and Clinical Disagreement",
@@ -1615,7 +1771,6 @@
         "defensible_disposition"
       ]
     },
-
     {
       "id": "DIS-003",
       "title": "Complex Discharge — Dual Diagnosis and Housing Instability",
@@ -1638,7 +1793,6 @@
         "defensible_disposition"
       ]
     },
-
     {
       "id": "DOC-001",
       "title": "Capacity Assessment Documentation Standard",
@@ -1662,7 +1816,6 @@
         "consultant_leadership"
       ]
     },
-
     {
       "id": "DOC-002",
       "title": "Medico-Legal Report — Personal Injury Claim",
@@ -1687,7 +1840,6 @@
         "defensible_disposition"
       ]
     },
-
     {
       "id": "DOC-003",
       "title": "Incident Documentation — After a Patient Assault",
@@ -1712,7 +1864,6 @@
         "legal_policy_hinge"
       ]
     },
-
     {
       "id": "SUP-001",
       "title": "Struggling Registrar — Academic and Clinical Performance",
@@ -1735,7 +1886,6 @@
         "consultant_leadership"
       ]
     },
-
     {
       "id": "SUP-002",
       "title": "Boundary Issue — Registrar and Patient",
@@ -1758,7 +1908,6 @@
         "consultant_leadership"
       ]
     },
-
     {
       "id": "SUP-003",
       "title": "AHPRA Complaint — Supervisor's Response",
@@ -1782,7 +1931,6 @@
         "consultant_leadership"
       ]
     },
-
     {
       "id": "SUP-004",
       "title": "Mandated Supervision — Registrar Resenting Oversight",
@@ -1805,7 +1953,6 @@
         "consultant_leadership"
       ]
     },
-
     {
       "id": "SUP-005",
       "title": "Group Supervision Dynamic — Disclosure of Personal Material",
@@ -1829,7 +1976,6 @@
         "consultant_leadership"
       ]
     },
-
     {
       "id": "CA-001",
       "title": "Adolescent Self-Harm — Parental Conflict and Confidentiality",
@@ -1854,7 +2000,6 @@
         "consultant_leadership"
       ]
     },
-
     {
       "id": "CA-002",
       "title": "Child Abuse Disclosure in Therapy",
@@ -1880,7 +2025,6 @@
         "defensible_disposition"
       ]
     },
-
     {
       "id": "CA-003",
       "title": "ADHD — Medication, Diagnosis Certainty, and Family Conflict",
@@ -1905,7 +2049,6 @@
         "defensible_disposition"
       ]
     },
-
     {
       "id": "CA-004",
       "title": "Eating Disorder — Capacity Assessment and MHA in Adolescent",
@@ -1930,7 +2073,6 @@
         "defensible_disposition"
       ]
     },
-
     {
       "id": "OA-001",
       "title": "Dementia — Driving Fitness Assessment and Mandatory Reporting",
@@ -1955,7 +2097,6 @@
         "defensible_disposition"
       ]
     },
-
     {
       "id": "OA-002",
       "title": "Late-Onset Psychosis — Diagnosis and Safety",
@@ -1978,7 +2119,6 @@
         "defensible_disposition"
       ]
     },
-
     {
       "id": "OA-003",
       "title": "Delirium in Elderly — Medical-Psychiatric Interface",
@@ -2001,7 +2141,6 @@
         "defensible_disposition"
       ]
     },
-
     {
       "id": "OA-004",
       "title": "Elder Abuse — Family Perpetrator",
@@ -2026,7 +2165,6 @@
         "defensible_disposition"
       ]
     },
-
     {
       "id": "OA-005",
       "title": "Capacity in Dementia — Residential Care Placement Decision",
@@ -2051,7 +2189,6 @@
         "defensible_disposition"
       ]
     },
-
     {
       "id": "RU-001",
       "title": "Rural Crisis — No Resources, Single Clinician",
@@ -2078,7 +2215,6 @@
         "defensible_disposition"
       ]
     },
-
     {
       "id": "RU-002",
       "title": "Telehealth Consultation — Limitations and Safety",
@@ -2102,7 +2238,6 @@
         "defensible_disposition"
       ]
     },
-
     {
       "id": "RU-003",
       "title": "Rural Dual Role — Treating a Known Community Member",
@@ -2125,7 +2260,6 @@
         "defensible_disposition"
       ]
     },
-
     {
       "id": "RU-004",
       "title": "Rural After-Hours — GP Managing Acute Psychiatry",
@@ -2150,7 +2284,6 @@
         "defensible_disposition"
       ]
     },
-
     {
       "id": "RU-005",
       "title": "Rural Systemic Advocacy — Inadequate Mental Health Services",
@@ -2174,7 +2307,6 @@
         "consultant_leadership"
       ]
     },
-
     {
       "id": "ETH-001",
       "title": "Confidentiality vs Third Party Safety",
@@ -2200,7 +2332,6 @@
         "defensible_disposition"
       ]
     },
-
     {
       "id": "ETH-002",
       "title": "Research Ethics — Consent and Vulnerable Populations",
@@ -2225,7 +2356,6 @@
         "consultant_leadership"
       ]
     },
-
     {
       "id": "ETH-003",
       "title": "Conscientious Objection — End of Life Request",
@@ -2251,7 +2381,6 @@
         "defensible_disposition"
       ]
     },
-
     {
       "id": "ETH-004",
       "title": "Gifts from Patients — Managing a Significant Gift",
@@ -2276,7 +2405,6 @@
         "legal_policy_hinge"
       ]
     },
-
     {
       "id": "ETH-005",
       "title": "Social Media and Dual Relationships",
@@ -2300,7 +2428,6 @@
         "legal_policy_hinge"
       ]
     },
-
     {
       "id": "CL-001",
       "title": "Delirium on Medical Ward — CL Interface",
@@ -2323,7 +2450,6 @@
         "defensible_disposition"
       ]
     },
-
     {
       "id": "CL-002",
       "title": "CL — HIV and Mental Health",
@@ -2348,7 +2474,6 @@
         "defensible_disposition"
       ]
     },
-
     {
       "id": "CL-003",
       "title": "CL — Bariatric Surgery Psychological Assessment",
@@ -2373,7 +2498,6 @@
         "defensible_disposition"
       ]
     },
-
     {
       "id": "CL-004",
       "title": "CL — Cardiac Surgery Refusal and Capacity",
@@ -2398,7 +2522,6 @@
         "defensible_disposition"
       ]
     },
-
     {
       "id": "CL-005",
       "title": "CL — Chronic Pain and Opioid Dependence",
@@ -2423,18 +2546,115 @@
         "defensible_disposition"
       ]
     }
-
   ],
-
   "summaryFindings": {
     "highComplexityQuestions": {
-      "score10": ["q2"],
-      "score9": ["q1", "q3", "q5", "q6", "q7", "q9", "q11", "q12", "q22", "q23", "q26", "q27"],
-      "score8": ["q4", "q8", "q13", "q15", "q16", "q17", "q21", "q24", "q25", "RISK-001", "RISK-002", "RISK-004", "CAP-002", "CAP-003", "CS-001", "FOR-001", "FOR-002", "ED-001", "QA-002", "PSY-001", "PSY-002", "DIS-001", "DIS-003", "SUP-002", "SUP-003", "CA-001", "CA-002", "CA-004", "OA-003", "OA-004", "RU-001", "RU-003", "ETH-001", "CL-001", "CL-002", "CL-004"]
+      "score10": [
+        "q2"
+      ],
+      "score9": [
+        "q1",
+        "q3",
+        "q5",
+        "q6",
+        "q7",
+        "q9",
+        "q11",
+        "q12",
+        "q22",
+        "q23",
+        "q26",
+        "q27"
+      ],
+      "score8": [
+        "q4",
+        "q8",
+        "q13",
+        "q15",
+        "q16",
+        "q17",
+        "q21",
+        "q24",
+        "q25",
+        "RISK-001",
+        "RISK-002",
+        "RISK-004",
+        "CAP-002",
+        "CAP-003",
+        "CS-001",
+        "FOR-001",
+        "FOR-002",
+        "ED-001",
+        "QA-002",
+        "PSY-001",
+        "PSY-002",
+        "DIS-001",
+        "DIS-003",
+        "SUP-002",
+        "SUP-003",
+        "CA-001",
+        "CA-002",
+        "CA-004",
+        "OA-003",
+        "OA-004",
+        "RU-001",
+        "RU-003",
+        "ETH-001",
+        "CL-001",
+        "CL-002",
+        "CL-004"
+      ]
     },
     "belowConsultantCeiling": {
-      "score7": ["RISK-003", "RISK-005", "CAP-001", "CAP-004", "CAP-005", "CS-002", "CS-003", "FOR-003", "SYS-001", "SYS-003", "PER-001", "SU-001", "SU-002", "SU-003", "GOV-001", "GOV-002", "GOV-005", "ED-002", "ED-003", "QA-001", "QA-004", "PSY-003", "DIS-002", "DOC-001", "DOC-002", "SUP-001", "SUP-004", "CA-003", "OA-001", "OA-002", "OA-005", "RU-004", "ETH-002", "ETH-003", "CL-003", "CL-005"],
-      "score6": ["SYS-002", "GOV-003", "GOV-004", "QA-003", "DOC-003", "SUP-005", "RU-005", "ETH-004", "ETH-005"],
+      "score7": [
+        "RISK-003",
+        "RISK-005",
+        "CAP-001",
+        "CAP-004",
+        "CAP-005",
+        "CS-002",
+        "CS-003",
+        "FOR-003",
+        "SYS-001",
+        "SYS-003",
+        "PER-001",
+        "SU-001",
+        "SU-002",
+        "SU-003",
+        "GOV-001",
+        "GOV-002",
+        "GOV-005",
+        "ED-002",
+        "ED-003",
+        "QA-001",
+        "QA-004",
+        "PSY-003",
+        "DIS-002",
+        "DOC-001",
+        "DOC-002",
+        "SUP-001",
+        "SUP-004",
+        "CA-003",
+        "OA-001",
+        "OA-002",
+        "OA-005",
+        "RU-004",
+        "ETH-002",
+        "ETH-003",
+        "CL-003",
+        "CL-005"
+      ],
+      "score6": [
+        "SYS-002",
+        "GOV-003",
+        "GOV-004",
+        "QA-003",
+        "DOC-003",
+        "SUP-005",
+        "RU-005",
+        "ETH-004",
+        "ETH-005"
+      ],
       "comment": "Score-6 questions require critical rewrite before use in Exam Mode"
     },
     "criticalRewritePriority": [
@@ -2481,39 +2701,70 @@
     ],
     "duplicateScenarioWarnings": [
       {
-        "pair": ["q25", "CA-002"],
+        "pair": [
+          "q25",
+          "CA-002"
+        ],
         "note": "Both are mandatory reporting in psychotherapy — child sexual abuse disclosure by patient. Near-identical structure."
       },
       {
-        "pair": ["q22", "RU-001", "RU-002"],
+        "pair": [
+          "q22",
+          "RU-001",
+          "RU-002"
+        ],
         "note": "Three rural crisis/telehealth questions with significant thematic overlap. One of RU-001 or RU-002 should be replaced."
       },
       {
-        "pair": ["q13", "q21", "DIS-002"],
+        "pair": [
+          "q13",
+          "q21",
+          "DIS-002"
+        ],
         "note": "Three premature-discharge-under-bed-pressure questions. DIS-002 is the weakest and should be differentiated or replaced."
       },
       {
-        "pair": ["q16", "q26", "CL-004"],
+        "pair": [
+          "q16",
+          "q26",
+          "CL-004"
+        ],
         "note": "Three capacity-for-refusal-of-life-sustaining-treatment questions. All have merit but their differentiation should be explicit."
       },
       {
-        "pair": ["q12", "QA-002"],
+        "pair": [
+          "q12",
+          "QA-002"
+        ],
         "note": "Both post-discharge suicide adverse event questions — q12 is the immediate response, QA-002 is the M&M review. The distinction is valid but needs clearer signposting."
       },
       {
-        "pair": ["q4", "QA-004"],
+        "pair": [
+          "q4",
+          "QA-004"
+        ],
         "note": "Both involve drug diversion — q4 is the registrar angle, QA-004 is the incident report angle. Acceptably different but should not both appear in the same exam session."
       },
       {
-        "pair": ["OA-001", "q5"],
+        "pair": [
+          "OA-001",
+          "q5"
+        ],
         "note": "OA-001 covers the driving component of q5 but with fewer signals. OA-001 should be expanded with elder abuse or capacity dimensions to differentiate."
       },
       {
-        "pair": ["SU-003", "CL-005"],
+        "pair": [
+          "SU-003",
+          "CL-005"
+        ],
         "note": "Both chronic pain and opioid dependence — different contexts (D&A vs CL) but substantially same clinical question."
       },
       {
-        "pair": ["GOV-003", "GOV-004", "QA-003"],
+        "pair": [
+          "GOV-003",
+          "GOV-004",
+          "QA-003"
+        ],
         "note": "Three administrative governance questions at score 6 — at least two should be replaced with higher-complexity clinical governance questions."
       }
     ],

@@ -126,7 +126,7 @@ import { CL_STEMS } from "./questions/clPsychiatryQuestions";
 
 // ─── STEMS ───────────────────────────────────────────────────────────────────
 
-const ORIGINAL_STEMS: QuizStem[] = [
+export const ORIGINAL_STEMS: QuizStem[] = [
   // ─── 1. CULTURAL SAFETY / CL ─────────────────────────────────────────────
   {
     id: "q1",
