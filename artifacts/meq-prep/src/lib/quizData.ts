@@ -118,6 +118,11 @@ import { PSY_STEMS } from "./questions/psychotherapyQuestions";
 import { CS_STEMS } from "./questions/culturalSafetyQuestions";
 import { FOR_STEMS } from "./questions/forensicQuestions";
 import { SU_STEMS } from "./questions/substanceUseQuestions";
+import { CA_STEMS } from "./questions/childAdolescentQuestions";
+import { OA_STEMS } from "./questions/oldAgeQuestions";
+import { RU_STEMS } from "./questions/ruralQuestions";
+import { ETH_STEMS } from "./questions/ethicsQuestions";
+import { CL_STEMS } from "./questions/clPsychiatryQuestions";
 
 // ─── STEMS ───────────────────────────────────────────────────────────────────
 
@@ -3235,6 +3240,11 @@ export const QUIZ_STEMS: QuizStem[] = [
   ...CS_STEMS,
   ...FOR_STEMS,
   ...SU_STEMS,
+  ...CA_STEMS,
+  ...OA_STEMS,
+  ...RU_STEMS,
+  ...ETH_STEMS,
+  ...CL_STEMS,
 ];
 
 // Filter by topic
