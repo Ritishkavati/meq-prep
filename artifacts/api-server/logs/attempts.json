@@ -1,0 +1,19 @@
+[
+  {
+    "timestamp": "2026-05-19T22:24:22.182Z",
+    "questionId": "FINAL-101",
+    "identifiedSignalIds": [
+      "s2",
+      "s5"
+    ],
+    "missedSignalIds": [
+      "s1",
+      "s3",
+      "s4",
+      "s6"
+    ],
+    "candidateAnswer": "TRS - Schizophrenia - Negative symtoms + look for need for clozapine +SSRI + other interventions done - ADLS and supports + ACT +Behavioural activation +ECT \n\n- Basically plan with patient opinion was excluded , not a person centric approach, likes and dislikes were not included - strength and deficit based approach \n- Assess for NDIA outcome and need for early modification to avoid resource wasting and include the patient opinion +OT and Psychosis opinion and family \n\n- Psychoeducation about the educations and gradual integration program - consideration with TAFE one to one support tutoring, initially and gradually build the in person and attending the college \n\n- focus is always on recovery and relapse prevention is part of recovery. Therefore focus should be sym recovery, functional recovery +community integration +max utilisation of the resource and cost effective way - education to the family and include the NDIS coordinator and OT_Psychologist for replanning and offer educational supports \n\n\n",
+    "totalMarks": 25,
+    "estimatedMarks": 8
+  }
+]

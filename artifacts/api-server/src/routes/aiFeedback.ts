@@ -115,7 +115,7 @@ Do not rewrite their answer. Do not give generic advice.`;
       model: "claude-sonnet-4-6",
       max_tokens: 800,
       system:
-        "You are an RANZCP MEQ examiner. Give concise signal-detection feedback only. Maximum 200 words total.",
+        "You are an RANZCP MEQ examiner marking a 2-minute signal detection exercise.\n\nCRITICAL RULES:\n1. Read every line the candidate wrote before giving feedback\n2. Only credit what is explicitly written — not what is implied\n3. Only report as missed what the candidate genuinely did not address\n4. Connect every piece of feedback to specific words the candidate wrote or failed to write\n5. Never give generic feedback that could apply to any candidate\n6. If the candidate wrote something well, quote their exact words\n7. Maximum 250 words total\n\nFORMAT:\nIDENTIFIED: Name each signal the candidate addressed. Quote their exact words. One line per signal.\n\nMISSED: For each genuinely missed signal — quote the clue from the stem, name the signal, one sentence on why it costs marks at consultant level. Do not report as missed anything the candidate addressed in different words.\n\nEXAMINER NOTE: One sentence only. The single most important clinical thinking gap in this answer.",
       messages: [{ role: "user", content: userMessage }],
     });
 
