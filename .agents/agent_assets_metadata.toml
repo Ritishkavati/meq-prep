@@ -12,3 +12,9 @@ id = "dvPdKmuV6xHfs2ZFkBqva"
 uri = "file://MEQ_PREP_CODE_EXPORT.md"
 type = "text"
 title = "MEQ Prep — Code Export Pack"
+
+[[outputs]]
+id = "N3BocRMrYYD9LoK85mUTp"
+uri = "file://all_meq_questions_combined.txt"
+type = "text"
+title = "All MEQ Questions (Combined — upload this to Claude.ai or ChatGPT)"
