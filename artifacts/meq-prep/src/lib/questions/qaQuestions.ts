@@ -897,4 +897,194 @@ The roster shows the consultant was covering three hospitals and had told regist
 
 The registrar's distress and belief that calling at 4 am would show they could not cope is a central safety signal. I would support the registrar while addressing accountability, ensure Talia's current safety, report the incident, and review after-hours supervision. The consultant covering three hospitals and the email advising registrars to use judgement unless "absolutely necessary" require roster and escalation-policy review, including mandatory consultant contact triggers for high-risk discharge.`,
   },
+  {
+    id: "SYS-002",
+    topic: "quality_assurance",
+    difficulty: "consultant",
+    title: "Repeated bipolar admissions and carer burnout",
+    candidateRole: "Consultant psychiatrist, community continuing care team",
+    setting: "Regional community mental health service",
+    stem: `You are the consultant psychiatrist in a regional community continuing care team.
+
+Maria is a 48-year-old woman with bipolar I disorder and seven admissions in the past four years, mostly following medication cessation during hypomanic periods. Her husband reports she becomes "brilliant for a few weeks" before stopping lithium because she believes she no longer needs treatment. During recent episodes she has accumulated large debts and driven long distances without sleep.
+
+Maria was discharged from the inpatient unit three weeks ago after a manic relapse. At today's review she says, "Lithium takes away who I am." She admits reducing the dose herself because she wants "more energy to start a business." Her husband becomes visibly distressed and says, "I can't keep doing this every year." He reports hiding car keys and monitoring Maria's medications because he fears another relapse.
+
+The case manager believes Maria requires intensive monitoring, while Maria says the team is "treating me like a child." The registrar asks whether ongoing assertive follow-up is justified when Maria is not currently psychotic and technically attends appointments voluntarily.`,
+    totalMarks: 22,
+    signals: [
+      {
+        id: "s1",
+        name: "Identity-based ambivalence about lithium",
+        category: "diagnosis_formulation",
+        severity: "critical",
+        clueInStem: "Lithium takes away who I am.",
+        whyItMatters: "Identity-related ambivalence is a major driver of relapse and requires nuanced formulation beyond simple non-compliance.",
+        modelWording: "Explore ambivalence regarding mood stabilisation including perceived loss of identity, creativity and autonomy — this is not simple non-compliance, it is a formulation target.",
+        keywords: ["ambivalence", "lithium adherence", "identity", "bipolar disorder", "partial insight"],
+      },
+      {
+        id: "s2",
+        name: "High historical risk justifies assertive follow-up",
+        category: "risk_self",
+        severity: "critical",
+        clueInStem: "driven long distances without sleep.",
+        whyItMatters: "Repeated severe behavioural consequences — dangerous driving, financial harm, repeated admissions — justify proactive relapse prevention even when currently euthymic.",
+        modelWording: "Recognise that seven admissions with dangerous driving and financial harm justify assertive follow-up regardless of current stability — this is not paternalism, it is proportionate risk management.",
+        keywords: ["relapse prevention", "mania", "behavioural risk", "historical risk", "dangerous driving", "assertive"],
+      },
+      {
+        id: "s3",
+        name: "Carer over-functioning and burnout",
+        category: "family_carer",
+        severity: "important",
+        clueInStem: "hiding car keys and monitoring Maria's medications",
+        whyItMatters: "A husband hiding car keys and monitoring medications daily is over-functioning unsustainably — this will break down and must be addressed as a clinical issue.",
+        modelWording: "Assess caregiver burden and reduce reliance on the husband as the sole relapse monitoring system — this is unsustainable and relationship-damaging.",
+        keywords: ["carer burnout", "over-functioning", "relapse monitoring", "family strain", "husband"],
+      },
+      {
+        id: "s4",
+        name: "Autonomy versus assertive follow-up tension",
+        category: "ethics",
+        severity: "important",
+        clueInStem: "treating me like a child.",
+        whyItMatters: "Maria's experience of care as paternalistic is clinically significant and must be addressed through collaborative, autonomy-respecting care planning.",
+        modelWording: "Balance assertive relapse prevention with collaborative care — explain rationale for close follow-up based on specific historical consequences, not general concern.",
+        keywords: ["autonomy", "assertive follow-up", "paternalism", "collaborative care", "shared decision-making"],
+      },
+      {
+        id: "s5",
+        name: "Predictable relapse signature — opportunity for advance planning",
+        category: "governance",
+        severity: "important",
+        clueInStem: "becomes brilliant for a few weeks",
+        whyItMatters: "A consistent early warning sign — feeling brilliant, stopping lithium — creates a specific opportunity for an advance directive and agreed early intervention plan.",
+        modelWording: "Identify Maria's relapse signature and develop an advance directive with agreed interventions when she reports feeling brilliant — this converts a predictable pattern into a prevention opportunity.",
+        keywords: ["early warning signs", "relapse signature", "advance directive", "mania prevention", "advance planning"],
+      },
+      {
+        id: "s6",
+        name: "Longitudinal care model needed",
+        category: "system_pressure",
+        severity: "optional",
+        clueInStem: "seven admissions in the past four years",
+        whyItMatters: "Seven admissions in four years suggests episodic crisis care rather than structured longitudinal management.",
+        modelWording: "Review whether current service structure addresses Maria's recurrent pattern — a structured longitudinal care model with named case manager and rapid review pathway is indicated.",
+        keywords: ["continuity of care", "repeated admissions", "longitudinal care", "service planning", "case management"],
+      },
+    ],
+    priorityOrder: {
+      urgent: ["s1", "s2"],
+      secondary: ["s3", "s4", "s5"],
+      lowYield: ["s6"],
+    },
+    modelAnswer: `Review Maria using a longitudinal bipolar formulation. Seven admissions in four years is not a coincidence — it is a pattern driven by identity-based ambivalence about lithium that requires direct formulation, not just psychoeducation.
+
+Assess current mood, insight, adherence, sleep, and psychosocial stressors. Explore the specific meaning of lithium for Maria — fear of emotional blunting, loss of creativity, loss of the "brilliant" self. This is the treatment target.
+
+Recognise high historical risk despite current stability: dangerous driving, financial harm, repeated admissions justify assertive follow-up. Explain this rationale to Maria directly — not as paternalism but as proportionate response to specific consequences.
+
+Develop an advance directive with Maria: what are her early warning signs, what has she agreed can happen when she reports feeling brilliant, who contacts the team.
+
+Address carer burden: the husband hiding car keys daily is unsustainable. Reduce his sole responsibility through a structured team relapse response plan.
+
+Review medication tolerability — explore whether side effect concerns are driving dose reduction, and whether adjuncts or alternatives address her identity concerns.
+
+Supervise registrar: assertive follow-up for a patient with seven admissions and dangerous historical behaviour is clinically justified regardless of current voluntary attendance.`,
+  },
+  {
+    id: "SYS-003",
+    topic: "old_age",
+    difficulty: "consultant",
+    title: "Dementia, driving and enduring power of attorney conflict",
+    candidateRole: "Consultant psychiatrist, old age psychiatry consultation service",
+    setting: "Residential aged care facility",
+    stem: `You are the consultant psychiatrist providing outreach to a residential aged care facility.
+
+George is an 82-year-old retired accountant with vascular dementia who moved into residential care six months ago after several episodes of getting lost while driving. Staff report increasing irritability, accusations that belongings are being stolen, and repeated attempts to leave the facility to "go check the office." George insists he is capable of driving and says, "My son just wants control of my money."
+
+George's son holds enduring power of attorney for finances and health matters. He asks you to formally document that George lacks capacity so the family can sell his car and former home. George's daughter disagrees and says, "Dad still knows exactly what he wants — you're all trying to strip away his independence." Facility staff report escalating conflict between siblings during visits.
+
+Last week George attempted to enter another resident's vehicle in the car park. The GP has already notified the licensing authority regarding driving concerns. The registrar asks whether your role is primarily to assess cognition, mediate the family dispute, or support the facility's risk management concerns.`,
+    totalMarks: 22,
+    signals: [
+      {
+        id: "s1",
+        name: "Decision-specific capacity — not global incapacity",
+        category: "capacity",
+        severity: "critical",
+        clueInStem: "Dad still knows exactly what he wants",
+        whyItMatters: "Dementia does not automatically mean global incapacity — capacity must be assessed for each specific decision including driving, finances, and accommodation separately.",
+        modelWording: "Conduct decision-specific capacity assessments for driving, finances, accommodation and health decisions separately — dementia diagnosis alone does not equal global incapacity.",
+        keywords: ["decision-specific", "capacity", "vascular dementia", "not global", "driving capacity", "specific decision"],
+      },
+      {
+        id: "s2",
+        name: "Public safety — driving risk is immediate",
+        category: "immediate_safety",
+        severity: "critical",
+        clueInStem: "attempted to enter another resident's vehicle",
+        whyItMatters: "Attempting to enter another person's vehicle demonstrates active driving-related risk that is immediate and public — this cannot wait for family resolution.",
+        modelWording: "George's attempt to enter another resident's vehicle is an immediate public safety issue requiring urgent action independent of the family dispute — I will support the GP's licensing notification and recommend means restriction.",
+        keywords: ["driving risk", "public safety", "vehicle", "licensing authority", "immediate", "means restriction"],
+      },
+      {
+        id: "s3",
+        name: "EPOA conflict of interest — assessment must remain neutral",
+        category: "governance",
+        severity: "important",
+        clueInStem: "sell his car and former home.",
+        whyItMatters: "A son holding EPOA and asking for a capacity documentation to enable asset sale creates a potential conflict of interest — the assessment must be clinically neutral and not serve family financial interests.",
+        modelWording: "I will conduct a neutral capacity assessment based on clinical evidence only — I will not allow the son's request to sell assets to frame my findings, and I will document my independence explicitly.",
+        keywords: ["EPOA", "conflict of interest", "neutral", "financial", "asset sale", "independent", "documentation"],
+      },
+      {
+        id: "s4",
+        name: "Family conflict worsening BPSD",
+        category: "family_carer",
+        severity: "important",
+        clueInStem: "escalating conflict between siblings during visits",
+        whyItMatters: "Escalating sibling conflict during visits is a direct trigger for George's behavioural disturbance — addressing the family system is part of treating the BPSD.",
+        modelWording: "Address sibling conflict as a clinical issue — it is directly contributing to George's distress and behavioural symptoms, and requires structured family communication with consistent information from the team.",
+        keywords: ["family conflict", "siblings", "BPSD", "distress", "behavioural symptoms", "family meeting"],
+      },
+      {
+        id: "s5",
+        name: "BPSD — paranoia and exit-seeking require assessment and management",
+        category: "diagnosis_formulation",
+        severity: "important",
+        clueInStem: "accusations that belongings are being stolen",
+        whyItMatters: "Paranoid ideation and exit-seeking in vascular dementia are BPSD symptoms requiring non-pharmacological management first — they are not simply character traits.",
+        modelWording: "Assess BPSD including paranoid ideation, exit-seeking and irritability — implement non-pharmacological strategies first and reserve antipsychotics for severe distress after risk-benefit discussion.",
+        keywords: ["BPSD", "paranoia", "exit-seeking", "non-pharmacological", "vascular dementia", "behavioural management"],
+      },
+      {
+        id: "s6",
+        name: "Integrated consultant role — not just cognitive testing",
+        category: "system_pressure",
+        severity: "optional",
+        clueInStem: "whether your role is primarily to assess cognition",
+        whyItMatters: "The consultant old age psychiatrist integrates cognition, risk, systems, family, and legal frameworks — not just administers cognitive tests.",
+        modelWording: "My role is integrated assessment of cognition, risk, functional capacity, BPSD, family systems and legal/EPOA issues — not cognitive testing in isolation.",
+        keywords: ["integrated", "consultant role", "not just cognition", "risk", "family", "legal", "systems"],
+      },
+    ],
+    priorityOrder: {
+      urgent: ["s1", "s2"],
+      secondary: ["s3", "s4", "s5"],
+      lowYield: ["s6"],
+    },
+    modelAnswer: `Immediate priority: George's attempt to enter another resident's vehicle is a public safety issue requiring action now — I will support the GP's licensing notification and recommend means restriction independent of the family dispute.
+
+Capacity assessment: I will conduct decision-specific assessments for driving, finances, accommodation and health decisions separately. Dementia does not mean global incapacity. I will assess each domain with clinical evidence and document my findings independently of the son's financial request.
+
+EPOA neutrality: The son's request to document incapacity to enable asset sales creates a potential conflict of interest. My assessment is clinical, not financial. I will document this explicitly.
+
+BPSD: Paranoid ideation about stolen belongings and exit-seeking are BPSD symptoms driving distress and conflict — I will recommend non-pharmacological management first and involve RACF staff in consistent behavioural strategies.
+
+Family conflict: Escalating sibling conflict is a clinical issue — it is worsening George's distress. I will hold a structured family meeting with consistent information and clear role boundaries.
+
+My role is integrated: cognition, risk, BPSD, family, legal and systems — not cognitive testing in isolation.`,
+  },
 ];
