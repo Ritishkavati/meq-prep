@@ -20,7 +20,7 @@ import {
 import {
   ArrowLeft, Play, Square, RotateCcw, Send, CheckCircle2,
   XCircle, AlertTriangle, ChevronDown, ChevronUp, Clock,
-  RotateCw, ListChecks, ArrowRight, BookMarked, Loader2, Sparkles,
+  RotateCw, ListChecks, ArrowRight, BookMarked, Loader2,
   FileText, Bookmark, BookmarkCheck, Trash2, PenLine,
 } from "lucide-react";
 
@@ -339,6 +339,103 @@ function QuizScreen({
           Skip — try a different question <ArrowRight className="w-3.5 h-3.5" />
         </button>
       </div>
+    </div>
+  );
+}
+
+// ─── Feedback display ─────────────────────────────────────────────────────────
+function renderInline(text: string): React.ReactNode[] {
+  const parts = text.split(/(\*\*[^*]+\*\*)/g);
+  return parts.map((part, i) => {
+    if (part.startsWith("**") && part.endsWith("**")) {
+      return <strong key={i}>{part.slice(2, -2)}</strong>;
+    }
+    return <React.Fragment key={i}>{part}</React.Fragment>;
+  });
+}
+
+function FeedbackDisplay({ text }: { text: string }) {
+  type Section = { key: string; label: string; content: string };
+
+  const sectionDefs = [
+    { key: "IDENTIFIED", label: "Identified" },
+    { key: "MISSED",     label: "Missed" },
+    { key: "TEACHING POINT", label: "Teaching Point" },
+  ];
+
+  // Split text into named sections
+  const sections: Section[] = [];
+  let remaining = text.trim();
+
+  for (let i = 0; i < sectionDefs.length; i++) {
+    const { key, label } = sectionDefs[i];
+    const header = new RegExp(`${key}:\\s*`, "i");
+    const idx = remaining.search(header);
+    if (idx === -1) continue;
+
+    // content from after this header until the next recognised header
+    const afterHeader = remaining.slice(idx).replace(header, "");
+    let end = afterHeader.length;
+    for (let j = i + 1; j < sectionDefs.length; j++) {
+      const nextHeader = new RegExp(sectionDefs[j].key + ":\\s*", "i");
+      const nextIdx = afterHeader.search(nextHeader);
+      if (nextIdx !== -1 && nextIdx < end) end = nextIdx;
+    }
+    sections.push({ key, label, content: afterHeader.slice(0, end).trim() });
+    remaining = remaining.slice(idx + (afterHeader.length - end));
+  }
+
+  // If parsing found nothing, fall back to plain text
+  if (sections.length === 0) {
+    return (
+      <p className="text-sm text-primary leading-relaxed whitespace-pre-line">
+        {text}
+      </p>
+    );
+  }
+
+  return (
+    <div className="space-y-4">
+      {sections.map(({ key, label, content }) => {
+        if (key === "IDENTIFIED") {
+          return (
+            <div key={key} className="border-l-4 border-emerald-500 bg-emerald-50 pl-4 pr-3 py-3 rounded-r-lg">
+              <p className="text-xs font-bold uppercase tracking-wider text-emerald-700 mb-2">{label}</p>
+              <div className="text-sm text-emerald-900 leading-relaxed space-y-1">
+                {content.split("\n").filter(Boolean).map((line, i) => (
+                  <p key={i}>{renderInline(line)}</p>
+                ))}
+              </div>
+            </div>
+          );
+        }
+        if (key === "MISSED") {
+          const lines = content.split("\n").filter(Boolean);
+          return (
+            <div key={key} className="space-y-2.5">
+              <p className="text-xs font-bold uppercase tracking-wider text-amber-700">{label}</p>
+              {lines.map((line, i) => (
+                <div key={i} className="border-l-4 border-amber-400 bg-white pl-4 pr-3 py-2.5 rounded-r-lg shadow-sm">
+                  <p className="text-sm text-slate-800 leading-relaxed">{renderInline(line)}</p>
+                </div>
+              ))}
+            </div>
+          );
+        }
+        if (key === "TEACHING POINT") {
+          return (
+            <div key={key} className="border-l-4 border-primary bg-slate-50 pl-4 pr-3 py-3 rounded-r-lg">
+              <p className="text-xs font-bold uppercase tracking-wider text-primary mb-2">{label}</p>
+              <div className="text-sm text-slate-700 leading-relaxed space-y-1">
+                {content.split("\n").filter(Boolean).map((line, i) => (
+                  <p key={i}>{renderInline(line)}</p>
+                ))}
+              </div>
+            </div>
+          );
+        }
+        return null;
+      })}
     </div>
   );
 }
@@ -937,13 +1034,10 @@ function ResultsScreen({
         </div>
       </div>
 
-      {/* ── E) AI EXAMINER FEEDBACK ─────────────────────────────────────────── */}
+      {/* ── E) EXAMINER FEEDBACK ─────────────────────────────────────────────── */}
       <div className="bg-white rounded-2xl border border-card-border shadow-sm p-6 space-y-4">
         <div className="flex items-center justify-between gap-2">
-          <div className="flex items-center gap-2">
-            <Sparkles className="w-4 h-4 text-accent" />
-            <h3 className="font-serif font-bold text-primary">AI Examiner Feedback</h3>
-          </div>
+          <h3 className="font-serif font-bold text-primary">Examiner Feedback</h3>
           {aiFeedbackError && (
             <button
               onClick={fetchAiFeedback}
@@ -963,14 +1057,12 @@ function ResultsScreen({
 
         {aiFeedbackError && !aiFeedbackLoading && (
           <p className="text-sm text-muted-foreground italic">
-            AI feedback unavailable — tap Retry to try again.
+            Feedback unavailable — tap Retry to try again.
           </p>
         )}
 
         {aiFeedback && !aiFeedbackLoading && (
-          <div className="bg-primary/4 border border-primary/15 rounded-xl px-5 py-4">
-            <p className="text-sm text-primary leading-relaxed whitespace-pre-line">{aiFeedback}</p>
-          </div>
+          <FeedbackDisplay text={aiFeedback} />
         )}
       </div>
 
