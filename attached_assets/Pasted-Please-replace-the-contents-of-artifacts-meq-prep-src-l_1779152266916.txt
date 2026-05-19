@@ -1,0 +1,173 @@
+Please replace the contents of artifacts/meq-prep/src/lib/questions/documentationQuestions.ts with this:
+
+import { QuizStem } from "../quizData";
+
+export const DOC_STEMS: QuizStem[] = [
+  {
+    id: "DOC-001",
+    topic: "documentation",
+    difficulty: "consultant",
+    title: "Inadequate Discharge Summary — First Episode Psychosis",
+    candidateRole: "Consultant psychiatrist, inpatient unit",
+    setting: "Acute inpatient psychiatric unit, metropolitan hospital",
+    stem: `You are the consultant psychiatrist on an acute inpatient unit. You receive a call from Dr Sarah Adeyemi, a GP, who is frustrated. Her patient Reza, a 34-year-old Iranian man, was discharged from your unit five days ago after a four-week admission for first episode schizophrenia. He has just presented to her clinic looking unwell.
+
+Dr Adeyemi tells you: "The discharge summary doesn't tell me his diagnosis — it says 'psychotic disorder under investigation.' No medications, no doses, no follow-up plan, no case manager. I have no idea who to call if he deteriorates tonight."
+
+You check the summary. Three paragraphs, written by the after-hours registrar at 11pm on the day of discharge. No consultant co-signature. Reza's wife called this morning — he has stopped his tablets and has been "acting strangely" since yesterday.
+
+Outline the issues you would identify and the actions you would take. A list without justification will not be awarded marks.`,
+    totalMarks: 22,
+    signals: [
+      {
+        id: "s1",
+        name: "Reza is deteriorating — immediate clinical review required",
+        category: "immediate_safety",
+        severity: "critical",
+        clueInStem: "Reza has just presented to her clinic looking unwell",
+        whyItMatters: "A patient five days post-discharge from first episode psychosis who is already deteriorating and non-adherent requires urgent review today — not a phone discussion. The post-discharge period carries the highest relapse risk.",
+        modelWording: "Reza must be reviewed urgently today. I will arrange immediate community mental health contact or direct review — this is a potential relapse in the highest-risk post-discharge period for first episode psychosis.",
+        keywords: ["urgent", "immediate review", "deteriorat", "relapse", "five days", "unwell", "not taking", "today", "clinical review"],
+      },
+      {
+        id: "s2",
+        name: "Discharge summary fails minimum clinical standards",
+        category: "governance",
+        severity: "critical",
+        clueInStem: "doesn't tell me his diagnosis — it says psychotic disorder under investigation. No medications, no doses, no follow-up plan, no case manager",
+        whyItMatters: "A discharge summary for first episode psychosis must contain working diagnosis, medications with doses, relapse indicators, safety plan, follow-up appointments, case manager contact, and emergency escalation. This summary fails every minimum standard and has directly contributed to Reza's deterioration.",
+        modelWording: "The discharge summary fails minimum clinical standards — no working diagnosis, no medications, no follow-up plan, no case manager. I take responsibility. I will send a comprehensive addendum today.",
+        keywords: ["inadequate", "minimum standard", "diagnosis", "medication", "follow-up", "case manager", "fails", "incomplete", "poor documentation"],
+      },
+      {
+        id: "s3",
+        name: "No consultant co-signature — supervision failure",
+        category: "governance",
+        severity: "critical",
+        clueInStem: "written by the after-hours registrar at 11pm on the day of discharge. No consultant co-signature",
+        whyItMatters: "Discharge summaries for complex psychiatric cases must be reviewed and co-signed by a consultant. An after-hours registrar writing an unsupervised discharge letter for first episode schizophrenia is a supervision failure.",
+        modelWording: "A discharge summary for first episode psychosis written by an after-hours registrar without consultant co-signature is a supervision failure. Complex psychiatric discharges require consultant oversight regardless of time.",
+        keywords: ["co-sign", "consultant review", "registrar", "unsupervised", "supervision", "after hours", "oversight"],
+      },
+      {
+        id: "s4",
+        name: "Medication non-adherence — urgent clinical priority",
+        category: "risk_self",
+        severity: "critical",
+        clueInStem: "stopped his tablets and has been acting strangely since yesterday",
+        whyItMatters: "Non-adherence in the first weeks after discharge from first episode psychosis is the primary driver of relapse. The discharge plan clearly failed to address adherence strategies.",
+        modelWording: "Non-adherence five days post-discharge from first episode psychosis is a medical emergency — relapse risk is highest in the first weeks. Today's review must address adherence urgently, including consideration of depot antipsychotic.",
+        keywords: ["non-adherence", "not taking", "stopped", "adherence", "relapse", "depot", "medication"],
+      },
+      {
+        id: "s5",
+        name: "GP relationship — acknowledge failure, send addendum today",
+        category: "mdt_conflict",
+        severity: "important",
+        clueInStem: "Dr Adeyemi is frustrated and concerned",
+        whyItMatters: "A GP without adequate discharge information is a patient safety risk. This relationship must be urgently repaired — the GP is Reza's primary community contact.",
+        modelWording: "I will call Dr Adeyemi back, acknowledge the failure, and send a comprehensive addendum letter today with all missing clinical information.",
+        keywords: ["apologise", "gp", "addendum", "letter today", "acknowledge", "responsible", "remedy", "call back"],
+      },
+    ],
+    priorityOrder: {
+      urgent: ["s1", "s2", "s3", "s4"],
+      secondary: ["s5"],
+      lowYield: [],
+    },
+    modelAnswer: `Immediate: Reza must be reviewed today — five days post-discharge, stopped medication, deteriorating. I will arrange urgent community mental health contact now.
+
+Discharge summary failure: The letter fails every minimum standard. No diagnosis, no medications, no follow-up, no case manager. I take responsibility and will send a comprehensive addendum today.
+
+GP: I will call Dr Adeyemi immediately, acknowledge the failure, and provide all missing information — working diagnosis, medications and doses, relapse indicators, case manager contact, outpatient appointment, and emergency escalation.
+
+Supervision failure: After-hours registrar discharge letter for first episode psychosis without consultant co-signature is a supervision failure. This will be raised at the next governance meeting.
+
+Adherence: Today's urgent review must address non-adherence — depot antipsychotic should be considered.`,
+  },
+];
+
+Then replace artifacts/meq-prep/src/lib/questions/dischargeReviewQuestions.ts with:
+
+import { QuizStem } from "../quizData";
+
+export const DIS_STEMS: QuizStem[] = [
+  {
+    id: "DIS-001",
+    topic: "discharge_review",
+    difficulty: "consultant",
+    title: "Forensic Discharge Summary — Do Not Co-Sign",
+    candidateRole: "Consultant forensic psychiatrist",
+    setting: "Forensic inpatient unit — co-sign review queue",
+    stem: `You are the consultant forensic psychiatrist. A discharge summary is in your co-sign queue from Dr Michael Tan, a first-year registrar, for Wayne, a 44-year-old man being discharged after a 12-week admission. Wayne has schizophrenia, cannabis and methamphetamine use, a history of violence towards his mother when unwell, and a prior not guilty by reason of mental illness (NGMI) finding for assault six years ago.
+
+The four-paragraph summary documents: diagnosis (schizophrenia), medication (olanzapine 20mg), and one line: "risk: reduced during admission." It does not mention the NGMI finding, forensic history, substance use, or violence history. There is no risk formulation and no relapse prevention plan. Follow-up reads: "Wayne — please call to arrange follow-up." Wayne's mother has not been notified. No forensic community support or housing is mentioned.
+
+Outline what you would do and why. A list without justification will not be awarded marks.`,
+    totalMarks: 22,
+    signals: [
+      {
+        id: "s1",
+        name: "Do not co-sign — summary is clinically and legally inadequate",
+        category: "governance",
+        severity: "critical",
+        clueInStem: "A discharge summary has been placed in your co-sign queue",
+        whyItMatters: "Co-signing this summary transfers consultant accountability to a document that could directly contribute to harm. A co-signed letter is taken as consultant approval — this summary cannot be approved as written.",
+        modelWording: "I will not co-sign this discharge summary. I will return it to Dr Tan with a specific list of required additions before it is released.",
+        keywords: ["not co-sign", "will not sign", "return", "required changes", "reject", "hold", "inadequate", "before release"],
+      },
+      {
+        id: "s2",
+        name: "Forensic history absent — NGMI essential inclusion",
+        category: "governance",
+        severity: "critical",
+        clueInStem: "It does not mention the NGMI finding, forensic history",
+        whyItMatters: "Any clinician receiving a discharge letter for a forensic patient must know the forensic history to calibrate risk. The NGMI finding and forensic supervision history are essential — their absence means the receiving clinician manages Wayne without critical legal and clinical context.",
+        modelWording: "The NGMI finding and conditional forensic discharge history are essential inclusions. Their absence means the receiving clinician cannot manage Wayne's risk appropriately.",
+        keywords: ["forensic history", "NGMI", "not guilty by reason", "conditional discharge", "absent", "essential", "must include"],
+      },
+      {
+        id: "s3",
+        name: "Risk reduced is not a risk formulation",
+        category: "governance",
+        severity: "critical",
+        clueInStem: "risk: reduced during admission",
+        whyItMatters: "'Risk reduced during admission' describes controlled inpatient behaviour — not community risk. A proper formulation addresses static factors, dynamic factors including substance use, and protective factors in the specific community context.",
+        modelWording: "A risk formulation for a forensic patient must address static, dynamic, and protective factors in the community environment. 'Risk reduced during admission' is not a community risk formulation.",
+        keywords: ["risk formulation", "static", "dynamic", "protective", "not a formulation", "community risk", "formulation absent"],
+      },
+      {
+        id: "s4",
+        name: "Mother not notified — identified victim, public safety obligation",
+        category: "family_carer",
+        severity: "critical",
+        clueInStem: "history of violence towards his mother. Wayne's mother has not been notified",
+        whyItMatters: "Wayne's mother is both the identified victim of his prior violence and potentially his primary carer. Failing to notify her of his discharge is both a clinical and public safety failure.",
+        modelWording: "Wayne's mother is the identified victim of his prior violence. She must be notified of his discharge and offered involvement in the safety and relapse prevention plan.",
+        keywords: ["mother", "notify", "victim", "at risk", "public safety", "prior violence", "must notify", "family"],
+      },
+      {
+        id: "s5",
+        name: "Patient-initiated follow-up is not a plan",
+        category: "disposition",
+        severity: "critical",
+        clueInStem: "Wayne — please call to arrange follow-up",
+        whyItMatters: "For a forensic patient with schizophrenia and a violence history, leaving follow-up to patient initiative is not a plan. Confirmed outpatient appointments, community forensic team contact, and assertive follow-up are mandatory.",
+        modelWording: "Leaving follow-up contingent on Wayne calling is not acceptable for a forensic patient. Confirmed appointments, community forensic team contact, and assertive follow-up dates must be in place before discharge.",
+        keywords: ["follow-up", "assertive", "confirmed", "not a plan", "forensic community", "patient initiated", "inadequate"],
+      },
+    ],
+    priorityOrder: {
+      urgent: ["s1", "s2", "s3", "s4", "s5"],
+      secondary: [],
+      lowYield: [],
+    },
+    modelAnswer: `I will not co-sign this summary. I will return it to Dr Tan with required additions before release.
+
+Missing: Full forensic history including NGMI finding; complete substance use history; proper risk formulation with static, dynamic, and protective community factors; relapse prevention plan; confirmed follow-up appointments and forensic community team contact; notification to and involvement of Wayne's mother.
+
+Teaching: I will supervise Dr Tan in rewriting this — explaining why forensic discharge documentation has a higher standard and what the consequences are if it fails.`,
+  },
+];
+
+After replacing both files run: cd artifacts/meq-prep && pnpm typecheck

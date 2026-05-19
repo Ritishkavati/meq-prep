@@ -149,7 +149,7 @@ Outline the problems with this summary and what must happen before discharge. A 
         severity: "critical",
         clueInStem: "arrived in Australia from Somalia three years ago, has no extended family in Australia, and her husband works long hours and was not involved in the admission",
         whyItMatters: "Aisha is being discharged into profound social isolation — no Australian family network, a husband who was absent throughout the admission, and a newborn. The highest-risk period after postpartum psychosis discharge is when a mother is alone with her infant. The discharge plan must explicitly address who will be present, what support is available, and what happens if she deteriorates alone with Lily.",
-        modelWording: "Aisha is being discharged with no Australian family, a husband who was absent throughout admission, and a newborn infant. The discharge plan must explicitly state who will be present at home, what community supports are in place, and what the plan is if she deteriorates when alone with Lily.",
+        modelWording: "Aisha is being discharged with no Australian family, a husband who was absent throughout admission, and a newborn. The discharge plan must explicitly state who will be present at home, what community supports are in place, and what the plan is if she deteriorates when alone with Lily.",
         keywords: ["social isolation", "no family", "husband", "alone", "support", "somali", "cultural", "community support", "who will be present", "isolated"],
       },
       {
