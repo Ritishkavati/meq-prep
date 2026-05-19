@@ -4,7 +4,7 @@ import { useCandidate } from "@/lib/store";
 import { Header } from "@/components/Header";
 import {
   ListChecks, BookOpen, ClipboardList, ArrowRight,
-  TrendingUp, Target, AlertCircle, CheckCircle2,
+  TrendingUp, Target, AlertCircle, CheckCircle2, BarChart2,
 } from "lucide-react";
 import {
   getQuizModuleCompletion, getTotalQuizzesCompleted, getCandidateFeedback,
@@ -210,6 +210,27 @@ export default function Phases() {
           </div>
         </div>
       </div>
+
+      {/* ── Review answers ──────────────────────────────────────────────────── */}
+      {totalQuizzesCompleted > 0 && (
+        <Link
+          href="/review"
+          className="flex items-center justify-between bg-card rounded-2xl border border-card-border shadow-sm px-6 py-4 mb-4 hover:border-accent/40 transition-colors group"
+        >
+          <div className="flex items-center gap-3">
+            <div className="w-9 h-9 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0">
+              <BarChart2 className="w-4 h-4 text-accent" />
+            </div>
+            <div>
+              <p className="font-semibold text-primary text-sm">Review My Answers</p>
+              <p className="text-xs text-muted-foreground">
+                Browse all {totalQuizzesCompleted} past quiz responses — see what you identified and what you missed
+              </p>
+            </div>
+          </div>
+          <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-accent transition-colors flex-shrink-0 ml-4" />
+        </Link>
+      )}
 
       {/* ── Performance feedback ─────────────────────────────────────────────── */}
       <div className="bg-card rounded-2xl border border-card-border shadow-sm px-6 py-5 mb-8">

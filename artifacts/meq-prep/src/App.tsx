@@ -14,6 +14,7 @@ import PSBrainDashboard from "@/pages/brain/PSBrainDashboard";
 import PSBrainAdd from "@/pages/brain/PSBrainAdd";
 import PSBrainImport from "@/pages/brain/PSBrainImport";
 import AIReviewExport from "@/pages/brain/AIReviewExport";
+import ReviewMode from "@/pages/ReviewMode";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -24,6 +25,7 @@ function Router() {
       <Route path="/daily" component={DailyPractice} />
       <Route path="/signals" component={QuizMode} />
       <Route path="/exam" component={FullExam} />
+      <Route path="/review" component={ReviewMode} />
       <Route path="/brain" component={BrainDashboard} />
       <Route path="/brain/upload" component={BrainUpload} />
       <Route path="/brain/review" component={BrainReview} />
