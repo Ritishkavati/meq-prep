@@ -24,3 +24,9 @@ id = "KqQS0Q-ZaJqP5NiMqdsN3"
 uri = "file://MEQ_PREP_KNOWLEDGE_BRIEF.md"
 type = "text"
 title = "MEQ Prep — AI Knowledge Brief (upload this to Claude.ai or ChatGPT)"
+
+[[outputs]]
+id = "MXjpBhsVmpeOv9O1x8FQ_"
+uri = "file://question_complexity_audit.json"
+type = "unspecified"
+title = "MEQ Prep — Question Complexity Audit"

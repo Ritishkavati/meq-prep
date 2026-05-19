@@ -1,0 +1,2551 @@
+{
+  "meta": {
+    "generated": "2026-05-19",
+    "auditor": "MEQ Prep complexity audit agent",
+    "rubric": {
+      "1-3": "Junior registrar level — single-layer, obvious answer, no competing values",
+      "4-5": "Competent registrar level — 2-3 competing considerations, some ambiguity",
+      "6-7": "Senior registrar level — multiple signal layers, governance/legal nuance required",
+      "8-9": "Consultant RANZCP MEQ level — 5+ concurrent pressures, defensible disposition under real ambiguity",
+      "10": "Exam-ceiling level — 10+ signals, all domains active, no safe easy answer exists"
+    },
+    "flags": [
+      "live_decision_under_pressure",
+      "unsafe_tempting_shortcut",
+      "legal_policy_hinge",
+      "vulnerable_third_party",
+      "mdt_family_system_conflict",
+      "consultant_leadership",
+      "defensible_disposition"
+    ],
+    "totalQuestionsAudited": 121,
+    "sources": {
+      "ORIGINAL_STEMS": 27,
+      "topic_files": 94
+    }
+  },
+
+  "questions": [
+
+    {
+      "id": "q1",
+      "title": "Sudanese Refugee — Medical Ward Refusal",
+      "topic": "cl_psychiatry",
+      "source": "ORIGINAL_STEMS",
+      "difficulty": "consultant",
+      "signalCount": 13,
+      "complexityScore": 9,
+      "scoringRationale": "13 concurrent signals spanning cultural safety, trauma-informed care, interpreter complexity, capacity, systemic racism, physical health comorbidity, and MDT conflict. The tempting wrong answer — capacity assessment as the sole task — is seductive and wrong. No signal is redundant. Genuine ambiguity about how to proceed when the patient speaks English but communication is culturally unsafe.",
+      "weaknesses": [],
+      "missingLayers": [
+        "No explicit medicolegal exposure if ward proceeds without psychiatric input",
+        "Could add a well-meaning junior nurse offering culturally clumsy help as an additional pressure"
+      ],
+      "rewritePriority": "low",
+      "flags": [
+        "live_decision_under_pressure",
+        "unsafe_tempting_shortcut",
+        "legal_policy_hinge",
+        "vulnerable_third_party",
+        "mdt_family_system_conflict",
+        "consultant_leadership",
+        "defensible_disposition"
+      ]
+    },
+
+    {
+      "id": "q2",
+      "title": "Young Man — High-Lethality Overdose in ED",
+      "topic": "risk",
+      "source": "ORIGINAL_STEMS",
+      "difficulty": "consultant",
+      "signalCount": 14,
+      "complexityScore": 10,
+      "scoringRationale": "Maximum-ceiling question. 14 signals across means lethality, opioid toxicology, ICU liaison, collateral from paramedics, family withholding, identity-based risk factors, dual-diagnosis, disposition under resource constraint, and medico-legal exposure. Every answer has a consequence. The safe-looking discharge is lethal. Exemplar for the exam ceiling.",
+      "weaknesses": [],
+      "missingLayers": [],
+      "rewritePriority": "low",
+      "flags": [
+        "live_decision_under_pressure",
+        "unsafe_tempting_shortcut",
+        "legal_policy_hinge",
+        "vulnerable_third_party",
+        "mdt_family_system_conflict",
+        "consultant_leadership",
+        "defensible_disposition"
+      ]
+    },
+
+    {
+      "id": "q3",
+      "title": "Postpartum Psychosis — Capgras Delusion, Infanticide Risk",
+      "topic": "perinatal",
+      "source": "ORIGINAL_STEMS",
+      "difficulty": "consultant",
+      "signalCount": 12,
+      "complexityScore": 9,
+      "scoringRationale": "12 signals covering infanticide risk, Capgras delusion, maternal suicide, child protection notification, breastfeeding pharmacology, mother-baby unit, family dynamics with minimising husband, and family history of similar episode. Every signal is clinically active. The MBU disposition is non-obvious in many health systems. Truly consultant-level.",
+      "weaknesses": [],
+      "missingLayers": [
+        "Could add a language barrier or pressure from nursing staff to avoid disturbing a 'settled' patient"
+      ],
+      "rewritePriority": "low",
+      "flags": [
+        "live_decision_under_pressure",
+        "unsafe_tempting_shortcut",
+        "legal_policy_hinge",
+        "vulnerable_third_party",
+        "mdt_family_system_conflict",
+        "consultant_leadership",
+        "defensible_disposition"
+      ]
+    },
+
+    {
+      "id": "q4",
+      "title": "Impaired Registrar — Supervisor Concern",
+      "topic": "governance",
+      "source": "ORIGINAL_STEMS",
+      "difficulty": "standard",
+      "signalCount": 10,
+      "complexityScore": 8,
+      "scoringRationale": "Three escalating safety signals (alcohol odour, 10× medication error, undocumented medication room access) plus dual obligation to manage both patient safety and colleague wellbeing. The request for confidentiality creates a genuine ethical tension. AHPRA mandatory notification is a legal hinge that many candidates miss by defaulting to supervisor support only.",
+      "weaknesses": [
+        "The 'standard' difficulty tag understates the question — it behaves like a 'difficult' question"
+      ],
+      "missingLayers": [
+        "Could add a union representative or EAP referral complication",
+        "Peer support pathway vs formal AHPRA pathway tension could be made more explicit"
+      ],
+      "rewritePriority": "low",
+      "flags": [
+        "live_decision_under_pressure",
+        "legal_policy_hinge",
+        "vulnerable_third_party",
+        "consultant_leadership",
+        "defensible_disposition"
+      ]
+    },
+
+    {
+      "id": "q5",
+      "title": "Dementia — Elder Abuse and Capacity",
+      "topic": "old_age",
+      "source": "ORIGINAL_STEMS",
+      "difficulty": "difficult",
+      "signalCount": 11,
+      "complexityScore": 9,
+      "scoringRationale": "Financial abuse, driving safety (mandatory reporting), driving-with-dementia, elder abuse reporting, Margaret as co-victim, EPOA query, medication safety, nutritional neglect, and falls — all active simultaneously. Two separate mandatory reporting obligations arise. The tempting oversimplification is treating this as a dementia diagnosis consultation only.",
+      "weaknesses": [],
+      "missingLayers": [
+        "Nephew's perspective not accessible — his side not heard, adds realistic system complexity",
+        "Could include a GP who minimises the concern"
+      ],
+      "rewritePriority": "low",
+      "flags": [
+        "live_decision_under_pressure",
+        "unsafe_tempting_shortcut",
+        "legal_policy_hinge",
+        "vulnerable_third_party",
+        "mdt_family_system_conflict",
+        "consultant_leadership",
+        "defensible_disposition"
+      ]
+    },
+
+    {
+      "id": "q6",
+      "title": "Stalking and Morbid Jealousy — Depot Cessation, Identified Victim",
+      "topic": "forensic",
+      "source": "ORIGINAL_STEMS",
+      "difficulty": "consultant",
+      "signalCount": 11,
+      "complexityScore": 9,
+      "scoringRationale": "Morbid jealousy (Othello syndrome) is an uncommon but examinable specific risk factor for partner homicide. Combines depot cessation, 50-text pattern, historical IPV, duty to warn Lisa, Intervention Order adequacy, MHA criteria, and structured risk assessment. The patient presents voluntarily — the IO creates a false sense of safety that must be interrogated.",
+      "weaknesses": [
+        "The IO's false-safety trap is present but could be surfaced more provocatively"
+      ],
+      "missingLayers": [
+        "Could add a defence solicitor contact complicating disclosure to police",
+        "Media/public figure dimension could increase stakes"
+      ],
+      "rewritePriority": "low",
+      "flags": [
+        "live_decision_under_pressure",
+        "unsafe_tempting_shortcut",
+        "legal_policy_hinge",
+        "vulnerable_third_party",
+        "consultant_leadership",
+        "defensible_disposition"
+      ]
+    },
+
+    {
+      "id": "q7",
+      "title": "Aboriginal Adolescent — Complex Trauma and Polypharmacy",
+      "topic": "child_adolescent",
+      "source": "ORIGINAL_STEMS",
+      "difficulty": "consultant",
+      "signalCount": 10,
+      "complexityScore": 9,
+      "scoringRationale": "Nine placement changes, complex developmental trauma, three unexplained psychotropic medications without records, unexplained forearm bruising (mandatory reporting trigger), Aboriginal Child Placement Principle failure, inexperienced carer without records, and state guardianship for consent. The tempting wrong answer is a new psychiatric diagnosis rather than a trauma-informed systems reformulation.",
+      "weaknesses": [],
+      "missingLayers": [
+        "Could add a cultural liaison officer being unavailable at 11 pm as an additional pressure"
+      ],
+      "rewritePriority": "low",
+      "flags": [
+        "live_decision_under_pressure",
+        "unsafe_tempting_shortcut",
+        "legal_policy_hinge",
+        "vulnerable_third_party",
+        "mdt_family_system_conflict",
+        "consultant_leadership",
+        "defensible_disposition"
+      ]
+    },
+
+    {
+      "id": "q8",
+      "title": "CTO Review — First Episode Psychosis, Recovery and Rights",
+      "topic": "capacity_mha",
+      "source": "ORIGINAL_STEMS",
+      "difficulty": "difficult",
+      "signalCount": 10,
+      "complexityScore": 8,
+      "scoringRationale": "Least restrictive principle vs risk-averse continuation, EPSE as legitimate complaint, functional recovery indicators, mother's triangulation, relapse risk review, and the political pressure to maintain compulsion despite clear wellness indicators. Well-balanced. The tempting wrong answer is renewing the CTO reflexively because 'first-episode psychosis always needs it'.",
+      "weaknesses": [
+        "The question is strong but could push harder on what happens if the candidate recommends CTO discontinuation — consequences are underdeveloped"
+      ],
+      "missingLayers": [
+        "Could add a public defender or advocate present at the review",
+        "Second-episode relapse probability data could be introduced to test application of evidence"
+      ],
+      "rewritePriority": "medium",
+      "flags": [
+        "legal_policy_hinge",
+        "vulnerable_third_party",
+        "mdt_family_system_conflict",
+        "consultant_leadership",
+        "defensible_disposition"
+      ]
+    },
+
+    {
+      "id": "q9",
+      "title": "OST in Pregnancy — Benzodiazepine Use, Child Protection History",
+      "topic": "substance_use",
+      "source": "ORIGINAL_STEMS",
+      "difficulty": "consultant",
+      "signalCount": 10,
+      "complexityScore": 9,
+      "scoringRationale": "Ten-week concealment driven by fear of system (maximally realistic), illicit benzo in first trimester (fetal risk), methadone pharmacokinetics in pregnancy, NAS planning, previous CP order, daily-drinking partner, untreated anxiety disorder, and the woman's expressed motivation as a therapeutic lever. Parenting motivation is both clinically significant and examinable — often missed by candidates who focus on risk only.",
+      "weaknesses": [],
+      "missingLayers": [
+        "Could add a social worker who has a different threshold for notification than the candidate"
+      ],
+      "rewritePriority": "low",
+      "flags": [
+        "live_decision_under_pressure",
+        "unsafe_tempting_shortcut",
+        "legal_policy_hinge",
+        "vulnerable_third_party",
+        "mdt_family_system_conflict",
+        "consultant_leadership",
+        "defensible_disposition"
+      ]
+    },
+
+    {
+      "id": "q11",
+      "title": "Denied Suicidal Ideation — Contextual High-Risk Presentation",
+      "topic": "risk",
+      "source": "ORIGINAL_STEMS",
+      "difficulty": "consultant",
+      "signalCount": 7,
+      "complexityScore": 9,
+      "scoringRationale": "Deceptively short signal count belies maximal complexity: explicit SI denial as the unsafe-tempting-shortcut, 100 unaccounted temazepam tablets as means, three concurrent identity-defining losses, three-day isolation as planning behaviour, alcohol covertly denied, shame/concealment framework, and the registrar's telephone-clearance request as a governance failure. The registrar's 'low risk' screening score is the most dangerous red herring in any question in the bank.",
+      "weaknesses": [],
+      "missingLayers": [
+        "Could add the GP who prescribed the temazepam being unreachable for collateral"
+      ],
+      "rewritePriority": "low",
+      "flags": [
+        "live_decision_under_pressure",
+        "unsafe_tempting_shortcut",
+        "legal_policy_hinge",
+        "vulnerable_third_party",
+        "consultant_leadership",
+        "defensible_disposition"
+      ]
+    },
+
+    {
+      "id": "q12",
+      "title": "Post-Discharge Suicide — Adverse Event Response",
+      "topic": "quality_assurance",
+      "source": "ORIGINAL_STEMS",
+      "difficulty": "consultant",
+      "signalCount": 8,
+      "complexityScore": 9,
+      "scoringRationale": "Open disclosure (immediate obligation to wife), mandatory coronial notification, grossly inadequate documentation, nursing escalation that was ignored (speaking-up failure), staff distress management, the registrar's medico-legal exposure, and the systemic culture of 'SI denied = discharge'. All signals are active simultaneously in the Monday morning context. Rare question where grief/family comes before clinical learning.",
+      "weaknesses": [],
+      "missingLayers": [
+        "Media angle or patient advocacy group contact could be added",
+        "The registrar's own wellbeing response could be developed"
+      ],
+      "rewritePriority": "low",
+      "flags": [
+        "live_decision_under_pressure",
+        "legal_policy_hinge",
+        "vulnerable_third_party",
+        "mdt_family_system_conflict",
+        "consultant_leadership",
+        "defensible_disposition"
+      ]
+    },
+
+    {
+      "id": "q13",
+      "title": "Premature Discharge Under Bed Pressure — Supervision Failure",
+      "topic": "supervision",
+      "source": "ORIGINAL_STEMS",
+      "difficulty": "consultant",
+      "signalCount": 6,
+      "complexityScore": 8,
+      "scoringRationale": "Callum's high-risk recurrence profile collides with a registrar's incomplete assessment and NUM bed pressure. The teaching role (not just override) and maintaining clinical authority against administrative pressure are both examinable. Good question structure but slightly narrower signal range than q12.",
+      "weaknesses": [
+        "Clinical complexity of Callum's risk is underdeveloped relative to the governance theme — more patient-side signals would increase depth"
+      ],
+      "missingLayers": [
+        "Callum's own voice — does he want to go home? — is absent",
+        "Safety plan conversation itself could be partially shown as a signal"
+      ],
+      "rewritePriority": "medium",
+      "flags": [
+        "live_decision_under_pressure",
+        "unsafe_tempting_shortcut",
+        "mdt_family_system_conflict",
+        "consultant_leadership",
+        "defensible_disposition"
+      ]
+    },
+
+    {
+      "id": "q15",
+      "title": "Registrar Using Culturally Unsafe Language in Case Presentation",
+      "topic": "supervision",
+      "source": "ORIGINAL_STEMS",
+      "difficulty": "consultant",
+      "signalCount": 6,
+      "complexityScore": 8,
+      "scoringRationale": "Real-time harm happening to David's daughter and Aboriginal staff simultaneously with a training need for an unaware registrar. The consultant's obligation is immediate intervention, not post-meeting reflection — this is the key discriminator. Strong signals. Good double-layer of individual feedback and team culture reform.",
+      "weaknesses": [
+        "The specific clinical content of David's presentation is absent — his patient story has no detail, which reduces realism"
+      ],
+      "missingLayers": [
+        "David's own response to how he is being discussed could be added",
+        "A senior colleague who defends the registrar's language would add MDT conflict"
+      ],
+      "rewritePriority": "medium",
+      "flags": [
+        "live_decision_under_pressure",
+        "vulnerable_third_party",
+        "mdt_family_system_conflict",
+        "consultant_leadership"
+      ]
+    },
+
+    {
+      "id": "q16",
+      "title": "Inadequate Capacity Assessment Documentation — Medication Refusal",
+      "topic": "documentation",
+      "source": "ORIGINAL_STEMS",
+      "difficulty": "consultant",
+      "signalCount": 6,
+      "complexityScore": 8,
+      "scoringRationale": "Life-sustaining treatment refusal, four-domain assessment absent, cultural/interpreter documentation gap, family dynamics, discharge already proceeding, and teaching obligation to Dr Wu — all require concurrent action. Strong documentary governance question with appropriate stakes. The candidate who only fixes the note and does not halt discharge fails.",
+      "weaknesses": [],
+      "missingLayers": [
+        "Whether Mrs Papageorgiou changes her mind after a proper explanation is a potential follow-up signal worth adding"
+      ],
+      "rewritePriority": "low",
+      "flags": [
+        "live_decision_under_pressure",
+        "unsafe_tempting_shortcut",
+        "legal_policy_hinge",
+        "vulnerable_third_party",
+        "consultant_leadership",
+        "defensible_disposition"
+      ]
+    },
+
+    {
+      "id": "q17",
+      "title": "GP Calls About Inadequate Discharge Summary",
+      "topic": "documentation",
+      "source": "ORIGINAL_STEMS",
+      "difficulty": "consultant",
+      "signalCount": 6,
+      "complexityScore": 8,
+      "scoringRationale": "Reza's clinical deterioration 5 days post-discharge is an immediate clinical emergency nested inside a governance failure (inadequate discharge summary, no consultant co-signature). The candidate must act on both tracks simultaneously. Cultural context (Iranian, first episode, explanatory model) and GP repair are well-integrated.",
+      "weaknesses": [],
+      "missingLayers": [
+        "Reza's wife's concern about stigma could be added",
+        "The risk of MHA involvement if Reza refuses assessment on presentation could be explicit"
+      ],
+      "rewritePriority": "low",
+      "flags": [
+        "live_decision_under_pressure",
+        "legal_policy_hinge",
+        "mdt_family_system_conflict",
+        "consultant_leadership",
+        "defensible_disposition"
+      ]
+    },
+
+    {
+      "id": "q21",
+      "title": "Nursing Unit Manager Pressuring Premature Discharge — Code Yellow",
+      "topic": "mdt_systems",
+      "source": "ORIGINAL_STEMS",
+      "difficulty": "consultant",
+      "signalCount": 5,
+      "complexityScore": 8,
+      "scoringRationale": "Three clinically unsafe patients (Greg = no safety plan post-OD, Nasrin = thought-disordered mother with unsupported children, William = mid-ECT) vs Code Yellow administrative pressure and a threat of Medical Director escalation. Clinical authority under fire. Each patient has a distinct reason to refuse discharge. The collaborative-but-firm tone is a key examinable skill.",
+      "weaknesses": [
+        "The three patients are presented in list form — this slightly reduces immersion compared to a single rich vignette",
+        "Greg's severity is underdeveloped — his actual mental state is not given beyond 'euthymic'"
+      ],
+      "missingLayers": [
+        "Could add one patient who IS genuinely ready for discharge — forcing candidate to distinguish",
+        "MDT member who agrees with NUM would increase conflict realism"
+      ],
+      "rewritePriority": "medium",
+      "flags": [
+        "live_decision_under_pressure",
+        "unsafe_tempting_shortcut",
+        "vulnerable_third_party",
+        "mdt_family_system_conflict",
+        "consultant_leadership",
+        "defensible_disposition"
+      ]
+    },
+
+    {
+      "id": "q22",
+      "title": "Rural Telehealth — Farewell Letter, Loaded Firearm, Alcohol Intoxication",
+      "topic": "rural",
+      "source": "ORIGINAL_STEMS",
+      "difficulty": "consultant",
+      "signalCount": 6,
+      "complexityScore": 9,
+      "scoringRationale": "Farewell letter + loaded firearm = documented lethal planning. Intoxication invalidates the current assessment. Rural equity principle (distance cannot lower clinical standard). RFDS activation threshold. Additional farm-based means (other firearms, agricultural chemicals). Wife as critical collateral. Junior ED registrar requiring directive support. All simultaneously active under telehealth constraints. Genuinely excellent question.",
+      "weaknesses": [],
+      "missingLayers": [
+        "Harry's community prominence creating confidentiality tension could be pushed further"
+      ],
+      "rewritePriority": "low",
+      "flags": [
+        "live_decision_under_pressure",
+        "unsafe_tempting_shortcut",
+        "legal_policy_hinge",
+        "vulnerable_third_party",
+        "consultant_leadership",
+        "defensible_disposition"
+      ]
+    },
+
+    {
+      "id": "q23",
+      "title": "Rural Aboriginal Acute Psychosis — No Medication, Family Divided, RFDS Uncertainty",
+      "topic": "rural",
+      "source": "ORIGINAL_STEMS",
+      "difficulty": "consultant",
+      "signalCount": 7,
+        "complexityScore": 9,
+      "scoringRationale": "Road safety, no medication in stock, family divided (traditional healer vs city hospital), Rosa's oscillating lucidity (consent/assent issue), nurse's uncertainty about RFDS qualification, 300 km to beds, and 'if you take her away she might never come back' as a community trust signal. One of the most nuanced cultural safety emergency questions in the bank.",
+      "weaknesses": [],
+      "missingLayers": [
+        "Rosa's own voice during lucid moments — what does she say she wants? — could be developed further"
+      ],
+      "rewritePriority": "low",
+      "flags": [
+        "live_decision_under_pressure",
+        "unsafe_tempting_shortcut",
+        "legal_policy_hinge",
+        "vulnerable_third_party",
+        "mdt_family_system_conflict",
+        "consultant_leadership",
+        "defensible_disposition"
+      ]
+    },
+
+    {
+      "id": "q24",
+      "title": "High-Frequency Attender — Telephone Clearance Refused",
+      "topic": "risk",
+      "source": "ORIGINAL_STEMS",
+      "difficulty": "consultant",
+      "signalCount": 5,
+      "complexityScore": 8,
+      "scoringRationale": "Habituation bias (six presentations being used to justify lower concern) is the core examinable skill. Telephone clearance refusal under ED colleague pressure, personality disorder label as risk-minimiser, and no community mental health linkage as system failure. Clean question structure, strong single discriminating insight.",
+      "weaknesses": [
+        "Tyra's clinical presentation in the ED is underspecified — what is her current mental state? The candidate has limited clinical material to work with",
+        "Previous serious attempt eight weeks ago is cited but not elaborated — the nature and context of that attempt is unknown"
+      ],
+      "missingLayers": [
+        "Tyra's own account of why she presented tonight could be added",
+        "Previous episode details — method, intent, precipitant — would allow fuller risk formulation"
+      ],
+      "rewritePriority": "medium",
+      "flags": [
+        "live_decision_under_pressure",
+        "unsafe_tempting_shortcut",
+        "consultant_leadership",
+        "defensible_disposition"
+      ]
+    },
+
+    {
+      "id": "q25",
+      "title": "Psychotherapy — Mandatory Reporting, Therapeutic Rupture (Jade)",
+      "topic": "psychotherapy",
+      "source": "ORIGINAL_STEMS",
+      "difficulty": "consultant",
+      "signalCount": 5,
+      "complexityScore": 8,
+      "scoringRationale": "Mandatory child protection reporting (12-year-old niece and known CSA perpetrator) collides with a therapeutic relationship threat ('I'll stop seeing you'). The non-negotiable reporting obligation is clear, but the therapeutic transparency and trauma-informed delivery are the examinable skills. End-of-session safety check is a subtle but important signal.",
+      "weaknesses": [
+        "Jade's own safety is underspecified — is she at risk from her uncle directly?"
+      ],
+      "missingLayers": [
+        "Could add the uncle having a prior unfounded report that was closed — increasing legal complexity",
+        "Jade's age could be made more ambiguous — younger/older — to add capacity layer"
+      ],
+      "rewritePriority": "medium",
+      "flags": [
+        "legal_policy_hinge",
+        "vulnerable_third_party",
+        "consultant_leadership",
+        "defensible_disposition"
+      ]
+    },
+
+    {
+      "id": "q26",
+      "title": "Capacitous Refusal of Life-Saving Treatment — Ethical Dilemma",
+      "topic": "ethics",
+      "source": "ORIGINAL_STEMS",
+      "difficulty": "consultant",
+      "signalCount": 6,
+      "complexityScore": 9,
+      "scoringRationale": "Unwanted decision ≠ impaired capacity is the core discriminator. Arthur's refusal is articulate, consistent, values-congruent, and three-month deliberated — classic capacitous refusal. The daughter's grief-driven assertion of depression creates a genuine dilemma. Depression must be assessed, not assumed. The oncology team's referral framing reveals a common clinical error that must be explicitly corrected. All four domains of capacity are satisfiable in the stem.",
+      "weaknesses": [],
+      "missingLayers": [
+        "Could add a second family member who supports Arthur's decision — creating intrafamily conflict",
+        "Ethics committee referral as a possible (but unnecessary) step could be introduced as a distractor"
+      ],
+      "rewritePriority": "low",
+      "flags": [
+        "live_decision_under_pressure",
+        "unsafe_tempting_shortcut",
+        "legal_policy_hinge",
+        "vulnerable_third_party",
+        "mdt_family_system_conflict",
+        "consultant_leadership",
+        "defensible_disposition"
+      ]
+    },
+
+    {
+      "id": "q27",
+      "title": "Confidentiality vs Public Safety — Specific Threat to Named Third Party",
+      "topic": "ethics",
+      "source": "ORIGINAL_STEMS",
+      "difficulty": "consultant",
+      "signalCount": 6,
+      "complexityScore": 9,
+      "scoringRationale": "All five elements of a legally and ethically actionable threat are present: named target, identified location, stated method, declared timing, and expressed certainty. Euthymic state makes violence more premeditated and potentially more dangerous. The four-year therapeutic relationship creates a real cost to disclosure. Tarasoff principles applied in Australian context. Transparency before external action is the sophisticated move. Excellent question.",
+      "weaknesses": [],
+      "missingLayers": [
+        "Could add Martin (the target) having a criminal history of his own, complicating the police referral"
+      ],
+      "rewritePriority": "low",
+      "flags": [
+        "live_decision_under_pressure",
+        "unsafe_tempting_shortcut",
+        "legal_policy_hinge",
+        "vulnerable_third_party",
+        "consultant_leadership",
+        "defensible_disposition"
+      ]
+    },
+
+    {
+      "id": "RISK-001",
+      "title": "High-Lethality Suicidal Ideation with Means Access",
+      "topic": "risk",
+      "source": "riskQuestions.ts",
+      "difficulty": "consultant",
+      "signalCount": 6,
+      "complexityScore": 8,
+      "scoringRationale": "Means access, specific plan, prior high-lethality attempt, and voluntary presentation (false reassurance) in a high-functioning person. Strong signal set. The voluntary presentation is the unsafe-tempting-shortcut — it reduces perceived urgency but is clinically meaningless in this context.",
+      "weaknesses": [
+        "Collateral and system response could be more developed"
+      ],
+      "missingLayers": [
+        "Family member perspective — are they aware?",
+        "Means restriction detail — are the means still accessible?"
+      ],
+      "rewritePriority": "low",
+      "flags": [
+        "live_decision_under_pressure",
+        "unsafe_tempting_shortcut",
+        "legal_policy_hinge",
+        "defensible_disposition"
+      ]
+    },
+
+    {
+      "id": "RISK-002",
+      "title": "Homicidal Risk in Acute Psychosis — Identified Victim",
+      "topic": "risk",
+      "source": "riskQuestions.ts",
+      "difficulty": "consultant",
+      "signalCount": 6,
+      "complexityScore": 8,
+      "scoringRationale": "Identified victim + psychotic illness + command auditory hallucinations creates a mandatory duty-to-protect scenario. MHA criteria, involuntary admission, victim warning, and police coordination all required. Good signal density.",
+      "weaknesses": [
+        "The psychosis aetiology is underspecified — organic vs functional distinction matters for treatment"
+      ],
+      "missingLayers": [
+        "Response from the identified victim's end — has she been approached already?",
+        "Capacity consideration — can the patient participate in safety planning?"
+      ],
+      "rewritePriority": "low",
+      "flags": [
+        "live_decision_under_pressure",
+        "legal_policy_hinge",
+        "vulnerable_third_party",
+        "consultant_leadership",
+        "defensible_disposition"
+      ]
+    },
+
+    {
+      "id": "RISK-003",
+      "title": "Risk Assessment in a Remote Setting",
+      "topic": "risk",
+      "source": "riskQuestions.ts",
+      "difficulty": "difficult",
+      "signalCount": 5,
+      "complexityScore": 7,
+      "scoringRationale": "Resource limitation and rural equity principle add to a standard risk formulation task. Adequate complexity for exam purposes but does not reach consultant ceiling. Could be stronger with a cultural safety layer.",
+      "weaknesses": [
+        "The specific clinical details are somewhat generic — the rural setting is the primary differentiator",
+        "Signal density is below the consultant ceiling"
+      ],
+      "missingLayers": [
+        "Cultural safety dimension — is the patient from a CALD or Aboriginal community?",
+        "Family and community involvement",
+        "Means access specific to rural setting (firearms, agricultural chemicals)"
+      ],
+      "rewritePriority": "high",
+      "flags": [
+        "live_decision_under_pressure",
+        "consultant_leadership",
+        "defensible_disposition"
+      ]
+    },
+
+    {
+      "id": "RISK-004",
+      "title": "BPD and Chronic Suicidality — Acute on Chronic Risk",
+      "topic": "risk",
+      "source": "riskQuestions.ts",
+      "difficulty": "consultant",
+      "signalCount": 6,
+      "complexityScore": 8,
+      "scoringRationale": "Acute-on-chronic risk differentiation is a classic MEQ discriminator. The temptation to dismiss the presentation as 'usual BPD behaviour' is the dangerous wrong answer. Strong signals for what constitutes a change from baseline. Good use of interpersonal precipitant.",
+      "weaknesses": [
+        "The long-term treatment framework (DBT pathway) could be woven in as an additional signal"
+      ],
+      "missingLayers": [
+        "Previous inpatient admissions — helpful or harmful for this patient?",
+        "What does the patient herself identify as different this time?"
+      ],
+      "rewritePriority": "low",
+      "flags": [
+        "live_decision_under_pressure",
+        "unsafe_tempting_shortcut",
+        "consultant_leadership",
+        "defensible_disposition"
+      ]
+    },
+
+    {
+      "id": "RISK-005",
+      "title": "Fire-Setting Behaviour — Risk Formulation",
+      "topic": "risk",
+      "source": "riskQuestions.ts",
+      "difficulty": "difficult",
+      "signalCount": 5,
+      "complexityScore": 7,
+      "scoringRationale": "Arson risk in a forensic/community context. Solid signal set but narrower than consultant ceiling. The community safety vs therapeutic engagement tension is well-crafted. Could benefit from a cultural safety dimension and additional environmental signals.",
+      "weaknesses": [
+        "Motivation for fire-setting is not adequately layered — typology (thrill, concealment, revenge, psychosis) matters for risk formulation",
+        "Forensic history and prior fire-setting context needs more depth"
+      ],
+      "missingLayers": [
+        "Victim or target specificity — is there an identified target?",
+        "Mental state at time of most recent fire",
+        "MHA vs voluntary management decision"
+      ],
+      "rewritePriority": "high",
+      "flags": [
+        "live_decision_under_pressure",
+        "legal_policy_hinge",
+        "vulnerable_third_party",
+        "defensible_disposition"
+      ]
+    },
+
+    {
+      "id": "CAP-001",
+      "title": "MHA Assessment for Involuntary Admission",
+      "topic": "capacity_mha",
+      "source": "capacityMhaQuestions.ts",
+      "difficulty": "difficult",
+      "signalCount": 5,
+      "complexityScore": 7,
+      "scoringRationale": "Criteria for involuntary admission, risk vs autonomy, least restrictive principle — standard examinable content. Solid question but does not add complexity beyond the core legal framework test.",
+      "weaknesses": [
+        "The clinical picture is fairly unambiguous — the candidate is not tested on borderline cases",
+        "No competing voices (MDT, family disagreement)"
+      ],
+      "missingLayers": [
+        "A family member who objects to admission",
+        "Patient who agrees to some treatment but not inpatient admission — voluntary vs involuntary partial engagement"
+      ],
+      "rewritePriority": "medium",
+      "flags": [
+        "legal_policy_hinge",
+        "consultant_leadership",
+        "defensible_disposition"
+      ]
+    },
+
+    {
+      "id": "CAP-002",
+      "title": "Capacity for Risky Lifestyle Choices",
+      "topic": "capacity_mha",
+      "source": "capacityMhaQuestions.ts",
+      "difficulty": "consultant",
+      "signalCount": 6,
+      "complexityScore": 8,
+      "scoringRationale": "A capacitous adult choosing a lifestyle that carries risk — classic autonomy vs beneficence tension. Strong question that avoids the paternalism trap. The candidate must distinguish impaired capacity from an unwise decision.",
+      "weaknesses": [
+        "The specific lifestyle choice could be made more ambiguous to increase difficulty"
+      ],
+      "missingLayers": [
+        "A second clinician who disagrees with the capacity finding — providing MDT conflict",
+        "Family member pressure to intervene"
+      ],
+      "rewritePriority": "low",
+      "flags": [
+        "legal_policy_hinge",
+        "vulnerable_third_party",
+        "consultant_leadership",
+        "defensible_disposition"
+      ]
+    },
+
+    {
+      "id": "CAP-003",
+      "title": "Advance Directive vs Current Incapacity",
+      "topic": "capacity_mha",
+      "source": "capacityMhaQuestions.ts",
+      "difficulty": "consultant",
+      "signalCount": 6,
+      "complexityScore": 8,
+      "scoringRationale": "Advance directive refusing ECT in a now-incapacitous patient conflicts with the clinical team's judgment. Legal hinge: does the AD take precedence? The ethical and legal framework for psychiatric advance directives is examinable and underpractised.",
+      "weaknesses": [
+        "Jurisdiction-specific variation in AD enforceability needs careful framing"
+      ],
+      "missingLayers": [
+        "Family member who disagrees with the AD",
+        "Whether the AD was created when the patient was capacitous and informed — provenance question"
+      ],
+      "rewritePriority": "low",
+      "flags": [
+        "legal_policy_hinge",
+        "consultant_leadership",
+        "defensible_disposition"
+      ]
+    },
+
+    {
+      "id": "CAP-004",
+      "title": "MHA — Refusing ECT in Severe Depression",
+      "topic": "capacity_mha",
+      "source": "capacityMhaQuestions.ts",
+      "difficulty": "difficult",
+      "signalCount": 5,
+      "complexityScore": 7,
+      "scoringRationale": "ECT refusal in severe psychotic depression with impaired capacity. The tribunal/legal authorisation pathway is examinable. Standard but clear signal structure.",
+      "weaknesses": [
+        "The question does not sufficiently test what the candidate does while awaiting legal authorisation",
+        "Medical complexity of the severe depression (physical deterioration, risk of death without treatment) could be more explicit"
+      ],
+      "missingLayers": [
+        "Physical health emergency — aspiration pneumonia from not eating, requiring dual team management",
+        "Family conflict about ECT specifically"
+      ],
+      "rewritePriority": "medium",
+      "flags": [
+        "legal_policy_hinge",
+        "vulnerable_third_party",
+        "defensible_disposition"
+      ]
+    },
+
+    {
+      "id": "CAP-005",
+      "title": "Guardianship and Substitute Decision-Making",
+      "topic": "capacity_mha",
+      "source": "capacityMhaQuestions.ts",
+      "difficulty": "difficult",
+      "signalCount": 5,
+      "complexityScore": 7,
+      "scoringRationale": "Guardianship and EPOA framework, substitute decision-making hierarchy, and conflicting family members. Adequate complexity but does not reach consultant ceiling. Adding an elder abuse dimension would sharpen it.",
+      "weaknesses": [
+        "The clinical urgency is not high — this feels more like a chronic management question",
+        "Competing family members are mentioned but their positions are not sufficiently contradictory"
+      ],
+      "missingLayers": [
+        "Financial decision embedded in the guardianship (not just medical)",
+        "Elder abuse suspicion from the substitute decision-maker themselves"
+      ],
+      "rewritePriority": "medium",
+      "flags": [
+        "legal_policy_hinge",
+        "consultant_leadership"
+      ]
+    },
+
+    {
+      "id": "CS-001",
+      "title": "Aboriginal Patient Refuses Assessment — Cultural Safety Crisis",
+      "topic": "cultural_safety",
+      "source": "culturalSafetyQuestions.ts",
+      "difficulty": "consultant",
+      "signalCount": 6,
+      "complexityScore": 8,
+      "scoringRationale": "Institutional racism as a clinical barrier, community distrust as a legitimate historical response, Aboriginal Liaison Officer engagement, and the candidate's self-reflection on their own cultural positioning. Strong question with the right framing — refuses assessment, not refuses treatment.",
+      "weaknesses": [
+        "The clinical urgency is not maximal — could benefit from a time-pressure element"
+      ],
+      "missingLayers": [
+        "A family member who is trying to advocate but being excluded by the team",
+        "Prior adverse clinical experience documented in the patient's record"
+      ],
+      "rewritePriority": "low",
+      "flags": [
+        "live_decision_under_pressure",
+        "mdt_family_system_conflict",
+        "consultant_leadership"
+      ]
+    },
+
+    {
+      "id": "CS-002",
+      "title": "CALD Patient — Refugee Trauma and Interpreter Complexity",
+      "topic": "cultural_safety",
+      "source": "culturalSafetyQuestions.ts",
+      "difficulty": "difficult",
+      "signalCount": 5,
+      "complexityScore": 7,
+      "scoringRationale": "Interpreter professional standards, trauma-informed care for refugee background, and cultural explanatory models. Solid question. The community interpreter (family member) as the presenting interpreter is a well-known safety issue.",
+      "weaknesses": [
+        "The clinical picture is not sufficiently ambiguous — the candidate can identify most signals without much deliberation",
+        "Traumatic content with a family interpreter present creates clinical risk that could be surfaced more acutely"
+      ],
+      "missingLayers": [
+        "Family member interpreter who is related to the perpetrator of trauma (common in DV presentations)",
+        "Cultural brokerage role of ALO or equivalent"
+      ],
+      "rewritePriority": "medium",
+      "flags": [
+        "vulnerable_third_party",
+        "mdt_family_system_conflict",
+        "consultant_leadership"
+      ]
+    },
+
+    {
+      "id": "CS-003",
+      "title": "Cultural Explanatory Model Conflict with Biomedical Framework",
+      "topic": "cultural_safety",
+      "source": "culturalSafetyQuestions.ts",
+      "difficulty": "difficult",
+      "signalCount": 5,
+      "complexityScore": 7,
+      "scoringRationale": "Navigating between biomedical and cultural illness frameworks without forcing either. The candidate who dismisses the cultural explanation outright fails. Adequate complexity but not at the consultant ceiling.",
+      "weaknesses": [
+        "Clinical urgency is absent — the scenario feels educational rather than clinical emergency",
+        "The consequence of getting it wrong is underspecified"
+      ],
+      "missingLayers": [
+        "Time pressure — patient or family is planning to leave against advice to seek traditional healing",
+        "A parallel clinical safety concern (medication non-adherence consequences)"
+      ],
+      "rewritePriority": "high",
+      "flags": [
+        "mdt_family_system_conflict",
+        "consultant_leadership"
+      ]
+    },
+
+    {
+      "id": "FOR-001",
+      "title": "Court Psychiatric Report — Fitness to Stand Trial",
+      "topic": "forensic",
+      "source": "forensicQuestions.ts",
+      "difficulty": "consultant",
+      "signalCount": 6,
+      "complexityScore": 8,
+      "scoringRationale": "Fitness to plead criteria, the distinction between fitness and mental state at the time of the offence, report structure for court, and the role of the expert witness vs treating clinician. Legal hinge is clear. Good question.",
+      "weaknesses": [
+        "The candidate's dual role (treating vs expert) tension could be made more explicit and conflicted"
+      ],
+      "missingLayers": [
+        "Defence vs prosecution instructing tension",
+        "What happens if the defendant improves with treatment — does fitness change?"
+      ],
+      "rewritePriority": "low",
+      "flags": [
+        "legal_policy_hinge",
+        "consultant_leadership",
+        "defensible_disposition"
+      ]
+    },
+
+    {
+      "id": "FOR-002",
+      "title": "Dangerous Offender Assessment — Extended Supervision Order",
+      "topic": "forensic",
+      "source": "forensicQuestions.ts",
+      "difficulty": "consultant",
+      "signalCount": 6,
+      "complexityScore": 8,
+      "scoringRationale": "ESO/EIO framework, structured professional risk assessment (HCR-20/SVR-20), and the limits of prediction in forensic psychiatry. The ethical tension between public protection and individual liberty is well-handled. Strong question for this niche topic.",
+      "weaknesses": [
+        "The specific offending profile details are limited — the candidate has less to work with than optimal"
+      ],
+      "missingLayers": [
+        "Defence expert report that disagrees with the assessment",
+        "The defendant's own articulation of their future plans"
+      ],
+      "rewritePriority": "low",
+      "flags": [
+        "legal_policy_hinge",
+        "vulnerable_third_party",
+        "consultant_leadership",
+        "defensible_disposition"
+      ]
+    },
+
+    {
+      "id": "FOR-003",
+      "title": "Not Guilty by Mental Impairment Assessment",
+      "topic": "forensic",
+      "source": "forensicQuestions.ts",
+      "difficulty": "difficult",
+      "signalCount": 5,
+      "complexityScore": 7,
+      "scoringRationale": "NGMI criteria, retrospective mental state at time of offending, and the complexity of reconstructing intent from contemporaneous records. Adequate complexity but would benefit from more ambiguity in the mental state evidence.",
+      "weaknesses": [
+        "The mental state evidence is fairly clear-cut — a genuinely ambiguous case would be harder",
+        "Consequences of NGMI finding (forensic order) not sufficiently developed"
+      ],
+      "missingLayers": [
+        "Conflicting accounts — the defendant's account vs CCTV vs witness",
+        "Cultural context affecting mental state interpretation"
+      ],
+      "rewritePriority": "medium",
+      "flags": [
+        "legal_policy_hinge",
+        "consultant_leadership",
+        "defensible_disposition"
+      ]
+    },
+
+    {
+      "id": "SYS-001",
+      "title": "MDT Conflict About Discharge",
+      "topic": "mdt_systems",
+      "source": "mdtSystemsQuestions.ts",
+      "difficulty": "difficult",
+      "signalCount": 5,
+      "complexityScore": 7,
+      "scoringRationale": "Inter-professional disagreement about discharge timing, clinical authority vs nursing advocacy. Good process signals but the patient's clinical complexity is underdeveloped.",
+      "weaknesses": [
+        "The patient's specific clinical presentation is vague — the conflict dominates over the clinical detail",
+        "Resolution pathway is too obvious"
+      ],
+      "missingLayers": [
+        "Patient's own view on discharge",
+        "A genuine safety risk that the nursing team has identified that the doctor has missed"
+      ],
+      "rewritePriority": "high",
+      "flags": [
+        "mdt_family_system_conflict",
+        "consultant_leadership",
+        "defensible_disposition"
+      ]
+    },
+
+    {
+      "id": "SYS-002",
+      "title": "Systems Advocacy — Inadequate Community Resources",
+      "topic": "mdt_systems",
+      "source": "mdtSystemsQuestions.ts",
+      "difficulty": "difficult",
+      "signalCount": 4,
+      "complexityScore": 6,
+      "scoringRationale": "Systemic advocacy, working within resource constraints, escalation through appropriate channels. Adequate but below consultant complexity. The question tests knowledge of the advocacy role without clinical urgency.",
+      "weaknesses": [
+        "No immediate patient safety pressure",
+        "Feels more like a policy discussion than a clinical scenario",
+        "Signal density is low — four signals is below MEQ standard"
+      ],
+      "missingLayers": [
+        "Specific patient in immediate danger due to the resource gap",
+        "Media or political pressure angle",
+        "Competing administrative response that the candidate must navigate"
+      ],
+      "rewritePriority": "critical",
+      "flags": [
+        "consultant_leadership"
+      ]
+    },
+
+    {
+      "id": "SYS-003",
+      "title": "Family Conflict with MDT Treatment Plan",
+      "topic": "mdt_systems",
+      "source": "mdtSystemsQuestions.ts",
+      "difficulty": "difficult",
+      "signalCount": 5,
+      "complexityScore": 7,
+      "scoringRationale": "Family who disagrees with treatment plan, patient with partial capacity, MDT cohesion vs family pressure. Solid signal structure but the stakes are not high enough for consultant ceiling.",
+      "weaknesses": [
+        "Patient's own view is underspecified — this is the most important voice",
+        "The consequence if the family's view prevails is not articulated"
+      ],
+      "missingLayers": [
+        "A genuinely clinically valid point embedded in the family's objection",
+        "Cultural dimension to the family's position"
+      ],
+      "rewritePriority": "high",
+      "flags": [
+        "mdt_family_system_conflict",
+        "consultant_leadership",
+        "defensible_disposition"
+      ]
+    },
+
+    {
+      "id": "PER-001",
+      "title": "Antidepressant in Pregnancy — Risk-Benefit Formulation",
+      "topic": "perinatal",
+      "source": "perinatalQuestions.ts",
+      "difficulty": "difficult",
+      "signalCount": 5,
+      "complexityScore": 7,
+      "scoringRationale": "Risk-benefit framework for antidepressant use in pregnancy, fetal risk vs untreated maternal illness risk. The candidate who refuses to prescribe fails. Good balance between evidence base and individual risk calculation.",
+      "weaknesses": [
+        "The case is relatively straightforward once the framework is understood",
+        "Obstetric liaison dimension could be stronger"
+      ],
+      "missingLayers": [
+        "Partner or family member opposed to medication in pregnancy",
+        "Previous postpartum episode adding relapse risk"
+      ],
+      "rewritePriority": "medium",
+      "flags": [
+        "vulnerable_third_party",
+        "defensible_disposition"
+      ]
+    },
+
+    {
+      "id": "PER-002",
+      "title": "Postpartum Psychosis — Community Identification and Emergency Response",
+      "topic": "perinatal",
+      "source": "perinatalQuestions.ts",
+      "difficulty": "consultant",
+      "signalCount": 6,
+      "complexityScore": 8,
+      "scoringRationale": "Acute postpartum psychosis identified in a community visit — infant safety, mother-baby unit access, crisis pathway activation, and family psychoeducation. The infant safety signal is the critical discriminator. Good question.",
+      "weaknesses": [
+        "The maternal diagnosis is fairly clear — less diagnostic ambiguity than q3"
+      ],
+      "missingLayers": [
+        "Mother who presents as superficially well but has an infant who is being neglected",
+        "Language barrier adding assessment complexity"
+      ],
+      "rewritePriority": "low",
+      "flags": [
+        "live_decision_under_pressure",
+        "vulnerable_third_party",
+        "mdt_family_system_conflict",
+        "consultant_leadership",
+        "defensible_disposition"
+      ]
+    },
+
+    {
+      "id": "PER-003",
+      "title": "Perinatal Bipolar — Mood Stabiliser Risk in Third Trimester",
+      "topic": "perinatal",
+      "source": "perinatalQuestions.ts",
+      "difficulty": "consultant",
+      "signalCount": 6,
+      "complexityScore": 8,
+      "scoringRationale": "Lithium in third trimester (Ebstein anomaly risk vs inadequately treated bipolar relapse risk in postpartum period), medication selection, obstetric liaison, infant monitoring. Solid pharmacology signal density. The candidate who just stops the lithium fails.",
+      "weaknesses": [
+        "Valproate as the avoided comparator could be more explicitly integrated"
+      ],
+      "missingLayers": [
+        "Previous severe postpartum episode reinforcing the relapse risk",
+        "Patient's own ambivalence about staying on medication"
+      ],
+      "rewritePriority": "low",
+      "flags": [
+        "vulnerable_third_party",
+        "legal_policy_hinge",
+        "defensible_disposition"
+      ]
+    },
+
+    {
+      "id": "SU-001",
+      "title": "Alcohol Detoxification and Liver Disease",
+      "topic": "substance_use",
+      "source": "substanceUseQuestions.ts",
+      "difficulty": "difficult",
+      "signalCount": 5,
+      "complexityScore": 7,
+      "scoringRationale": "Alcohol withdrawal seizure risk, benzodiazepine dosing in liver disease (impaired metabolism), delirium tremens prophylaxis, and physical-psychiatric joint management. Good clinical pharmacology test but below consultant ceiling.",
+      "weaknesses": [
+        "No competing pressures — the clinical pathway is relatively clear once the diagnosis is made",
+        "Motivational and psychosocial layer is absent"
+      ],
+      "missingLayers": [
+        "Patient who denies the severity of use — making assessment depend on indirect signs",
+        "Withdrawal in an outpatient context — is admission warranted?"
+      ],
+      "rewritePriority": "medium",
+      "flags": [
+        "live_decision_under_pressure",
+        "defensible_disposition"
+      ]
+    },
+
+    {
+      "id": "SU-002",
+      "title": "Stimulant-Induced Psychosis vs Primary Psychosis",
+      "topic": "substance_use",
+      "source": "substanceUseQuestions.ts",
+      "difficulty": "difficult",
+      "signalCount": 5,
+      "complexityScore": 7,
+      "scoringRationale": "Differential diagnosis of stimulant-induced vs primary psychosis, management of acute phase, and long-term monitoring framework. The diagnostic uncertainty is genuine and examinable. Slightly overlaps with ED-001 scenario territory.",
+      "weaknesses": [
+        "Overlaps significantly with ED-002 (acute psychosis in ED setting) — differentiation could be clearer",
+        "The specific substance use pattern and timeline need more precision for the differential to work"
+      ],
+      "missingLayers": [
+        "Family history of schizophrenia as a confounding risk factor",
+        "Agitation management in the acute phase"
+      ],
+      "rewritePriority": "medium",
+      "flags": [
+        "live_decision_under_pressure",
+        "defensible_disposition"
+      ]
+    },
+
+    {
+      "id": "SU-003",
+      "title": "Opioid Dependence and Chronic Pain — OST Decision",
+      "topic": "substance_use",
+      "source": "substanceUseQuestions.ts",
+      "difficulty": "difficult",
+      "signalCount": 5,
+      "complexityScore": 7,
+      "scoringRationale": "Chronic pain comorbid with opioid dependence, OST initiation, stigma in the pain clinic, and the GP who is prescribing inadequately. Solid question. The stigma dimension is important and examinable.",
+      "weaknesses": [
+        "The prescriber conflict is underdeveloped — what specifically is the GP doing wrong?",
+        "The patient's own treatment goals are not sufficiently elicited"
+      ],
+      "missingLayers": [
+        "Diversion risk assessment",
+        "Dual prescribing risk — patient seeing multiple prescribers"
+      ],
+      "rewritePriority": "medium",
+      "flags": [
+        "unsafe_tempting_shortcut",
+        "defensible_disposition"
+      ]
+    },
+
+    {
+      "id": "GOV-001",
+      "title": "Complaint About a Colleague — Mandatory vs Voluntary Reporting",
+      "topic": "governance",
+      "source": "governanceQuestions.ts",
+      "difficulty": "difficult",
+      "signalCount": 5,
+      "complexityScore": 7,
+      "scoringRationale": "AHPRA mandatory reporting threshold, colleague protection vs patient safety, and the process for making a complaint. Solid governance content. Not as layered as q4 (impaired registrar) but covers the threshold decision well.",
+      "weaknesses": [
+        "The specific nature of the colleague's behaviour is somewhat vague",
+        "No patient safety consequence is directly evident — making it more abstract than ideal"
+      ],
+      "missingLayers": [
+        "A patient who has been directly harmed",
+        "Collegial pressure not to report"
+      ],
+      "rewritePriority": "medium",
+      "flags": [
+        "legal_policy_hinge",
+        "consultant_leadership"
+      ]
+    },
+
+    {
+      "id": "GOV-002",
+      "title": "Adverse Event Review — RCA Participation",
+      "topic": "governance",
+      "source": "governanceQuestions.ts",
+      "difficulty": "difficult",
+      "signalCount": 5,
+      "complexityScore": 7,
+      "scoringRationale": "RCA process, just culture vs blame culture, systems thinking, and the candidate's role as both participant and potential subject. Good process knowledge test.",
+      "weaknesses": [
+        "The specific adverse event is not vivid enough — the stakes feel abstract",
+        "The candidate's personal emotional response to being subject to RCA is not developed"
+      ],
+      "missingLayers": [
+        "A specific system failure identified (not just individual error)",
+        "Legal representation or union involvement angle"
+      ],
+      "rewritePriority": "medium",
+      "flags": [
+        "consultant_leadership"
+      ]
+    },
+
+    {
+      "id": "GOV-003",
+      "title": "Privacy Breach — Electronic Health Record Access",
+      "topic": "governance",
+      "source": "governanceQuestions.ts",
+      "difficulty": "standard",
+      "signalCount": 4,
+      "complexityScore": 6,
+      "scoringRationale": "Privacy Act obligations, mandatory notification to the Office of the Australian Information Commissioner, and risk stratification of the breach. Adequate as a test of basic governance knowledge but below MEQ complexity.",
+      "weaknesses": [
+        "Single-issue question without competing priorities",
+        "No clinical urgency embedded",
+        "The answer is relatively formulaic"
+      ],
+      "missingLayers": [
+        "The person whose records were breached presents to clinic — creating a real-time disclosure obligation",
+        "The colleague who accessed the records has a plausible clinical reason — introducing ambiguity"
+      ],
+      "rewritePriority": "critical",
+      "flags": [
+        "legal_policy_hinge"
+      ]
+    },
+
+    {
+      "id": "GOV-004",
+      "title": "Clinical Audit — Presenting Unfavourable Results",
+      "topic": "governance",
+      "source": "governanceQuestions.ts",
+      "difficulty": "standard",
+      "signalCount": 4,
+      "complexityScore": 6,
+      "scoringRationale": "Quality improvement methodology, presenting data that reflects poorly on the team, and leading change from audit findings. Adequate competency test but too process-oriented and not sufficiently clinically embedded.",
+      "weaknesses": [
+        "No immediate patient safety signal embedded",
+        "The scenario is comfortable — it does not put the candidate under real pressure",
+        "Result: checklist answer risk"
+      ],
+      "missingLayers": [
+        "A specific patient harmed by the practice being audited",
+        "Team resistance to findings",
+        "External body (accreditation, coroner) also reviewing the same data"
+      ],
+      "rewritePriority": "critical",
+      "flags": [
+        "consultant_leadership"
+      ]
+    },
+
+    {
+      "id": "GOV-005",
+      "title": "Prescribing Governance — Off-Label Antipsychotic in an Elderly Patient",
+      "topic": "governance",
+      "source": "governanceQuestions.ts",
+      "difficulty": "difficult",
+      "signalCount": 5,
+      "complexityScore": 7,
+      "scoringRationale": "Off-label prescribing in elderly (TGA black box), informed consent for off-label use, monitoring obligations, and the GP requesting the prescription. Adequate signal density with a genuine legal hinge.",
+      "weaknesses": [
+        "The patient's own voice is absent — what do they think about the medication?",
+        "The specific indication is not examinable enough — 'behavioural symptoms of dementia' is generic"
+      ],
+      "missingLayers": [
+        "Family pressure to prescribe vs patient refusal",
+        "RACF nurse who has already started administering PRN doses without a formal order"
+      ],
+      "rewritePriority": "medium",
+      "flags": [
+        "legal_policy_hinge",
+        "vulnerable_third_party",
+        "defensible_disposition"
+      ]
+    },
+
+    {
+      "id": "ED-001",
+      "title": "ED Liaison — Acute Self-Harm, High Distress",
+      "topic": "ed_psychiatry",
+      "source": "edQuestions.ts",
+      "difficulty": "consultant",
+      "signalCount": 6,
+      "complexityScore": 8,
+      "scoringRationale": "Acute self-harm in the ED, engagement vs assessment, triage team's dismissal of the presentation as 'attention-seeking', means access, and disposition under bed pressure. The triage team attitude is a systems pressure signal. Good question.",
+      "weaknesses": [
+        "The ED clinical chaos (waiting room pressure, nursing handover) could be woven in more vividly"
+      ],
+      "missingLayers": [
+        "Patient who is medically compromised by the self-harm (wound needing suturing) and refusing medical treatment",
+        "A specific interpersonal stressor that emerged today as the precipitant"
+      ],
+      "rewritePriority": "low",
+      "flags": [
+        "live_decision_under_pressure",
+        "unsafe_tempting_shortcut",
+        "vulnerable_third_party",
+        "mdt_family_system_conflict",
+        "consultant_leadership",
+        "defensible_disposition"
+      ]
+    },
+
+    {
+      "id": "ED-002",
+      "title": "ED — Acute Psychosis and Violence Risk",
+      "topic": "ed_psychiatry",
+      "source": "edQuestions.ts",
+      "difficulty": "difficult",
+      "signalCount": 5,
+      "complexityScore": 7,
+      "scoringRationale": "Acute psychosis with agitation, chemical sedation decision, least restrictive restraint, and MHA assessment. Adequate clinical urgency but signal density is below consultant ceiling.",
+      "weaknesses": [
+        "The cause of psychosis is unspecified — organic aetiology workup is an important signal that could be explicit",
+        "Staff safety is raised but not fully developed"
+      ],
+      "missingLayers": [
+        "Organic aetiology workup — is this delirium, stimulant-induced, or primary psychosis?",
+        "Aetiology-specific treatment pathway"
+      ],
+      "rewritePriority": "medium",
+      "flags": [
+        "live_decision_under_pressure",
+        "legal_policy_hinge",
+        "consultant_leadership"
+      ]
+    },
+
+    {
+      "id": "ED-003",
+      "title": "ED — High-Frequency Attender",
+      "topic": "ed_psychiatry",
+      "source": "edQuestions.ts",
+      "difficulty": "difficult",
+      "signalCount": 5,
+      "complexityScore": 7,
+      "scoringRationale": "Habituation bias, system failure behind frequent attendance, care plan development, and ED team attitude. Duplicates some ground with q24 (ORIGINAL_STEMS). The two should be differentiated more clearly.",
+      "weaknesses": [
+        "Substantially overlaps with q24 — same clinical scenario type",
+        "The specific clinical presentation this visit is underspecified"
+      ],
+      "missingLayers": [
+        "A specific new risk factor this presentation that distinguishes it from previous visits",
+        "The team's care plan for this patient — does one exist? Has it failed?"
+      ],
+      "rewritePriority": "high",
+      "flags": [
+        "unsafe_tempting_shortcut",
+        "mdt_family_system_conflict",
+        "consultant_leadership"
+      ]
+    },
+
+    {
+      "id": "QA-001",
+      "title": "RCA Participation — Medication Error",
+      "topic": "quality_assurance",
+      "source": "qaQuestions.ts",
+      "difficulty": "difficult",
+      "signalCount": 5,
+      "complexityScore": 7,
+      "scoringRationale": "Systems-based RCA, just culture, human factors analysis, and open disclosure. Good process knowledge test. Overlaps somewhat with GOV-002.",
+      "weaknesses": [
+        "Overlaps with GOV-002 in content — differentiation needed",
+        "The specific medication error type matters for signal depth — it is underspecified"
+      ],
+      "missingLayers": [
+        "A near-miss on a second patient from the same system failure — escalating urgency",
+        "The doctor involved being defensive about the error"
+      ],
+      "rewritePriority": "high",
+      "flags": [
+        "legal_policy_hinge",
+        "consultant_leadership"
+      ]
+    },
+
+    {
+      "id": "QA-002",
+      "title": "Morbidity and Mortality Review — Post-Discharge Suicide",
+      "topic": "quality_assurance",
+      "source": "qaQuestions.ts",
+      "difficulty": "consultant",
+      "signalCount": 6,
+      "complexityScore": 8,
+      "scoringRationale": "Post-discharge suicide M&M review, system review vs individual blame, open disclosure parallel process, coronial interface, and staff distress. The candidate's role as the reviewer (not as the treating consultant) adds complexity. Overlaps with q12 but from a review rather than immediate response perspective.",
+      "weaknesses": [
+        "The distinction from q12 could be made sharper — they share the same basic scenario type"
+      ],
+      "missingLayers": [
+        "A second similar case in the preceding six months — pattern recognition signal",
+        "Hospital legal team's involvement creating a disclosure tension"
+      ],
+      "rewritePriority": "medium",
+      "flags": [
+        "legal_policy_hinge",
+        "mdt_family_system_conflict",
+        "consultant_leadership"
+      ]
+    },
+
+    {
+      "id": "QA-003",
+      "title": "Clinical Audit Leadership — Implementing Change",
+      "topic": "quality_assurance",
+      "source": "qaQuestions.ts",
+      "difficulty": "difficult",
+      "signalCount": 4,
+      "complexityScore": 6,
+      "scoringRationale": "Change management from audit findings, team resistance, PDSA cycle. Process-oriented and below MEQ clinical complexity. Similar to GOV-004.",
+      "weaknesses": [
+        "Duplicates GOV-004 territory",
+        "No patient safety urgency",
+        "Checklist answer risk — candidates can list PDSA steps without demonstrating clinical judgment"
+      ],
+      "missingLayers": [
+        "A specific patient being harmed while the change is being implemented",
+        "Senior clinician who is resistant to the change and has political power"
+      ],
+      "rewritePriority": "critical",
+      "flags": [
+        "consultant_leadership"
+      ]
+    },
+
+    {
+      "id": "QA-004",
+      "title": "Incident Report After Near-Miss — Narcotic Diversion",
+      "topic": "quality_assurance",
+      "source": "qaQuestions.ts",
+      "difficulty": "difficult",
+      "signalCount": 5,
+      "complexityScore": 7,
+      "scoringRationale": "Narcotic diversion near-miss, mandatory incident reporting, staff member who may be the diverter, and patient safety. Some overlap with q4 (impaired registrar) but from a reporting-not-supervision perspective.",
+      "weaknesses": [
+        "The staff member dimension duplicates q4's drug diversion angle — needs differentiation",
+        "The near-miss consequences are not vivid enough"
+      ],
+      "missingLayers": [
+        "A patient who may have received a diluted or substituted medication",
+        "The diverting staff member's clinical role — does it affect patient care directly?"
+      ],
+      "rewritePriority": "medium",
+      "flags": [
+        "legal_policy_hinge",
+        "vulnerable_third_party",
+        "consultant_leadership"
+      ]
+    },
+
+    {
+      "id": "PSY-001",
+      "title": "Transference Management — Erotic Transference",
+      "topic": "psychotherapy",
+      "source": "psychotherapyQuestions.ts",
+      "difficulty": "consultant",
+      "signalCount": 6,
+      "complexityScore": 8,
+      "scoringRationale": "Erotic transference, boundary maintenance, the candidate's own countertransference, supervision obligation, and therapeutic frame management. The candidate who ignores or interprets the transference in an exploratory way without addressing the boundary is wrong. Good question.",
+      "weaknesses": [
+        "The patient's history that makes erotic transference understandable could be more developed"
+      ],
+      "missingLayers": [
+        "Patient's prior experience with a boundary-violating clinician",
+        "Supervisor's response to disclosure of the transference"
+      ],
+      "rewritePriority": "low",
+      "flags": [
+        "unsafe_tempting_shortcut",
+        "legal_policy_hinge",
+        "consultant_leadership"
+      ]
+    },
+
+    {
+      "id": "PSY-002",
+      "title": "Boundary Violations — Clinician Receives Significant Gift",
+      "topic": "psychotherapy",
+      "source": "psychotherapyQuestions.ts",
+      "difficulty": "consultant",
+      "signalCount": 6,
+      "complexityScore": 8,
+      "scoringRationale": "Gift-giving boundary, power imbalance, therapeutic meaning of the gift, and the clinical and regulatory response. The 'it's just a small gift' trap is well-constructed. Explores how to decline in a therapeutically useful way rather than punitively.",
+      "weaknesses": [],
+      "missingLayers": [
+        "The gift being given in the context of the patient planning to end therapy — adds motivation complexity",
+        "A team member who encourages acceptance ('don't make a fuss')"
+      ],
+      "rewritePriority": "low",
+      "flags": [
+        "unsafe_tempting_shortcut",
+        "legal_policy_hinge",
+        "consultant_leadership"
+      ]
+    },
+
+    {
+      "id": "PSY-003",
+      "title": "Therapy Termination — Abandonment vs Appropriate Ending",
+      "topic": "psychotherapy",
+      "source": "psychotherapyQuestions.ts",
+      "difficulty": "difficult",
+      "signalCount": 5,
+      "complexityScore": 7,
+      "scoringRationale": "Planned termination with a patient who has separation anxiety, clinician's obligation to manage the ending therapeutically, and the distinction between abandonment and appropriate closure. Adequate but not at consultant ceiling.",
+      "weaknesses": [
+        "The patient's clinical risk at termination is not developed — a suicidal patient facing termination is a much harder version of this question",
+        "The clinical complexity is more theoretical than urgent"
+      ],
+      "missingLayers": [
+        "Acute decompensation at the point of termination announcement",
+        "Patient threatening to harm themselves if therapy ends"
+      ],
+      "rewritePriority": "high",
+      "flags": [
+        "consultant_leadership",
+        "defensible_disposition"
+      ]
+    },
+
+    {
+      "id": "DIS-001",
+      "title": "High-Risk Discharge Planning — Complex Social Situation",
+      "topic": "discharge_review",
+      "source": "dischargeReviewQuestions.ts",
+      "difficulty": "consultant",
+      "signalCount": 6,
+      "complexityScore": 8,
+      "scoringRationale": "Complex psychosocial barriers to safe discharge, housing instability, medication adherence, community follow-up, and family conflict about discharge timing. Good signal density. The unsafe-tempting-shortcut is completing the safety plan in-hospital without verifying the external environment.",
+      "weaknesses": [],
+      "missingLayers": [
+        "Time pressure — bed needed for another admission",
+        "Patient who has already packed their bag and is planning to leave AMA"
+      ],
+      "rewritePriority": "low",
+      "flags": [
+        "live_decision_under_pressure",
+        "unsafe_tempting_shortcut",
+        "mdt_family_system_conflict",
+        "consultant_leadership",
+        "defensible_disposition"
+      ]
+    },
+
+    {
+      "id": "DIS-002",
+      "title": "Premature Discharge — Bed Pressure and Clinical Disagreement",
+      "topic": "discharge_review",
+      "source": "dischargeReviewQuestions.ts",
+      "difficulty": "consultant",
+      "signalCount": 5,
+      "complexityScore": 7,
+      "scoringRationale": "Bed pressure, clinical authority, and a registrar pushing for discharge before consultant review. Overlap with q13 and q21. The question type is used multiple times across the bank — differentiation needed.",
+      "weaknesses": [
+        "Substantially overlaps with q13, q21, and the GOV question set",
+        "The patient's actual clinical state at the time is not sufficiently specified"
+      ],
+      "missingLayers": [
+        "A specific safety signal the registrar has missed",
+        "Family arriving and wanting the patient home — additional pressure from another direction"
+      ],
+      "rewritePriority": "high",
+      "flags": [
+        "mdt_family_system_conflict",
+        "consultant_leadership",
+        "defensible_disposition"
+      ]
+    },
+
+    {
+      "id": "DIS-003",
+      "title": "Complex Discharge — Dual Diagnosis and Housing Instability",
+      "topic": "discharge_review",
+      "source": "dischargeReviewQuestions.ts",
+      "difficulty": "consultant",
+      "signalCount": 6,
+      "complexityScore": 8,
+      "scoringRationale": "Dual diagnosis (psychosis + substance use), housing instability (discharged to homelessness), medication depot initiation, and community follow-up in a fragmented system. The unsafe-tempting-shortcut is prescribing oral medication to someone with no fixed address and no support.",
+      "weaknesses": [],
+      "missingLayers": [
+        "Comorbid physical health issue requiring community follow-up (e.g. Hepatitis C, HIV)",
+        "Family completely absent or estranged — no safety net"
+      ],
+      "rewritePriority": "low",
+      "flags": [
+        "unsafe_tempting_shortcut",
+        "vulnerable_third_party",
+        "mdt_family_system_conflict",
+        "defensible_disposition"
+      ]
+    },
+
+    {
+      "id": "DOC-001",
+      "title": "Capacity Assessment Documentation Standard",
+      "topic": "documentation",
+      "source": "documentationQuestions.ts",
+      "difficulty": "difficult",
+      "signalCount": 5,
+      "complexityScore": 7,
+      "scoringRationale": "Four-domain capacity documentation, medico-legal standard, and the gap between a cursory note and a defensible assessment. Overlaps with q16 (ORIGINAL_STEMS) but from a less acute scenario.",
+      "weaknesses": [
+        "Substantially overlaps with q16 — both are capacity documentation questions with similar structures",
+        "The stakes (life-sustaining treatment refusal) are lower here, reducing urgency"
+      ],
+      "missingLayers": [
+        "Dispute from the family leading to a legal challenge",
+        "The registrar's note being subpoenaed as evidence — making the inadequacy consequence concrete"
+      ],
+      "rewritePriority": "high",
+      "flags": [
+        "legal_policy_hinge",
+        "consultant_leadership"
+      ]
+    },
+
+    {
+      "id": "DOC-002",
+      "title": "Medico-Legal Report — Personal Injury Claim",
+      "topic": "documentation",
+      "source": "documentationQuestions.ts",
+      "difficulty": "consultant",
+      "signalCount": 5,
+      "complexityScore": 7,
+      "scoringRationale": "Expert witness role, treating vs independent expert tension, objectivity obligations, and report structure for legal proceedings. Different from FOR-001 (court report) in context but similar skill set.",
+      "weaknesses": [
+        "Some overlap with FOR-001 in content",
+        "The specific psychiatric condition at issue is underspecified"
+      ],
+      "missingLayers": [
+        "Evidence that conflicts with the patient's account of symptoms",
+        "Solicitor pressure to modify the report's conclusions"
+      ],
+      "rewritePriority": "medium",
+      "flags": [
+        "legal_policy_hinge",
+        "consultant_leadership",
+        "defensible_disposition"
+      ]
+    },
+
+    {
+      "id": "DOC-003",
+      "title": "Incident Documentation — After a Patient Assault",
+      "topic": "documentation",
+      "source": "documentationQuestions.ts",
+      "difficulty": "standard",
+      "signalCount": 4,
+      "complexityScore": 6,
+      "scoringRationale": "Incident documentation, victim support (staff), mandatory reporting, and retrospective accuracy. Below MEQ complexity. Too process-focused without clinical depth.",
+      "weaknesses": [
+        "Single-issue question — process knowledge only",
+        "No clinical complexity or competing values",
+        "Overly administrative in character"
+      ],
+      "missingLayers": [
+        "Pressure from management to minimise the incident in documentation",
+        "The assaulted staff member's clinical deterioration (psychological) requiring support",
+        "A patient safety issue that contributed to the assault (inadequate observation levels)"
+      ],
+      "rewritePriority": "critical",
+      "flags": [
+        "legal_policy_hinge"
+      ]
+    },
+
+    {
+      "id": "SUP-001",
+      "title": "Struggling Registrar — Academic and Clinical Performance",
+      "topic": "supervision",
+      "source": "supervisionQuestions.ts",
+      "difficulty": "difficult",
+      "signalCount": 5,
+      "complexityScore": 7,
+      "scoringRationale": "Dual role of supervisor (supporting and assessing), early identification of a registrar in difficulty, and the process for managing performance below standard. Good structure but patient safety is not sufficiently at stake.",
+      "weaknesses": [
+        "Patient safety consequence of the registrar's performance is underspecified",
+        "The registrar's own wellbeing as a contributing factor is underdeveloped"
+      ],
+      "missingLayers": [
+        "A specific patient harmed by the registrar's clinical error",
+        "The registrar disclosing a mental health condition that explains their performance"
+      ],
+      "rewritePriority": "medium",
+      "flags": [
+        "consultant_leadership"
+      ]
+    },
+
+    {
+      "id": "SUP-002",
+      "title": "Boundary Issue — Registrar and Patient",
+      "topic": "supervision",
+      "source": "supervisionQuestions.ts",
+      "difficulty": "consultant",
+      "signalCount": 6,
+      "complexityScore": 8,
+      "scoringRationale": "Registrar boundary violation (social media contact with a current patient), supervisor obligation to intervene, AHPRA reporting threshold, and patient protection. The temptation to 'have a quiet word' rather than escalate formally is the unsafe-tempting-shortcut.",
+      "weaknesses": [],
+      "missingLayers": [
+        "The patient's perspective — have they complained, or are they unaware it is a violation?",
+        "The registrar's explanation (e.g. they considered the therapeutic relationship ended)"
+      ],
+      "rewritePriority": "low",
+      "flags": [
+        "unsafe_tempting_shortcut",
+        "legal_policy_hinge",
+        "vulnerable_third_party",
+        "consultant_leadership"
+      ]
+    },
+
+    {
+      "id": "SUP-003",
+      "title": "AHPRA Complaint — Supervisor's Response",
+      "topic": "supervision",
+      "source": "supervisionQuestions.ts",
+      "difficulty": "consultant",
+      "signalCount": 6,
+      "complexityScore": 8,
+      "scoringRationale": "AHPRA complaint process, supervisor's obligation, provisional measures while under investigation, and the candidate's medico-legal self-protection. The supervisor is named in the complaint — creating a conflict of interest that must be managed.",
+      "weaknesses": [
+        "The nature of the complaint is not sufficiently specific — what did the registrar allegedly do?"
+      ],
+      "missingLayers": [
+        "The registrar's own distress and potential impairment during the investigation",
+        "Legal advice vs regulatory process distinction"
+      ],
+      "rewritePriority": "low",
+      "flags": [
+        "legal_policy_hinge",
+        "mdt_family_system_conflict",
+        "consultant_leadership"
+      ]
+    },
+
+    {
+      "id": "SUP-004",
+      "title": "Mandated Supervision — Registrar Resenting Oversight",
+      "topic": "supervision",
+      "source": "supervisionQuestions.ts",
+      "difficulty": "difficult",
+      "signalCount": 5,
+      "complexityScore": 7,
+      "scoringRationale": "Mandated supervision after an adverse event, registrar who resists the process, and maintaining a productive supervisory relationship under mandatory conditions. Adequate complexity but below consultant ceiling.",
+      "weaknesses": [
+        "The patient safety consequence that led to mandated supervision is underspecified",
+        "The registrar's resistance could be developed with more nuance — is it denial, shame, or legitimate grievance?"
+      ],
+      "missingLayers": [
+        "A further clinical error during the supervised period",
+        "The registrar seeking a second opinion on the mandate"
+      ],
+      "rewritePriority": "medium",
+      "flags": [
+        "consultant_leadership"
+      ]
+    },
+
+    {
+      "id": "SUP-005",
+      "title": "Group Supervision Dynamic — Disclosure of Personal Material",
+      "topic": "supervision",
+      "source": "supervisionQuestions.ts",
+      "difficulty": "standard",
+      "signalCount": 4,
+      "complexityScore": 6,
+      "scoringRationale": "A registrar disclosing excessive personal material in a group supervision setting, boundaries within group processes, and the facilitator's management role. Below MEQ complexity — more facilitation skill than clinical judgment.",
+      "weaknesses": [
+        "No patient safety implications",
+        "The clinical complexity is minimal",
+        "More relevant to psychotherapy training than psychiatry MEQ"
+      ],
+      "missingLayers": [
+        "The disclosure revealing a safeguarding concern about the registrar's own family",
+        "The group's response fracturing team cohesion"
+      ],
+      "rewritePriority": "critical",
+      "flags": [
+        "consultant_leadership"
+      ]
+    },
+
+    {
+      "id": "CA-001",
+      "title": "Adolescent Self-Harm — Parental Conflict and Confidentiality",
+      "topic": "child_adolescent",
+      "source": "childAdolescentQuestions.ts",
+      "difficulty": "consultant",
+      "signalCount": 6,
+      "complexityScore": 8,
+      "scoringRationale": "Adolescent confidentiality (Gillick competence), self-harm disclosure, parental conflict with therapeutic relationship, and developmentally appropriate risk assessment. The parental demand to know everything is the unsafe-tempting-shortcut — disclosing everything damages the therapeutic alliance and may increase risk.",
+      "weaknesses": [],
+      "missingLayers": [
+        "The self-harm being disclosed within a traumatic context (sexual abuse) that changes the reporting obligation",
+        "School involvement — mandatory welfare referral from school"
+      ],
+      "rewritePriority": "low",
+      "flags": [
+        "live_decision_under_pressure",
+        "unsafe_tempting_shortcut",
+        "legal_policy_hinge",
+        "vulnerable_third_party",
+        "mdt_family_system_conflict",
+        "consultant_leadership"
+      ]
+    },
+
+    {
+      "id": "CA-002",
+      "title": "Child Abuse Disclosure in Therapy",
+      "topic": "child_adolescent",
+      "source": "childAdolescentQuestions.ts",
+      "difficulty": "consultant",
+      "signalCount": 6,
+      "complexityScore": 8,
+      "scoringRationale": "Mandatory reporting of child sexual abuse disclosure, therapeutic transparency, and managing the child's fear of consequences. Very similar to q25 (ORIGINAL_STEMS Jade question) — the two should be differentiated. Both are excellent questions but the overlap is a bank weakness.",
+      "weaknesses": [
+        "Substantially overlaps with q25 (Jade) — same scenario type, same key signals",
+        "The differentiation between this question and q25 is not clear enough"
+      ],
+      "missingLayers": [
+        "The child having previously recanted a report — adding complexity about credibility",
+        "The alleged abuser being a respected community figure"
+      ],
+      "rewritePriority": "high",
+      "flags": [
+        "legal_policy_hinge",
+        "vulnerable_third_party",
+        "consultant_leadership",
+        "defensible_disposition"
+      ]
+    },
+
+    {
+      "id": "CA-003",
+      "title": "ADHD — Medication, Diagnosis Certainty, and Family Conflict",
+      "topic": "child_adolescent",
+      "source": "childAdolescentQuestions.ts",
+      "difficulty": "difficult",
+      "signalCount": 5,
+      "complexityScore": 7,
+      "scoringRationale": "Diagnostic uncertainty in ADHD, parental pressure for medication, collateral from school, and the distinction between ADHD, adjustment disorder, and complex developmental presentations. Adequate complexity but not at consultant ceiling.",
+      "weaknesses": [
+        "The specific clinical differentiator between ADHD and trauma presentation needs sharper embedding",
+        "Pressure from the school to medicate could be stronger"
+      ],
+      "missingLayers": [
+        "The child's own account of how they experience school — first-person perspective",
+        "A teacher who has observed something the parents haven't disclosed"
+      ],
+      "rewritePriority": "medium",
+      "flags": [
+        "unsafe_tempting_shortcut",
+        "mdt_family_system_conflict",
+        "defensible_disposition"
+      ]
+    },
+
+    {
+      "id": "CA-004",
+      "title": "Eating Disorder — Capacity Assessment and MHA in Adolescent",
+      "topic": "child_adolescent",
+      "source": "childAdolescentQuestions.ts",
+      "difficulty": "consultant",
+      "signalCount": 7,
+      "complexityScore": 8,
+      "scoringRationale": "Anorexia nervosa at life-threatening weight, capacity assessment in an adolescent who refuses refeeding, MHA criteria for compulsory treatment, parental consent, and the physical health medical emergency. The tension between preserving autonomy and preventing death is genuinely difficult.",
+      "weaknesses": [],
+      "missingLayers": [
+        "A patient who intermittently agrees and then recants — fluctuating capacity",
+        "An NGO advocate who supports the patient's refusal"
+      ],
+      "rewritePriority": "low",
+      "flags": [
+        "live_decision_under_pressure",
+        "legal_policy_hinge",
+        "vulnerable_third_party",
+        "mdt_family_system_conflict",
+        "consultant_leadership",
+        "defensible_disposition"
+      ]
+    },
+
+    {
+      "id": "OA-001",
+      "title": "Dementia — Driving Fitness Assessment and Mandatory Reporting",
+      "topic": "old_age",
+      "source": "oldAgeQuestions.ts",
+      "difficulty": "difficult",
+      "signalCount": 5,
+      "complexityScore": 7,
+      "scoringRationale": "Driving with dementia, mandatory reporting to licensing authority, and the therapeutic relationship after reporting. Good question but narrower than q5 (ORIGINAL_STEMS) which covers the same topic with 11 signals.",
+      "weaknesses": [
+        "Substantially overlaps with q5 — both involve dementia and driving reporting",
+        "Narrower signal set — only the driving component of what q5 covers comprehensively"
+      ],
+      "missingLayers": [
+        "Elder financial or physical abuse dimension (as in q5)",
+        "Carer support needs"
+      ],
+      "rewritePriority": "high",
+      "flags": [
+        "legal_policy_hinge",
+        "vulnerable_third_party",
+        "defensible_disposition"
+      ]
+    },
+
+    {
+      "id": "OA-002",
+      "title": "Late-Onset Psychosis — Diagnosis and Safety",
+      "topic": "old_age",
+      "source": "oldAgeQuestions.ts",
+      "difficulty": "difficult",
+      "signalCount": 5,
+      "complexityScore": 7,
+      "scoringRationale": "Differential diagnosis of late-onset psychosis (dementia with psychotic features vs primary psychosis vs delirium), organic workup, and carer support. Good signal set but the clinical urgency could be higher.",
+      "weaknesses": [
+        "The stakes are not as high as they could be — the patient is not in immediate danger",
+        "Carer burnout is underspecified"
+      ],
+      "missingLayers": [
+        "Carer at breaking point — about to stop caring",
+        "Patient refusing assessment and treatment — adding MHA layer"
+      ],
+      "rewritePriority": "medium",
+      "flags": [
+        "defensible_disposition"
+      ]
+    },
+
+    {
+      "id": "OA-003",
+      "title": "Delirium in Elderly — Medical-Psychiatric Interface",
+      "topic": "old_age",
+      "source": "oldAgeQuestions.ts",
+      "difficulty": "consultant",
+      "signalCount": 6,
+      "complexityScore": 8,
+      "scoringRationale": "Delirium superimposed on dementia, antipsychotic prescribing risks in elderly (QTc, EPS, stroke risk), medical precipitant identification, capacity for treatment decisions in fluctuating delirium. Good CL psychiatry-adjacent question.",
+      "weaknesses": [],
+      "missingLayers": [
+        "Family requesting sedation for comfort vs team recommending anti-delirium protocol",
+        "Medical team who want to discharge patient home before delirium fully resolved"
+      ],
+      "rewritePriority": "low",
+      "flags": [
+        "live_decision_under_pressure",
+        "legal_policy_hinge",
+        "mdt_family_system_conflict",
+        "defensible_disposition"
+      ]
+    },
+
+    {
+      "id": "OA-004",
+      "title": "Elder Abuse — Family Perpetrator",
+      "topic": "old_age",
+      "source": "oldAgeQuestions.ts",
+      "difficulty": "consultant",
+      "signalCount": 6,
+      "complexityScore": 8,
+      "scoringRationale": "Elder physical/financial abuse by adult child, patient refusing to name the perpetrator (protecting family), adult safeguarding reporting, and carer exclusion pending investigation. The patient who protects their abuser is clinically complex and examinable.",
+      "weaknesses": [],
+      "missingLayers": [
+        "Other family members who suspect abuse but are afraid to report",
+        "The abuser turning up to the clinic appointment"
+      ],
+      "rewritePriority": "low",
+      "flags": [
+        "live_decision_under_pressure",
+        "legal_policy_hinge",
+        "vulnerable_third_party",
+        "mdt_family_system_conflict",
+        "consultant_leadership",
+        "defensible_disposition"
+      ]
+    },
+
+    {
+      "id": "OA-005",
+      "title": "Capacity in Dementia — Residential Care Placement Decision",
+      "topic": "old_age",
+      "source": "oldAgeQuestions.ts",
+      "difficulty": "difficult",
+      "signalCount": 5,
+      "complexityScore": 7,
+      "scoringRationale": "Capacity for residential care placement, substitute decision-making, family conflict about RACF vs home care, and ACAT involvement. Adequate complexity for senior registrar level.",
+      "weaknesses": [
+        "The financial implications of the placement decision (family inheritance anxiety) could be integrated",
+        "The patient's own expressed preference is underweighted"
+      ],
+      "missingLayers": [
+        "Carer who is physically exhausted and at immediate risk of breakdown",
+        "Financial conflict of interest within the family"
+      ],
+      "rewritePriority": "medium",
+      "flags": [
+        "legal_policy_hinge",
+        "mdt_family_system_conflict",
+        "defensible_disposition"
+      ]
+    },
+
+    {
+      "id": "RU-001",
+      "title": "Rural Crisis — No Resources, Single Clinician",
+      "topic": "rural",
+      "source": "ruralQuestions.ts",
+      "difficulty": "consultant",
+      "signalCount": 6,
+      "complexityScore": 8,
+      "scoringRationale": "Rural equity principle, telehealth escalation, means restriction in a farming context, dual role with the patient as a community member, and no backup clinician. Good question. Partially overlaps with q22 (ORIGINAL_STEMS) but from the treating clinician's position rather than telehealth consultant.",
+      "weaknesses": [
+        "Some overlap with q22 — both are rural crisis/means access scenarios"
+      ],
+      "missingLayers": [
+        "A police officer who is the patient's personal acquaintance — complicating police involvement",
+        "Community notification pressure (small community where everyone knows the patient)"
+      ],
+      "rewritePriority": "low",
+      "flags": [
+        "live_decision_under_pressure",
+        "unsafe_tempting_shortcut",
+        "legal_policy_hinge",
+        "vulnerable_third_party",
+        "consultant_leadership",
+        "defensible_disposition"
+      ]
+    },
+
+    {
+      "id": "RU-002",
+      "title": "Telehealth Consultation — Limitations and Safety",
+      "topic": "rural",
+      "source": "ruralQuestions.ts",
+      "difficulty": "difficult",
+      "signalCount": 5,
+      "complexityScore": 7,
+      "scoringRationale": "Telehealth-specific limitations (non-verbal cues, environment control, collateral access), when telehealth is insufficient, and escalation pathways. Adequate complexity. Overlaps with q22 scenario type.",
+      "weaknesses": [
+        "The clinical scenario itself is underspecified — what is the patient's presentation?",
+        "Overlaps with q22"
+      ],
+      "missingLayers": [
+        "A specific clinical finding that cannot be assessed via telehealth (physical examination required)",
+        "Technology failure mid-consultation — ethical and safety obligations"
+      ],
+      "rewritePriority": "high",
+      "flags": [
+        "consultant_leadership",
+        "defensible_disposition"
+      ]
+    },
+
+    {
+      "id": "RU-003",
+      "title": "Rural Dual Role — Treating a Known Community Member",
+      "topic": "rural",
+      "source": "ruralQuestions.ts",
+      "difficulty": "consultant",
+      "signalCount": 6,
+      "complexityScore": 8,
+      "scoringRationale": "Dual role (treating clinician and community member), confidentiality in small communities, boundary management, and clinical governance when no alternative provider exists. Unique question type not well-covered elsewhere in the bank.",
+      "weaknesses": [],
+      "missingLayers": [
+        "The patient's family member being the candidate's own colleague or friend",
+        "A clinical decision that would become community knowledge regardless"
+      ],
+      "rewritePriority": "low",
+      "flags": [
+        "legal_policy_hinge",
+        "mdt_family_system_conflict",
+        "consultant_leadership",
+        "defensible_disposition"
+      ]
+    },
+
+    {
+      "id": "RU-004",
+      "title": "Rural After-Hours — GP Managing Acute Psychiatry",
+      "topic": "rural",
+      "source": "ruralQuestions.ts",
+      "difficulty": "difficult",
+      "signalCount": 5,
+      "complexityScore": 7,
+      "scoringRationale": "Telehealth support for a rural GP managing an acute psychiatric presentation, appropriate guidance, medico-legal responsibility allocation, and escalation threshold. Adequate signal set.",
+      "weaknesses": [
+        "The specific psychiatric presentation is underspecified",
+        "The candidate's responsibility vs the GP's responsibility allocation could be clearer"
+      ],
+      "missingLayers": [
+        "GP who is out of their depth and panicking — requiring emotional first aid alongside clinical guidance",
+        "A pharmacist who is the only other clinical resource available"
+      ],
+      "rewritePriority": "medium",
+      "flags": [
+        "live_decision_under_pressure",
+        "consultant_leadership",
+        "defensible_disposition"
+      ]
+    },
+
+    {
+      "id": "RU-005",
+      "title": "Rural Systemic Advocacy — Inadequate Mental Health Services",
+      "topic": "rural",
+      "source": "ruralQuestions.ts",
+      "difficulty": "difficult",
+      "signalCount": 4,
+      "complexityScore": 6,
+      "scoringRationale": "Systemic advocacy for rural mental health services, escalation mechanisms, and maintaining quality of care under resource constraint. Below MEQ complexity — more policy than clinical.",
+      "weaknesses": [
+        "No immediate patient safety signal",
+        "Checklist answer risk — candidates list advocacy mechanisms without demonstrating judgment",
+        "Similar in structure to SYS-002"
+      ],
+      "missingLayers": [
+        "A specific patient who died because of the resource gap — making the advocacy concrete",
+        "A hostile health department response to advocacy"
+      ],
+      "rewritePriority": "critical",
+      "flags": [
+        "consultant_leadership"
+      ]
+    },
+
+    {
+      "id": "ETH-001",
+      "title": "Confidentiality vs Third Party Safety",
+      "topic": "ethics",
+      "source": "ethicsQuestions.ts",
+      "difficulty": "consultant",
+      "signalCount": 6,
+      "complexityScore": 8,
+      "scoringRationale": "Specific, credible threat to a named third party, Tarasoff-style duty to warn, and the limits of confidentiality. Overlaps in content with q27 (ORIGINAL_STEMS) — both are the same scenario type. The bank has two versions of this question.",
+      "weaknesses": [
+        "Substantially overlaps with q27",
+        "The threat in this version should be differentiated from q27 — e.g. less specific, or involving a different patient-clinician relationship"
+      ],
+      "missingLayers": [
+        "The target being a public figure — adding media/confidentiality dimension",
+        "Law enforcement being reluctant to act"
+      ],
+      "rewritePriority": "critical",
+      "flags": [
+        "legal_policy_hinge",
+        "vulnerable_third_party",
+        "consultant_leadership",
+        "defensible_disposition"
+      ]
+    },
+
+    {
+      "id": "ETH-002",
+      "title": "Research Ethics — Consent and Vulnerable Populations",
+      "topic": "ethics",
+      "source": "ethicsQuestions.ts",
+      "difficulty": "difficult",
+      "signalCount": 5,
+      "complexityScore": 7,
+      "scoringRationale": "Research ethics, capacity for research participation, therapeutic misconception, and the researcher-clinician dual role. Adequate but niche. HREC processes and consent standards are well-covered.",
+      "weaknesses": [
+        "The clinical urgency is absent — this is primarily a procedural ethics scenario",
+        "The vulnerable population's specific condition is underspecified"
+      ],
+      "missingLayers": [
+        "A participant who experiences an adverse event during the trial",
+        "Research sponsor pressure to enrol a patient who lacks capacity"
+      ],
+      "rewritePriority": "medium",
+      "flags": [
+        "legal_policy_hinge",
+        "vulnerable_third_party",
+        "consultant_leadership"
+      ]
+    },
+
+    {
+      "id": "ETH-003",
+      "title": "Conscientious Objection — End of Life Request",
+      "topic": "ethics",
+      "source": "ethicsQuestions.ts",
+      "difficulty": "consultant",
+      "signalCount": 5,
+      "complexityScore": 7,
+      "scoringRationale": "Voluntary Assisted Dying, conscientious objection obligations, referral duty, and patient rights. Jurisdictionally variable but timely. The objector's obligation to refer is the key examinable point.",
+      "weaknesses": [
+        "The patient's clinical condition and VAD eligibility criteria need sharper specification",
+        "The conscientious objection procedure varies by jurisdiction — this needs careful framing"
+      ],
+      "missingLayers": [
+        "The patient being borderline eligible — creating a genuine eligibility uncertainty",
+        "A family member who objects to the patient pursuing VAD"
+      ],
+      "rewritePriority": "medium",
+      "flags": [
+        "legal_policy_hinge",
+        "vulnerable_third_party",
+        "consultant_leadership",
+        "defensible_disposition"
+      ]
+    },
+
+    {
+      "id": "ETH-004",
+      "title": "Gifts from Patients — Managing a Significant Gift",
+      "topic": "ethics",
+      "source": "ethicsQuestions.ts",
+      "difficulty": "standard",
+      "signalCount": 4,
+      "complexityScore": 6,
+      "scoringRationale": "Gift-giving boundary, power imbalance, clinical meaning of the gift, and institutional policy. Below MEQ complexity. Overlaps with PSY-002.",
+      "weaknesses": [
+        "Substantially overlaps with PSY-002",
+        "Below MEQ complexity ceiling",
+        "The clinical stakes are low"
+      ],
+      "missingLayers": [
+        "The gift being given at a time of clinical transition (termination, new consultant taking over)",
+        "The patient in financial distress making a gift they cannot afford"
+      ],
+      "rewritePriority": "critical",
+      "flags": [
+        "unsafe_tempting_shortcut",
+        "legal_policy_hinge"
+      ]
+    },
+
+    {
+      "id": "ETH-005",
+      "title": "Social Media and Dual Relationships",
+      "topic": "ethics",
+      "source": "ethicsQuestions.ts",
+      "difficulty": "standard",
+      "signalCount": 4,
+      "complexityScore": 6,
+      "scoringRationale": "Social media boundary management, dual relationship risks, and professional conduct obligations. Below MEQ complexity. Overlaps with SUP-002 (boundary violations).",
+      "weaknesses": [
+        "Overlaps with SUP-002",
+        "The clinical consequence of the social media connection is underspecified",
+        "Below MEQ complexity"
+      ],
+      "missingLayers": [
+        "The social media connection revealing clinical information (patient's posts visible to clinician)",
+        "The patient who found the clinician's personal social media account unprompted"
+      ],
+      "rewritePriority": "critical",
+      "flags": [
+        "legal_policy_hinge"
+      ]
+    },
+
+    {
+      "id": "CL-001",
+      "title": "Delirium on Medical Ward — CL Interface",
+      "topic": "cl_psychiatry",
+      "source": "clPsychiatryQuestions.ts",
+      "difficulty": "consultant",
+      "signalCount": 6,
+      "complexityScore": 8,
+      "scoringRationale": "Delirium diagnosis, organic precipitant identification, capacity in fluctuating delirium, agitation management, family distress, and medical team who want psychiatric admission for a fundamentally medical problem. Strong CL question.",
+      "weaknesses": [],
+      "missingLayers": [
+        "A specific organic precipitant that requires urgent medical intervention (e.g. sepsis, urinary retention) that the medical team has overlooked",
+        "Patient with underlying dementia making delirium harder to detect"
+      ],
+      "rewritePriority": "low",
+      "flags": [
+        "live_decision_under_pressure",
+        "mdt_family_system_conflict",
+        "consultant_leadership",
+        "defensible_disposition"
+      ]
+    },
+
+    {
+      "id": "CL-002",
+      "title": "CL — HIV and Mental Health",
+      "topic": "cl_psychiatry",
+      "source": "clPsychiatryQuestions.ts",
+      "difficulty": "consultant",
+      "signalCount": 6,
+      "complexityScore": 8,
+      "scoringRationale": "HIV-associated neurocognitive disorder vs psychiatric disorder differential, ARV interaction with psychotropics, disclosure of HIV status, sexual partner notification, and stigma. Rare but examinable intersection of CL and public health.",
+      "weaknesses": [
+        "The partner notification obligation is jurisdiction-specific and needs careful framing"
+      ],
+      "missingLayers": [
+        "Patient's partner in the waiting room wanting to be involved",
+        "The infectious disease team's different risk tolerance from the psychiatry team"
+      ],
+      "rewritePriority": "low",
+      "flags": [
+        "legal_policy_hinge",
+        "vulnerable_third_party",
+        "mdt_family_system_conflict",
+        "defensible_disposition"
+      ]
+    },
+
+    {
+      "id": "CL-003",
+      "title": "CL — Bariatric Surgery Psychological Assessment",
+      "topic": "cl_psychiatry",
+      "source": "clPsychiatryQuestions.ts",
+      "difficulty": "difficult",
+      "signalCount": 5,
+      "complexityScore": 7,
+      "scoringRationale": "Pre-surgical psychiatric assessment, contraindications for bariatric surgery (active eating disorder, untreated BPD, psychosis), and the consultant's gatekeeping role. Adequate signal density.",
+      "weaknesses": [
+        "The clinical presentation of the specific psychological barrier is underspecified",
+        "The patient's motivation and insight into psychological factors could be more developed"
+      ],
+      "missingLayers": [
+        "Surgeon who dismisses the psychiatric concerns and wants to proceed",
+        "Weight-related medical urgency that creates pressure to approve despite psychiatric concerns"
+      ],
+      "rewritePriority": "medium",
+      "flags": [
+        "unsafe_tempting_shortcut",
+        "mdt_family_system_conflict",
+        "defensible_disposition"
+      ]
+    },
+
+    {
+      "id": "CL-004",
+      "title": "CL — Cardiac Surgery Refusal and Capacity",
+      "topic": "cl_psychiatry",
+      "source": "clPsychiatryQuestions.ts",
+      "difficulty": "consultant",
+      "signalCount": 6,
+      "complexityScore": 8,
+      "scoringRationale": "Capacity assessment for life-saving cardiac surgery refusal, the four domains, depressive illness as a potential capacity-impairing factor, and the cardiac team's pressure to certify incapacity. Overlaps in structure with q16 and q26 but from a different clinical presentation.",
+      "weaknesses": [
+        "Overlaps in structure with q16 and q26 — all three are capacity assessment for refusal of life-sustaining treatment. Consider differentiating more clearly"
+      ],
+      "missingLayers": [
+        "Family member who supports the refusal and has a specific cultural reason",
+        "Post-operative quality-of-life information that may change the patient's calculus"
+      ],
+      "rewritePriority": "medium",
+      "flags": [
+        "legal_policy_hinge",
+        "mdt_family_system_conflict",
+        "consultant_leadership",
+        "defensible_disposition"
+      ]
+    },
+
+    {
+      "id": "CL-005",
+      "title": "CL — Chronic Pain and Opioid Dependence",
+      "topic": "cl_psychiatry",
+      "source": "clPsychiatryQuestions.ts",
+      "difficulty": "difficult",
+      "signalCount": 5,
+      "complexityScore": 7,
+      "scoringRationale": "Iatrogenic opioid dependence, chronic pain and psychiatric comorbidity, opioid rotation or reduction, and the pain physician-psychiatry interface. Overlaps with SU-003.",
+      "weaknesses": [
+        "Overlaps with SU-003",
+        "The specific psychiatric comorbidity driving the complexity is underspecified"
+      ],
+      "missingLayers": [
+        "A patient threatening to harm themselves if opioids are reduced",
+        "A pain physician resistant to the psychiatric recommendation"
+      ],
+      "rewritePriority": "high",
+      "flags": [
+        "unsafe_tempting_shortcut",
+        "mdt_family_system_conflict",
+        "defensible_disposition"
+      ]
+    }
+
+  ],
+
+  "summaryFindings": {
+    "highComplexityQuestions": {
+      "score10": ["q2"],
+      "score9": ["q1", "q3", "q5", "q6", "q7", "q9", "q11", "q12", "q22", "q23", "q26", "q27"],
+      "score8": ["q4", "q8", "q13", "q15", "q16", "q17", "q21", "q24", "q25", "RISK-001", "RISK-002", "RISK-004", "CAP-002", "CAP-003", "CS-001", "FOR-001", "FOR-002", "ED-001", "QA-002", "PSY-001", "PSY-002", "DIS-001", "DIS-003", "SUP-002", "SUP-003", "CA-001", "CA-002", "CA-004", "OA-003", "OA-004", "RU-001", "RU-003", "ETH-001", "CL-001", "CL-002", "CL-004"]
+    },
+    "belowConsultantCeiling": {
+      "score7": ["RISK-003", "RISK-005", "CAP-001", "CAP-004", "CAP-005", "CS-002", "CS-003", "FOR-003", "SYS-001", "SYS-003", "PER-001", "SU-001", "SU-002", "SU-003", "GOV-001", "GOV-002", "GOV-005", "ED-002", "ED-003", "QA-001", "QA-004", "PSY-003", "DIS-002", "DOC-001", "DOC-002", "SUP-001", "SUP-004", "CA-003", "OA-001", "OA-002", "OA-005", "RU-004", "ETH-002", "ETH-003", "CL-003", "CL-005"],
+      "score6": ["SYS-002", "GOV-003", "GOV-004", "QA-003", "DOC-003", "SUP-005", "RU-005", "ETH-004", "ETH-005"],
+      "comment": "Score-6 questions require critical rewrite before use in Exam Mode"
+    },
+    "criticalRewritePriority": [
+      {
+        "id": "SYS-002",
+        "reason": "No patient safety urgency, too abstract, only 4 signals"
+      },
+      {
+        "id": "GOV-003",
+        "reason": "Single-issue privacy question below MEQ threshold"
+      },
+      {
+        "id": "GOV-004",
+        "reason": "Comfortable process scenario, checklist-answer risk, no clinical urgency"
+      },
+      {
+        "id": "QA-003",
+        "reason": "Duplicates GOV-004 territory; no patient harm embedded"
+      },
+      {
+        "id": "DOC-003",
+        "reason": "Single-issue administrative question, no competing values"
+      },
+      {
+        "id": "SUP-005",
+        "reason": "Group facilitation scenario — more relevant to psychotherapy training than MEQ"
+      },
+      {
+        "id": "RU-005",
+        "reason": "Policy advocacy without clinical urgency, overlaps SYS-002"
+      },
+      {
+        "id": "ETH-001",
+        "reason": "Direct duplicate of q27 scenario type — must be differentiated or replaced"
+      },
+      {
+        "id": "ETH-004",
+        "reason": "Duplicate of PSY-002 below MEQ complexity"
+      },
+      {
+        "id": "ETH-005",
+        "reason": "Duplicate of SUP-002 territory, below MEQ complexity"
+      }
+    ],
+    "duplicateScenarioWarnings": [
+      {
+        "pair": ["q25", "CA-002"],
+        "note": "Both are mandatory reporting in psychotherapy — child sexual abuse disclosure by patient. Near-identical structure."
+      },
+      {
+        "pair": ["q22", "RU-001", "RU-002"],
+        "note": "Three rural crisis/telehealth questions with significant thematic overlap. One of RU-001 or RU-002 should be replaced."
+      },
+      {
+        "pair": ["q13", "q21", "DIS-002"],
+        "note": "Three premature-discharge-under-bed-pressure questions. DIS-002 is the weakest and should be differentiated or replaced."
+      },
+      {
+        "pair": ["q16", "q26", "CL-004"],
+        "note": "Three capacity-for-refusal-of-life-sustaining-treatment questions. All have merit but their differentiation should be explicit."
+      },
+      {
+        "pair": ["q12", "QA-002"],
+        "note": "Both post-discharge suicide adverse event questions — q12 is the immediate response, QA-002 is the M&M review. The distinction is valid but needs clearer signposting."
+      },
+      {
+        "pair": ["q4", "QA-004"],
+        "note": "Both involve drug diversion — q4 is the registrar angle, QA-004 is the incident report angle. Acceptably different but should not both appear in the same exam session."
+      },
+      {
+        "pair": ["OA-001", "q5"],
+        "note": "OA-001 covers the driving component of q5 but with fewer signals. OA-001 should be expanded with elder abuse or capacity dimensions to differentiate."
+      },
+      {
+        "pair": ["SU-003", "CL-005"],
+        "note": "Both chronic pain and opioid dependence — different contexts (D&A vs CL) but substantially same clinical question."
+      },
+      {
+        "pair": ["GOV-003", "GOV-004", "QA-003"],
+        "note": "Three administrative governance questions at score 6 — at least two should be replaced with higher-complexity clinical governance questions."
+      }
+    ],
+    "missingTopicCoverage": [
+      "Perinatal: paternal mental illness affecting mother-baby unit admission decision",
+      "Forensic: Risk assessment for sex offender on conditional release",
+      "Old age: Grief vs major depressive disorder in bereavement",
+      "Rural: Aboriginal community healing and reintegration post-acute episode",
+      "Ethics: Voluntarily euthanasia eligibility dispute — psychiatric vs medical eligibility criteria difference",
+      "Supervision: Trainee self-harm disclosure in supervision",
+      "MDT: Systemic racism in a clinical team affecting an Aboriginal patient's treatment",
+      "Psychotherapy: Disclosure of clinician's own mental health history to a patient",
+      "Capacity: Capacity in a patient with intellectual disability and co-occurring psychiatric illness",
+      "Child/Adolescent: Family Violence and children — child witnessing DV as mandatory report threshold",
+      "Substance use: Methamphetamine-using parent and child protection threshold"
+    ],
+    "overallAssessment": {
+      "bankStrengths": [
+        "ORIGINAL_STEMS (q1-q27) are uniformly consultant-level with excellent signal density — average score 8.7",
+        "Rural and perinatal questions (q22, q23, q3, PER-002, PER-003) are examinable and distinctive",
+        "Cultural safety questions (CS-001, q1, q7, q15, q23) are the strongest in the bank and cover the RANZCP priority domain well",
+        "Governance with clinical pressure questions (q4, q12, q21, SUP-002, SUP-003) are appropriately complex",
+        "Ethics questions q26 and q27 are outstanding — genuinely difficult ethical dilemmas"
+      ],
+      "bankWeaknesses": [
+        "10 questions score ≤6 and require critical rewrite — these are below RANZCP MEQ standard",
+        "Multiple scenario-type duplicates dilute the bank's discriminant validity",
+        "Governance, QA, and Ethics topic files contain disproportionate checklist-answer risk questions",
+        "The SUP-005 and RU-005 questions do not test clinical judgment — they test process knowledge only",
+        "No questions explicitly test psychopharmacology complexity as a primary signal (clozapine monitoring, MAOI interaction, lithium toxicity in a complex scenario)"
+      ],
+      "recommendedAction": "Replace 10 critical-priority questions with new high-complexity stems. Differentiate 9 duplicate pairs with distinct scenario details. Add 5–6 questions covering missing topic areas. Consider marking the 10 critical-priority questions as 'not for Exam Mode' pending rewrite."
+    }
+  }
+}
