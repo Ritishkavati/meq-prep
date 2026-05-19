@@ -644,24 +644,33 @@ function ResultsScreen({
   courseCompletion: QuizModuleCompletion;
 }) {
   const [showModel, setShowModel] = useState(false);
+  const [showIdentified, setShowIdentified] = useState(false);
+  const [showMissed, setShowMissed] = useState(false);
   const [aiFeedback, setAiFeedback] = useState<string | null>(null);
-  const [aiFeedbackLoading, setAiFeedbackLoading] = useState(false);
+  const [aiFeedbackLoading, setAiFeedbackLoading] = useState(true);
   const [aiFeedbackError, setAiFeedbackError] = useState(false);
 
-  const handleGetAiFeedback = useCallback(async () => {
+  const fetchAiFeedback = useCallback(async () => {
     setAiFeedbackLoading(true);
     setAiFeedbackError(false);
     try {
-      const missedSignals = result.matches
-        .filter((m) => !m.identified)
+      const identifiedSignalNames = result.matches
+        .filter((m) => m.identified)
         .map((m) => m.signal.name);
+      const missedSignalDetails = result.matches
+        .filter((m) => !m.identified)
+        .map((m) => ({
+          name: m.signal.name,
+          clueInStem: m.signal.clueInStem,
+          whyItMatters: m.signal.whyItMatters,
+        }));
       const response = await fetch("/api/ai-feedback", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           stem: stem.stem,
-          candidateAnswer,
-          missedSignals,
+          identifiedSignalNames,
+          missedSignalDetails,
         }),
       });
       if (!response.ok) throw new Error("Request failed");
@@ -672,7 +681,11 @@ function ResultsScreen({
     } finally {
       setAiFeedbackLoading(false);
     }
-  }, [stem.stem, result.matches, candidateAnswer]);
+  }, [stem.stem, result.matches]);
+
+  useEffect(() => {
+    fetchAiFeedback();
+  }, [fetchAiFeedback]);
 
   const identified = result.matches.filter((m) => m.identified);
   const missed = result.matches.filter((m) => !m.identified);
@@ -772,40 +785,60 @@ function ResultsScreen({
 
       {/* ── B) SIGNALS YOU IDENTIFIED ───────────────────────────────────────── */}
       {identified.length > 0 && (
-        <div>
-          <h3 className="font-serif font-bold text-primary mb-3 flex items-center gap-2">
-            <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-            Signals you identified ✅ ({identified.length})
-          </h3>
-          <div className="space-y-2.5">
-            {identified.map((m) => (
-              <IdentifiedCard key={m.signal.id} signal={m.signal} />
-            ))}
-          </div>
+        <div className="bg-white rounded-2xl border border-card-border shadow-sm overflow-hidden">
+          <button
+            onClick={() => setShowIdentified((v) => !v)}
+            className="w-full flex items-center justify-between px-5 py-4 text-left hover:bg-slate-50 transition-colors"
+          >
+            <span className="font-serif font-bold text-primary flex items-center gap-2">
+              <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+              Signals you identified ✅ ({identified.length})
+            </span>
+            {showIdentified
+              ? <ChevronUp className="w-4 h-4 text-muted-foreground" />
+              : <ChevronDown className="w-4 h-4 text-muted-foreground" />
+            }
+          </button>
+          {showIdentified && (
+            <div className="px-5 pb-5 space-y-2.5 border-t border-card-border pt-4">
+              {identified.map((m) => (
+                <IdentifiedCard key={m.signal.id} signal={m.signal} />
+              ))}
+            </div>
+          )}
         </div>
       )}
 
       {/* ── C) SIGNALS YOU MISSED ───────────────────────────────────────────── */}
       {missed.length > 0 && (
-        <div>
-          <h3 className="font-serif font-bold text-red-700 mb-3 flex items-center gap-2">
-            <XCircle className="w-4 h-4" />
-            Signals you missed ❌ ({missed.length})
-          </h3>
-          <div className="space-y-2.5">
-            {/* Critical first */}
-            {missed
-              .filter((m) => m.signal.severity === "critical")
-              .map((m) => (
-                <MissedCard key={m.signal.id} signal={m.signal} />
-              ))}
-            {/* Then important + optional */}
-            {missed
-              .filter((m) => m.signal.severity !== "critical")
-              .map((m) => (
-                <MissedCard key={m.signal.id} signal={m.signal} />
-              ))}
-          </div>
+        <div className="bg-white rounded-2xl border border-card-border shadow-sm overflow-hidden">
+          <button
+            onClick={() => setShowMissed((v) => !v)}
+            className="w-full flex items-center justify-between px-5 py-4 text-left hover:bg-slate-50 transition-colors"
+          >
+            <span className="font-serif font-bold text-red-700 flex items-center gap-2">
+              <XCircle className="w-4 h-4" />
+              Signals you missed ❌ ({missed.length})
+            </span>
+            {showMissed
+              ? <ChevronUp className="w-4 h-4 text-muted-foreground" />
+              : <ChevronDown className="w-4 h-4 text-muted-foreground" />
+            }
+          </button>
+          {showMissed && (
+            <div className="px-5 pb-5 space-y-2.5 border-t border-card-border pt-4">
+              {missed
+                .filter((m) => m.signal.severity === "critical")
+                .map((m) => (
+                  <MissedCard key={m.signal.id} signal={m.signal} />
+                ))}
+              {missed
+                .filter((m) => m.signal.severity !== "critical")
+                .map((m) => (
+                  <MissedCard key={m.signal.id} signal={m.signal} />
+                ))}
+            </div>
+          )}
         </div>
       )}
 
@@ -887,41 +920,35 @@ function ResultsScreen({
 
       {/* ── E) AI EXAMINER FEEDBACK ─────────────────────────────────────────── */}
       <div className="bg-white rounded-2xl border border-card-border shadow-sm p-6 space-y-4">
-        <div className="flex items-center gap-2">
-          <Sparkles className="w-4 h-4 text-accent" />
-          <h3 className="font-serif font-bold text-primary">AI Examiner Feedback</h3>
+        <div className="flex items-center justify-between gap-2">
+          <div className="flex items-center gap-2">
+            <Sparkles className="w-4 h-4 text-accent" />
+            <h3 className="font-serif font-bold text-primary">AI Examiner Feedback</h3>
+          </div>
+          {aiFeedbackError && (
+            <button
+              onClick={fetchAiFeedback}
+              className="text-xs text-muted-foreground hover:text-primary border border-slate-200 hover:border-primary px-2.5 py-1 rounded-lg transition-colors"
+            >
+              Retry
+            </button>
+          )}
         </div>
 
-        {!aiFeedback && !aiFeedbackError && (
-          <div className="flex flex-col items-start gap-3">
-            <p className="text-xs text-muted-foreground">
-              Get personalised examiner-level feedback on your answer from Claude AI — specific to what you missed and why it matters clinically.
-            </p>
-            <button
-              onClick={handleGetAiFeedback}
-              disabled={aiFeedbackLoading}
-              className="inline-flex items-center gap-2 bg-primary text-white text-sm font-semibold px-4 py-2 rounded-lg hover:bg-primary/90 disabled:opacity-60 disabled:cursor-not-allowed transition-colors"
-            >
-              {aiFeedbackLoading ? (
-                <>
-                  <Loader2 className="w-4 h-4 animate-spin" />
-                  Generating feedback…
-                </>
-              ) : (
-                <>
-                  <Sparkles className="w-4 h-4" />
-                  Get AI Feedback
-                </>
-              )}
-            </button>
+        {aiFeedbackLoading && (
+          <div className="flex items-center gap-3 py-4 text-muted-foreground">
+            <Loader2 className="w-4 h-4 animate-spin text-accent flex-shrink-0" />
+            <span className="text-sm">Generating examiner feedback…</span>
           </div>
         )}
 
-        {aiFeedbackError && (
-          <p className="text-sm text-muted-foreground italic">AI feedback unavailable — please try again.</p>
+        {aiFeedbackError && !aiFeedbackLoading && (
+          <p className="text-sm text-muted-foreground italic">
+            AI feedback unavailable — tap Retry to try again.
+          </p>
         )}
 
-        {aiFeedback && (
+        {aiFeedback && !aiFeedbackLoading && (
           <div className="bg-primary/4 border border-primary/15 rounded-xl px-5 py-4">
             <p className="text-sm text-primary leading-relaxed whitespace-pre-line">{aiFeedback}</p>
           </div>

@@ -3,43 +3,71 @@ import Anthropic from "@anthropic-ai/sdk";
 
 const router = Router();
 
+const client = new Anthropic({
+  baseURL: process.env.AI_INTEGRATIONS_ANTHROPIC_BASE_URL,
+  apiKey: process.env.AI_INTEGRATIONS_ANTHROPIC_API_KEY ?? "placeholder",
+});
+
+interface MissedSignalDetail {
+  name: string;
+  clueInStem: string;
+  whyItMatters: string;
+}
+
 router.post("/ai-feedback", async (req, res) => {
-  const { stem, candidateAnswer, missedSignals } = req.body as {
+  const { stem, identifiedSignalNames, missedSignalDetails } = req.body as {
     stem: string;
-    candidateAnswer: string;
-    missedSignals: string[];
+    identifiedSignalNames: string[];
+    missedSignalDetails: MissedSignalDetail[];
   };
 
-  if (!stem || !candidateAnswer) {
-    res.status(400).json({ error: "stem and candidateAnswer are required" });
+  if (!stem) {
+    res.status(400).json({ error: "stem is required" });
     return;
   }
 
-  const apiKey = process.env.ANTHROPIC_API_KEY;
-  if (!apiKey) {
+  if (!process.env.AI_INTEGRATIONS_ANTHROPIC_BASE_URL) {
     res.status(503).json({ error: "AI feedback unavailable" });
     return;
   }
 
+  const identifiedList =
+    identifiedSignalNames && identifiedSignalNames.length > 0
+      ? identifiedSignalNames.join(", ")
+      : "none";
+
+  const missedList =
+    missedSignalDetails && missedSignalDetails.length > 0
+      ? missedSignalDetails
+          .map(
+            (s) =>
+              `- ${s.name}: clue in stem — "${s.clueInStem}" | why it matters — "${s.whyItMatters}"`
+          )
+          .join("\n")
+      : "none";
+
+  const userMessage = `STEM: ${stem}
+
+SIGNALS THE CANDIDATE IDENTIFIED: ${identifiedList}
+
+SIGNALS THE CANDIDATE MISSED:
+${missedList}
+
+Give feedback in this format only:
+
+IDENTIFIED: Brief acknowledgment of what they spotted correctly. One sentence.
+
+MISSED: For each missed signal — one sentence naming the signal, the clue they should have seen, and why it matters clinically.
+
+Do not rewrite their answer. Do not give generic advice.`;
+
   try {
-    const client = new Anthropic({ apiKey });
-
-    const missedList =
-      missedSignals && missedSignals.length > 0
-        ? missedSignals.join(", ")
-        : "none";
-
     const message = await client.messages.create({
-      model: "claude-haiku-4-5-20251001",
-      max_tokens: 1000,
+      model: "claude-sonnet-4-6",
+      max_tokens: 800,
       system:
-        "You are an RANZCP MEQ examiner. You give feedback like a senior consultant psychiatrist. Be specific, direct, and educational. Maximum 200 words.",
-      messages: [
-        {
-          role: "user",
-          content: `Stem: ${stem}\nCandidate answer: ${candidateAnswer}\nSignals they missed: ${missedList}\nGive examiner-level feedback on what they missed and why it matters clinically.`,
-        },
-      ],
+        "You are an RANZCP MEQ examiner. Give concise signal-detection feedback only. Maximum 200 words total.",
+      messages: [{ role: "user", content: userMessage }],
     });
 
     const block = message.content[0];
