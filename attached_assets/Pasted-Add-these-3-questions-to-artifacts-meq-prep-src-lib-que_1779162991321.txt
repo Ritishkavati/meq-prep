@@ -1,6 +1,10 @@
-import type { QuizStem } from "../quizData";
+Add these 3 questions to artifacts/meq-prep/src/lib/questions/psychotherapyQuestions.ts — create the file if it doesn't exist using this format at the top:
 
+import { QuizStem } from "../quizData";
 export const PSY_STEMS: QuizStem[] = [
+
+Then add these stems with the fixed category values:
+
   {
     id: "PSY-001",
     topic: "psychotherapy",
@@ -293,6 +297,12 @@ Develop a brief crisis intervention: wound care, remove access to razors, distre
 
 Consider short-stay or crisis stabilisation if acute risk cannot be safely managed at home without supervision and no inpatient bed is available.
 
-Manage system pressure: escalate access block issues through appropriate channels, document clinical reasoning independently of executive pressure.`,
+Manage system pressure: escalate access block issues through appropriate channels, document clinical reasoning independently of executive pressure.`;
   },
 ];
+
+Close the array with ]; at the end of the file.
+
+Also check if psychotherapyQuestions.ts is imported and spread into QUIZ_STEMS in quizData.ts — if not, add the import and spread it in.
+
+Run typecheck after.
