@@ -115,6 +115,9 @@ import { GOV_STEMS } from "./questions/governanceQuestions";
 import { RISK_STEMS } from "./questions/riskQuestions";
 import { MDT_STEMS } from "./questions/mdtSystemsQuestions";
 import { PSY_STEMS } from "./questions/psychotherapyQuestions";
+import { CS_STEMS } from "./questions/culturalSafetyQuestions";
+import { FOR_STEMS } from "./questions/forensicQuestions";
+import { SU_STEMS } from "./questions/substanceUseQuestions";
 
 // ─── STEMS ───────────────────────────────────────────────────────────────────
 
@@ -3229,6 +3232,9 @@ export const QUIZ_STEMS: QuizStem[] = [
   ...RISK_STEMS,
   ...MDT_STEMS,
   ...PSY_STEMS,
+  ...CS_STEMS,
+  ...FOR_STEMS,
+  ...SU_STEMS,
 ];
 
 // Filter by topic

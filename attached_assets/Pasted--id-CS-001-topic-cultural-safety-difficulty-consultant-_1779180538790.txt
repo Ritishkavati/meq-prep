@@ -1,0 +1,950 @@
+[
+{
+id: "CS-001",
+topic: "cultural_safety",
+difficulty: "consultant",
+title: "Aboriginal woman refusing ED mental health assessment",
+candidateRole: "Consultant psychiatrist, rural emergency psychiatry service",
+setting: "Rural emergency department after police attendance",
+stem: `You are the consultant psychiatrist on call for a rural emergency department.
+
+Marlee is a 36-year-old Aboriginal woman brought to ED by police after neighbours reported shouting and smashing sounds from her house. Police say she was distressed, holding a broken picture frame and yelling that “everyone is coming to take my kids again.” Her two children are currently with her aunt. Marlee refuses to speak with the mental health nurse and says, “You mob only come when police drag us in.”
+
+Marlee has a history of depression, family violence and previous child protection involvement. She says, “Hospitals took my sister away and she never came back right.” She denies suicidal intent but says, “If they try to take my babies, I’ll fight anyone.” The police want to leave because she is now calmer, but ED staff are worried she may abscond.
+
+Her aunt is in the waiting room and says Marlee has not slept for three nights and has been drinking more since a recent family funeral. The ED nurse asks whether Marlee can be assessed involuntarily because she is refusing to engage.`,
+    totalMarks: 22,
+    signals: [
+      {
+        id: "s1",
+        name: "Cultural mistrust and service trauma",
+        category: "cultural_safety",
+        severity: "critical",
+        clueInStem: "You mob only come when police drag us in.",
+        whyItMatters: "Mistrust linked to police and services may escalate refusal and distress if approached coercively.",
+        modelWording: "Use culturally safe, trauma-informed engagement recognising mistrust of police and health systems before escalating coercion.",
+        keywords: ["cultural safety", "Aboriginal health", "police involvement", "mistrust", "trauma-informed care", "engagement"],
+      },
+      {
+        id: "s2",
+        name: "Threat linked to child removal fear",
+        category: "risk_others",
+        severity: "critical",
+        clueInStem: "If they try to take my babies, I’ll fight anyone.",
+        whyItMatters: "Threats linked to child protection fear create risk to staff, police, family and children if poorly managed.",
+        modelWording: "Assess risk to others in the context of perceived child removal, fear, intoxication and sleep deprivation.",
+        keywords: ["risk to others", "child removal fear", "family violence", "staff safety", "dynamic risk", "threats"],
+      },
+      {
+        id: "s3",
+        name: "Children as vulnerable dependants",
+        category: "child_protection",
+        severity: "important",
+        clueInStem: "Her two children are currently with her aunt.",
+        whyItMatters: "The children’s safety and care arrangements must be clarified without assuming removal is required.",
+        modelWording: "Clarify immediate safety and care arrangements for the children while avoiding unnecessarily punitive child protection framing.",
+        keywords: ["child protection", "children safety", "kinship care", "aunt", "family context", "safeguarding"],
+      },
+      {
+        id: "s4",
+        name: "Trauma history shaping presentation",
+        category: "trauma",
+        severity: "important",
+        clueInStem: "Hospitals took my sister away and she never came back right.",
+        whyItMatters: "Historical and personal trauma may explain fear of assessment and need for careful communication.",
+        modelWording: "Acknowledge trauma associated with hospitals and family separation, and avoid re-traumatising assessment practices.",
+        keywords: ["trauma history", "hospital mistrust", "family separation", "re-traumatisation", "distress", "engagement"],
+      },
+      {
+        id: "s5",
+        name: "Collateral from trusted family",
+        category: "collateral",
+        severity: "important",
+        clueInStem: "has not slept for three nights",
+        whyItMatters: "Collateral suggests possible mood, trauma or substance-related deterioration not captured by current calmness.",
+        modelWording: "Use aunt’s collateral to assess sleep loss, alcohol use, recent bereavement and baseline functioning.",
+        keywords: ["collateral", "aunt", "sleep deprivation", "bereavement", "alcohol", "baseline"],
+      },
+      {
+        id: "s6",
+        name: "Substance use as dynamic risk factor",
+        category: "substance_use",
+        severity: "optional",
+        clueInStem: "has been drinking more",
+        whyItMatters: "Alcohol may increase impulsivity, disinhibition and risk during an acute family crisis.",
+        modelWording: "Assess intoxication and recent alcohol escalation because it may increase impulsivity and impair judgement.",
+        keywords: ["alcohol", "intoxication", "disinhibition", "impulsivity", "dynamic risk", "bereavement"],
+      },
+    ],
+    priorityOrder: {
+      urgent: ["s1", "s2"],
+      secondary: ["s3", "s4", "s5"],
+      lowYield: ["s6"],
+    },
+    modelAnswer: `Immediate safety:
+
+* Ensure Marlee, staff, police and children are safe while avoiding unnecessarily coercive escalation.
+* Assess risk to others linked to child removal fears, alcohol use and sleep deprivation.
+
+Cultural safety/trauma:
+
+* Involve Aboriginal liaison/health worker if available.
+* Acknowledge mistrust of police, hospitals and child protection.
+* Use calm, non-confrontational, trauma-informed engagement.
+
+Assessment/formulation:
+
+* Assess mood, psychosis, trauma response, intoxication, grief and sleep deprivation.
+* Obtain collateral from aunt regarding baseline, children’s safety, funeral stress and alcohol use.
+
+Legal/disposition:
+
+* Consider involuntary assessment only if statutory criteria are met and least restrictive engagement fails.
+* Clarify children’s immediate care without reflexive child protection escalation.
+
+Documentation:
+
+* Record cultural safety steps, risk formulation, collateral, legal rationale and child safety plan.`,
+  },
+  {
+    id: "CS-002",
+    topic: "cultural_safety",
+    difficulty: "consultant",
+    title: "Māori man admitted involuntarily with cultural formulation needs",
+    candidateRole: "Consultant psychiatrist, acute inpatient unit",
+    setting: "Involuntary admission to metropolitan inpatient unit in Aotearoa New Zealand",
+    stem: `You are the consultant psychiatrist reviewing Wiremu, a 27-year-old Māori man admitted involuntarily after walking onto a motorway saying he was following messages from his tūpuna.
+
+Wiremu says, “This is not sickness; my ancestors are calling me.” He refuses antipsychotic medication and says staff are “cutting me off from my whakapapa.” His whānau arrive and ask for a kaumātua and Māori health worker to be involved. The night registrar documented “poor insight, delusional, refusing treatment” but did not speak with whānau.
+
+Nursing staff are concerned because Wiremu is pacing, chanting at night and not eating hospital food. His mother says, “He needs help, but not like this.” The team asks whether his beliefs are psychosis, cultural experience or both, and whether involuntary treatment should continue.`,
+    totalMarks: 22,
+    signals: [
+      {
+        id: "s1",
+        name: "Cultural explanation versus psychosis",
+        category: "diagnosis_formulation",
+        severity: "critical",
+        clueInStem: "This is not sickness; my ancestors are calling me.",
+        whyItMatters: "Misclassifying cultural/spiritual experience as psychosis can cause harm, while missing psychosis can increase risk.",
+        modelWording: "Formulate whether ancestral experiences are culturally congruent, psychotic, or both by involving whānau and cultural expertise.",
+        keywords: ["cultural formulation", "tūpuna", "psychosis", "spiritual experience", "whānau", "Māori mental health"],
+      },
+      {
+        id: "s2",
+        name: "Least restrictive involuntary care",
+        category: "mental_health_act",
+        severity: "critical",
+        clueInStem: "admitted involuntarily",
+        whyItMatters: "Ongoing compulsory care must remain justified, culturally safe and least restrictive.",
+        modelWording: "Review whether involuntary treatment remains necessary and least restrictive after culturally informed assessment.",
+        keywords: ["Mental Health Act", "least restrictive", "involuntary treatment", "culturally safe care", "legal criteria"],
+      },
+      {
+        id: "s3",
+        name: "Whānau involvement",
+        category: "family_carer",
+        severity: "important",
+        clueInStem: "His whānau arrive and ask for a kaumātua and Māori health worker to be involved.",
+        whyItMatters: "Whānau participation may improve engagement, formulation and safety planning.",
+        modelWording: "Involve whānau, kaumātua and Māori health worker to support engagement, cultural formulation and care planning.",
+        keywords: ["whānau", "kaumātua", "Māori health worker", "family involvement", "engagement", "care planning"],
+      },
+      {
+        id: "s4",
+        name: "Medication refusal linked to cultural disconnection",
+        category: "consent_refusal",
+        severity: "important",
+        clueInStem: "cutting me off from my whakapapa.",
+        whyItMatters: "Refusal may reflect fear of cultural disconnection as well as illness-related beliefs.",
+        modelWording: "Explore medication refusal in relation to identity, whakapapa, side effects and illness beliefs rather than treating it as simple non-compliance.",
+        keywords: ["medication refusal", "whakapapa", "identity", "consent", "engagement", "shared decision-making"],
+      },
+      {
+        id: "s5",
+        name: "Failure to obtain whānau collateral",
+        category: "collateral",
+        severity: "important",
+        clueInStem: "did not speak with whānau.",
+        whyItMatters: "Without whānau collateral, diagnosis, risk and cultural meaning may be misformulated.",
+        modelWording: "Obtain whānau collateral about baseline beliefs, recent change, risk, substance use and culturally meaningful supports.",
+        keywords: ["collateral", "whānau", "baseline", "risk", "substance use", "cultural meaning"],
+      },
+      {
+        id: "s6",
+        name: "Physical health and nutrition concern",
+        category: "physical_health",
+        severity: "optional",
+        clueInStem: "not eating hospital food.",
+        whyItMatters: "Poor intake may worsen mental state and require culturally appropriate food/support.",
+        modelWording: "Assess nutrition, hydration and reasons for refusing hospital food, including cultural or paranoid concerns.",
+        keywords: ["nutrition", "hydration", "hospital food", "physical health", "cultural needs"],
+      },
+    ],
+    priorityOrder: {
+      urgent: ["s1", "s2"],
+      secondary: ["s3", "s4", "s5"],
+      lowYield: ["s6"],
+    },
+    modelAnswer: `Cultural formulation:
+
+* Do not assume ancestral experiences are automatically delusional.
+* Involve whānau, kaumātua and Māori health worker to understand cultural congruence, baseline beliefs and recent change.
+
+Risk/legal:
+
+* Review risk from motorway behaviour, sleep, eating and current mental state.
+* Reassess whether involuntary care remains necessary and least restrictive.
+
+Engagement/treatment:
+
+* Explore refusal of medication in relation to whakapapa, identity, side effects and coercion.
+* Offer culturally safe explanation, whānau-supported discussions and least restrictive treatment options.
+
+Collateral:
+
+* Obtain whānau collateral regarding onset, substance use, function, previous episodes and supports.
+
+Disposition/governance:
+
+* Document cultural formulation, whānau involvement, legal reasoning and care plan.`,
+  },
+  {
+    id: "CS-003",
+    topic: "cultural_safety",
+    difficulty: "consultant",
+    title: "Afghan refugee refusing medical treatment in CL psychiatry",
+    candidateRole: "Consultant psychiatrist, consultation-liaison psychiatry service",
+    setting: "Metropolitan medical ward",
+    stem: `You are the consultant psychiatrist asked to review Ahmad, a 33-year-old Afghan refugee admitted to the medical ward with suspected infective endocarditis related to intravenous heroin use.
+
+Ahmad initially agreed to investigations but now refuses blood cultures, echocardiography and antibiotics. He says in limited English, “No more tests; hospital makes papers for immigration.” The medical registrar has been using Ahmad’s cousin to interpret because “professional interpreters take too long.” Ahmad becomes visibly distressed when security staff stand near the door.
+
+His cousin says Ahmad was detained for months before arriving in Australia and avoids government offices. Ahmad says, “Maybe Allah is punishing me; medicine cannot change this.” The infectious diseases team says delayed antibiotics may be life-threatening, and the ward team asks whether he lacks capacity or is simply refusing treatment.`,
+    totalMarks: 22,
+    signals: [
+      {
+        id: "s1",
+        name: "Interpreter failure affecting consent and capacity assessment",
+        category: "cultural_safety",
+        severity: "critical",
+        clueInStem: "professional interpreters take too long.",
+        whyItMatters: "Capacity and consent cannot be reliably assessed through an ad hoc family interpreter in a complex refusal.",
+        modelWording: "Use a professional interpreter before assessing capacity, consent or refusal because language barriers may invalidate the assessment.",
+        keywords: ["professional interpreter", "capacity assessment", "language barrier", "consent", "ad hoc interpreter", "refugee"],
+      },
+      {
+        id: "s2",
+        name: "Trauma-related mistrust of authorities",
+        category: "trauma",
+        severity: "critical",
+        clueInStem: "hospital makes papers for immigration.",
+        whyItMatters: "Refusal may be driven by trauma and fear of authority rather than psychosis or incapacity alone.",
+        modelWording: "Formulate treatment refusal in the context of refugee trauma, detention and fear of immigration consequences.",
+        keywords: ["refugee trauma", "detention", "mistrust", "immigration fear", "authority", "treatment refusal"],
+      },
+      {
+        id: "s3",
+        name: "Life-threatening medical illness",
+        category: "physical_health",
+        severity: "important",
+        clueInStem: "delayed antibiotics may be life-threatening",
+        whyItMatters: "Urgency determines how long engagement can continue before emergency treatment pathways are considered.",
+        modelWording: "Clarify medical urgency and consequences of delayed antibiotics with infectious diseases before deciding legal options.",
+        keywords: ["infective endocarditis", "antibiotics", "medical urgency", "life-threatening", "infectious diseases"],
+      },
+      {
+        id: "s4",
+        name: "Cultural explanatory model",
+        category: "diagnosis_formulation",
+        severity: "important",
+        clueInStem: "Maybe Allah is punishing me; medicine cannot change this.",
+        whyItMatters: "Spiritual explanatory models may affect acceptance of treatment and require respectful exploration.",
+        modelWording: "Explore Ahmad’s religious explanatory model and integrate spiritual supports if acceptable while explaining biomedical treatment.",
+        keywords: ["cultural explanatory model", "spiritual belief", "Islam", "illness meaning", "engagement", "psychoeducation"],
+      },
+      {
+        id: "s5",
+        name: "Security presence may re-traumatise",
+        category: "immediate_safety",
+        severity: "important",
+        clueInStem: "visibly distressed when security staff stand near the door.",
+        whyItMatters: "Security may worsen trauma response and refusal unless safety needs justify their presence.",
+        modelWording: "Minimise visible coercion and security presence unless required for immediate safety, using trauma-informed engagement.",
+        keywords: ["security", "trauma-informed care", "re-traumatisation", "coercion", "engagement", "safety"],
+      },
+      {
+        id: "s6",
+        name: "Substance use and stigma",
+        category: "substance_use",
+        severity: "optional",
+        clueInStem: "intravenous heroin use.",
+        whyItMatters: "Stigma and withdrawal may contribute to distress, absconding risk and refusal.",
+        modelWording: "Assess opioid withdrawal, cravings and stigma because these may worsen refusal and engagement failure.",
+        keywords: ["heroin use", "opioid withdrawal", "stigma", "craving", "absconding", "harm reduction"],
+      },
+    ],
+    priorityOrder: {
+      urgent: ["s1", "s2"],
+      secondary: ["s3", "s4", "s5"],
+      lowYield: ["s6"],
+    },
+    modelAnswer: `Communication/cultural safety:
+
+* Stop relying on cousin as interpreter for capacity/refusal.
+* Use professional interpreter and culturally safe, trauma-informed approach.
+
+Formulation:
+
+* Explore refugee trauma, detention history, fear of immigration consequences and religious explanatory model.
+* Avoid assuming refusal equals psychosis or incapacity without valid communication.
+
+Medical/legal:
+
+* Clarify urgency of suspected endocarditis and consequences of delay.
+* Assess capacity after interpreter-assisted explanation.
+* If capacity absent and risk imminent, consider emergency treatment pathways.
+
+Engagement:
+
+* Reduce visible security unless necessary.
+* Offer social work, transcultural worker, spiritual support and addiction medicine input.
+
+Documentation:
+
+* Record interpreter use, capacity reasoning, cultural formulation, medical urgency and least restrictive steps.`,
+  },
+  {
+    id: "FOR-001",
+    topic: "forensic",
+    difficulty: "consultant",
+    title: "Stalking and erotomania in community care",
+    candidateRole: "Consultant psychiatrist, community forensic consultation service",
+    setting: "Community mental health team risk review",
+    stem: `You are the consultant psychiatrist asked to advise a community mental health team about Marcus, a 44-year-old man with schizophrenia and previous stalking convictions.
+
+Marcus has been sending hundreds of messages to a local newsreader, believing she is communicating with him through television. He says, “She smiles at the end of the bulletin because she knows I’m watching.” Police have warned him twice after he attended the television studio reception. Marcus says, “Her husband is the only thing keeping us apart.”
+
+His case manager says Marcus is taking medication inconsistently and has started drinking again. The team is unsure whether to breach confidentiality to warn the newsreader or rely on police. Marcus denies intent to harm and says, “I just need to explain our connection in person.”`,
+    totalMarks: 22,
+    signals: [
+      {
+        id: "s1",
+        name: "Erotomanic delusion with fixation",
+        category: "diagnosis_formulation",
+        severity: "critical",
+        clueInStem: "She smiles at the end of the bulletin because she knows I’m watching.",
+        whyItMatters: "Erotomanic fixation can drive persistent stalking and escalation despite denial of harmful intent.",
+        modelWording: "Formulate erotomanic delusional belief with fixation and behavioural pursuit as central to risk.",
+        keywords: ["erotomania", "delusional fixation", "stalking", "psychosis", "behavioural pursuit", "risk formulation"],
+      },
+      {
+        id: "s2",
+        name: "Identifiable victim and potential rival",
+        category: "risk_others",
+        severity: "critical",
+        clueInStem: "Her husband is the only thing keeping us apart.",
+        whyItMatters: "Identification of a rival increases risk to the victim and third parties.",
+        modelWording: "Assess risk to the newsreader and perceived rival, including escalation, access and grievance.",
+        keywords: ["identifiable victim", "rival", "violence risk", "stalking", "duty to protect", "grievance"],
+      },
+      {
+        id: "s3",
+        name: "Escalation from messages to approach behaviour",
+        category: "risk_others",
+        severity: "important",
+        clueInStem: "attended the television studio reception.",
+        whyItMatters: "Physical approach behaviour marks escalation and increases concern despite denial.",
+        modelWording: "Treat attendance at the studio as escalation from ideation/messages to approach behaviour.",
+        keywords: ["approach behaviour", "escalation", "studio attendance", "stalking behaviour", "proximity", "victim safety"],
+      },
+      {
+        id: "s4",
+        name: "Medication non-adherence",
+        category: "collateral",
+        severity: "important",
+        clueInStem: "taking medication inconsistently",
+        whyItMatters: "Non-adherence may worsen delusional intensity and reduce community manageability.",
+        modelWording: "Review adherence and consider assertive treatment options because relapse may increase stalking risk.",
+        keywords: ["medication adherence", "relapse", "assertive treatment", "psychosis", "community risk", "case manager"],
+      },
+      {
+        id: "s5",
+        name: "Alcohol relapse",
+        category: "substance_use",
+        severity: "important",
+        clueInStem: "has started drinking again.",
+        whyItMatters: "Alcohol increases disinhibition and risk of impulsive approach or confrontation.",
+        modelWording: "Assess alcohol use as a dynamic risk factor for disinhibition and escalation.",
+        keywords: ["alcohol", "disinhibition", "dynamic risk", "stalking escalation", "relapse", "impulsivity"],
+      },
+      {
+        id: "s6",
+        name: "Confidentiality versus duty to protect",
+        category: "ethics",
+        severity: "optional",
+        clueInStem: "whether to breach confidentiality to warn the newsreader",
+        whyItMatters: "The team must balance confidentiality with serious foreseeable risk to an identifiable person.",
+        modelWording: "Consider lawful information sharing or warning where there is serious, imminent or foreseeable risk to identifiable people.",
+        keywords: ["confidentiality", "duty to warn", "duty to protect", "information sharing", "victim safety", "ethics"],
+      },
+    ],
+    priorityOrder: {
+      urgent: ["s1", "s2"],
+      secondary: ["s3", "s4", "s5"],
+      lowYield: ["s6"],
+    },
+    modelAnswer: `Risk formulation:
+
+* Formulate erotomanic delusion, fixation, approach behaviour and perceived rival as key violence/stalking risks.
+* Do not rely on denial of intent.
+
+Immediate management:
+
+* Assess access to victim, weapons, substance use, medication adherence and escalation.
+* Liaise with police and consider victim safety planning.
+
+Legal/ethical:
+
+* Consider lawful information sharing/duty to protect if serious foreseeable risk to identifiable victim or rival.
+* Document confidentiality reasoning.
+
+Treatment/community:
+
+* Review medication adherence and relapse.
+* Consider assertive follow-up, CTO/MHA review if criteria met, substance use intervention and behavioural restrictions.
+
+MDT:
+
+* Convene risk meeting with CMHT, forensic advice and police as appropriate.`,
+  },
+  {
+    id: "FOR-002",
+    topic: "forensic",
+    difficulty: "consultant",
+    title: "NGMI report and fitness to stand trial",
+    candidateRole: "Consultant psychiatrist, forensic psychiatry service",
+    setting: "Court-ordered forensic assessment",
+    stem: `You are a forensic consultant psychiatrist asked to prepare a court report for Arun, a 31-year-old man charged with aggravated assault after stabbing a stranger at a bus stop.
+
+Arun says, “The man was a demon wearing human skin, and I had to stop him before he killed children.” At interview he is disorganised, repeatedly asks what court is, and says, “My lawyer is part of the demon network.” Prison health records show untreated psychosis for several months before the alleged offence.
+
+The solicitor asks whether Arun is “not guilty by reason of mental illness.” The magistrate has also requested comment on fitness to stand trial. The treating team asks whether you can include treatment recommendations in the same report.`,
+    totalMarks: 22,
+    signals: [
+      {
+        id: "s1",
+        name: "Mental state at time of offence",
+        category: "diagnosis_formulation",
+        severity: "critical",
+        clueInStem: "The man was a demon wearing human skin",
+        whyItMatters: "NGMI/mental impairment opinions require analysis of mental state at the time of alleged offence, not only current diagnosis.",
+        modelWording: "Assess whether psychosis at the time of offence impaired understanding of nature/quality or wrongfulness of the act according to jurisdictional legal tests.",
+        keywords: ["NGMI", "mental impairment", "psychosis", "offence mental state", "wrongfulness", "legal test"],
+      },
+      {
+        id: "s2",
+        name: "Fitness to stand trial concern",
+        category: "capacity",
+        severity: "critical",
+        clueInStem: "repeatedly asks what court is",
+        whyItMatters: "Fitness requires ability to understand proceedings, instruct counsel and participate, separate from NGMI.",
+        modelWording: "Assess fitness to stand trial separately from criminal responsibility, focusing on understanding proceedings and ability to instruct counsel.",
+        keywords: ["fitness to stand trial", "court understanding", "instruct counsel", "participation", "legal capacity", "forensic assessment"],
+      },
+      {
+        id: "s3",
+        name: "Paranoid belief about lawyer",
+        category: "consent_refusal",
+        severity: "important",
+        clueInStem: "My lawyer is part of the demon network.",
+        whyItMatters: "Paranoia toward counsel may impair ability to instruct and engage in defence.",
+        modelWording: "Assess whether paranoid beliefs about his lawyer impair his ability to communicate rationally with counsel.",
+        keywords: ["paranoia", "lawyer", "fitness", "instructing counsel", "rational communication", "delusion"],
+      },
+      {
+        id: "s4",
+        name: "Untreated psychosis predating offence",
+        category: "collateral",
+        severity: "important",
+        clueInStem: "untreated psychosis for several months before the alleged offence.",
+        whyItMatters: "Collateral timeline supports assessment of offence-related mental state.",
+        modelWording: "Use collateral and prison health records to establish longitudinal psychosis before and during the alleged offence.",
+        keywords: ["collateral records", "prison health", "timeline", "untreated psychosis", "offence", "longitudinal history"],
+      },
+      {
+        id: "s5",
+        name: "Clinical versus legal standard",
+        category: "ethics",
+        severity: "important",
+        clueInStem: "not guilty by reason of mental illness.",
+        whyItMatters: "The expert provides psychiatric opinion mapped to legal criteria, not a legal verdict.",
+        modelWording: "Clarify that the psychiatrist gives an expert opinion addressing legal criteria but the court determines the legal outcome.",
+        keywords: ["expert witness", "legal criteria", "court decision", "clinical opinion", "forensic report", "role clarity"],
+      },
+      {
+        id: "s6",
+        name: "Dual role risk",
+        category: "governance",
+        severity: "optional",
+        clueInStem: "include treatment recommendations in the same report.",
+        whyItMatters: "Forensic evaluator must avoid role confusion between treating and independent expert functions.",
+        modelWording: "Maintain role clarity between independent forensic opinion and treating recommendations, while noting treatment needs where relevant.",
+        keywords: ["dual role", "forensic report", "treatment recommendations", "independence", "role clarity", "governance"],
+      },
+    ],
+    priorityOrder: {
+      urgent: ["s1", "s2"],
+      secondary: ["s3", "s4", "s5"],
+      lowYield: ["s6"],
+    },
+    modelAnswer: `Forensic issues:
+
+* Address two separate questions: fitness to stand trial and mental impairment/NGMI.
+* Apply jurisdiction-specific legal criteria, not merely diagnosis.
+
+Fitness:
+
+* Assess understanding of charges, court roles, plea, ability to instruct counsel, follow proceedings and challenge jurors/witnesses as relevant.
+* Paranoia about lawyer may impair ability to instruct.
+
+Mental impairment:
+
+* Reconstruct mental state at time of alleged offence using interview, records and collateral.
+* Assess whether psychosis affected understanding of act, wrongfulness or capacity according to legal test.
+
+Report writing:
+
+* State sources, limitations, reasoning and opinion clearly.
+* Maintain independence; court decides legal outcome.
+
+Treatment:
+
+* Comment on treatment needs if requested but avoid becoming treating clinician within forensic opinion.`,
+  },
+  {
+    id: "FOR-003",
+    topic: "forensic",
+    difficulty: "consultant",
+    title: "Conditional discharge of forensic patient",
+    candidateRole: "Consultant forensic psychiatrist, community forensic service",
+    setting: "Forensic tribunal conditional discharge review",
+    stem: `You are the consultant forensic psychiatrist reviewing Malik, a 38-year-old forensic patient conditionally discharged after a serious assault during methamphetamine-induced psychosis.
+
+Malik has been living in supported accommodation for nine months and attending appointments. His support worker reports he missed two urine drug screens and was seen with former drug-using peers. Malik says, “Everyone deserves a night off; I’m not a prisoner anymore.” He denies psychotic symptoms and says medication makes him “slow and useless.”
+
+The victim lives in the same suburb and has requested notification if Malik’s conditions change. Police report Malik was recently seen near the street where the assault occurred. The tribunal asks whether conditional discharge remains appropriate or whether recall is required.`,
+    totalMarks: 22,
+    signals: [
+      {
+        id: "s1",
+        name: "Substance relapse risk linked to index offence",
+        category: "substance_use",
+        severity: "critical",
+        clueInStem: "missed two urine drug screens",
+        whyItMatters: "Missed screens may indicate relapse risk directly linked to prior serious violence.",
+        modelWording: "Treat missed drug screens and contact with drug-using peers as dynamic risk factors given the index offence occurred during methamphetamine psychosis.",
+        keywords: ["missed drug screens", "methamphetamine", "index offence", "dynamic risk", "relapse", "violence"],
+      },
+      {
+        id: "s2",
+        name: "Victim proximity and safety",
+        category: "risk_others",
+        severity: "critical",
+        clueInStem: "The victim lives in the same suburb",
+        whyItMatters: "Geographic proximity increases risk and requires victim safety planning and condition review.",
+        modelWording: "Assess victim safety and geographic proximity, including whether exclusion zones or notification conditions remain adequate.",
+        keywords: ["victim safety", "proximity", "exclusion zone", "conditional discharge", "violence risk", "notification"],
+      },
+      {
+        id: "s3",
+        name: "Poor insight into supervision",
+        category: "diagnosis_formulation",
+        severity: "important",
+        clueInStem: "I’m not a prisoner anymore.",
+        whyItMatters: "Minimising conditions may predict non-adherence and escalating risk.",
+        modelWording: "Assess insight into forensic conditions and whether minimisation undermines community manageability.",
+        keywords: ["insight", "forensic conditions", "minimisation", "community manageability", "supervision"],
+      },
+      {
+        id: "s4",
+        name: "Medication adherence ambivalence",
+        category: "consent_refusal",
+        severity: "important",
+        clueInStem: "medication makes him “slow and useless.”",
+        whyItMatters: "Side effects may drive non-adherence and relapse unless addressed.",
+        modelWording: "Review medication adherence and side effects because treatment ambivalence may increase relapse risk.",
+        keywords: ["medication adherence", "side effects", "relapse prevention", "forensic patient", "treatment ambivalence"],
+      },
+      {
+        id: "s5",
+        name: "Possible breach of geographic conditions",
+        category: "governance",
+        severity: "important",
+        clueInStem: "seen near the street where the assault occurred.",
+        whyItMatters: "Potential breach requires factual verification and tribunal/police liaison.",
+        modelWording: "Verify possible condition breach and liaise with police, tribunal and supervising agencies.",
+        keywords: ["condition breach", "police liaison", "tribunal", "geographic restriction", "supervision", "verification"],
+      },
+      {
+        id: "s6",
+        name: "Recall versus enhanced supervision",
+        category: "disposition",
+        severity: "optional",
+        clueInStem: "whether recall is required.",
+        whyItMatters: "Consultant must weigh proportional response: enhanced conditions, treatment adjustment or recall.",
+        modelWording: "Recommend proportionate response ranging from intensified supervision to recall depending on verified risk escalation.",
+        keywords: ["recall", "enhanced supervision", "conditional discharge", "proportionality", "community risk", "tribunal"],
+      },
+    ],
+    priorityOrder: {
+      urgent: ["s1", "s2"],
+      secondary: ["s3", "s4", "s5"],
+      lowYield: ["s6"],
+    },
+    modelAnswer: `Risk formulation:
+
+* Reassess dynamic violence risk: missed drug screens, drug peers, victim proximity, possible breach and medication ambivalence.
+* Link methamphetamine relapse risk to index offence.
+
+Victim/public safety:
+
+* Review victim notification, exclusion zones and safety planning.
+* Liaise with police and tribunal regarding possible breach.
+
+Treatment/supervision:
+
+* Verify drug use, increase testing, review medication side effects and reinforce conditions.
+* Consider substance treatment intensification.
+
+Disposition:
+
+* If breaches or relapse are confirmed and risk is not manageable, recommend recall.
+* If risk can be managed, recommend tightened conditions and enhanced supervision.
+
+Documentation:
+
+* Provide structured tribunal opinion with evidence, uncertainties, risk formulation and recommendation.`,
+  },
+  {
+    id: "SU-001",
+    topic: "substance_use",
+    difficulty: "consultant",
+    title: "Alcohol dependence with decompensated liver disease",
+    candidateRole: "Consultant psychiatrist, consultation-liaison addiction psychiatry",
+    setting: "Hepatology ward in tertiary hospital",
+    stem: `You are the consultant psychiatrist asked to review Peter, a 57-year-old man with severe alcohol dependence and decompensated cirrhosis admitted with ascites, encephalopathy and variceal bleeding.
+
+Peter is refusing lactulose, blood tests and alcohol withdrawal medication. He says, “I know I’m dying, so let me drink and leave me alone.” His wife says, “He says this every time, but when he sobers up he wants treatment.” The hepatology team says he is intermittently confused and may deteriorate without treatment.
+
+Peter asks to self-discharge to attend his local pub. His adult daughter says the family cannot keep rescuing him and asks whether the team can “force rehab this time.” The medical registrar asks whether Peter has capacity to refuse treatment.`,
+    totalMarks: 22,
+    signals: [
+      {
+        id: "s1",
+        name: "Capacity affected by encephalopathy and intoxication/withdrawal",
+        category: "capacity",
+        severity: "critical",
+        clueInStem: "intermittently confused",
+        whyItMatters: "Capacity may fluctuate due to hepatic encephalopathy, intoxication or withdrawal, invalidating refusal.",
+        modelWording: "Assess decision-specific and fluctuating capacity in relation to hepatic encephalopathy, intoxication and withdrawal.",
+        keywords: ["capacity", "hepatic encephalopathy", "fluctuating cognition", "alcohol withdrawal", "intoxication", "refusal"],
+      },
+      {
+        id: "s2",
+        name: "Life-threatening medical risk",
+        category: "physical_health",
+        severity: "critical",
+        clueInStem: "may deteriorate without treatment.",
+        whyItMatters: "Medical urgency may require emergency treatment if capacity is absent.",
+        modelWording: "Clarify immediate medical risk from variceal bleeding, encephalopathy and withdrawal before determining legal treatment options.",
+        keywords: ["cirrhosis", "variceal bleeding", "ascites", "encephalopathy", "medical deterioration", "urgent treatment"],
+      },
+      {
+        id: "s3",
+        name: "Demoralisation versus capacitous refusal",
+        category: "diagnosis_formulation",
+        severity: "important",
+        clueInStem: "I know I’m dying, so let me drink and leave me alone.",
+        whyItMatters: "Hopelessness, depression or delirium may drive refusal and require assessment rather than accepting stated wish.",
+        modelWording: "Assess whether hopelessness, depression, delirium or demoralisation is impairing Peter’s treatment decisions.",
+        keywords: ["demoralisation", "depression", "hopelessness", "treatment refusal", "end-stage liver disease"],
+      },
+      {
+        id: "s4",
+        name: "Collateral indicates reversibility of refusal",
+        category: "collateral",
+        severity: "important",
+        clueInStem: "when he sobers up he wants treatment.",
+        whyItMatters: "Past pattern suggests current refusal may not reflect stable values.",
+        modelWording: "Use wife’s collateral to assess whether refusal is stable or state-dependent on intoxication/encephalopathy.",
+        keywords: ["collateral", "state-dependent refusal", "wife", "sobriety", "stable preference", "capacity"],
+      },
+      {
+        id: "s5",
+        name: "Family demand for forced rehabilitation",
+        category: "family_carer",
+        severity: "important",
+        clueInStem: "force rehab this time.",
+        whyItMatters: "Compulsory acute medical treatment differs from forced rehabilitation; family expectations require clarification.",
+        modelWording: "Explain that emergency medical treatment and involuntary rehabilitation have different legal thresholds and aims.",
+        keywords: ["family expectations", "forced rehab", "legal threshold", "addiction treatment", "psychoeducation"],
+      },
+      {
+        id: "s6",
+        name: "Harm reduction planning",
+        category: "substance_use",
+        severity: "optional",
+        clueInStem: "attend his local pub.",
+        whyItMatters: "If he has capacity or after stabilisation, harm reduction and relapse planning are essential.",
+        modelWording: "Develop harm reduction and relapse prevention plan including withdrawal care, addiction medicine and realistic follow-up.",
+        keywords: ["harm reduction", "relapse prevention", "addiction medicine", "alcohol dependence", "withdrawal", "self-discharge"],
+      },
+    ],
+    priorityOrder: {
+      urgent: ["s1", "s2"],
+      secondary: ["s3", "s4", "s5"],
+      lowYield: ["s6"],
+    },
+    modelAnswer: `Capacity/medical:
+
+* Assess decision-specific capacity to refuse lactulose, bloods, withdrawal treatment and admission.
+* Consider hepatic encephalopathy, intoxication and withdrawal as causes of fluctuating capacity.
+* Clarify immediate medical risk with hepatology.
+
+Risk/legal:
+
+* If capacity absent and deterioration risk is serious, consider emergency treatment authority.
+* If capacity present, respect refusal while offering harm reduction.
+
+Formulation:
+
+* Assess depression, demoralisation and suicidality.
+* Use collateral about previous treatment wishes when sober.
+
+Family:
+
+* Explain limits of forced rehabilitation versus urgent medical treatment.
+* Support family boundaries and carer distress.
+
+Management:
+
+* Addiction medicine input, withdrawal management, relapse prevention, realistic discharge planning and documentation.`,
+  },
+  {
+    id: "SU-002",
+    topic: "substance_use",
+    difficulty: "consultant",
+    title: "Methamphetamine psychosis versus primary psychosis",
+    candidateRole: "Consultant psychiatrist, emergency psychiatry service",
+    setting: "Metropolitan emergency department short-stay unit",
+    stem: `You are the consultant psychiatrist supervising assessment of Kai, a 25-year-old man brought to ED by ambulance after barricading himself in his room.
+
+Kai says, “The neighbours have installed cameras in the smoke alarm.” Urine drug screen is positive for methamphetamine and cannabis. His father reports Kai has been increasingly withdrawn for six months, stopped working and has been muttering to himself even during periods when the family believe he was not using drugs.
+
+Kai has not slept for four nights and punched a hole in the wall before ambulance arrived. He says, “If they come in again, I’ll be ready.” The ED registrar asks whether he can be discharged once he sleeps because this is probably just methamphetamine intoxication.`,
+    totalMarks: 22,
+    signals: [
+      {
+        id: "s1",
+        name: "Primary psychosis versus substance-induced psychosis",
+        category: "diagnosis_formulation",
+        severity: "critical",
+        clueInStem: "increasingly withdrawn for six months",
+        whyItMatters: "Longitudinal deterioration outside intoxication suggests possible primary psychotic disorder.",
+        modelWording: "Formulate methamphetamine-induced psychosis versus emerging primary psychosis using longitudinal collateral and periods of abstinence.",
+        keywords: ["methamphetamine psychosis", "primary psychosis", "six-month decline", "collateral", "functional deterioration", "differential diagnosis"],
+      },
+      {
+        id: "s2",
+        name: "Violence risk linked to persecutory beliefs",
+        category: "risk_others",
+        severity: "critical",
+        clueInStem: "If they come in again, I’ll be ready.",
+        whyItMatters: "Persecutory threat perception plus recent aggression increases risk to others.",
+        modelWording: "Assess violence risk driven by persecutory beliefs, sleep deprivation, stimulant use and recent property damage.",
+        keywords: ["violence risk", "persecutory beliefs", "threat perception", "property damage", "sleep deprivation", "stimulant use"],
+      },
+      {
+        id: "s3",
+        name: "Recent methamphetamine use",
+        category: "substance_use",
+        severity: "important",
+        clueInStem: "positive for methamphetamine and cannabis.",
+        whyItMatters: "Substance use may precipitate, worsen or mimic psychosis and affects observation/disposition.",
+        modelWording: "Assess methamphetamine and cannabis use patterns as precipitants and maintaining factors for psychosis and risk.",
+        keywords: ["methamphetamine", "cannabis", "urine drug screen", "substance-induced", "psychosis", "risk"],
+      },
+      {
+        id: "s4",
+        name: "Sleep deprivation worsening risk",
+        category: "physical_health",
+        severity: "important",
+        clueInStem: "has not slept for four nights",
+        whyItMatters: "Sleep deprivation worsens psychosis, agitation and capacity to engage.",
+        modelWording: "Treat sleep deprivation as a dynamic factor worsening psychosis and behavioural risk.",
+        keywords: ["sleep deprivation", "agitation", "psychosis", "dynamic risk", "stabilisation", "behavioural disturbance"],
+      },
+      {
+        id: "s5",
+        name: "Collateral essential for diagnosis",
+        category: "collateral",
+        severity: "important",
+        clueInStem: "even during periods when the family believe he was not using drugs.",
+        whyItMatters: "Collateral helps distinguish substance-induced psychosis from primary psychosis.",
+        modelWording: "Seek detailed family collateral about abstinent periods, prodrome, function and previous symptoms.",
+        keywords: ["family collateral", "abstinence", "prodrome", "function", "diagnostic clarification", "father"],
+      },
+      {
+        id: "s6",
+        name: "Unsafe premature discharge",
+        category: "disposition",
+        severity: "optional",
+        clueInStem: "discharged once he sleeps",
+        whyItMatters: "Sleep alone does not resolve diagnostic uncertainty or violence risk.",
+        modelWording: "Do not discharge solely after sleep; disposition depends on persisting psychosis, risk, supports and follow-up.",
+        keywords: ["premature discharge", "short-stay", "risk reassessment", "supports", "follow-up", "ED"],
+      },
+    ],
+    priorityOrder: {
+      urgent: ["s1", "s2"],
+      secondary: ["s3", "s4", "s5"],
+      lowYield: ["s6"],
+    },
+    modelAnswer: `Diagnosis:
+
+* Formulate methamphetamine-induced psychosis versus primary psychotic disorder.
+* Six-month functional decline and symptoms during likely abstinence increase concern for primary psychosis.
+
+Risk:
+
+* Assess violence risk from persecutory beliefs, recent property damage, sleep deprivation and stimulant use.
+* Maintain safe containment until risk improves.
+
+Substance/physical:
+
+* Assess intoxication, withdrawal, polysubstance use, sleep deprivation and medical complications.
+
+Collateral:
+
+* Obtain detailed father/family collateral about timeline, abstinence, functioning and prior symptoms.
+
+Disposition:
+
+* Do not discharge simply after sleep.
+* Consider admission or intensive crisis/early psychosis follow-up depending on persistence of psychosis, risk and supports.
+
+Treatment:
+
+* Low-stimulus environment, sleep restoration, antipsychotic if indicated, substance intervention and early psychosis referral.`,
+  },
+  {
+    id: "SU-003",
+    topic: "substance_use",
+    difficulty: "consultant",
+    title: "Pregnancy, methadone and neonatal planning",
+    candidateRole: "Consultant psychiatrist, perinatal addiction psychiatry liaison",
+    setting: "Public antenatal clinic and opioid treatment service",
+    stem: `You are the consultant psychiatrist asked to review Alana, a 29-year-old woman who is 30 weeks pregnant and on methadone maintenance treatment.
+
+Alana says, “If child protection hears I’m on methadone, they’ll take my baby.” She has missed two antenatal appointments but attends the dosing clinic regularly. Urine drug screens show intermittent benzodiazepine and cannabis use. Her partner is also using heroin and has recently become verbally aggressive at clinic.
+
+The midwife wants a neonatal abstinence syndrome plan, but Alana says, “I don’t want the baby labelled an addict.” She becomes tearful and says methadone is the only thing stopping her from using heroin. The registrar asks whether methadone should be reduced before delivery to reduce fetal risk.`,
+    totalMarks: 22,
+    signals: [
+      {
+        id: "s1",
+        name: "Methadone maintenance as protective treatment",
+        category: "substance_use",
+        severity: "critical",
+        clueInStem: "methadone is the only thing stopping her from using heroin.",
+        whyItMatters: "Reducing methadone in pregnancy may destabilise opioid use and increase fetal/maternal risk.",
+        modelWording: "Maintain opioid substitution treatment as protective, avoiding destabilising dose reduction solely to prevent neonatal withdrawal.",
+        keywords: ["methadone", "opioid substitution treatment", "pregnancy", "heroin relapse", "stabilisation", "harm reduction"],
+      },
+      {
+        id: "s2",
+        name: "Fear of child protection undermining engagement",
+        category: "child_protection",
+        severity: "critical",
+        clueInStem: "they’ll take my baby.",
+        whyItMatters: "Fear may lead to disengagement from antenatal care and hidden substance use unless addressed transparently.",
+        modelWording: "Address child protection fears transparently, explaining thresholds while emphasising engagement and safety planning.",
+        keywords: ["child protection", "fear of removal", "engagement", "pregnancy", "transparency", "safety planning"],
+      },
+      {
+        id: "s3",
+        name: "Neonatal abstinence planning",
+        category: "physical_health",
+        severity: "important",
+        clueInStem: "neonatal abstinence syndrome plan",
+        whyItMatters: "NAS planning improves neonatal monitoring, maternal preparation and non-stigmatising care.",
+        modelWording: "Coordinate NAS planning with maternity and paediatrics using non-stigmatising education and postnatal support.",
+        keywords: ["neonatal abstinence syndrome", "NAS", "paediatrics", "maternity", "postnatal planning", "education"],
+      },
+      {
+        id: "s4",
+        name: "Benzodiazepine and cannabis use",
+        category: "substance_use",
+        severity: "important",
+        clueInStem: "intermittent benzodiazepine and cannabis use.",
+        whyItMatters: "Polysubstance use increases maternal, fetal and neonatal risk and may affect child protection planning.",
+        modelWording: "Assess polysubstance use, especially benzodiazepines, because it increases overdose, sedation and neonatal risk.",
+        keywords: ["benzodiazepines", "cannabis", "polysubstance use", "overdose risk", "neonatal risk", "pregnancy"],
+      },
+      {
+        id: "s5",
+        name: "Family violence and partner substance use",
+        category: "risk_vulnerable",
+        severity: "important",
+        clueInStem: "verbally aggressive at clinic.",
+        whyItMatters: "Partner aggression and heroin use may affect maternal safety, infant safety and treatment engagement.",
+        modelWording: "Assess family violence and partner substance use as risks to Alana, the fetus and postnatal safety.",
+        keywords: ["family violence", "partner substance use", "heroin", "maternal safety", "infant safety", "clinic aggression"],
+      },
+      {
+        id: "s6",
+        name: "Missed antenatal appointments",
+        category: "collateral",
+        severity: "optional",
+        clueInStem: "missed two antenatal appointments",
+        whyItMatters: "Missed antenatal care may reflect fear, instability or access barriers and should trigger supportive outreach.",
+        modelWording: "Explore missed antenatal appointments as a signal of barriers, fear or instability rather than simple non-compliance.",
+        keywords: ["antenatal care", "missed appointments", "barriers", "engagement", "outreach", "non-compliance"],
+      },
+    ],
+    priorityOrder: {
+      urgent: ["s1", "s2"],
+      secondary: ["s3", "s4", "s5"],
+      lowYield: ["s6"],
+    },
+    modelAnswer: `Substance treatment:
+
+* Do not reduce methadone simply to prevent NAS.
+* Maintain stable opioid substitution treatment because it reduces heroin relapse and chaotic use.
+* Review dose adequacy, cravings and sedation.
+
+Pregnancy/neonatal:
+
+* Coordinate with maternity, addiction medicine and paediatrics.
+* Develop NAS plan with non-stigmatising education and postnatal monitoring.
+
+Child protection/engagement:
+
+* Address fear of removal transparently.
+* Explain that engagement, safety planning and stability are protective.
+
+Risk:
+
+* Assess benzodiazepine/cannabis use, overdose risk, partner heroin use and family violence.
+* Consider infant safety and postnatal supports.
+
+MDT:
+
+* Involve midwife, opioid treatment service, social work, GP, paediatrics and child protection if thresholds met.
+
+Documentation:
+
+* Record risk-benefit reasoning, engagement plan, NAS plan and child safety considerations.`,
+  },
+  ]
