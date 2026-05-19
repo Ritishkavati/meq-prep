@@ -18,3 +18,9 @@ id = "N3BocRMrYYD9LoK85mUTp"
 uri = "file://all_meq_questions_combined.txt"
 type = "text"
 title = "All MEQ Questions (Combined — upload this to Claude.ai or ChatGPT)"
+
+[[outputs]]
+id = "KqQS0Q-ZaJqP5NiMqdsN3"
+uri = "file://MEQ_PREP_KNOWLEDGE_BRIEF.md"
+type = "text"
+title = "MEQ Prep — AI Knowledge Brief (upload this to Claude.ai or ChatGPT)"
