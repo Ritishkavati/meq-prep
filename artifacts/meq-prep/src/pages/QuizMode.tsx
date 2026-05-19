@@ -192,8 +192,71 @@ function QuizScreen({
     onSubmit(answer, used);
   }
 
+  function handleTimerClick() {
+    if (!started || paused) {
+      startTimer();
+    } else {
+      stopTimer();
+    }
+  }
+
   return (
     <div className="space-y-5 max-w-3xl mx-auto">
+
+      {/* ── DIGITAL TIMER — top, click to start / click to stop ──────────────── */}
+      <div
+        onClick={!timeExpired ? handleTimerClick : undefined}
+        className={[
+          "rounded-2xl border shadow-sm select-none transition-all",
+          timeExpired
+            ? "bg-red-50 border-red-300 cursor-default"
+            : urgent
+            ? "bg-red-50 border-red-300 cursor-pointer hover:brightness-95 active:scale-[0.99]"
+            : !started
+            ? "bg-primary border-primary cursor-pointer hover:bg-primary/90 active:scale-[0.99]"
+            : "bg-white border-card-border cursor-pointer hover:bg-slate-50 active:scale-[0.99]",
+        ].join(" ")}
+      >
+        <div className="flex items-center justify-between px-5 pt-4 pb-1">
+          {/* left label */}
+          <span className={[
+            "text-xs font-semibold uppercase tracking-widest",
+            timeExpired ? "text-red-500" : urgent ? "text-red-500" : !started ? "text-white/70" : "text-muted-foreground",
+          ].join(" ")}>
+            {timeExpired ? "Time's up" : !started ? "Click to start" : paused ? "Paused — click to resume" : "Running — click to stop"}
+          </span>
+          {/* reset */}
+          <button
+            onClick={(e) => { e.stopPropagation(); resetTimer(); }}
+            className={[
+              "flex items-center gap-1 text-xs font-semibold px-2.5 py-1 rounded-lg transition-colors",
+              !started ? "text-white/60 hover:text-white" : "text-muted-foreground hover:text-primary border border-slate-200 hover:border-primary",
+            ].join(" ")}
+          >
+            <RotateCcw className="w-3 h-3" /> Reset
+          </button>
+        </div>
+
+        {/* Big clock */}
+        <div className="flex items-center justify-center py-5">
+          <span className={[
+            "font-mono font-bold tracking-tight tabular-nums",
+            "text-6xl md:text-7xl",
+            timeExpired ? "text-red-600" : urgent ? "text-red-700" : !started ? "text-white" : "text-primary",
+          ].join(" ")}>
+            {fmtTime(timeLeft)}
+          </span>
+        </div>
+
+        {timeExpired && (
+          <div className="px-5 pb-4 text-center">
+            <span className="text-xs font-semibold text-red-700">
+              Time finished — you can still submit your answer below
+            </span>
+          </div>
+        )}
+      </div>
+
       {/* meta */}
       <div className="bg-white rounded-2xl border border-card-border shadow-sm px-5 py-4 flex flex-wrap gap-3 items-center text-xs text-muted-foreground">
         <span className="font-semibold text-primary">{TOPIC_LABELS[stem.topic]}</span>
@@ -241,47 +304,6 @@ function QuizScreen({
         </div>
       )}
 
-      {/* timer */}
-      <div className={`bg-white rounded-2xl border shadow-sm p-5 ${urgent ? "border-red-300 bg-red-50" : "border-card-border"}`}>
-        <div className="flex items-center gap-4 mb-3">
-          <Clock className={`w-4 h-4 ${urgent ? "text-red-600" : "text-accent"}`} />
-          <span className={`font-mono text-2xl font-bold ${urgent ? "text-red-700" : "text-primary"}`}>
-            {fmtTime(timeLeft)}
-          </span>
-          {timeExpired && (
-            <span className="text-xs font-semibold text-red-700 bg-red-100 border border-red-200 px-2 py-0.5 rounded-full">
-              Time finished — you may still submit
-            </span>
-          )}
-          <div className="ml-auto flex gap-2">
-            {!started && (
-              <button onClick={startTimer} className="flex items-center gap-1.5 bg-primary text-white text-xs font-semibold px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors">
-                <Play className="w-3.5 h-3.5" /> Start
-              </button>
-            )}
-            {started && !paused && !timeExpired && (
-              <button onClick={stopTimer} className="flex items-center gap-1.5 border border-border text-muted-foreground text-xs font-semibold px-4 py-2 rounded-lg hover:text-primary transition-colors">
-                <Square className="w-3.5 h-3.5" /> Stop
-              </button>
-            )}
-            {started && paused && (
-              <button onClick={startTimer} className="flex items-center gap-1.5 bg-primary text-white text-xs font-semibold px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors">
-                <Play className="w-3.5 h-3.5" /> Resume
-              </button>
-            )}
-            <button onClick={resetTimer} className="flex items-center gap-1.5 border border-border text-muted-foreground text-xs font-semibold px-3 py-2 rounded-lg hover:text-primary transition-colors">
-              <RotateCcw className="w-3.5 h-3.5" />
-            </button>
-          </div>
-        </div>
-        <div className="w-full h-1.5 bg-gray-200 rounded-full overflow-hidden">
-          <div
-            className={`h-full rounded-full transition-all ${urgent ? "bg-red-500" : "bg-accent"}`}
-            style={{ width: `${pct}%` }}
-          />
-        </div>
-      </div>
-
       {/* answer */}
       <div className="bg-white rounded-2xl border border-card-border shadow-sm p-6">
         <label className="block text-sm font-semibold text-primary mb-1">
@@ -306,10 +328,10 @@ function QuizScreen({
           <Send className="w-4 h-4" /> Submit answer for marking
         </button>
         {!started && (
-          <p className="text-center text-xs text-muted-foreground mt-2">Press Start to begin timing before submitting</p>
+          <p className="text-center text-xs text-muted-foreground mt-2">Click the timer above to begin</p>
         )}
 
-        {/* Skip / Next — prominent button below submit */}
+        {/* Skip */}
         <button
           onClick={onSkipToNext}
           className="mt-3 w-full flex items-center justify-center gap-2 border-2 border-slate-300 text-muted-foreground py-2.5 rounded-lg text-sm font-semibold hover:border-primary hover:text-primary transition-colors"
