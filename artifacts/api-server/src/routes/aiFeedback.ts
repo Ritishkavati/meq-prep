@@ -1,5 +1,7 @@
 import { Router } from "express";
 import Anthropic from "@anthropic-ai/sdk";
+import fs from "fs";
+import path from "path";
 
 const router = Router();
 
@@ -8,6 +10,37 @@ const client = new Anthropic({
   apiKey: process.env.AI_INTEGRATIONS_ANTHROPIC_API_KEY ?? "placeholder",
 });
 
+const LOG_PATH = path.resolve(process.cwd(), "logs", "attempts.json");
+
+function anonymise(text: string): string {
+  return text
+    .replace(/\b([A-Z][a-z]{1,14} [A-Z][a-z]{1,14})\b/g, "[NAME]")
+    .replace(/\bDr\.?\s+[A-Z][a-z]+\b/g, "Dr. [NAME]")
+    .replace(/\bMr\.?\s+[A-Z][a-z]+\b/g, "Mr. [NAME]")
+    .replace(/\bMs\.?\s+[A-Z][a-z]+\b/g, "Ms. [NAME]")
+    .replace(/\bMrs\.?\s+[A-Z][a-z]+\b/g, "Mrs. [NAME]");
+}
+
+function appendLog(entry: Record<string, unknown>): void {
+  try {
+    const dir = path.dirname(LOG_PATH);
+    if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+
+    let existing: unknown[] = [];
+    if (fs.existsSync(LOG_PATH)) {
+      try {
+        existing = JSON.parse(fs.readFileSync(LOG_PATH, "utf8")) as unknown[];
+      } catch {
+        existing = [];
+      }
+    }
+    existing.push(entry);
+    fs.writeFileSync(LOG_PATH, JSON.stringify(existing, null, 2), "utf8");
+  } catch (err) {
+    console.error("Failed to write attempt log:", err);
+  }
+}
+
 interface MissedSignalDetail {
   name: string;
   clueInStem: string;
@@ -15,10 +48,26 @@ interface MissedSignalDetail {
 }
 
 router.post("/ai-feedback", async (req, res) => {
-  const { stem, identifiedSignalNames, missedSignalDetails } = req.body as {
+  const {
+    stem,
+    identifiedSignalNames,
+    missedSignalDetails,
+    questionId,
+    identifiedSignalIds,
+    missedSignalIds,
+    candidateAnswer,
+    totalMarks,
+    estimatedMarks,
+  } = req.body as {
     stem: string;
     identifiedSignalNames: string[];
     missedSignalDetails: MissedSignalDetail[];
+    questionId?: string;
+    identifiedSignalIds?: string[];
+    missedSignalIds?: string[];
+    candidateAnswer?: string;
+    totalMarks?: number;
+    estimatedMarks?: number;
   };
 
   if (!stem) {
@@ -72,6 +121,16 @@ Do not rewrite their answer. Do not give generic advice.`;
 
     const block = message.content[0];
     const text = block.type === "text" ? block.text : "";
+
+    appendLog({
+      timestamp: new Date().toISOString(),
+      questionId: questionId ?? null,
+      identifiedSignalIds: identifiedSignalIds ?? [],
+      missedSignalIds: missedSignalIds ?? [],
+      candidateAnswer: candidateAnswer ? anonymise(candidateAnswer) : null,
+      totalMarks: totalMarks ?? null,
+      estimatedMarks: estimatedMarks ?? null,
+    });
 
     res.json({ feedback: text });
   } catch {

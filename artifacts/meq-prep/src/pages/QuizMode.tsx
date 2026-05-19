@@ -664,6 +664,19 @@ function ResultsScreen({
           clueInStem: m.signal.clueInStem,
           whyItMatters: m.signal.whyItMatters,
         }));
+      const identifiedSignalIds = result.matches
+        .filter((m) => m.identified)
+        .map((m) => m.signal.id);
+      const missedSignalIds = result.matches
+        .filter((m) => !m.identified)
+        .map((m) => m.signal.id);
+      const WEIGHTS: Record<string, number> = { critical: 2, important: 1, optional: 0.5 };
+      const totalWeighted = result.matches.reduce((s, m) => s + (WEIGHTS[m.signal.severity] ?? 1), 0);
+      const earnedWeighted = result.matches.filter((m) => m.identified).reduce((s, m) => s + (WEIGHTS[m.signal.severity] ?? 1), 0);
+      const estimatedMarks = totalWeighted > 0
+        ? Math.round((earnedWeighted / totalWeighted) * stem.totalMarks)
+        : 0;
+
       const response = await fetch("/api/ai-feedback", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -671,6 +684,12 @@ function ResultsScreen({
           stem: stem.stem,
           identifiedSignalNames,
           missedSignalDetails,
+          questionId: stem.id,
+          identifiedSignalIds,
+          missedSignalIds,
+          candidateAnswer,
+          totalMarks: stem.totalMarks,
+          estimatedMarks,
         }),
       });
       if (!response.ok) throw new Error("Request failed");
