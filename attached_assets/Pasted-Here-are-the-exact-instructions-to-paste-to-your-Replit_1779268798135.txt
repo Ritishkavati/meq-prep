@@ -1,0 +1,46 @@
+Here are the exact instructions to paste to your Replit agent:
+
+---
+
+**TASK: Add Daily MEQ Mode to the existing MEQ Prep app**
+
+Please make the following changes to the codebase:
+
+**1. Create a new file** at `client/src/components/DailyMEQMode.tsx` (or wherever other components like QuizMode live in this project — find the right components folder).
+
+Paste the entire contents of the `DailyMEQMode.jsx` file I will provide below, but make these modifications as you paste it:
+
+- Change the file extension treatment to TypeScript — add `// @ts-nocheck` as the very first line of the file
+- Find the `loadHistory` function and replace `window.storage.get("meq_history_v2")` with `localStorage.getItem("meq_history_v2")` — the return value is the string directly, not `.value`
+- Find the `saveHistory` function and replace `window.storage.set(...)` with `localStorage.setItem(...)`
+- Remove `async` from both `loadHistory` and `saveHistory` since localStorage is synchronous
+
+**2. Find the main App.tsx** (or App.jsx or wherever the routes are defined — look for where QuizMode or other pages are routed).
+
+Add this import at the top with the other imports:
+```tsx
+import DailyMEQMode from "./components/DailyMEQMode";
+```
+
+Add this route alongside the existing routes:
+```tsx
+<Route path="/daily" component={DailyMEQMode} />
+```
+(Use whatever routing syntax this project already uses — wouter, react-router, etc.)
+
+**3. Find the navigation component** (Navbar, Header, or wherever the menu links are). Add a navigation link to `/daily` with the label "Daily MEQ" — style it to match the existing navigation items.
+
+**4. Do not change any existing functionality.** The Quiz Mode with 229 questions should continue working exactly as before. This is purely additive.
+
+**5. After making the changes**, confirm:
+- The app builds without errors
+- The `/daily` route renders the DailyMEQMode component
+- Existing routes still work
+
+Here is the full component code to use:
+
+[paste the entire DailyMEQMode.jsx file contents here]
+
+---
+
+That's it. Give that to the agent, paste the component code at the bottom, and it will handle all the wiring. The `// @ts-nocheck` at the top means TypeScript won't complain about anything in the file during this first version.

@@ -5,7 +5,7 @@ import { Header } from "@/components/Header";
 import {
   ListChecks, BookOpen, ClipboardList, ArrowRight,
   TrendingUp, Target, AlertCircle, CheckCircle2, BarChart2,
-  ChevronDown, ChevronUp, History,
+  ChevronDown, ChevronUp, History, BrainCircuit,
 } from "lucide-react";
 import {
   getQuizModuleCompletion, getTotalQuizzesCompleted, getCandidateFeedback,
@@ -260,6 +260,34 @@ export default function Phases() {
               className="flex-shrink-0 flex items-center gap-2 w-full sm:w-auto justify-center px-5 py-2.5 bg-white text-primary border-2 border-primary hover:bg-primary hover:text-white rounded-lg text-sm font-semibold transition-colors whitespace-nowrap"
             >
               Start Daily <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </div>
+
+        {/* Real MEQ Practice (AI Feedback) */}
+        <div className="bg-card rounded-2xl border border-card-border shadow-sm px-6 py-5">
+          <div className="flex items-start sm:items-center gap-4 flex-col sm:flex-row">
+            <div className="flex-shrink-0 w-11 h-11 rounded-xl bg-accent/10 flex items-center justify-center">
+              <BrainCircuit className="w-5 h-5 text-accent" />
+            </div>
+            <div className="flex-1 min-w-0">
+              <h3 className="text-base font-serif font-bold text-primary mb-0.5">Real MEQ Practice</h3>
+              <p className="text-xs text-muted-foreground mb-2 leading-relaxed">
+                Write answers to real RANZCP exam questions and receive instant AI feedback at examiner standard — mark breakdowns, stem signal analysis, and sentence rewrites.
+              </p>
+              <div className="flex items-center gap-3 text-xs text-muted-foreground">
+                <span>
+                  <span className="font-semibold text-primary">12</span> questions from recent papers
+                </span>
+                <span>·</span>
+                <span className="font-semibold text-accent">AI-graded</span>
+              </div>
+            </div>
+            <Link
+              href="/meq-daily"
+              className="flex-shrink-0 flex items-center gap-2 w-full sm:w-auto justify-center px-5 py-2.5 bg-white text-primary border-2 border-primary hover:bg-primary hover:text-white rounded-lg text-sm font-semibold transition-colors whitespace-nowrap"
+            >
+              Start Practice <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
         </div>
