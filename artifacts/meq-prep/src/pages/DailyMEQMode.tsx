@@ -985,8 +985,11 @@ export default function DailyMEQMode() {
   const [timerActive, setTimerActive] = useState(false);
   const [allAttempts, setAllAttempts] = useState([]);
   const [error, setError] = useState(null);
+  const [evalError, setEvalError] = useState(null);
+  const [evalElapsed, setEvalElapsed] = useState(0);
   const [expandedStems, setExpandedStems] = useState({});
   const timerRef = useRef(null);
+  const evalTimerRef = useRef(null);
 
   useEffect(() => {
     setAllAttempts(loadAllAttempts());
@@ -1098,7 +1101,11 @@ export default function DailyMEQMode() {
 
   async function submitForEvaluation(attempt) {
     setPhase("evaluating");
-    setError(null);
+    setEvalError(null);
+    setEvalElapsed(0);
+    clearInterval(evalTimerRef.current);
+    evalTimerRef.current = setInterval(() => setEvalElapsed((n) => n + 1), 1000);
+
     try {
       const prompt = buildFullMEQPrompt(selectedMEQ, attempt.answers);
       const res = await fetch("/api/meq-evaluate", {
@@ -1106,12 +1113,21 @@ export default function DailyMEQMode() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ prompt }),
       });
+      clearInterval(evalTimerRef.current);
       if (!res.ok) throw new Error(`Server error ${res.status}`);
       const data = await res.json();
-      const text = data.text ?? "";
-      const match = text.match(/\{[\s\S]*\}/);
-      if (!match) throw new Error("No JSON in response");
-      const evaluation = JSON.parse(match[0]);
+      const text = (data.text ?? "").trim();
+
+      // Robust JSON extraction
+      let evaluation;
+      try {
+        evaluation = JSON.parse(text);
+      } catch {
+        const match = text.match(/\{[\s\S]*\}/);
+        if (!match) throw new Error("No JSON object found in evaluation response. The AI may have returned an unexpected format.");
+        evaluation = JSON.parse(match[0]);
+      }
+
       const evaluatedAttempt = { ...attempt, status: "evaluated", evaluation };
       setCurrentAttempt(evaluatedAttempt);
       updateAndPersistAttempt(evaluatedAttempt);
@@ -1120,8 +1136,9 @@ export default function DailyMEQMode() {
       );
       setPhase("assessment");
     } catch (err) {
-      setError("Evaluation failed: " + (err.message ?? "unknown error"));
-      setPhase("stem");
+      clearInterval(evalTimerRef.current);
+      setEvalError(err.message ?? "Unknown error occurred during evaluation.");
+      // Stay on evaluating phase to show error + retry — do NOT revert to stem
     }
   }
 
@@ -1379,6 +1396,30 @@ export default function DailyMEQMode() {
 
   // ── EVALUATING PHASE ───────────────────────────────────────
   if (phase === "evaluating") {
+    if (evalError) {
+      return (
+        <div className="max-w-3xl mx-auto px-4 py-24 flex flex-col items-center text-center">
+          <div className="text-4xl mb-4">⚠️</div>
+          <h2 className="text-xl font-bold text-gray-900 mb-2">Evaluation failed</h2>
+          <p className="text-gray-500 text-sm max-w-md mb-6">{evalError}</p>
+          <div className="flex gap-3">
+            <button
+              onClick={() => submitForEvaluation(currentAttempt)}
+              className="px-6 py-2.5 bg-gray-900 text-white rounded-lg text-sm font-semibold hover:bg-gray-800 transition-colors"
+            >
+              Try Again
+            </button>
+            <button
+              onClick={goBackToList}
+              className="px-6 py-2.5 border border-gray-300 text-gray-600 rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors"
+            >
+              Back to list
+            </button>
+          </div>
+          <p className="text-xs text-gray-400 mt-4">Your answers are saved — you won't lose any work.</p>
+        </div>
+      );
+    }
     return (
       <div className="max-w-3xl mx-auto px-4 py-24 flex flex-col items-center text-center">
         <div className="w-12 h-12 border-2 border-gray-900 border-t-transparent rounded-full animate-spin mb-6" />
@@ -1387,8 +1428,11 @@ export default function DailyMEQMode() {
           At RANZCP examiner standard · {selectedMEQ?.stems.length} stems · {selectedMEQ?.totalMarks} marks
         </p>
         <p className="text-gray-400 text-xs mt-3">
-          Checking command words · domain coverage · stem signal usage · time management
+          Checking command words · domain coverage · time management
         </p>
+        <div className="mt-6 px-4 py-2 bg-gray-100 rounded-full text-xs text-gray-500 font-mono tabular-nums">
+          {formatTime(evalElapsed)} elapsed — this takes 1–2 minutes
+        </div>
       </div>
     );
   }
