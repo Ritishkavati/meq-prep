@@ -1029,6 +1029,32 @@ export default function DailyMEQMode() {
     if (!existingAttempt) updateAndPersistAttempt(attempt);
   }
 
+  function navigateToStem(targetIdx) {
+    if (targetIdx === currentStemIndex) return;
+    const stem = selectedMEQ.stems[currentStemIndex];
+    const savedAnswer = {
+      stemNumber: stem.stemNumber,
+      answerText: stemAnswer,
+      timeUsedSeconds: timer,
+      submittedAt: new Date().toISOString(),
+    };
+    const updatedAnswers = [
+      ...currentAttempt.answers.filter((a) => a.stemNumber !== stem.stemNumber),
+      savedAnswer,
+    ];
+    const updatedAttempt = { ...currentAttempt, answers: updatedAnswers };
+    setCurrentAttempt(updatedAttempt);
+    updateAndPersistAttempt(updatedAttempt);
+    const targetStem = selectedMEQ.stems[targetIdx];
+    const existingAnswer =
+      updatedAnswers.find((a) => a.stemNumber === targetStem.stemNumber)?.answerText ?? "";
+    setCurrentStemIndex(targetIdx);
+    setStemAnswer(existingAnswer);
+    setTimer(0);
+    setError(null);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
   function saveCurrentStemAndAdvance() {
     const stem = selectedMEQ.stems[currentStemIndex];
     const newAnswer = {
@@ -1267,13 +1293,22 @@ export default function DailyMEQMode() {
             const isCurrent = idx === currentStemIndex;
             return (
               <div key={s.stemNumber} className="flex items-center gap-1 flex-shrink-0">
-                <div className={`px-2.5 py-1 rounded-lg text-xs font-semibold border transition-all ${
-                  isCurrent ? "bg-gray-900 text-white border-gray-900"
-                  : isDone ? "bg-emerald-100 text-emerald-800 border-emerald-300"
-                  : "bg-gray-50 text-gray-400 border-gray-200"
-                }`}>
-                  {isDone ? `✓ ${s.stemNumber}` : s.stemNumber} ({s.marks}M)
-                </div>
+                {isDone ? (
+                  <button
+                    onClick={() => navigateToStem(idx)}
+                    className="px-2.5 py-1 rounded-lg text-xs font-semibold border transition-all bg-emerald-100 text-emerald-800 border-emerald-300 hover:bg-emerald-200 hover:border-emerald-400 cursor-pointer"
+                    title={`Go back to Stem ${s.stemNumber}`}
+                  >
+                    ✓ {s.stemNumber} ({s.marks}M)
+                  </button>
+                ) : (
+                  <div className={`px-2.5 py-1 rounded-lg text-xs font-semibold border transition-all ${
+                    isCurrent ? "bg-gray-900 text-white border-gray-900"
+                    : "bg-gray-50 text-gray-400 border-gray-200"
+                  }`}>
+                    {s.stemNumber} ({s.marks}M)
+                  </div>
+                )}
                 {idx < selectedMEQ.stems.length - 1 && <span className="text-gray-300 text-xs">→</span>}
               </div>
             );
