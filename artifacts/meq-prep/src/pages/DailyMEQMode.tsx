@@ -887,7 +887,9 @@ Return ONLY a valid JSON object with EXACTLY this structure (no markdown, no pre
       "stemSignalsMissed": ["<signal missed>"],
       "errorTypes": ["<error type from list>"],
       "timeManagement": "<apply 1-mark-per-minute rule>",
-      "modelAnswer": "<concise examiner-level model answer — key points in structured form>"
+      "modelAnswer": "<concise examiner-level model answer — key points in structured form>",
+      "inlineEditedAnswer": "<Take the candidate's exact answer text for this stem. Rewrite it inline. Use ~~strikethrough~~ around weak, vague, generic, or unjustified phrases. Immediately after each strikethrough insert [INSERT: better consultant-level replacement text]. Keep strong sentences unchanged with no markup. If the candidate wrote a bare list with no justification on an Outline or Describe question, format each list item as: the item ~~without justification~~ [INSERT: because <clinical reason>.]. If the answer is empty or very short, return a brief note explaining what a full answer would have contained.>",
+      "yieldCallout": "<If the candidate wrote clinically correct content but failed the command word — specifically if they listed without justifying on an Outline question, or listed without explaining on a Describe question — return a string such as: 'Correct content, insufficient explanation: estimated X/Y marks vs potential Z/Y marks. Adding because-clauses to your existing points would significantly improve this stem score.' If command word compliance is satisfactory, return null.>"
     }
   ],
   "overallFeedback": "<2-3 sentences. Honest consultant-to-candidate summary. Quote from answers. No platitudes.>",
@@ -1552,6 +1554,46 @@ export default function DailyMEQMode() {
                     <div className="bg-red-50 border border-red-200 rounded-lg p-3">
                       <div className="text-xs font-bold text-red-800 mb-1">⚠ Command-word non-compliance</div>
                       <p className="text-xs text-red-700">{stemEv.commandWordGateResult}</p>
+                    </div>
+                  )}
+
+                  {/* Yield callout */}
+                  {stemEv.yieldCallout && (
+                    <div className="bg-orange-50 border-l-4 border-orange-500 rounded-r-lg p-3">
+                      <div className="text-xs font-black text-orange-800 uppercase tracking-wide mb-1">
+                        Correct content without explanation scores no marks
+                      </div>
+                      <p className="text-sm text-orange-900 font-medium">{stemEv.yieldCallout}</p>
+                    </div>
+                  )}
+
+                  {/* Inline edited answer */}
+                  {stemEv.inlineEditedAnswer && (
+                    <div>
+                      <h4 className="text-xs font-bold text-gray-600 uppercase tracking-wide mb-2">
+                        Your answer — inline corrections
+                      </h4>
+                      <div className="bg-white border border-gray-200 rounded-lg p-4 text-sm text-gray-800 leading-relaxed whitespace-pre-wrap">
+                        {stemEv.inlineEditedAnswer
+                          .split(/(\~\~[^~]+\~\~|\[INSERT:[^\]]+\])/g)
+                          .map((part, i) => {
+                            if (part.startsWith("~~") && part.endsWith("~~")) {
+                              return (
+                                <del key={i} className="text-red-400 bg-red-50 px-0.5 rounded decoration-red-400">
+                                  {part.slice(2, -2)}
+                                </del>
+                              );
+                            }
+                            if (part.startsWith("[INSERT:") && part.endsWith("]")) {
+                              return (
+                                <span key={i} className="text-teal-700 font-semibold bg-teal-50 px-0.5 rounded">
+                                  {part.slice(8, -1)}
+                                </span>
+                              );
+                            }
+                            return <span key={i}>{part}</span>;
+                          })}
+                      </div>
                     </div>
                   )}
 

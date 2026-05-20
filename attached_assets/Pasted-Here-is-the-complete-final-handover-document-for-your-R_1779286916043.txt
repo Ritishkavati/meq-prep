@@ -1,0 +1,154 @@
+Here is the complete final handover document for your Replit agent:
+
+---
+
+**MEQ PREP — DAILY MEQ ASSESSMENT PAGE ENHANCEMENT**
+**Handover to Replit Agent — Complete Instructions**
+
+---
+
+**CONTEXT**
+
+The Daily MEQ module at `/meq-daily` is working. The progressive stem flow, timer, submission, and assessment page are all built. This task adds two missing features to the assessment page to match the consultant feedback format: inline strikethrough editing and a yield callout banner. Nothing else changes.
+
+---
+
+**FILES TO MODIFY — ONLY THESE TWO**
+
+1. `artifacts/meq-prep/src/pages/DailyMEQMode.tsx`
+2. `artifacts/api-server/src/routes/meqEvaluate.ts`
+
+**Do not touch any other file.**
+
+---
+
+**CHANGE 1 — `artifacts/api-server/src/routes/meqEvaluate.ts`**
+
+Find this line:
+```typescript
+max_tokens: 8192,
+```
+
+Replace with:
+```typescript
+max_tokens: 12000,
+```
+
+That is the only change to this file.
+
+---
+
+**CHANGE 2 — `artifacts/meq-prep/src/pages/DailyMEQMode.tsx`**
+
+**Part A — Add two new fields to the AI evaluation prompt**
+
+Find the function `buildFullMEQPrompt`. Inside it, find the JSON template string that contains the stems array structure. Locate this exact line inside the per-stem JSON object:
+
+```
+"readingGuidance": "<specific revision advice based on identified gaps>"
+```
+
+This line is at the outer MEQ level not the stem level — so instead find the closing of each stem JSON object inside the `stems` array. The stem object currently ends with:
+
+```
+"timeManagement": "<apply 1-mark-per-minute rule>",
+"modelAnswer": "<concise examiner-level model answer — key points in structured form>"
+```
+
+Add these two fields after `modelAnswer`, still inside the same stem object:
+
+```
+"inlineEditedAnswer": "<Take the candidate's exact answer text for this stem. Rewrite it inline. Use ~~strikethrough~~ around weak, vague, generic, or unjustified phrases. Immediately after each strikethrough insert [INSERT: better consultant-level replacement text]. Keep strong sentences unchanged with no markup. If the candidate wrote a bare list with no justification on an Outline or Describe question, format each list item as: the item ~~without justification~~ [INSERT: because specific case-relevant clinical reason]. Start from the candidate's actual words — do not write a new answer from scratch. Maximum 300 words total.>",
+"yieldCallout": "<If the candidate wrote clinically correct content but failed the command word — specifically if they listed without justifying on an Outline question, or listed without explaining on a Describe question — return a string such as: 'Correct content, insufficient explanation: estimated X/Y marks vs potential Z/Y marks. Adding because-clauses to your existing points would significantly improve this stem score.' If command word compliance is satisfactory, return null.>"
+```
+
+---
+
+**Part B — Add two new UI sections to the assessment page rendering**
+
+In the assessment phase rendering section, find this exact comment and code block:
+
+```tsx
+{/* Domain breakdown */}
+{stemEv.domainBreakdown?.length > 0 && (
+```
+
+Insert the following two blocks IMMEDIATELY BEFORE that comment, inside the same `space-y-4` div:
+
+```tsx
+{/* Yield callout */}
+{stemEv.yieldCallout && (
+  <div className="bg-orange-50 border-l-4 border-orange-500 rounded-r-lg p-3">
+    <div className="text-xs font-black text-orange-800 uppercase tracking-wide mb-1">
+      Correct content without explanation scores no marks
+    </div>
+    <p className="text-sm text-orange-900 font-medium">{stemEv.yieldCallout}</p>
+  </div>
+)}
+
+{/* Inline edited answer */}
+{stemEv.inlineEditedAnswer && (
+  <div>
+    <h4 className="text-xs font-bold text-gray-600 uppercase tracking-wide mb-2">
+      Your answer — inline corrections
+    </h4>
+    <div className="bg-white border border-gray-200 rounded-lg p-4 text-sm text-gray-800 leading-relaxed whitespace-pre-wrap">
+      {stemEv.inlineEditedAnswer
+        .split(/(\~\~[^~]+\~\~|\[INSERT:[^\]]+\])/g)
+        .map((part, i) => {
+          if (part.startsWith("~~") && part.endsWith("~~")) {
+            return (
+              <del key={i} className="text-red-400 bg-red-50 px-0.5 rounded decoration-red-400">
+                {part.slice(2, -2)}
+              </del>
+            );
+          }
+          if (part.startsWith("[INSERT:") && part.endsWith("]")) {
+            return (
+              <span key={i} className="text-teal-700 font-semibold bg-teal-50 px-0.5 rounded">
+                {part.slice(8, -1)}
+              </span>
+            );
+          }
+          return <span key={i}>{part}</span>;
+        })}
+    </div>
+  </div>
+)}
+```
+
+---
+
+**VERIFICATION CHECKLIST**
+
+After making the changes, confirm:
+
+1. TypeScript compiles without errors — run `pnpm run typecheck`
+2. The app loads at `/meq-daily` without errors
+3. The existing MEQ list, stem flow, timer, and submit button all still work
+4. After submitting a completed MEQ, the assessment page shows:
+   - The orange "Correct content without explanation scores no marks" banner when relevant
+   - The "Your answer — inline corrections" section with red strikethrough text and teal inserted text
+   - All previously existing sections (domain breakdown, sentence rewrites, model answer, etc.) still render correctly
+
+---
+
+**WHAT NOT TO CHANGE**
+
+- Do not modify the MEQ bank data
+- Do not modify the stem flow or timer logic
+- Do not modify the submit handler or API call
+- Do not modify `artifacts/api-server/src/routes/index.ts`
+- Do not modify any other route files
+- Do not modify `App.tsx` or any other page
+- Do not change the existing assessment page sections — only add the two new blocks before domain breakdown
+
+---
+
+**SUMMARY**
+
+Two files changed. Four targeted edits total:
+- `meqEvaluate.ts` — increase `max_tokens` from 8192 to 12000
+- `DailyMEQMode.tsx` — add `inlineEditedAnswer` and `yieldCallout` to the AI prompt JSON template
+- `DailyMEQMode.tsx` — render yield callout orange banner before domain breakdown
+- `DailyMEQMode.tsx` — render inline strikethrough answer before domain breakdown
