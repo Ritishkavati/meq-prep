@@ -1,0 +1,54 @@
+No, I didn't build that in properly. The component shows a timer but doesn't use the 1-mark-per-minute rule to give meaningful time feedback. Let me fix that now — it's a critical part of the exam brain.
+
+Here is the exact logic to add. Tell your Replit agent:
+
+---
+
+**TASK: Add 1-mark-per-minute time management feedback to DailyMEQMode.tsx**
+
+Find the `buildEvaluationPrompt` function in `DailyMEQMode.tsx` and update the time status section.
+
+**Replace this:**
+```tsx
+const timeTarget = question.timeMinutes * 60;
+const timeStatus = timeTaken <= timeTarget
+  ? `Within time (${Math.round(timeTaken / 60)} of ${question.timeMinutes} minutes used)`
+  : `Over time by ${Math.round((timeTaken - timeTarget) / 60)} minutes`;
+```
+
+**With this:**
+```tsx
+const timeTarget = question.timeMinutes * 60;
+const minutesUsed = Math.round(timeTaken / 60);
+const marksPerMinute = question.marks / question.timeMinutes;
+const expectedMarksByNow = minutesUsed * marksPerMinute;
+const timeStatus = timeTaken <= timeTarget
+  ? `Used ${minutesUsed} of ${question.timeMinutes} minutes. At 1 mark per minute, you should have covered ${Math.round(expectedMarksByNow)} of ${question.marks} marks worth of content by the time you stopped. Time was adequate.`
+  : `OVER TIME by ${minutesUsed - question.timeMinutes} minutes. In the real exam this costs you marks on the next question. The rule is 1 mark per minute — this question is worth ${question.marks} marks and should take exactly ${question.timeMinutes} minutes. Finishing in ${minutesUsed} minutes means you either over-wrote or lost pace.`;
+```
+
+---
+
+**Also find the `timeManagement` instruction inside the AI prompt string** and replace whatever is there with:
+
+```
+"timeManagement": "Apply the 1-mark-per-minute rule. This question is worth ${question.marks} marks so the candidate had ${question.timeMinutes} minutes. They used ${minutesUsed} minutes. Did they write proportionally? A 10-mark question needs ~10 minutes of focused writing — not 5 minutes (too thin) and not 20 minutes (over-writing that steals time from the next question). Comment specifically on whether the answer length matches the mark allocation. If they scored 4/10 and used 12 minutes, that is a pace and prioritisation failure worth naming directly."
+```
+
+---
+
+**Also update the writing phase timer display** to show marks-per-minute pace. Find the timer display in the writing phase and add this line below the timer:
+
+```tsx
+<span className="text-xs text-gray-400">
+  {timer > 0 ? `~${Math.round((timer / 60) * (currentQ.marks / currentQ.timeMinutes))} marks worth written` : `${currentQ.marks} marks = ${currentQ.timeMinutes} min`}
+</span>
+```
+
+---
+
+**Finally, in the feedback display**, find where `feedback.timeManagement` is rendered and make sure it always shows — this is not optional feedback, it is a core examiner criterion. Every answer should get explicit time management commentary.
+
+---
+
+That is the complete 1-mark-per-minute rule implemented across the timer display, the AI prompt, and the feedback panel. The candidate sees it while writing, and gets specific feedback on whether their pace matches the mark allocation after submitting.

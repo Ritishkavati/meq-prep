@@ -972,9 +972,12 @@ const buildEvaluationPrompt = (question, candidateAnswer, timeTaken) => {
     ? question.zeroMarkTraps.map(z => `  - ${z}`).join("\n")
     : "  None specific to this question";
   const timeTarget = question.timeMinutes * 60;
+  const minutesUsed = Math.round(timeTaken / 60);
+  const marksPerMinute = question.marks / question.timeMinutes;
+  const expectedMarksByNow = minutesUsed * marksPerMinute;
   const timeStatus = timeTaken <= timeTarget
-    ? `Within time (${Math.round(timeTaken / 60)} of ${question.timeMinutes} minutes used)`
-    : `Over time by ${Math.round((timeTaken - timeTarget) / 60)} minutes`;
+    ? `Used ${minutesUsed} of ${question.timeMinutes} minutes. At 1 mark per minute, you should have covered ${Math.round(expectedMarksByNow)} of ${question.marks} marks worth of content by the time you stopped. Time was adequate.`
+    : `OVER TIME by ${minutesUsed - question.timeMinutes} minutes. In the real exam this costs you marks on the next question. The rule is 1 mark per minute — this question is worth ${question.marks} marks and should take exactly ${question.timeMinutes} minutes. Finishing in ${minutesUsed} minutes means you either over-wrote or lost pace.`;
 
   return `You are an RANZCP MEQ examiner. Evaluate this candidate answer with the precision and standards of the actual examination. Do not soften feedback. Do not reward effort. Reward only what earns marks.
 
@@ -1060,7 +1063,7 @@ Return ONLY a valid JSON object with this exact structure (no markdown, no pream
     "Another"
   ],
   "zeroMarkTrapHit": "Did the candidate write a zero-mark trap answer? Describe specifically. Or 'None identified.'",
-  "timeManagement": "Analysis of whether answer length and depth match the marks and time. Specific observation.",
+  "timeManagement": "Apply the 1-mark-per-minute rule. This question is worth ${question.marks} marks so the candidate had ${question.timeMinutes} minutes. They used ${minutesUsed} minutes. Did they write proportionally? A 10-mark question needs ~10 minutes of focused writing — not 5 minutes (too thin) and not 20 minutes (over-writing that steals time from the next question). Comment specifically on whether the answer length matches the mark allocation. If they scored 4/10 and used 15 minutes, name that explicitly as a pacing failure.",
   "overallFeedback": "2-3 sentences. Honest consultant-to-candidate summary. Start with what specifically earns marks, then what specifically loses them. Quote from the answer. No platitudes.",
   "passMark": "yes" or "borderline" or "no",
   "priorityAction": "The single most important change this candidate needs to make — one specific, actionable instruction"
@@ -1366,6 +1369,9 @@ export default function DailyMEQMode() {
             <span className="text-sm font-medium text-gray-700">{currentQ.case}</span>
             <span className={`text-xl font-mono font-bold ${timeColor}`}>{formatTime(timer)}</span>
             {isOver && <span className="text-xs bg-red-100 text-red-700 px-2 py-0.5 rounded-full font-medium">Over time</span>}
+            <span className="text-xs text-gray-400">
+              {timer > 0 ? `~${Math.round((timer / 60) * (currentQ.marks / currentQ.timeMinutes))} marks worth written` : `${currentQ.marks} marks = ${currentQ.timeMinutes} min`}
+            </span>
           </div>
           <span className="text-xs text-gray-400">{currentQ.marks} marks · {words} words</span>
         </div>
@@ -1552,6 +1558,12 @@ export default function DailyMEQMode() {
             <p className="text-sm text-red-800">{feedback.zeroMarkTrapHit}</p>
           </div>
         )}
+
+        {/* Time management */}
+        <div className="bg-slate-50 border border-slate-200 rounded-xl p-4">
+          <div className="text-xs font-bold text-slate-600 uppercase tracking-wide mb-2">Time management — 1 mark per minute</div>
+          <p className="text-sm text-slate-800 leading-relaxed">{feedback.timeManagement || "No time management data available."}</p>
+        </div>
 
         {/* Overall feedback */}
         {feedback.overallFeedback && (
