@@ -1,0 +1,264 @@
+You are working on my MEQ Prep app. Do NOT redesign the whole app. Do NOT change Quiz Mode. Focus only on rebuilding the Daily MEQ module architecture.
+
+CURRENT PROBLEM:
+The app currently treats Daily MEQ like a single practice question with “Submit Answer.” This is wrong. Daily MEQ must replicate a real staged RANZCP MEQ.
+
+CORE REQUIREMENT:
+Daily MEQ and Real MEQ Practice must be merged into ONE module called “Daily MEQ.” Remove/hide “Real MEQ Practice” as a separate home-screen module. Daily MEQ becomes the single place for all MEQ writing practice.
+
+HOME SCREEN:
+Show only:
+1. Quiz Mode
+2. Daily MEQ
+3. Exam Module
+4. Candidate Progress Dashboard / tracker
+
+Do not show “Real MEQ Practice” as a separate module.
+
+DAILY MEQ MODULE STRUCTURE:
+When user opens Daily MEQ, it should immediately load the next incomplete MEQ.
+
+Each MEQ must have 3–4 progressive stems:
+- Stem 1.1
+- Stem 1.2
+- Stem 1.3
+- Stem 1.4 optional
+
+The candidate must answer each stem separately.
+
+Each stem must have:
+- stem number, e.g. “Stem 1.1 of 1.4”
+- progressive stem text
+- question text
+- command word/type, e.g.
+  - List
+  - Outline — list and justify
+  - Describe — list and explain
+  - Discuss — list and debate
+- marks
+- timer
+- answer textbox
+
+MARKS AND TIMER:
+- Total MEQ marks must be between 24 and 34.
+- Each stem must be between 5 and 14 marks.
+- Use simple timing: 1 mark = 1 minute.
+- So a 10-mark stem gets 10 minutes.
+- Total MEQ time equals total MEQ marks.
+
+NAVIGATION FLOW:
+The flow must be:
+
+Stem 1.1 → Save & Next Stem  
+Stem 1.2 → Save & Next Stem  
+Stem 1.3 → Save & Next Stem  
+Stem 1.4 optional → Submit Full MEQ for Evaluation
+
+IMPORTANT:
+Do NOT show evaluation after each stem.
+Do NOT allow early final submission before all required stems are completed.
+Do NOT use “Submit Answer” on individual stems.
+Use “Save & Next Stem” until the final stem.
+Only final stem should show “Submit Full MEQ for Evaluation.”
+
+TOP BAR/UI:
+Replace current “Practice Question” heading with:
+“Daily MEQ”
+
+Show:
+- MEQ ID/title
+- Stem progress: “Stem 1.1 of 1.4”
+- Stem marks
+- Stem timer
+- Total MEQ marks
+
+Add a progress indicator:
+1.1 → 1.2 → 1.3 → 1.4 → Submit
+
+DATA MODEL:
+Create/modify the MEQ data structure like this:
+
+{
+  id: "daily_meq_001",
+  title: "First Episode Mania in ED",
+  totalMarks: 30,
+  totalTimeMinutes: 30,
+  status: "not_started" | "in_progress" | "completed",
+  stems: [
+    {
+      stemNumber: "1.1",
+      stemText: "...",
+      questionText: "...",
+      commandType: "outline_list_justify",
+      marks: 8,
+      timeMinutes: 8
+    },
+    {
+      stemNumber: "1.2",
+      stemText: "...",
+      questionText: "...",
+      commandType: "describe_list_explain",
+      marks: 10,
+      timeMinutes: 10
+    },
+    {
+      stemNumber: "1.3",
+      stemText: "...",
+      questionText: "...",
+      commandType: "discuss_list_debate",
+      marks: 8,
+      timeMinutes: 8
+    },
+    {
+      stemNumber: "1.4",
+      stemText: "...",
+      questionText: "...",
+      commandType: "management_governance",
+      marks: 6,
+      timeMinutes: 6
+    }
+  ]
+}
+
+ATTEMPT MODEL:
+Each user attempt should save:
+
+{
+  attemptId: "...",
+  meqId: "daily_meq_001",
+  userId: "...",
+  status: "in_progress" | "submitted" | "evaluated",
+  currentStemIndex: 0,
+  answers: [
+    {
+      stemNumber: "1.1",
+      answerText: "...",
+      startedAt: "...",
+      submittedAt: "...",
+      timeUsedSeconds: 480
+    }
+  ],
+  totalScore: null,
+  completedAt: null,
+  evaluation: null
+}
+
+COMPLETION LOGIC:
+If candidate has completed an MEQ, mark it as “Completed.”
+Do not serve the same completed MEQ again in normal Daily MEQ flow.
+Allow retry only if user clicks “Retry MEQ.”
+Retry must create a new attempt and preserve previous attempts.
+
+ASSESSMENT PAGE:
+After full MEQ submission, send the full MEQ + all candidate answers to the existing Claude/Anthropic evaluation system. The app already has Anthropic integration via api.anthropic.com. Use existing environment variables/secrets. Do not hardcode API keys.
+
+The Assessment Page must show:
+
+1. Overall score
+Example:
+Total: 22 / 30
+
+2. Per-stem score
+Example:
+Stem 1.1: 6 / 8
+Stem 1.2: 7 / 10
+Stem 1.3: 6 / 8
+Stem 1.4: 3 / 4
+
+3. Candidate’s original answer for each stem
+Show exactly what the candidate wrote.
+
+4. Point-by-point classification
+Each candidate point must be classified as:
+- High-yield mark-earning
+- Moderate-yield but incomplete
+- Low-yield / generic
+- Zero-mark / not required
+- Unsafe / incorrect
+
+5. Strikethrough editing
+Show unnecessary parts of the candidate answer with strikethrough.
+Example:
+“I would ~~do a full biopsychosocial assessment~~ assess mania, psychosis, delirium, intoxication, suicide risk, spending-related harm, and capacity because these determine immediate containment and disposition.”
+
+6. Sentence rewrite / reframing
+If the candidate’s concept is valid but poorly written, show how to rewrite it.
+
+Example:
+Candidate wrote:
+“Assess risk.”
+
+Better MEQ sentence:
+“Assess current risk from reduced sleep, grandiosity, impulsive spending, irritability, suicidal risk and risk to others because these determine ED containment, need for involuntary assessment and family safety planning.”
+
+7. Concept error feedback
+If a concept is wrong, explain clearly why it is wrong and what the correct reasoning should be.
+
+8. Marking key / model answer
+For each stem, provide:
+- essential points
+- additional credit points
+- common traps
+- concise examiner-style model answer
+
+Important: the marking key should have more possible points than the stem marks.
+For example:
+- 10-mark stem should have around 13–14 possible key points.
+- Candidate does not need all points to score full marks.
+
+9. Error diagnosis
+Label errors using:
+- Knowledge gap
+- Command-word error
+- Poor justification
+- Poor explanation
+- No debate
+- Wrong timeframe
+- Unsafe reasoning
+- Legal/policy gap
+- Cultural/system omission
+- Repetition/verbosity
+- Writing/syntax problem
+- Poor prioritisation
+
+10. Reading/revision guidance
+Based on errors, give short reading advice or revision focus.
+
+BOTTOM OF ASSESSMENT PAGE:
+Show two buttons:
+1. Retry MEQ
+2. Next MEQ
+
+Retry MEQ:
+- starts same MEQ again from Stem 1.1
+- creates a new attempt
+- preserves previous scores and feedback
+
+Next MEQ:
+- loads next incomplete MEQ
+- if current MEQ is completed, do not repeat it unless Retry is selected
+
+DAILY MEQ LIST / HISTORY:
+Inside Daily MEQ module, include:
+- Today’s MEQ / Next MEQ
+- Continue Current MEQ if in progress
+- Completed MEQs list
+- Attempt history
+- Best score and latest score per MEQ
+
+IMPORTANT IMPLEMENTATION RULES:
+- Do not alter Quiz Mode.
+- Do not create a separate Real MEQ Practice module.
+- Do not show feedback until full MEQ is submitted.
+- Do not submit individual stems for evaluation.
+- Use staged progression with Save & Next Stem.
+- Use 1 mark = 1 minute.
+- Preserve candidate attempts.
+- Mark completed MEQs as completed.
+- Allow retry as a new attempt.
+
+DELIVERABLE:
+Implement the Daily MEQ module architecture and UI flow first.
+Use sample placeholder MEQs if needed.
+Do not focus on generating 250 MEQs yet.
+The priority now is layout, navigation, state management, attempt saving, completion logic, and assessment page structure.

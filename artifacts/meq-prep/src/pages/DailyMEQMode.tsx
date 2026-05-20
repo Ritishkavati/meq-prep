@@ -1,1192 +1,1080 @@
 // @ts-nocheck
-// ============================================================
-// DailyMEQMode — The MEQ Prep Brain
-// Built from real RANZCP exam papers, post-examiner reports,
-// and two-sitting performance analysis (RANZCP ID 21708)
-// ============================================================
-
 import { useState, useEffect, useRef } from "react";
 
 // ============================================================
-// SECTION 1: COMMAND WORD DEFINITIONS
+// COMMAND WORDS
 // ============================================================
-
 const COMMAND_WORDS = {
   list: {
     label: "List",
     short: "LIST",
-    instruction: "Name items only. No explanation required or rewarded. Concise enumeration.",
+    instruction: "Name items only. No explanation required or rewarded.",
     gate: false,
-    color: "blue",
-    bg: "bg-blue-50 border-blue-200",
-    text: "text-blue-900",
   },
   outline_justify: {
     label: "Outline (List and Justify)",
     short: "OUTLINE",
-    instruction: "Each point MUST include 'because [case-specific reason]'. List without justification = ZERO MARKS.",
+    instruction:
+      "Each point MUST include 'because [case-specific reason]'. A list without justification = ZERO MARKS for that point.",
     gate: true,
-    color: "amber",
-    bg: "bg-amber-50 border-amber-200",
-    text: "text-amber-900",
   },
   describe_explain: {
     label: "Describe (List and Explain)",
     short: "DESCRIBE",
-    instruction: "Each point MUST explain the mechanism, sequence, or clinical significance. List without explanation = ZERO MARKS.",
+    instruction:
+      "Each point MUST explain the mechanism, sequence, or clinical significance. A list without explanation = ZERO MARKS for that point.",
     gate: true,
-    color: "amber",
-    bg: "bg-amber-50 border-amber-200",
-    text: "text-amber-900",
   },
   discuss: {
     label: "Discuss",
     short: "DISCUSS",
-    instruction: "Present balanced considerations, advantages/disadvantages, competing clinical factors.",
+    instruction: "Present balanced considerations. Name the tensions involved.",
     gate: false,
-    color: "purple",
-    bg: "bg-purple-50 border-purple-200",
-    text: "text-purple-900",
   },
   debate: {
     label: "Discuss (List and Debate)",
     short: "DEBATE",
-    instruction: "MUST argue both sides explicitly with named tension. One-sided answer = ZERO MARKS.",
+    instruction:
+      "MUST argue both sides explicitly with named tensions. A one-sided answer = ZERO MARKS.",
     gate: true,
-    color: "red",
-    bg: "bg-red-50 border-red-200",
-    text: "text-red-900",
   },
 };
 
 // ============================================================
-// SECTION 2: QUESTION BANK
+// MEQ BANK
 // ============================================================
-
-const QUESTION_BANK = [
-
-  // ── NOVEMBER 2025 PILOT ─────────────────────────────────
-
+const MEQ_BANK = [
+  // ─────────────────────────────────────────────────────────
+  // MEQ 001 — Adil, 32 — Consultation Liaison
+  // ─────────────────────────────────────────────────────────
   {
-    id: "NOV25_1_1",
-    examSource: "November 2025 Pilot",
+    id: "meq_001",
+    title: "Adil — Consultation Liaison",
     case: "Adil, 32",
+    examSource: "November 2025 Pilot",
     topic: "Consultation Liaison",
-    subtopic: "Treatment refusal · Capacity · Cultural psychiatry · Dual diagnosis",
-    difficulty: "core",
-    fellowshipCompetencies: ["Medical Expert", "Communicator", "Health Advocate", "Professional"],
-    vignette: `You are a junior consultant psychiatrist working on a Consultation Liaison team in a metropolitan hospital. Adil is a 32-year-old single Afghan refugee with a diagnosis of schizophrenia and intravenous heroin misuse. He is under a community mental health team and is prescribed depot antipsychotic medication. Adil initially agreed to be admitted to the medical ward for suspected infective endocarditis. However, he has since refused to have any tests done, and has tried to leave the medical ward. You have been asked to assess Adil as his medical team is concerned about his treatment refusal.`,
-    stemAddition: null,
-    question: `Outline (list and justify) the factors that might be contributing to Adil's treatment refusal.\n\nPlease note: a list without any justification will not be awarded any marks.`,
-    commandWord: "outline_justify",
-    marks: 10,
-    timeMinutes: 10,
-    stemSignals: [
-      "Afghan refugee — cultural context, trauma, non-western explanatory models of illness",
-      "IV heroin misuse — active withdrawal drives agitation and apparent refusal",
-      "Schizophrenia on depot — possible psychosis, community team involved",
-      "Metropolitan hospital — interpreter services should be available but may not be used",
-      "Infective endocarditis — serious prognosis, potential implications for residency status",
-      "Has tried to leave — active resistance, not passive non-engagement",
+    totalMarks: 30,
+    totalTimeMinutes: 30,
+    stems: [
+      {
+        stemNumber: "1.1",
+        vignette:
+          "You are a junior consultant psychiatrist working on a Consultation Liaison team in a metropolitan hospital. Adil is a 32-year-old single Afghan refugee with a diagnosis of schizophrenia and intravenous heroin misuse. He is under a community mental health team and is prescribed depot antipsychotic medication. Adil initially agreed to be admitted to the medical ward for suspected infective endocarditis. However, he has since refused to have any tests done, and has tried to leave the medical ward. You have been asked to assess Adil as his medical team is concerned about his treatment refusal.",
+        question:
+          "Outline (list and justify) the factors that might be contributing to Adil's treatment refusal.\n\nPlease note: a list without any justification will not be awarded any marks.",
+        commandWord: "outline_justify",
+        marks: 10,
+        timeMinutes: 10,
+        stemSignals: [
+          "Afghan refugee — cultural context, trauma, non-western explanatory models of illness",
+          "IV heroin misuse — active withdrawal drives agitation and apparent refusal",
+          "Schizophrenia on depot — possible psychosis, community team involved",
+          "Metropolitan hospital — interpreter services available but may not be used",
+          "Infective endocarditis — serious prognosis, potential implications for residency status",
+          "Has tried to leave — active resistance, not passive non-engagement",
+        ],
+        domains: [
+          {
+            name: "Patient factors",
+            marks: 4,
+            keyPoints: [
+              "Language barriers — interpreter absent or inadequate",
+              "Cultural factors and non-western explanatory models of illness",
+              "Health literacy — understanding of diagnosis and investigation",
+              "Insight — how informed is he about his medical condition?",
+              "Fears about residency status implications of serious illness",
+              "Trauma-related triggers — hospitalisation, mistrust of state authorities",
+            ],
+          },
+          {
+            name: "Illness factors",
+            marks: 3,
+            keyPoints: [
+              "Psychosis — inadequately treated or substance-induced",
+              "Delirium — from infection, intoxication, or withdrawal",
+              "Opiate withdrawal — agitation, restlessness, confusion",
+              "Depression — hopelessness about prospects for treatment",
+            ],
+          },
+          {
+            name: "Systems factors",
+            marks: 3,
+            keyPoints: [
+              "Paternalistic medical team approach",
+              "Lack of culturally safe care",
+              "Stigma from staff toward mental illness and substance use",
+              "Negative countertransference in the treating team",
+            ],
+          },
+        ],
+        zeroMarkTraps: [],
+        postExaminerNote:
+          "Candidates missed systems factors and countertransference. 'Cultural sensitivity' as a generic statement scored zero — justification must name specific cultural factors and how they change clinical action.",
+      },
+      {
+        stemNumber: "1.2",
+        vignette:
+          "Adil continues to refuse all investigations and attempted to leave the ward twice overnight. After opiate withdrawal management commenced, he appears more alert but remains resistant. The medical team is concerned he may lack capacity to refuse the investigations.",
+        question:
+          "Describe (list and explain) how you would assess Adil's capacity to refuse medical investigations.\n\nPlease note: a list without any explanation will not be awarded any marks.",
+        commandWord: "describe_explain",
+        marks: 7,
+        timeMinutes: 7,
+        stemSignals: [
+          "Twice attempted to leave — active refusal, not passive disengagement",
+          "More alert after withdrawal management — capacity may have changed",
+          "Afghan refugee — qualified interpreter mandatory for formal capacity assessment",
+          "Schizophrenia + active infection — two simultaneous impairments to capacity",
+        ],
+        domains: [
+          {
+            name: "Four-component capacity framework",
+            marks: 3,
+            keyPoints: [
+              "Understand: comprehend the diagnosis, proposed investigations, and risks of refusal",
+              "Appreciate: apply this information to his own situation",
+              "Reason: weigh the risks and benefits of investigation versus refusal",
+              "Express: state his decision consistently and clearly",
+              "MacCAT-T or equivalent structured assessment tool",
+              "Document formal assessment with time and date",
+            ],
+          },
+          {
+            name: "Clinical factors affecting capacity",
+            marks: 2,
+            keyPoints: [
+              "Active psychosis may impair appreciation and reasoning",
+              "Withdrawal status — assess timing and severity using COWS",
+              "Delirium from infection — assess attention, consciousness, orientation",
+              "Capacity is decision-specific and time-specific — not global",
+              "Prior consent at admission does not substitute for current assessment",
+            ],
+          },
+          {
+            name: "Process and documentation",
+            marks: 2,
+            keyPoints: [
+              "Qualified interpreter present — NOT a family member",
+              "Document assessment in full in medical record, time-stamped",
+              "Repeat assessment if clinical state changes",
+              "Seek second opinion from senior colleague",
+              "Distinguish incapacity from disagreement with clinical advice",
+            ],
+          },
+        ],
+        zeroMarkTraps: [
+          "Performing capacity assessment without a qualified interpreter — professionally indefensible",
+        ],
+        postExaminerNote:
+          "The most common error was failing to mention the qualified interpreter. Candidates also conflated incapacity with disagreement.",
+      },
+      {
+        stemNumber: "1.3",
+        vignette:
+          "Three weeks later, Adil has been treated for moderate-to-severe depression and infective endocarditis. He is now ready for discharge. He has been referred to a community opioid replacement programme and is currently receiving 60mg of methadone daily.",
+        question:
+          "Outline (list and justify) the key points you would cover in your discharge planning meeting with Adil.\n\nPlease note: a list without any justification will not be awarded any marks.",
+        commandWord: "outline_justify",
+        marks: 7,
+        timeMinutes: 7,
+        stemSignals: [
+          "60mg methadone daily — fatal overdose risk if heroin used on top",
+          "Community opioid replacement — specific handover and coordination required",
+          "Afghan refugee — interpreter, cultural community supports, migration issues",
+          "Depression treated — recognition of relapse signs important",
+          "Infective endocarditis — antibiotic completion, cardiac follow-up required",
+        ],
+        domains: [
+          {
+            name: "Safety plan and harm reduction",
+            marks: 3,
+            keyPoints: [
+              "Explicit warning: fatal overdose risk if heroin used on top of methadone",
+              "Naloxone provision and instruction — document you provided it",
+              "Safety plan with early warning signs of mental state deterioration",
+              "Crisis and emergency contacts clearly provided",
+              "Needle exchange and safe injection practices",
+            ],
+          },
+          {
+            name: "Linkage and follow-up",
+            marks: 2,
+            keyPoints: [
+              "GP referral for holistic physical and mental health follow-up",
+              "Community mental health team appointment before discharge",
+              "Opioid replacement programme appointment confirmed",
+              "Cardiac and infectious disease follow-up arranged",
+            ],
+          },
+          {
+            name: "Social and cultural supports",
+            marks: 2,
+            keyPoints: [
+              "Stable accommodation — housing advocacy if needed",
+              "Migration and refugee support service links",
+              "Interpreter arrangements for ongoing appointments",
+              "Financial support access — Centrelink, community services",
+            ],
+          },
+        ],
+        zeroMarkTraps: [],
+        postExaminerNote:
+          "Methadone overdose risk from concurrent heroin use is the highest-yield point — must be stated and justified. Naloxone provision was frequently omitted. Candidates focused on mental health and missed the physical follow-up requirements.",
+      },
+      {
+        stemNumber: "1.4",
+        vignette:
+          "During discharge planning, Adil discloses that if he returns to his previous accommodation he will resume using heroin. He expresses that life feels pointless and he is not sure he wants to be treated further. He has no fixed address. The medical team want to discharge him today as his bed is needed.",
+        question:
+          "Outline (list and justify) the ethical issues raised by this situation.\n\nPlease note: a list without any justification will not be awarded any marks.",
+        commandWord: "outline_justify",
+        marks: 6,
+        timeMinutes: 6,
+        stemSignals: [
+          "Life feels pointless — suicidal ideation must be formally assessed before discharge",
+          "No fixed address — homelessness creates immediate foreseeable harm",
+          "Medical team pressure to discharge — institutional interest conflicts with clinical duty",
+          "Will resume heroin — harm from discharge is foreseeable and specific",
+          "Has capacity — this is an ethics issue, not a capacity issue",
+        ],
+        domains: [
+          {
+            name: "Competing ethical duties in tension",
+            marks: 3,
+            keyPoints: [
+              "Beneficence to Adil: keeping him safe conflicts with discharging to homelessness",
+              "Non-maleficence: foreseeable harm from discharge (heroin + methadone) must be named",
+              "Autonomy: Adil has the right to make decisions with capacity, even unwise ones",
+              "Justice: resource allocation driving discharge is a justice and equity issue",
+              "The tension between these duties must be explicitly named — not just listed",
+            ],
+          },
+          {
+            name: "Duty of care and institutional obligations",
+            marks: 2,
+            keyPoints: [
+              "Cannot discharge to a situation of foreseeable serious harm without documentation",
+              "Bed pressure does NOT override clinical duty of care",
+              "Discharge without housing plan is clinically and ethically indefensible",
+              "Must escalate to medical director if institutional pressure continues",
+              "Document the ethical conflict and your clinical position in the medical record",
+            ],
+          },
+          {
+            name: "Immediate clinical obligations",
+            marks: 1,
+            keyPoints: [
+              "Suicidal ideation must be formally assessed before discharge",
+              "Housing must be arranged before discharge can proceed",
+              "Social work involvement is mandatory in this scenario",
+            ],
+          },
+        ],
+        zeroMarkTraps: [
+          "Discharging Adil to homelessness because 'he has capacity' — capacity does not eliminate duty of care",
+        ],
+        postExaminerNote:
+          "Candidates who said 'he has capacity, discharge him' failed this question. Capacity and duty of care are not mutually exclusive. The tension between autonomy and foreseeable harm in a vulnerable population is the core of this question.",
+      },
     ],
-    domains: [
-      {
-        name: "Patient factors",
-        marks: 4,
-        keyPoints: [
-          "Language barriers — interpreter absent or inadequate",
-          "Cultural factors and non-western explanatory models of illness",
-          "Health literacy — understanding of diagnosis and investigation",
-          "Insight — how informed is he about his medical condition?",
-          "Fears about residency status implications of serious illness",
-          "Trauma-related triggers — hospitalisation, mistrust of state authorities",
-          "External commitments or financial concerns with being in hospital",
-        ],
-      },
-      {
-        name: "Illness factors",
-        marks: 3,
-        keyPoints: [
-          "Psychosis — inadequately treated or substance-induced",
-          "Delirium — from infection, intoxication, or withdrawal",
-          "Opiate withdrawal — agitation, restlessness, confusion",
-          "Depression — hopelessness about prospects for treatment",
-          "Physical illness — pain, malnourishment impairing engagement",
-          "Cognitive impairment secondary to schizophrenia",
-        ],
-      },
-      {
-        name: "Systems factors",
-        marks: 3,
-        keyPoints: [
-          "Paternalistic medical team approach",
-          "Lack of culturally safe care — cultural incompetence",
-          "Social isolation and restricted visiting policies",
-          "Stigma from staff toward mental illness and substance use",
-          "Negative countertransference in the treating team",
-          "Refugee stigma",
-        ],
-      },
-    ],
-    zeroMarkTraps: [],
-    postExaminerNote: "August 2024 report: candidates missed systems factors and countertransference. 'Cultural sensitivity' as a generic statement scored zero — justification must name specific cultural factors and how they change clinical action.",
   },
 
+  // ─────────────────────────────────────────────────────────
+  // MEQ 002 — Danica, 34 — Perinatal Psychiatry
+  // ─────────────────────────────────────────────────────────
   {
-    id: "NOV25_1_4",
-    examSource: "November 2025 Pilot",
-    case: "Adil, 32",
-    topic: "Consultation Liaison",
-    subtopic: "Discharge planning · Opioid replacement · Harm reduction · Safety planning",
-    difficulty: "core",
-    fellowshipCompetencies: ["Medical Expert", "Collaborator", "Health Advocate"],
-    vignette: `You are a junior consultant psychiatrist on a Consultation Liaison team. Adil is a 32-year-old Afghan refugee with schizophrenia and IV heroin misuse. He has been treated for moderate-to-severe depression and infective endocarditis.`,
-    stemAddition: `Three weeks later, Adil is ready to be discharged. You conduct a discharge assessment before he leaves the medical ward. He has been referred to a community opioid replacement programme and currently receives 60mg of methadone daily.`,
-    question: `Outline (list and justify) the key points you would cover in your discharge planning meeting with Adil.\n\nPlease note: a list without any justification will not be awarded any marks.`,
-    commandWord: "outline_justify",
-    marks: 7,
-    timeMinutes: 7,
-    stemSignals: [
-      "60mg methadone daily — accidental overdose risk if he uses heroin on top is catastrophic",
-      "Community opioid replacement programme — specific coordination and handover required",
-      "Afghan refugee — interpreter, cultural community supports, migration issues",
-      "Depression treated — recognition of relapse, medication continuation",
-      "Infective endocarditis — antibiotic completion, cardiac follow-up",
+    id: "meq_002",
+    title: "Danica — Perinatal Psychiatry",
+    case: "Danica, 34",
+    examSource: "March 2025",
+    topic: "Perinatal Psychiatry / Ethics",
+    totalMarks: 25,
+    totalTimeMinutes: 25,
+    stems: [
+      {
+        stemNumber: "2.1",
+        vignette:
+          "You are a junior consultant psychiatrist. Danica is a 34-year-old woman with bipolar disorder who is 16 weeks pregnant and has been well maintained on sodium valproate 1000mg daily throughout her pregnancy. Recent investigations have revealed fetal anomalies consistent with valproate embryopathy. Danica does not yet know the investigation results.",
+        question:
+          "Describe (list and explain) how you would approach delivering this news to Danica.\n\nPlease note: a list without any explanation will not be awarded any marks.",
+        commandWord: "describe_explain",
+        marks: 8,
+        timeMinutes: 8,
+        stemSignals: [
+          "Bipolar disorder — mental state may be fluctuating, capacity to process may vary",
+          "16 weeks pregnant — ongoing pregnancy, time-sensitive decisions remain possible",
+          "Does not yet know — this is first disclosure, not a follow-up conversation",
+          "Valproate embryopathy — serious, specific, predictable in mechanism",
+          "On valproate — medication decision follows from this news, adds complexity",
+        ],
+        domains: [
+          {
+            name: "Pre-disclosure assessment",
+            marks: 2,
+            keyPoints: [
+              "Assess Danica's current mental state BEFORE delivering news",
+              "Capacity to receive and process complex distressing information",
+              "What does she already know or suspect?",
+              "Support person — does she want someone present?",
+              "Setting: private, quiet, adequate time, no interruptions",
+            ],
+          },
+          {
+            name: "SPIKES framework",
+            marks: 3,
+            keyPoints: [
+              "Setting: appropriate environment",
+              "Perception: what does she currently understand?",
+              "Invitation: ask permission to share news",
+              "Knowledge: plain language, staged, no jargon",
+              "Emotions: respond to emotional reaction BEFORE providing more information",
+              "Strategy: collaboratively plan next steps",
+            ],
+          },
+          {
+            name: "Content of the news",
+            marks: 2,
+            keyPoints: [
+              "Nature of valproate embryopathy clearly explained",
+              "Specific anomalies identified honestly",
+              "Acknowledge prognosis uncertainty",
+              "Options: continuation, termination, palliative perinatal care — not pressured",
+              "Next steps: obstetrics, genetics, specialist liaison",
+            ],
+          },
+          {
+            name: "Follow-up and review",
+            marks: 1,
+            keyPoints: [
+              "Written summary of what was discussed",
+              "Follow-up appointment — she may not retain today's information",
+              "Mental health review after disclosure",
+            ],
+          },
+        ],
+        zeroMarkTraps: [],
+        postExaminerNote:
+          "Pre-disclosure assessment of Danica's capacity to receive news was almost universally missed — worth 2 marks. Candidates went straight to SPIKES delivery without assessing her mental state first.",
+      },
+      {
+        stemNumber: "2.2",
+        vignette:
+          "Danica has now been informed of the fetal anomalies. She has full capacity and understands the risk to the fetus. She wants to continue the pregnancy and the valproate, stating that stopping valproate would risk her mental health and she has 'been through this before'.",
+        question:
+          "Outline (list and justify) the ethical issues raised when a pregnant woman wishes to continue medication that could be harmful to the foetus.\n\nPlease note: a list without any justification will not be awarded any marks.",
+        commandWord: "outline_justify",
+        marks: 9,
+        timeMinutes: 9,
+        stemSignals: [
+          "Full capacity confirmed — autonomy is fully operative",
+          "Understands the risk — informed consent is present",
+          "Wishes to continue both pregnancy AND valproate — active informed choice",
+          "Well on valproate — discontinuation poses real relapse risk to Danica",
+          "16 weeks — fetal organ development substantially complete",
+        ],
+        domains: [
+          {
+            name: "Autonomy — the primary principle",
+            marks: 3,
+            keyPoints: [
+              "Danica has capacity and is making an informed decision",
+              "Autonomy requires respecting her decision even if clinicians disagree",
+              "She has a right to accept risk for herself and, by extension, her fetus",
+              "Clinicians cannot override a capacitous patient's decision",
+              "Document her decision and your clinical advice clearly",
+            ],
+          },
+          {
+            name: "Competing duties in tension",
+            marks: 3,
+            keyPoints: [
+              "Beneficence to Danica: valproate maintains her mental health, prevents relapse",
+              "Beneficence to fetus: fetal welfare is a clinical consideration",
+              "Non-maleficence to Danica: stopping valproate risks severe relapse",
+              "Non-maleficence to fetus: continued valproate may compound existing anomalies",
+              "These duties CONFLICT — the tension must be named explicitly",
+              "The fetus has no legal personhood — Danica's autonomy takes precedence",
+            ],
+          },
+          {
+            name: "Justice",
+            marks: 1,
+            keyPoints: [
+              "Does Danica have equitable access to specialist perinatal psychiatric input?",
+            ],
+          },
+          {
+            name: "Practical clinical response",
+            marks: 2,
+            keyPoints: [
+              "Respect the decision, document thoroughly",
+              "Perinatal psychiatry and obstetrics specialist input",
+              "Regular review — circumstances and mental state may change",
+              "Plan for postnatal period — valproate and breastfeeding",
+            ],
+          },
+        ],
+        zeroMarkTraps: [
+          "Overriding Danica's decision because you disagree — illegal and indefensible for a capacitous patient",
+        ],
+        postExaminerNote:
+          "Candidates named principles but failed to show the tension between them in this specific case. Autonomy is the primary principle when capacity is confirmed.",
+      },
+      {
+        stemNumber: "2.3",
+        vignette:
+          "Following your discussion, Danica agrees to continue the pregnancy on valproate with close monitoring. She is now 20 weeks pregnant. She asks about what the plan will be for her ongoing psychiatric care through the pregnancy and beyond.",
+        question:
+          "Outline (list and justify) your ongoing management plan for Danica through the remainder of her pregnancy and the postnatal period.\n\nPlease note: a list without any justification will not be awarded any marks.",
+        commandWord: "outline_justify",
+        marks: 8,
+        timeMinutes: 8,
+        stemSignals: [
+          "20 weeks pregnant — second trimester, significant monitoring period ahead",
+          "Continuing valproate — regular monitoring for toxicity and dose adjustment",
+          "Bipolar disorder — postnatal period is very high risk for relapse",
+          "Prior valproate embryopathy — specialist obstetric team already engaged",
+          "Breastfeeding question will arise — valproate compatibility planning needed",
+        ],
+        domains: [
+          {
+            name: "Antenatal psychiatric monitoring",
+            marks: 3,
+            keyPoints: [
+              "Regular psychiatric review — minimum monthly during pregnancy",
+              "Valproate level monitoring — therapeutic drug levels, hepatic function",
+              "Folate supplementation — standard for valproate use in pregnancy",
+              "Early warning signs of mood episode — collaboratively defined",
+              "Safety plan updated for pregnancy-specific risks",
+            ],
+          },
+          {
+            name: "Multidisciplinary antenatal coordination",
+            marks: 2,
+            keyPoints: [
+              "Perinatal psychiatry team leadership of psychiatric care",
+              "Obstetrics team — enhanced surveillance for fetal anomalies and growth",
+              "Maternal-fetal medicine specialist — high-risk obstetric input",
+              "Community midwifery and enhanced home visiting",
+              "Social work assessment — support systems, partner involvement",
+            ],
+          },
+          {
+            name: "Postnatal planning",
+            marks: 3,
+            keyPoints: [
+              "Postnatal period is the highest risk for bipolar relapse — explicitly name this",
+              "Valproate dose review postnatally — levels change with pregnancy physiology",
+              "Breastfeeding: valproate transfers in breast milk — risk-benefit discussion required",
+              "Neonatal monitoring for valproate effects",
+              "Mother-infant relationship and early attachment support",
+              "Child protection awareness — proactive, not punitive",
+              "Postnatal depression risk is elevated with bipolar disorder",
+            ],
+          },
+        ],
+        zeroMarkTraps: [],
+        postExaminerNote:
+          "Candidates focused only on the pregnancy and missed the postnatal period — worth 3 marks. The postnatal period is THE highest risk window for bipolar women and must be explicitly addressed.",
+      },
     ],
-    domains: [
-      {
-        name: "Safety plan and harm reduction",
-        marks: 3,
-        keyPoints: [
-          "Safety plan with early warning signs of mental state deterioration",
-          "Crisis and emergency contacts",
-          "Explicit warning: risk of accidental overdose and death if heroin used on top of methadone",
-          "Naloxone provision and instruction",
-          "Needle exchange and safe injection practices",
-        ],
-      },
-      {
-        name: "GP and community linkage",
-        marks: 1,
-        keyPoints: [
-          "GP referral for holistic physical and mental health follow-up",
-          "Community mental health team, addictions service appointments facilitated",
-        ],
-      },
-      {
-        name: "Social and cultural supports",
-        marks: 2,
-        keyPoints: [
-          "Stable accommodation — housing advocacy",
-          "Migration issues and cultural community links",
-          "Interpreter arrangements ongoing",
-          "Financial support access",
-          "Recovery paradigm — self-agency and empowerment",
-        ],
-      },
-      {
-        name: "Trauma-informed psychological therapy",
-        marks: 1,
-        keyPoints: [
-          "Recommend trauma-informed psychological therapy in medium-to-long term",
-        ],
-      },
-    ],
-    zeroMarkTraps: [],
-    postExaminerNote: "Methadone overdose risk from concurrent heroin use is the highest-yield point — must be stated explicitly and justified. Naloxone provision is frequently omitted.",
   },
 
+  // ─────────────────────────────────────────────────────────
+  // MEQ 003 — Quality Improvement — Hypnotics
+  // ─────────────────────────────────────────────────────────
   {
-    id: "NOV25_2_3",
+    id: "meq_003",
+    title: "Hypnotics Quality Improvement",
+    case: "Inpatient Unit QI",
     examSource: "November 2025 Pilot",
-    case: "Daniel, 12",
-    topic: "Child and Adolescent Psychiatry",
-    subtopic: "Childhood bipolar disorder · Diagnostic debate · Developmental trauma",
-    difficulty: "discriminating",
-    fellowshipCompetencies: ["Medical Expert", "Scholar", "Professional"],
-    vignette: `You are a junior consultant psychiatrist in a regional mental health centre. Daniel is a 12-year-old Indigenous boy in out-of-home care, currently in his tenth group home. He was brought to ED by police after property damage and self-harm threats. He is prescribed olanzapine, methylphenidate, sertraline, sodium valproate, and melatonin. His carer states he has childhood bipolar disorder and asks for advice about managing his behaviour.`,
-    stemAddition: null,
-    question: `Discuss (list and debate) the issues you would consider in relation to Daniel's diagnosis of childhood bipolar disorder.\n\nPlease note: a list with no debate will not be awarded any marks.`,
-    commandWord: "debate",
-    marks: 7,
-    timeMinutes: 7,
-    stemSignals: [
-      "12-year-old — developmental stage affects diagnostic validity",
-      "Indigenous background — intergenerational trauma, attachment, cultural context",
-      "Tenth group home — severe instability drives presentation",
-      "Five medications — polypharmacy may produce or mask symptoms",
-      "Carer states diagnosis — second-hand information, not clinical assessment",
-      "Currently settled playing cards — does not suggest acute mania",
-    ],
-    domains: [
-      {
-        name: "Clinical presentation — both affirming and contradicting",
-        marks: 4,
-        keyPoints: [
-          "Current presentation (settled) does not suggest mania — but does not preclude diagnosis",
-          "Diagnosis requires: sustained elevation/irritability, discrete episodes, full biopsychosocial formulation",
-          "Alternative explanations: trauma/attachment, disruptive behaviour syndromes, anxiety, ADHD, dissociation",
-          "Treatment response ambiguous — multiple contributing factors",
-          "Family history may support diagnosis",
-          "Exercise caution given trauma, marginalisation, and systemic history",
-          "Drugs and alcohol role in presentation",
-        ],
-      },
-      {
-        name: "Sources of information",
-        marks: 2,
-        keyPoints: [
-          "Daniel's own account",
-          "Multiple carer accounts including previous carers",
-          "Child protection services records",
-          "Clinical reports — who made original diagnosis and on what basis?",
-          "Different sources see different aspects — acknowledge limitation",
-        ],
-      },
-      {
-        name: "Literature debate on childhood bipolar",
-        marks: 1,
-        keyPoints: [
-          "Diagnostic validity contested in literature",
-          "Risk of diagnostic inflation and labelling",
-          "Does not necessarily predict adult bipolar disorder",
-          "Neurodevelopmental impact of early labelling",
-        ],
-      },
-    ],
-    zeroMarkTraps: [
-      "Confidently asserting the diagnosis is correct or incorrect without debating both sides — zero marks",
-    ],
-    postExaminerNote: "Most candidates failed this question because they took one definitive position. Intellectual honesty about diagnostic uncertainty — explicitly arguing both sides — is the only path to full marks.",
-  },
-
-  {
-    id: "NOV25_3_4",
-    examSource: "November 2025 Pilot",
-    case: "Nicolette — FEP",
-    topic: "Physical Health in Psychiatry",
-    subtopic: "QTc management · Antipsychotic safety · Open disclosure",
-    difficulty: "core",
-    fellowshipCompetencies: ["Medical Expert", "Professional", "Communicator"],
-    vignette: `You are a junior consultant psychiatrist in an acute psychiatric inpatient unit. You have been considering prescribing an antipsychotic for Nicolette, a young female science student who has presented with first-episode psychosis. A baseline ECG was unremarkable. Nicolette has been prescribed an antipsychotic.`,
-    stemAddition: `A week later, her repeat ECG reveals a QTc interval of 480ms.`,
-    question: `Outline (list and justify) your approach to this finding.\n\nPlease note: a list without any justification will not be awarded any marks.`,
-    commandWord: "outline_justify",
-    marks: 8,
-    timeMinutes: 8,
-    stemSignals: [
-      "Female — QTc threshold for concern is 470ms (not 500ms)",
-      "480ms — above female threshold of 470ms, below absolute 500ms threshold",
-      "Science student — likely capable of understanding technical explanation",
-      "First-episode psychosis — early treatment, medication adjustment still possible",
-      "Baseline ECG was unremarkable — this is a new change attributable to medication",
-    ],
-    domains: [
-      {
-        name: "Open disclosure to patient",
-        marks: 1,
-        keyPoints: [
-          "Advise Nicolette of ECG changes",
-          "Open disclosure and ethical obligation",
-          "Psychoeducation about QTc (may need repeating given FEP)",
-          "Include her in the decision about next steps",
-        ],
-      },
-      {
-        name: "Repeat ECG",
-        marks: 1,
-        keyPoints: [
-          "Repeat ECG to confirm — may be affected by time of day, food, alcohol, physical activity",
-        ],
-      },
-      {
-        name: "Past ECG review and comparison",
-        marks: 1,
-        keyPoints: [
-          "Review baseline ECG and compare",
-          "May not be a medication effect — could be pre-existing",
-        ],
-      },
-      {
-        name: "Medication review",
-        marks: 1,
-        keyPoints: [
-          "Review all current medications for QTc-prolonging interactions",
-          "Including SSRIs that may inhibit antipsychotic metabolism",
-        ],
-      },
-      {
-        name: "Risk-benefit assessment",
-        marks: 1,
-        keyPoints: [
-          "Weigh clinical benefit of antipsychotic against cardiac risk",
-          "Especially if no other comorbidity or risk factors",
-        ],
-      },
-      {
-        name: "Dose reduction or medication change",
-        marks: 1,
-        keyPoints: [
-          "Consider dose reduction or switch to lower QTc-risk antipsychotic",
-          "Female with QTc >470ms — clinical threshold for action",
-          "No-risk agents: lurasidone, brexpiprazole, cariprazine",
-        ],
-      },
-      {
-        name: "Ongoing monitoring",
-        marks: 1,
-        keyPoints: [
-          "Routine ECG monitoring established",
-          "At minimum annually; when dose increases; when new medications added",
-        ],
-      },
-      {
-        name: "Adjunctive options",
-        marks: 1,
-        keyPoints: [
-          "Beta blocker or magnesium supplementation — acknowledge this may be outside typical psychiatric scope",
-        ],
-      },
-    ],
-    zeroMarkTraps: [
-      "Immediate cardiology referral — ZERO MARKS (QTc <500ms, no other high-risk factors, cardiology not indicated at this threshold)",
-      "Electrolyte investigation listed as primary management — ZERO MARKS (too basic for consultant level, listed separately in criteria)",
-    ],
-    postExaminerNote: "Cardiology referral was the most common zero-mark trap. Knowledge of the 470ms female threshold (not 500ms) is the discriminating piece of pharmacology.",
-  },
-
-  {
-    id: "NOV25_4_1",
-    examSource: "November 2025 Pilot",
-    case: "Julia, 52",
-    topic: "Psychopharmacology",
-    subtopic: "Antidepressant withdrawal vs relapse · FINISH · DESS · Tapering",
-    difficulty: "core",
-    fellowshipCompetencies: ["Medical Expert", "Scholar"],
-    vignette: `You are a junior consultant psychiatrist at a community mental health clinic. Julia is a 52-year-old woman referred by her GP. She is complaining of tearfulness, inability to sleep, and excessive anxiety. She recently considered stopping her prescribed sertraline 100mg daily because of weight gain and fatigue. The GP recommended a gradual reduction over four weeks. Julia's current symptoms occurred in week 3 of a reducing regimen, after she was reduced to a daily dose of 25mg. Her GP has diagnosed her with relapse of anxiety disorder but would like a second opinion.`,
-    stemAddition: null,
-    question: `Outline (list and justify) key considerations to distinguish relapse of an anxiety disorder from antidepressant withdrawal.\n\nPlease note: a list without any justification will not be awarded any marks.`,
-    commandWord: "outline_justify",
-    marks: 6,
-    timeMinutes: 6,
-    stemSignals: [
-      "Sertraline — intermediate discontinuation risk (higher than fluoxetine, similar to paroxetine)",
-      "Week 3 at 25mg — timing matches the 1-2 rule for withdrawal onset",
-      "Gradual reduction over 4 weeks — relatively fast taper increases withdrawal risk",
-      "52-year-old — likely long treatment duration, higher physiological dependence",
-      "Weight gain and fatigue were the reasons — patient-driven, motivated reduction",
-    ],
-    domains: [
-      {
-        name: "Patient and symptom factors",
-        marks: 2,
-        keyPoints: [
-          "FINISH mnemonic: Flu-like symptoms, Insomnia, Nausea, Imbalance, Sensory disturbances, Hyperarousal",
-          "Somatic and neurocognitive symptoms most discriminating — not emotional symptoms",
-          "Psychological apprehension about stopping is expected and non-diagnostic",
-          "Past history of anxiety relapses — provides baseline",
-        ],
-      },
-      {
-        name: "Medication and temporal factors",
-        marks: 3,
-        keyPoints: [
-          "The 1-2 Rule: withdrawal within 1-2 days of reduction, peaks at 1-2 weeks, resolves within 1-2 months",
-          "Relapse: slower onset, once established remains undiminished",
-          "Sertraline and paroxetine: higher discontinuation risk despite selectivity",
-          "Fluoxetine: long half-life = inherently lowest risk",
-          "Rate of taper: faster withdrawal = more likely discontinuation symptoms",
-          "DESS checklist (Discontinuation-Emergent Signs and Symptoms — Rosenbaum 1998)",
-        ],
-      },
-      {
-        name: "Co-occurrence",
-        marks: 1,
-        keyPoints: [
-          "Withdrawal and relapse are not mutually exclusive — can co-occur",
-          "Important to consider managing both possibilities",
-        ],
-      },
-    ],
-    zeroMarkTraps: [],
-    postExaminerNote: "The 1-2 rule timing is the clinical pearl. Candidates who listed symptoms without explaining how each distinguishes withdrawal from relapse scored poorly.",
-  },
-
-  {
-    id: "NOV25_5_1",
-    examSource: "November 2025 Pilot",
-    case: "Hypnotics Audit",
     topic: "Quality Improvement and Governance",
-    subtopic: "Audit implementation · Stakeholder engagement · Change management",
-    difficulty: "discriminating",
-    fellowshipCompetencies: ["Manager", "Leader", "Collaborator", "Scholar"],
-    vignette: `You are a junior consultant psychiatrist in the inpatient unit at a large teaching hospital in a metropolitan city. The report from a recent audit of prescribing patterns of hypnotics in the MH inpatient unit recommends that the mental health department develops a non-pharmacological strategy for improving night-time sleep in patients admitted to the inpatient unit.`,
-    stemAddition: null,
-    question: `Describe (list and explain) how you would plan a strategy to implement the audit's recommendation.\n\nPlease note: a list without any explanation will not be awarded any marks.`,
-    commandWord: "describe_explain",
-    marks: 9,
-    timeMinutes: 9,
-    stemSignals: [
-      "Inpatient unit — night nursing observations create specific competing priority",
-      "Teaching hospital — research culture, education opportunities, academic buy-in",
-      "Metropolitan — diverse patient population, lived experience workforce available",
-      "Audit of prescribing patterns — existing baseline data, re-audit cycle possible",
-    ],
-    domains: [
+    totalMarks: 26,
+    totalTimeMinutes: 26,
+    stems: [
       {
-        name: "Stakeholder engagement with named roles",
+        stemNumber: "3.1",
+        vignette:
+          "You are a junior consultant psychiatrist in the inpatient unit at a large teaching hospital in a metropolitan city. The report from a recent audit of prescribing patterns of hypnotics in the MH inpatient unit recommends that the mental health department develops a non-pharmacological strategy for improving night-time sleep in patients admitted to the inpatient unit.",
+        question:
+          "Describe (list and explain) how you would plan a strategy to implement the audit's recommendation.\n\nPlease note: a list without any explanation will not be awarded any marks.",
+        commandWord: "describe_explain",
+        marks: 9,
+        timeMinutes: 9,
+        stemSignals: [
+          "Inpatient unit — night nursing observations create competing priorities",
+          "Teaching hospital — research culture, academic buy-in possible",
+          "Metropolitan — diverse patient population, lived experience workforce available",
+          "Audit of prescribing patterns — existing baseline data for re-audit cycle",
+        ],
+        domains: [
+          {
+            name: "Stakeholder engagement with named roles",
+            marks: 5,
+            keyPoints: [
+              "Nursing staff: night observations, competing responsibilities, ward culture",
+              "Consumer consultant/peer worker: patient-centred barriers",
+              "Pharmacist: medication timing, sleep-disrupting drugs",
+              "Occupational therapist: sensory modulation, CBT-i delivery",
+              "Medical staff: clinical oversight",
+              "Hospital executive: resourcing, funding, policy authority",
+              "Sleep psychologist: evidence base for non-pharmacological interventions",
+            ],
+          },
+          {
+            name: "Literature review and benchmarking",
+            marks: 1,
+            keyPoints: [
+              "Evidence base for non-pharmacological sleep interventions in inpatient settings",
+              "Benchmarking against other units and national best practice",
+            ],
+          },
+          {
+            name: "Re-audit cycle and KPIs",
+            marks: 1,
+            keyPoints: [
+              "Baseline data collection on sleep patterns and hypnotic prescribing rates",
+              "Regular audit cycle to assess impact",
+              "Agreed KPIs with IT and data analysis support",
+            ],
+          },
+          {
+            name: "Leadership and change management",
+            marks: 2,
+            keyPoints: [
+              "Step-by-step implementation plan with documentation",
+              "Staff training on new protocols",
+              "Identifying and responding to barriers",
+              "Policy and procedure development",
+            ],
+          },
+        ],
+        zeroMarkTraps: [
+          "Doctor-centric answers listing only what the psychiatrist will do — misses majority of marks",
+        ],
+        postExaminerNote:
+          "August 2024 report explicitly criticised doctor-centric responses. Named stakeholders with specific contributions are required. 'Involve MDT' as a generic statement scores zero.",
+      },
+      {
+        stemNumber: "3.2",
+        vignette:
+          "Six months after commencing the non-pharmacological sleep strategy, you notice that staff are still frequently prescribing hypnotics despite the new guidelines.",
+        question:
+          "Outline (list and justify) the barriers that might be contributing to continued hypnotic prescribing despite the new strategy.\n\nPlease note: a list without any justification will not be awarded any marks.",
+        commandWord: "outline_justify",
+        marks: 7,
+        timeMinutes: 7,
+        stemSignals: [
+          "Six months in — early implementation period, habits persist",
+          "Staff still prescribing — prescriber behaviour, not patient preference",
+          "Teaching hospital — competing educational demands on junior staff",
+          "Inpatient unit — acuity, time pressure, overnight staffing",
+        ],
+        domains: [
+          {
+            name: "Prescriber-level barriers",
+            marks: 3,
+            keyPoints: [
+              "Lack of awareness of new guidelines or insufficient training",
+              "Habit — prescribing hypnotics is faster than behavioural alternatives",
+              "Countertransference — difficulty tolerating patient distress at night",
+              "Fear of adverse events from sleep deprivation in unwell patients",
+            ],
+          },
+          {
+            name: "Organisational and systems barriers",
+            marks: 2,
+            keyPoints: [
+              "Insufficient staffing to deliver non-pharmacological interventions overnight",
+              "Physical environment not conducive to sleep — noise, light, observations",
+              "Leadership not reinforcing the new strategy",
+              "No audit feedback loop to clinicians",
+            ],
+          },
+          {
+            name: "Patient-level barriers",
+            marks: 2,
+            keyPoints: [
+              "Patient demand and expectation for medication",
+              "Underlying pain, anxiety or psychiatric symptoms driving insomnia",
+              "Prior hypnotic dependence",
+              "Difficulty engaging with behavioural strategies when acutely unwell",
+            ],
+          },
+        ],
+        zeroMarkTraps: [],
+        postExaminerNote:
+          "Candidates who only listed patient barriers scored poorly. The question asks about continued prescribing — the barrier is primarily in the prescriber and system, not the patient.",
+      },
+      {
+        stemNumber: "3.3",
+        vignette:
+          "The hospital executive has requested a formal report on the QI initiative's progress at 12 months.",
+        question:
+          "List the key metrics and data sources you would use to evaluate the effectiveness of the non-pharmacological sleep initiative at 12 months.",
+        commandWord: "list",
         marks: 5,
-        keyPoints: [
-          "Nursing staff: night observations, competing responsibilities, ward culture",
-          "Consumer consultant/peer worker: patient-centred barriers, individual factors",
-          "Pharmacist: medication timing, sleep-disrupting drugs, interactions",
-          "Occupational therapist: sensory modulation, activity scheduling, group programs, CBT-i delivery",
-          "Medical staff: clinical oversight",
-          "Hospital executive: resourcing, funding, facility upgrades, policy authority",
-          "Sleep psychologist: CBT-i evidence base, barriers to implementation",
+        timeMinutes: 5,
+        stemSignals: [
+          "Hospital executive — needs governance-level metrics, not clinical detail",
+          "12 months — sufficient time for meaningful trend analysis",
+          "QI initiative — must show process metrics AND outcome metrics",
+          "Sleep initiative — patient experience data as important as clinical data",
         ],
+        domains: [
+          {
+            name: "Prescribing metrics",
+            marks: 2,
+            keyPoints: [
+              "Rate of hypnotic prescribing per 100 admissions (pre vs post)",
+              "PRN hypnotic administration rates",
+              "Types of hypnotics prescribed (benzodiazepines vs z-drugs vs antihistamines)",
+              "Duration of hypnotic prescriptions",
+            ],
+          },
+          {
+            name: "Outcome and experience metrics",
+            marks: 2,
+            keyPoints: [
+              "Patient-reported sleep quality scores (PSQI or adapted ward measure)",
+              "Staff satisfaction with new protocols",
+              "Patient satisfaction surveys related to sleep care",
+              "Length of stay — sleep improvement may affect recovery",
+            ],
+          },
+          {
+            name: "Process metrics",
+            marks: 1,
+            keyPoints: [
+              "Staff training completion rates",
+              "Compliance with non-pharmacological intervention documentation",
+              "Protocol adherence audit results",
+            ],
+          },
+        ],
+        zeroMarkTraps: [],
+        postExaminerNote:
+          "This is a LIST question — justification is not required or rewarded. Most candidates over-wrote and missed easy marks by not listing enough distinct metrics.",
       },
       {
-        name: "Literature review and benchmarking",
-        marks: 1,
-        keyPoints: [
-          "Evidence base for non-pharmacological sleep interventions",
-          "Benchmarking against other units and best practice",
+        stemNumber: "3.4",
+        vignette:
+          "Despite positive overall results, you identify that three consultant psychiatrists on the unit continue to prescribe hypnotics at high rates and have not engaged with the new protocols.",
+        question:
+          "Outline (list and justify) how you would approach addressing this issue with the non-compliant consultants.\n\nPlease note: a list without any justification will not be awarded any marks.",
+        commandWord: "outline_justify",
+        marks: 5,
+        timeMinutes: 5,
+        stemSignals: [
+          "Three consultants — plural, systemic issue not individual outlier",
+          "Continue to prescribe at high rates — specific data available to show",
+          "Have not engaged — active disengagement, not ignorance",
+          "Senior colleagues — approach must be professional, not punitive",
         ],
-      },
-      {
-        name: "Re-audit cycle and KPIs",
-        marks: 1,
-        keyPoints: [
-          "Baseline data collection on sleep patterns",
-          "Regular audit cycle to assess impact of implementation",
-          "Agreed KPIs, IT and data analysis",
+        domains: [
+          {
+            name: "Individual professional approach",
+            marks: 2,
+            keyPoints: [
+              "One-to-one conversation — private, non-punitive, using their own data",
+              "Share individualised prescribing data vs ward average",
+              "Explore specific barriers to adoption — clinical concerns may be legitimate",
+              "Offer support: training, mentoring, clinical supervision around protocol",
+            ],
+          },
+          {
+            name: "Governance escalation",
+            marks: 2,
+            keyPoints: [
+              "Escalate to Medical Director if individual engagement fails",
+              "Formal performance review process if non-compliance continues",
+              "Documentation of all conversations and responses",
+              "Present at clinical governance meeting — peer benchmarking",
+            ],
+          },
+          {
+            name: "Systemic approach",
+            marks: 1,
+            keyPoints: [
+              "Review whether the protocol has legitimate clinical gaps",
+              "Consider formal policy mandate with executive endorsement",
+              "Peer benchmarking data can drive behaviour change",
+            ],
+          },
         ],
-      },
-      {
-        name: "Leadership and change management",
-        marks: 2,
-        keyPoints: [
-          "Step-by-step implementation plan with documentation",
-          "Staff training on new protocols",
-          "Identifying and responding to barriers",
-          "Policy and procedure development",
-          "Overseeing staff education — face-to-face vs online modules",
-        ],
+        zeroMarkTraps: [],
+        postExaminerNote:
+          "Candidates went straight to punitive action. Professional escalation must be graduated: individual conversation → peer review → governance → formal process.",
       },
     ],
-    zeroMarkTraps: [
-      "Doctor-centric answers listing only what the psychiatrist will do — misses majority of marks",
-    ],
-    postExaminerNote: "August 2024 report explicitly criticised doctor-centric responses. Named stakeholders with their specific contributions are required. 'Involve MDT' as a generic statement scores zero.",
   },
-
-  {
-    id: "NOV25_5_2",
-    examSource: "November 2025 Pilot",
-    case: "Hypnotics Audit",
-    topic: "Quality Improvement and Governance",
-    subtopic: "Barriers to implementation · Staff resistance · Change management",
-    difficulty: "core",
-    fellowshipCompetencies: ["Manager", "Leader", "Collaborator"],
-    vignette: `You are a junior consultant psychiatrist in the inpatient unit at a large teaching hospital. You are implementing a non-pharmacological strategy for improving night-time sleep. Six months after commencing the strategy, you notice that staff are still frequently prescribing hypnotics.`,
-    stemAddition: null,
-    question: `Outline (list and justify) the barriers that might be contributing to continued hypnotic prescribing despite the new strategy.\n\nPlease note: a list without any justification will not be awarded any marks.`,
-    commandWord: "outline_justify",
-    marks: 7,
-    timeMinutes: 7,
-    stemSignals: [
-      "Six months in — early implementation period, habits persist",
-      "Staff still prescribing — prescriber behaviour, not patient preference",
-      "Teaching hospital — competing educational demands on junior staff",
-      "Inpatient unit — acuity, time pressure, overnight staffing",
-    ],
-    domains: [
-      {
-        name: "Prescriber-level barriers",
-        marks: 3,
-        keyPoints: [
-          "Lack of awareness of new guidelines or training",
-          "Habit — prescribing hypnotics is faster than behavioural alternatives",
-          "Countertransference — difficulty tolerating patient distress at night",
-          "Junior doctors not adequately supervised or trained in alternatives",
-          "Fear of adverse events from sleep deprivation",
-        ],
-      },
-      {
-        name: "Organisational and systems barriers",
-        marks: 2,
-        keyPoints: [
-          "Insufficient staffing to deliver non-pharmacological interventions overnight",
-          "Physical environment not conducive to sleep — noise, light, observations",
-          "Leadership not reinforcing the new strategy",
-          "No audit feedback loop to clinicians",
-        ],
-      },
-      {
-        name: "Patient-level barriers",
-        marks: 2,
-        keyPoints: [
-          "Patient demand and expectation for medication",
-          "Underlying pain, anxiety or psychiatric symptoms driving insomnia",
-          "Prior hypnotic dependence",
-          "Difficulty engaging with behavioural strategies when acutely unwell",
-        ],
-      },
-    ],
-    zeroMarkTraps: [],
-    postExaminerNote: "Candidates who only listed patient barriers scored poorly. The question asks about continued prescribing — the barrier is primarily in the prescriber and system, not the patient.",
-  },
-
-  {
-    id: "NOV25_6_2",
-    examSource: "November 2025 Pilot",
-    case: "CBT Supervision",
-    topic: "Psychotherapy",
-    subtopic: "CBT homework non-completion · Supervision · Therapeutic relationship",
-    difficulty: "discriminating",
-    fellowshipCompetencies: ["Medical Expert", "Scholar", "Collaborator"],
-    vignette: `You are a junior consultant psychiatrist supervising a psychiatric registrar who is delivering CBT for a 45-year-old man named John with severe depression. The registrar reports that John has not completed any homework tasks in the past four sessions despite agreeing to do them at the time. The registrar is frustrated and uncertain how to proceed.`,
-    stemAddition: null,
-    question: `Outline (list and justify) the factors you would explore with the registrar to understand John's homework non-completion.\n\nPlease note: a list without any justification will not be awarded any marks.`,
-    commandWord: "outline_justify",
-    marks: 11,
-    timeMinutes: 11,
-    stemSignals: [
-      "Supervision context — this is a registrar learning question, not a patient management question",
-      "Severe depression — anhedonia, anergia, hopelessness all impair homework completion",
-      "Four sessions — not a one-off; persistent pattern requires formulation",
-      "Agreed at the time — compliance in session does not predict out-of-session behaviour",
-      "Registrar is frustrated — countertransference is clinically significant",
-    ],
-    domains: [
-      {
-        name: "Patient factors",
-        marks: 4,
-        keyPoints: [
-          "Severity of depression — anhedonia, cognitive slowing, hopelessness, anergia",
-          "Shame or embarrassment about non-completion",
-          "Ambivalence about therapy or recovery",
-          "Practical barriers — work, family, housing instability",
-          "Cultural mismatch with CBT model",
-          "Misunderstanding of homework task despite session agreement",
-        ],
-      },
-      {
-        name: "Therapist and technical factors",
-        marks: 4,
-        keyPoints: [
-          "Homework not collaboratively designed — imposed rather than co-created",
-          "Tasks not calibrated to patient's current capacity (too complex for severe depression)",
-          "Insufficient time in session explaining rationale for homework",
-          "Registrar not adequately reviewing homework at session start",
-          "Registrar avoiding addressing non-completion directly — therapeutic avoidance",
-          "Registrar's countertransference: over-responsible, anxious about lack of progress",
-        ],
-      },
-      {
-        name: "Therapeutic relationship factors",
-        marks: 2,
-        keyPoints: [
-          "Alliance quality — does John trust and feel understood by the registrar?",
-          "Homework non-completion may be communication about the relationship",
-          "Cultural or values mismatch between patient and therapist approach",
-        ],
-      },
-      {
-        name: "Supervision system factors",
-        marks: 1,
-        keyPoints: [
-          "Is the registrar receiving adequate and regular supervision?",
-          "Is the registrar's CBT training sufficient for this level of complexity?",
-          "Service pressure affecting session frequency or quality",
-        ],
-      },
-    ],
-    zeroMarkTraps: [],
-    postExaminerNote: "September 2025: average 1/11. This is a supervision question, not a patient management question. The registrar's factors (countertransference, technique, training) matter as much as John's. Almost all candidates wrote only about what John was doing wrong.",
-  },
-
-  // ── MARCH 2025 ───────────────────────────────────────────
-
-  {
-    id: "MAR25_2_3",
-    examSource: "March 2025",
-    case: "Judy, 51",
-    topic: "Ethics and Governance",
-    subtopic: "Biomedical ethics in tension · ED governance · Staff stigma · Complaint",
-    difficulty: "discriminating",
-    fellowshipCompetencies: ["Professional", "Leader", "Health Advocate", "Manager"],
-    vignette: `You are a junior consultant psychiatrist. Judy is a 51-year-old woman with schizoaffective disorder and methamphetamine dependence presenting to the Emergency Department in an agitated and threatening state. The ED nursing staff are frustrated and have made comments that Judy is "not a real psychiatric patient" and have suggested she should be removed from the department.`,
-    stemAddition: null,
-    question: `Outline (list and justify) the ethical and governance issues raised by this situation and your approach to managing them.\n\nPlease note: a list without any justification will not be awarded any marks.`,
-    commandWord: "outline_justify",
-    marks: 10,
-    timeMinutes: 10,
-    stemSignals: [
-      "'Not a real psychiatric patient' — stigma, potential discrimination",
-      "Staff suggest removal — potential abandonment of duty of care",
-      "Methamphetamine dependence — dual diagnosis, most stigmatised presentation",
-      "ED setting — medical governance structure, lines of responsibility",
-      "Schizoaffective disorder — valid psychiatric diagnosis, not excluded by substance use",
-    ],
-    domains: [
-      {
-        name: "Ethical principles applied in tension — not listed",
-        marks: 4,
-        keyPoints: [
-          "Autonomy: Judy's right to receive care without discrimination",
-          "Beneficence: obligation to provide treatment — not overridden by staff discomfort",
-          "Non-maleficence: removal from ED could cause serious harm",
-          "Justice: equal treatment regardless of diagnosis or substance use",
-          "CRITICAL: name the tension explicitly between these principles in this case",
-          "Do NOT conflate duty of care (legal concept) with beneficence (ethical principle)",
-        ],
-      },
-      {
-        name: "Immediate governance actions",
-        marks: 3,
-        keyPoints: [
-          "Escalate immediately to ED Director or Nurse Unit Manager",
-          "Document staff conduct and your response in the medical record",
-          "Ensure Judy's clinical management continues regardless of staff attitude",
-          "Your role: contain the system response, maintain patient safety",
-          "Do not allow clinical decisions to be driven by staff frustration",
-        ],
-      },
-      {
-        name: "Staff management",
-        marks: 2,
-        keyPoints: [
-          "Address stigmatising language directly but not punitively",
-          "Education about dual diagnosis presentation in ED",
-          "Formal incident report if behaviour constitutes discrimination",
-          "Debrief with staff about their distress — countertransference is real",
-        ],
-      },
-      {
-        name: "Structural governance",
-        marks: 1,
-        keyPoints: [
-          "Adverse event reporting",
-          "Quality improvement loop — systemic response, not individual blame",
-          "Policy review for dual diagnosis ED presentations",
-        ],
-      },
-    ],
-    zeroMarkTraps: [
-      "Listing the four principles without applying them to this specific case — ZERO MARKS",
-      "Writing 'beneficence means doing good' without explaining how it applies to Judy — ZERO MARKS",
-    ],
-    postExaminerNote: "March 2025 average 2/10. Cohort confused beneficence with duty of care. Did not apply principles in tension. 'I would apply the four principles of biomedical ethics' without any specific application scored zero.",
-  },
-
-  {
-    id: "MAR25_3_3",
-    examSource: "March 2025",
-    case: "Sandy, 17",
-    topic: "Ethics and Governance",
-    subtopic: "Complaint management · Governance process · Discrimination · Safeguarding",
-    difficulty: "discriminating",
-    fellowshipCompetencies: ["Professional", "Manager", "Leader", "Health Advocate"],
-    vignette: `You are a junior consultant psychiatrist. Sandy is a 17-year-old transgender young person admitted to an inpatient psychiatric unit. Sandy's parents have lodged a formal complaint against a nurse, alleging the nurse made stigmatising comments about Sandy's gender identity. Sandy has told you they feel unsafe on the unit because of this.`,
-    stemAddition: null,
-    question: `Outline (list and justify) the steps you would take in addressing this complaint.\n\nPlease note: a list without any justification will not be awarded any marks.`,
-    commandWord: "outline_justify",
-    marks: 8,
-    timeMinutes: 8,
-    stemSignals: [
-      "17-year-old — minor, specific obligations for parental involvement",
-      "Transgender young person — specific vulnerability, heightened risk from stigma",
-      "Formal complaint already lodged — governance process already activated",
-      "Sandy feels unsafe — immediate clinical priority alongside process management",
-      "Nurse is a colleague — dual obligation: fair process AND patient safety",
-    ],
-    domains: [
-      {
-        name: "Immediate patient safety",
-        marks: 2,
-        keyPoints: [
-          "Sandy's immediate safety is the first and overriding priority",
-          "Assess impact on mental state and self-harm risk",
-          "Update safety plan",
-          "May need environmental change — room or supervisor allocation",
-        ],
-      },
-      {
-        name: "Formal complaint process",
-        marks: 3,
-        keyPoints: [
-          "Acknowledge complaint promptly — in writing",
-          "Notify Nurse Unit Manager and Patient Liaison Officer",
-          "Do NOT personally investigate — refer to appropriate governance structure",
-          "Separate the investigation from Sandy's clinical care",
-          "Written response within required timeframe",
-          "Maintain confidentiality of all parties during investigation",
-        ],
-      },
-      {
-        name: "Interim staff management",
-        marks: 2,
-        keyPoints: [
-          "Interim rostering change if Sandy's safety requires it",
-          "Do not pre-judge nurse before investigation completes",
-          "Document incident independently as clinical lead",
-          "Support for nurse undergoing investigation — fair process",
-        ],
-      },
-      {
-        name: "Systemic governance response",
-        marks: 1,
-        keyPoints: [
-          "This may indicate cultural competency gap across the unit",
-          "Education about gender diversity and stigmatising language",
-          "Quality improvement loop after investigation",
-        ],
-      },
-    ],
-    zeroMarkTraps: [],
-    postExaminerNote: "March 2025 average 1/8. Candidates tried to personally investigate — procedurally incorrect. Sandy's safety and fair process for the nurse must BOTH be addressed. Most answered only one side.",
-  },
-
-  {
-    id: "MAR25_1_3",
-    examSource: "March 2025",
-    case: "Danica, 34",
-    topic: "Communication",
-    subtopic: "Delivering bad news · Capacity to receive information · SPIKES · Perinatal psychiatry",
-    difficulty: "core",
-    fellowshipCompetencies: ["Communicator", "Medical Expert", "Professional"],
-    vignette: `You are a junior consultant psychiatrist. Danica is a 34-year-old woman with bipolar disorder who is 16 weeks pregnant and has been well maintained on sodium valproate 1000mg daily throughout her pregnancy. Recent investigations have revealed fetal anomalies consistent with valproate embryopathy. Danica does not yet know the investigation results.`,
-    stemAddition: null,
-    question: `Describe (list and explain) how you would approach delivering this news to Danica.\n\nPlease note: a list without any explanation will not be awarded any marks.`,
-    commandWord: "describe_explain",
-    marks: 8,
-    timeMinutes: 8,
-    stemSignals: [
-      "Bipolar disorder — mental state may be fluctuating, capacity to process may vary",
-      "16 weeks pregnant — ongoing pregnancy, time-sensitive decisions remain possible",
-      "Does not yet know — this is first disclosure, not a follow-up conversation",
-      "Valproate embryopathy — serious, specific, predictable in mechanism",
-      "On valproate — medication decision follows from this news, adds complexity",
-    ],
-    domains: [
-      {
-        name: "Pre-disclosure assessment — the most-missed domain",
-        marks: 2,
-        keyPoints: [
-          "Assess Danica's current mental state BEFORE delivering news",
-          "Capacity to receive and process complex distressing information",
-          "What does she already know or suspect?",
-          "Support person — does she want someone present?",
-          "Setting: private, quiet, adequate time, no interruptions",
-        ],
-      },
-      {
-        name: "SPIKES framework",
-        marks: 3,
-        keyPoints: [
-          "Setting: appropriate environment",
-          "Perception: what does she currently understand?",
-          "Invitation: ask permission to share news",
-          "Knowledge: plain language, staged, no jargon",
-          "Emotions: respond to emotional reaction BEFORE providing more information",
-          "Strategy: collaboratively plan next steps",
-        ],
-      },
-      {
-        name: "Content of the news",
-        marks: 2,
-        keyPoints: [
-          "Nature of valproate embryopathy clearly explained",
-          "Specific anomalies identified honestly",
-          "Acknowledge prognosis uncertainty",
-          "Options: continuation, termination, palliative perinatal care — not pressured",
-          "Next steps: obstetrics, genetics, specialist liaison",
-        ],
-      },
-      {
-        name: "Follow-up and review",
-        marks: 1,
-        keyPoints: [
-          "Written summary of what was discussed",
-          "Follow-up appointment — she may not retain today's information",
-          "Mental health review after disclosure — this is a major psychological stressor",
-          "Who she can contact between appointments",
-        ],
-      },
-    ],
-    zeroMarkTraps: [],
-    postExaminerNote: "March 2025 average 2/8. Pre-disclosure assessment of Danica's capacity to receive news was almost universally missed — this domain was worth 2 marks and candidates went straight to delivery.",
-  },
-
-  {
-    id: "MAR25_4_3",
-    examSource: "March 2025",
-    case: "Peter, 27",
-    topic: "Psychopharmacology",
-    subtopic: "Antipsychotic-induced hyperprolactinaemia · Risperidone · Management",
-    difficulty: "core",
-    fellowshipCompetencies: ["Medical Expert"],
-    vignette: `You are a junior consultant psychiatrist. Peter is a 27-year-old man with schizophrenia prescribed risperidone 6mg daily. He attends his regular outpatient review and discloses decreased libido, erectile dysfunction, and that his partner has noticed white fluid from his nipple. He does not want to stop his antipsychotic.`,
-    stemAddition: null,
-    question: `Outline (list and justify) your management of antipsychotic-induced hyperprolactinaemia in Peter's case.\n\nPlease note: a list without any justification will not be awarded any marks.`,
-    commandWord: "outline_justify",
-    marks: 9,
-    timeMinutes: 9,
-    stemSignals: [
-      "Risperidone 6mg — one of the highest prolactin-elevating antipsychotics",
-      "Does not want to stop antipsychotic — patient preference must guide approach",
-      "27-year-old male — bone density, sexual function, long-term metabolic consequences",
-      "Galactorrhoea — confirms significant hyperprolactinaemia clinically",
-      "Outpatient setting — monitoring and follow-up context",
-    ],
-    domains: [
-      {
-        name: "Investigation",
-        marks: 2,
-        keyPoints: [
-          "Serum prolactin level to confirm and quantify",
-          "Rule out other causes: TFTs, pituitary MRI if very elevated",
-          "Baseline DEXA bone density (prolonged hyperprolactinaemia causes osteoporosis)",
-        ],
-      },
-      {
-        name: "Medication management options",
-        marks: 4,
-        keyPoints: [
-          "Dose reduction of risperidone if clinically safe — lowest effective dose",
-          "Switch to prolactin-sparing agent: aripiprazole, quetiapine, olanzapine, clozapine",
-          "Add low-dose aripiprazole as augmentation — partial D2 agonist reduces prolactin WITHOUT switching",
-          "Discuss trade-offs explicitly: switching risk (relapse) vs continuing (metabolic/bone/sexual harm)",
-          "Peter does not want to stop — aripiprazole augmentation aligns with his preference",
-        ],
-      },
-      {
-        name: "Symptom management",
-        marks: 2,
-        keyPoints: [
-          "Erectile dysfunction: PDE5 inhibitor while addressing underlying prolactin",
-          "Bone health: calcium, vitamin D, weight-bearing exercise",
-          "Address sexual health with sensitivity — document discussion",
-        ],
-      },
-      {
-        name: "Monitoring and follow-up",
-        marks: 1,
-        keyPoints: [
-          "Repeat prolactin after medication change",
-          "Ongoing DEXA monitoring",
-          "Endocrinology referral if prolactin very elevated or not normalising",
-        ],
-      },
-    ],
-    zeroMarkTraps: [],
-    postExaminerNote: "March 2025 average 1/9. One of the worst performing questions in the paper. Aripiprazole augmentation as prolactin-lowering strategy is the clinical pearl. Many candidates ran out of time or lacked specific pharmacological knowledge.",
-  },
-
-  {
-    id: "MAR25_1_2",
-    examSource: "March 2025",
-    case: "Danica, 34",
-    topic: "Ethics and Governance",
-    subtopic: "Perinatal medication ethics · Competing duties · Fetal vs maternal welfare",
-    difficulty: "discriminating",
-    fellowshipCompetencies: ["Medical Expert", "Professional", "Communicator"],
-    vignette: `You are a junior consultant psychiatrist. Danica is a 34-year-old woman with bipolar disorder who is 16 weeks pregnant. She has been well on sodium valproate 1000mg throughout her pregnancy and wishes to continue this medication. Recent fetal anomaly scan shows abnormalities consistent with valproate embryopathy. Danica has full capacity and understands the risk to the fetus. She wants to continue the pregnancy and the valproate.`,
-    stemAddition: null,
-    question: `Outline (list and justify) the ethical issues raised when a pregnant woman wishes to continue medication that could be harmful to the foetus.\n\nPlease note: a list without any justification will not be awarded any marks.`,
-    commandWord: "outline_justify",
-    marks: 9,
-    timeMinutes: 9,
-    stemSignals: [
-      "Full capacity confirmed — autonomy is fully operative",
-      "Understands the risk — informed consent is present",
-      "Wishes to continue both pregnancy AND valproate — active choice, not passive",
-      "Well on valproate — discontinuation poses real relapse risk to Danica",
-      "16 weeks — fetal organ development substantially complete",
-    ],
-    domains: [
-      {
-        name: "Autonomy — the primary principle here",
-        marks: 3,
-        keyPoints: [
-          "Danica has capacity and is making an informed decision",
-          "Autonomy requires respecting her decision even if clinicians disagree",
-          "She has a right to accept risk for herself and, by extension, her fetus",
-          "Clinicians cannot override a capacitous patient's decision",
-          "Document her decision and your clinical advice clearly",
-        ],
-      },
-      {
-        name: "Competing duties — beneficence and non-maleficence in tension",
-        marks: 3,
-        keyPoints: [
-          "Beneficence to Danica: valproate maintains her mental health, prevents relapse",
-          "Beneficence to fetus: fetal welfare is a clinical consideration",
-          "Non-maleficence to Danica: stopping valproate risks severe relapse and harm to her",
-          "Non-maleficence to fetus: continued valproate may compound existing anomalies",
-          "These duties CONFLICT — this tension must be named explicitly",
-          "The fetus has no legal personhood — Danica's autonomy takes precedence",
-        ],
-      },
-      {
-        name: "Justice and resource considerations",
-        marks: 1,
-        keyPoints: [
-          "Justice in access: does Danica have equitable access to specialist perinatal psychiatric input?",
-          "Resource allocation for complex perinatal cases",
-        ],
-      },
-      {
-        name: "Practical clinical response",
-        marks: 2,
-        keyPoints: [
-          "Respect the decision, document thoroughly",
-          "Perinatal psychiatry and obstetrics specialist input",
-          "Regular review — circumstances and mental state may change",
-          "Plan for postnatal period — valproate and breastfeeding",
-          "Continued therapeutic relationship without abandonment",
-        ],
-      },
-    ],
-    zeroMarkTraps: [
-      "Overriding Danica's decision because you disagree — this is illegal and ethically indefensible for a capacitous patient",
-    ],
-    postExaminerNote: "March 2025: candidates named principles but failed to show the tension between them in this specific case. Autonomy is the primary principle when capacity is confirmed — not one of four equal principles.",
-  },
-
 ];
 
 // ============================================================
-// SECTION 3: AI EVALUATION ENGINE
+// STORAGE UTILITIES
 // ============================================================
+const STORAGE_KEY = "meq_v3_attempts";
 
-const buildEvaluationPrompt = (question, candidateAnswer, timeTaken) => {
-  const cw = COMMAND_WORDS[question.commandWord];
-  const domainsText = question.domains
-    .map(d => `  DOMAIN "${d.name}" (${d.marks} marks):\n${d.keyPoints.map(p => `    - ${p}`).join("\n")}`)
-    .join("\n\n");
-  const stemSignalsText = question.stemSignals.map(s => `  - ${s}`).join("\n");
-  const zeroTrapsText = question.zeroMarkTraps.length
-    ? question.zeroMarkTraps.map(z => `  - ${z}`).join("\n")
-    : "  None specific to this question";
-  const timeTarget = question.timeMinutes * 60;
-  const minutesUsed = Math.round(timeTaken / 60);
-  const marksPerMinute = question.marks / question.timeMinutes;
-  const expectedMarksByNow = minutesUsed * marksPerMinute;
-  const timeStatus = timeTaken <= timeTarget
-    ? `Used ${minutesUsed} of ${question.timeMinutes} minutes. At 1 mark per minute, you should have covered ${Math.round(expectedMarksByNow)} of ${question.marks} marks worth of content by the time you stopped. Time was adequate.`
-    : `OVER TIME by ${minutesUsed - question.timeMinutes} minutes. In the real exam this costs you marks on the next question. The rule is 1 mark per minute — this question is worth ${question.marks} marks and should take exactly ${question.timeMinutes} minutes. Finishing in ${minutesUsed} minutes means you either over-wrote or lost pace.`;
+function loadAllAttempts() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    return raw ? JSON.parse(raw) : [];
+  } catch {
+    return [];
+  }
+}
 
-  return `You are an RANZCP MEQ examiner. Evaluate this candidate answer with the precision and standards of the actual examination. Do not soften feedback. Do not reward effort. Reward only what earns marks.
+function persistAllAttempts(attempts) {
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(attempts));
+  } catch {}
+}
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-QUESTION CONTEXT
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Case: ${question.case}
-Exam source: ${question.examSource}
-Topic: ${question.topic} — ${question.subtopic}
-Fellowship competencies: ${question.fellowshipCompetencies.join(", ")}
-Marks available: ${question.marks}
-Time allowed: ${question.timeMinutes} minutes
-Time taken: ${timeStatus}
+function getMEQStats(meqId, allAttempts) {
+  const meqAttempts = allAttempts.filter((a) => a.meqId === meqId);
+  const evaluated = meqAttempts.filter((a) => a.status === "evaluated");
+  const inProgressAttempt = meqAttempts.find((a) => a.status === "in_progress");
+  const meq = MEQ_BANK.find((m) => m.id === meqId);
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  let bestScore = null;
+  let bestPct = null;
+  if (evaluated.length && meq) {
+    const scores = evaluated.map((a) => a.evaluation?.totalMarksEarned ?? 0);
+    bestScore = Math.max(...scores);
+    bestPct = Math.round((bestScore / meq.totalMarks) * 100);
+  }
+
+  const status = inProgressAttempt
+    ? "in_progress"
+    : evaluated.length
+    ? "completed"
+    : "not_started";
+
+  return { meqAttempts, evaluated, inProgressAttempt, bestScore, bestPct, status };
+}
+
+function createNewAttempt(meqId) {
+  return {
+    attemptId: `${meqId}_${Date.now()}`,
+    meqId,
+    startedAt: new Date().toISOString(),
+    status: "in_progress",
+    currentStemIndex: 0,
+    answers: [],
+    evaluation: null,
+    completedAt: null,
+  };
+}
+
+// ============================================================
+// EVALUATION PROMPT BUILDER
+// ============================================================
+function buildFullMEQPrompt(meq, answers) {
+  const stemsText = meq.stems
+    .map((stem, idx) => {
+      const cw = COMMAND_WORDS[stem.commandWord];
+      const answer = answers[idx];
+      const minutesUsed = answer ? Math.round((answer.timeUsedSeconds ?? 0) / 60) : 0;
+      const timeNote =
+        minutesUsed <= stem.timeMinutes
+          ? `Used ${minutesUsed}/${stem.timeMinutes} minutes`
+          : `OVER TIME by ${minutesUsed - stem.timeMinutes} minutes`;
+
+      const domainsText = stem.domains
+        .map(
+          (d) =>
+            `  DOMAIN "${d.name}" (${d.marks} marks):\n${d.keyPoints
+              .map((p) => `    - ${p}`)
+              .join("\n")}`
+        )
+        .join("\n\n");
+
+      const signalsText = stem.stemSignals.map((s) => `  - ${s}`).join("\n");
+      const trapsText = stem.zeroMarkTraps.length
+        ? stem.zeroMarkTraps.map((z) => `  - ${z}`).join("\n")
+        : "  None";
+
+      return `
+══════════════════════════════════════════
+STEM ${stem.stemNumber} — ${stem.marks} marks / ${stem.timeMinutes} minutes
+══════════════════════════════════════════
+VIGNETTE:
+${stem.vignette}
+
+QUESTION:
+${stem.question}
+
 COMMAND WORD: ${cw.label}
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Rule: ${cw.instruction}
-${cw.gate ? "⚠️ BINARY GATE: Command word non-compliance = ZERO MARKS for that section regardless of content quality. This is enforced without exception." : "No gate — marks awarded for content quality."}
+${cw.gate ? "⚠️ GATE: Non-compliance = ZERO MARKS regardless of content." : "No binary gate."}
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-QUESTION ASKED
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-${question.question}
+STEM SIGNALS (candidate should address these):
+${signalsText}
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-STEM SIGNALS (details that should change the answer)
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-${stemSignalsText}
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-MARKING DOMAIN STRUCTURE
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+MARKING DOMAINS:
 ${domainsText}
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-ZERO-MARK TRAPS
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-${zeroTrapsText}
+ZERO-MARK TRAPS:
+${trapsText}
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-POST-EXAMINER INTELLIGENCE
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-${question.postExaminerNote}
+POST-EXAMINER INTELLIGENCE:
+${stem.postExaminerNote}
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-CANDIDATE'S ANSWER
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-${candidateAnswer}
+TIME: ${timeNote}
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CANDIDATE'S ANSWER FOR STEM ${stem.stemNumber}:
+${answer?.answerText?.trim() || "[NO ANSWER WRITTEN]"}`;
+    })
+    .join("\n");
+
+  return `You are an RANZCP MEQ examiner evaluating a complete MEQ paper. Evaluate ALL ${meq.stems.length} stems. Apply strict examiner standards.
+
+MEQ: ${meq.title}
+EXAM SOURCE: ${meq.examSource}
+TOTAL MARKS AVAILABLE: ${meq.totalMarks}
+${stemsText}
+
+══════════════════════════════════════════
 EVALUATION INSTRUCTIONS
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Evaluate this answer exactly as the RANZCP examiner would.
+══════════════════════════════════════════
+For point classifications, use ONLY:
+- "high_yield" = earns marks at this level
+- "moderate" = partially correct or incomplete
+- "low_yield" = too vague or generic for marks
+- "zero_mark" = explicitly does not earn marks
+- "unsafe" = incorrect or dangerous reasoning
 
-Return ONLY a valid JSON object with this exact structure (no markdown, no preamble):
+For error types, use ONLY from:
+knowledge_gap | command_word_error | poor_justification | poor_explanation | no_debate | wrong_timeframe | unsafe_reasoning | legal_policy_gap | cultural_system_omission | repetition_verbosity | poor_prioritisation
+
+Return ONLY a valid JSON object with EXACTLY this structure (no markdown, no preamble):
 
 {
-  "commandWordCompliance": true or false,
-  "commandWordGateResult": "PASS" or "FAIL — [specific quoted example from answer showing non-compliance]",
-  "estimatedMarks": number between 0 and ${question.marks},
-  "markBreakdown": [
-    {
-      "domain": "exact domain name from marking criteria",
-      "marksAvailable": number,
-      "marksEarned": number,
-      "reason": "Specific explanation — quote from answer if relevant. What was present, what was absent."
-    }
-  ],
-  "stemSignalsUsed": ["signal 1 used", "signal 2 used"],
-  "stemSignalsMissed": ["signal missed", "another missed"],
-  "stemSignalImpact": "One sentence on how missed stem signals affected the mark.",
-  "sentenceRewrites": [
-    {
-      "original": "exact quote from candidate answer",
-      "rewrite": "consultant-level version",
-      "reason": "why this rewrite earns more marks"
-    }
-  ],
-  "criticalPointsMissed": [
-    "High-yield point not covered",
-    "Another missed point",
-    "Another"
-  ],
-  "zeroMarkTrapHit": "Did the candidate write a zero-mark trap answer? Describe specifically. Or 'None identified.'",
-  "timeManagement": "Apply the 1-mark-per-minute rule. This question is worth ${question.marks} marks so the candidate had ${question.timeMinutes} minutes. They used ${minutesUsed} minutes. Did they write proportionally? A 10-mark question needs ~10 minutes of focused writing — not 5 minutes (too thin) and not 20 minutes (over-writing that steals time from the next question). Comment specifically on whether the answer length matches the mark allocation. If they scored 4/10 and used 15 minutes, name that explicitly as a pacing failure.",
-  "overallFeedback": "2-3 sentences. Honest consultant-to-candidate summary. Start with what specifically earns marks, then what specifically loses them. Quote from the answer. No platitudes.",
+  "totalMarksEarned": <number 0-${meq.totalMarks}>,
+  "totalMarksAvailable": ${meq.totalMarks},
   "passMark": "yes" or "borderline" or "no",
-  "priorityAction": "The single most important change this candidate needs to make — one specific, actionable instruction"
+  "stems": [
+    {
+      "stemNumber": "<e.g. 1.1>",
+      "marksEarned": <number>,
+      "marksAvailable": <number>,
+      "commandWordCompliance": <boolean>,
+      "commandWordGateResult": "PASS" or "FAIL — [reason with quoted example]",
+      "domainBreakdown": [
+        {
+          "domain": "<exact domain name>",
+          "marksAvailable": <number>,
+          "marksEarned": <number>,
+          "reason": "<specific explanation with quotes where possible>"
+        }
+      ],
+      "pointClassifications": [
+        {
+          "candidateText": "<short quote from answer>",
+          "classification": "high_yield|moderate|low_yield|zero_mark|unsafe",
+          "comment": "<why>"
+        }
+      ],
+      "criticalPointsMissed": ["<point 1>", "<point 2>"],
+      "sentenceRewrites": [
+        {
+          "original": "<exact quote>",
+          "rewrite": "<consultant-level rewrite>",
+          "reason": "<why this earns more marks>"
+        }
+      ],
+      "stemSignalsUsed": ["<signal used>"],
+      "stemSignalsMissed": ["<signal missed>"],
+      "errorTypes": ["<error type from list>"],
+      "timeManagement": "<apply 1-mark-per-minute rule>",
+      "modelAnswer": "<concise examiner-level model answer — key points in structured form>"
+    }
+  ],
+  "overallFeedback": "<2-3 sentences. Honest consultant-to-candidate summary. Quote from answers. No platitudes.>",
+  "priorityActions": ["<most impactful change>", "<second most impactful>"],
+  "readingGuidance": "<specific revision advice based on identified gaps>"
 }`;
-};
+}
 
 // ============================================================
-// SECTION 4: UTILITY FUNCTIONS
+// DISPLAY UTILITIES
 // ============================================================
-
-const formatTime = (seconds) => {
-  const m = Math.floor(seconds / 60);
-  const s = seconds % 60;
-  return `${m}:${s.toString().padStart(2, "0")}`;
+const formatTime = (s) => {
+  const m = Math.floor(s / 60);
+  const sec = s % 60;
+  return `${m}:${sec.toString().padStart(2, "0")}`;
 };
 
-const getScorePct = (earned, max) => Math.round((earned / max) * 100);
+const scoreColor = (pct) =>
+  pct >= 75
+    ? "text-emerald-700"
+    : pct >= 55
+    ? "text-amber-600"
+    : pct >= 35
+    ? "text-orange-600"
+    : "text-red-700";
 
-const scoreColor = (pct) => {
-  if (pct >= 75) return "text-emerald-700";
-  if (pct >= 55) return "text-amber-600";
-  if (pct >= 35) return "text-orange-600";
-  return "text-red-700";
-};
+const scoreBg = (pct) =>
+  pct >= 75
+    ? "bg-emerald-50 border-emerald-200"
+    : pct >= 55
+    ? "bg-amber-50 border-amber-200"
+    : pct >= 35
+    ? "bg-orange-50 border-orange-200"
+    : "bg-red-50 border-red-200";
 
-const scoreBg = (pct) => {
-  if (pct >= 75) return "bg-emerald-50 border-emerald-200";
-  if (pct >= 55) return "bg-amber-50 border-amber-200";
-  if (pct >= 35) return "bg-orange-50 border-orange-200";
-  return "bg-red-50 border-red-200";
-};
+const passLabel = (r) =>
+  ({
+    yes: { text: "Pass standard", cls: "bg-emerald-100 text-emerald-800 border-emerald-300" },
+    borderline: { text: "Borderline", cls: "bg-amber-100 text-amber-800 border-amber-300" },
+    no: { text: "Below pass mark", cls: "bg-red-100 text-red-800 border-red-300" },
+  }[r] ?? { text: r ?? "—", cls: "bg-gray-100 text-gray-700 border-gray-200" });
 
-const passLabel = (result) => ({
-  yes: { text: "Pass standard", cls: "bg-emerald-100 text-emerald-800 border-emerald-200" },
-  borderline: { text: "Borderline", cls: "bg-amber-100 text-amber-800 border-amber-200" },
-  no: { text: "Below pass mark", cls: "bg-red-100 text-red-800 border-red-200" },
-}[result] || { text: result, cls: "bg-gray-100 text-gray-800 border-gray-200" });
+const cwBadge = (cw) =>
+  ({
+    list: "bg-sky-50 border-sky-200 text-sky-800",
+    outline_justify: "bg-amber-50 border-amber-200 text-amber-900",
+    describe_explain: "bg-amber-50 border-amber-200 text-amber-900",
+    discuss: "bg-violet-50 border-violet-200 text-violet-900",
+    debate: "bg-rose-50 border-rose-200 text-rose-900",
+  }[cw] ?? "bg-gray-50 border-gray-200 text-gray-800");
 
-const cwStyle = (cw) => ({
-  list: "bg-sky-50 border-sky-200 text-sky-900",
-  outline_justify: "bg-amber-50 border-amber-200 text-amber-900",
-  describe_explain: "bg-amber-50 border-amber-200 text-amber-900",
-  discuss: "bg-violet-50 border-violet-200 text-violet-900",
-  debate: "bg-rose-50 border-rose-200 text-rose-900",
-}[cw] || "bg-gray-50 border-gray-200 text-gray-900");
+const classificationStyle = (cls) =>
+  ({
+    high_yield: "bg-emerald-50 border-emerald-200 text-emerald-800",
+    moderate: "bg-amber-50 border-amber-200 text-amber-800",
+    low_yield: "bg-gray-50 border-gray-200 text-gray-700",
+    zero_mark: "bg-red-50 border-red-200 text-red-800",
+    unsafe: "bg-red-100 border-red-300 text-red-900 font-semibold",
+  }[cls] ?? "bg-gray-50 border-gray-200 text-gray-700");
 
-const difficultyBadge = (d) => ({
-  core: "bg-sky-100 text-sky-800",
-  high: "bg-amber-100 text-amber-800",
-  discriminating: "bg-rose-100 text-rose-800",
-}[d] || "bg-gray-100 text-gray-700");
+const classificationLabel = (cls) =>
+  ({
+    high_yield: "✓ High-yield",
+    moderate: "~ Moderate",
+    low_yield: "Low-yield",
+    zero_mark: "✗ Zero-mark",
+    unsafe: "⚠ Unsafe",
+  }[cls] ?? cls);
+
+const errorTypeLabel = (t) =>
+  ({
+    knowledge_gap: "Knowledge gap",
+    command_word_error: "Command-word error",
+    poor_justification: "Poor justification",
+    poor_explanation: "Poor explanation",
+    no_debate: "No debate",
+    wrong_timeframe: "Wrong timeframe",
+    unsafe_reasoning: "Unsafe reasoning",
+    legal_policy_gap: "Legal/policy gap",
+    cultural_system_omission: "Cultural/system omission",
+    repetition_verbosity: "Repetition/verbosity",
+    poor_prioritisation: "Poor prioritisation",
+  }[t] ?? t);
 
 // ============================================================
-// SECTION 5: MAIN COMPONENT
+// MAIN COMPONENT
 // ============================================================
-
 export default function DailyMEQMode() {
-  const [phase, setPhase] = useState("home");
-  const [currentQ, setCurrentQ] = useState(null);
-  const [topicFilter, setTopicFilter] = useState("all");
-  const [answer, setAnswer] = useState("");
+  const [phase, setPhase] = useState("list"); // list | stem | evaluating | assessment
+  const [selectedMEQ, setSelectedMEQ] = useState(null);
+  const [currentAttempt, setCurrentAttempt] = useState(null);
+  const [currentStemIndex, setCurrentStemIndex] = useState(0);
+  const [stemAnswer, setStemAnswer] = useState("");
   const [timer, setTimer] = useState(0);
   const [timerActive, setTimerActive] = useState(false);
-  const [feedback, setFeedback] = useState(null);
-  const [loading, setLoading] = useState(false);
+  const [allAttempts, setAllAttempts] = useState([]);
   const [error, setError] = useState(null);
-  const [history, setHistory] = useState([]);
+  const [expandedStems, setExpandedStems] = useState({});
   const timerRef = useRef(null);
 
-  useEffect(() => { loadHistory(); }, []);
+  useEffect(() => {
+    setAllAttempts(loadAllAttempts());
+  }, []);
 
   useEffect(() => {
     if (timerActive) {
-      timerRef.current = setInterval(() => setTimer(t => t + 1), 1000);
+      timerRef.current = setInterval(() => setTimer((t) => t + 1), 1000);
     } else {
       clearInterval(timerRef.current);
     }
     return () => clearInterval(timerRef.current);
   }, [timerActive]);
 
-  const loadHistory = () => {
-    try {
-      const r = localStorage.getItem("meq_history_v2");
-      if (r) setHistory(JSON.parse(r));
-    } catch { setHistory([]); }
-  };
+  function updateAndPersistAttempt(attempt) {
+    const updated = allAttempts
+      .filter((a) => a.attemptId !== attempt.attemptId)
+      .concat(attempt);
+    setAllAttempts(updated);
+    persistAllAttempts(updated);
+  }
 
-  const saveHistory = (entry) => {
-    try {
-      const updated = [entry, ...history].slice(0, 100);
-      setHistory(updated);
-      localStorage.setItem("meq_history_v2", JSON.stringify(updated));
-    } catch (e) { console.error(e); }
-  };
-
-  const startQuestion = (q) => {
-    setCurrentQ(q);
-    setAnswer("");
-    setTimer(0);
-    setFeedback(null);
-    setError(null);
-    setPhase("reading");
-  };
-
-  const beginWriting = () => {
-    setPhase("writing");
-    setTimerActive(true);
-  };
-
-  const submitAnswer = async () => {
-    const words = answer.trim().split(/\s+/).length;
-    if (words < 30) {
-      setError("Please write a more complete answer before submitting.");
-      return;
-    }
+  function startMEQ(meq, existingAttempt = null) {
+    clearInterval(timerRef.current);
     setTimerActive(false);
-    setLoading(true);
-    setFeedback(null);
+    const attempt = existingAttempt ?? createNewAttempt(meq.id);
+    const stemIdx = existingAttempt ? existingAttempt.currentStemIndex : 0;
+    const savedAnswer =
+      attempt.answers.find(
+        (a) => a.stemNumber === meq.stems[stemIdx]?.stemNumber
+      )?.answerText ?? "";
+    setSelectedMEQ(meq);
+    setCurrentAttempt(attempt);
+    setCurrentStemIndex(stemIdx);
+    setStemAnswer(savedAnswer);
+    setTimer(0);
     setError(null);
-    setPhase("feedback");
+    setTimerActive(true);
+    setPhase("stem");
+    if (!existingAttempt) updateAndPersistAttempt(attempt);
+  }
 
+  function saveCurrentStemAndAdvance() {
+    const stem = selectedMEQ.stems[currentStemIndex];
+    const newAnswer = {
+      stemNumber: stem.stemNumber,
+      answerText: stemAnswer,
+      timeUsedSeconds: timer,
+      submittedAt: new Date().toISOString(),
+    };
+    const updatedAnswers = [
+      ...currentAttempt.answers.filter((a) => a.stemNumber !== stem.stemNumber),
+      newAnswer,
+    ];
+    const nextStemIndex = currentStemIndex + 1;
+    const isLast = nextStemIndex >= selectedMEQ.stems.length;
+    const updatedAttempt = {
+      ...currentAttempt,
+      answers: updatedAnswers,
+      currentStemIndex: isLast ? currentStemIndex : nextStemIndex,
+      status: isLast ? "submitted" : "in_progress",
+      completedAt: isLast ? new Date().toISOString() : null,
+    };
+    setCurrentAttempt(updatedAttempt);
+    updateAndPersistAttempt(updatedAttempt);
+    if (isLast) {
+      clearInterval(timerRef.current);
+      setTimerActive(false);
+      submitForEvaluation(updatedAttempt);
+    } else {
+      const nextStem = selectedMEQ.stems[nextStemIndex];
+      const savedNext =
+        updatedAttempt.answers.find(
+          (a) => a.stemNumber === nextStem.stemNumber
+        )?.answerText ?? "";
+      setCurrentStemIndex(nextStemIndex);
+      setStemAnswer(savedNext);
+      setTimer(0);
+      setError(null);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }
+
+  async function submitForEvaluation(attempt) {
+    setPhase("evaluating");
+    setError(null);
     try {
-      const prompt = buildEvaluationPrompt(currentQ, answer, timer);
+      const prompt = buildFullMEQPrompt(selectedMEQ, attempt.answers);
       const res = await fetch("/api/meq-evaluate", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -1194,407 +1082,605 @@ export default function DailyMEQMode() {
       });
       if (!res.ok) throw new Error(`Server error ${res.status}`);
       const data = await res.json();
-      const text = data.text || "";
+      const text = data.text ?? "";
       const match = text.match(/\{[\s\S]*\}/);
-      if (!match) throw new Error("No JSON returned");
-      const fb = JSON.parse(match[0]);
-      setFeedback(fb);
-      saveHistory({
-        id: Date.now(),
-        qId: currentQ.id,
-        case: currentQ.case,
-        topic: currentQ.topic,
-        examSource: currentQ.examSource,
-        marks: currentQ.marks,
-        earned: fb.estimatedMarks,
-        pass: fb.passMark,
-        commandPass: fb.commandWordCompliance,
-        timeTaken: timer,
-        date: new Date().toISOString(),
-      });
+      if (!match) throw new Error("No JSON in response");
+      const evaluation = JSON.parse(match[0]);
+      const evaluatedAttempt = { ...attempt, status: "evaluated", evaluation };
+      setCurrentAttempt(evaluatedAttempt);
+      updateAndPersistAttempt(evaluatedAttempt);
+      setExpandedStems(
+        Object.fromEntries(selectedMEQ.stems.map((s) => [s.stemNumber, true]))
+      );
+      setPhase("assessment");
     } catch (err) {
-      setError("Evaluation failed. Check API connection. " + err.message);
-      setPhase("writing");
-      setTimerActive(false);
+      setError("Evaluation failed: " + (err.message ?? "unknown error"));
+      setPhase("stem");
     }
-    setLoading(false);
-  };
+  }
 
-  const topics = ["all", ...new Set(QUESTION_BANK.map(q => q.topic))];
-  const filtered = topicFilter === "all" ? QUESTION_BANK : QUESTION_BANK.filter(q => q.topic === topicFilter);
+  function goBackToList() {
+    clearInterval(timerRef.current);
+    setTimerActive(false);
+    setPhase("list");
+    setSelectedMEQ(null);
+    setCurrentAttempt(null);
+    setCurrentStemIndex(0);
+    setStemAnswer("");
+    setTimer(0);
+    setError(null);
+  }
 
-  const stats = history.length > 0 ? {
-    attempts: history.length,
-    avgPct: Math.round(history.reduce((s, h) => s + getScorePct(h.earned, h.marks), 0) / history.length),
-    passing: history.filter(h => h.pass === "yes").length,
-    commandFails: history.filter(h => !h.commandPass).length,
-  } : null;
+  function viewLastAssessment(meqId) {
+    const meq = MEQ_BANK.find((m) => m.id === meqId);
+    const stats = getMEQStats(meqId, allAttempts);
+    const latest = [...stats.evaluated].sort(
+      (a, b) =>
+        new Date(b.completedAt ?? 0).getTime() -
+        new Date(a.completedAt ?? 0).getTime()
+    )[0];
+    if (latest && meq) {
+      setSelectedMEQ(meq);
+      setCurrentAttempt(latest);
+      setExpandedStems(
+        Object.fromEntries(meq.stems.map((s) => [s.stemNumber, true]))
+      );
+      setPhase("assessment");
+    }
+  }
 
-  // ── HOME ─────────────────────────────────────────────────
-  if (phase === "home") return (
-    <div className="max-w-4xl mx-auto px-4 py-6">
-
-      <div className="mb-8">
-        <h1 className="text-3xl font-bold text-gray-900 tracking-tight mb-1">Daily MEQ Practice</h1>
-        <p className="text-gray-500">Real RANZCP exam questions · AI feedback at examiner standard · {QUESTION_BANK.length} questions from recent papers</p>
-      </div>
-
-      {stats && (
-        <div className="grid grid-cols-4 gap-3 mb-8">
-          {[
-            { label: "Attempts", value: stats.attempts, color: "text-gray-900" },
-            { label: "Avg score", value: `${stats.avgPct}%`, color: scoreColor(stats.avgPct) },
-            { label: "Pass standard", value: stats.passing, color: "text-emerald-700" },
-            { label: "Command word fails", value: stats.commandFails, color: stats.commandFails > 0 ? "text-red-700" : "text-gray-400" },
-          ].map(s => (
-            <div key={s.label} className="bg-white border border-gray-200 rounded-xl p-4 text-center">
-              <div className={`text-2xl font-bold ${s.color}`}>{s.value}</div>
-              <div className="text-xs text-gray-500 mt-1">{s.label}</div>
-            </div>
-          ))}
+  // ── LIST PHASE ─────────────────────────────────────────────
+  if (phase === "list") {
+    return (
+      <div className="max-w-4xl mx-auto px-4 py-6">
+        <div className="mb-7">
+          <h1 className="text-3xl font-bold text-gray-900 tracking-tight">Daily MEQ</h1>
+          <p className="text-sm text-gray-500 mt-1">
+            Staged MEQ papers · {MEQ_BANK.length} MEQs · AI feedback at RANZCP examiner standard
+          </p>
         </div>
-      )}
 
-      <div className="flex flex-wrap gap-2 mb-5">
-        {topics.map(t => (
-          <button key={t} onClick={() => setTopicFilter(t)}
-            className={`px-3 py-1.5 rounded-full text-sm border transition-all ${topicFilter === t ? "bg-gray-900 text-white border-gray-900" : "bg-white text-gray-600 border-gray-200 hover:border-gray-500"}`}>
-            {t === "all" ? `All (${QUESTION_BANK.length})` : `${t} (${QUESTION_BANK.filter(q => q.topic === t).length})`}
-          </button>
-        ))}
-      </div>
-
-      <div className="space-y-2">
-        {filtered.map(q => {
-          const past = history.filter(h => h.qId === q.id);
-          const best = past.length ? Math.max(...past.map(h => getScorePct(h.earned, h.marks))) : null;
-          const cw = COMMAND_WORDS[q.commandWord];
-          return (
-            <div key={q.id} onClick={() => startQuestion(q)}
-              className="bg-white border border-gray-200 rounded-xl p-4 hover:border-gray-400 hover:shadow-sm cursor-pointer transition-all group">
-              <div className="flex items-start justify-between gap-4">
-                <div className="flex-1 min-w-0">
-                  <div className="flex flex-wrap items-center gap-2 mb-1.5">
-                    <span className="font-semibold text-gray-900 text-sm">{q.case}</span>
-                    <span className="text-gray-300">·</span>
-                    <span className="text-xs text-gray-500">{q.examSource}</span>
-                    <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${difficultyBadge(q.difficulty)}`}>{q.difficulty}</span>
-                    {past.length > 0 && <span className="text-xs text-gray-400">{past.length}x attempted</span>}
+        <div className="space-y-4">
+          {MEQ_BANK.map((meq) => {
+            const stats = getMEQStats(meq.id, allAttempts);
+            const { status, inProgressAttempt, bestScore, bestPct, evaluated } = stats;
+            return (
+              <div key={meq.id} className="bg-white border border-gray-200 rounded-2xl p-5 shadow-sm">
+                <div className="flex items-start justify-between gap-4 flex-wrap">
+                  <div className="flex-1 min-w-0">
+                    <div className="flex flex-wrap items-center gap-2 mb-1">
+                      <h3 className="font-bold text-gray-900">{meq.title}</h3>
+                      <span className={`text-xs px-2 py-0.5 rounded-full font-semibold ${
+                        status === "completed"
+                          ? "bg-emerald-100 text-emerald-800"
+                          : status === "in_progress"
+                          ? "bg-amber-100 text-amber-800"
+                          : "bg-gray-100 text-gray-600"
+                      }`}>
+                        {status === "completed" ? "Completed" : status === "in_progress" ? "In Progress" : "Not Started"}
+                      </span>
+                    </div>
+                    <p className="text-xs text-gray-400 mb-3">{meq.examSource} · {meq.topic}</p>
+                    <div className="flex flex-wrap gap-4 text-xs text-gray-500 mb-3">
+                      <span><span className="font-semibold text-gray-700">{meq.stems.length}</span> stems</span>
+                      <span><span className="font-semibold text-gray-700">{meq.totalMarks}</span> marks</span>
+                      <span><span className="font-semibold text-gray-700">{meq.totalTimeMinutes}</span> min</span>
+                      {bestScore !== null && bestPct !== null && (
+                        <span>Best: <span className={`font-bold ${scoreColor(bestPct)}`}>{bestScore}/{meq.totalMarks} ({bestPct}%)</span></span>
+                      )}
+                    </div>
+                    <div className="flex flex-wrap gap-1.5">
+                      {meq.stems.map((s) => (
+                        <span key={s.stemNumber} className={`text-xs border rounded-md px-2 py-0.5 font-medium ${cwBadge(s.commandWord)}`}>
+                          {s.stemNumber} · {s.marks}M · {COMMAND_WORDS[s.commandWord]?.short}
+                        </span>
+                      ))}
+                    </div>
                   </div>
-                  <p className="text-sm text-gray-700 mb-2 line-clamp-2">{q.question.split("\n")[0]}</p>
-                  <div className="flex flex-wrap gap-2">
-                    <span className={`text-xs px-2 py-0.5 rounded-md border font-medium ${cwStyle(q.commandWord)}`}>{cw.short}</span>
-                    <span className="text-xs text-gray-500">{q.marks} marks · {q.timeMinutes} min</span>
-                    <span className="text-xs text-gray-400">{q.topic}</span>
+
+                  <div className="flex flex-col gap-2 flex-shrink-0">
+                    {status === "in_progress" && inProgressAttempt ? (
+                      <>
+                        <button onClick={() => startMEQ(meq, inProgressAttempt)} className="px-4 py-2 bg-amber-600 text-white rounded-lg text-sm font-semibold hover:bg-amber-700 transition-colors whitespace-nowrap">
+                          Continue →
+                        </button>
+                        <button onClick={() => startMEQ(meq)} className="px-4 py-2 border border-gray-300 text-gray-600 rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors whitespace-nowrap">
+                          Start Fresh
+                        </button>
+                      </>
+                    ) : status === "completed" ? (
+                      <>
+                        <button onClick={() => viewLastAssessment(meq.id)} className="px-4 py-2 bg-gray-900 text-white rounded-lg text-sm font-semibold hover:bg-gray-800 transition-colors whitespace-nowrap">
+                          View Results
+                        </button>
+                        <button onClick={() => startMEQ(meq)} className="px-4 py-2 border border-gray-300 text-gray-600 rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors whitespace-nowrap">
+                          Retry MEQ
+                        </button>
+                      </>
+                    ) : (
+                      <button onClick={() => startMEQ(meq)} className="px-4 py-2 bg-gray-900 text-white rounded-lg text-sm font-semibold hover:bg-gray-800 transition-colors whitespace-nowrap">
+                        Start MEQ →
+                      </button>
+                    )}
                   </div>
                 </div>
-                {best !== null && (
-                  <div className="text-right flex-shrink-0">
-                    <div className={`text-xl font-bold ${scoreColor(best)}`}>{best}%</div>
-                    <div className="text-xs text-gray-400">best</div>
+
+                {evaluated.length > 0 && (
+                  <div className="mt-3 pt-3 border-t border-gray-100">
+                    <p className="text-xs text-gray-400 mb-1.5">Attempt history</p>
+                    <div className="flex flex-wrap gap-2">
+                      {evaluated.slice(-5).map((a) => {
+                        const pct = Math.round(((a.evaluation?.totalMarksEarned ?? 0) / meq.totalMarks) * 100);
+                        return (
+                          <span key={a.attemptId} className={`text-xs px-2 py-0.5 rounded border font-medium ${
+                            pct >= 75 ? "bg-emerald-50 border-emerald-200 text-emerald-700"
+                            : pct >= 55 ? "bg-amber-50 border-amber-200 text-amber-700"
+                            : "bg-red-50 border-red-200 text-red-700"
+                          }`}>
+                            {new Date(a.completedAt).toLocaleDateString("en-AU", { day: "numeric", month: "short" })} — {a.evaluation?.totalMarksEarned}/{meq.totalMarks} ({pct}%)
+                          </span>
+                        );
+                      })}
+                    </div>
                   </div>
                 )}
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 
-  // ── READING ──────────────────────────────────────────────
-  if (phase === "reading" && currentQ) {
-    const cw = COMMAND_WORDS[currentQ.commandWord];
+  // ── STEM PHASE ─────────────────────────────────────────────
+  if (phase === "stem" && selectedMEQ && currentAttempt) {
+    const stem = selectedMEQ.stems[currentStemIndex];
+    const cw = COMMAND_WORDS[stem.commandWord];
+    const isLastStem = currentStemIndex === selectedMEQ.stems.length - 1;
+    const allowedSeconds = stem.timeMinutes * 60;
+    const isOverTime = timer > allowedSeconds;
+    const timerRatio = Math.min(timer / allowedSeconds, 1);
+    const timerColor =
+      timerRatio < 0.7 ? "text-emerald-600" : timerRatio < 0.9 ? "text-amber-500" : "text-red-600";
+    const wordCount = stemAnswer.trim() ? stemAnswer.trim().split(/\s+/).length : 0;
+    const minElapsed = (timer / 60).toFixed(1);
+
     return (
-      <div className="max-w-3xl mx-auto px-4 py-6">
-        <div className="flex items-center gap-3 mb-5">
-          <button onClick={() => setPhase("home")} className="text-sm text-gray-500 hover:text-gray-800">← Back</button>
-          <span className="text-sm text-gray-500">Reading time — extract stem signals before writing</span>
+      <div className="max-w-3xl mx-auto px-4 py-4">
+        {/* Top bar */}
+        <div className="flex items-center justify-between mb-3 gap-2 flex-wrap">
+          <button onClick={goBackToList} className="text-xs text-gray-400 hover:text-gray-700 transition-colors">
+            ← MEQ List
+          </button>
+          <div className="flex items-center gap-3">
+            <span className={`text-2xl font-mono font-bold tabular-nums ${timerColor}`}>{formatTime(timer)}</span>
+            {isOverTime && <span className="text-xs bg-red-100 text-red-700 px-2 py-0.5 rounded-full font-medium">Over time</span>}
+            <span className="text-xs text-gray-400">{minElapsed} min elapsed</span>
+          </div>
+          <span className="text-xs text-gray-500">{stem.marks}M · {wordCount} words</span>
         </div>
 
-        <div className="bg-gray-50 border border-gray-200 rounded-xl p-5 mb-4">
-          <div className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Clinical Vignette</div>
-          <p className="text-gray-800 text-sm leading-relaxed">{currentQ.vignette}</p>
-          {currentQ.stemAddition && (
-            <div className="mt-4 pt-4 border-t border-gray-200">
-              <p className="text-gray-800 text-sm leading-relaxed italic">{currentQ.stemAddition}</p>
-            </div>
-          )}
+        {/* Progress stepper */}
+        <div className="flex items-center gap-1 mb-4 overflow-x-auto pb-1">
+          {selectedMEQ.stems.map((s, idx) => {
+            const isDone = idx < currentStemIndex;
+            const isCurrent = idx === currentStemIndex;
+            return (
+              <div key={s.stemNumber} className="flex items-center gap-1 flex-shrink-0">
+                <div className={`px-2.5 py-1 rounded-lg text-xs font-semibold border transition-all ${
+                  isCurrent ? "bg-gray-900 text-white border-gray-900"
+                  : isDone ? "bg-emerald-100 text-emerald-800 border-emerald-300"
+                  : "bg-gray-50 text-gray-400 border-gray-200"
+                }`}>
+                  {isDone ? `✓ ${s.stemNumber}` : s.stemNumber} ({s.marks}M)
+                </div>
+                {idx < selectedMEQ.stems.length - 1 && <span className="text-gray-300 text-xs">→</span>}
+              </div>
+            );
+          })}
+          <span className="text-gray-300 text-xs flex-shrink-0">→</span>
+          <div className={`px-2.5 py-1 rounded-lg text-xs font-semibold border flex-shrink-0 ${
+            isLastStem ? "border-gray-800 text-gray-800 bg-gray-50" : "bg-gray-50 text-gray-300 border-gray-200"
+          }`}>
+            Submit
+          </div>
         </div>
 
-        <div className={`border rounded-xl p-4 mb-4 ${cwStyle(currentQ.commandWord)}`}>
-          <div className="text-xs font-semibold uppercase tracking-wide mb-1 opacity-70">{cw.label} · {currentQ.marks} marks · {currentQ.timeMinutes} min</div>
-          <p className="text-sm font-medium leading-relaxed">{currentQ.question.split("\n")[0]}</p>
+        {/* MEQ context line */}
+        <div className="text-xs text-gray-400 font-medium uppercase tracking-wide mb-2">
+          {selectedMEQ.title} · {selectedMEQ.totalMarks} marks · Stem {stem.stemNumber} of {selectedMEQ.stems.length}
+        </div>
+
+        {/* Vignette */}
+        <div className="bg-gray-50 border border-gray-200 rounded-xl p-4 mb-3">
+          <div className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">
+            Clinical Vignette — Stem {stem.stemNumber}
+          </div>
+          <p className="text-gray-800 text-sm leading-relaxed">{stem.vignette}</p>
+        </div>
+
+        {/* Question + command word */}
+        <div className={`border rounded-xl p-3 mb-3 ${cwBadge(stem.commandWord)}`}>
+          <div className="text-xs font-semibold uppercase tracking-wide mb-1 opacity-60">
+            {cw.label} · {stem.marks} marks · {stem.timeMinutes} min
+          </div>
+          <p className="text-sm font-semibold leading-relaxed">{stem.question.split("\n")[0]}</p>
           {cw.gate && (
-            <div className="mt-2 pt-2 border-t border-current border-opacity-20 text-xs font-medium">
+            <p className="text-xs mt-2 pt-2 border-t border-current border-opacity-20 font-medium">
               ⚠️ {cw.instruction}
-            </div>
+            </p>
           )}
         </div>
 
-        <div className="bg-blue-50 border border-blue-100 rounded-xl p-4 mb-6">
-          <div className="text-xs font-semibold text-blue-800 uppercase tracking-wide mb-2">Stem signals — use these in your answer</div>
-          <ul className="space-y-1.5">
-            {currentQ.stemSignals.map((s, i) => (
+        {/* Stem signals */}
+        <div className="bg-blue-50 border border-blue-100 rounded-xl p-3 mb-3">
+          <div className="text-xs font-semibold text-blue-700 uppercase tracking-wide mb-1.5">
+            Stem signals — integrate these in your answer
+          </div>
+          <ul className="space-y-1">
+            {stem.stemSignals.map((sig, i) => (
               <li key={i} className="text-xs text-blue-800 flex gap-2">
-                <span className="text-blue-400 flex-shrink-0 mt-0.5">→</span>
-                <span>{s}</span>
+                <span className="text-blue-400 flex-shrink-0">→</span>
+                <span>{sig}</span>
               </li>
             ))}
           </ul>
         </div>
 
-        <button onClick={beginWriting}
-          className="w-full bg-gray-900 text-white py-3.5 rounded-xl font-semibold hover:bg-gray-800 transition-colors text-sm">
-          Start Writing — Timer Begins Now
-        </button>
-      </div>
-    );
-  }
-
-  // ── WRITING ──────────────────────────────────────────────
-  if (phase === "writing" && currentQ) {
-    const isOver = timer > currentQ.timeMinutes * 60;
-    const ratio = timer / (currentQ.timeMinutes * 60);
-    const timeColor = ratio < 0.7 ? "text-emerald-600" : ratio < 0.9 ? "text-amber-500" : "text-red-600";
-    const words = answer.trim() ? answer.trim().split(/\s+/).length : 0;
-
-    return (
-      <div className="max-w-3xl mx-auto px-4 py-4">
-        <div className="flex items-center justify-between mb-3">
-          <div className="flex items-center gap-3">
-            <span className="text-sm font-medium text-gray-700">{currentQ.case}</span>
-            <span className={`text-xl font-mono font-bold ${timeColor}`}>{formatTime(timer)}</span>
-            {isOver && <span className="text-xs bg-red-100 text-red-700 px-2 py-0.5 rounded-full font-medium">Over time</span>}
-            <span className="text-xs text-gray-400">
-              {timer > 0 ? `~${Math.round((timer / 60) * (currentQ.marks / currentQ.timeMinutes))} marks worth written` : `${currentQ.marks} marks = ${currentQ.timeMinutes} min`}
-            </span>
-          </div>
-          <span className="text-xs text-gray-400">{currentQ.marks} marks · {words} words</span>
-        </div>
-
-        <div className={`border rounded-lg px-3 py-2 mb-3 text-xs font-medium ${cwStyle(currentQ.commandWord)}`}>
-          {COMMAND_WORDS[currentQ.commandWord].label}: {currentQ.question.split("\n")[0]}
-        </div>
-
+        {/* Answer textarea */}
         <textarea
-          value={answer}
-          onChange={e => setAnswer(e.target.value)}
+          value={stemAnswer}
+          onChange={(e) => setStemAnswer(e.target.value)}
           autoFocus
-          className="w-full h-[400px] p-4 border border-gray-300 rounded-xl text-sm text-gray-800 leading-relaxed resize-none focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent"
-          placeholder={`Write your answer here...\n\n${COMMAND_WORDS[currentQ.commandWord].instruction}`}
+          className="w-full h-[360px] p-4 border border-gray-300 rounded-xl text-sm text-gray-800 leading-relaxed resize-none focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent"
+          placeholder={`${cw.label}: ${stem.question.split("\n")[0]}\n\n${cw.instruction}`}
         />
 
-        {error && <div className="mt-2 p-3 bg-red-50 border border-red-200 rounded-lg text-sm text-red-700">{error}</div>}
+        {error && (
+          <div className="mt-2 p-3 bg-red-50 border border-red-200 rounded-lg text-sm text-red-700">{error}</div>
+        )}
 
-        <button onClick={submitAnswer} disabled={loading}
-          className="w-full mt-3 bg-gray-900 text-white py-3 rounded-xl font-semibold text-sm hover:bg-gray-800 transition-colors disabled:opacity-40">
-          Submit for RANZCP Examiner Feedback
+        <button
+          onClick={saveCurrentStemAndAdvance}
+          className={`w-full mt-3 py-3.5 rounded-xl font-semibold text-sm transition-colors ${
+            isLastStem
+              ? "bg-gray-900 text-white hover:bg-gray-800"
+              : "bg-white text-gray-900 border-2 border-gray-900 hover:bg-gray-900 hover:text-white"
+          }`}
+        >
+          {isLastStem
+            ? "Submit Full MEQ for Evaluation →"
+            : `Save & Next Stem (${selectedMEQ.stems[currentStemIndex + 1]?.stemNumber}) →`}
         </button>
+
+        <p className="text-xs text-gray-400 text-center mt-2">
+          {isLastStem
+            ? "All stems submitted together for AI evaluation at RANZCP examiner standard."
+            : "Your answer is saved. You cannot return to previous stems after proceeding."}
+        </p>
       </div>
     );
   }
 
-  // ── FEEDBACK ─────────────────────────────────────────────
-  if (phase === "feedback" && currentQ) {
-
-    if (loading) return (
-      <div className="max-w-3xl mx-auto px-4 py-20 flex flex-col items-center text-center">
-        <div className="w-10 h-10 border-2 border-gray-900 border-t-transparent rounded-full animate-spin mb-5" />
-        <p className="text-gray-700 font-medium">Evaluating at RANZCP examiner standard...</p>
-        <p className="text-gray-400 text-sm mt-2">Checking command word · domain coverage · justification · stem usage</p>
+  // ── EVALUATING PHASE ───────────────────────────────────────
+  if (phase === "evaluating") {
+    return (
+      <div className="max-w-3xl mx-auto px-4 py-24 flex flex-col items-center text-center">
+        <div className="w-12 h-12 border-2 border-gray-900 border-t-transparent rounded-full animate-spin mb-6" />
+        <h2 className="text-xl font-bold text-gray-900 mb-2">Evaluating your MEQ</h2>
+        <p className="text-gray-500 text-sm">
+          At RANZCP examiner standard · {selectedMEQ?.stems.length} stems · {selectedMEQ?.totalMarks} marks
+        </p>
+        <p className="text-gray-400 text-xs mt-3">
+          Checking command words · domain coverage · stem signal usage · time management
+        </p>
       </div>
     );
+  }
 
-    if (!feedback) return (
-      <div className="max-w-3xl mx-auto px-4 py-6">
-        <div className="p-4 bg-red-50 border border-red-200 rounded-xl text-sm text-red-700 mb-3">{error}</div>
-        <button onClick={() => { setPhase("writing"); setTimerActive(true); }}
-          className="px-4 py-2 bg-gray-900 text-white rounded-lg text-sm">Return to answer</button>
-      </div>
+  // ── ASSESSMENT PHASE ───────────────────────────────────────
+  if (phase === "assessment" && currentAttempt?.evaluation && selectedMEQ) {
+    const ev = currentAttempt.evaluation;
+    const totalPct = Math.round(
+      ((ev.totalMarksEarned ?? 0) / (ev.totalMarksAvailable ?? selectedMEQ.totalMarks)) * 100
     );
-
-    const pct = getScorePct(feedback.estimatedMarks, currentQ.marks);
-    const pl = passLabel(feedback.passMark);
+    const pl = passLabel(ev.passMark);
 
     return (
-      <div className="max-w-3xl mx-auto px-4 py-6 space-y-4">
-
+      <div className="max-w-3xl mx-auto px-4 py-6 space-y-5">
         {/* Header */}
         <div className="flex items-start justify-between">
           <div>
-            <h2 className="text-lg font-bold text-gray-900">{currentQ.case} — Feedback</h2>
-            <p className="text-sm text-gray-500">{currentQ.examSource} · {currentQ.topic}</p>
+            <h2 className="text-xl font-bold text-gray-900">{selectedMEQ.title}</h2>
+            <p className="text-sm text-gray-500">{selectedMEQ.examSource} · Full MEQ Assessment</p>
           </div>
-          <button onClick={() => setPhase("home")} className="text-sm text-gray-500 hover:text-gray-700">← Questions</button>
+          <button onClick={goBackToList} className="text-sm text-gray-400 hover:text-gray-700 flex-shrink-0">← Back</button>
         </div>
 
-        {/* Score card */}
-        <div className={`border rounded-xl p-5 ${scoreBg(pct)}`}>
-          <div className="flex items-center justify-between">
+        {/* Overall score card */}
+        <div className={`border rounded-2xl p-6 ${scoreBg(totalPct)}`}>
+          <div className="flex items-center justify-between gap-4 flex-wrap">
             <div>
-              <div className={`text-5xl font-black ${scoreColor(pct)}`}>
-                {feedback.estimatedMarks}/{currentQ.marks}
+              <div className={`text-6xl font-black ${scoreColor(totalPct)}`}>
+                {ev.totalMarksEarned}
+                <span className="text-3xl font-bold text-gray-400">/{ev.totalMarksAvailable ?? selectedMEQ.totalMarks}</span>
               </div>
-              <div className="text-sm text-gray-500 mt-1">{pct}% · {formatTime(timer)}</div>
+              <div className="text-sm text-gray-500 mt-1">{totalPct}% overall</div>
             </div>
             <div className="text-right space-y-2">
-              <span className={`inline-block px-3 py-1.5 rounded-full text-sm font-semibold border ${pl.cls}`}>{pl.text}</span>
-              <div className={`text-sm font-semibold ${feedback.commandWordCompliance ? "text-emerald-700" : "text-red-700"}`}>
-                {feedback.commandWordCompliance ? "✓ Command word compliant" : "✗ " + feedback.commandWordGateResult}
-              </div>
+              <span className={`inline-block px-3 py-1.5 rounded-full text-sm font-bold border ${pl.cls}`}>{pl.text}</span>
+              <div className="text-xs text-gray-400">{selectedMEQ.stems.length} stems · {selectedMEQ.totalMarks} marks</div>
             </div>
           </div>
-        </div>
 
-        {/* Priority action */}
-        {feedback.priorityAction && (
-          <div className="bg-amber-50 border-l-4 border-amber-400 rounded-r-xl p-4">
-            <div className="text-xs font-bold text-amber-800 uppercase tracking-wide mb-1">Most important fix</div>
-            <p className="text-sm text-amber-900 font-medium">{feedback.priorityAction}</p>
-          </div>
-        )}
-
-        {/* Domain breakdown */}
-        {feedback.markBreakdown?.length > 0 && (
-          <div className="bg-white border border-gray-200 rounded-xl p-4">
-            <h3 className="text-sm font-bold text-gray-900 mb-3">Mark breakdown</h3>
-            <div className="space-y-3">
-              {feedback.markBreakdown.map((d, i) => {
-                const dpct = getScorePct(d.marksEarned, d.marksAvailable);
+          {/* Per-stem mini scores */}
+          <div className="mt-4 pt-4 border-t border-black/10">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+              {ev.stems?.map((stemEv) => {
+                const p2 = Math.round((stemEv.marksEarned / stemEv.marksAvailable) * 100);
                 return (
-                  <div key={i} className="flex gap-3 items-start">
-                    <div className="flex-shrink-0 w-6 text-center text-sm mt-0.5">
-                      {dpct === 100 ? "✓" : dpct === 0 ? <span className="text-red-500">✗</span> : <span className="text-amber-500">~</span>}
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex justify-between items-center">
-                        <span className="text-sm font-medium text-gray-800">{d.domain}</span>
-                        <span className={`text-sm font-bold ${scoreColor(dpct)}`}>{d.marksEarned}/{d.marksAvailable}</span>
-                      </div>
-                      <p className="text-xs text-gray-500 mt-0.5">{d.reason}</p>
-                    </div>
+                  <div key={stemEv.stemNumber} className="bg-white/60 rounded-lg px-3 py-2 text-center">
+                    <div className="text-xs text-gray-500 mb-0.5">Stem {stemEv.stemNumber}</div>
+                    <div className={`text-lg font-bold ${scoreColor(p2)}`}>{stemEv.marksEarned}/{stemEv.marksAvailable}</div>
+                    <div className="text-xs text-gray-400">{p2}%</div>
                   </div>
                 );
               })}
             </div>
           </div>
-        )}
+        </div>
 
-        {/* Stem signal usage */}
-        {(feedback.stemSignalsMissed?.length > 0 || feedback.stemSignalsUsed?.length > 0) && (
-          <div className="bg-white border border-gray-200 rounded-xl p-4">
-            <h3 className="text-sm font-bold text-gray-900 mb-3">Stem signal usage</h3>
-            {feedback.stemSignalsUsed?.length > 0 && (
-              <div className="mb-3">
-                <div className="text-xs font-medium text-emerald-700 mb-1.5">Used ✓</div>
-                <ul className="space-y-1">
-                  {feedback.stemSignalsUsed.map((s, i) => (
-                    <li key={i} className="text-xs text-emerald-700 flex gap-1.5"><span>✓</span><span>{s}</span></li>
-                  ))}
-                </ul>
-              </div>
-            )}
-            {feedback.stemSignalsMissed?.length > 0 && (
-              <div>
-                <div className="text-xs font-medium text-red-700 mb-1.5">Missed — marks left in the stem ✗</div>
-                <ul className="space-y-1">
-                  {feedback.stemSignalsMissed.map((s, i) => (
-                    <li key={i} className="text-xs text-red-700 flex gap-1.5"><span>✗</span><span>{s}</span></li>
-                  ))}
-                </ul>
-              </div>
-            )}
-            {feedback.stemSignalImpact && (
-              <p className="text-xs text-gray-400 mt-2 italic">{feedback.stemSignalImpact}</p>
-            )}
-          </div>
-        )}
-
-        {/* Sentence rewrites */}
-        {feedback.sentenceRewrites?.length > 0 && (
-          <div className="bg-white border border-gray-200 rounded-xl p-4">
-            <h3 className="text-sm font-bold text-gray-900 mb-3">Sentence rewrites</h3>
-            <div className="space-y-4">
-              {feedback.sentenceRewrites.map((r, i) => (
-                <div key={i} className="space-y-2">
-                  <div className="bg-blue-50 border border-blue-100 rounded-lg p-3">
-                    <div className="text-xs font-medium text-blue-600 mb-1">Your version</div>
-                    <p className="text-sm text-blue-900 italic">"{r.original}"</p>
-                  </div>
-                  <div className="bg-emerald-50 border border-emerald-100 rounded-lg p-3">
-                    <div className="text-xs font-medium text-emerald-600 mb-1">Consultant version</div>
-                    <p className="text-sm text-emerald-900">"{r.rewrite}"</p>
-                  </div>
-                  <p className="text-xs text-gray-500 pl-1">{r.reason}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
-
-        {/* Critical points missed */}
-        {feedback.criticalPointsMissed?.length > 0 && (
-          <div className="bg-white border border-gray-200 rounded-xl p-4">
-            <h3 className="text-sm font-bold text-gray-900 mb-2">High-yield points not covered</h3>
-            <ul className="space-y-2">
-              {feedback.criticalPointsMissed.map((p, i) => (
-                <li key={i} className="text-sm text-gray-700 flex gap-2 items-start">
-                  <span className="text-red-500 flex-shrink-0 mt-0.5">✗</span>
-                  <span>{p}</span>
+        {/* Priority actions */}
+        {ev.priorityActions?.length > 0 && (
+          <div className="bg-amber-50 border-l-4 border-amber-400 rounded-r-xl p-4">
+            <div className="text-xs font-bold text-amber-800 uppercase tracking-wide mb-2">Priority actions</div>
+            <ol className="space-y-1.5">
+              {ev.priorityActions.map((a, i) => (
+                <li key={i} className="text-sm text-amber-900 flex gap-2">
+                  <span className="font-bold flex-shrink-0">{i + 1}.</span>
+                  <span>{a}</span>
                 </li>
               ))}
-            </ul>
+            </ol>
           </div>
         )}
 
-        {/* Zero mark trap */}
-        {feedback.zeroMarkTrapHit && feedback.zeroMarkTrapHit !== "None identified." && (
-          <div className="bg-red-50 border border-red-200 rounded-xl p-4">
-            <div className="text-xs font-bold text-red-800 uppercase tracking-wide mb-1">⚠ Zero-mark trap hit</div>
-            <p className="text-sm text-red-800">{feedback.zeroMarkTrapHit}</p>
-          </div>
-        )}
+        {/* Per-stem detail sections */}
+        {ev.stems?.map((stemEv) => {
+          const stemDef = selectedMEQ.stems.find((s) => s.stemNumber === stemEv.stemNumber);
+          const stemAns = currentAttempt.answers.find((a) => a.stemNumber === stemEv.stemNumber);
+          const p2 = Math.round((stemEv.marksEarned / stemEv.marksAvailable) * 100);
+          const isExpanded = expandedStems[stemEv.stemNumber] !== false;
 
-        {/* Time management */}
-        <div className="bg-slate-50 border border-slate-200 rounded-xl p-4">
-          <div className="text-xs font-bold text-slate-600 uppercase tracking-wide mb-2">Time management — 1 mark per minute</div>
-          <p className="text-sm text-slate-800 leading-relaxed">{feedback.timeManagement || "No time management data available."}</p>
-        </div>
+          return (
+            <div key={stemEv.stemNumber} className="bg-white border border-gray-200 rounded-2xl overflow-hidden">
+              <button
+                onClick={() => setExpandedStems((p) => ({ ...p, [stemEv.stemNumber]: !isExpanded }))}
+                className="w-full flex items-center justify-between px-5 py-4 hover:bg-gray-50 transition-colors text-left"
+              >
+                <div className="flex items-center gap-2 flex-wrap">
+                  <span className="text-sm font-bold text-gray-900">Stem {stemEv.stemNumber}</span>
+                  <span className={`text-xs px-2 py-0.5 rounded border font-medium ${
+                    stemEv.commandWordCompliance
+                      ? "bg-emerald-50 border-emerald-200 text-emerald-700"
+                      : "bg-red-50 border-red-200 text-red-700"
+                  }`}>
+                    {stemEv.commandWordCompliance ? "✓ CW Pass" : "✗ CW Fail"}
+                  </span>
+                  {stemEv.errorTypes?.slice(0, 2).map((et) => (
+                    <span key={et} className="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded">{errorTypeLabel(et)}</span>
+                  ))}
+                </div>
+                <div className="flex items-center gap-3 flex-shrink-0">
+                  <span className={`text-lg font-black ${scoreColor(p2)}`}>{stemEv.marksEarned}/{stemEv.marksAvailable}</span>
+                  <span className="text-gray-400 text-sm">{isExpanded ? "▲" : "▼"}</span>
+                </div>
+              </button>
+
+              {isExpanded && (
+                <div className="px-5 pb-5 space-y-4 border-t border-gray-100">
+
+                  {/* Question reminder */}
+                  {stemDef && (
+                    <div className={`border rounded-lg p-3 mt-4 text-xs ${cwBadge(stemDef.commandWord)}`}>
+                      <span className="font-semibold">{COMMAND_WORDS[stemDef.commandWord]?.label}: </span>
+                      {stemDef.question.split("\n")[0]}
+                    </div>
+                  )}
+
+                  {/* CW gate failure */}
+                  {!stemEv.commandWordCompliance && (
+                    <div className="bg-red-50 border border-red-200 rounded-lg p-3">
+                      <div className="text-xs font-bold text-red-800 mb-1">⚠ Command-word non-compliance</div>
+                      <p className="text-xs text-red-700">{stemEv.commandWordGateResult}</p>
+                    </div>
+                  )}
+
+                  {/* Domain breakdown */}
+                  {stemEv.domainBreakdown?.length > 0 && (
+                    <div>
+                      <h4 className="text-xs font-bold text-gray-600 uppercase tracking-wide mb-2">Domain breakdown</h4>
+                      <div className="space-y-2">
+                        {stemEv.domainBreakdown.map((d, i) => {
+                          const dp = d.marksAvailable ? Math.round((d.marksEarned / d.marksAvailable) * 100) : 0;
+                          return (
+                            <div key={i} className="flex gap-3 items-start bg-gray-50 rounded-lg px-3 py-2">
+                              <div className="flex-shrink-0 w-4 text-center mt-0.5 text-sm">
+                                {dp === 100 ? <span className="text-emerald-600">✓</span> : dp === 0 ? <span className="text-red-500">✗</span> : <span className="text-amber-500">~</span>}
+                              </div>
+                              <div className="flex-1">
+                                <div className="flex justify-between items-center">
+                                  <span className="text-xs font-semibold text-gray-800">{d.domain}</span>
+                                  <span className={`text-xs font-bold ml-2 flex-shrink-0 ${scoreColor(dp)}`}>{d.marksEarned}/{d.marksAvailable}</span>
+                                </div>
+                                <p className="text-xs text-gray-500 mt-0.5">{d.reason}</p>
+                              </div>
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Point classifications */}
+                  {stemEv.pointClassifications?.length > 0 && (
+                    <div>
+                      <h4 className="text-xs font-bold text-gray-600 uppercase tracking-wide mb-2">Point-by-point classification</h4>
+                      <div className="space-y-1.5">
+                        {stemEv.pointClassifications.map((p, i) => (
+                          <div key={i} className={`border rounded-lg px-3 py-2 ${classificationStyle(p.classification)}`}>
+                            <div className="flex items-start justify-between gap-2">
+                              <p className="text-xs flex-1 italic">"{p.candidateText}"</p>
+                              <span className="text-xs font-bold flex-shrink-0 whitespace-nowrap">{classificationLabel(p.classification)}</span>
+                            </div>
+                            {p.comment && <p className="text-xs opacity-75 mt-0.5">{p.comment}</p>}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Stem signal usage */}
+                  {(stemEv.stemSignalsUsed?.length > 0 || stemEv.stemSignalsMissed?.length > 0) && (
+                    <div>
+                      <h4 className="text-xs font-bold text-gray-600 uppercase tracking-wide mb-2">Stem signal usage</h4>
+                      <div className="space-y-1">
+                        {stemEv.stemSignalsUsed?.map((s, i) => (
+                          <div key={i} className="text-xs text-emerald-700 flex gap-1.5"><span>✓</span><span>{s}</span></div>
+                        ))}
+                        {stemEv.stemSignalsMissed?.map((s, i) => (
+                          <div key={i} className="text-xs text-red-600 flex gap-1.5"><span>✗</span><span>{s}</span></div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Critical points missed */}
+                  {stemEv.criticalPointsMissed?.length > 0 && (
+                    <div>
+                      <h4 className="text-xs font-bold text-gray-600 uppercase tracking-wide mb-2">High-yield points not covered</h4>
+                      <ul className="space-y-1.5">
+                        {stemEv.criticalPointsMissed.map((p, i) => (
+                          <li key={i} className="text-sm text-gray-700 flex gap-2">
+                            <span className="text-red-500 flex-shrink-0">✗</span>
+                            <span>{p}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+
+                  {/* Sentence rewrites */}
+                  {stemEv.sentenceRewrites?.length > 0 && (
+                    <div>
+                      <h4 className="text-xs font-bold text-gray-600 uppercase tracking-wide mb-2">Sentence rewrites</h4>
+                      <div className="space-y-3">
+                        {stemEv.sentenceRewrites.map((r, i) => (
+                          <div key={i} className="space-y-1.5">
+                            <div className="bg-blue-50 border border-blue-100 rounded-lg p-2.5">
+                              <div className="text-xs font-medium text-blue-600 mb-0.5">Your version</div>
+                              <p className="text-xs text-blue-900 italic">"{r.original}"</p>
+                            </div>
+                            <div className="bg-emerald-50 border border-emerald-100 rounded-lg p-2.5">
+                              <div className="text-xs font-medium text-emerald-600 mb-0.5">Consultant version</div>
+                              <p className="text-xs text-emerald-900">"{r.rewrite}"</p>
+                            </div>
+                            {r.reason && <p className="text-xs text-gray-500 pl-1">{r.reason}</p>}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Time management */}
+                  {stemEv.timeManagement && (
+                    <div className="bg-slate-50 border border-slate-200 rounded-lg p-3">
+                      <div className="text-xs font-bold text-slate-600 uppercase tracking-wide mb-1">Time management — 1 mark per minute</div>
+                      <p className="text-xs text-slate-700">{stemEv.timeManagement}</p>
+                    </div>
+                  )}
+
+                  {/* Error type tags */}
+                  {stemEv.errorTypes?.length > 0 && (
+                    <div className="flex flex-wrap gap-1.5">
+                      {stemEv.errorTypes.map((et) => (
+                        <span key={et} className="text-xs bg-red-50 border border-red-200 text-red-700 px-2 py-0.5 rounded-full font-medium">
+                          {errorTypeLabel(et)}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+
+                  {/* Candidate answer */}
+                  {stemAns && (
+                    <details className="bg-white border border-gray-200 rounded-lg">
+                      <summary className="px-4 py-3 text-xs font-medium text-gray-600 cursor-pointer hover:bg-gray-50 list-none flex justify-between items-center">
+                        <span>Your answer ({stemAns.answerText?.trim().split(/\s+/).filter(Boolean).length ?? 0} words)</span>
+                        <span className="text-gray-400">▾</span>
+                      </summary>
+                      <div className="px-4 pb-4">
+                        <p className="text-sm text-gray-700 leading-relaxed whitespace-pre-wrap mt-2">{stemAns.answerText}</p>
+                      </div>
+                    </details>
+                  )}
+
+                  {/* Model answer */}
+                  {stemEv.modelAnswer && (
+                    <details className="bg-indigo-50 border border-indigo-100 rounded-lg">
+                      <summary className="px-4 py-3 text-xs font-semibold text-indigo-700 cursor-pointer hover:bg-indigo-100 list-none flex justify-between items-center">
+                        <span>Model answer</span>
+                        <span className="text-indigo-400">▾</span>
+                      </summary>
+                      <div className="px-4 pb-4">
+                        <p className="text-sm text-indigo-900 leading-relaxed whitespace-pre-wrap mt-2">{stemEv.modelAnswer}</p>
+                      </div>
+                    </details>
+                  )}
+
+                  {/* Post-examiner note */}
+                  {stemDef?.postExaminerNote && (
+                    <div className="bg-violet-50 border border-violet-100 rounded-lg p-3">
+                      <div className="text-xs font-bold text-violet-700 uppercase tracking-wide mb-1">RANZCP post-examiner intelligence</div>
+                      <p className="text-xs text-violet-800 leading-relaxed">{stemDef.postExaminerNote}</p>
+                    </div>
+                  )}
+                </div>
+              )}
+            </div>
+          );
+        })}
 
         {/* Overall feedback */}
-        {feedback.overallFeedback && (
+        {ev.overallFeedback && (
           <div className="bg-gray-50 border border-gray-200 rounded-xl p-4">
             <div className="text-xs font-bold text-gray-500 uppercase tracking-wide mb-2">Examiner summary</div>
-            <p className="text-sm text-gray-800 leading-relaxed">{feedback.overallFeedback}</p>
+            <p className="text-sm text-gray-800 leading-relaxed">{ev.overallFeedback}</p>
           </div>
         )}
 
-        {/* Post-examiner note */}
-        <div className="bg-indigo-50 border border-indigo-100 rounded-xl p-4">
-          <div className="text-xs font-bold text-indigo-700 uppercase tracking-wide mb-1">RANZCP post-examiner intelligence</div>
-          <p className="text-xs text-indigo-800 leading-relaxed">{currentQ.postExaminerNote}</p>
-        </div>
-
-        {/* Your answer collapsible */}
-        <details className="bg-white border border-gray-200 rounded-xl">
-          <summary className="px-4 py-3 text-sm font-medium text-gray-700 cursor-pointer">Your answer ({answer.trim().split(/\s+/).length} words)</summary>
-          <div className="px-4 pb-4">
-            <p className="text-sm text-gray-700 leading-relaxed whitespace-pre-wrap mt-2">{answer}</p>
+        {/* Reading guidance */}
+        {ev.readingGuidance && (
+          <div className="bg-violet-50 border border-violet-200 rounded-xl p-4">
+            <div className="text-xs font-bold text-violet-700 uppercase tracking-wide mb-2">Revision focus</div>
+            <p className="text-sm text-violet-900 leading-relaxed">{ev.readingGuidance}</p>
           </div>
-        </details>
+        )}
 
-        <div className="flex gap-3 pb-6">
-          <button onClick={() => startQuestion(currentQ)}
-            className="flex-1 py-3 border-2 border-gray-200 rounded-xl text-sm font-semibold text-gray-700 hover:border-gray-400 transition-colors">
-            Retry this question
+        {/* Action buttons */}
+        <div className="flex gap-3 pb-8">
+          <button
+            onClick={() => startMEQ(selectedMEQ)}
+            className="flex-1 py-3 border-2 border-gray-200 rounded-xl text-sm font-semibold text-gray-700 hover:border-gray-400 transition-colors"
+          >
+            Retry MEQ
           </button>
-          <button onClick={() => setPhase("home")}
-            className="flex-1 py-3 bg-gray-900 text-white rounded-xl text-sm font-semibold hover:bg-gray-800 transition-colors">
-            Next question →
+          <button
+            onClick={goBackToList}
+            className="flex-1 py-3 bg-gray-900 text-white rounded-xl text-sm font-semibold hover:bg-gray-800 transition-colors"
+          >
+            Next MEQ →
           </button>
         </div>
-
       </div>
     );
   }
