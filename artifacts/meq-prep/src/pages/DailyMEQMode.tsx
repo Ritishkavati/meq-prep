@@ -1305,26 +1305,6 @@ export default function DailyMEQMode() {
             {cw.label} · {stem.marks} marks · {stem.timeMinutes} min
           </div>
           <p className="text-sm font-semibold leading-relaxed">{stem.question.split("\n")[0]}</p>
-          {cw.gate && (
-            <p className="text-xs mt-2 pt-2 border-t border-current border-opacity-20 font-medium">
-              ⚠️ {cw.instruction}
-            </p>
-          )}
-        </div>
-
-        {/* Stem signals */}
-        <div className="bg-blue-50 border border-blue-100 rounded-xl p-3 mb-3">
-          <div className="text-xs font-semibold text-blue-700 uppercase tracking-wide mb-1.5">
-            Stem signals — integrate these in your answer
-          </div>
-          <ul className="space-y-1">
-            {stem.stemSignals.map((sig, i) => (
-              <li key={i} className="text-xs text-blue-800 flex gap-2">
-                <span className="text-blue-400 flex-shrink-0">→</span>
-                <span>{sig}</span>
-              </li>
-            ))}
-          </ul>
         </div>
 
         {/* Answer textarea */}
@@ -1332,8 +1312,8 @@ export default function DailyMEQMode() {
           value={stemAnswer}
           onChange={(e) => setStemAnswer(e.target.value)}
           autoFocus
-          className="w-full h-[360px] p-4 border border-gray-300 rounded-xl text-sm text-gray-800 leading-relaxed resize-none focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent"
-          placeholder={`${cw.label}: ${stem.question.split("\n")[0]}\n\n${cw.instruction}`}
+          className="w-full h-[420px] p-4 border border-gray-300 rounded-xl text-sm text-gray-800 leading-relaxed resize-none focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent"
+          placeholder="Write your answer here"
         />
 
         {error && (
