@@ -1187,17 +1187,14 @@ export default function DailyMEQMode() {
 
     try {
       const prompt = buildEvaluationPrompt(currentQ, answer, timer);
-      const res = await fetch("https://api.anthropic.com/v1/messages", {
+      const res = await fetch("/api/meq-evaluate", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          model: "claude-sonnet-4-20250514",
-          max_tokens: 2500,
-          messages: [{ role: "user", content: prompt }],
-        }),
+        body: JSON.stringify({ prompt }),
       });
+      if (!res.ok) throw new Error(`Server error ${res.status}`);
       const data = await res.json();
-      const text = data.content?.map(i => i.text || "").join("") || "";
+      const text = data.text || "";
       const match = text.match(/\{[\s\S]*\}/);
       if (!match) throw new Error("No JSON returned");
       const fb = JSON.parse(match[0]);
