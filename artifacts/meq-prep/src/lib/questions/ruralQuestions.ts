@@ -171,28 +171,15 @@ Maddie's father is a local police officer and says, "Everyone knows us here; don
       secondary: ["s3", "s4", "s5"],
       lowYield: ["s6"],
     },
-    modelAnswer: `Medical/risk:
+    modelAnswer: `Maddie's overdose should be treated as a high-risk medical and psychiatric presentation despite rural bed scarcity. Taking "40 paracetamol tablets" is potentially lethal, and the fact that she now says, "I just want to go home and sleep," should not reassure the team. Patients often minimise after overdose, particularly when frightened, ashamed or wanting to escape assessment. I would advise that she must complete NAC and medical monitoring before any psychiatric disposition is finalised.
 
-* Continue NAC and medical monitoring; do not discharge until medically cleared.
-* Assess suicide risk: intent, planning, regret, concealment, alcohol/substances, ongoing access to medication and supports.
+The rural system limitation is acute because there are no psychiatric beds and the only clinician on site is a first-year nurse who says, "I've never done an overnight suicide watch." That statement means the proposed containment plan may not be clinically deliverable. No bed does not equal safe discharge, but equally a rural ED cannot be assumed to provide safe psychiatric observation without support. I would give explicit telehealth consultant instructions: observation level, environmental safety, removal of means, reassessment times, escalation triggers, when to call police/security, and when transfer to a medical or mental health unit is required.
 
-Rural safety:
+Maddie asks for her auntie, and that is not a minor comfort request. As an Aboriginal young woman in a rural ED, culturally safe support may improve engagement and reduce risk. If her auntie is 90 minutes away, I would facilitate phone or video contact immediately and consider whether safe discharge might later involve the auntie rather than the father. I would also seek Aboriginal health support if available.
 
-* No psychiatric bed does not equal safe discharge.
-* Create an observation plan the rural ED can actually deliver; escalate staffing or transfer if not safe.
+The father's request, "Everyone knows us here; don't put this in her record," reflects rural stigma and confidentiality fears, but it cannot be honoured literally. I would acknowledge the concern, explain privacy protections, and make clear that clinically relevant information must be documented accurately. The fact that he is a local police officer also creates possible power dynamics and confidentiality sensitivity. I would ensure Maddie has private space to speak without him and ask whom she wants involved.
 
-Telehealth leadership:
-
-* Provide clear written advice: observation level, reassessment timing, escalation triggers and criteria for discharge/transfer.
-
-Cultural/family:
-
-* Facilitate contact with auntie and consider her as a protective support.
-* Address father's confidentiality concerns but document accurately.
-
-Disposition:
-
-* Discharge only with safe supervision, means restriction, safety plan and confirmed follow-up; phone follow-up alone is insufficient if risk remains high.`,
+The discharge question must be answered after medical clearance, risk formulation and support assessment. Phone follow-up alone is not adequate after a large paracetamol overdose unless acute risk is clearly reduced and supervision is robust. I would assess intent, planning, regret, triggers, alcohol/substance use, access to tablets, prior self-harm, family conflict and protective factors. If she remains high risk or cannot be safely observed locally, I would escalate for transfer even if no psychiatric bed is immediately available. My documentation would state why bed scarcity and local familiarity did not lower the threshold for safety, and what culturally safe supports and rural contingencies were put in place.`,
   },
   {
     id: "RU-003",
