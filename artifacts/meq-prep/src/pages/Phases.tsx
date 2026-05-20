@@ -47,8 +47,8 @@ export default function Phases() {
   }, [candidateNumber]);
 
   useEffect(() => {
-    if (!fullName) setLocation("/");
-  }, [fullName, setLocation]);
+    if (!candidateNumber) setLocation("/");
+  }, [candidateNumber, setLocation]);
 
   useEffect(() => {
     if (candidateNumber) {
