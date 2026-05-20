@@ -81,25 +81,17 @@ His case manager says Marcus is taking medication inconsistently and has started
       secondary: ["s3", "s4", "s5"],
       lowYield: ["s6"],
     },
-    modelAnswer: `Risk formulation:
+    modelAnswer: `Marcus is presenting with erotomanic delusional fixation that has already moved from belief into behaviour, and the consultant task is to manage identifiable victim risk rather than simply describe a psychotic symptom. His statement, "She smiles at the end of the bulletin because she knows I'm watching," is the central diagnostic clue: he is interpreting ordinary public behaviour by the newsreader as personal communication. In a man with schizophrenia and previous stalking convictions, this is not a harmless fantasy. It is a delusional framework that can drive persistent pursuit, grievance and escalation even when he denies intent to harm.
 
-Formulate erotomanic delusion, fixation, approach behaviour and perceived rival as key violence/stalking risks. Do not rely on denial of intent.
+The second critical clue is "Her husband is the only thing keeping us apart." That introduces a perceived rival and therefore widens the risk formulation beyond the newsreader herself. I would assess risk to the newsreader, her husband, workplace staff and anyone Marcus perceives as obstructing the relationship. His attendance at "the television studio reception" shows escalation from messages to approach behaviour, and his statement that "I just need to explain our connection in person" indicates an ongoing intention to gain proximity. Denial of intent to harm is not sufficient when the behavioural pattern is escalating and the belief is fixed.
 
-Immediate management:
+I would urgently convene a risk meeting with the community team, forensic advice and police liaison. I would clarify the number and content of messages, whether there are threats, whether he knows the victim's home address, whether he has weapons, transport, money, substance use, prior breaches, and whether he has approached the studio since the warnings. I would also ask the team to review medication adherence because the case manager reports he is "taking medication inconsistently," and to assess alcohol because he "has started drinking again." Both increase risk by worsening delusional intensity, disinhibition and persistence.
 
-Assess access to victim, weapons, substance use, medication adherence and escalation. Liaise with police and consider victim safety planning.
+The ethical tension is confidentiality versus duty to protect. The team is unsure whether to breach confidentiality "to warn the newsreader or rely on police." I would not frame this as an all-or-nothing betrayal of Marcus. I would explain to Marcus, where safe, that confidentiality has limits where there is serious foreseeable risk to identifiable people. I would then consider the minimum necessary lawful disclosure through police or other appropriate channels, including victim safety planning, workplace security advice and potentially warning the newsreader or her representative depending on local law and risk. The decision must be documented with the exact risk rationale and why disclosure was proportionate.
 
-Legal/ethical:
+Treatment and legal options must be active, not passive. If Marcus is willing to engage, I would intensify follow-up, address alcohol use, review medication and consider depot or other adherence supports. If he refuses treatment or continues approach behaviour and mental illness is driving serious risk, I would consider Mental Health Act assessment or CTO review depending on jurisdiction and criteria. Behavioural restrictions, police orders or forensic community management may be required in parallel; psychiatric treatment alone does not replace victim protection.
 
-Consider lawful information sharing/duty to protect if serious foreseeable risk to identifiable victim or rival. Document confidentiality reasoning.
-
-Treatment/community:
-
-Review medication adherence and relapse. Consider assertive follow-up, CTO/MHA review if criteria met, substance use intervention and behavioural restrictions.
-
-MDT:
-
-Convene risk meeting with CMHT, forensic advice and police as appropriate.`,
+My final advice would be that the team should not simply rely on police warnings or Marcus's denial. The stem contains delusional fixation, identified victim, perceived rival, approach behaviour, non-adherence and alcohol relapse. A defensible consultant plan must integrate psychiatric treatment, police liaison, victim safety, lawful information sharing, documentation and ongoing monitoring of escalation.`,
   },
   {
     id: "FOR-002",
@@ -181,25 +173,17 @@ The solicitor asks whether Arun is "not guilty by reason of mental illness." The
       secondary: ["s3", "s4", "s5"],
       lowYield: ["s6"],
     },
-    modelAnswer: `Forensic issues:
+    modelAnswer: `Arun's report must separate two legal questions that are often confused: fitness to stand trial and criminal responsibility or mental impairment at the time of the alleged offence. The stem gives powerful evidence of psychosis, but a forensic consultant cannot simply write "psychotic, therefore NGMI." His statement about the alleged victim, "The man was a demon wearing human skin," is highly relevant to his mental state at the time of the stabbing because it suggests he may have misperceived the nature of the person and acted under a delusional belief. However, the legal question is jurisdiction-specific: whether the mental impairment affected his understanding of the nature and quality of the act, wrongfulness, or another statutory criterion. The court decides the legal outcome; I provide an expert psychiatric opinion mapped to the legal test.
 
-Address two separate questions: fitness to stand trial and mental impairment/NGMI. Apply jurisdiction-specific legal criteria, not merely diagnosis.
+Fitness is a separate present-focused question. Arun "repeatedly asks what court is" and says, "My lawyer is part of the demon network." These are not merely psychotic symptoms; they may directly impair his ability to understand proceedings, instruct counsel, follow evidence, participate rationally, and make decisions about plea or defence. I would assess whether he understands the charge, the roles of judge, magistrate, jury, prosecutor and defence lawyer, the possible outcomes, the adversarial nature of proceedings, and whether he can communicate with counsel in a rational way. His paranoid belief about his lawyer is particularly important because it may prevent him from giving instructions even if he can repeat some factual information.
 
-Fitness:
+The prison health records showing "untreated psychosis for several months before the alleged offence" are critical collateral. For an opinion on mental state at the time of the alleged offence, I would reconstruct the timeline using police facts, witness statements, clinical records, prison health records, family collateral, substance-use information and my interview. I would look for evidence of psychotic symptoms before, during and after the stabbing, as well as any motive, planning, concealment, intoxication or behaviour suggesting awareness of wrongfulness. The delusional statement about demons is highly relevant, but I would not rely on one interview statement alone.
 
-Assess understanding of charges, court roles, plea, ability to instruct counsel, follow proceedings and challenge jurors/witnesses as relevant. Paranoia about lawyer may impair ability to instruct.
+The solicitor's request about "not guilty by reason of mental illness" requires role clarity. I would explain in the report that the psychiatrist does not determine guilt or the legal verdict. My opinion addresses diagnosis, mental state, capacities relevant to the legal test, fitness, risk and treatment needs within my expertise. I would state sources of information, limitations, inconsistencies and the degree of confidence. If information is insufficient, I would say so rather than overstate.
 
-Mental impairment:
+The treating team's question about including treatment recommendations in the same report raises a dual-role issue. A forensic report can include treatment needs if requested and relevant, especially if fitness restoration or risk management depends on treatment. However, I would maintain independence and avoid becoming the treating clinician within the same evaluative role. I would distinguish recommendations for mental health care, medication, hospital transfer or fitness restoration from the ultimate legal questions.
 
-Reconstruct mental state at time of alleged offence using interview, records and collateral. Assess whether psychosis affected understanding of act, wrongfulness or capacity according to legal test.
-
-Report writing:
-
-State sources, limitations, reasoning and opinion clearly. Maintain independence; court decides legal outcome.
-
-Treatment:
-
-Comment on treatment needs if requested but avoid becoming treating clinician within forensic opinion.`,
+My report would therefore address current diagnosis, current fitness, mental state at the time of the offence, the relationship between psychosis and the alleged stabbing, sources and limitations, risk considerations and treatment recommendations if within the referral question. I would avoid conclusory statements unsupported by legal reasoning. The consultant-level task is to translate clinical facts into legal standards without collapsing clinical psychosis, incapacity, criminal responsibility and treatment need into one undifferentiated opinion.`,
   },
   {
     id: "FOR-003",
@@ -281,24 +265,16 @@ The victim lives in the same suburb and has requested notification if Malik's co
       secondary: ["s3", "s4", "s5"],
       lowYield: ["s6"],
     },
-    modelAnswer: `Risk formulation:
+    modelAnswer: `Malik's conditional discharge review must start from the index offence formulation. He was conditionally discharged after a serious assault during methamphetamine-induced psychosis, so missed drug screens are not a minor compliance issue. The support worker's report that he "missed two urine drug screens" and was seen with former drug-using peers is a dynamic risk warning directly linked to the mechanism of his previous violence. I would treat this as possible early relapse into the same risk pathway, not as ordinary socialising or harmless non-attendance.
 
-Reassess dynamic violence risk: missed drug screens, drug peers, victim proximity, possible breach and medication ambivalence. Link methamphetamine relapse risk to index offence.
+The second critical issue is victim safety. The stem says, "The victim lives in the same suburb" and has requested notification if Malik's conditions change. That means geographic proximity is not abstract. Police also report Malik was "seen near the street where the assault occurred," which may represent a breach, an accidental encounter or emerging preoccupation; it must be verified urgently. I would liaise with police, the tribunal/supervising authority, supported accommodation and the case manager to clarify location, timing, conditions, exclusion zones, and whether the victim has been exposed to increased risk.
 
-Victim/public safety:
+Malik's statement, "I'm not a prisoner anymore," suggests minimisation of the purpose of forensic conditions. It may reflect a reasonable desire for autonomy after nine months in the community, but in context it also raises concern that he does not understand or accept the risk-management function of supervision. Similarly, his complaint that medication makes him "slow and useless" should not be dismissed. Side effects can drive non-adherence and relapse, and a consultant response must address them actively rather than simply tighten surveillance. I would review medication effectiveness, side effects, adherence, mental state, emerging psychosis, sleep, mood, cognition and substance cravings.
 
-Review victim notification, exclusion zones and safety planning. Liaise with police and tribunal regarding possible breach.
+The disposition question is not simply recall or ignore. The tribunal asks whether "recall is required," and the answer depends on whether risk escalation is verified and manageable. If missed screens reflect relapse, if he has breached geographic conditions, if psychosis is returning, if he is avoiding supervision, or if victim proximity cannot be managed, I would recommend recall or inpatient reassessment because community risk may no longer be containable. If investigation shows no substance use, no breach and good engagement, a proportionate alternative may be enhanced supervision, increased testing, substance-use treatment, medication review, reinforced exclusion zones and closer victim-safety planning.
 
-Treatment/supervision:
+The ethical tension is between Malik's liberty and public/victim safety. Conditional discharge is meant to be the least restrictive safe option, not a reward that continues regardless of risk. Equally, recall is a serious deprivation of liberty and should not be used punitively for minor uncertainty. I would make my recommendation based on evidence, dynamic risk and manageability, documenting uncertainty where it remains.
 
-Verify drug use, increase testing, review medication side effects and reinforce conditions. Consider substance treatment intensification.
-
-Disposition:
-
-If breaches or relapse are confirmed and risk is not manageable, recommend recall. If risk can be managed, recommend tightened conditions and enhanced supervision.
-
-Documentation:
-
-Provide structured tribunal opinion with evidence, uncertainties, risk formulation and recommendation.`,
+My tribunal report would explicitly link missed screens, former drug-using peers, medication ambivalence, possible geographic breach and victim proximity to the original violence formulation. It would state what has been verified, what remains uncertain, what immediate actions have been taken to protect the victim, and why recall or enhanced conditions are the proportionate response. That is the consultant role: not merely to list risks, but to advise the tribunal on whether the community plan still safely contains the known pathway to serious harm.`,
   },
 ];

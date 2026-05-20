@@ -81,29 +81,15 @@ Jarran's uncle says he may have used cannabis and "something from town." The com
       secondary: ["s3", "s4", "s5"],
       lowYield: ["s6"],
     },
-    modelAnswer: `Immediate safety:
+    modelAnswer: `Jarran's presentation must be managed as an acute safety problem in a remote context, not as a routine psychosis assessment waiting for ideal resources. The phrase "The old people are telling me to burn the store" is immediately concerning because it involves a possible command or culturally framed experience linked to arson. In a remote community, the store is essential infrastructure and there were "several children" nearby. I would first advise the nurse to create immediate distance between Jarran, children, the store and any ignition sources, using calm family support if safe.
 
-* Prioritise community safety: keep Jarran away from the store, children and ignition sources.
-* Arrange safe observation with family/clinic staff if feasible and police if required.
+The cultural formulation requires care. The phrase "old people" may have cultural meaning, psychotic meaning, or both. I would not dismiss it as delusional without Aboriginal health or elder input, but I would also not ignore the arson risk because cultural language is used. The elder's statement, "Don't send him away without family; he won't trust hospital," is clinically important. If RFDS transfer is needed, I would plan culturally safe transfer with family escort where feasible, receiving-hospital Aboriginal liaison, and communication with the community about return planning.
 
-Clinical/legal:
+The resource constraints are decisive. The clinic has "no antipsychotic medication available," one remote nurse, police two hours away and the nearest inpatient unit 900 km away. Those facts make local containment fragile. I would advise RFDS activation if risk cannot be safely managed locally, and I would make the risk rationale explicit: threatened arson, possible psychosis, intoxication uncertainty, children nearby and lack of medication/staffing. I would not ask the nurse to hold an unsafe situation overnight merely because transfer is difficult.
 
-* Assess psychosis, intoxication, medical causes and risk.
-* Clarify Mental Health Act authority for involuntary assessment/transport and emergency treatment.
+Substance use must be assessed because the uncle says Jarran may have used cannabis and "something from town." That could mean methamphetamine or another substance contributing to psychosis and agitation. However, substance-induced psychosis is not safer simply because it is substance-related. I would ask about timing, intoxication, withdrawal, head injury, fever, delirium and prior episodes while keeping immediate safety as the priority.
 
-Rural logistics:
-
-* Given no antipsychotic medication, limited containment and 900 km distance, RFDS activation is likely appropriate if risk persists.
-* Coordinate nurse, police, RFDS and receiving unit.
-
-Cultural safety:
-
-* Involve family/elder and Aboriginal health supports.
-* Arrange culturally safe escort and receiving-hospital cultural liaison.
-
-Documentation:
-
-* Record risk, resource limitations, legal basis, cultural plan and transfer rationale.`,
+Legal authority needs clarification. If Jarran refuses assessment or transport and serious risk persists, the team may need Mental Health Act processes for involuntary assessment, sedation or transport, coordinated with police and RFDS. Any sedation must be clinically indicated, monitored and feasible in the remote setting. My documentation would record risk, cultural consultation, family/elder views, resource limitations, legal basis and transfer rationale. The consultant role is to protect the community and Jarran while avoiding unnecessary culturally unsafe removal.`,
   },
   {
     id: "RU-002",
@@ -288,33 +274,15 @@ The GP has been prescribing alprazolam for years and asks psychiatry to "take ov
       secondary: ["s3", "s4", "s5"],
       lowYield: ["s6"],
     },
-    modelAnswer: `Trauma-informed formulation:
+    modelAnswer: `Emma's presentation illustrates how rural systems can unintentionally repeat trauma. Her statement, "Every new clinician asks me to tell the worst parts again and then they leave," is the central therapeutic clue. It tells me that repeated assessments without continuity are not neutral; they are re-traumatising and confirming abandonment. I would not begin by asking her to retell detailed trauma. I would acknowledge the pattern, explain that she does not need to repeat details to receive care, and build a stabilisation-focused formulation.
 
-* Avoid repeated detailed trauma retelling.
-* Prioritise stabilisation, safety, continuity, grounding and collaborative formulation.
+Telehealth is not automatically a solution. Emma says, "If they hear me talking on video, I'm not safe," and she lives on the same property as her ex-partner's family. That means privacy failure may increase family violence risk or surveillance. I would not refer her to telehealth psychology unless a safe location, private technology, emergency plan and consent are established. The rural limitation is real, but unsafe telehealth is not trauma-informed care.
 
-Telehealth/rural safety:
+The GP has prescribed "alprazolam for years" and asks psychiatry to take over the scripts. That is a clinical and governance risk. Long-term alprazolam may produce dependence, withdrawal, cognitive effects, emotional dysregulation and increased risk when combined with alcohol or other sedatives. I would not abruptly stop it, because that could be dangerous and rupture trust. I would liaise with the GP, assess dependence, dose, misuse, withdrawal risk and function, and negotiate a slow taper or harm-reduction plan with alternatives for anxiety and sleep.
 
-* Telehealth is not automatically appropriate.
-* Assess privacy, internet, safe location and family violence risk before video therapy.
+Her teenage daughter has "stopped attending school to stay home with her mother," which turns an adult trauma case into a family and safeguarding case. I would assess the daughter's young-carer burden, school absence, emotional safety and whether child protection or family support is required. This is not about blaming Emma; it is about preventing intergenerational harm and supporting the family.
 
-Medication:
-
-* Review long-term alprazolam with GP.
-* Avoid abrupt cessation; plan slow taper and alternatives if appropriate.
-
-Family/child:
-
-* Assess daughter's young-carer role, school non-attendance and safeguarding needs.
-
-Systems:
-
-* Challenge abrupt discharge after one assessment.
-* Develop stepped care: regular psychiatric review, GP collaboration, safe psychology access, crisis plan and family violence supports.
-
-Documentation:
-
-* Record safety limits of telehealth, trauma plan, medication strategy and child/family concerns.`,
+The service manager's statement, "we don't provide long-term therapy here," is the system pressure. It may be true that the service cannot provide open-ended specialist trauma therapy, but discharging after one assessment would repeat the abandonment pattern and leave risk unmanaged. I would advocate a stepped-care plan: psychiatric review, GP collaboration, safe telehealth only if feasible, trauma-informed case coordination, family violence support, stabilisation skills and clear crisis pathways. My documentation would explicitly note why repeated trauma retelling was avoided, why telehealth privacy was unsafe without planning, how alprazolam would be managed, and how the daughter's needs would be addressed.`,
   },
   {
     id: "RU-004",
@@ -396,29 +364,15 @@ His mother says, "He gets worse when police are around; please don't handcuff hi
       secondary: ["s3", "s4", "s5"],
       lowYield: ["s6"],
     },
-    modelAnswer: `Clinical/legal:
+    modelAnswer: `Liam is acutely manic with demonstrated public safety risk. His statement, "God told me the road rules don't apply," is not simply grandiose speech; it has already translated into dangerous driving through town. That means impaired judgement is creating risk to others as well as to Liam. I would support involuntary assessment or admission if he refuses voluntary care and statutory criteria are met, while continuing to use the least restrictive practical approach.
 
-* Liam appears acutely manic with dangerous driving and impaired judgement.
-* Use Mental Health Act pathway for involuntary assessment/admission and transfer to authorised bed.
+The rural constraint is central. The "nearest authorised mental health bed is 300 km away" and transfer cannot occur until morning. That does not mean the ED can simply wait passively, nor does it mean sedation for convenience. I would create an active overnight plan: low-stimulus space, remove car keys and driving access, observation level, oral medication offer, physical health assessment, hydration, sleep restoration, escalation triggers, police/security role and consultant availability. The ED doctor's statement that there is "no safe room" means environmental risk must be explicitly managed.
 
-Immediate safety:
+Cultural safety matters because Liam identifies as Aboriginal and asks for "his uncle." His mother says, "He gets worse when police are around; please don't handcuff him." I would use that collateral to reduce visible police presence where safe and involve the uncle as a calming support if he is safe and willing. Least restrictive care in this case may mean using trusted family to reduce coercion, not excluding family in the name of control. If police are required for safety, I would ask for proportionate involvement and avoid unnecessary handcuffing.
 
-* Develop overnight plan: observation, low-stimulus space, remove driving access, oral medication first, rapid tranquillisation only if necessary and monitored.
-* Police/security involvement should be proportionate.
+The question about whether Liam can be "sedated overnight" needs a clear ethical response. Sedation may be appropriate if he is acutely behaviourally disturbed or poses imminent risk, but not simply because transfer is delayed. I would offer oral medication first where possible, consider antipsychotic or benzodiazepine according to local rapid-tranquillisation protocols, and ensure monitoring is feasible. If IM medication is required, it should be legally authorised, proportionate and documented.
 
-Cultural/family:
-
-* Involve uncle and Aboriginal supports if safe.
-* Use mother's collateral that police escalate him.
-
-Rural logistics:
-
-* Transfer delay requires active management, consultant availability and clear escalation triggers.
-* Liaise with ambulance, receiving unit and ED leadership.
-
-Documentation:
-
-* Record MHA criteria, risk, least restrictive actions, medication rationale and transfer plan.`,
+My role is to coordinate ED, ambulance, receiving unit, police and family rather than simply advise from afar. I would clarify Mental Health Act paperwork for detention and transfer, arrange handover to the receiving unit, and document why the 300 km transfer is necessary despite its risks. The final plan must show that rural distance did not lead either to unsafe discharge or to excessive coercion. It led to a structured, culturally informed, legally authorised overnight containment plan while transfer was organised.`,
   },
   {
     id: "RU-005",
@@ -500,29 +454,14 @@ The local clinic nurse knows both families and says community leaders want the m
       secondary: ["s3", "s4", "s5"],
       lowYield: ["s6"],
     },
-    modelAnswer: `Immediate safety:
+    modelAnswer: `Noah's presentation must be treated primarily as a family violence and child safety crisis, not as a mental health admission question waiting to be resolved by a distant consultant. His partner's statement, "If he comes back tonight, someone will die," is the most clinically significant sentence in the stem. It is a statement of imminent fear from a victim who has direct knowledge of his behaviour. I would treat it as high-risk collateral requiring immediate safety response, not as an anxious relative to be reassured.
 
-* Prioritise partner and children's safety.
-* Treat partner's statement as high-risk collateral.
-* Liaise with police, safe house and child protection.
+The children witnessed the incident. That is a child protection trigger independent of Noah's psychiatric diagnosis. I would ensure a child protection notification or report is considered, that the children are with a safe adult at the safe house, that their immediate welfare is assessed, and that culturally safe support is available for the family. The community nurse's familiarity with both families is helpful for context, but cannot substitute for child safety processes.
 
-Clinical assessment:
+Noah's phrase, "I only scared her because she was going to take the kids," is a minimising and controlling narrative typical of family violence. The threat of child removal may be a real fear, but it does not justify threatening someone with a shovel. His combination of intoxication, head injury history, depression and grief after his brother's suicide creates a complex formulation. I would assess alcohol level, withdrawal risk, depression, suicidality, cognitive effects of head injury, grief and whether mental disorder is contributing to violence risk. However, the primary driver appears to be family violence, not mental illness, and I would not allow a psychiatric formulation to minimise the violence or redirect the family violence response.
 
-* Assess intoxication, withdrawal, head injury, depression, grief and suicidality.
-* Determine whether mental disorder contributes to risk but do not medicalise family violence alone.
+The community leaders' preference to handle the matter "inside community" reflects cultural self-determination and may reflect genuine community wisdom. I would respect that as a value while being direct that partner safety and child protection are non-negotiable legal and clinical obligations. Community-led responses and formal safety systems are not necessarily incompatible, but victim safety and child protection cannot be deferred to community process when there is imminent lethal risk.
 
-Cultural/community:
-
-* Respect community leadership and involve culturally appropriate supports where safe.
-* Do not allow "inside community" handling to override victim safety or statutory duties.
-
-Disposition:
-
-* Police cells may be unsafe if medical/psychiatric risk is present.
-* Admission, clinic observation, police custody or transfer depends on intoxication, withdrawal, mental state, legal criteria and safety.
-
-Documentation:
-
-* Record victim collateral, child exposure, cultural consultation, legal/safety actions and disposition rationale.`,
+The disposition question is whether Noah needs psychiatric admission or police cells. That depends on mental state, intoxication, withdrawal, safety and legal criteria. Police cells may be unsafe if there is significant withdrawal, suicidality, head injury or psychiatric crisis requiring monitoring. Admission may be difficult remotely, but if there is mental disorder contributing to risk, it may be necessary. I would advise the clinic nurse on observations, withdrawal monitoring, alcohol safety, mental state reassessment, and clear criteria for transfer or psychiatric review. My documentation would state that victim safety and child protection were prioritised, that community leadership was respected where possible, that Noah's psychiatric and substance-use needs were assessed, and that the disposition reflected the combination of all risk factors.`,
   },
 ];

@@ -83,25 +83,17 @@ You must decide how to respond while ensuring patient safety, fairness to Dr Lan
       secondary: ["s3", "s4", "s5"],
       lowYield: ["s6"],
     },
-    modelAnswer: `Immediate safety:
+    modelAnswer: `This presentation has to be managed first as a patient-safety and professional-governance issue, not as an interpersonal complaint about a colleague. The phrase "appeared intoxicated during an after-hours shift" is an immediate safety trigger, particularly because Dr Lane allegedly gave "confusing verbal orders for rapid tranquillisation." Rapid tranquillisation carries risk of respiratory depression, hypotension, oversedation and death if poorly assessed or documented. My first action as clinical director would be to ensure Dr Lane is not providing further unsupervised clinical care until fitness for duty is clarified, and to review any patients affected by his orders, including observations, medication doses, adverse events and documentation.
 
-Ensure Dr Lane is not providing unsupervised clinical care until fitness for duty is clarified. Review affected patients, rapid tranquillisation orders and observations.
+The nurse's statement, "I was scared to question him because he is the consultant," is not a peripheral workplace issue. It shows hierarchy suppressing safety escalation. I would speak with the nurse and registrar in a supportive, factual way, reassure them that raising patient-safety concerns is appropriate, and make sure there is no retaliation. I would also review whether the service culture makes it difficult to challenge senior doctors after hours. Consultant leadership here means protecting staff who speak up while maintaining fairness to Dr Lane.
 
-Governance/reporting:
+Dr Lane's explanation, "I had one drink at dinner and people are exaggerating because they don't like me," should be heard, but it cannot end the matter. He is entitled to procedural fairness, confidentiality within limits, and support, especially as he says he is going through a divorce. I would meet with him, explain the concerns factually, advise him not to work clinically until assessment, and offer occupational health, employee assistance, GP support or impairment pathway. Compassion and accountability are not opposites. Supporting him does not mean concealing risk.
 
-Escalate through hospital clinical governance and medical administration. Consider mandatory notification if impairment created substantial risk to the public. Do not allow reputational pressure to suppress required reporting.
+The hospital executive's wish for the matter to be "handled quietly to avoid reputational damage" creates a clear ethical and governance tension. Reputation cannot override patient safety, incident review or mandatory reporting obligations. I would escalate through medical administration and clinical governance, complete incident reporting, secure medication charts and notes, and consider whether the threshold for mandatory notification is met. The threshold depends on jurisdiction and facts, but practising while impaired and issuing unsafe treatment orders may amount to substantial risk to the public. I would seek advice if needed, but I would not allow executive discomfort to suppress reporting.
 
-Fairness/support:
+I would also address documentation. The stem says Dr Lane "later wrote incomplete notes." Incomplete documentation after sedation orders increases medico-legal risk and may compromise ongoing care. I would secure the record, ensure factual corrections are made through proper addenda rather than retrospective alteration, and review whether patients or families require disclosure if harm occurred.
 
-Speak with Dr Lane, offer support and occupational health pathway. Maintain procedural fairness and confidentiality within limits.
-
-Team:
-
-Support nursing/registrar staff who raised concerns. Address hierarchy and speaking-up culture.
-
-Documentation:
-
-Record factual concerns, actions taken, patient reviews, reporting decisions and rationale.`,
+My documentation would be factual: who reported what, what patient reviews were undertaken, what restrictions were placed on clinical duties, what support was offered to Dr Lane, what governance steps occurred, and the rationale for any mandatory notification decision. The consultant standard is to maintain patient safety, natural justice, staff safety and legal obligations simultaneously, rather than choosing loyalty to a colleague or loyalty to the organisation's reputation.`,
   },
   {
     id: "GOV-002",
@@ -185,29 +177,15 @@ You are asked to manage the immediate clinical consequences and lead the inciden
       secondary: ["s3", "s4", "s5"],
       lowYield: ["s6"],
     },
-    modelAnswer: `Immediate clinical care:
+    modelAnswer: `Helen's case is a serious medication error with actual harm, so the first consultant action is clinical stabilisation, not administrative language management. The stem states she was inadvertently given clozapine 300 mg instead of quetiapine 300 mg and then "became hypotensive, fell overnight and sustained a fractured wrist." I would ensure she receives immediate medical review, ongoing observations, falls assessment, fracture management, monitoring for clozapine-related sedation, hypotension, anticholinergic effects and cardiac concerns, and that the medication chart is corrected so no further dose is administered. Patient safety and harm mitigation come before the incident meeting.
 
-Ensure Helen receives urgent medical review, observations, falls/fracture management and monitoring for clozapine effects. Correct medication chart and prevent further dosing errors.
+The daughter's statement, "No one told us this was your mistake," is a major communication failure. This requires timely open disclosure. I would meet Helen and her daughter with an appropriate senior clinician and, if possible, the ward manager or risk representative. I would explain the known facts clearly, apologise for the error and the harm, outline what is being done clinically, and describe the review process. I would not speculate beyond known facts or assign premature individual blame, but I would not hide behind vague language. The risk manager's warning to "avoid admitting liability" does not mean avoiding honesty. A factual apology and transparent explanation are ethical and clinically necessary.
 
-Open disclosure:
+The incident must be framed as a systems failure until properly reviewed. The night nurse says, "I thought pharmacy had checked it," and the registrar says he "copied the medication list from a previous discharge summary without confirming it." Those clues point to failures in medication reconciliation, prescribing verification, pharmacy checking, nursing administration, handover and perhaps electronic chart design. I would initiate an incident report and root-cause or systems review that examines how clozapine could be transcribed and administered to a non-clozapine patient, what checks failed, and whether clozapine governance safeguards were bypassed.
 
-Meet Helen/family promptly with senior staff. Acknowledge the error, apologise for harm, explain known facts and outline next steps.
+The registrar's practice requires supervision and remediation, but I would avoid scapegoating. Copying a medication list without confirming it is unsafe and must be addressed through prescribing supervision, education and review of competence. At the same time, the nurse and pharmacy processes need review because medication safety is deliberately built on multiple checks. Staff are "distressed and blaming each other," so I would organise a debrief that supports staff emotionally while keeping the focus on patient harm, accountability and learning.
 
-Governance:
-
-Complete incident notification. Initiate medication safety review/root cause analysis. Examine prescribing, transcription, pharmacy checking, nursing administration and handover systems.
-
-Supervision:
-
-Review registrar prescribing practice and supervision needs. Avoid scapegoating but address unsafe practice.
-
-Team:
-
-Debrief staff, reduce blame culture and reinforce medication reconciliation standards.
-
-Documentation:
-
-Record clinical care, disclosure, incident actions, family communication and review plan.`,
+I would document the clinical event, open disclosure conversation, family questions, immediate treatment, incident notification, medication-chart correction, and planned review. I would also ensure Helen receives follow-up for the fracture and psychological impact, and that any complaint pathway is explained. The consultant-level response is not to protect the service by minimising the error, nor to punish a single junior doctor to create the appearance of action. It is to care for the patient, tell the truth, preserve evidence, identify system failures and implement changes that reduce recurrence.`,
   },
   {
     id: "GOV-003",
@@ -291,25 +269,17 @@ Tariq's ex-partner has an active family violence order and has not been contacte
       secondary: ["s3", "s4", "s5"],
       lowYield: ["s6"],
     },
-    modelAnswer: `Immediate risk:
+    modelAnswer: `Tariq should not be discharged simply because the hospital executive needs the bed. The phrase "When I leave, I know where she lives" is a specific threat toward an identifiable person in the context of psychosis and family violence. That single sentence changes the risk formulation. It is not neutral that he remains guarded and intermittently hostile, has refused family meetings, and was admitted after threatening his ex-partner while believing she was "infected by demons." I would treat this as ongoing dynamic risk to an identifiable victim, not as a resolved psychotic episode.
 
-Review Tariq and treat the statement as a specific threat to an identifiable person. Reassess psychosis, hostility, access to victim, insight, substance use and capacity for safety planning.
+The executive director's statement, "We need this bed today," and the reference to ED targets create a system-pressure trap. A consultant can acknowledge access block and work constructively to create capacity, but clinical independence must be maintained. I would tell the executive that discharge is not safe at this point unless specific violence risk, victim safety and treatment adherence can be managed. I would offer to review other possible discharges or step-down options, but I would not sign an unsafe discharge to meet a performance target. If needed, I would escalate through clinical governance and document the pressure and my reasoning.
 
-Victim/public safety:
+The registrar's suggestion to "document that he denies intent" is exactly the wrong risk logic. Denial of intent does not neutralise a direct threat, especially in a guarded patient with persecutory beliefs and an active family violence context. I would supervise the registrar that risk assessment is not a box-tick of stated intent; it is a formulation of behaviour, threats, access, mental state, history, substances, victim vulnerability and protective controls. The phrase "document that he denies intent" should be replaced by a documented explanation of why denial is or is not reliable in light of the rest of the evidence.
 
-Consider lawful information-sharing, police/family violence liaison and victim safety planning. Do not allow confidentiality uncertainty to prevent action where serious risk exists.
+The active family violence order is not a side issue. It indicates prior legal recognition of risk and means that victim safety planning must occur. Staff are unsure about confidentiality, but confidentiality does not prevent lawful information sharing where there is serious risk to an identifiable person. I would consider police/family violence liaison, check the terms of the order, assess whether the ex-partner needs warning or safety support through appropriate channels, and document the legal and ethical basis for any disclosure. The tension is between preserving Tariq's confidentiality and protecting a foreseeable victim. In this case, the threat and context make victim safety an active obligation.
 
-Disposition:
+A plan of "temporary accommodation with crisis follow-up" is inadequate unless it specifically addresses the risk pathway. Where will he stay, how far from the ex-partner, who supervises medication, what are the legal restrictions, what happens if he leaves, what is the police role, what is the family violence safety plan, and what treatment engagement exists? If those questions cannot be answered, discharge is not defensible. I would reassess his psychosis, insight, capacity, substance use, access to the victim, access to weapons and willingness to accept treatment. If risk remains high, continued admission or involuntary treatment is justified if statutory criteria are met.
 
-Do not discharge solely due to bed pressure. Temporary accommodation/crisis follow-up is inadequate unless it specifically manages violence risk.
-
-Leadership/governance:
-
-Inform executive that clinical discharge is unsafe at this stage. Escalate bed pressure through appropriate channels without compromising care.
-
-Documentation:
-
-Record threat, risk formulation, executive pressure, protective actions, legal considerations and discharge rationale.`,
+My documentation would record the exact threat, the active family violence order, the executive pressure, the registrar's uncertainty, victim-safety actions, confidentiality reasoning, and why the chosen disposition is the least restrictive safe option. If an adverse event occurred, the record should show that the consultant recognised the risk and acted on it, rather than allowing bed pressure to become the hidden determinant of discharge.`,
   },
   {
     id: "GOV-004",
@@ -393,29 +363,17 @@ The director of training asks you to manage the patient safety issue while suppo
       secondary: ["s3", "s4", "s5"],
       lowYield: ["s6"],
     },
-    modelAnswer: `Immediate safety:
+    modelAnswer: `This scenario requires immediate patient-safety action and a supervision response, not a vague reminder to the registrar to call more often. The stem includes actual harm: a patient "required ICU transfer after oversedation." That is a sentinel warning that the registrar is making high-risk decisions beyond competence or without adequate escalation. My first action would be to ensure the ICU patient and any other patients affected by recent overnight decisions are reviewed, including the suicidal ED discharge and any rapid tranquillisation episodes. I would restrict the registrar from making independent high-risk after-hours decisions until competence and supervision arrangements are clarified.
 
-Review affected patients, especially ICU transfer case and recent ED discharge. Restrict registrar from independent high-risk decisions until reviewed.
+The documentation issue is particularly serious. The registrar wrote "Consultant aware" although I had not been contacted. That is not a harmless shorthand. It is inaccurate documentation that could mislead future clinicians and medico-legal review, and it raises professionalism concerns. I would address it directly with the registrar, require the record to be corrected through a proper addendum rather than hidden alteration, and escalate through clinical governance and the training pathway. The response must be fair and factual, but inaccurate documentation cannot be minimised as stress or inexperience.
 
-Governance:
+The registrar's explanation, "I thought consultants expected us to cope independently," suggests a system and supervision failure as well as an individual performance problem. I would ask how escalation expectations were communicated, whether after-hours workload is excessive, whether the registrar knew rapid tranquillisation policies, and whether they feared being criticised for calling. A Stage 1 registrar should not be left to infer when consultant input is required for suicidal discharge, seclusion, rapid tranquillisation or deteriorating medical status. I would create explicit escalation thresholds and make myself or the duty consultant visibly available.
 
-Lodge incident review for oversedation. Address inaccurate "consultant aware" documentation; correct record and escalate as required.
+The rapid tranquillisation clue, "without physical observations," is a concrete safety breach. Sedation without monitoring can cause respiratory depression, hypotension, arrhythmia or death. I would audit recent rapid tranquillisation events, reinforce policy, ensure nursing staff are empowered to refuse unsafe medication administration or escalate, and arrange direct teaching and observed practice for the registrar. The aim is not to humiliate the registrar, but to protect patients and restore safe practice.
 
-Supervision:
+The NUM's statement that "staff have lost confidence" matters because the MDT is now bypassing the registrar. That may be understandable, but it fragments care and can create further risk. I would meet the nursing team, acknowledge their concerns, clarify who makes which decisions, and establish a safe escalation pathway that does not rely on informal bypassing. Staff need to know that calling the consultant directly is acceptable when high-risk decisions exceed the registrar's competence.
 
-Meet registrar urgently. Clarify escalation expectations, rapid tranquillisation policy, discharge thresholds and documentation standards. Increase direct supervision and after-hours check-ins.
-
-Training:
-
-Involve director of training. Develop remediation plan: observed assessments, prescribing review, feedback, competence milestones.
-
-MDT:
-
-Meet NUM/team to restore safe escalation pathways. Ensure staff know when and how to contact consultant directly.
-
-Documentation:
-
-Record patient safety actions, supervision plan, registrar discussion and governance escalation.`,
+At the same time, the director of training is right that the registrar requires support, not abandonment. I would develop a remediation plan with increased supervision, case review, prescribing/rapid tranquillisation training, observed assessments, documentation review, and clear competence milestones. Depending on the severity and insight, temporary removal from after-hours duties may be necessary. My documentation would cover patient reviews, incident reporting, correction of the false note, supervision changes, registrar discussion, MDT communication and training plan. The consultant-level standard is to hold patient safety, procedural fairness, education and governance together.`,
   },
   {
     id: "GOV-005",
@@ -499,24 +457,16 @@ Staff are distressed and worried about blame. You must lead the immediate respon
       secondary: ["s3", "s4", "s5"],
       lowYield: ["s6"],
     },
-    modelAnswer: `Immediate response:
+    modelAnswer: `Daniel's death needs to be approached as a serious incident with potential coronial scrutiny, but the clinical heart of the review is already visible in the stem. The partner's call that "He has given away his tools and keeps saying we'll be better off without him" was not simply an anxious family call. Giving away meaningful possessions and expressing perceived burdensomeness are major dynamic suicide warning signs. In a man with recurrent depression and alcohol dependence, two days after discharge from crisis follow-up, that collateral should have triggered senior review and active safety planning.
 
-Confirm facts, preserve records and notify governance processes. Support family with compassionate contact and explain review process without speculation.
+The file note "denies suicidal ideation, low risk" is not defensible as a risk formulation. It records one negative symptom response and then applies a label. It does not reconcile the denial with the partner's warning, alcohol dependence, recent crisis involvement, possible preparatory behaviour, or the very high-risk transition period after discharge. I would explicitly identify this in the review: the failure was not that risk prediction is impossible, but that available dynamic risk information was not adequately weighted or escalated.
 
-Clinical review:
+The junior clinician's documentation of the call as "partner anxious" and the fact that "no senior review occurred" suggest a system problem in triage and escalation. I would construct a factual timeline: when the call came, who took it, what was documented, what policies exist for collateral suicide warnings, whether the clinician had supervision available, whether the partner was called back, and what attempts were made to contact Daniel. I would review whether the service culture unintentionally discounts family collateral when the patient denies suicidal ideation.
 
-Identify partner's call as significant missed collateral: giving away tools and burdensomeness statements. Critique "denies SI, low risk" as inadequate without dynamic formulation.
+The family's statement, "You ignored our warning," requires a compassionate and transparent response. I would not become defensive or speculate about causation. I would arrange senior contact through an open disclosure and postvention pathway, acknowledge the family's distress, explain that the service is reviewing the care, provide information about support and complaints processes, and preserve all records. If a coronial investigation is likely, communication should be factual, empathic and coordinated with governance/legal advice, but not evasive.
 
-Governance:
+Staff are "distressed and worried about blame," so I would lead this as a just-culture review. That means supporting staff while still asking hard questions about decision-making, documentation and escalation. Just culture does not mean no accountability; it means distinguishing human error, system weakness, training needs and reckless practice. The review should lead to concrete improvements, such as mandatory senior review for collateral involving preparatory behaviour, clearer documentation standards, family-call escalation protocols, and safer discharge-from-crisis procedures.
 
-Initiate serious incident review/root cause analysis. Review triage, collateral handling, senior escalation and crisis discharge processes. Prepare for coronial process through formal channels.
-
-Staff:
-
-Provide debrief and support using just culture. Avoid scapegoating but maintain accountability.
-
-Documentation:
-
-Record factual timeline, actions taken, family communication, staff support and planned service improvements.`,
+My documentation and governance response would include preservation of the record, incident notification, timeline, family contact, staff support, clinical review findings and action plan. The consultant-level lesson is that suicide-risk assessment must synthesise behaviour, collateral and context, not rely on "denies suicidal ideation." Daniel's partner gave the team a clinically significant warning; the service response must acknowledge that and improve the system that allowed it to be minimised.`,
   },
 ];

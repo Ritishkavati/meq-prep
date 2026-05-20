@@ -83,25 +83,15 @@ Her aunt is in the waiting room and says Marlee has not slept for three nights a
       secondary: ["s3", "s4", "s5"],
       lowYield: ["s6"],
     },
-    modelAnswer: `Immediate safety:
+    modelAnswer: `Marlee's refusal of assessment must be understood in the context of cultural mistrust, police involvement, trauma and child-protection fear, rather than treated simply as non-compliance. Her statement, "You mob only come when police drag us in," is a direct signal that the route of presentation has already activated mistrust and shame. If the team responds by immediately escalating coercion without culturally safe engagement, it may intensify the very fear driving her distress. I would slow the interaction where safe, introduce myself clearly, acknowledge that being brought by police can feel threatening, and seek Aboriginal Liaison or Aboriginal health support as soon as possible even if not immediately on site.
 
-Ensure Marlee, staff, police and children are safe while avoiding unnecessarily coercive escalation. Assess risk to others linked to child removal fears, alcohol use and sleep deprivation.
+At the same time, cultural safety does not mean ignoring risk. Marlee says, "If they try to take my babies, I'll fight anyone," and this has to be assessed as a risk-to-others statement in the context of fear of child removal, sleep deprivation, alcohol escalation and recent disturbance at home. I would ensure staff safety, reduce stimulation, avoid crowding her with police or security unless necessary, and assess whether she has access to weapons, whether threats are directed at specific people, and whether intoxication or psychosis is present. The consultant task is to reduce coercion while still preventing foreseeable harm.
 
-Cultural safety/trauma:
+The children are central, not peripheral. The stem says "Her two children are currently with her aunt." I would clarify immediately whether the aunt is a safe and willing carer tonight, whether the children witnessed violence or distress, whether there are injuries or neglect concerns, and whether child protection notification is required. I would explain to Marlee that checking the children's safety does not automatically mean removal, and I would explore kinship and family supports before assuming statutory intervention is the only solution. This is the balance between safeguarding and avoiding unnecessary re-traumatisation.
 
-Involve Aboriginal liaison/health worker if available. Acknowledge mistrust of police, hospitals and child protection. Use calm, non-confrontational, trauma-informed engagement.
+Her statement, "Hospitals took my sister away and she never came back right," suggests personal or family trauma associated with institutions. I would not challenge that belief directly or dismiss it as paranoia. I would acknowledge that hospitals and services can feel unsafe, ask what would help her feel safer, and avoid unnecessary physical control. The aunt's collateral that Marlee "has not slept for three nights" and "has been drinking more" after a recent funeral is clinically significant. It raises a differential including grief reaction, trauma activation, substance-related disturbance, mood episode, psychosis or acute stress response.
 
-Assessment/formulation:
-
-Assess mood, psychosis, trauma response, intoxication, grief and sleep deprivation. Obtain collateral from aunt regarding baseline, children's safety, funeral stress and alcohol use.
-
-Legal/disposition:
-
-Consider involuntary assessment only if statutory criteria are met and least restrictive engagement fails. Clarify children's immediate care without reflexive child protection escalation.
-
-Documentation:
-
-Record cultural safety steps, risk formulation, collateral, legal rationale and child safety plan.`,
+Disposition should not be based only on the fact that she is calmer now or that police want to leave. If she can engage voluntarily with culturally safe supports and a safe family plan, that may be least restrictive. If she remains acutely disturbed, intoxicated, psychotic, threatening or unable to collaborate with safety, then involuntary assessment may be required under the relevant law. I would make that decision transparently, explaining the reason as safety rather than punishment. My documentation would record cultural-safety steps, Aboriginal support attempts, child-safety arrangements, collateral from the aunt, alcohol and sleep factors, risk formulation, and why the final plan was the least restrictive safe option.`,
   },
   {
     id: "CS-002",
@@ -183,25 +173,17 @@ Nursing staff are concerned because Wiremu is pacing, chanting at night and not 
       secondary: ["s3", "s4", "s5"],
       lowYield: ["s6"],
     },
-    modelAnswer: `Cultural formulation:
+    modelAnswer: `Wiremu's presentation requires a cultural formulation before the team can safely conclude that all of his experiences are psychotic symptoms. His statement, "This is not sickness; my ancestors are calling me," cannot be interpreted outside cultural context. A consultant-level response is not to decide that ancestral experience is either entirely cultural or entirely delusional from a registrar note. It is to ask whether the experience is culturally congruent, whether the intensity and behavioural consequences are new, whether it is shared or understood by whānau, and whether it is associated with risk, disorganisation, mood disturbance or impaired functioning.
 
-Do not assume ancestral experiences are automatically delusional. Involve whānau, kaumātua and Māori health worker to understand cultural congruence, baseline beliefs and recent change.
+The involuntary admission remains a live legal issue. The stem says he was "admitted involuntarily" after walking onto a motorway, so there was serious safety concern. However, ongoing compulsory care must be reviewed in light of cultural assessment, current risk and least restrictive alternatives. I would assess whether he continues to meet Mental Health Act criteria, whether he can engage voluntarily with whānau and Māori health support, and whether treatment can be delivered in a less coercive way. The principle is not to remove involuntary status reflexively because culture is involved, nor to maintain it reflexively because the behaviour was risky.
 
-Risk/legal:
+The whānau request for "a kaumātua and Māori health worker to be involved" is clinically important, not an optional courtesy. I would facilitate that involvement urgently because it may improve engagement, clarify cultural meaning, reduce coercion and support risk planning. The night registrar's note of "poor insight, delusional, refusing treatment" without speaking to whānau is an incomplete formulation. I would supervise the registrar that cultural collateral is part of the diagnostic and risk assessment, especially in Māori mental health.
 
-Review risk from motorway behaviour, sleep, eating and current mental state. Reassess whether involuntary care remains necessary and least restrictive.
+Wiremu's medication refusal also needs exploration. He says staff are "cutting me off from my whakapapa." If medication or admission is experienced as severing connection to identity, whānau and ancestry, then simply insisting on antipsychotics may worsen mistrust and resistance. I would ask what he fears the medication will do, whether he has had side effects, whether he sees any part of the experience as distressing, and whether a whānau-supported discussion can help. If medication is necessary because risk remains high, I would still present it in a culturally respectful and least restrictive way.
 
-Engagement/treatment:
+The physical and ward-care details matter. He is pacing, chanting at night and "not eating hospital food." That may reflect psychosis, distress, cultural discomfort, paranoia about food, sleep-wake disturbance or unfamiliar environment. I would assess hydration, nutrition, sleep, physical health and whether culturally acceptable food or family support can reduce distress. His mother's statement, "He needs help, but not like this," captures the central tension: the family is not denying need, but they are objecting to the form of care.
 
-Explore refusal of medication in relation to whakapapa, identity, side effects and coercion. Offer culturally safe explanation, whānau-supported discussions and least restrictive treatment options.
-
-Collateral:
-
-Obtain whānau collateral regarding onset, substance use, function, previous episodes and supports.
-
-Disposition/governance:
-
-Document cultural formulation, whānau involvement, legal reasoning and care plan.`,
+My plan would be to review Wiremu with Māori health support, whānau and a culturally informed formulation; reassess risk from the motorway incident and current mental state; consider voluntary or less restrictive options if safe; and if involuntary treatment remains necessary, document exactly why, how culture was considered, and how coercion will be minimised. The model answer should show that cultural safety is not separate from risk and law; it is part of making the diagnostic, legal and disposition decision valid.`,
   },
   {
     id: "CS-003",
@@ -283,24 +265,16 @@ His cousin says Ahmad was detained for months before arriving in Australia and a
       secondary: ["s3", "s4", "s5"],
       lowYield: ["s6"],
     },
-    modelAnswer: `Communication/cultural safety:
+    modelAnswer: `Ahmad's refusal of investigation and antibiotics cannot be assessed properly until the communication failure is corrected. The registrar has been using his cousin to interpret because "professional interpreters take too long." That is not acceptable for a complex refusal involving possible life-threatening infective endocarditis, trauma, substance use and capacity. A family interpreter may filter information, inhibit disclosure, misunderstand medical language or have their own interests. My first action would be to arrange a professional interpreter urgently, by phone or video if necessary, before concluding that Ahmad lacks capacity or is making a capacitous refusal.
 
-Stop relying on cousin as interpreter for capacity/refusal. Use professional interpreter and culturally safe, trauma-informed approach.
+His statement, "hospital makes papers for immigration," is a major trauma and cultural-safety clue. It may reflect a rational fear based on past detention experiences, a trauma response to institutions, misunderstanding about confidentiality, or psychotic/paranoid thinking. The cousin's collateral that Ahmad "was detained for months before arriving in Australia and avoids government offices" makes trauma-related mistrust highly plausible. I would not respond by surrounding him with security or treating refusal as wilful obstruction. I would explain confidentiality, the separation between health care and immigration as accurately as possible, involve refugee health or social work support, and reduce visible coercion.
 
-Formulation:
+The infectious diseases team says delayed antibiotics "may be life-threatening." That creates urgency, but urgency does not justify an invalid capacity assessment. I would ask the medical team to clarify the diagnosis, expected benefit of antibiotics, risks of delaying blood cultures/echocardiography, alternatives, and how long engagement can safely continue. If Ahmad has capacity after proper interpretation and explanation, he can refuse even life-saving treatment. If he lacks capacity because trauma, delirium, psychosis, intoxication or withdrawal prevents appreciation and weighing, and the risk is imminent, emergency or substitute decision pathways may be needed.
 
-Explore refugee trauma, detention history, fear of immigration consequences and religious explanatory model. Avoid assuming refusal equals psychosis or incapacity without valid communication.
+His spiritual statement, "Maybe Allah is punishing me; medicine cannot change this," should be explored respectfully. It may be a cultural or religious explanatory model, depressive guilt, demoralisation or misunderstanding of treatment. I would ask what he believes is happening, whether he thinks treatment is forbidden or simply futile, whether he wants an imam or spiritual support, and how medical treatment can sit alongside faith. Respecting religion does not mean accepting a refusal without assessing whether he understands the medical situation; equally, medical urgency does not mean dismissing his spiritual framework.
 
-Medical/legal:
+The distress when "security staff stand near the door" matters. Security may be necessary if there is immediate danger, but in this case visible containment may be re-traumatising and worsening refusal. I would ask staff to step back if safe, use a calm single spokesperson, avoid crowding, and address opioid withdrawal or pain because "intravenous heroin use" may mean withdrawal, craving or stigma is also driving distress. Addiction medicine input may help engagement and reduce absconding risk.
 
-Clarify urgency of suspected endocarditis and consequences of delay. Assess capacity after interpreter-assisted explanation. If capacity absent and risk imminent, consider emergency treatment pathways.
-
-Engagement:
-
-Reduce visible security unless necessary. Offer social work, transcultural worker, spiritual support and addiction medicine input.
-
-Documentation:
-
-Record interpreter use, capacity reasoning, cultural formulation, medical urgency and least restrictive steps.`,
+My final advice would be to correct communication, formulate trauma and explanatory beliefs, clarify medical urgency, assess capacity decision-specifically, and use the least restrictive lawful path. I would document interpreter use, what Ahmad understood, his appreciation of death or complications, the role of immigration fear and detention trauma, spiritual supports offered, addiction considerations, and the legal basis for any treatment against refusal. Without that, either accepting refusal or overriding it would be unsafe and potentially unlawful.`,
   },
 ];

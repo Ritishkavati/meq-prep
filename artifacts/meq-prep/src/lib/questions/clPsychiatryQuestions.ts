@@ -81,29 +81,15 @@ His cousin says Adil was detained offshore for months and avoids government offi
       secondary: ["s3", "s4", "s5"],
       lowYield: ["s6"],
     },
-    modelAnswer: `Communication/cultural:
+    modelAnswer: `Adil's refusal of valve surgery cannot be assessed properly until the communication and trauma issues are addressed. The surgical registrar has used Adil's cousin to interpret because "professional interpreters take too long." That is unacceptable for a life-threatening treatment refusal. A family interpreter may inhibit disclosure, distort medical language or be affected by family pressures. I would arrange a professional interpreter urgently, by phone or video if necessary, before concluding that his refusal is capacitous or incapacitous.
 
-* Use professional interpreter urgently; cousin interpretation is inappropriate for capacity/refusal.
-* Explore trauma, detention, immigration fears and spiritual beliefs respectfully.
+The statement "Hospital papers go to immigration; surgery is a trap" is the central formulation clue. It may reflect trauma-related mistrust after detention, a misunderstanding of confidentiality, or psychotic paranoia. His cousin's collateral that Adil was detained offshore and avoids government offices makes trauma highly plausible. I would reduce visible coercion, especially because he becomes distressed when "security stand near his bed," and I would explain the separation between healthcare, records and immigration as accurately as possible with interpreter support.
 
-Medical:
+The cardiothoracic team says he "may die without surgery," so urgency must be clarified. I would ask what the time window is, what alternatives exist, what happens if surgery is delayed, and whether antibiotics or other measures can buy time for engagement. Capacity assessment requires that Adil understands the medical situation, not just that he refuses. If he has capacity after proper explanation, he can refuse life-saving surgery. If he lacks capacity and delay is life-threatening, then emergency or substitute decision pathways may be needed.
 
-* Clarify urgency, benefits, risks, alternatives and consequences of no surgery with cardiothoracic team.
+His phrase "Maybe Allah has decided my time" should be explored respectfully. It may be a religiously grounded acceptance of death, demoralisation, trauma, or misunderstanding. I would offer spiritual support, possibly an imam or chaplain, and ask how he sees medical treatment fitting with faith. This is not to persuade him manipulatively, but to ensure the decision is informed and values-based.
 
-Capacity/legal:
-
-* Assess decision-specific capacity only after valid explanation.
-* If capacitous, refusal must be respected.
-* If incapacity and urgent risk, consider legal/emergency treatment pathways.
-
-Engagement:
-
-* Reduce visible security unless necessary.
-* Offer refugee/transcultural worker, social work and spiritual support.
-
-Documentation:
-
-* Record interpreter use, capacity findings, trauma/cultural formulation, urgency and legal rationale.`,
+My consultant actions would include interpreter-assisted assessment, trauma-informed engagement, minimising security, involving refugee health/social work, clarifying surgical urgency, assessing capacity decision-specifically and documenting the legal basis for any action. The decision cannot be delegated to psychiatry as a simple "capacity yes/no" stamp for surgery. It must show that communication was valid, trauma was considered, medical urgency was understood and the least restrictive lawful pathway was used.`,
   },
   {
     id: "CL-002",
@@ -185,31 +171,15 @@ Nurses have placed the bed rails up and requested haloperidol because "she is im
       secondary: ["s3", "s4", "s5"],
       lowYield: ["s6"],
     },
-    modelAnswer: `Diagnosis:
+    modelAnswer: `Mrs Wilson's presentation is delirium until proven otherwise. The medical team's label of "progressive dementia" is contradicted by her son's statement, "Mum was doing crosswords and paying bills three days ago." Acute change over three days from independent cognition to hallucinations, confusion and attempts to climb out of bed is a delirium pattern. If this is missed, the ward may sedate and restrain her while reversible causes worsen.
 
-* This is delirium until proven otherwise, not simply dementia or old age.
-* Acute change from crosswords/bills three days ago is key.
+The physical-health clues are strong: she has a urinary tract infection and "sodium of 126," both of which can precipitate delirium. Her medication chart includes "oxybutynin, codeine, temazepam and promethazine," a combination of anticholinergic, opioid and sedative burden that can worsen confusion, hallucinations, falls and urinary retention. I would work with the medical team to treat infection, correct hyponatraemia, review pain and constipation, hydrate, and reduce deliriogenic medication.
 
-Medical treatment:
+The request for haloperidol because she is "impossible to manage" needs reframing. Antipsychotic medication may be appropriate if she is severely distressed or at immediate risk after reversible causes and non-pharmacological measures are addressed, but it should not be the first response to understaffed behavioural difficulty. If used, it should be at the lowest dose, time-limited and monitored for QTc, extrapyramidal effects, sedation and falls.
 
-* Treat UTI and hyponatraemia.
-* Review pain, constipation, dehydration and medication causes.
-* Reduce anticholinergic/sedative/opioid burden.
+The bed rails being up are not benign. They can function as restraint and may increase injury if she tries to climb over them. I would advise a least restrictive delirium care bundle: restore hearing aids because they are "in a drawer," provide glasses if needed, reorientation, family presence, hydration, mobilisation, sleep-wake support, toileting, pain relief and close observation. Sensory deprivation may be making her fear and hallucinations worse.
 
-Safety/non-pharmacological:
-
-* Restore hearing aids.
-* Use reorientation, hydration, mobilisation, sleep-wake support, family presence and close observation.
-* Avoid restraints/bed rails unless clearly justified.
-
-Medication:
-
-* Haloperidol only if severe distress or immediate safety risk persists, lowest dose and monitored.
-
-Family/MDT:
-
-* Educate family and ward team about delirium.
-* Document formulation, causes and management plan.`,
+The daughter's question about why psychiatry is involved when "this is just old age" is an opportunity for education. I would explain that delirium is an acute medical brain syndrome, often reversible, and psychiatric input is helping the ward identify causes and reduce harmful restraint or sedation. My documentation would state the delirium formulation, acute baseline change, medical precipitants, medication changes, sensory interventions, restraint minimisation and antipsychotic threshold. The consultant action is to redirect the ward from behavioural control to cause-based delirium management.`,
   },
   {
     id: "CL-003",
@@ -291,29 +261,15 @@ Rosa has a history of childhood sexual abuse and becomes distressed when male st
       secondary: ["s3", "s4", "s5"],
       lowYield: ["s6"],
     },
-    modelAnswer: `Formulation:
+    modelAnswer: `Rosa's pain must be validated while also formulating opioid dependence, trauma and functional mechanisms. Her statement, "No one believes me because I have trauma and take opioids," captures the relational risk: if clinicians respond with disbelief or accusations of manipulation, the ward conflict will worsen and she may escalate distress or seek unsafe medication elsewhere. I would explicitly tell the team that pain can be real even when investigations are negative and even when opioids are causing harm.
 
-* Validate pain as real while formulating functional pain, trauma effects, opioid dependence and opioid-induced hyperalgesia.
+The request for IV fentanyl is a major risk point. She is already prescribed high-dose oxycodone, and the pain team suspects opioid-induced hyperalgesia. Escalating opioids in an unstructured way may worsen pain sensitivity, dependence, sedation and respiratory risk. I would not allow nurses and registrars to negotiate opioids shift by shift. Instead, I would convene surgery, pain, addiction medicine, nursing and psychiatry to create one consistent analgesia and communication plan.
 
-Substance/pain plan:
+The surgical registrar's statement, "This is functional; she is manipulating us," is harmful. It confuses functional disorder with intentional deception and invites punitive care. I would address that language directly, because staff splitting is already present: nursing staff are divided between giving extra opioids and refusing all PRN medication. A consistent plan should avoid both uncontained opioid escalation and punitive withholding. The plan should include non-opioid analgesia, pacing, psychological strategies, agreed PRNs, withdrawal monitoring and clear review points.
 
-* Avoid unstructured opioid escalation, especially IV fentanyl.
-* Coordinate pain team, addiction medicine, surgery and psychiatry around a single prescribing plan.
-* Consider non-opioid analgesia, pacing, psychological strategies and harm reduction.
+Her trauma history changes how physical care should be delivered. She has childhood sexual abuse and becomes distressed when male staff examine her. I would advise trauma-informed examination: consent before touch, explanation, chaperone, female staff where possible, avoidance of repeated unnecessary exams, and attention to dissociation or panic. This is not special treatment; it is necessary to avoid re-traumatisation and escalation.
 
-Trauma:
-
-* Use trauma-informed examinations: consent, female staff/chaperone if preferred, avoid repeated unnecessary exams.
-
-MDT:
-
-* Address stigmatising language and staff splitting.
-* Provide consistent communication and PRN boundaries.
-
-Disposition:
-
-* Do not discharge abruptly without plan.
-* Arrange follow-up, opioid plan, overdose risk mitigation and GP/pain/addiction handover.`,
+The partner's warning that she will "buy tablets on the street" if discharged without pain relief raises overdose and illicit-drug risk. I would include harm reduction in discharge planning: naloxone if appropriate, addiction follow-up, GP handover, safe prescribing quantities, opioid taper or substitution consideration, and crisis plan. My documentation would state that Rosa's pain is being taken seriously, why IV opioid escalation is unsafe, how trauma-informed care will occur, and how the team will communicate consistently. The consultant role is to contain the ward system as much as the patient.`,
   },
   {
     id: "CL-004",
@@ -395,30 +351,15 @@ The ICU consultant says prognosis is poor and asks whether Mr Singh has capacity
       secondary: ["s3", "s4", "s5"],
       lowYield: ["s6"],
     },
-    modelAnswer: `Capacity:
+    modelAnswer: `Mr Singh's ICU statements cannot be treated as a single stable refusal because the stem shows fluctuating cognition. He says, "No more tubes; let me go," but two hours later asks when he can restart dialysis. That fluctuation strongly suggests delirium, sedation effects, sepsis-related encephalopathy or fluctuating capacity in critical illness. I would assess capacity as decision-specific and time-specific, ideally when he is most awake, comfortable, oxygenated and supported by a professional interpreter.
 
-* Assess capacity as decision-specific and fluctuating.
-* Consider ICU delirium, sepsis, sedation, pain, hypoxia and timing of assessment.
-* Do not rely on a single statement made during fluctuating consciousness.
+The interpreter issue is serious. The family has been interpreting because staff say "he understands enough English." That is not adequate for decisions about ventilation, dialysis and end-of-life care. I would arrange a professional Punjabi interpreter for capacity and goals-of-care discussions. Family members can provide values and collateral, but they should not be the language conduit for a high-stakes capacity assessment, especially when they disagree.
 
-Communication:
+His refusal may still be meaningful. The phrase "No more tubes; let me go" could reflect a capacitous wish to limit burdensome treatment, but it could also be delirium, pain, fear, exhaustion or depression. I would ask what he understands about his condition, what the tubes and dialysis are doing, what he believes will happen with and without them, and what outcomes he would find acceptable. I would also clarify ICU prognosis, reversibility and treatment burdens.
 
-* Use professional Punjabi interpreter; family interpretation is inadequate for capacity/goals-of-care.
+Family conflict must be handled through a structured meeting. His wife says, "Our faith says only God decides death," while his daughter reports he previously said he would never want "prolonged machines." Both are important. I would acknowledge faith values, offer spiritual care, and explain that the decision-making framework depends on Mr Singh's capacity. If he has capacity, his decision governs. If he lacks capacity, the team should use prior expressed wishes and best-interests or substitute decision law, not simply the loudest family view.
 
-Clinical/ethical:
-
-* Clarify prognosis and treatment options with ICU.
-* Explore whether refusal reflects stable values or distress/delirium.
-* If capacity absent, use substitute decision/best-interests framework and prior expressed wishes.
-
-Family/cultural:
-
-* Hold family meeting acknowledging faith values and daughter's collateral.
-* Offer spiritual care.
-
-Governance:
-
-* Document capacity findings, interpreter use, family views, prognosis and ethics consultation if needed.`,
+If disagreement persists and prognosis is poor, ICU ethics consultation may be needed, but that should not replace good communication. My documentation would record interpreter use, capacity fluctuation, delirium contributors, prognosis discussion, family views, spiritual supports and the legal basis for any treatment limitation or continuation. The consultant-level answer recognises the tension between life-preserving family values, prior wishes, fluctuating capacity and non-beneficial treatment, and manages it through valid communication and lawful process.`,
   },
   {
     id: "CL-005",
@@ -500,30 +441,14 @@ The oncologist says delay reduces chance of cure and asks whether Maria has capa
       secondary: ["s3", "s4", "s5"],
       lowYield: ["s6"],
     },
-    modelAnswer: `Capacity/medical:
+    modelAnswer: `Maria's refusal of potentially curative chemotherapy may be impaired by severe depressive guilt, and it should not be accepted or overridden without a careful capacity assessment. The phrase "I deserve this cancer; treatment would be wasted on me" is not a values-based oncology refusal. It suggests pathological guilt and worthlessness, possibly melancholic or psychotic depression, directly distorting her appreciation of the value of treatment. I would assess capacity to refuse chemotherapy specifically, focusing on whether depression prevents her from appreciating that lymphoma may be curable and that treatment is being offered because it can benefit her.
 
-* Assess capacity to refuse chemotherapy decision-specifically.
-* Focus on whether depressive guilt and nihilism impair appreciation and weighing.
-* Clarify oncology urgency and treatment window.
+The oncology urgency matters because the oncologist says "delay reduces chance of cure." This is not an abstract preference dispute. Delay may change prognosis. I would ask oncology to clarify the treatment window, expected cure rates, consequences of delay, alternatives and whether brief psychiatric stabilisation can occur without losing curability. That information is necessary for Maria's capacity assessment and for any legal pathway if she lacks capacity.
 
-Diagnosis/risk:
+Her husband's collateral that "last month she was begging to start treatment" is very important. It suggests her current refusal may be state-dependent and depression-driven, not a long-standing value. I would seek her consent to involve him, while exploring why she says he "should find someone better." That phrase itself may be depressive guilt rather than a stable wish to exclude support. Confidentiality still matters, but depression may be isolating her from a key support at the exact moment she needs help.
 
-* Assess severity of depression, psychotic guilt, suicidality, self-neglect and food refusal.
-* Treat depression urgently; consider inpatient psychiatric/medical care if risk or incapacity.
+The mother's view that chemotherapy is "poison" and preference for "traditional remedies from their community healer" should be explored respectfully. Cultural and family beliefs may influence Maria, but the central issue is Maria's own capacity and wishes. If Maria wants traditional support alongside oncology, and it does not delay or conflict dangerously with treatment, it may be integrated. But family beliefs should not be allowed to amplify depressive incapacity or prevent curative care if Maria would otherwise choose treatment.
 
-Collateral:
-
-* Use husband's collateral that she recently wanted treatment to assess state-dependent refusal.
-* Seek Maria's consent to involve husband; respect confidentiality unless safety requires otherwise.
-
-Cultural/family:
-
-* Explore mother's beliefs and community healer respectfully.
-* Integrate culturally meaningful supports if consistent with Maria's wishes and not delaying urgent care.
-
-Disposition/governance:
-
-* If capacity absent and delay threatens cure, consider legal/substitute decision pathways.
-* Document capacity reasoning, oncology urgency, collateral and treatment plan.`,
+Clinically, I would assess severity of depression, psychotic guilt, suicidality, self-neglect and food refusal because she has "stopped eating." Treatment may require urgent antidepressant/antipsychotic treatment, ECT consideration depending on severity, inpatient care or close psycho-oncology follow-up. If she lacks capacity and delay threatens cure, the team may need substitute decision or legal authority to proceed, guided by her prior wishes and best interests. My documentation would quote the guilt statement, oncology urgency, husband's collateral, capacity reasoning, cultural discussion and the legal basis for respecting or overriding the refusal. The consultant task is to protect both autonomy and access to curative treatment when depression may be speaking in the patient's voice.`,
   },
 ];

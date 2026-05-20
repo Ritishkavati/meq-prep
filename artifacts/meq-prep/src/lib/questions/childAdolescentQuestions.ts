@@ -83,31 +83,15 @@ The registrar says Tahlia denies current suicidal intent and wants to go home, b
       secondary: ["s3", "s4", "s5"],
       lowYield: ["s6"],
     },
-    modelAnswer: `Immediate safety:
+    modelAnswer: `Tahlia's presentation should not be managed as a superficial-cutting case that can be closed once she denies suicidal intent. The key clue is her statement, "I only cut so Mum would stop yelling." That tells me the self-harm may be a communication of distress or an attempt to interrupt family conflict, not merely a low-lethality act. The fact that she becomes frightened when the mother's partner walks past the cubicle and reports that he "gets drunk and smashes things" shifts the immediate question from suicide intent alone to whether it is safe for her to return home tonight.
 
-* Ensure Tahlia is assessed privately and kept physically separate from the mother's partner.
-* Assess family violence, intoxication, threats, safe accommodation and whether discharge home is safe tonight.
+I would first ensure Tahlia is physically and emotionally safe in ED. She should be interviewed separately from her mother and her mother's partner, and the partner should not be allowed to control the timing or content of the assessment. His presence outside the ED and wish to take them home creates a risk that she may be unable to disclose freely. I would ask ED staff to maintain separation, involve security only if needed, and clarify whether police need to remain while immediate safety is assessed.
 
-Risk:
+The child protection issue is unavoidable, but it must be handled culturally safely. Tahlia says, "Don't call child protection because they already took my cousins." That statement tells me that statutory services may be associated with fear and family trauma. I would acknowledge that fear, explain the limits of confidentiality and my duty to keep children safe, and seek Aboriginal Liaison or Aboriginal health involvement as soon as possible. Cultural safety does not mean avoiding child protection where thresholds are met; it means being transparent, using kinship options where safe, and avoiding unnecessary punitive framing.
 
-* Formulate self-harm in context: intent, function, escalation, access to means, affect regulation, suicidal thoughts and protective factors.
-* Do not rely only on denial of current suicidal intent.
+I would obtain collateral from nursing staff, police, school, the mother separately and any safe relatives. Nursing observation that she becomes "visibly frightened whenever her mother's partner walks past the cubicle" is high-value evidence, particularly because children often minimise risk in front of unsafe adults. I would ask about previous violence, injuries, intoxication, weapons, who lives at home, whether siblings are present, whether the mother can protect her, and whether there is a safe auntie or kinship placement tonight.
 
-Cultural safety/child protection:
-
-* Acknowledge fear of child protection and involve Aboriginal Liaison/Aboriginal health supports as soon as available.
-* Explain confidentiality and safety obligations transparently.
-* Consider child protection notification and kinship/safe placement options.
-
-Collateral/MDT:
-
-* Obtain collateral from police, nursing staff, mother separately, school and safe family members.
-* Liaise with ED, social work and child protection.
-
-Disposition:
-
-* Discharge only if safe care, follow-up, means restriction and crisis plan are confirmed.
-* Document risk formulation, cultural safety steps, safeguarding rationale and disposition.`,
+The disposition decision cannot be delegated to a crisis number. If family violence risk is unresolved, discharging Tahlia home with the alleged perpetrator would be unsafe even if she denies current suicidal intent. If a safe kinship placement or supervised plan can be arranged, that may be less restrictive than admission. If no safe discharge arrangement exists, she may need to remain in hospital or another safe setting while child protection and social work are involved. My documentation would quote her fear of child protection, the family violence concerns, the behavioural observations, the collateral sources, and the rationale for the final safety plan.`,
   },
   {
     id: "CA-002",
@@ -191,30 +175,15 @@ The registrar asks whether Hamid can consent to therapy without his father's agr
       secondary: ["s3", "s4", "s5"],
       lowYield: ["s6"],
     },
-    modelAnswer: `Diagnosis/formulation:
+    modelAnswer: `Hamid's school refusal should be formulated first as a trauma-linked presentation rather than laziness or ordinary adolescent avoidance. The phrase "School is not safe; soldiers come when bells ring" is a direct clue that fire alarms are triggering war-related re-experiencing or threat perception. His behaviour of hiding under desks when alarms sound fits PTSD physiology: hyperarousal, avoidance and re-experiencing. I would explicitly challenge the father's view that "He is lazy and must be forced back," because coercive return without formulation may worsen symptoms and shame.
 
-* Formulate school refusal as likely PTSD-related avoidance/re-experiencing triggered by alarms, not simply laziness or behavioural defiance.
-* Assess depression, suicidality, sleep, dissociation and functional impairment.
+The assessment is currently invalid because it is being conducted "through his older brother, who is interpreting." A sibling interpreter is not appropriate for trauma, consent or risk assessment. Hamid may be unable to disclose violence, torture, sexual trauma, family conflict, suicidality or shame through his brother. I would arrange a professional interpreter and, where possible, offer a choice of gender and language/dialect. This is not a procedural luxury; it is necessary for valid capacity, confidentiality and diagnosis.
 
-Cultural safety:
+The consent question matters because Hamid is 16. I would assess his capacity to consent to therapy, understanding the nature of treatment, its risks and benefits, confidentiality and alternatives. He may be able to consent to confidential trauma-informed care even if his father disagrees, depending on jurisdiction. At the same time, family involvement may be important for recovery if it can be negotiated safely. I would explain confidentiality and its limits to Hamid and separately help the parents understand trauma without requiring him to disclose details he is not ready to share.
 
-* Stop using the brother as interpreter for trauma and consent discussions.
-* Use a professional interpreter and explore shame, stigma and family beliefs respectfully.
+His statement, "If people know what happened, my family will be ashamed," is a cultural and trauma clue. Shame, family honour and stigma may be major barriers to engagement. I would not rush into trauma processing. A consultant-level plan would begin with stabilisation: sleep, safety, grounding, psychoeducation, school collaboration and gradual restoration of routine. Trauma-focused therapy can follow when he has enough safety and control.
 
-Consent/legal:
-
-* Assess Hamid's capacity to consent to therapy.
-* Explain confidentiality and its limits, and negotiate parental involvement where safe and helpful.
-
-Treatment:
-
-* Offer phased trauma-informed care: stabilisation, sleep, grounding, psychoeducation, then trauma-focused therapy when ready.
-* Review diazepam and liaise with GP.
-
-Systems:
-
-* Work with school on graded return and trigger accommodations rather than a simple fit/unfit certificate.
-* Document consent, interpreter use, family views, risk and school plan.`,
+The GP's diazepam prescription also needs review. Long-term or repeated benzodiazepines in adolescent PTSD can worsen avoidance, cognitive functioning, dependence and emotional processing. I would liaise with the GP, assess dose and duration, and propose safer sleep and anxiety strategies. The school's request for a fit/unfit certificate should be reframed into a graded, trauma-informed return plan: alarm accommodations, safe room, trusted staff member, predictable routine, attendance goals and communication pathways. My final advice would balance Hamid's autonomy, parental authority, school pressure and trauma recovery, with documentation of interpreter use, consent reasoning, risk assessment and school plan.`,
   },
   {
     id: "CA-003",
@@ -298,31 +267,15 @@ The registrar asks whether this is treatment-resistant ADHD or conduct disorder.
       secondary: ["s3", "s4", "s5"],
       lowYield: ["s6"],
     },
-    modelAnswer: `Diagnosis/formulation:
+    modelAnswer: `Jayden's presentation should not be reduced to "severe ADHD not responding to medication" or conduct disorder. The most important clue is his own explanation: "I get scared when men yell because it sounds like home." That points to trauma-related threat response and hyperarousal, especially in the context of family violence. Running from class when teachers shout and hiding under tables may be defensive survival behaviour rather than oppositionality or stimulant failure. ADHD may still be present, but the formulation must include trauma, classroom triggers, cultural context and environmental supports.
 
-* Do not frame this as simply treatment-resistant ADHD or conduct disorder.
-* Formulate ADHD symptoms alongside trauma hyperarousal, family violence exposure, classroom triggers and neurodevelopmental needs.
+The medication history raises immediate concern. Jayden is already on methylphenidate LA, clonidine and risperidone, and his grandmother says, "Every time he gets upset they add another tablet." That sentence captures the risk of medication being used to manage distress without adequate formulation. I would not support increasing the stimulant dose until I had reviewed diagnosis, target symptoms, benefits, adverse effects, growth, appetite, sleep, blood pressure, pulse, sedation, extrapyramidal effects and metabolic monitoring. Risperidone for aggression needs particular scrutiny because behavioural distress driven by trauma and unsafe environments should not be medicalised without psychosocial intervention.
 
-Medication/physical health:
+Cultural safety is not an optional add-on. The stem says "No Aboriginal health worker" has been involved. For a 12-year-old Aboriginal boy in kinship care with trauma history, culturally safe engagement may change the entire formulation. I would involve an Aboriginal health worker or liaison, ask about kinship, identity, community strengths, school cultural safety and the role of grandmother. His grandmother is clearly a key carer and collateral source; she can help establish developmental history, trauma exposure, baseline behaviour, medication effects and what helps him regulate.
 
-* Pause dose escalation until a full medication review is done.
-* Review indication, benefit and adverse effects of methylphenidate, clonidine and risperidone.
-* Check sleep, appetite, BP/pulse, growth, metabolic monitoring and sedation.
+I would also challenge the school assumption that "medication should fix this." That is a system pressure that risks removing the aide and worsening behaviour. A consultant response would advocate for trauma-informed classroom adjustments: predictable routines, avoiding shouting, safe exit plans, sensory/OT assessment, positive behaviour support, teacher education and maintenance of aide support if needed. The paediatrician's wish to increase stimulant dose should be discussed respectfully, but the treatment plan should be formulation-led rather than dose-led.
 
-Cultural/family:
-
-* Involve Aboriginal health worker.
-* Obtain grandmother's collateral and include kinship/cultural strengths.
-
-School/system:
-
-* Advocate trauma-informed school supports, not removal of aide.
-* Recommend behaviour support plan, sensory/OT assessment and teacher strategies.
-
-Safeguarding:
-
-* Clarify current family violence exposure and safety.
-* Document formulation, medication rationale and shared plan.`,
+The family violence history means safeguarding must be clarified. I would ask about current contact with the mother, whether violence exposure is ongoing, whether the home is safe, and whether child protection or family support services are involved. The aim is not to blame the family but to identify ongoing triggers and supports. My final plan would integrate trauma-informed care, ADHD reassessment, medication rationalisation, cultural support, school intervention and safeguarding. I would document why treatment-resistant ADHD is not yet established, why polypharmacy needs review, and why environmental and trauma interventions are essential before further medication escalation.`,
   },
   {
     id: "CA-004",
@@ -404,29 +357,15 @@ Sophie refuses nasogastric feeding and says she will run away if forced. The pae
       secondary: ["s3", "s4", "s5"],
       lowYield: ["s6"],
     },
-    modelAnswer: `Immediate medical risk:
+    modelAnswer: `Sophie's presentation is a medical emergency first, even though the psychiatric diagnosis is anorexia nervosa. The stem states she has a "heart rate of 38 overnight, postural hypotension and hypokalaemia." These are objective markers of potentially life-threatening malnutrition and electrolyte disturbance, with risk of arrhythmia, syncope and sudden death. I would support paediatric-led medical stabilisation, cardiac monitoring, electrolyte correction and eating-disorder protocol care. Discharge to a private dietitian is not a safe alternative while she is medically unstable.
 
-* This is a medical emergency: bradycardia, postural hypotension and hypokalaemia require paediatric stabilisation, cardiac monitoring and electrolyte correction.
+Her capacity to refuse nutrition or nasogastric feeding requires careful assessment. The phrase "I know I might die, but gaining weight would be worse" shows factual awareness of death risk but likely impaired weighing due to anorexic cognition. Capacity is not established by repeating that death is possible; she must be able to appreciate and weigh that risk without the pathological overvaluation of weight gain overwhelming the decision. I would assess capacity specifically for refusing nutrition, admission and medical monitoring, and I would document how the eating disorder affects appreciation and weighing.
 
-Capacity/legal:
+The legal pathway must be clarified rather than improvised. The paediatric consultant asks whether psychiatry can authorise involuntary treatment. Depending on jurisdiction, treatment may proceed under parental consent, emergency medical authority, guardianship or the Mental Health Act. I would not simply tell paediatrics "psychiatry authorises feeding." I would identify the applicable legal basis, involve hospital legal/ethics if needed, and ensure any coercive intervention is necessary, proportionate and least restrictive. If nasogastric feeding is required to prevent death and she lacks capacity or emergency authority applies, it should proceed with a clear plan and review.
 
-* Assess capacity to refuse nutrition and admission; apparent understanding is not enough if anorexic cognition prevents weighing risk.
-* Clarify legal authority for treatment: parental consent, emergency treatment, guardianship or Mental Health Act depending on local framework.
-* Use least restrictive treatment but do not delay life-saving care.
+Family conflict is clinically significant. The father says hospital is "making her dramatic" and wants discharge, while the mother says, "I can't keep her alive at home." The mother's statement is a safety signal that home care is not currently viable. I would hold a family meeting, explain the objective medical risks, address the father's minimisation, support the mother, and set a unified treatment frame. I would also address Sophie's threat that she "will run away if forced" by implementing proportionate observation and absconding precautions.
 
-Risk/containment:
-
-* Manage absconding risk with observation and ward safety planning.
-
-Family/cultural:
-
-* Hold family meeting to address parental conflict, mother's inability to manage and father's discharge pressure.
-* Address stigma/confidentiality concerns respectfully.
-
-Disposition:
-
-* Discharge to private dietitian is unsafe while medically unstable.
-* Document medical risk, capacity reasoning, legal basis and family communication.`,
+The family's fear that "everyone will know she is mentally ill" should be handled respectfully, especially given the close religious community. Stigma may be contributing to denial and discharge pressure. I would reassure them about confidentiality while making clear that life-saving care cannot be withheld to avoid shame. My documentation would include the medical instability, capacity reasoning, legal authority, family discussions, absconding plan and why involuntary or coerced feeding, if used, is a proportionate response to imminent medical risk rather than punishment.`,
   },
   {
     id: "CA-005",
@@ -510,31 +449,14 @@ The family are active in a local faith community, and Alex fears being outed pub
       secondary: ["s3", "s4", "s5"],
       lowYield: ["s6"],
     },
-    modelAnswer: `Immediate risk:
+    modelAnswer: `Alex should be approached as a young person at acute suicide risk in the context of family rejection and minority stress, not as a generic depressed adolescent to be returned to parents because they are still a minor. The phrase "I can't survive another night in that house" is a high-risk statement, especially when combined with self-harm, suicidal thoughts and tablets hidden in the bedroom. I would not treat parental attendance as equivalent to safety. The home appears to be part of the risk pathway.
 
-* Assess acute suicide risk: intent, plan, tablets, self-harm, hopelessness, ability to return home and protective supports.
-* Remove access to means and maintain safe observation while assessment occurs.
+Using Alex's requested pronouns is a clinical intervention, not a political courtesy. The stem says Alex asks staff to use "they/them pronouns." I would ensure all staff do so and would document the name and pronouns to reduce further invalidation. The father's statement, "You are not my child if you keep this gender nonsense going," is emotionally rejecting and potentially abusive. It is also a dynamic suicide-risk factor. Discharging Alex back into that environment without careful safety planning would be unsafe.
 
-Gender-affirming care:
+The confidentiality issue is delicate because Alex is 17. They ask staff not to call their parents, while the mother arrives and wants to take "her" home. I would assess Alex's capacity and confidentiality rights, explain the limits of confidentiality where there is serious risk, and involve supports only to the extent necessary for safety. I would not unnecessarily out Alex to family or faith community, particularly because Alex "fears being outed publicly." At the same time, if acute suicide risk requires disclosure to keep them safe, I would explain this transparently and limit the information shared.
 
-* Use Alex's name and pronouns.
-* Recognise family rejection and minority stress as risk drivers, not peripheral issues.
+The Mental Health Act question arises because Alex refuses admission and says "hospital will just call my parents and make it worse." I would first try voluntary, collaborative care: a safety plan, removal of tablets, trusted friend or adult support, youth crisis accommodation, CAMHS crisis team or admission with confidentiality protections. If Alex remains at high risk and cannot collaborate with a safe plan, involuntary assessment may be required under the relevant law. The least restrictive option must be genuinely safe, not simply less inconvenient.
 
-Consent/confidentiality:
-
-* At 17, assess capacity and confidentiality rights.
-* Explain limits of confidentiality where safety requires disclosure.
-* Avoid unnecessary outing to parents or community.
-
-Disposition/legal:
-
-* Do not assume parents are safe discharge supports.
-* Explore safe alternatives: friend, trusted adult, youth crisis accommodation, CAMHS crisis admission.
-* Consider MHA if high risk and voluntary safety plan is not possible.
-
-Family:
-
-* Speak with parents only within confidentiality/safety limits.
-* Document risk, pronouns, confidentiality reasoning and disposition.`,
+I would separately speak with the parents within confidentiality limits, assess whether either parent can provide safe support, and challenge rejecting or invalidating responses as risk factors. I would involve social work, youth mental health, LGBTQIA+ affirming supports and, if necessary, child protection or family violence services. My documentation would quote "I can't survive another night in that house," the tablet access, parental rejection, confidentiality discussion, pronouns, disclosure limits, and why the chosen disposition protects Alex without unnecessary outing or coercion.`,
   },
 ];

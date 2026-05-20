@@ -81,25 +81,15 @@ Peter asks to self-discharge to attend his local pub. His adult daughter says th
       secondary: ["s3", "s4", "s5"],
       lowYield: ["s6"],
     },
-    modelAnswer: `Capacity/medical:
+    modelAnswer: `Peter's refusal cannot be treated as a stable autonomous end-of-life decision without first addressing the acute medical and cognitive context. The stem says he is admitted with "ascites, encephalopathy and variceal bleeding" and that the hepatology team finds him "intermittently confused" and worried he "may deteriorate without treatment." Those phrases make this a fluctuating-capacity problem in a life-threatening medical context, not simply a patient with alcohol dependence choosing to leave. I would first ask hepatology to clarify the immediate consequences of refusing lactulose, blood tests, alcohol withdrawal medication and admission, because capacity is decision-specific and the seriousness and imminence of harm shape both the explanation required and the legal threshold for emergency treatment.
 
-Assess decision-specific capacity to refuse lactulose, bloods, withdrawal treatment and admission. Consider hepatic encephalopathy, intoxication and withdrawal as causes of fluctuating capacity. Clarify immediate medical risk with hepatology.
+The statement "I know I'm dying, so let me drink and leave me alone" needs careful interpretation. It may represent a capacitous values-based refusal in someone with end-stage liver disease, but it may also reflect hepatic encephalopathy, intoxication, withdrawal, depression, demoralisation or hopelessness. I would assess his ability to understand and retain the medical information, appreciate that the risks apply to him, and weigh the competing outcomes of treatment, deterioration, withdrawal and self-discharge. I would also assess suicidality and demoralisation, because a wish to drink and die may be clinically different from a settled palliative preference. If he is encephalopathic or withdrawing, I would expect capacity to fluctuate and would reassess when medically optimised if delay is safe.
 
-Risk/legal:
+His wife's collateral that "when he sobers up he wants treatment" is a critical clue. It suggests the refusal may be state-dependent rather than a long-standing stable value. I would speak with her, with Peter's consent where possible, to clarify prior wishes, previous episodes, what he says when sober, his pattern of relapse, and what treatment goals he has previously accepted. This collateral would not automatically override him, but it would strongly influence my judgement about whether the present refusal represents his authentic capacitous decision.
 
-If capacity absent and deterioration risk is serious, consider emergency treatment authority. If capacity present, respect refusal while offering harm reduction.
+The daughter's request to "force rehab this time" needs a clear consultant response. I would explain that emergency treatment for a life-threatening medical deterioration, treatment of withdrawal, and compulsory long-term rehabilitation are legally and ethically different. The family may be exhausted and entitled to set boundaries, but their distress does not create a power to force rehabilitation. If Peter lacks capacity and deterioration risk is serious, emergency treatment may be justified; if he has capacity, his refusal must be respected even if the family disagrees. That is the core tension between autonomy and beneficence.
 
-Formulation:
-
-Assess depression, demoralisation and suicidality. Use collateral about previous treatment wishes when sober.
-
-Family:
-
-Explain limits of forced rehabilitation versus urgent medical treatment. Support family boundaries and carer distress.
-
-Management:
-
-Addiction medicine input, withdrawal management, relapse prevention, realistic discharge planning and documentation.`,
+My actions would be to assess and document capacity for each refused intervention, clarify urgency with hepatology, treat delirium or withdrawal contributors, involve addiction medicine, and plan harm reduction. If he lacks capacity and faces imminent serious harm, I would support treatment under the applicable emergency or substitute decision framework. If he has capacity, I would not detain him simply because the decision is harmful; instead I would offer withdrawal care, relapse prevention, safer alcohol planning, follow-up, family support and a realistic discharge plan. I would document why the decision was or was not capacitous, how "intermittently confused" affected the assessment, how the wife's collateral was used, and why the final plan was the least restrictive lawful option.`,
   },
   {
     id: "SU-002",
@@ -181,29 +171,15 @@ Kai has not slept for four nights and punched a hole in the wall before ambulanc
       secondary: ["s3", "s4", "s5"],
       lowYield: ["s6"],
     },
-    modelAnswer: `Diagnosis:
+    modelAnswer: `Kai should not be discharged simply because he may sleep and appear calmer after methamphetamine intoxication settles. The registrar's proposed shortcut, that this is "probably just methamphetamine intoxication," misses the longitudinal warning in the stem: his father reports Kai has been "increasingly withdrawn for six months," stopped working, and has been muttering to himself "even during periods when the family believe he was not using drugs." That history means I would formulate substance-induced psychosis versus emerging primary psychosis, not prematurely close the diagnosis on intoxication.
 
-Formulate methamphetamine-induced psychosis versus primary psychotic disorder. Six-month functional decline and symptoms during likely abstinence increase concern for primary psychosis.
+The immediate risk is also not resolved by diagnostic uncertainty. Kai says, "The neighbours have installed cameras in the smoke alarm," and then warns, "If they come in again, I'll be ready." Combined with not sleeping for four nights and punching a hole in the wall, that is a persecutory, threat-based violence formulation. He may not describe a wish to harm someone in general terms, but he is preparing to defend himself against people he believes are surveilling him. I would therefore ensure safe containment in ED, remove access to weapons or objects that could be used as weapons, place him in a low-stimulus area, and make sure staff do not inadvertently reinforce his persecutory beliefs through confrontational security measures.
 
-Risk:
+The positive urine drug screen for "methamphetamine and cannabis" is important, but it should be treated as a risk modifier and diagnostic contributor rather than a full explanation. Methamphetamine and cannabis may precipitate or amplify psychosis, worsen paranoia, reduce sleep and increase impulsivity. I would assess amount, route, timing, pattern, withdrawal, previous episodes during abstinence, medical complications and co-use of alcohol or other substances. The sleep deprivation clue, "has not slept for four nights," is itself a dynamic risk factor because restoring sleep may reduce agitation, but it does not by itself settle the diagnosis or make discharge safe.
 
-Assess violence risk from persecutory beliefs, recent property damage, sleep deprivation and stimulant use. Maintain safe containment until risk improves.
+Collateral from the father is essential because the question turns on timeline. I would ask for detailed collateral about premorbid functioning, the first onset of social withdrawal, periods of abstinence, occupational decline, family history, trauma, mood symptoms, prior odd beliefs, and whether neighbours have been approached or threatened. I would also clarify whether the neighbours are identifiable targets and whether Kai has damaged property before. The phrase "even during periods when the family believe he was not using drugs" is not conclusive, but it is enough to require a careful early psychosis assessment.
 
-Substance/physical:
-
-Assess intoxication, withdrawal, polysubstance use, sleep deprivation and medical complications.
-
-Collateral:
-
-Obtain detailed father/family collateral about timeline, abstinence, functioning and prior symptoms.
-
-Disposition:
-
-Do not discharge simply after sleep. Consider admission or intensive crisis/early psychosis follow-up depending on persistence of psychosis, risk and supports.
-
-Treatment:
-
-Low-stimulus environment, sleep restoration, antipsychotic if indicated, substance intervention and early psychosis referral.`,
+The disposition decision should be based on persistence of psychosis, violence risk, sleep, supports and capacity to engage, not on a single period of sedation or sleep. If persecutory beliefs and threat readiness persist, or if his family cannot supervise safely, I would recommend admission or intensive crisis containment, using involuntary assessment if mental disorder and serious risk criteria are met. If he improves substantially after sleep and observation, discharge would still require family agreement, removal of weapons, early psychosis follow-up, substance-use intervention, relapse plan and clear return criteria. I would document why "discharged once he sleeps" is unsafe as a standalone plan, because sleep may reduce intoxication but does not erase six months of functional decline or the recent threat-based behaviour.`,
   },
   {
     id: "SU-003",
@@ -285,28 +261,16 @@ The midwife wants a neonatal abstinence syndrome plan, but Alana says, "I don't 
       secondary: ["s3", "s4", "s5"],
       lowYield: ["s6"],
     },
-    modelAnswer: `Substance treatment:
+    modelAnswer: `Alana's treatment should be framed around stabilisation and harm reduction, not around making the pregnancy appear drug-free. The registrar's question about reducing methadone before delivery to reduce fetal risk is clinically understandable but potentially harmful. The most important protective clue is Alana's own statement that "methadone is the only thing stopping her from using heroin." That tells me methadone is not the problem to be removed; it is the intervention currently reducing chaotic opioid use, overdose risk, withdrawal cycling, infection risk and fetal instability. I would not reduce methadone solely to prevent neonatal abstinence syndrome if that reduction risks relapse to heroin.
 
-Do not reduce methadone simply to prevent NAS. Maintain stable opioid substitution treatment because it reduces heroin relapse and chaotic use. Review dose adequacy, cravings and sedation.
+The child protection fear is equally central. Alana says, "If child protection hears I'm on methadone, they'll take my baby." If the team responds punitively or vaguely, she may disengage from antenatal care, conceal substance use or avoid hospital at delivery. I would explain transparently that being on methadone maintenance is not itself a reason for removal and can be evidence of engagement and protective treatment. I would also be honest that safety concerns such as unstable housing, family violence, polysubstance use or inability to care for the infant may require child protection involvement. The consultant task is to build trust without making false promises.
 
-Pregnancy/neonatal:
+The midwife's request for a "neonatal abstinence syndrome plan" is appropriate, but the language must be non-stigmatising because Alana says, "I don't want the baby labelled an addict." I would explain that the baby is not an addict; the baby may experience withdrawal or adaptation after birth and therefore needs monitoring, feeding support, soothing strategies, paediatric review and a plan that keeps mother and baby together where safe. This education should be done in a way that strengthens Alana's engagement rather than increasing shame.
 
-Coordinate with maternity, addiction medicine and paediatrics. Develop NAS plan with non-stigmatising education and postnatal monitoring.
+The urine drug screens showing "intermittent benzodiazepine and cannabis use" change the risk formulation. Benzodiazepines with methadone increase sedation, overdose and neonatal risks, and intermittent use may indicate anxiety, trauma, partner influence, diversion or unstable prescribing. I would assess the source, frequency, dose, overdose history, sedation, driving, mental health symptoms and whether a gradual reduction or substitution plan is needed. I would also assess cannabis use without moralising, focusing on function, dependence and perinatal risks.
 
-Child protection/engagement:
+Her partner's heroin use and becoming "verbally aggressive at clinic" introduce maternal, fetal, staff and postnatal infant safety concerns. I would assess family violence, coercion around drug use, safety at home, clinic safety, whether he controls access to dosing or appointments, and whether Alana needs safe accommodation or family violence support. Missing this would lead to an overly narrow methadone/NAS plan while the actual risk to mother and baby remains unaddressed.
 
-Address fear of removal transparently. Explain that engagement, safety planning and stability are protective.
-
-Risk:
-
-Assess benzodiazepine/cannabis use, overdose risk, partner heroin use and family violence. Consider infant safety and postnatal supports.
-
-MDT:
-
-Involve midwife, opioid treatment service, social work, GP, paediatrics and child protection if thresholds met.
-
-Documentation:
-
-Record risk-benefit reasoning, engagement plan, NAS plan and child safety considerations.`,
+My actions would be to coordinate the opioid treatment service, midwifery, obstetrics, paediatrics, GP, addiction medicine and social work around one non-punitive plan. I would use the fact that she attends the dosing clinic regularly, despite having "missed two antenatal appointments," as a strength and build antenatal care around the service she already trusts. I would document the rationale for maintaining methadone, the discussion about NAS, the plan for benzodiazepine/cannabis use, the child protection threshold discussion, partner risk and the supports required to keep Alana and the baby safe.`,
   },
 ];

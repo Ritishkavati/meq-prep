@@ -81,30 +81,15 @@ Mr Roberts is a retired pastor and says he has "made peace with dying." The card
       secondary: ["s3", "s4", "s5"],
       lowYield: ["s6"],
     },
-    modelAnswer: `Capacity:
+    modelAnswer: `Mr Roberts' refusal of urgent valve surgery must be approached as a serious capacity assessment, not as a family vote. His statement, "I understand I may die, but I do not want my last weeks spent in ICU," is coherent and values-based. It shows he is not simply denying risk; he is weighing death against the burdens of intensive care. A capacitous adult can refuse life-saving treatment, and the consultant role is to protect that right if the decision is valid.
 
-* Assess decision-specific capacity to refuse valve surgery.
-* Confirm he understands condition, proposed surgery, benefits, risks, alternatives and likely outcomes without surgery.
-* If he can weigh death against ICU burden, refusal is valid.
+The daughter's concern that he is "depressed since Mum died" is clinically relevant, but it is not proof of incapacity. I would assess depression, grief, demoralisation, delirium and cognitive impairment, because these can affect appreciation and weighing. However, I would not assume that bereavement makes his refusal pathological. I would ask whether his wish is consistent over time, whether he still experiences pleasure or meaning, whether there is hopelessness unrelated to the cardiac illness, and whether he can discuss alternatives. A values-based end-of-life refusal can coexist with grief.
 
-Clinical:
+The medical facts must be clearly understood. The cardiologist says surgery offers a reasonable chance of survival but carries "high risk of stroke and prolonged ventilation." I would ensure Mr Roberts understands both the potential benefit and burdens of surgery, the likely course without surgery, palliative options and the uncertainty involved. Capacity requires realistic information, not a simplified family narrative of "surgery saves him."
 
-* Assess depression, delirium, grief and demoralisation.
-* Do not assume bereavement invalidates decision.
+The family's request to "find him incapable" is ethically problematic. Capacity assessment cannot be outcome-driven to resolve family distress or legal threats. I would explain to the son and daughter that if their father has capacity, they cannot consent on his behalf and clinicians cannot impose surgery. If he lacks capacity, then substitute decision-making would be based on his values and best interests, not simply on the family's wish to prolong life.
 
-Ethics/family:
-
-* Capacity assessment must not be outcome-driven.
-* Explain to family that capacitous refusal of life-saving treatment must be respected.
-* Support family distress.
-
-Cultural/spiritual:
-
-* Explore spiritual values and offer chaplaincy.
-
-Governance:
-
-* Document reasoning and consider ethics/legal consultation given legal threats.`,
+His identity as a retired pastor and his statement that he has "made peace with dying" should be explored as part of his values. I would offer chaplaincy or spiritual support if he wants it. This is not to persuade him either way, but to ensure the decision is supported and settled. Given the son's threat of legal action, I would document carefully and consider ethics or legal consultation, but I would not change my opinion because of pressure. The final consultant position is that respecting autonomy sometimes means allowing a person to refuse treatment others desperately want them to accept, provided the capacity assessment is robust and the decision is informed.`,
   },
   {
     id: "ETH-002",
@@ -186,30 +171,15 @@ His case manager reports Daniel stopped depot medication two months ago and has 
       secondary: ["s3", "s4", "s5"],
       lowYield: ["s6"],
     },
-    modelAnswer: `Immediate risk:
+    modelAnswer: `Daniel's presentation creates a clear tension between confidentiality and protection of an identifiable victim. His statement, "My former manager planted cameras in my walls and I know where he lives," establishes both persecutory delusion and access to a specific target. The later statement, "If police won't act, I will sort him out myself," moves the concern from psychotic belief to potential action. This is not a vague risk to the public; it is a foreseeable risk to a named or identifiable person.
 
-* Treat as high risk to an identifiable victim due to delusional belief, address-seeking, threat and weapon access.
-* Do not rely on confidentiality to avoid action.
+I would not be reassured by his refusal of permission to contact anyone or by his threat, "If you tell him, I will never speak to services again." Therapeutic alliance matters, and unnecessary disclosure can damage engagement. However, confidentiality has limits where there is serious risk to others. I would explain this to Daniel in plain language if safe: I will keep information private where possible, but I cannot keep threats to an identifiable person confidential if disclosure is necessary to prevent harm.
 
-Ethics/legal:
+The collateral makes the risk more urgent. The case manager reports he stopped depot medication two months ago and has been searching the manager's address online. His sister says he has been "drinking heavily" and "carrying a hunting knife." These are dynamic risk factors: relapse, target-seeking, disinhibition and weapon access. I would immediately consider police involvement, welfare/safety response, and urgent mental health assessment. If mental illness is driving serious risk and he refuses voluntary care, I would consider Mental Health Act assessment.
 
-* Explain confidentiality limits.
-* Disclose only necessary information to police and/or relevant parties to manage serious risk, according to law and policy.
-* Consider duty to protect/warn.
+The question is not whether to warn everyone, but what minimum disclosure is necessary and lawful. I would liaise with police and senior service governance, consider warning the former manager through appropriate channels if required, and document exactly what was disclosed and why. I would also assess whether there are workplace security measures, restraining orders or other protective steps. The aim is victim safety, not punishment of Daniel.
 
-Clinical:
-
-* Assess psychotic relapse, medication cessation, alcohol use, weapon access and capacity for safety planning.
-* Consider urgent MHA assessment and treatment.
-
-Collateral/MDT:
-
-* Use case manager and sister collateral.
-* Liaise with police, team leader and governance as needed.
-
-Documentation:
-
-* Record threat, victim, risk formulation, confidentiality reasoning, disclosures and treatment plan.`,
+Clinically, I would assess mental state, insight, medication adherence, alcohol use, weapon access, proximity to the manager, plans, command hallucinations, and capacity to collaborate with safety. I would attempt engagement around medication restart or admission, but I would not allow engagement concerns to paralyse protective action. The defensible consultant response explicitly works through the tension: preserve confidentiality as far as possible, but override it proportionately where a specific, serious and foreseeable risk to an identifiable person exists.`,
   },
   {
     id: "ETH-003",
@@ -291,30 +261,15 @@ Dr K tells you, "I'm going through a divorce; please don't destroy my career." T
       secondary: ["s3", "s4", "s5"],
       lowYield: ["s6"],
     },
-    modelAnswer: `Immediate safety:
+    modelAnswer: `Dr K's conduct must be treated as an immediate patient safety crisis, not a personality conflict or a single bad night. The nurse reports that she "appeared confused, smelled of alcohol, gave IM sedation without medical authorisation, and became verbally abusive when challenged." The ICU transfer of a patient after that medication event means there has been actual patient harm. I would not wait for investigation to conclude before acting on clinical safety. I would ensure Dr K is removed from unsupervised clinical duties immediately, pending fitness-for-duty assessment, and that the patients affected receive urgent medical review.
 
-* Ensure Dr K is removed from unsupervised clinical duties pending fitness-for-duty assessment.
-* Review the patient who received IM sedation and ensure monitoring/adverse event review.
+The CCTV footage and the false documentation are major governance issues. If Dr K documented something false to cover impaired practice, that is a serious professionalism and medico-legal breach beyond mere intoxication. I would preserve all records, secure CCTV footage, document the sequence of events factually, and initiate an internal incident investigation. I would not allow any record alteration or informal resolution that conceals the sequence of harm.
 
-Governance:
+The service director's suggestion to "handle this quietly" and the request to not document formally are ethically unacceptable. Quiet resolution of an impaired clinician who harmed a patient protects the institution at the patient's expense. It may also expose the service to greater liability and breach mandatory reporting obligations. If a reasonable suspicion of health impairment or impaired practice exists, I have professional and possibly legal obligations to report through appropriate channels: the medical board's impaired practitioners pathway, the hospital's medical officer reporting processes, and clinical governance structures.
 
-* Preserve records/CCTV and incident report.
-* Investigate factual sequence including apparent false documentation.
-* Consider mandatory notification if threshold met.
+Dr K deserves procedural fairness. I would offer her access to occupational health and employee support, explain the process and her rights, and ensure she is treated as someone who may be unwell, not only as a misconduct matter. However, fairness does not mean avoiding mandatory reporting. If intoxication on duty and patient harm meet notification thresholds, they must be reported. I would document both that appropriate support was offered and that reporting obligations were followed.
 
-Ethics/professionalism:
-
-* Offer Dr K support, occupational health and procedural fairness.
-* Do not conceal unsafe practice to protect career or workforce.
-
-Team:
-
-* Support nurses who raised concerns.
-* Address hierarchy and speaking-up culture.
-
-Documentation:
-
-* Record facts, actions, patient review, reporting rationale and support offered.`,
+The nurses who raised concerns must be supported and protected. A speaking-up culture does not survive if staff who report impaired colleagues are ignored or isolated. I would acknowledge their actions, debrief the team, address hierarchy concerns, and reinforce that patient safety reporting is expected and protected. My documentation would record the clinical event, patient harm review, immediate safety actions, incident notification, mandatory reporting decision and rationale, support offered to Dr K, and team debrief. The consultant response is not to minimise or manage quietly; it is to act transparently to protect patients and preserve institutional integrity.`,
   },
   {
     id: "ETH-004",
@@ -396,30 +351,15 @@ The patient is a 28-year-old woman with complex trauma and chronic self-harm. Sh
       secondary: ["s3", "s4", "s5"],
       lowYield: ["s6"],
     },
-    modelAnswer: `Immediate containment:
+    modelAnswer: `The registrar's conduct appears to be a serious boundary breach, not therapeutic flexibility. Meeting a patient "after hours at a café" removes the therapy from its professional frame, creates secrecy, dependency and possible exploitation risk, and is especially concerning in a patient with complex trauma and chronic self-harm. I would immediately stop unsupervised contact between the registrar and the patient while the matter is reviewed, and I would arrange urgent clinical support for the patient so the boundary intervention does not feel like abandonment.
 
-* Stop unsupervised registrar contact with the patient pending review.
-* Assess patient safety, self-harm risk and need for urgent support.
+The absence of documentation is also serious. The record has "no notes for the past six sessions," which means there is no defensible account of therapy content, risk assessment, boundaries, transference/countertransference issues or treatment plan. I would not allow retrospective fabrication of notes. I would ask the registrar for a factual chronology, preserve emails and appointment records, and escalate to service governance and the training supervisor.
 
-Governance:
+The registrar's explanation, "She has abandonment issues; I was being flexible and therapeutic," demonstrates poor professional judgement. Flexibility in psychotherapy does not mean private, undocumented, after-hours café meetings. In fact, for a patient with abandonment fears, blurred boundaries may intensify dependency and make later repair more dangerous. I would supervise the registrar firmly, assess insight, remove them from the case, and consider remediation, reporting or disciplinary processes depending on findings.
 
-* Investigate boundary breach and missing documentation.
-* Reconstruct factual chronology without retrospective false notes.
-* Escalate to training director/service governance and consider regulatory obligations depending on findings.
+The patient's statement, "If he gets in trouble, I will cut myself," must be taken seriously but cannot be allowed to determine whether governance occurs. It shows acute self-harm risk during boundary repair. I would meet the patient with another senior clinician, validate distress, explain the need for safe professional boundaries, assess current risk, create a crisis plan and arrange a careful transfer of care. The response should be trauma-informed and transparent, not a quiet disappearance of the registrar.
 
-Patient care:
-
-* Provide transparent, trauma-informed explanation to patient.
-* Arrange safe transfer/handover with containment of abandonment/self-harm risk.
-
-Registrar:
-
-* Meet registrar, clarify boundaries, assess insight and consider remediation or removal from therapy duties.
-
-Ethics:
-
-* Do not quietly transfer to protect fellowship application.
-* Document actions, risk, governance escalation and patient support.`,
+The service manager's suggestion of "transferring the patient quietly" because the registrar is applying for fellowship is ethically wrong. Career impact does not justify concealment. I would consider obligations to the training program, employer and regulator depending on severity, exploitation risk and insight. My documentation would include patient safety actions, boundary concerns, missing notes, registrar discussion, governance escalation and the transition plan. The consultant task is to protect the patient without colluding with secrecy or allowing self-harm threats to block necessary professional action.`,
   },
   {
     id: "ETH-005",
@@ -501,26 +441,14 @@ The registrar says, "It was anonymous and I was just venting." The patient's wh�
       secondary: ["s3", "s4", "s5"],
       lowYield: ["s6"],
     },
-    modelAnswer: `Immediate governance:
+    modelAnswer: `The registrar's social media post is a privacy and professionalism breach even though the patient is not named. The key phrase is that the post "includes enough details for ward staff to identify her." Identifiability is what matters. A 22-year-old Māori woman admitted involuntarily yesterday, described as a "manic influencer" with specific TikTok and Queen-related content, is recognisable to staff and potentially others. I would treat this as a reportable privacy incident and ensure the post is removed through proper process, while preserving evidence.
 
-* Treat as a privacy/confidentiality breach because the patient is identifiable.
-* Preserve evidence; do not delete screenshots.
-* Follow privacy incident reporting and social media policy.
+The cultural harm is not abstract. The whānau have already said, "You people are making fun of her." The post confirms and amplifies mistrust during an involuntary admission, where the patient is already vulnerable and subject to coercive power. I would arrange a culturally safe disclosure and repair process with the patient and whānau, involving Māori health support if available. The goal would be to acknowledge harm, explain what is being done, and rebuild trust without becoming defensive.
 
-Patient/whānau:
+The registrar's explanation, "It was anonymous and I was just venting," shows minimisation and poor insight. Venting online about identifiable patients is not acceptable professional coping. I would meet with the registrar, address confidentiality, social media policy, cultural safety and professionalism, and escalate to training and service governance. Depending on policy and severity, regulatory notification or formal remediation may be required.
 
-* Consider open disclosure with patient and whānau in a culturally safe way.
-* Acknowledge harm and rebuild trust, especially given involuntary admission.
+The service manager's request to "delete screenshots" and handle it informally because "we don't need another complaint" is a governance red flag. Deleting evidence would undermine transparency and could worsen medico-legal risk. I would preserve screenshots, complete privacy incident reporting, notify appropriate hospital privacy/governance staff and seek advice on disclosure obligations. Complaint avoidance cannot determine response.
 
-Registrar:
-
-* Remove/ensure deletion of public post through proper process.
-* Meet registrar, address minimisation, assess insight and escalate to training/service governance.
-* Consider remediation or regulatory notification depending on severity and policy.
-
-Systems:
-
-* Do not handle quietly to avoid complaint.
-* Document actions, reporting, disclosure plan and supervision response.`,
+My documentation would be factual: what was posted, how the patient was identifiable, what evidence was preserved, what disclosure occurred, what support was offered to patient and whānau, and what action was taken with the registrar. The consultant role is to protect patient dignity, especially for an involuntary Māori patient, while using the incident to strengthen professional culture rather than hide embarrassment.`,
   },
 ];

@@ -81,34 +81,15 @@ Mrs Chen was reported to police after reversing into a parked car and driving aw
       secondary: ["s3", "s4", "s5"],
       lowYield: ["s6"],
     },
-    modelAnswer: `Immediate concerns:
+    modelAnswer: `Mrs Chen's case is not a request for a simple dementia letter; it is a complex assessment involving public safety, decision-specific capacity, language, family conflict and possible elder financial abuse. The driving concern is immediate because police reported she reversed into a parked car, drove away and later said, "The road moved behind me." That phrase suggests impaired perception, cognition or insight while driving, and the collision demonstrates risk to her and the public. I would advise immediate cessation of driving pending formal licensing process or on-road assessment, and I would notify the licensing authority if required by local law.
 
-* Do not provide a broad incapacity letter for asset transfer.
-* Assess possible elder financial abuse and conflict of interest.
+The daughter's request for a letter so the family can sell the house "before the nursing home takes everything" is a red flag. It may reflect ordinary family anxiety about aged-care costs, but it may also indicate financial conflict of interest or elder financial abuse. The son says the daughter has changed bank access and stopped Mrs Chen attending mah-jong. Mrs Chen says, "My daughter only wants my money." I would not provide a global incapacity letter for asset transfer. I would maintain neutrality, interview Mrs Chen separately and consider referral to elder abuse, social work or legal services if concerns persist.
 
-Communication/cultural:
+The use of the son as interpreter is unacceptable in this context. The stem says Mrs Chen speaks through "her son, who is interpreting," but he is involved in the family conflict. For capacity and abuse assessment, a professional Mandarin interpreter is essential. Without this, her expressed wishes, fears and understanding cannot be reliably assessed, and the clinician risks being drawn into family dynamics.
 
-* Use a professional Mandarin interpreter, not family.
-* Interview Mrs Chen separately and assess her wishes, fears and understanding.
+The GP asks whether I can "declare Mrs Chen globally incapable," but capacity is decision-specific. I would separately assess capacity for driving, financial decisions, accommodation and health care. Dementia may impair one domain more than another. Functional evidence matters: the driving incident, bank access, social restriction, cognition and daily living function all need assessment. I would gather collateral from GP, police, family members, bank/social work information where appropriate, and cognitive/functional assessments.
 
-Capacity:
-
-* Assess decision-specific capacity: driving, finances, accommodation and health.
-* Use cognitive, functional and collateral evidence.
-
-Driving:
-
-* Assess public safety risk after collision.
-* Advise cessation/formal assessment and notify licensing authority if required.
-
-Family/safeguarding:
-
-* Clarify EPOA scope, bank access changes and social isolation.
-* Consider elder abuse service/legal/social work involvement.
-
-Documentation:
-
-* Document interpreter use, capacity domains, driving advice, abuse concerns and rationale.`,
+The ethical tension is between protecting Mrs Chen from harm and preserving autonomy, cultural participation and social connection. Stopping mah-jong may be protective if driving or wandering is unsafe, but it may also be coercive isolation. I would explore whether transport alternatives could maintain social participation safely. My documentation would record professional interpreter use, separate interview, capacity domains, driving advice, financial abuse concerns, family conflict and the limits of my opinion. A consultant answer must resist being used as a tool for either side of the family dispute.`,
   },
   {
     id: "OA-002",
@@ -190,28 +171,15 @@ Mr Patel speaks Gujarati at home but has been assessed only in English. His wife
       secondary: ["s3", "s4", "s5"],
       lowYield: ["s6"],
     },
-    modelAnswer: `Diagnosis:
+    modelAnswer: `Mr Patel should be treated as having delirium until proven otherwise, not dismissed as someone who has "just got dementia." The daughter's statement, "Dad was doing his own shopping last week," is the crucial clue. Acute deterioration from independent functioning to confusion, line-pulling and paranoia over days is delirium, not ordinary dementia progression. If the team mislabels this as dementia, they will miss reversible causes and may escalate restraint or antipsychotic medication unnecessarily.
 
-* Treat as delirium until proven otherwise because daughter reports acute change from independent shopping last week.
-* Assess causes: urinary retention, infection, pain, constipation, dehydration, metabolic disturbance and medications.
+The medication chart is itself a likely precipitant. Oxybutynin, amitriptyline, diazepam and PRN promethazine create a heavy anticholinergic and sedative burden, particularly in an older man with urinary retention and falls. I would urgently ask the medical team to review and stop or reduce deliriogenic medications where possible, treat urinary retention, assess infection, pain, constipation, dehydration, hypoxia, electrolytes and other medical precipitants. This is consultation-liaison psychiatry at its core: the psychiatric symptoms are a brain expression of medical illness and medication toxicity.
 
-Medication/physical health:
+The assessment has also been culturally and linguistically weak. Mr Patel "speaks Gujarati at home but has been assessed only in English." Language mismatch can make a delirious patient appear more confused and frightened, and can invalidate cognitive or capacity assessment. I would arrange a professional Gujarati interpreter and involve his wife or daughter for baseline and reorientation, while not relying on them as substitutes for clinical interpretation.
 
-* Urgently reduce anticholinergic/sedative burden: oxybutynin, amitriptyline, diazepam, promethazine.
-* Review falls risk and physical observations.
+The overnight physical restraint after he tried to leave requires review. Restraint may be necessary briefly if there is immediate danger, but it can worsen delirium, fear, injury and loss of dignity. His belief that "the nurses are thieves" may be delirium-related misinterpretation worsened by unfamiliar staff, language barriers, sensory impairment or pain. I would advise least restrictive delirium care: family presence, orientation cues, glasses/hearing aids, sleep-wake support, hydration, mobilisation, pain relief, toileting, low-stimulus environment and one-to-one nursing if needed.
 
-Cultural/communication:
-
-* Use Gujarati interpreter; English-only assessment is inadequate.
-
-Behaviour/safety:
-
-* Minimise restraint; use family presence, orientation, low-stimulus care, hydration, glasses/hearing aids and one-to-one nursing if needed.
-* Antipsychotic only for severe distress or immediate risk, lowest dose, time-limited and monitored.
-
-Governance:
-
-* Document delirium formulation, medication review, restraint rationale/reduction plan and family collateral.`,
+The registrar's request for risperidone "to settle him" should be reframed. Antipsychotics may be used if severe distress or immediate safety risk persists after treating causes and non-pharmacological measures, but they should not be used simply to make investigations easier. If medication is necessary, I would recommend the lowest effective dose, time-limited use, attention to QTc, Parkinsonism, sedation and falls, and daily review. I would document delirium formulation, medical precipitants, medication changes, language needs, restraint minimisation and the rationale for any antipsychotic. The consultant-level response is to lead the ward away from behavioural control and toward delirium treatment.`,
   },
   {
     id: "OA-003",
@@ -293,31 +261,15 @@ Mrs Nguyen has been given PRN quetiapine most nights for two weeks. She has brui
       secondary: ["s3", "s4", "s5"],
       lowYield: ["s6"],
     },
-    modelAnswer: `Formulation:
+    modelAnswer: `Mrs Nguyen's behaviour should not be accepted at face value as aggression requiring sedation. The daughter says, "She was a midwife in Vietnam and would be ashamed being washed by male carers." That single phrase reframes the behaviour. Pushing staff away during personal care may reflect modesty, fear, trauma, pain, inability to understand English instructions, or distress at culturally inappropriate care. The correct consultant response is to formulate the behaviour as communication of unmet need before prescribing regular antipsychotic medication.
 
-* Do not label behaviour simply as aggression.
-* Formulate distress around personal care using dementia, language barrier, modesty, pain and trauma/unmet need.
+The staff request that she "needs chemical restraint" is ethically and clinically concerning. Antipsychotics in dementia carry risks of sedation, falls, stroke, cognitive worsening and mortality. They should not be used for staffing convenience or as a substitute for culturally informed care. I would review the PRN quetiapine use over the last two weeks, ask what target symptom it was treating, whether it helped, what adverse effects occurred, and whether consent and review processes were followed. Regular antipsychotic medication would only be considered if there is severe distress or risk that persists after non-pharmacological strategies, and even then it should be time-limited and monitored.
 
-Cultural safety:
+The bruising on both wrists is a safeguarding signal. The explanation that "staff had to hold her for hygiene" may describe a restraint-related injury. I would not assume abuse, but I would investigate immediately through the facility's incident process, review care notes, speak with staff and family, examine the pattern of bruising, and consider reporting pathways if neglect, excessive restraint or elder abuse is suspected. A vulnerable resident's injuries must not be normalised because care is difficult.
 
-* Use Vietnamese interpreter.
-* Incorporate daughter's collateral: female carers, privacy, explanation before care, culturally familiar routines and food preferences.
+No interpreter has been used, which undermines the entire behavioural assessment. I would arrange a Vietnamese interpreter, use simple culturally familiar communication, and ask the daughter for life-history information: preferred name, food, routines, gender preferences for care, trauma history, sleep pattern, pain cues and meaningful activities. A care plan might include female carers for personal care, privacy, explanation before touch, familiar objects, culturally preferred meals, pain assessment and timing care when she is least distressed.
 
-Restraint/medication:
-
-* Do not approve regular antipsychotic for staffing convenience.
-* Review PRN quetiapine use, adverse effects and actual indication.
-* Antipsychotic only if severe distress/risk persists after non-pharmacological strategies.
-
-Safeguarding:
-
-* Investigate wrist bruising and holding practices.
-* Escalate restraint/elder abuse concerns according to facility and regulatory pathways.
-
-Systems:
-
-* Acknowledge staffing pressure but do not medicalise it through sedation.
-* Document behaviour plan, medication rationale and safeguarding actions.`,
+The facility manager's statement that staffing levels are low creates system pressure, but low staffing is not a clinical indication for sedation. I would acknowledge workforce strain while making clear that medication cannot be used to compensate for unsafe staffing. My documentation would state the cultural formulation, restraint concerns, medication rationale, safeguarding actions and behaviour support plan. A consultant answer protects Mrs Nguyen's dignity and safety while supporting staff with a practical plan that reduces distress rather than simply suppressing behaviour.`,
   },
   {
     id: "OA-004",
@@ -399,26 +351,15 @@ His adult son says ECT is "barbaric" and threatens media involvement. Mr O'Brien
       secondary: ["s3", "s4", "s5"],
       lowYield: ["s6"],
     },
-    modelAnswer: `Clinical urgency:
+    modelAnswer: `Mr O'Brien is severely medically and psychiatrically unwell, and the ECT question arises because of urgency rather than convenience. The stem says he has lost 12 kg, is refusing food and says, "I deserve to die because I ruined my family." That combination of severe melancholic depression, psychotic guilt, nutritional compromise and possible suicidal/self-neglect risk makes ECT a clinically appropriate treatment to consider urgently. I would ensure immediate physical care with hydration, nutrition, medical monitoring and assessment of suicide risk while the legal consent process is clarified.
 
-* Severe psychotic/melancholic depression with 12 kg weight loss and food refusal is potentially life-threatening.
-* ECT is clinically appropriate to consider urgently.
+His statement, "Do whatever my wife says; I cannot think," does not create valid consent from the wife. It suggests possible incapacity due to depression, psychomotor retardation, hopelessness or psychotic guilt. I would assess his capacity to consent to ECT specifically: can he understand what ECT is, why it is being recommended, its benefits, risks, alternatives and consequences of refusing; can he retain and weigh that information; and is his decision distorted by delusional guilt? If he lacks capacity, the team must follow the jurisdiction-specific ECT legal pathway, which may involve tribunal or substitute decision safeguards. It should not place the burden on his wife to "sign his brain away."
 
-Capacity/legal:
+His wife's phrase, "I want him better, but I can't be responsible for signing his brain away," is important. She is distressed and should be supported, not made to feel personally responsible for authorising a feared treatment. I would meet with her, explain the legal process, the clinical rationale, expected benefits, risks including cognitive side effects, and monitoring. Her views about his values and prior wishes are relevant, but the legal framework must guide consent.
 
-* Assess Mr O'Brien's capacity to consent to ECT; do not assume wife can simply consent.
-* If capacity absent, follow jurisdiction-specific ECT legislation/tribunal or substitute decision pathway.
-* Continue physical support: nutrition, hydration and medical monitoring.
+The son's statement that ECT is "barbaric" and his threat of media involvement should not delay necessary care, but it does require careful communication and documentation. I would hold a family meeting if appropriate, correct misinformation without defensiveness, and make clear that clinical decisions will be based on Mr O'Brien's illness, capacity, legal safeguards and best interests or expressed wishes. Media threats should prompt governance support, not defensive avoidance of treatment.
 
-Family/cultural:
-
-* Support wife and avoid placing sole responsibility on her.
-* Meet family to explain ECT benefits, risks, safeguards and urgency.
-* Address Catholic/spiritual concerns and offer chaplain support.
-
-Governance:
-
-* Document capacity assessment, legal process, family discussions, media threat and rationale for treatment plan.`,
+His question about whether ECT is "punishment" must be explored culturally and spiritually. As a Catholic man with psychotic guilt, he may be interpreting treatment through a lens of sin and punishment. I would offer chaplaincy and explain that ECT is a medical treatment for severe depression, not punishment or moral judgement. My documentation would include the severity of depression, physical risk, capacity assessment, ECT legal pathway, family concerns, spiritual support and risk-benefit reasoning. The consultant role is to move the case forward safely while protecting autonomy, legal safeguards and family trust.`,
   },
   {
     id: "OA-005",
@@ -500,28 +441,14 @@ Mrs Davies is mildly drowsy on opioids but can describe the surgery, the possibi
       secondary: ["s3", "s4", "s5"],
       lowYield: ["s6"],
     },
-    modelAnswer: `Capacity:
+    modelAnswer: `Mrs Davies' refusal of palliative surgery may well be a valid capacitous refusal, and the family conflict should not be allowed to convert it automatically into a psychiatric incapacity finding. Her statement, "More days in ICU is not living," is a coherent values-based expression. She is weighing survival time against the burden of high-risk surgery, possible ICU admission and quality of life. A consultant assessment should respect that possibility while still checking for delirium, depression, pain, medication effects and coercion.
 
-* Assess decision-specific capacity for refusing palliative surgery.
-* Optimise assessment timing given opioid drowsiness, but mild drowsiness does not equal incapacity.
-* If she understands, appreciates and weighs risks, her refusal should be respected.
+The opioid issue requires nuance. The stem says she is "mildly drowsy on opioids." That should prompt assessment at the best possible time, review of sedation, pain control and delirium contributors, but mild drowsiness alone does not prove incapacity. I would ask the team to optimise the timing of assessment, ensure she is comfortable and as alert as possible, and then assess whether she understands the bowel obstruction, proposed surgery, chance of benefit, risk of dying without it, and likely burdens of surgery. Capacity is decision-specific and can exist even in a palliative patient on opioids.
 
-Clinical formulation:
+The son's statement, "She is depressed and you must make her have the operation," reflects distress but does not determine capacity. I would screen for depression, demoralisation and delirium, but I would not assume that refusing burdensome treatment equals depression. The daughter's collateral that her mother "has always valued independence and previously said she would not want burdensome treatment" supports the possibility that the refusal is consistent with long-held values. I would explore Mrs Davies' values directly and integrate prior expressed wishes.
 
-* Screen for delirium, depression, demoralisation and uncontrolled pain.
-* Assess whether refusal is consistent with long-held values and goals.
+The family asks me to "declare her incapable because they cannot agree," and that is the ethical hinge. Capacity assessment is not a tool to resolve family conflict. If Mrs Davies has capacity, her decision stands even if the family disagrees. If she lacks capacity, then substitute decision-making or best-interests processes apply, and prior values become central. I would explain this clearly in a family meeting, support the son's distress and help the team avoid framing the issue as psychiatry deciding who in the family is right.
 
-Ethics/family:
-
-* Explain to family that capacitous refusal of life-prolonging treatment is valid.
-* Support son and daughter through family meeting and palliative care involvement.
-
-Cultural/spiritual:
-
-* Facilitate access to her monk before final decision if she wishes.
-
-Governance:
-
-* Document capacity findings, values, family views, spiritual request and agreed goals-of-care plan.`,
+Her request to speak with "her monk" is clinically relevant. Spiritual support may help her make a settled decision consistent with her Buddhist values. I would facilitate that contact before finalising the decision if time allows, while clarifying surgical urgency with the team. My documentation would describe capacity findings, opioid/delirium considerations, depression screen, values, family views, spiritual request and the final goals-of-care plan. The consultant-level conclusion is that life-prolonging treatment can be refused by a capacitous person, and the role of psychiatry is to protect the validity of the decision, not to rescue the family from disagreement.`,
   },
 ];
