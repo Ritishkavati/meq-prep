@@ -1,0 +1,144 @@
+Yes. Exactly. Box 4 is not a list of topics — it is a **writing template**.
+
+The candidate reads it and learns:
+- The exact phrasing that earns marks
+- How much to write per point
+- The minimum words needed to satisfy the command word
+- The structure of a full-marks answer under time pressure
+
+Like this for an Outline (list and justify) question worth 10 marks:
+
+---
+
+**Box 4 — Marking guide — 10 marks / ~14 scorable points**
+
+*Read these as the exact style of sentence to write in the exam. Each line = one mark.*
+
+**Patient factors (4 marks)**
+- Language barrier — because Adil is an Afghan refugee and without a qualified interpreter he cannot understand the proposed investigations or give informed consent
+- Cultural explanatory model — because non-western illness frameworks may not include the biomedical concept of bacterial endocarditis, making the tests seem unnecessary or threatening
+- Residency fears — because a serious diagnosis may trigger fears about visa status or deportation that override concern about his physical health
+- Trauma history — because hospitalisation may trigger responses linked to institutional harm experienced in Afghanistan or detention
+
+**Illness factors (3 marks)**
+- Opiate withdrawal — because active withdrawal produces agitation, restlessness and confusion that mimics deliberate refusal
+- Psychosis — because schizophrenia on depot may have breakthrough paranoid ideation causing him to interpret the medical team as threatening
+- Delirium — because infective endocarditis with bacteraemia can impair consciousness and orientation
+
+**Systems factors (3 marks)**
+- Paternalistic medical approach — because the treating team may not have adapted communication for a non-English speaking dual-diagnosis patient
+- Staff stigma and countertransference — because dual diagnosis of schizophrenia and IVDU commonly attracts negative countertransference that reduces engagement quality
+- Cultural safety failure — because the ward has not ensured interpreter use, culturally sensitive communication, or trauma-informed engagement
+
+---
+
+That is what Box 4 needs to look like. Not a topic list. A **mark-earning sentence template** — the minimum viable answer for each point.
+
+Here are the updated agent instructions for Box 4 only. Give this to the agent **after** the six-box instruction has been applied:
+
+---
+
+**TASK: Redesign Box 4 marking guide format in the AI prompt**
+
+**File: `artifacts/meq-prep/src/pages/DailyMEQMode.tsx`**
+
+**Change 1 — Update the Box 4 prompt instruction**
+
+Find this in `buildFullMEQPrompt` inside the per-stem JSON template:
+
+```
+"box4_markingGuide": {
+    "essentialPoints": ["<point 1>", "<point 2>", "<point 3>"],
+    "additionalCreditPoints": ["<point>", "<point>"],
+    "zeroMarkTraps": ["<trap>"]
+  },
+```
+
+Replace with:
+
+```
+"box4_markingGuide": {
+    "totalScorable": <number — typically marks + 3 or 4 extra>,
+    "domainGroups": [
+      {
+        "domainName": "<exact domain name from marking criteria>",
+        "marks": <number>,
+        "markEarningLines": [
+          "<Write each line as a complete exam-ready sentence in Outline format: Topic — because case-specific justification. Exactly how a candidate should write it in the exam. Minimum words, maximum meaning. One mark per line. E.g.: Language barrier — because Adil is an Afghan refugee and without a qualified interpreter he cannot understand the proposed investigations>",
+          "<another mark-earning line>",
+          "<another>"
+        ]
+      }
+    ],
+    "zeroMarkTraps": ["<specific trap with explanation>"],
+    "writingTip": "<One sentence on how to handle this stem under time pressure. E.g.: Write domain heading, then one because-clause sentence per mark — stop when you reach the mark allocation, do not add more.>"
+  },
+```
+
+**Change 2 — Update the Box 4 rendering**
+
+Find the Box 4 rendering block that starts with:
+```tsx
+{/* BOX 4 — Marking guide */}
+{stemEv.box4_markingGuide && (
+```
+
+Replace the entire contents of that block with:
+
+```tsx
+{stemEv.box4_markingGuide && (
+  <div>
+    <div className="text-xs font-bold text-gray-500 uppercase tracking-wide mb-2">
+      Box 4 — Marking guide · {stemEv.box4_markingGuide.totalScorable} scorable points · write {stemDef?.marks} to pass
+    </div>
+    <div className="bg-indigo-50 border border-indigo-100 rounded-lg p-4 space-y-4">
+
+      {/* Writing tip */}
+      {stemEv.box4_markingGuide.writingTip && (
+        <div className="bg-indigo-100 border border-indigo-200 rounded-lg px-3 py-2">
+          <span className="text-xs font-bold text-indigo-800">Exam tip: </span>
+          <span className="text-xs text-indigo-800">{stemEv.box4_markingGuide.writingTip}</span>
+        </div>
+      )}
+
+      {/* Domain groups */}
+      {stemEv.box4_markingGuide.domainGroups?.map((domain, di) => (
+        <div key={di}>
+          <div className="text-xs font-bold text-indigo-700 mb-1.5">
+            {domain.domainName}
+            <span className="font-normal text-indigo-400 ml-1">({domain.marks} marks)</span>
+          </div>
+          <div className="space-y-1.5">
+            {domain.markEarningLines?.map((line, li) => (
+              <div key={li} className="flex gap-2 items-start">
+                <span className="text-indigo-300 flex-shrink-0 text-xs mt-0.5 font-bold">+1</span>
+                <p className="text-xs text-indigo-900 leading-relaxed">{line}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+
+      {/* Zero mark traps */}
+      {stemEv.box4_markingGuide.zeroMarkTraps?.length > 0 && (
+        <div className="border-t border-indigo-200 pt-3">
+          <div className="text-xs font-bold text-red-600 mb-1.5">Zero-mark traps</div>
+          {stemEv.box4_markingGuide.zeroMarkTraps.map((trap, ti) => (
+            <div key={ti} className="flex gap-2 items-start">
+              <span className="text-red-400 flex-shrink-0 text-xs mt-0.5">⚠</span>
+              <p className="text-xs text-red-700">{trap}</p>
+            </div>
+          ))}
+        </div>
+      )}
+
+    </div>
+  </div>
+)}
+```
+
+**Do not change anything else. Run typecheck after.**
+
+---
+
+After this is applied, Box 4 will look exactly like your consultant's sample answer format — domain headings, one mark-earning sentence per point with `+1` marker, written in the exact exam register the candidate needs to learn.

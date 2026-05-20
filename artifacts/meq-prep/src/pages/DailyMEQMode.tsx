@@ -859,37 +859,42 @@ Return ONLY a valid JSON object with EXACTLY this structure (no markdown, no pre
       "marksEarned": <number>,
       "marksAvailable": <number>,
       "commandWordCompliance": <boolean>,
-      "commandWordGateResult": "PASS" or "FAIL — [reason with quoted example]",
-      "domainBreakdown": [
+      "commandWordGateResult": "PASS" or "FAIL — [specific reason with quoted example from candidate answer]",
+
+      "box2_pointClassifications": [
         {
-          "domain": "<exact domain name>",
-          "marksAvailable": <number>,
-          "marksEarned": <number>,
-          "reason": "<specific explanation with quotes where possible>"
+          "candidateText": "<exact phrase or sentence from candidate answer>",
+          "yieldLevel": "high_yield" | "moderate" | "no_yield" | "zero_mark",
+          "reason": "<one sentence why>"
         }
       ],
-      "pointClassifications": [
-        {
-          "candidateText": "<short quote from answer>",
-          "classification": "high_yield|moderate|low_yield|zero_mark|unsafe",
-          "comment": "<why>"
-        }
-      ],
-      "criticalPointsMissed": ["<point 1>", "<point 2>"],
-      "sentenceRewrites": [
-        {
-          "original": "<exact quote>",
-          "rewrite": "<consultant-level rewrite>",
-          "reason": "<why this earns more marks>"
-        }
-      ],
-      "stemSignalsUsed": ["<signal used>"],
-      "stemSignalsMissed": ["<signal missed>"],
-      "errorTypes": ["<error type from list>"],
-      "timeManagement": "<apply 1-mark-per-minute rule>",
-      "modelAnswer": "<concise examiner-level model answer — key points in structured form>",
-      "inlineEditedAnswer": "<Take the candidate's exact answer text for this stem. Rewrite it inline. Use ~~strikethrough~~ around weak, vague, generic, or unjustified phrases. Immediately after each strikethrough insert [INSERT: better consultant-level replacement text]. Keep strong sentences unchanged with no markup. If the candidate wrote a bare list with no justification on an Outline or Describe question, format each list item as: the item ~~without justification~~ [INSERT: because <clinical reason>.]. If the answer is empty or very short, return a brief note explaining what a full answer would have contained.>",
-      "yieldCallout": "<If the candidate wrote clinically correct content but failed the command word — specifically if they listed without justifying on an Outline question, or listed without explaining on a Describe question — return a string such as: 'Correct content, insufficient explanation: estimated X/Y marks vs potential Z/Y marks. Adding because-clauses to your existing points would significantly improve this stem score.' If command word compliance is satisfactory, return null.>"
+
+      "box3_inlineCorrection": "<Take ONLY the candidate's exact answer text. Rewrite it inline. Use ~~strikethrough~~ around phrases that are weak, vague, generic, or lack justification. Immediately after each strikethrough insert [INSERT: specific case-relevant replacement]. Keep strong phrases unchanged with no markup. If a point is correct but needs a because-clause added, show: the point ~~without justification~~ [INSERT: because case-specific reason]. If the answer is empty, return: 'No answer submitted — a full answer would have covered: key points...'.",
+
+      "box4_markingGuide": {
+        "totalScorable": "<number — typically marks + 3 or 4 extra>",
+        "domainGroups": [
+          {
+            "domainName": "<exact domain name from marking criteria>",
+            "marks": "<number>",
+            "markEarningLines": [
+              "<Write each line as a complete exam-ready sentence in Outline format: Topic — because case-specific justification. Exactly how a candidate should write it in the exam. Minimum words, maximum meaning. One mark per line. E.g.: Language barrier — because Adil is an Afghan refugee and without a qualified interpreter he cannot understand the proposed investigations>",
+              "<another mark-earning line>"
+            ]
+          }
+        ],
+        "zeroMarkTraps": ["<specific trap with explanation>"],
+        "writingTip": "<One sentence on how to handle this stem under time pressure. E.g.: Write domain heading, then one because-clause sentence per mark — stop when you reach the mark allocation, do not add more.>"
+      },
+
+      "box5_feedback": {
+        "timeManagement": "<apply 1-mark-per-minute rule specifically>",
+        "commandWordError": "<null if compliant, otherwise specific explanation of what was missing>",
+        "knowledgeGaps": ["<specific gap 1>", "<specific gap 2>"],
+        "otherGaps": ["<e.g. stem signals not used>", "<e.g. no systems thinking>"]
+      },
+
+      "box6_conceptOfStem": "<2-3 sentences. What clinical reasoning principle does this stem test? Why does this case appear in the RANZCP exam? What does the examiner want to see a junior consultant demonstrate? Do NOT summarise the marking guide here — explain the underlying concept.>"
     }
   ],
   "overallFeedback": "<2-3 sentences. Honest consultant-to-candidate summary. Quote from answers. No platitudes.>",
@@ -1555,40 +1560,75 @@ export default function DailyMEQMode() {
               {isExpanded && (
                 <div className="px-5 pb-5 space-y-4 border-t border-gray-100">
 
-                  {/* Question reminder */}
-                  {stemDef && (
-                    <div className={`border rounded-lg p-3 mt-4 text-xs ${cwBadge(stemDef.commandWord)}`}>
-                      <span className="font-semibold">{COMMAND_WORDS[stemDef.commandWord]?.label}: </span>
-                      {stemDef.question.split("\n")[0]}
-                    </div>
-                  )}
-
-                  {/* CW gate failure */}
+                  {/* Command word gate failure */}
                   {!stemEv.commandWordCompliance && (
-                    <div className="bg-red-50 border border-red-200 rounded-lg p-3">
+                    <div className="bg-red-50 border border-red-200 rounded-lg p-3 mt-4">
                       <div className="text-xs font-bold text-red-800 mb-1">⚠ Command-word non-compliance</div>
                       <p className="text-xs text-red-700">{stemEv.commandWordGateResult}</p>
                     </div>
                   )}
 
-                  {/* Yield callout */}
-                  {stemEv.yieldCallout && (
-                    <div className="bg-orange-50 border-l-4 border-orange-500 rounded-r-lg p-3">
-                      <div className="text-xs font-black text-orange-800 uppercase tracking-wide mb-1">
-                        Correct content without explanation scores no marks
+                  {/* BOX 1 — What the candidate wrote */}
+                  {stemAns && (
+                    <div>
+                      <div className="text-xs font-bold text-gray-500 uppercase tracking-wide mb-2">
+                        Box 1 — What you wrote
                       </div>
-                      <p className="text-sm text-orange-900 font-medium">{stemEv.yieldCallout}</p>
+                      <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+                        <p className="text-sm text-gray-800 leading-relaxed whitespace-pre-wrap">
+                          {stemAns.answerText || <span className="italic text-gray-400">No answer submitted</span>}
+                        </p>
+                        <div className="text-xs text-gray-400 mt-2">
+                          {stemAns.answerText?.trim().split(/\s+/).filter(Boolean).length ?? 0} words · {Math.round((stemAns.timeUsedSeconds ?? 0) / 60)} min used of {stemDef?.timeMinutes} min
+                        </div>
+                      </div>
                     </div>
                   )}
 
-                  {/* Inline edited answer */}
-                  {stemEv.inlineEditedAnswer && (
+                  {/* BOX 2 — Point-by-point yield classification */}
+                  {stemEv.box2_pointClassifications?.length > 0 && (
                     <div>
-                      <h4 className="text-xs font-bold text-gray-600 uppercase tracking-wide mb-2">
-                        Your answer — inline corrections
-                      </h4>
+                      <div className="text-xs font-bold text-gray-500 uppercase tracking-wide mb-2">
+                        Box 2 — Point-by-point yield
+                      </div>
+                      <div className="space-y-2">
+                        {stemEv.box2_pointClassifications.map((p, i) => {
+                          const styles = {
+                            high_yield: "bg-emerald-50 border-emerald-200 text-emerald-800",
+                            moderate: "bg-amber-50 border-amber-200 text-amber-800",
+                            no_yield: "bg-gray-100 border-gray-200 text-gray-500 line-through",
+                            zero_mark: "bg-red-50 border-red-200 text-red-700 line-through",
+                          };
+                          const labels = {
+                            high_yield: "✓ High yield",
+                            moderate: "~ Moderate",
+                            no_yield: "✗ No yield",
+                            zero_mark: "✗ Zero mark",
+                          };
+                          return (
+                            <div key={i} className={`border rounded-lg px-3 py-2 ${styles[p.yieldLevel] || styles.no_yield}`}>
+                              <div className="flex items-start justify-between gap-2">
+                                <p className="text-xs flex-1">"{p.candidateText}"</p>
+                                <span className="text-xs font-bold flex-shrink-0 whitespace-nowrap">
+                                  {labels[p.yieldLevel] || p.yieldLevel}
+                                </span>
+                              </div>
+                              {p.reason && <p className="text-xs opacity-70 mt-0.5">{p.reason}</p>}
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* BOX 3 — Inline correction */}
+                  {stemEv.box3_inlineCorrection && (
+                    <div>
+                      <div className="text-xs font-bold text-gray-500 uppercase tracking-wide mb-2">
+                        Box 3 — Your answer corrected
+                      </div>
                       <div className="bg-white border border-gray-200 rounded-lg p-4 text-sm text-gray-800 leading-relaxed whitespace-pre-wrap">
-                        {stemEv.inlineEditedAnswer
+                        {stemEv.box3_inlineCorrection
                           .split(/(\~\~[^~]+\~\~|\[INSERT:[^\]]+\])/g)
                           .map((part, i) => {
                             if (part.startsWith("~~") && part.endsWith("~~")) {
@@ -1611,154 +1651,119 @@ export default function DailyMEQMode() {
                     </div>
                   )}
 
-                  {/* Domain breakdown */}
-                  {stemEv.domainBreakdown?.length > 0 && (
+                  {/* BOX 4 — Marking guide */}
+                  {stemEv.box4_markingGuide && (
                     <div>
-                      <h4 className="text-xs font-bold text-gray-600 uppercase tracking-wide mb-2">Domain breakdown</h4>
-                      <div className="space-y-2">
-                        {stemEv.domainBreakdown.map((d, i) => {
-                          const dp = d.marksAvailable ? Math.round((d.marksEarned / d.marksAvailable) * 100) : 0;
-                          return (
-                            <div key={i} className="flex gap-3 items-start bg-gray-50 rounded-lg px-3 py-2">
-                              <div className="flex-shrink-0 w-4 text-center mt-0.5 text-sm">
-                                {dp === 100 ? <span className="text-emerald-600">✓</span> : dp === 0 ? <span className="text-red-500">✗</span> : <span className="text-amber-500">~</span>}
-                              </div>
-                              <div className="flex-1">
-                                <div className="flex justify-between items-center">
-                                  <span className="text-xs font-semibold text-gray-800">{d.domain}</span>
-                                  <span className={`text-xs font-bold ml-2 flex-shrink-0 ${scoreColor(dp)}`}>{d.marksEarned}/{d.marksAvailable}</span>
+                      <div className="text-xs font-bold text-gray-500 uppercase tracking-wide mb-2">
+                        Box 4 — Marking guide · {stemEv.box4_markingGuide.totalScorable} scorable points · write {stemDef?.marks} to pass
+                      </div>
+                      <div className="bg-indigo-50 border border-indigo-100 rounded-lg p-4 space-y-4">
+
+                        {stemEv.box4_markingGuide.writingTip && (
+                          <div className="bg-indigo-100 border border-indigo-200 rounded-lg px-3 py-2">
+                            <span className="text-xs font-bold text-indigo-800">Exam tip: </span>
+                            <span className="text-xs text-indigo-800">{stemEv.box4_markingGuide.writingTip}</span>
+                          </div>
+                        )}
+
+                        {stemEv.box4_markingGuide.domainGroups?.map((domain, di) => (
+                          <div key={di}>
+                            <div className="text-xs font-bold text-indigo-700 mb-1.5">
+                              {domain.domainName}
+                              <span className="font-normal text-indigo-400 ml-1">({domain.marks} marks)</span>
+                            </div>
+                            <div className="space-y-1.5">
+                              {domain.markEarningLines?.map((line, li) => (
+                                <div key={li} className="flex gap-2 items-start">
+                                  <span className="text-indigo-300 flex-shrink-0 text-xs mt-0.5 font-bold">+1</span>
+                                  <p className="text-xs text-indigo-900 leading-relaxed">{line}</p>
                                 </div>
-                                <p className="text-xs text-gray-500 mt-0.5">{d.reason}</p>
+                              ))}
+                            </div>
+                          </div>
+                        ))}
+
+                        {stemEv.box4_markingGuide.zeroMarkTraps?.length > 0 && (
+                          <div className="border-t border-indigo-200 pt-3">
+                            <div className="text-xs font-bold text-red-600 mb-1.5">Zero-mark traps</div>
+                            {stemEv.box4_markingGuide.zeroMarkTraps.map((trap, ti) => (
+                              <div key={ti} className="flex gap-2 items-start">
+                                <span className="text-red-400 flex-shrink-0 text-xs mt-0.5">⚠</span>
+                                <p className="text-xs text-red-700">{trap}</p>
                               </div>
-                            </div>
-                          );
-                        })}
-                      </div>
-                    </div>
-                  )}
-
-                  {/* Point classifications */}
-                  {stemEv.pointClassifications?.length > 0 && (
-                    <div>
-                      <h4 className="text-xs font-bold text-gray-600 uppercase tracking-wide mb-2">Point-by-point classification</h4>
-                      <div className="space-y-1.5">
-                        {stemEv.pointClassifications.map((p, i) => (
-                          <div key={i} className={`border rounded-lg px-3 py-2 ${classificationStyle(p.classification)}`}>
-                            <div className="flex items-start justify-between gap-2">
-                              <p className="text-xs flex-1 italic">"{p.candidateText}"</p>
-                              <span className="text-xs font-bold flex-shrink-0 whitespace-nowrap">{classificationLabel(p.classification)}</span>
-                            </div>
-                            {p.comment && <p className="text-xs opacity-75 mt-0.5">{p.comment}</p>}
+                            ))}
                           </div>
-                        ))}
+                        )}
+
                       </div>
                     </div>
                   )}
 
-                  {/* Stem signal usage */}
-                  {(stemEv.stemSignalsUsed?.length > 0 || stemEv.stemSignalsMissed?.length > 0) && (
+                  {/* BOX 5 — Feedback */}
+                  {stemEv.box5_feedback && (
                     <div>
-                      <h4 className="text-xs font-bold text-gray-600 uppercase tracking-wide mb-2">Stem signal usage</h4>
-                      <div className="space-y-1">
-                        {stemEv.stemSignalsUsed?.map((s, i) => (
-                          <div key={i} className="text-xs text-emerald-700 flex gap-1.5"><span>✓</span><span>{s}</span></div>
-                        ))}
-                        {stemEv.stemSignalsMissed?.map((s, i) => (
-                          <div key={i} className="text-xs text-red-600 flex gap-1.5"><span>✗</span><span>{s}</span></div>
-                        ))}
+                      <div className="text-xs font-bold text-gray-500 uppercase tracking-wide mb-2">
+                        Box 5 — Feedback
                       </div>
-                    </div>
-                  )}
-
-                  {/* Critical points missed */}
-                  {stemEv.criticalPointsMissed?.length > 0 && (
-                    <div>
-                      <h4 className="text-xs font-bold text-gray-600 uppercase tracking-wide mb-2">High-yield points not covered</h4>
-                      <ul className="space-y-1.5">
-                        {stemEv.criticalPointsMissed.map((p, i) => (
-                          <li key={i} className="text-sm text-gray-700 flex gap-2">
-                            <span className="text-red-500 flex-shrink-0">✗</span>
-                            <span>{p}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
-
-                  {/* Sentence rewrites */}
-                  {stemEv.sentenceRewrites?.length > 0 && (
-                    <div>
-                      <h4 className="text-xs font-bold text-gray-600 uppercase tracking-wide mb-2">Sentence rewrites</h4>
-                      <div className="space-y-3">
-                        {stemEv.sentenceRewrites.map((r, i) => (
-                          <div key={i} className="space-y-1.5">
-                            <div className="bg-blue-50 border border-blue-100 rounded-lg p-2.5">
-                              <div className="text-xs font-medium text-blue-600 mb-0.5">Your version</div>
-                              <p className="text-xs text-blue-900 italic">"{r.original}"</p>
-                            </div>
-                            <div className="bg-emerald-50 border border-emerald-100 rounded-lg p-2.5">
-                              <div className="text-xs font-medium text-emerald-600 mb-0.5">Consultant version</div>
-                              <p className="text-xs text-emerald-900">"{r.rewrite}"</p>
-                            </div>
-                            {r.reason && <p className="text-xs text-gray-500 pl-1">{r.reason}</p>}
+                      <div className="space-y-2">
+                        {stemEv.box5_feedback.timeManagement && (
+                          <div className="bg-slate-50 border border-slate-200 rounded-lg p-3">
+                            <div className="text-xs font-semibold text-slate-600 mb-1">⏱ Time management</div>
+                            <p className="text-xs text-slate-700">{stemEv.box5_feedback.timeManagement}</p>
                           </div>
-                        ))}
+                        )}
+                        {stemEv.box5_feedback.commandWordError && (
+                          <div className="bg-amber-50 border border-amber-200 rounded-lg p-3">
+                            <div className="text-xs font-semibold text-amber-700 mb-1">Command word error</div>
+                            <p className="text-xs text-amber-800">{stemEv.box5_feedback.commandWordError}</p>
+                          </div>
+                        )}
+                        {stemEv.box5_feedback.knowledgeGaps?.length > 0 && (
+                          <div className="bg-red-50 border border-red-100 rounded-lg p-3">
+                            <div className="text-xs font-semibold text-red-700 mb-1">Knowledge gaps</div>
+                            <ul className="space-y-1">
+                              {stemEv.box5_feedback.knowledgeGaps.map((g, i) => (
+                                <li key={i} className="text-xs text-red-700 flex gap-1.5">
+                                  <span className="flex-shrink-0">✗</span><span>{g}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
+                        {stemEv.box5_feedback.otherGaps?.length > 0 && (
+                          <div className="bg-orange-50 border border-orange-100 rounded-lg p-3">
+                            <div className="text-xs font-semibold text-orange-700 mb-1">Other gaps</div>
+                            <ul className="space-y-1">
+                              {stemEv.box5_feedback.otherGaps.map((g, i) => (
+                                <li key={i} className="text-xs text-orange-700 flex gap-1.5">
+                                  <span className="flex-shrink-0">→</span><span>{g}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
                       </div>
                     </div>
                   )}
 
-                  {/* Time management */}
-                  {stemEv.timeManagement && (
-                    <div className="bg-slate-50 border border-slate-200 rounded-lg p-3">
-                      <div className="text-xs font-bold text-slate-600 uppercase tracking-wide mb-1">Time management — 1 mark per minute</div>
-                      <p className="text-xs text-slate-700">{stemEv.timeManagement}</p>
-                    </div>
-                  )}
-
-                  {/* Error type tags */}
-                  {stemEv.errorTypes?.length > 0 && (
-                    <div className="flex flex-wrap gap-1.5">
-                      {stemEv.errorTypes.map((et) => (
-                        <span key={et} className="text-xs bg-red-50 border border-red-200 text-red-700 px-2 py-0.5 rounded-full font-medium">
-                          {errorTypeLabel(et)}
-                        </span>
-                      ))}
-                    </div>
-                  )}
-
-                  {/* Candidate answer */}
-                  {stemAns && (
-                    <details className="bg-white border border-gray-200 rounded-lg">
-                      <summary className="px-4 py-3 text-xs font-medium text-gray-600 cursor-pointer hover:bg-gray-50 list-none flex justify-between items-center">
-                        <span>Your answer ({stemAns.answerText?.trim().split(/\s+/).filter(Boolean).length ?? 0} words)</span>
-                        <span className="text-gray-400">▾</span>
-                      </summary>
-                      <div className="px-4 pb-4">
-                        <p className="text-sm text-gray-700 leading-relaxed whitespace-pre-wrap mt-2">{stemAns.answerText}</p>
+                  {/* BOX 6 — Concept of the stem */}
+                  {stemEv.box6_conceptOfStem && (
+                    <div>
+                      <div className="text-xs font-bold text-gray-500 uppercase tracking-wide mb-2">
+                        Box 6 — What this stem is testing
                       </div>
-                    </details>
-                  )}
-
-                  {/* Model answer */}
-                  {stemEv.modelAnswer && (
-                    <details className="bg-indigo-50 border border-indigo-100 rounded-lg">
-                      <summary className="px-4 py-3 text-xs font-semibold text-indigo-700 cursor-pointer hover:bg-indigo-100 list-none flex justify-between items-center">
-                        <span>Model answer</span>
-                        <span className="text-indigo-400">▾</span>
-                      </summary>
-                      <div className="px-4 pb-4">
-                        <p className="text-sm text-indigo-900 leading-relaxed whitespace-pre-wrap mt-2">{stemEv.modelAnswer}</p>
+                      <div className="bg-violet-50 border border-violet-100 rounded-lg p-4">
+                        <p className="text-sm text-violet-900 leading-relaxed">{stemEv.box6_conceptOfStem}</p>
+                        {stemDef?.postExaminerNote && (
+                          <div className="mt-3 pt-3 border-t border-violet-200">
+                            <div className="text-xs font-semibold text-violet-600 mb-1">RANZCP post-examiner intelligence</div>
+                            <p className="text-xs text-violet-800">{stemDef.postExaminerNote}</p>
+                          </div>
+                        )}
                       </div>
-                    </details>
-                  )}
-
-                  {/* Post-examiner note */}
-                  {stemDef?.postExaminerNote && (
-                    <div className="bg-violet-50 border border-violet-100 rounded-lg p-3">
-                      <div className="text-xs font-bold text-violet-700 uppercase tracking-wide mb-1">RANZCP post-examiner intelligence</div>
-                      <p className="text-xs text-violet-800 leading-relaxed">{stemDef.postExaminerNote}</p>
                     </div>
                   )}
+
                 </div>
               )}
             </div>
