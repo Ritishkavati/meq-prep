@@ -1120,14 +1120,28 @@ export default function DailyMEQMode() {
       const data = await res.json();
       const text = (data.text ?? "").trim();
 
-      // Robust JSON extraction
+      // Robust JSON extraction with truncation repair
+      const jsonMatch = text.match(/\{[\s\S]*\}/);
+      if (!jsonMatch) throw new Error("No JSON found in response");
+      let jsonText = jsonMatch[0];
       let evaluation;
       try {
-        evaluation = JSON.parse(text);
+        evaluation = JSON.parse(jsonText);
       } catch {
-        const match = text.match(/\{[\s\S]*\}/);
-        if (!match) throw new Error("No JSON object found in evaluation response. The AI may have returned an unexpected format.");
-        evaluation = JSON.parse(match[0]);
+        // Count unclosed brackets and attempt repair
+        let openBraces = 0;
+        let openBrackets = 0;
+        for (const ch of jsonText) {
+          if (ch === '{') openBraces++;
+          else if (ch === '}') openBraces--;
+          else if (ch === '[') openBrackets++;
+          else if (ch === ']') openBrackets--;
+        }
+        jsonText = jsonText.trimEnd();
+        if (jsonText.endsWith(',')) jsonText = jsonText.slice(0, -1);
+        while (openBrackets > 0) { jsonText += ']'; openBrackets--; }
+        while (openBraces > 0) { jsonText += '}'; openBraces--; }
+        evaluation = JSON.parse(jsonText);
       }
 
       const evaluatedAttempt = { ...attempt, status: "evaluated", evaluation };

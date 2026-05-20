@@ -1,0 +1,56 @@
+**JSON Parse error: Expected ']'**
+
+This means Claude returned the response but the JSON was truncated or malformed. The response got cut off before the closing bracket. This happens because the prompt is now very large with the two new fields and 12000 tokens wasn't enough to complete the full JSON response for 4 stems.
+
+Two fixes needed. Give this to your Replit agent:
+
+---
+
+**TASK: Fix JSON parse error in MEQ evaluation**
+
+**Fix 1 — `artifacts/api-server/src/routes/meqEvaluate.ts`**
+
+Change `max_tokens: 12000` to:
+```typescript
+max_tokens: 16000,
+```
+
+**Fix 2 — `artifacts/meq-prep/src/pages/DailyMEQMode.tsx`**
+
+Find the function `buildFullMEQPrompt`. Find where the text is parsed after the API response returns. Look for where `JSON.parse` is called on the response text. Replace the current parse logic with this robust version that handles truncated responses:
+
+```typescript
+// Find the JSON object robustly
+const jsonMatch = text.match(/\{[\s\S]*\}/);
+if (!jsonMatch) throw new Error("No JSON found in response");
+
+// Attempt to fix truncated JSON by closing unclosed structures
+let jsonText = jsonMatch[0];
+try {
+  return JSON.parse(jsonText);
+} catch {
+  // Count unclosed brackets and attempt repair
+  let openBraces = 0;
+  let openBrackets = 0;
+  for (const ch of jsonText) {
+    if (ch === '{') openBraces++;
+    else if (ch === '}') openBraces--;
+    else if (ch === '[') openBrackets++;
+    else if (ch === ']') openBrackets--;
+  }
+  // Close any open structures
+  jsonText = jsonText.trimEnd();
+  if (jsonText.endsWith(',')) jsonText = jsonText.slice(0, -1);
+  while (openBrackets > 0) { jsonText += ']'; openBrackets--; }
+  while (openBraces > 0) { jsonText += '}'; openBraces--; }
+  return JSON.parse(jsonText);
+}
+```
+
+Find where `submitForEvaluation` currently parses the response — it will look something like `JSON.parse(text)` or `JSON.parse(match[0])` — and replace that parsing block with the repair logic above.
+
+**Do not change anything else.**
+
+---
+
+The 16000 token limit should be enough. The repair logic handles the rare case it still truncates. Click Try Again after the fix is deployed.
