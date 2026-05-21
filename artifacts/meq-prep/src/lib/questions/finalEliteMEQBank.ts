@@ -755,10 +755,10 @@ The ED flow coordinator's statement, "There are no mental health beds and he is 
     "id": "FINAL-006",
     "topic": "capacity_mha",
     "difficulty": "consultant",
-    "title": "Mania in pregnancy refusing fetal monitoring and admission",
+    "title": "Mania in pregnancy refusing foetal monitoring and admission",
     "candidateRole": "consultant perinatal psychiatrist covering ED",
     "setting": "Metropolitan ED at 2 am with obstetrics, police and psychiatry present",
-    "stem": "You are the consultant perinatal psychiatrist covering ED. Metropolitan ED at 2 am with obstetrics, police and psychiatry present.\n\nMaya, a 34-year-old Aboriginal woman at 32 weeks gestation, was brought by police after burning baby clothes and refusing fetal monitoring. Maya says, \"The baby is chosen and hospital machines will steal its spirit.\" \n\nThe ED consultant says, \"She is calmer now; can we discharge with her mother?\" Obstetrics asks, \"Can we monitor the fetus against her wishes?\" Her 8-year-old son says, \"He was crying in the house when police arrived.\" She says child protection stole her sister's children and refuses to speak with non-Aboriginal staff.\n\nHer mother says, \"You are punishing her for being Aboriginal.\" You must decide whether to involuntarily admit, how to manage fetal assessment, and how to protect children.",
+    "stem": "You are the consultant perinatal psychiatrist covering ED. Metropolitan ED at 2 am with obstetrics, police and psychiatry present.\n\nMaya, a 34-year-old Aboriginal woman at 32 weeks gestation, was brought by police after burning baby clothes and refusing foetal monitoring. Maya says, \"The baby is chosen and hospital machines will steal its spirit.\" \n\nThe ED consultant says, \"She is calmer now; can we discharge with her mother?\" Obstetrics asks, \"Can we monitor the foetus against her wishes?\" Her 8-year-old son says, \"He was crying in the house when police arrived.\" She says child protection stole her sister's children and refuses to speak with non-Aboriginal staff.\n\nHer mother says, \"You are punishing her for being Aboriginal.\" You must decide whether to involuntarily admit, how to manage foetal assessment, and how to protect children.",
     "totalMarks": 25,
     "signals": [
       {
@@ -767,8 +767,8 @@ The ED flow coordinator's statement, "There are no mental health beds and he is 
         "category": "risk_vulnerable",
         "severity": "critical",
         "clueInStem": "She is calmer now; can we discharge with her mother?",
-        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass manic psychosis impairing maternal-fetal decisions, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
-        "modelWording": "I would not accept the shortcut of 'She is calmer now; can we discharge with her mother?' without first formulating manic psychosis impairing maternal-fetal decisions, immediate safety and a defensible disposition.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass manic psychosis impairing maternal-foetal decisions, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'She is calmer now; can we discharge with her mother?' without first formulating manic psychosis impairing maternal-foetal decisions, immediate safety and a defensible disposition.",
         "keywords": [
           "calm-now discharge shortcut",
           "unsafe shortcut",
@@ -782,14 +782,14 @@ The ED flow coordinator's statement, "There are no mental health beds and he is 
       },
       {
         "id": "s2",
-        "name": "manic psychosis impairing maternal-fetal decisions — core clinical formulation",
+        "name": "manic psychosis impairing maternal-foetal decisions — core clinical formulation",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "The baby is chosen and hospital machines will steal its spirit.",
         "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
-        "modelWording": "Formulate the presentation around manic psychosis impairing maternal-fetal decisions, linking the patient's words to risk, capacity, treatment and disposition.",
+        "modelWording": "Formulate the presentation around manic psychosis impairing maternal-foetal decisions, linking the patient's words to risk, capacity, treatment and disposition.",
         "keywords": [
-          "manic psychosis impairing maternal-fetal decisions",
+          "manic psychosis impairing maternal-foetal decisions",
           "formulation",
           "clinical signal",
           "dynamic risk",
@@ -803,7 +803,7 @@ The ED flow coordinator's statement, "There are no mental health beds and he is 
         "name": "maternal capacity and emergency obstetric care — legal/policy hinge",
         "category": "capacity",
         "severity": "critical",
-        "clueInStem": "Can we monitor the fetus against her wishes?",
+        "clueInStem": "Can we monitor the foetus against her wishes?",
         "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
         "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
         "keywords": [
@@ -860,7 +860,7 @@ The ED flow coordinator's statement, "There are no mental health beds and he is 
         "name": "Governance and defensible documentation",
         "category": "governance",
         "severity": "important",
-        "clueInStem": "whether to involuntarily admit, how to manage fetal assessment, and how to prote",
+        "clueInStem": "whether to involuntarily admit, how to manage foetal assessment, and how to prote",
         "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
         "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
         "keywords": [
@@ -888,15 +888,15 @@ The ED flow coordinator's statement, "There are no mental health beds and he is 
       ],
       "lowYield": []
     },
-    "modelAnswer": `Maya should not be discharged because she is calmer now. The unsafe shortcut is, "She is calmer now; can we discharge with her mother?" Calmness after police containment and ED observation does not resolve manic psychosis, fetal risk, child safety or cultural mistrust. She was brought by police after burning baby clothes and refusing fetal monitoring at 32 weeks gestation; these are not minor behavioural disturbances.
+    "modelAnswer": `Maya should not be discharged because she is calmer now. The unsafe shortcut is, "She is calmer now; can we discharge with her mother?" Calmness after police containment and ED observation does not resolve manic psychosis, foetal risk, child safety or cultural mistrust. She was brought by police after burning baby clothes and refusing foetal monitoring at 32 weeks gestation; these are not minor behavioural disturbances.
 
-Her statement, "The baby is chosen and hospital machines will steal its spirit," is the key formulation. It suggests manic or psychotic beliefs directly shaping refusal of obstetric assessment. The refusal is not a simple informed refusal of fetal monitoring; it may be driven by delusional or culturally elaborated beliefs, fear, and possible impaired capacity. I would assess mental state, sleep, mood, psychosis, substance use, previous bipolar or postpartum history, and capacity to refuse admission and fetal monitoring, focusing on whether she can understand, appreciate and weigh risks to herself and the unborn baby.
+Her statement, "The baby is chosen and hospital machines will steal its spirit," is the key formulation. It suggests manic or psychotic beliefs directly shaping refusal of obstetric assessment. The refusal is not a simple informed refusal of foetal monitoring; it may be driven by delusional or culturally elaborated beliefs, fear, and possible impaired capacity. I would assess mental state, sleep, mood, psychosis, substance use, previous bipolar or postpartum history, and capacity to refuse admission and foetal monitoring, focusing on whether she can understand, appreciate and weigh risks to herself and the unborn baby.
 
-The legal and ethical tension is the obstetric question, "Can we monitor the fetus against her wishes?" A fetus is vulnerable, but the mother is the rights-bearing patient; fetal interests do not automatically override a capacitous woman's refusal. If Maya has capacity, coercive fetal monitoring may be unlawful even if clinicians disagree. If she lacks capacity because of mania or psychosis and fetal assessment is necessary to prevent serious harm, emergency treatment or mental health legislation may be relevant, depending on jurisdiction and local policy. I would involve obstetrics, ED, psychiatry, hospital legal/ethics if needed, and Aboriginal health support.
+The legal and ethical tension is the obstetric question, "Can we monitor the foetus against her wishes?" A foetus is vulnerable, but the mother is the rights-bearing patient; foetal interests do not automatically override a capacitous woman's refusal. If Maya has capacity, coercive foetal monitoring may be unlawful even if clinicians disagree. If she lacks capacity because of mania or psychosis and foetal assessment is necessary to prevent serious harm, emergency treatment or mental health legislation may be relevant, depending on jurisdiction and local policy. I would involve obstetrics, ED, psychiatry, hospital legal/ethics if needed, and Aboriginal health support.
 
 Her 8-year-old son saying, "He was crying in the house when police arrived," makes child protection part of the immediate plan. I would clarify where he is now, whether he witnessed dangerous behaviour, whether there are other children, and whether a child protection notification or kinship safety plan is needed. The unborn baby also requires obstetric planning, but not in a way that erases Maya's rights or culture.
 
-Maya refuses to speak with non-Aboriginal staff and her mother says, "You are punishing her for being Aboriginal." I would acknowledge this fear directly, involve Aboriginal Liaison or senior Aboriginal health staff urgently, use culturally safe explanation, and avoid framing admission as punishment. If involuntary admission is necessary, I would explain the safety basis, invite family support where safe, and document the cultural steps taken. My documentation would include the psychotic content, capacity reasoning, fetal assessment decision, child-safety actions, cultural liaison attempts, least restrictive alternatives and why discharge with mother was unsafe despite temporary calm.`
+Maya refuses to speak with non-Aboriginal staff and her mother says, "You are punishing her for being Aboriginal." I would acknowledge this fear directly, involve Aboriginal Liaison or senior Aboriginal health staff urgently, use culturally safe explanation, and avoid framing admission as punishment. If involuntary admission is necessary, I would explain the safety basis, invite family support where safe, and document the cultural steps taken. My documentation would include the psychotic content, capacity reasoning, foetal assessment decision, child-safety actions, cultural liaison attempts, least restrictive alternatives and why discharge with mother was unsafe despite temporary calm.`
   },
   {
     "id": "FINAL-007",
@@ -1640,7 +1640,7 @@ I would document the absence of a mother-baby bed, the infant-safety quote, slee
     "title": "Antenatal depression with family violence and medication refusal",
     "candidateRole": "perinatal psychiatrist in outpatient clinic",
     "setting": "Urgent antenatal clinic review at 18 weeks",
-    "stem": "You are the perinatal psychiatrist in outpatient clinic. Urgent antenatal clinic review at 18 weeks.\n\nMei, a 32-year-old Chinese-Australian woman, stopped sertraline after reading online about fetal harm and now has passive suicidal thoughts. Mei says, \"Everyone would be better off without me.\" \n\nHer husband says, \"She is fine and does not need tablets.\" Obstetrician asks, \"Can you document that antidepressants are unsafe?\" The fetus says, \"The scan shows mild growth restriction.\" Her mother speaks no English and Mei fears shame in her family.\n\nMei says, \"Please do not write down that he pushes me.\" You must decide whether to restart treatment, address violence, and document safely.",
+    "stem": "You are the perinatal psychiatrist in outpatient clinic. Urgent antenatal clinic review at 18 weeks.\n\nMei, a 32-year-old Chinese-Australian woman, stopped sertraline after reading online about foetal harm and now has passive suicidal thoughts. Mei says, \"Everyone would be better off without me.\" \n\nHer husband says, \"She is fine and does not need tablets.\" Obstetrician asks, \"Can you document that antidepressants are unsafe?\" The foetus says, \"The scan shows mild growth restriction.\" Her mother speaks no English and Mei fears shame in her family.\n\nMei says, \"Please do not write down that he pushes me.\" You must decide whether to restart treatment, address violence, and document safely.",
     "totalMarks": 25,
     "signals": [
       {
@@ -1770,15 +1770,15 @@ I would document the absence of a mother-baby bed, the infant-safety quote, slee
       ],
       "lowYield": []
     },
-    "modelAnswer": `Mei's presentation should not be minimised because her husband says, "She is fine and does not need tablets." That is the unsafe shortcut: accepting a potentially controlling partner's reassurance while the pregnant woman is depressed, suicidal, medication-avoidant and disclosing violence. Her passive suicidal thought, "Everyone would be better off without me," is clinically significant in pregnancy, especially when combined with poor supports, medication cessation, possible family violence and fetal growth concerns.
+    "modelAnswer": `Mei's presentation should not be minimised because her husband says, "She is fine and does not need tablets." That is the unsafe shortcut: accepting a potentially controlling partner's reassurance while the pregnant woman is depressed, suicidal, medication-avoidant and disclosing violence. Her passive suicidal thought, "Everyone would be better off without me," is clinically significant in pregnancy, especially when combined with poor supports, medication cessation, possible family violence and foetal growth concerns.
 
 The key formulation is not simply antenatal depression; it is antenatal depression complicated by coercion, misinformation and violence. Her request, "Please do not write down that he pushes me," tells me she is frightened about documentation and perhaps about her husband's access to records or consequences at home. I would speak with her alone, assess immediate safety, escalation, injuries, strangulation, weapons, reproductive coercion, and whether she can be contacted safely. I would not promise to omit clinically relevant safety information, but I would discuss careful documentation, confidentiality, and who can access what.
 
-The obstetrician's question, "Can you document that antidepressants are unsafe?" must be answered with balanced risk-benefit reasoning. It would be misleading to declare antidepressants unsafe as a blanket statement. I would explain that untreated antenatal depression carries risks, including suicide, impaired nutrition, reduced antenatal care, family violence vulnerability and possible effects on fetal growth. Sertraline cessation may have contributed to relapse, so restarting medication or another evidence-based treatment should be discussed in terms of absolute and comparative risk, not internet fear.
+The obstetrician's question, "Can you document that antidepressants are unsafe?" must be answered with balanced risk-benefit reasoning. It would be misleading to declare antidepressants unsafe as a blanket statement. I would explain that untreated antenatal depression carries risks, including suicide, impaired nutrition, reduced antenatal care, family violence vulnerability and possible effects on foetal growth. Sertraline cessation may have contributed to relapse, so restarting medication or another evidence-based treatment should be discussed in terms of absolute and comparative risk, not internet fear.
 
-The fetus is a vulnerable third party because "the scan shows mild growth restriction," but fetal concern does not justify coercing Mei or ignoring her safety. I would coordinate with obstetrics while keeping Mei at the centre of decision-making. Her mother speaks no English and shame in the family is feared, so interpreter use and cultural sensitivity are essential if family support is involved. I would not allow the husband to answer for her or control the consultation.
+The foetus is a vulnerable third party because "the scan shows mild growth restriction," but foetal concern does not justify coercing Mei or ignoring her safety. I would coordinate with obstetrics while keeping Mei at the centre of decision-making. Her mother speaks no English and shame in the family is feared, so interpreter use and cultural sensitivity are essential if family support is involved. I would not allow the husband to answer for her or control the consultation.
 
-My documentation would include her suicidal phrase, the medication misinformation, the family violence disclosure and documentation discussion, fetal growth issue, risk assessment, safety plan, interpreter needs and agreed treatment. It would be defensible because it records both respect for Mei's confidentiality and the duty to document clinically relevant risk in a way that does not increase danger.`
+My documentation would include her suicidal phrase, the medication misinformation, the family violence disclosure and documentation discussion, foetal growth issue, risk assessment, safety plan, interpreter needs and agreed treatment. It would be defensible because it records both respect for Mei's confidentiality and the duty to document clinically relevant risk in a way that does not increase danger.`
   },
   {
     "id": "FINAL-013",
@@ -1934,7 +1934,7 @@ I would document the exact nature of the thoughts, her distress and rejection of
     "title": "Bipolar pregnancy stopping lithium and forensic relapse history",
     "candidateRole": "perinatal psychiatrist",
     "setting": "Antenatal clinic at 14 weeks",
-    "stem": "You are the perinatal psychiatrist. Antenatal clinic at 14 weeks.\n\nNatasha, a 34-year-old woman with bipolar I disorder, stopped lithium four weeks ago without telling obstetrics. Natasha says, \"I feel fine and I do not need medication in pregnancy.\" \n\nPartner says, \"Last time she stopped lithium she was manic within six weeks.\" Obstetrician asks, \"If she used lithium we need fetal cardiac screening.\" Her niece says, \"She assaulted a family member during the last mania.\" Natasha says medication conflicts with her identity as a natural mother.\n\nNatasha says, \"Lithium will poison the baby.\" You must decide whether to restart lithium or alternative treatment and coordinate obstetric risk.",
+    "stem": "You are the perinatal psychiatrist. Antenatal clinic at 14 weeks.\n\nNatasha, a 34-year-old woman with bipolar I disorder, stopped lithium four weeks ago without telling obstetrics. Natasha says, \"I feel fine and I do not need medication in pregnancy.\" \n\nPartner says, \"Last time she stopped lithium she was manic within six weeks.\" Obstetrician asks, \"If she used lithium we need foetal cardiac screening.\" Her niece says, \"She assaulted a family member during the last mania.\" Natasha says medication conflicts with her identity as a natural mother.\n\nNatasha says, \"Lithium will poison the baby.\" You must decide whether to restart lithium or alternative treatment and coordinate obstetric risk.",
     "totalMarks": 25,
     "signals": [
       {
@@ -1979,7 +1979,7 @@ I would document the exact nature of the thoughts, her distress and rejection of
         "name": "perinatal medication disclosure and consent — legal/policy hinge",
         "category": "capacity",
         "severity": "critical",
-        "clueInStem": "If she used lithium we need fetal cardiac screening.",
+        "clueInStem": "If she used lithium we need foetal cardiac screening.",
         "whyItMatters": "The question turns on applying the correct legal or policy framework, not simply naming a diagnosis.",
         "modelWording": "Clarify the legal basis for any restriction, disclosure or treatment, applying least restrictive principles and documenting the rationale.",
         "keywords": [
@@ -2066,13 +2066,13 @@ I would document the exact nature of the thoughts, her distress and rejection of
     },
     "modelAnswer": `Natasha's current euthymic presentation should not reassure the team into inaction. The unsafe shortcut is the implied minimisation of her statement, "I feel fine and I do not need medication in pregnancy." In bipolar I disorder, especially with previous severe mania, feeling well four weeks after stopping lithium may simply be the interval before relapse. Her partner's collateral, "Last time she stopped lithium she was manic within six weeks," makes this a time-critical relapse-prevention problem rather than a routine medication preference discussion.
 
-Her belief, "Lithium will poison the baby," is important because it suggests her decision is based on fear and misinformation rather than balanced risk appraisal. That does not mean she lacks capacity automatically, but it means she needs careful counselling about the absolute fetal cardiac risk, the risks of untreated bipolar relapse, and the monitoring options. The obstetrician's statement, "If she used lithium we need fetal cardiac screening," is not merely administrative; it means her medication exposure history directly affects fetal care. With Natasha's consent where possible, I would coordinate with obstetrics urgently and accurately.
+Her belief, "Lithium will poison the baby," is important because it suggests her decision is based on fear and misinformation rather than balanced risk appraisal. That does not mean she lacks capacity automatically, but it means she needs careful counselling about the absolute foetal cardiac risk, the risks of untreated bipolar relapse, and the monitoring options. The obstetrician's statement, "If she used lithium we need foetal cardiac screening," is not merely administrative; it means her medication exposure history directly affects foetal care. With Natasha's consent where possible, I would coordinate with obstetrics urgently and accurately.
 
 The legal and ethical tension is autonomy versus relapse prevention in pregnancy. A capacitous pregnant woman may refuse lithium even if clinicians disagree, but the consultant must ensure her decision is informed and not driven by untreated emerging mood symptoms, psychosis or misinformation. I would assess mental state, sleep, insight, capacity for medication decisions, early warning signs and willingness to consider alternatives. If she remains capacitous, the plan is collaborative rather than coercive. If mania or psychosis emerges and risk escalates, MHA may later become relevant.
 
-The vulnerable third parties are the fetus and potentially family members, because her niece says, "She assaulted a family member during the last mania." That history means relapse is not only about Natasha's suffering; it may create risk to others and to pregnancy care. I would involve her partner as a carer if she agrees, develop an advance relapse plan, and clarify emergency pathways. Her identity as a "natural mother" must be respected and explored, not mocked; it may be possible to frame relapse prevention as protecting motherhood rather than opposing it.
+The vulnerable third parties are the foetus and potentially family members, because her niece says, "She assaulted a family member during the last mania." That history means relapse is not only about Natasha's suffering; it may create risk to others and to pregnancy care. I would involve her partner as a carer if she agrees, develop an advance relapse plan, and clarify emergency pathways. Her identity as a "natural mother" must be respected and explored, not mocked; it may be possible to frame relapse prevention as protecting motherhood rather than opposing it.
 
-I would document lithium cessation timing, the misinformation quote, partner collateral about relapse timing, forensic/aggression history, fetal screening communication, risk-benefit counselling, capacity assessment and agreed medication or monitoring plan. The record should show that the decision was neither lithium-at-all-costs nor medication avoidance, but a balanced perinatal risk formulation.`
+I would document lithium cessation timing, the misinformation quote, partner collateral about relapse timing, forensic/aggression history, foetal screening communication, risk-benefit counselling, capacity assessment and agreed medication or monitoring plan. The record should show that the decision was neither lithium-at-all-costs nor medication avoidance, but a balanced perinatal risk formulation.`
   },
   {
     "id": "FINAL-015",
@@ -2211,9 +2211,9 @@ I would document lithium cessation timing, the misinformation quote, partner col
       ],
       "lowYield": []
     },
-    "modelAnswer": `Alana's methadone should not be reduced simply to try to reduce neonatal abstinence syndrome. The unsafe shortcut is the obstetric registrar's question, "Should we reduce methadone before delivery?" In this case, methadone is not merely fetal exposure; it is the treatment keeping her away from heroin. Her statement, "Methadone is the only reason I am not using heroin," is the key clinical phrase, because it reframes methadone as protective harm reduction for both mother and fetus.
+    "modelAnswer": `Alana's methadone should not be reduced simply to try to reduce neonatal abstinence syndrome. The unsafe shortcut is the obstetric registrar's question, "Should we reduce methadone before delivery?" In this case, methadone is not merely foetal exposure; it is the treatment keeping her away from heroin. Her statement, "Methadone is the only reason I am not using heroin," is the key clinical phrase, because it reframes methadone as protective harm reduction for both mother and foetus.
 
-The immediate formulation is opioid dependence in pregnancy with stabilisation, intermittent benzodiazepine use, partner heroin use and child protection fear. Reducing methadone without considering relapse risk could lead to heroin use, withdrawal cycles, overdose, unsafe injecting, missed antenatal care and greater fetal instability. I would maintain an adequate methadone dose unless there is a specific clinical reason to change it, while reviewing sedation, split dosing, benzodiazepine use and overdose risk.
+The immediate formulation is opioid dependence in pregnancy with stabilisation, intermittent benzodiazepine use, partner heroin use and child protection fear. Reducing methadone without considering relapse risk could lead to heroin use, withdrawal cycles, overdose, unsafe injecting, missed antenatal care and greater foetal instability. I would maintain an adequate methadone dose unless there is a specific clinical reason to change it, while reviewing sedation, split dosing, benzodiazepine use and overdose risk.
 
 The social worker's question, "Do we need child protection now?" requires a transparent but non-punitive answer. Child protection involvement depends on safety concerns, not on methadone treatment alone. I would explain to Alana that engagement with opioid treatment and antenatal care is protective, while also being honest that partner violence, polysubstance use, unsafe housing or inability to care for the baby may require statutory planning. Her fear, "If child protection hears, they will take my baby," is a major engagement risk; if handled badly, she may disengage and become less safe.
 
@@ -2522,7 +2522,7 @@ I would document the baby's eight-hour no-feed risk, Jenna's contamination belie
     "title": "Severe hyperemesis, depression and termination request",
     "candidateRole": "perinatal CL psychiatrist",
     "setting": "Obstetric medical ward",
-    "stem": "You are the perinatal CL psychiatrist. Obstetric medical ward.\n\nPriya, a 30-year-old woman at 11 weeks gestation, has hyperemesis, dehydration and depressive symptoms, and requests termination urgently. Priya says, \"I would rather die than keep vomiting like this.\" \n\nObstetric registrar says, \"Can psychiatry say she is not competent to terminate?\" Husband asks, \"Our religion does not allow termination.\" The fetus says, \"The pregnancy is wanted by the family, not by me now.\" Priya's family insists decisions must be made collectively.\n\nPriya says, \"Do not tell my mother I asked for this.\" You must decide whether capacity is intact and how to manage confidentiality and family pressure.",
+    "stem": "You are the perinatal CL psychiatrist. Obstetric medical ward.\n\nPriya, a 30-year-old woman at 11 weeks gestation, has hyperemesis, dehydration and depressive symptoms, and requests termination urgently. Priya says, \"I would rather die than keep vomiting like this.\" \n\nObstetric registrar says, \"Can psychiatry say she is not competent to terminate?\" Husband asks, \"Our religion does not allow termination.\" The foetus says, \"The pregnancy is wanted by the family, not by me now.\" Priya's family insists decisions must be made collectively.\n\nPriya says, \"Do not tell my mother I asked for this.\" You must decide whether capacity is intact and how to manage confidentiality and family pressure.",
     "totalMarks": 25,
     "signals": [
       {
@@ -2583,14 +2583,14 @@ I would document the baby's eight-hour no-feed risk, Jenna's contamination belie
       },
       {
         "id": "s4",
-        "name": "maternal-fetal ethical tension — vulnerable person safety",
+        "name": "maternal-foetal ethical tension — vulnerable person safety",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "The pregnancy is wanted by the family, not by me now.",
         "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
-        "modelWording": "Explicitly assess and protect maternal-fetal ethical tension, including immediate safety, collateral and escalation pathways.",
+        "modelWording": "Explicitly assess and protect maternal-foetal ethical tension, including immediate safety, collateral and escalation pathways.",
         "keywords": [
-          "maternal-fetal ethical tension",
+          "maternal-foetal ethical tension",
           "vulnerable person",
           "safety",
           "collateral",
@@ -2658,7 +2658,7 @@ Her statement, "I would rather die than keep vomiting like this," is serious. It
 
 The legal and ethical tension is between reproductive autonomy, possible mental illness, and family/religious pressure. Her husband says, "Our religion does not allow termination," and her family insists decisions must be collective. Those beliefs matter to Priya if she wants them to matter, but they do not replace her individual consent and confidentiality. Her request, "Do not tell my mother I asked for this," must be respected unless there is a legal safety reason to disclose. I would interview Priya alone, use an interpreter if needed, and assess for coercion in either direction.
 
-The vulnerable third party is framed through pregnancy, but the rights-bearing patient is Priya. The line "The pregnancy is wanted by the family, not by me now" shows the risk of family wishes overtaking her autonomy. I would not allow the fetus or family preference to erase Priya's capacity. If she has capacity, she should be supported to access lawful reproductive counselling and obstetric care. If capacity is impaired by delirium, severe depression or suicidality, the team should treat reversible contributors and reassess urgently.
+The vulnerable third party is framed through pregnancy, but the rights-bearing patient is Priya. The line "The pregnancy is wanted by the family, not by me now" shows the risk of family wishes overtaking her autonomy. I would not allow the foetus or family preference to erase Priya's capacity. If she has capacity, she should be supported to access lawful reproductive counselling and obstetric care. If capacity is impaired by delirium, severe depression or suicidality, the team should treat reversible contributors and reassess urgently.
 
 I would document the capacity assessment, symptom burden, suicide risk, treatment options for hyperemesis, confidentiality decision, family pressure, religious context and referral pathway. The record should show that psychiatry did not collude with family pressure or reflexively endorse termination; it protected a valid, informed, private decision-making process under severe physical and emotional distress.`
   },
@@ -13552,14 +13552,14 @@ I would document the six-month decline, smoke-alarm delusion, readiness quote, p
     "signals": [
       {
         "id": "s1",
-        "name": "fetal-risk shortcut — unsafe shortcut under pressure",
+        "name": "foetal-risk shortcut — unsafe shortcut under pressure",
         "category": "substance_use",
         "severity": "critical",
         "clueInStem": "Reduce it to prevent neonatal withdrawal.",
         "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass methadone maintenance as protective, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
         "modelWording": "I would not accept the shortcut of 'Reduce it to prevent neonatal withdrawal.' without first formulating methadone maintenance as protective, immediate safety and a defensible disposition.",
         "keywords": [
-          "fetal-risk shortcut",
+          "foetal-risk shortcut",
           "unsafe shortcut",
           "time pressure",
           "consultant decision",
@@ -13677,7 +13677,7 @@ I would document the six-month decline, smoke-alarm delusion, readiness quote, p
       ],
       "lowYield": []
     },
-    "modelAnswer": `Alana's methadone should not be reduced just to prevent neonatal withdrawal. The unsafe shortcut is, "Reduce it to prevent neonatal withdrawal." That sounds fetus-protective but may actually increase fetal and maternal risk by destabilising opioid dependence, increasing heroin use, withdrawal cycles, overdose risk and antenatal disengagement. Methadone is currently a protective treatment, not merely an exposure.
+    "modelAnswer": `Alana's methadone should not be reduced just to prevent neonatal withdrawal. The unsafe shortcut is, "Reduce it to prevent neonatal withdrawal." That sounds foetus-protective but may actually increase foetal and maternal risk by destabilising opioid dependence, increasing heroin use, withdrawal cycles, overdose risk and antenatal disengagement. Methadone is currently a protective treatment, not merely an exposure.
 
 Her statement, "Methadone is why I am not using heroin," is the core clinical phrase. It directly identifies the function of treatment. I would assess dose adequacy, cravings, sedation, benzodiazepine use, cannabis/other substances, overdose risk and antenatal attendance, but I would not lower the dose solely to make neonatal withdrawal less likely. Neonatal abstinence planning should be non-stigmatising and medically coordinated.
 
@@ -14282,7 +14282,7 @@ I would document misuse indicators, workplace risk, prescribing rationale, GP co
     "title": "Alcohol withdrawal in pregnant woman",
     "candidateRole": "perinatal addiction CL psychiatrist",
     "setting": "Medical ward with obstetric review",
-    "stem": "You are the perinatal addiction CL psychiatrist. Medical ward with obstetric review.\n\nNadia, a 33-year-old woman 24 weeks pregnant, is withdrawing from alcohol and refuses diazepam due to fetal fears. Nadia says, \"Medication will poison my baby.\" \n\nObstetric resident says, \"Avoid benzodiazepines in pregnancy.\" Nurse asks, \"Can she leave if she refuses?\" Fetus says, \"She is tremulous and hypertensive.\" Nadia fears child protection and comes from a community where women drinking is taboo.\n\nNadia says, \"If anyone knows, I am finished.\" You must decide whether to treat withdrawal safely and maintain engagement.",
+    "stem": "You are the perinatal addiction CL psychiatrist. Medical ward with obstetric review.\n\nNadia, a 33-year-old woman 24 weeks pregnant, is withdrawing from alcohol and refuses diazepam due to foetal fears. Nadia says, \"Medication will poison my baby.\" \n\nObstetric resident says, \"Avoid benzodiazepines in pregnancy.\" Nurse asks, \"Can she leave if she refuses?\" Foetus says, \"She is tremulous and hypertensive.\" Nadia fears child protection and comes from a community where women drinking is taboo.\n\nNadia says, \"If anyone knows, I am finished.\" You must decide whether to treat withdrawal safely and maintain engagement.",
     "totalMarks": 25,
     "signals": [
       {
@@ -14291,8 +14291,8 @@ I would document misuse indicators, workplace risk, prescribing rationale, GP co
         "category": "substance_use",
         "severity": "critical",
         "clueInStem": "Avoid benzodiazepines in pregnancy.",
-        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass alcohol withdrawal and fetal/maternal risk, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
-        "modelWording": "I would not accept the shortcut of 'Avoid benzodiazepines in pregnancy.' without first formulating alcohol withdrawal and fetal/maternal risk, immediate safety and a defensible disposition.",
+        "whyItMatters": "This is the tempting shortcut. If accepted, it may bypass alcohol withdrawal and foetal/maternal risk, legal safeguards, vulnerable-person safety and defensible consultant decision-making.",
+        "modelWording": "I would not accept the shortcut of 'Avoid benzodiazepines in pregnancy.' without first formulating alcohol withdrawal and foetal/maternal risk, immediate safety and a defensible disposition.",
         "keywords": [
           "over-avoidance shortcut",
           "unsafe shortcut",
@@ -14306,14 +14306,14 @@ I would document misuse indicators, workplace risk, prescribing rationale, GP co
       },
       {
         "id": "s2",
-        "name": "alcohol withdrawal and fetal/maternal risk — core clinical formulation",
+        "name": "alcohol withdrawal and foetal/maternal risk — core clinical formulation",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "Medication will poison my baby.",
         "whyItMatters": "This quote is the key clinical signal. Missing it reduces the answer to generic assessment rather than the specific RANZCP problem.",
-        "modelWording": "Formulate the presentation around alcohol withdrawal and fetal/maternal risk, linking the patient's words to risk, capacity, treatment and disposition.",
+        "modelWording": "Formulate the presentation around alcohol withdrawal and foetal/maternal risk, linking the patient's words to risk, capacity, treatment and disposition.",
         "keywords": [
-          "alcohol withdrawal and fetal/maternal risk",
+          "alcohol withdrawal and foetal/maternal risk",
           "formulation",
           "clinical signal",
           "dynamic risk",
@@ -14343,14 +14343,14 @@ I would document misuse indicators, workplace risk, prescribing rationale, GP co
       },
       {
         "id": "s4",
-        "name": "maternal-fetal medical risk — vulnerable person safety",
+        "name": "maternal-foetal medical risk — vulnerable person safety",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "She is tremulous and hypertensive.",
         "whyItMatters": "Real MEQs reward noticing who else may be harmed, not only the identified patient.",
-        "modelWording": "Explicitly assess and protect maternal-fetal medical risk, including immediate safety, collateral and escalation pathways.",
+        "modelWording": "Explicitly assess and protect maternal-foetal medical risk, including immediate safety, collateral and escalation pathways.",
         "keywords": [
-          "maternal-fetal medical risk",
+          "maternal-foetal medical risk",
           "vulnerable person",
           "safety",
           "collateral",
@@ -14412,15 +14412,15 @@ I would document misuse indicators, workplace risk, prescribing rationale, GP co
       ],
       "lowYield": []
     },
-    "modelAnswer": `Nadia should not be denied benzodiazepines because of a blanket instruction to avoid them in pregnancy. The unsafe shortcut is the obstetric resident's statement, "Avoid benzodiazepines in pregnancy." In alcohol withdrawal, untreated withdrawal can cause seizures, delirium, hypertension, dehydration, miscarriage risk, fetal compromise and maternal death. The risk-benefit question is specific: short-term medically supervised benzodiazepines may be safer than untreated withdrawal.
+    "modelAnswer": `Nadia should not be denied benzodiazepines because of a blanket instruction to avoid them in pregnancy. The unsafe shortcut is the obstetric resident's statement, "Avoid benzodiazepines in pregnancy." In alcohol withdrawal, untreated withdrawal can cause seizures, delirium, hypertension, dehydration, miscarriage risk, foetal compromise and maternal death. The risk-benefit question is specific: short-term medically supervised benzodiazepines may be safer than untreated withdrawal.
 
-Her statement, "Medication will poison my baby," is the key formulation. It reflects fetal fear and possibly shame, misinformation or child-protection anxiety. I would explain that the current problem is not choosing medication versus no risk; it is choosing supervised withdrawal treatment versus the risks of uncontrolled withdrawal. Her tremulousness and hypertension make the risk immediate.
+Her statement, "Medication will poison my baby," is the key formulation. It reflects foetal fear and possibly shame, misinformation or child-protection anxiety. I would explain that the current problem is not choosing medication versus no risk; it is choosing supervised withdrawal treatment versus the risks of uncontrolled withdrawal. Her tremulousness and hypertension make the risk immediate.
 
-The nurse asks, "Can she leave if she refuses?" I would assess capacity to refuse withdrawal treatment and admission, including whether she understands seizure/delirium risk and fetal/maternal consequences. If she has capacity, she may refuse, but I would intensify harm reduction. If she lacks capacity due to withdrawal delirium, intoxication, severe anxiety or inability to appreciate risk, emergency treatment may be justified.
+The nurse asks, "Can she leave if she refuses?" I would assess capacity to refuse withdrawal treatment and admission, including whether she understands seizure/delirium risk and foetal/maternal consequences. If she has capacity, she may refuse, but I would intensify harm reduction. If she lacks capacity due to withdrawal delirium, intoxication, severe anxiety or inability to appreciate risk, emergency treatment may be justified.
 
-Nadia fears child protection and comes from a community where women drinking is taboo. Her statement, "If anyone knows, I am finished," signals shame and disengagement risk. I would maintain confidentiality as far as possible, use non-judgemental language, and be transparent about child protection thresholds. The fetus is vulnerable, but Nadia is the patient; coercion should be limited to lawful, necessary treatment.
+Nadia fears child protection and comes from a community where women drinking is taboo. Her statement, "If anyone knows, I am finished," signals shame and disengagement risk. I would maintain confidentiality as far as possible, use non-judgemental language, and be transparent about child protection thresholds. The foetus is vulnerable, but Nadia is the patient; coercion should be limited to lawful, necessary treatment.
 
-I would document withdrawal severity, benzodiazepine risk-benefit reasoning, capacity assessment, fetal/maternal monitoring, confidentiality and child-protection discussion, and engagement plan. The note is defensible because it shows medication was used to prevent greater harm, not prescribed casually.`
+I would document withdrawal severity, benzodiazepine risk-benefit reasoning, capacity assessment, foetal/maternal monitoring, confidentiality and child-protection discussion, and engagement plan. The note is defensible because it shows medication was used to prevent greater harm, not prescribed casually.`
   },
   {
     "id": "FINAL-099",

@@ -192,7 +192,7 @@ The disposition decision should be based on persistence of psychosis, violence r
 
 Alana says, "If child protection hears I'm on methadone, they'll take my baby." She has missed two antenatal appointments but attends the dosing clinic regularly. Urine drug screens show intermittent benzodiazepine and cannabis use. Her partner is also using heroin and has recently become verbally aggressive at clinic.
 
-The midwife wants a neonatal abstinence syndrome plan, but Alana says, "I don't want the baby labelled an addict." She becomes tearful and says methadone is the only thing stopping her from using heroin. The registrar asks whether methadone should be reduced before delivery to reduce fetal risk.`,
+The midwife wants a neonatal abstinence syndrome plan, but Alana says, "I don't want the baby labelled an addict." She becomes tearful and says methadone is the only thing stopping her from using heroin. The registrar asks whether methadone should be reduced before delivery to reduce foetal risk.`,
     totalMarks: 22,
     signals: [
       {
@@ -201,7 +201,7 @@ The midwife wants a neonatal abstinence syndrome plan, but Alana says, "I don't 
         category: "substance_use",
         severity: "critical",
         clueInStem: "methadone is the only thing stopping her from using heroin.",
-        whyItMatters: "Reducing methadone in pregnancy may destabilise opioid use and increase fetal/maternal risk.",
+        whyItMatters: "Reducing methadone in pregnancy may destabilise opioid use and increase foetal/maternal risk.",
         modelWording: "Maintain opioid substitution treatment as protective, avoiding destabilising dose reduction solely to prevent neonatal withdrawal.",
         keywords: ["methadone", "opioid substitution treatment", "pregnancy", "heroin relapse", "stabilisation", "harm reduction"],
       },
@@ -231,7 +231,7 @@ The midwife wants a neonatal abstinence syndrome plan, but Alana says, "I don't 
         category: "substance_use",
         severity: "important",
         clueInStem: "intermittent benzodiazepine and cannabis use.",
-        whyItMatters: "Polysubstance use increases maternal, fetal and neonatal risk and may affect child protection planning.",
+        whyItMatters: "Polysubstance use increases maternal, foetal and neonatal risk and may affect child protection planning.",
         modelWording: "Assess polysubstance use, especially benzodiazepines, because it increases overdose, sedation and neonatal risk.",
         keywords: ["benzodiazepines", "cannabis", "polysubstance use", "overdose risk", "neonatal risk", "pregnancy"],
       },
@@ -242,7 +242,7 @@ The midwife wants a neonatal abstinence syndrome plan, but Alana says, "I don't 
         severity: "important",
         clueInStem: "verbally aggressive at clinic.",
         whyItMatters: "Partner aggression and heroin use may affect maternal safety, infant safety and treatment engagement.",
-        modelWording: "Assess family violence and partner substance use as risks to Alana, the fetus and postnatal safety.",
+        modelWording: "Assess family violence and partner substance use as risks to Alana, the foetus and postnatal safety.",
         keywords: ["family violence", "partner substance use", "heroin", "maternal safety", "infant safety", "clinic aggression"],
       },
       {
@@ -261,7 +261,7 @@ The midwife wants a neonatal abstinence syndrome plan, but Alana says, "I don't 
       secondary: ["s3", "s4", "s5"],
       lowYield: ["s6"],
     },
-    modelAnswer: `Alana's treatment should be framed around stabilisation and harm reduction, not around making the pregnancy appear drug-free. The registrar's question about reducing methadone before delivery to reduce fetal risk is clinically understandable but potentially harmful. The most important protective clue is Alana's own statement that "methadone is the only thing stopping her from using heroin." That tells me methadone is not the problem to be removed; it is the intervention currently reducing chaotic opioid use, overdose risk, withdrawal cycling, infection risk and fetal instability. I would not reduce methadone solely to prevent neonatal abstinence syndrome if that reduction risks relapse to heroin.
+    modelAnswer: `Alana's treatment should be framed around stabilisation and harm reduction, not around making the pregnancy appear drug-free. The registrar's question about reducing methadone before delivery to reduce foetal risk is clinically understandable but potentially harmful. The most important protective clue is Alana's own statement that "methadone is the only thing stopping her from using heroin." That tells me methadone is not the problem to be removed; it is the intervention currently reducing chaotic opioid use, overdose risk, withdrawal cycling, infection risk and foetal instability. I would not reduce methadone solely to prevent neonatal abstinence syndrome if that reduction risks relapse to heroin.
 
 The child protection fear is equally central. Alana says, "If child protection hears I'm on methadone, they'll take my baby." If the team responds punitively or vaguely, she may disengage from antenatal care, conceal substance use or avoid hospital at delivery. I would explain transparently that being on methadone maintenance is not itself a reason for removal and can be evidence of engagement and protective treatment. I would also be honest that safety concerns such as unstable housing, family violence, polysubstance use or inability to care for the infant may require child protection involvement. The consultant task is to build trust without making false promises.
 
@@ -269,7 +269,7 @@ The midwife's request for a "neonatal abstinence syndrome plan" is appropriate, 
 
 The urine drug screens showing "intermittent benzodiazepine and cannabis use" change the risk formulation. Benzodiazepines with methadone increase sedation, overdose and neonatal risks, and intermittent use may indicate anxiety, trauma, partner influence, diversion or unstable prescribing. I would assess the source, frequency, dose, overdose history, sedation, driving, mental health symptoms and whether a gradual reduction or substitution plan is needed. I would also assess cannabis use without moralising, focusing on function, dependence and perinatal risks.
 
-Her partner's heroin use and becoming "verbally aggressive at clinic" introduce maternal, fetal, staff and postnatal infant safety concerns. I would assess family violence, coercion around drug use, safety at home, clinic safety, whether he controls access to dosing or appointments, and whether Alana needs safe accommodation or family violence support. Missing this would lead to an overly narrow methadone/NAS plan while the actual risk to mother and baby remains unaddressed.
+Her partner's heroin use and becoming "verbally aggressive at clinic" introduce maternal, foetal, staff and postnatal infant safety concerns. I would assess family violence, coercion around drug use, safety at home, clinic safety, whether he controls access to dosing or appointments, and whether Alana needs safe accommodation or family violence support. Missing this would lead to an overly narrow methadone/NAS plan while the actual risk to mother and baby remains unaddressed.
 
 My actions would be to coordinate the opioid treatment service, midwifery, obstetrics, paediatrics, GP, addiction medicine and social work around one non-punitive plan. I would use the fact that she attends the dosing clinic regularly, despite having "missed two antenatal appointments," as a strength and build antenatal care around the service she already trusts. I would document the rationale for maintaining methadone, the discussion about NAS, the plan for benzodiazepine/cannabis use, the child protection threshold discussion, partner risk and the supports required to keep Alana and the baby safe.`,
   },

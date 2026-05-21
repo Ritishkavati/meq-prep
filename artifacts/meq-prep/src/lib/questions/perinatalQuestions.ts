@@ -106,14 +106,14 @@ Teaching: I will supervise the registrar in rewriting this summary before any co
     id: "PER-002",
     topic: "perinatal",
     difficulty: "consultant",
-    title: "Antenatal Depression — Medication, Fetal Risk and Domestic Violence",
+    title: "Antenatal Depression — Medication, Foetal Risk and Domestic Violence",
     candidateRole: "Consultant psychiatrist, perinatal mental health service",
     setting: "Perinatal outpatient clinic, metropolitan hospital",
     stem: `You are the consultant psychiatrist in a perinatal mental health service. You are reviewing Mei, a 32-year-old Chinese-Australian woman referred by her obstetrician at 18 weeks gestation. She has a history of recurrent major depressive disorder and was stable on sertraline 100mg before conception. She stopped sertraline at six weeks gestation "because I read online it harms the baby."
 
 Mei reports worsening low mood, inability to sleep, poor appetite and passive suicidal ideation: "Sometimes I think everyone would be better off without me." Her husband has accompanied her today but sits with his arms crossed and answers questions directed at Mei before she can respond. When Mei is seen alone, she becomes tearful and quietly discloses that her husband has been "pushing and grabbing" her during arguments since the pregnancy began. She asks you not to document this.
 
-The obstetrician's referral letter notes the fetus has mild growth restriction on the last scan. Mei's mother, who is visiting from China, is the only local support and speaks no English.`,
+The obstetrician's referral letter notes the foetus has mild growth restriction on the last scan. Mei's mother, who is visiting from China, is the only local support and speaks no English.`,
     totalMarks: 25,
     signals: [
       {
@@ -132,19 +132,19 @@ The obstetrician's referral letter notes the fetus has mild growth restriction o
         category: "risk_self",
         severity: "critical",
         clueInStem: "Sometimes I think everyone would be better off without me.",
-        whyItMatters: "Passive suicidal ideation in a pregnant woman with untreated depression, domestic violence, and social isolation represents significant risk to both Mei and the fetus. This must be directly assessed — not normalised as pregnancy-related mood change.",
-        modelWording: "Passive suicidal ideation in a pregnant woman with untreated MDD, domestic violence, and social isolation requires direct risk assessment: intent, plan, means, protective factors including attachment to the fetus, and capacity to engage with safety planning.",
-        keywords: ["suicidal ideation", "passive suicidal", "better off without me", "risk assessment", "pregnancy", "fetal risk", "maternal suicide"],
+        whyItMatters: "Passive suicidal ideation in a pregnant woman with untreated depression, domestic violence, and social isolation represents significant risk to both Mei and the foetus. This must be directly assessed — not normalised as pregnancy-related mood change.",
+        modelWording: "Passive suicidal ideation in a pregnant woman with untreated MDD, domestic violence, and social isolation requires direct risk assessment: intent, plan, means, protective factors including attachment to the foetus, and capacity to engage with safety planning.",
+        keywords: ["suicidal ideation", "passive suicidal", "better off without me", "risk assessment", "pregnancy", "foetal risk", "maternal suicide"],
       },
       {
         id: "s3",
-        name: "Untreated MDD in pregnancy — fetal and maternal risk of non-treatment",
+        name: "Untreated MDD in pregnancy — foetal and maternal risk of non-treatment",
         category: "physical_health",
         severity: "critical",
         clueInStem: "stopped sertraline at six weeks gestation because I read online it harms the baby.",
-        whyItMatters: "Untreated depression in pregnancy causes fetal growth restriction, preterm birth, and impaired fetal neurodevelopment — risks that exceed the well-established safety profile of sertraline in pregnancy. Mei's decision was based on misinformation that must be corrected.",
-        modelWording: "The risks of untreated depression in pregnancy — including fetal growth restriction already present — exceed the risks of sertraline at therapeutic doses. I will provide evidence-based psychoeducation about antidepressant safety in pregnancy and discuss restarting sertraline.",
-        keywords: ["sertraline", "antidepressant", "pregnancy", "fetal risk", "untreated depression", "misinformation", "growth restriction", "evidence-based"],
+        whyItMatters: "Untreated depression in pregnancy causes foetal growth restriction, preterm birth, and impaired foetal neurodevelopment — risks that exceed the well-established safety profile of sertraline in pregnancy. Mei's decision was based on misinformation that must be corrected.",
+        modelWording: "The risks of untreated depression in pregnancy — including foetal growth restriction already present — exceed the risks of sertraline at therapeutic doses. I will provide evidence-based psychoeducation about antidepressant safety in pregnancy and discuss restarting sertraline.",
+        keywords: ["sertraline", "antidepressant", "pregnancy", "foetal risk", "untreated depression", "misinformation", "growth restriction", "evidence-based"],
       },
       {
         id: "s4",
@@ -168,13 +168,13 @@ The obstetrician's referral letter notes the fetus has mild growth restriction o
       },
       {
         id: "s6",
-        name: "Fetal wellbeing — growth restriction linked to maternal distress",
+        name: "Foetal wellbeing — growth restriction linked to maternal distress",
         category: "risk_vulnerable",
         severity: "important",
-        clueInStem: "fetus has mild growth restriction on the last scan.",
-        whyItMatters: "Fetal growth restriction in the context of untreated maternal depression, domestic violence, and nutritional compromise is a clinical signal requiring obstetric coordination and urgent treatment of contributing factors.",
-        modelWording: "Fetal growth restriction in this context is likely multifactorial — untreated depression, domestic violence stress, poor appetite, and possible nutritional deficiency all contribute. I will coordinate with obstetrics and recommend urgent treatment of the depression.",
-        keywords: ["fetal growth restriction", "fetus", "fetal wellbeing", "obstetric", "coordination", "growth", "scan", "unborn"],
+        clueInStem: "foetus has mild growth restriction on the last scan.",
+        whyItMatters: "Foetal growth restriction in the context of untreated maternal depression, domestic violence, and nutritional compromise is a clinical signal requiring obstetric coordination and urgent treatment of contributing factors.",
+        modelWording: "Foetal growth restriction in this context is likely multifactorial — untreated depression, domestic violence stress, poor appetite, and possible nutritional deficiency all contribute. I will coordinate with obstetrics and recommend urgent treatment of the depression.",
+        keywords: ["foetal growth restriction", "foetus", "foetal wellbeing", "obstetric", "coordination", "growth", "scan", "unborn"],
       },
       {
         id: "s7",
@@ -182,7 +182,7 @@ The obstetrician's referral letter notes the fetus has mild growth restriction o
         category: "ethics",
         severity: "important",
         clueInStem: "She asks you not to document this.",
-        whyItMatters: "Mei's request not to document the violence creates an ethical tension between confidentiality and the duty of care to her and the fetus. The clinician cannot agree to omit clinically relevant safety information from the medical record.",
+        whyItMatters: "Mei's request not to document the violence creates an ethical tension between confidentiality and the duty of care to her and the foetus. The clinician cannot agree to omit clinically relevant safety information from the medical record.",
         modelWording: "I will explain to Mei that I cannot omit clinically relevant safety information from the medical record — but I will discuss with her how it is documented and what happens next. Her concerns about the consequences of documentation must be heard and addressed.",
         keywords: ["confidentiality", "not document", "request", "limits", "ethics", "safety information", "medical record", "duty of care"],
       },
@@ -194,15 +194,15 @@ The obstetrician's referral letter notes the fetus has mild growth restriction o
     },
     modelAnswer: `Domestic violence is the immediate priority. Mei has disclosed physical violence during pregnancy — pushing and grabbing since conception began. I will assess frequency, severity, escalation, immediate safety, and safety planning. Her request not to document cannot be honoured but I will discuss with her how this is recorded and what support is available.
 
-Suicidal ideation: Passive suicidal ideation in a pregnant woman with untreated MDD, domestic violence, and social isolation requires direct risk assessment — intent, plan, means, and protective factors including attachment to the fetus.
+Suicidal ideation: Passive suicidal ideation in a pregnant woman with untreated MDD, domestic violence, and social isolation requires direct risk assessment — intent, plan, means, and protective factors including attachment to the foetus.
 
-Sertraline in pregnancy: Mei stopped sertraline based on online misinformation. The risks of untreated depression — including the fetal growth restriction already present — exceed the well-established safety profile of sertraline at therapeutic doses. I will provide evidence-based psychoeducation and discuss restarting.
+Sertraline in pregnancy: Mei stopped sertraline based on online misinformation. The risks of untreated depression — including the foetal growth restriction already present — exceed the well-established safety profile of sertraline at therapeutic doses. I will provide evidence-based psychoeducation and discuss restarting.
 
 Husband: His behaviour of answering Mei's questions is a red flag for coercive control. All future consultations must include time alone with Mei. Collateral from the husband is unreliable.
 
 Cultural context: Mei's Chinese-Australian background requires culturally sensitive engagement about depression, medication safety, and domestic violence. The mother's role — support or minimisation — needs assessment.
 
-Fetal wellbeing: Growth restriction in this context is multifactorial and requires urgent obstetric coordination alongside treatment of the depression.
+Foetal wellbeing: Growth restriction in this context is multifactorial and requires urgent obstetric coordination alongside treatment of the depression.
 
 MDT: Perinatal social work, obstetrics, domestic violence service, and the GP must all be involved.`,
   },
@@ -324,7 +324,7 @@ An urgent FBC and lithium level are pending. The obstetrician calls while you ar
         category: "immediate_safety",
         severity: "critical",
         clueInStem: "Last time she stopped lithium without telling anyone, she was manic within six weeks.",
-        whyItMatters: "Lithium cessation in a woman with bipolar I disorder including a forensic admission carries a very high relapse risk. Manic relapse in pregnancy has serious consequences for the mother, the fetus, and the family — including risk to the fetus if emergency treatment is required.",
+        whyItMatters: "Lithium cessation in a woman with bipolar I disorder including a forensic admission carries a very high relapse risk. Manic relapse in pregnancy has serious consequences for the mother, the foetus, and the family — including risk to the foetus if emergency treatment is required.",
         modelWording: "Lithium cessation four weeks ago in a woman with three severe manic episodes including a forensic admission creates a high and time-sensitive relapse risk. The partner's collateral about a six-week relapse timeline after prior cessation is the most important clinical fact in this consultation.",
         keywords: ["lithium cessation", "relapse risk", "bipolar I", "manic episode", "six weeks", "forensic", "high risk", "urgent"],
       },
@@ -335,7 +335,7 @@ An urgent FBC and lithium level are pending. The obstetrician calls while you ar
         severity: "critical",
         clueInStem: "stopped lithium four weeks ago because I read that it causes heart defects.",
         whyItMatters: "Natasha's decision to stop lithium was based on outdated information. The absolute risk of Ebstein's anomaly from first-trimester lithium exposure is approximately 1-2 per 1000 — far lower than the risk of untreated bipolar disorder in pregnancy. Her consent to stop was not truly informed.",
-        modelWording: "Natasha stopped lithium based on outdated and exaggerated teratogenicity information. The absolute risk of cardiac defect from lithium is approximately 0.1-0.2% — this must be weighed against the very high risk of manic relapse, which itself carries fetal, obstetric, and safety risks.",
+        modelWording: "Natasha stopped lithium based on outdated and exaggerated teratogenicity information. The absolute risk of cardiac defect from lithium is approximately 0.1-0.2% — this must be weighed against the very high risk of manic relapse, which itself carries foetal, obstetric, and safety risks.",
         keywords: ["lithium", "teratogenicity", "Ebstein", "cardiac defect", "informed consent", "misinformation", "absolute risk", "risk-benefit"],
       },
       {
@@ -344,9 +344,9 @@ An urgent FBC and lithium level are pending. The obstetrician calls while you ar
         category: "governance",
         severity: "critical",
         clueInStem: "She has not told her obstetrician. The obstetrician calls and says if she is on lithium we need to know.",
-        whyItMatters: "The obstetrician needs accurate medication history to plan fetal cardiac screening. Natasha's withholding of this information — however understandable — creates clinical risk. With her consent I will communicate the full picture to obstetrics.",
-        modelWording: "The obstetrician requires accurate information about Natasha's medication history for appropriate fetal cardiac screening. With Natasha's consent I will communicate the lithium history, the cessation, and the relapse risk to obstetrics today.",
-        keywords: ["obstetrician", "communicate", "not told", "cardiac screening", "fetal", "obstetric", "coordination", "consent to share"],
+        whyItMatters: "The obstetrician needs accurate medication history to plan foetal cardiac screening. Natasha's withholding of this information — however understandable — creates clinical risk. With her consent I will communicate the full picture to obstetrics.",
+        modelWording: "The obstetrician requires accurate information about Natasha's medication history for appropriate foetal cardiac screening. With Natasha's consent I will communicate the lithium history, the cessation, and the relapse risk to obstetrics today.",
+        keywords: ["obstetrician", "communicate", "not told", "cardiac screening", "foetal", "obstetric", "coordination", "consent to share"],
       },
       {
         id: "s4",
@@ -365,7 +365,7 @@ An urgent FBC and lithium level are pending. The obstetrician calls while you ar
         severity: "important",
         clueInStem: "I feel completely fine. I don't think I need medication in pregnancy.",
         whyItMatters: "If Natasha continues to refuse lithium, alternatives must be discussed — but lamotrigine is not effective for mania prevention, and valproate is contraindicated in pregnancy. Quetiapine has some evidence. The risk of no mood stabiliser in this clinical context is very high.",
-        modelWording: "If Natasha refuses lithium, I will discuss alternatives — noting that lamotrigine does not prevent mania, valproate is absolutely contraindicated in pregnancy, and quetiapine has limited but some evidence. The safest option for this clinical picture is likely restarting lithium with fetal cardiac monitoring.",
+        modelWording: "If Natasha refuses lithium, I will discuss alternatives — noting that lamotrigine does not prevent mania, valproate is absolutely contraindicated in pregnancy, and quetiapine has limited but some evidence. The safest option for this clinical picture is likely restarting lithium with foetal cardiac monitoring.",
         keywords: ["mood stabiliser", "lamotrigine", "valproate", "contraindicated", "quetiapine", "alternatives", "lithium restart", "mania prevention"],
       },
       {
@@ -374,7 +374,7 @@ An urgent FBC and lithium level are pending. The obstetrician calls while you ar
         category: "mental_health_act",
         severity: "important",
         clueInStem: "three severe manic episodes, one of which required a forensic psychiatric admission after she assaulted a family member.",
-        whyItMatters: "If Natasha relapses in pregnancy, the complexity of involuntary psychiatric treatment in a pregnant woman — including medication choices, physical restraint implications, and fetal monitoring — must be anticipated and planned for now.",
+        whyItMatters: "If Natasha relapses in pregnancy, the complexity of involuntary psychiatric treatment in a pregnant woman — including medication choices, physical restraint implications, and foetal monitoring — must be anticipated and planned for now.",
         modelWording: "Given the forensic admission history, I will develop an advance care plan with Natasha now — including agreed early warning signs, agreed response plan, and her preferences about treatment if she relapses in pregnancy. This is better done now than in crisis.",
         keywords: ["MHA", "advance care plan", "relapse in pregnancy", "forensic", "involuntary", "treatment plan", "early warning signs", "crisis plan"],
       },
@@ -388,11 +388,11 @@ An urgent FBC and lithium level are pending. The obstetrician calls while you ar
 
 Informed consent: Natasha stopped based on outdated teratogenicity information. The absolute risk of Ebstein's anomaly from lithium is approximately 0.1-0.2% — far lower than the risk of untreated bipolar I disorder in pregnancy. I will provide accurate evidence-based information and give her time to reconsider.
 
-Obstetric communication: With Natasha's consent I will communicate the full picture to obstetrics today — the lithium history, the cessation, and the relapse risk — so appropriate fetal cardiac screening can be planned.
+Obstetric communication: With Natasha's consent I will communicate the full picture to obstetrics today — the lithium history, the cessation, and the relapse risk — so appropriate foetal cardiac screening can be planned.
 
 Partner collateral: The partner's six-week relapse timeline is the most important clinical fact. His distress also requires acknowledgement.
 
-Alternatives: If Natasha refuses lithium, I will discuss alternatives — noting that lamotrigine does not prevent mania, valproate is contraindicated, and quetiapine has limited evidence. Restarting lithium with fetal cardiac monitoring is the safest option for this clinical picture.
+Alternatives: If Natasha refuses lithium, I will discuss alternatives — noting that lamotrigine does not prevent mania, valproate is contraindicated, and quetiapine has limited evidence. Restarting lithium with foetal cardiac monitoring is the safest option for this clinical picture.
 
 Advance care plan: I will develop a crisis plan with Natasha now — agreed early warning signs, agreed response, and her preferences if she relapses. This is better done now than in an acute manic episode at 28 weeks.`,
   },

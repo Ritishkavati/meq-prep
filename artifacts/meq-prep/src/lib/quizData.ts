@@ -1506,13 +1506,13 @@ She starts crying and says: "I want to do this right this time. I want to keep t
     signals: [
       {
         id: "s1",
-        name: "Benzodiazepine use in pregnancy — fetal risk",
+        name: "Benzodiazepine use in pregnancy — foetal risk",
         category: "risk_vulnerable",
         severity: "critical",
         clueInStem: "10 weeks pregnant; positive benzodiazepine UDS; three weeks of illicit diazepam",
-        whyItMatters: "Benzodiazepine use in the first trimester carries teratogenic risk — fetal safety is an immediate concern requiring urgent obstetric referral",
-        modelWording: "Illicit benzodiazepine use at 10 weeks gestation is a fetal risk — first trimester teratogenicity, neonatal abstinence syndrome risk, and interaction with methadone must be addressed with urgent obstetric referral",
-        keywords: ["benzodiazepine", "pregnancy", "fetal", "teratogenic", "first trimester", "diazepam", "obstetric", "neonatal", "unborn"],
+        whyItMatters: "Benzodiazepine use in the first trimester carries teratogenic risk — foetal safety is an immediate concern requiring urgent obstetric referral",
+        modelWording: "Illicit benzodiazepine use at 10 weeks gestation is a foetal risk — first trimester teratogenicity, neonatal abstinence syndrome risk, and interaction with methadone must be addressed with urgent obstetric referral",
+        keywords: ["benzodiazepine", "pregnancy", "foetal", "teratogenic", "first trimester", "diazepam", "obstetric", "neonatal", "unborn"],
       },
       {
         id: "s2",
@@ -1611,7 +1611,7 @@ She starts crying and says: "I want to do this right this time. I want to keep t
       secondary: ["s4", "s6", "s7", "s10"],
       lowYield: ["s8", "s9"],
     },
-    modelAnswer: `Fetal safety — benzodiazepine use: Illicit diazepam at 10 weeks gestation is a first-trimester fetal risk requiring immediate obstetric referral and urgent cessation with medical supervision.
+    modelAnswer: `Foetal safety — benzodiazepine use: Illicit diazepam at 10 weeks gestation is a first-trimester foetal risk requiring immediate obstetric referral and urgent cessation with medical supervision.
 
 Methadone in pregnancy: Methadone pharmacokinetics change substantially across pregnancy — OST should continue (stopping is more dangerous), but dosing requires specialist obstetric and perinatal drug and alcohol coordination.
 
