@@ -1306,7 +1306,6 @@ export default function DailyMEQMode() {
     const timerRatio = Math.min(timer / allowedSeconds, 1);
     const timerColor =
       timerRatio < 0.7 ? "text-emerald-600" : timerRatio < 0.9 ? "text-amber-500" : "text-red-600";
-    const wordCount = stemAnswer.trim() ? stemAnswer.trim().split(/\s+/).length : 0;
     const minElapsed = (timer / 60).toFixed(1);
 
     return (
@@ -1321,7 +1320,7 @@ export default function DailyMEQMode() {
             {isOverTime && <span className="text-xs bg-red-100 text-red-700 px-2 py-0.5 rounded-full font-medium">Over time</span>}
             <span className="text-xs text-gray-400">{minElapsed} min elapsed</span>
           </div>
-          <span className="text-xs text-gray-500">{stem.marks}M · {wordCount} words</span>
+          <span className="text-xs text-gray-500">{stem.marks}M</span>
         </div>
 
         {/* Progress stepper */}
@@ -1579,7 +1578,7 @@ export default function DailyMEQMode() {
                           {stemAns.answerText || <span className="italic text-gray-400">No answer submitted</span>}
                         </p>
                         <div className="text-xs text-gray-400 mt-2">
-                          {stemAns.answerText?.trim().split(/\s+/).filter(Boolean).length ?? 0} words · {Math.round((stemAns.timeUsedSeconds ?? 0) / 60)} min used of {stemDef?.timeMinutes} min
+                          {Math.round((stemAns.timeUsedSeconds ?? 0) / 60)} min used of {stemDef?.timeMinutes} min
                         </div>
                       </div>
                     </div>
