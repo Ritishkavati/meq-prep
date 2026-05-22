@@ -38,4 +38,3 @@ externalPort = 3000
 [userenv]
 
 [userenv.shared]
-GITHUB_TOKEN = "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"
