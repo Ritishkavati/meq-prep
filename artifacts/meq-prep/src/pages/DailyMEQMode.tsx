@@ -840,7 +840,7 @@ EVALUATION INSTRUCTIONS
 For point classifications, use ONLY:
 - "high_yield" = earns marks at this level
 - "moderate" = partially correct or incomplete
-- "low_yield" = too vague or generic for marks
+- "no_yield" = too vague, generic, or listed without the required justification/explanation
 - "zero_mark" = explicitly does not earn marks
 - "unsafe" = incorrect or dangerous reasoning
 
@@ -868,6 +868,8 @@ Return ONLY a valid JSON object with EXACTLY this structure (no markdown, no pre
           "reason": "<one sentence why>"
         }
       ],
+
+      "box2_yieldCallout": "<CONDITIONAL — omit this field (or set null) if commandWordCompliance is true. If this stem has a gated command word (outline_justify or describe_explain) AND the candidate failed it by listing points without the required because-clause or explanation, write one plain-language orange-banner sentence: name the command word and state the exact failure. Example for outline_justify failure: 'This stem used Outline — every point needed because [case-specific reason]. Points listed without a because-clause earn zero marks regardless of content.' Example for describe_explain failure: 'This stem used Describe — every point needed an explanation of mechanism or clinical significance. Listing without explaining earns zero marks.'  Do NOT include this field when commandWordCompliance is true.>",
 
       "box3_inlineCorrection": "<Take ONLY the candidate's exact answer text. Rewrite it inline. Use ~~strikethrough~~ around phrases that are weak, vague, generic, or lack justification. Immediately after each strikethrough insert [INSERT: specific case-relevant replacement]. Keep strong phrases unchanged with no markup. If a point is correct but needs a because-clause added, show: the point ~~without justification~~ [INSERT: because case-specific reason]. If the answer is empty, return: 'No answer submitted — a full answer would have covered: key points...'.",
 
@@ -1581,6 +1583,14 @@ export default function DailyMEQMode() {
                           {Math.round((stemAns.timeUsedSeconds ?? 0) / 60)} min used of {stemDef?.timeMinutes} min
                         </div>
                       </div>
+                    </div>
+                  )}
+
+                  {/* BOX 2 yieldCallout — orange command-word warning banner (only on gate failures) */}
+                  {stemEv.box2_yieldCallout && (
+                    <div className="bg-orange-50 border border-orange-300 rounded-lg p-3">
+                      <div className="text-xs font-bold text-orange-800 mb-1">⚠ Command-word callout</div>
+                      <p className="text-xs text-orange-900">{stemEv.box2_yieldCallout}</p>
                     </div>
                   )}
 
