@@ -997,6 +997,7 @@ export default function DailyMEQMode() {
   const [evalError, setEvalError] = useState(null);
   const [evalElapsed, setEvalElapsed] = useState(0);
   const [expandedStems, setExpandedStems] = useState({});
+  const [signalsExpanded, setSignalsExpanded] = useState(false);
   const timerRef = useRef(null);
   const evalTimerRef = useRef(null);
 
@@ -1064,6 +1065,7 @@ export default function DailyMEQMode() {
     setStemAnswer(existingAnswer);
     setTimer(0);
     setError(null);
+    setSignalsExpanded(false);
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
@@ -1104,6 +1106,7 @@ export default function DailyMEQMode() {
       setStemAnswer(savedNext);
       setTimer(0);
       setError(null);
+      setSignalsExpanded(false);
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
   }
@@ -1304,10 +1307,9 @@ export default function DailyMEQMode() {
     const cw = COMMAND_WORDS[stem.commandWord];
     const isLastStem = currentStemIndex === selectedMEQ.stems.length - 1;
     const allowedSeconds = stem.timeMinutes * 60;
-    const isOverTime = timer > allowedSeconds;
-    const timerRatio = Math.min(timer / allowedSeconds, 1);
-    const timerColor =
-      timerRatio < 0.7 ? "text-emerald-600" : timerRatio < 0.9 ? "text-amber-500" : "text-red-600";
+    const timeRemaining = Math.max(0, allowedSeconds - timer);
+    const isTimeUp = timer >= allowedSeconds;
+    const timerColor = timeRemaining <= 120 ? "text-red-600" : "text-emerald-600";
     const minElapsed = (timer / 60).toFixed(1);
 
     return (
@@ -1318,8 +1320,8 @@ export default function DailyMEQMode() {
             ← MEQ List
           </button>
           <div className="flex items-center gap-3">
-            <span className={`text-2xl font-mono font-bold tabular-nums ${timerColor}`}>{formatTime(timer)}</span>
-            {isOverTime && <span className="text-xs bg-red-100 text-red-700 px-2 py-0.5 rounded-full font-medium">Over time</span>}
+            <span className={`text-2xl font-mono font-bold tabular-nums ${timerColor}`}>{formatTime(timeRemaining)}</span>
+            {isTimeUp && <span className="text-xs bg-red-100 text-red-700 px-2 py-0.5 rounded-full font-medium">Time — keep writing</span>}
             <span className="text-xs text-gray-400">{minElapsed} min elapsed</span>
           </div>
           <span className="text-xs text-gray-500">{stem.marks}M</span>
@@ -1380,6 +1382,31 @@ export default function DailyMEQMode() {
           </div>
           <p className="text-sm font-semibold leading-relaxed">{stem.question.split("\n")[0]}</p>
         </div>
+
+        {/* Stem signals — collapsible, collapsed by default */}
+        {stem.stemSignals?.length > 0 && (
+          <div className="mb-3">
+            <button
+              onClick={() => setSignalsExpanded((v) => !v)}
+              className="w-full flex items-center justify-between px-3 py-2 bg-sky-50 border border-sky-200 rounded-lg text-xs font-semibold text-sky-800 hover:bg-sky-100 transition-colors text-left"
+            >
+              <span>Stem signals — use these in your answer</span>
+              <span className="flex-shrink-0 ml-2 text-sky-500">{signalsExpanded ? "▲ Hide" : "▼ Show"}</span>
+            </button>
+            {signalsExpanded && (
+              <div className="bg-sky-50 border border-sky-200 border-t-0 rounded-b-lg px-3 py-2.5">
+                <ul className="space-y-1.5">
+                  {stem.stemSignals.map((signal, i) => (
+                    <li key={i} className="flex gap-2 text-xs text-sky-900">
+                      <span className="flex-shrink-0 text-sky-400 mt-px">·</span>
+                      <span>{signal}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+        )}
 
         {/* Answer textarea */}
         <textarea
