@@ -906,6 +906,86 @@ Return ONLY a valid JSON object with EXACTLY this structure (no markdown, no pre
 }
 
 // ============================================================
+// SINGLE-STEM PROMPT BUILDER
+// ============================================================
+function buildStemPrompt(meq, stem, answer, stemIndex) {
+  const cw = COMMAND_WORDS[stem.commandWord];
+  const minutesUsed = answer ? Math.round((answer.timeUsedSeconds ?? 0) / 60) : 0;
+  const timeNote = minutesUsed <= stem.timeMinutes
+    ? `Used ${minutesUsed}/${stem.timeMinutes} minutes`
+    : `OVER TIME by ${minutesUsed - stem.timeMinutes} minutes`;
+
+  const domainsText = stem.domains
+    .map((d) => `  DOMAIN "${d.name}" (${d.marks} marks):\n${d.keyPoints.map((p) => `    - ${p}`).join("\n")}`)
+    .join("\n\n");
+
+  const signalsText = stem.stemSignals.map((s) => `  - ${s}`).join("\n");
+  const trapsText = stem.zeroMarkTraps?.length
+    ? stem.zeroMarkTraps.map((z) => `  - ${z}`).join("\n")
+    : "  None";
+
+  return `You are an RANZCP MEQ examiner. Evaluate this single stem answer strictly.
+
+MEQ: ${meq.title} | STEM ${stem.stemNumber} of ${meq.stems.length}
+MARKS: ${stem.marks} | TIME: ${stem.timeMinutes} minutes | ${timeNote}
+
+VIGNETTE:
+${stem.vignette}
+
+QUESTION:
+${stem.question}
+
+COMMAND WORD: ${cw.label}
+Rule: ${cw.instruction}
+${cw.gate ? "⚠️ GATE: Non-compliance = ZERO MARKS regardless of content." : "No binary gate."}
+
+STEM SIGNALS:
+${signalsText}
+
+MARKING DOMAINS:
+${domainsText}
+
+ZERO-MARK TRAPS:
+${trapsText}
+
+POST-EXAMINER INTELLIGENCE:
+${stem.postExaminerNote}
+
+CANDIDATE'S ANSWER:
+${answer?.answerText?.trim() || "[NO ANSWER SUBMITTED]"}
+
+Return ONLY valid JSON — no markdown, no preamble:
+
+{
+  "stemNumber": "${stem.stemNumber}",
+  "marksEarned": <number 0-${stem.marks}>,
+  "marksAvailable": ${stem.marks},
+  "commandWordCompliance": <boolean>,
+  "commandWordGateResult": "PASS" or "FAIL — [reason]",
+  "box2_yieldCallout": "<null or one-sentence orange warning if command word gate failed>",
+  "box2_pointClassifications": [
+    { "candidateText": "<exact quote>", "yieldLevel": "high_yield|moderate|no_yield|zero_mark", "reason": "<why>" }
+  ],
+  "box3_inlineCorrection": "<candidate's exact answer rewritten inline with ~~strikethrough~~ and [INSERT: replacement]>",
+  "box4_markingGuide": {
+    "totalScorable": <number>,
+    "domainGroups": [
+      { "domainName": "<name>", "marks": <number>, "markEarningLines": ["<+1 exam-ready sentence>"] }
+    ],
+    "zeroMarkTraps": ["<trap>"],
+    "writingTip": "<one sentence on exam technique for this stem>"
+  },
+  "box5_feedback": {
+    "timeManagement": "<1-mark-per-minute analysis>",
+    "commandWordError": "<null or specific error>",
+    "knowledgeGaps": ["<gap 1>", "<gap 2>"],
+    "otherGaps": ["<gap>"]
+  },
+  "box6_conceptOfStem": "<2-3 sentences on what this stem tests and why it appears in RANZCP exam>"
+}`;
+}
+
+// ============================================================
 // DISPLAY UTILITIES
 // ============================================================
 const formatTime = (s) => {
@@ -998,6 +1078,7 @@ export default function DailyMEQMode() {
   const [error, setError] = useState(null);
   const [evalError, setEvalError] = useState(null);
   const [evalElapsed, setEvalElapsed] = useState(0);
+  const [evalStemIndex, setEvalStemIndex] = useState(0);
   const [expandedStems, setExpandedStems] = useState({});
   const timerRef = useRef(null);
   const evalTimerRef = useRef(null);
@@ -1161,47 +1242,81 @@ export default function DailyMEQMode() {
   async function submitForEvaluation(attempt) {
     setPhase("evaluating");
     setEvalError(null);
-    setEvalElapsed(0);
-    clearInterval(evalTimerRef.current);
-    evalTimerRef.current = setInterval(() => setEvalElapsed((n) => n + 1), 1000);
+    setEvalStemIndex(0);
 
     try {
-      const prompt = buildFullMEQPrompt(selectedMEQ, attempt.answers);
-      const res = await fetch("/api/meq-evaluate", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ prompt }),
-      });
-      clearInterval(evalTimerRef.current);
-      if (!res.ok) throw new Error(`Server error ${res.status}`);
-      const data = await res.json();
-      const text = (data.text ?? "").trim();
+      const stemEvaluations = [];
 
-      // Robust JSON extraction with truncation repair
-      const jsonMatch = text.match(/\{[\s\S]*\}/);
-      if (!jsonMatch) throw new Error("No JSON found in response");
-      let jsonText = jsonMatch[0];
-      let evaluation;
-      try {
-        evaluation = JSON.parse(jsonText);
-      } catch {
-        // Count unclosed brackets and attempt repair
-        let openBraces = 0;
-        let openBrackets = 0;
-        for (const ch of jsonText) {
-          if (ch === '{') openBraces++;
-          else if (ch === '}') openBraces--;
-          else if (ch === '[') openBrackets++;
-          else if (ch === ']') openBrackets--;
+      for (let i = 0; i < selectedMEQ.stems.length; i++) {
+        setEvalStemIndex(i);
+        const stem = selectedMEQ.stems[i];
+        const answer = attempt.answers[i];
+        const prompt = buildStemPrompt(selectedMEQ, stem, answer, i);
+
+        const res = await fetch("/api/meq-evaluate", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ prompt }),
+        });
+
+        if (!res.ok) {
+          const errData = await res.json().catch(() => ({}));
+          throw new Error(errData.detail?.message || `Stem ${stem.stemNumber} evaluation failed: ${res.status}`);
         }
-        jsonText = jsonText.trimEnd();
-        if (jsonText.endsWith(',')) jsonText = jsonText.slice(0, -1);
-        while (openBrackets > 0) { jsonText += ']'; openBrackets--; }
-        while (openBraces > 0) { jsonText += '}'; openBraces--; }
-        evaluation = JSON.parse(jsonText);
+
+        const data = await res.json();
+        const text = data.text || "";
+        const match = text.match(/\{[\s\S]*\}/);
+        if (!match) throw new Error(`No JSON returned for stem ${stem.stemNumber}`);
+
+        let stemResult;
+        try {
+          stemResult = JSON.parse(match[0]);
+        } catch {
+          let jsonText = match[0].trimEnd();
+          if (jsonText.endsWith(",")) jsonText = jsonText.slice(0, -1);
+          let opens = 0, openBrackets = 0;
+          for (const ch of jsonText) {
+            if (ch === "{") opens++;
+            else if (ch === "}") opens--;
+            else if (ch === "[") openBrackets++;
+            else if (ch === "]") openBrackets--;
+          }
+          while (openBrackets > 0) { jsonText += "]"; openBrackets--; }
+          while (opens > 0) { jsonText += "}"; opens--; }
+          stemResult = JSON.parse(jsonText);
+        }
+
+        stemEvaluations.push(stemResult);
       }
 
-      const evaluatedAttempt = { ...attempt, status: "evaluated", evaluation };
+      const totalMarksEarned = stemEvaluations.reduce((sum, s) => sum + (s.marksEarned ?? 0), 0);
+      const totalMarksAvailable = selectedMEQ.totalMarks;
+      const pct = Math.round((totalMarksEarned / totalMarksAvailable) * 100);
+      const passMark = pct >= 65 ? "yes" : pct >= 50 ? "borderline" : "no";
+
+      const evaluation = {
+        totalMarksEarned,
+        totalMarksAvailable,
+        passMark,
+        stems: stemEvaluations,
+        overallFeedback: `Scored ${totalMarksEarned}/${totalMarksAvailable} (${pct}%). Review each stem's six-box feedback below for specific corrections.`,
+        priorityActions: stemEvaluations
+          .flatMap((s) => s.box5_feedback?.knowledgeGaps ?? [])
+          .slice(0, 3),
+        readingGuidance: stemEvaluations
+          .flatMap((s) => s.box5_feedback?.otherGaps ?? [])
+          .slice(0, 2)
+          .join(" "),
+      };
+
+      const evaluatedAttempt = {
+        ...attempt,
+        status: "evaluated",
+        evaluation,
+        completedAt: new Date().toISOString(),
+      };
+
       setCurrentAttempt(evaluatedAttempt);
       updateAndPersistAttempt(evaluatedAttempt);
       setExpandedStems(
@@ -1209,9 +1324,7 @@ export default function DailyMEQMode() {
       );
       setPhase("assessment");
     } catch (err) {
-      clearInterval(evalTimerRef.current);
       setEvalError(err.message ?? "Unknown error occurred during evaluation.");
-      // Stay on evaluating phase to show error + retry — do NOT revert to stem
     }
   }
 
@@ -1540,8 +1653,21 @@ export default function DailyMEQMode() {
         <p className="text-gray-400 text-xs mt-3">
           Checking command words · domain coverage · time management
         </p>
-        <div className="mt-6 px-4 py-2 bg-gray-100 rounded-full text-xs text-gray-500 font-mono tabular-nums">
-          {formatTime(evalElapsed)} elapsed — this takes 1–2 minutes
+        <div className="mt-6 flex flex-col items-center gap-3">
+          {selectedMEQ?.stems.map((s, idx) => (
+            <div key={s.stemNumber} className="flex items-center gap-2 text-xs">
+              {idx < evalStemIndex ? (
+                <span className="text-emerald-600 font-bold">✓</span>
+              ) : idx === evalStemIndex ? (
+                <span className="w-3 h-3 border border-gray-900 border-t-transparent rounded-full animate-spin inline-block" />
+              ) : (
+                <span className="w-3 h-3 rounded-full border border-gray-200 inline-block" />
+              )}
+              <span className={idx < evalStemIndex ? "text-emerald-600" : idx === evalStemIndex ? "text-gray-900 font-semibold" : "text-gray-300"}>
+                Stem {s.stemNumber} · {s.marks}M
+              </span>
+            </div>
+          ))}
         </div>
       </div>
     );

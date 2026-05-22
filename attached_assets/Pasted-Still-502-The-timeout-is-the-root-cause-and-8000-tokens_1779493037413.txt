@@ -1,0 +1,221 @@
+Still 502. The timeout is the root cause and 8000 tokens is not enough to fix it. The proxy timeout is shorter than the API response time even at 8000 tokens with a large prompt.
+
+The correct fix is per-stem evaluation. This is the right architecture anyway — send each stem separately, get six boxes per stem, combine on the assessment page. Smaller prompts, faster responses, no timeout.
+
+Give your Replit agent this instruction:
+
+---
+
+**TASK: Change from whole-MEQ evaluation to per-stem evaluation**
+
+**This fixes the 502 timeout permanently. Do not increase max_tokens again.**
+
+**The architecture change:**
+
+Instead of sending all stems in one massive prompt to `/api/meq-evaluate`, evaluate each stem individually in sequence. Each stem gets its own API call with its own six-box feedback. The assessment page combines all stem results exactly as before.
+
+**File: `artifacts/meq-prep/src/pages/DailyMEQMode.tsx`**
+
+Find the `submitForEvaluation` function. Replace it with this logic:
+
+```typescript
+async function submitForEvaluation(attempt) {
+  setPhase("evaluating");
+  setEvalError(null);
+
+  try {
+    const stemEvaluations = [];
+
+    // Evaluate each stem individually
+    for (let i = 0; i < selectedMEQ.stems.length; i++) {
+      const stem = selectedMEQ.stems[i];
+      const answer = attempt.answers[i];
+      const prompt = buildStemPrompt(selectedMEQ, stem, answer, i);
+
+      const res = await fetch("/api/meq-evaluate", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ prompt }),
+      });
+
+      if (!res.ok) {
+        const errData = await res.json().catch(() => ({}));
+        throw new Error(errData.detail?.message || `Stem ${stem.stemNumber} evaluation failed: ${res.status}`);
+      }
+
+      const data = await res.json();
+      const text = data.text || "";
+      const match = text.match(/\{[\s\S]*\}/);
+      if (!match) throw new Error(`No JSON returned for stem ${stem.stemNumber}`);
+
+      let stemResult;
+      try {
+        stemResult = JSON.parse(match[0]);
+      } catch {
+        // Attempt JSON repair
+        let jsonText = match[0].trimEnd();
+        if (jsonText.endsWith(",")) jsonText = jsonText.slice(0, -1);
+        let opens = 0, openBrackets = 0;
+        for (const ch of jsonText) {
+          if (ch === "{") opens++;
+          else if (ch === "}") opens--;
+          else if (ch === "[") openBrackets++;
+          else if (ch === "]") openBrackets--;
+        }
+        while (openBrackets > 0) { jsonText += "]"; openBrackets--; }
+        while (opens > 0) { jsonText += "}"; opens--; }
+        stemResult = JSON.parse(jsonText);
+      }
+
+      stemEvaluations.push(stemResult);
+    }
+
+    // Combine all stem results
+    const totalMarksEarned = stemEvaluations.reduce((sum, s) => sum + (s.marksEarned ?? 0), 0);
+    const totalMarksAvailable = selectedMEQ.totalMarks;
+    const pct = Math.round((totalMarksEarned / totalMarksAvailable) * 100);
+    const passMark = pct >= 65 ? "yes" : pct >= 50 ? "borderline" : "no";
+
+    const evaluation = {
+      totalMarksEarned,
+      totalMarksAvailable,
+      passMark,
+      stems: stemEvaluations,
+      overallFeedback: `Scored ${totalMarksEarned}/${totalMarksAvailable} (${pct}%). Review each stem's six-box feedback below for specific corrections.`,
+      priorityActions: stemEvaluations
+        .flatMap(s => s.box5_feedback?.knowledgeGaps ?? [])
+        .slice(0, 3),
+      readingGuidance: stemEvaluations
+        .flatMap(s => s.box5_feedback?.otherGaps ?? [])
+        .slice(0, 2)
+        .join(" "),
+    };
+
+    const evaluatedAttempt = {
+      ...attempt,
+      status: "evaluated",
+      evaluation,
+      completedAt: new Date().toISOString(),
+    };
+
+    setCurrentAttempt(evaluatedAttempt);
+    updateAttempt(evaluatedAttempt);
+    setPhase("assessment");
+
+  } catch (err: any) {
+    setEvalError(err.message || "Evaluation failed");
+    setPhase("evaluating");
+  }
+}
+```
+
+**File: `artifacts/meq-prep/src/pages/DailyMEQMode.tsx`**
+
+Add a new function `buildStemPrompt` that builds a single-stem prompt. Place it just above `submitForEvaluation`. This replaces `buildFullMEQPrompt` for the evaluation call:
+
+```typescript
+function buildStemPrompt(meq, stem, answer, stemIndex) {
+  const cw = COMMAND_WORDS[stem.commandWord];
+  const minutesUsed = answer ? Math.round((answer.timeUsedSeconds ?? 0) / 60) : 0;
+  const timeNote = minutesUsed <= stem.timeMinutes
+    ? `Used ${minutesUsed}/${stem.timeMinutes} minutes`
+    : `OVER TIME by ${minutesUsed - stem.timeMinutes} minutes`;
+
+  const domainsText = stem.domains
+    .map(d => `  DOMAIN "${d.name}" (${d.marks} marks):\n${d.keyPoints.map(p => `    - ${p}`).join("\n")}`)
+    .join("\n\n");
+
+  const signalsText = stem.stemSignals.map(s => `  - ${s}`).join("\n");
+  const trapsText = stem.zeroMarkTraps?.length
+    ? stem.zeroMarkTraps.map(z => `  - ${z}`).join("\n")
+    : "  None";
+
+  return `You are an RANZCP MEQ examiner. Evaluate this single stem answer strictly.
+
+MEQ: ${meq.title} | STEM ${stem.stemNumber} of ${meq.stems.length}
+MARKS: ${stem.marks} | TIME: ${stem.timeMinutes} minutes | ${timeNote}
+
+VIGNETTE:
+${stem.vignette}
+
+QUESTION:
+${stem.question}
+
+COMMAND WORD: ${cw.label}
+Rule: ${cw.instruction}
+${cw.gate ? "⚠️ GATE: Non-compliance = ZERO MARKS regardless of content." : "No binary gate."}
+
+STEM SIGNALS:
+${signalsText}
+
+MARKING DOMAINS:
+${domainsText}
+
+ZERO-MARK TRAPS:
+${trapsText}
+
+POST-EXAMINER INTELLIGENCE:
+${stem.postExaminerNote}
+
+CANDIDATE'S ANSWER:
+${answer?.answerText?.trim() || "[NO ANSWER SUBMITTED]"}
+
+Return ONLY valid JSON — no markdown, no preamble:
+
+{
+  "stemNumber": "${stem.stemNumber}",
+  "marksEarned": <number 0-${stem.marks}>,
+  "marksAvailable": ${stem.marks},
+  "commandWordCompliance": <boolean>,
+  "commandWordGateResult": "PASS" or "FAIL — [reason]",
+  "box2_yieldCallout": "<null or one-sentence orange warning if command word gate failed>",
+  "box2_pointClassifications": [
+    { "candidateText": "<exact quote>", "yieldLevel": "high_yield|moderate|no_yield|zero_mark", "reason": "<why>" }
+  ],
+  "box3_inlineCorrection": "<candidate's exact answer rewritten inline with ~~strikethrough~~ and [INSERT: replacement]>",
+  "box4_markingGuide": {
+    "totalScorable": <number>,
+    "domainGroups": [
+      { "domainName": "<name>", "marks": <number>, "markEarningLines": ["<+1 exam-ready sentence>"] }
+    ],
+    "zeroMarkTraps": ["<trap>"],
+    "writingTip": "<one sentence on exam technique for this stem>"
+  },
+  "box5_feedback": {
+    "timeManagement": "<1-mark-per-minute analysis>",
+    "commandWordError": "<null or specific error>",
+    "knowledgeGaps": ["<gap 1>", "<gap 2>"],
+    "otherGaps": ["<gap>"]
+  },
+  "box6_conceptOfStem": "<2-3 sentences on what this stem tests and why it appears in RANZCP exam>"
+}`;
+}
+```
+
+**Also update `artifacts/api-server/src/routes/meqEvaluate.ts`:**
+
+Change `max_tokens` to `4000` — each single-stem response needs far less than the whole-MEQ response:
+
+```typescript
+max_tokens: 4000,
+```
+
+**Verification after changes:**
+
+```bash
+grep -n "buildStemPrompt\|submitForEvaluation\|for.*stems\|stemEvaluations" artifacts/meq-prep/src/pages/DailyMEQMode.tsx | head -20
+```
+
+```bash
+grep -n "max_tokens" artifacts/api-server/src/routes/meqEvaluate.ts
+```
+
+```bash
+pnpm run typecheck
+```
+
+All must pass clean.
+
+---
+
+This is the correct permanent fix. Four small API calls instead of one massive one. Each completes in under 10 seconds. No timeout. The assessment page renders exactly as before.
