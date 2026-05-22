@@ -1250,7 +1250,7 @@ export default function DailyMEQMode() {
       for (let i = 0; i < selectedMEQ.stems.length; i++) {
         setEvalStemIndex(i);
         const stem = selectedMEQ.stems[i];
-        const answer = attempt.answers[i];
+        const answer = attempt.answers.find((a) => a.stemNumber === stem.stemNumber);
         const prompt = buildStemPrompt(selectedMEQ, stem, answer, i);
 
         const res = await fetch("/api/meq-evaluate", {

@@ -40,7 +40,7 @@ router.post("/meq-evaluate", async (req, res) => {
       type: err?.type,
       promptLength: prompt?.length,
       model: "claude-sonnet-4-6",
-      maxTokens: 16000,
+      maxTokens: 4000,
     };
     req.log?.error(detail, "MEQ evaluate failed");
     res.status(502).json({
