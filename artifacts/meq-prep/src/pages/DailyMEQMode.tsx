@@ -985,21 +985,24 @@ const errorTypeLabel = (t) =>
 // MAIN COMPONENT
 // ============================================================
 export default function DailyMEQMode() {
-  const [phase, setPhase] = useState("list"); // list | stem | evaluating | assessment
+  const [phase, setPhase] = useState("list"); // list | mode_select | stem | evaluating | assessment
   const [selectedMEQ, setSelectedMEQ] = useState(null);
   const [currentAttempt, setCurrentAttempt] = useState(null);
   const [currentStemIndex, setCurrentStemIndex] = useState(0);
   const [stemAnswer, setStemAnswer] = useState("");
   const [timer, setTimer] = useState(0);
   const [timerActive, setTimerActive] = useState(false);
+  const [timerMode, setTimerMode] = useState(null); // "practice" | "exam"
+  const [stemStartTime, setStemStartTime] = useState(0);
   const [allAttempts, setAllAttempts] = useState([]);
   const [error, setError] = useState(null);
   const [evalError, setEvalError] = useState(null);
   const [evalElapsed, setEvalElapsed] = useState(0);
   const [expandedStems, setExpandedStems] = useState({});
-  const [signalsExpanded, setSignalsExpanded] = useState(false);
   const timerRef = useRef(null);
   const evalTimerRef = useRef(null);
+  const autoSubmitFiredRef = useRef(false);
+  const autoSubmitHandlerRef = useRef(null);
 
   useEffect(() => {
     setAllAttempts(loadAllAttempts());
@@ -1013,6 +1016,43 @@ export default function DailyMEQMode() {
     }
     return () => clearInterval(timerRef.current);
   }, [timerActive]);
+
+  // Keep auto-submit handler fresh with latest state on every render
+  autoSubmitHandlerRef.current = () => {
+    if (autoSubmitFiredRef.current || !selectedMEQ || phase !== "stem") return;
+    autoSubmitFiredRef.current = true;
+    clearInterval(timerRef.current);
+    setTimerActive(false);
+    const stem = selectedMEQ.stems[currentStemIndex];
+    const newAnswer = {
+      stemNumber: stem.stemNumber,
+      answerText: stemAnswer,
+      timeUsedSeconds: timer - stemStartTime,
+      submittedAt: new Date().toISOString(),
+    };
+    const updatedAnswers = [
+      ...(currentAttempt?.answers ?? []).filter((a) => a.stemNumber !== stem.stemNumber),
+      newAnswer,
+    ];
+    const finalAttempt = {
+      ...currentAttempt,
+      answers: updatedAnswers,
+      currentStemIndex,
+      status: "submitted",
+      completedAt: new Date().toISOString(),
+    };
+    setCurrentAttempt(finalAttempt);
+    updateAndPersistAttempt(finalAttempt);
+    submitForEvaluation(finalAttempt);
+  };
+
+  useEffect(() => {
+    if (phase !== "stem" || timerMode !== "exam" || !selectedMEQ) return;
+    const totalSeconds = selectedMEQ.totalTimeMinutes * 60;
+    if (timer >= totalSeconds && timer > 0) {
+      autoSubmitHandlerRef.current?.();
+    }
+  }, [timer, phase, timerMode, selectedMEQ]);
 
   function updateAndPersistAttempt(attempt) {
     const updated = allAttempts
@@ -1036,10 +1076,19 @@ export default function DailyMEQMode() {
     setCurrentStemIndex(stemIdx);
     setStemAnswer(savedAnswer);
     setTimer(0);
+    setStemStartTime(0);
+    setTimerMode(null);
+    autoSubmitFiredRef.current = false;
     setError(null);
+    setPhase("mode_select");
+    if (!existingAttempt) updateAndPersistAttempt(attempt);
+  }
+
+  function confirmModeAndStart(mode) {
+    setTimerMode(mode);
+    setStemStartTime(0);
     setTimerActive(true);
     setPhase("stem");
-    if (!existingAttempt) updateAndPersistAttempt(attempt);
   }
 
   function navigateToStem(targetIdx) {
@@ -1048,7 +1097,7 @@ export default function DailyMEQMode() {
     const savedAnswer = {
       stemNumber: stem.stemNumber,
       answerText: stemAnswer,
-      timeUsedSeconds: timer,
+      timeUsedSeconds: timer - stemStartTime,
       submittedAt: new Date().toISOString(),
     };
     const updatedAnswers = [
@@ -1063,9 +1112,8 @@ export default function DailyMEQMode() {
       updatedAnswers.find((a) => a.stemNumber === targetStem.stemNumber)?.answerText ?? "";
     setCurrentStemIndex(targetIdx);
     setStemAnswer(existingAnswer);
-    setTimer(0);
+    setStemStartTime(timer);
     setError(null);
-    setSignalsExpanded(false);
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
@@ -1074,7 +1122,7 @@ export default function DailyMEQMode() {
     const newAnswer = {
       stemNumber: stem.stemNumber,
       answerText: stemAnswer,
-      timeUsedSeconds: timer,
+      timeUsedSeconds: timer - stemStartTime,
       submittedAt: new Date().toISOString(),
     };
     const updatedAnswers = [
@@ -1104,9 +1152,8 @@ export default function DailyMEQMode() {
         )?.answerText ?? "";
       setCurrentStemIndex(nextStemIndex);
       setStemAnswer(savedNext);
-      setTimer(0);
+      setStemStartTime(timer);
       setError(null);
-      setSignalsExpanded(false);
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
   }
@@ -1177,6 +1224,9 @@ export default function DailyMEQMode() {
     setCurrentStemIndex(0);
     setStemAnswer("");
     setTimer(0);
+    setStemStartTime(0);
+    setTimerMode(null);
+    autoSubmitFiredRef.current = false;
     setError(null);
   }
 
@@ -1196,6 +1246,44 @@ export default function DailyMEQMode() {
       );
       setPhase("assessment");
     }
+  }
+
+  // ── MODE SELECT PHASE ──────────────────────────────────────
+  if (phase === "mode_select" && selectedMEQ) {
+    return (
+      <div className="max-w-2xl mx-auto px-4 py-10">
+        <button onClick={goBackToList} className="text-xs text-gray-400 hover:text-gray-700 transition-colors mb-6 block">
+          ← MEQ List
+        </button>
+        <div className="mb-8">
+          <h2 className="text-2xl font-bold text-gray-900">{selectedMEQ.title}</h2>
+          <p className="text-sm text-gray-500 mt-1">
+            {selectedMEQ.totalMarks} marks · {selectedMEQ.totalTimeMinutes} minutes · {selectedMEQ.stems.length} stems
+          </p>
+        </div>
+        <h3 className="text-lg font-semibold text-gray-800 mb-4">Choose your practice mode</h3>
+        <div className="grid gap-4 sm:grid-cols-2">
+          <button
+            onClick={() => confirmModeAndStart("practice")}
+            className="text-left p-5 bg-white border-2 border-gray-200 rounded-2xl hover:border-gray-900 hover:shadow-md transition-all group"
+          >
+            <div className="font-bold text-gray-900 text-base mb-2">Practice Mode</div>
+            <p className="text-sm text-gray-500 leading-relaxed">
+              Timer runs but nothing is forced at zero. Keep writing and submit when ready.
+            </p>
+          </button>
+          <button
+            onClick={() => confirmModeAndStart("exam")}
+            className="text-left p-5 bg-gray-900 border-2 border-gray-900 rounded-2xl hover:bg-gray-800 transition-all"
+          >
+            <div className="font-bold text-white text-base mb-2">Exam Mode</div>
+            <p className="text-sm text-gray-300 leading-relaxed">
+              Auto-submits when time runs out. Exactly like the real exam.
+            </p>
+          </button>
+        </div>
+      </div>
+    );
   }
 
   // ── LIST PHASE ─────────────────────────────────────────────
@@ -1306,11 +1394,9 @@ export default function DailyMEQMode() {
     const stem = selectedMEQ.stems[currentStemIndex];
     const cw = COMMAND_WORDS[stem.commandWord];
     const isLastStem = currentStemIndex === selectedMEQ.stems.length - 1;
-    const allowedSeconds = stem.timeMinutes * 60;
-    const timeRemaining = Math.max(0, allowedSeconds - timer);
-    const isTimeUp = timer >= allowedSeconds;
-    const timerColor = timeRemaining <= 120 ? "text-red-600" : "text-emerald-600";
-    const minElapsed = (timer / 60).toFixed(1);
+    const meqTimeRemaining = Math.max(0, selectedMEQ.totalTimeMinutes * 60 - timer);
+    const isTimeUp = meqTimeRemaining === 0;
+    const timerColor = meqTimeRemaining <= 120 ? "text-red-600" : "text-emerald-600";
 
     return (
       <div className="max-w-3xl mx-auto px-4 py-4">
@@ -1320,11 +1406,11 @@ export default function DailyMEQMode() {
             ← MEQ List
           </button>
           <div className="flex items-center gap-3">
-            <span className={`text-2xl font-mono font-bold tabular-nums ${timerColor}`}>{formatTime(timeRemaining)}</span>
-            {isTimeUp && <span className="text-xs bg-red-100 text-red-700 px-2 py-0.5 rounded-full font-medium">Time — keep writing</span>}
-            <span className="text-xs text-gray-400">{minElapsed} min elapsed</span>
+            <span className={`text-2xl font-mono font-bold tabular-nums ${timerColor}`}>{formatTime(meqTimeRemaining)}</span>
+            {isTimeUp && timerMode === "practice" && (
+              <span className="text-xs bg-red-100 text-red-700 px-2 py-0.5 rounded-full font-medium">Time over — keep writing</span>
+            )}
           </div>
-          <span className="text-xs text-gray-500">{stem.marks}M</span>
         </div>
 
         {/* Progress stepper */}
@@ -1382,31 +1468,6 @@ export default function DailyMEQMode() {
           </div>
           <p className="text-sm font-semibold leading-relaxed">{stem.question.split("\n")[0]}</p>
         </div>
-
-        {/* Stem signals — collapsible, collapsed by default */}
-        {stem.stemSignals?.length > 0 && (
-          <div className="mb-3">
-            <button
-              onClick={() => setSignalsExpanded((v) => !v)}
-              className="w-full flex items-center justify-between px-3 py-2 bg-sky-50 border border-sky-200 rounded-lg text-xs font-semibold text-sky-800 hover:bg-sky-100 transition-colors text-left"
-            >
-              <span>Stem signals — use these in your answer</span>
-              <span className="flex-shrink-0 ml-2 text-sky-500">{signalsExpanded ? "▲ Hide" : "▼ Show"}</span>
-            </button>
-            {signalsExpanded && (
-              <div className="bg-sky-50 border border-sky-200 border-t-0 rounded-b-lg px-3 py-2.5">
-                <ul className="space-y-1.5">
-                  {stem.stemSignals.map((signal, i) => (
-                    <li key={i} className="flex gap-2 text-xs text-sky-900">
-                      <span className="flex-shrink-0 text-sky-400 mt-px">·</span>
-                      <span>{signal}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
-          </div>
-        )}
 
         {/* Answer textarea */}
         <textarea

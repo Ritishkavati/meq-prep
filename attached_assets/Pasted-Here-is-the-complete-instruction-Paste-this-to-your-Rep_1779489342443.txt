@@ -1,0 +1,98 @@
+Here is the complete instruction. Paste this to your Replit agent exactly as written.
+
+---
+
+**TASK: Two changes to `artifacts/meq-prep/src/pages/DailyMEQMode.tsx`**
+
+**Do not change any other file. Do not change the MEQ bank data. Do not change the assessment page.**
+
+---
+
+**CHANGE 1 — Replace per-stem timer with a single whole-MEQ countdown**
+
+**1A — Add a timer mode selection screen before the MEQ starts**
+
+When the candidate clicks "Start MEQ" from the MEQ list, before showing the first stem, show a mode selection screen with:
+
+- The MEQ title and total marks/time
+- A heading: "Choose your practice mode"
+- Two options the candidate clicks:
+
+**Practice Mode** — "Timer runs but nothing is forced at zero. Keep writing and submit when ready."
+
+**Exam Mode** — "Auto-submits when time runs out. Exactly like the real exam."
+
+Store the choice in a state variable: `timerMode` — value `"practice"` or `"exam"`.
+
+After selecting, proceed to stem 1.1 and start the timer.
+
+**1B — Replace per-stem timer with one single MEQ-level countdown**
+
+- Remove the per-stem timer logic entirely
+- Add a single `meqTimer` state that counts UP in seconds from 0 (still needed for recording `timeUsedSeconds` per stem — track which stem the candidate is on and how long they spend on each stem for the Box 5 feedback)
+- Add a derived `meqTimeRemaining = Math.max(0, selectedMEQ.totalTimeMinutes * 60 - meqTimer)` computed each render
+- Display `meqTimeRemaining` as MM:SS in the header — counts down from e.g. `30:00` to `0:00`
+- The countdown runs continuously across all stems — it does NOT reset when moving from stem to stem
+- The timer starts when the first stem is shown and never resets until the MEQ is submitted or abandoned
+
+**1C — Colour and warning behaviour**
+
+- When `meqTimeRemaining > 120` (more than 2 minutes left): timer displays in normal colour
+- When `meqTimeRemaining <= 120` (2 minutes or less): timer turns red
+- When `meqTimeRemaining === 0`:
+  - In **Practice Mode**: timer freezes at `0:00` in red, show a red pill badge "Time over — keep writing", do NOT auto-submit, candidate submits manually when ready
+  - In **Exam Mode**: immediately trigger `saveCurrentStemAndAdvance()` for the current stem then `submitForEvaluation()` — auto-submits the whole MEQ exactly as if the candidate clicked "Submit Full MEQ for Evaluation"
+
+**1D — Per-stem time tracking for Box 5 feedback**
+
+Keep recording `timeUsedSeconds` per stem for the AI evaluation — this is what drives the 1-mark-per-minute feedback in Box 5. Track it by recording when the candidate arrives at each stem and when they leave it. The visible clock is the whole-MEQ countdown but the AI still receives per-stem time data.
+
+---
+
+**CHANGE 2 — Permanently remove stem signals from the writing phase**
+
+**2A — Delete the accordion entirely**
+
+Find and delete the entire stem signals accordion block in the writing phase — the sky-blue collapsed button labelled "Stem signals — use these in your answer" and all its content. It appears above or near the answer textarea.
+
+**2B — Delete the related state**
+
+Delete the `signalsExpanded` state variable and its `useState` declaration.
+
+Delete the two `setSignalsExpanded(false)` reset calls — one in `navigateToStem` and one in `saveCurrentStemAndAdvance`.
+
+**2C — Do NOT remove stem signals from anywhere else**
+
+Do NOT remove `stemSignals` from the MEQ data objects.
+
+Do NOT remove stem signals from the Box 5 assessment feedback rendering.
+
+Do NOT change the AI evaluation prompt — stem signals must still be used in the post-submission evaluation.
+
+Only the writing-phase display is removed.
+
+---
+
+**VERIFICATION — run these after making changes:**
+
+```bash
+grep -n "signalsExpanded\|Stem signals — use these" artifacts/meq-prep/src/pages/DailyMEQMode.tsx
+```
+
+This must return nothing.
+
+```bash
+grep -n "meqTimeRemaining\|timerMode\|practice\|exam" artifacts/meq-prep/src/pages/DailyMEQMode.tsx | head -20
+```
+
+This must show the new timer variables.
+
+```bash
+pnpm run typecheck
+```
+
+Must pass clean.
+
+---
+
+**Writing phase should show only:** vignette, question, command word, total MEQ countdown timer, answer textarea, and the Save/Submit button. Nothing else.
