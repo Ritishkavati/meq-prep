@@ -1,0 +1,80 @@
+Correct diagnosis. Give your Replit agent this exact instruction:
+
+---
+
+**TASK: Diagnose and fix the 502 evaluation error**
+
+**Do not build new features. Do not restart servers randomly. Fix the Anthropic API error only.**
+
+**Step 1 — Check environment variables without printing secrets**
+
+Run in shell:
+```bash
+cd ~/workspace/artifacts/api-server && PORT=5000 node -e 'console.log({
+  hasBaseURL: !!process.env.AI_INTEGRATIONS_ANTHROPIC_BASE_URL,
+  hasApiKey: !!process.env.AI_INTEGRATIONS_ANTHROPIC_API_KEY,
+  port: process.env.PORT
+})'
+```
+
+Paste the output. If `hasBaseURL` or `hasApiKey` is false, that is the root cause.
+
+**Step 2 — Improve error logging in the catch block**
+
+In `artifacts/api-server/src/routes/meqEvaluate.ts`, replace the current catch block:
+
+```typescript
+} catch (err) {
+  req.log?.error(err, "MEQ evaluate failed");
+  res.status(502).json({ error: "AI evaluation failed" });
+}
+```
+
+With this:
+
+```typescript
+} catch (err: any) {
+  const detail = {
+    name: err?.name,
+    message: err?.message,
+    status: err?.status,
+    type: err?.type,
+    promptLength: prompt?.length,
+    model: "claude-sonnet-4-6",
+    maxTokens: 16000,
+  };
+  req.log?.error(detail, "MEQ evaluate failed");
+  res.status(502).json({
+    error: "AI evaluation failed",
+    detail: process.env.NODE_ENV === "development" ? detail : undefined,
+  });
+}
+```
+
+**Step 3 — Rebuild and restart the server**
+
+```bash
+cd ~/workspace/artifacts/api-server && PORT=5000 pnpm run dev &
+```
+
+**Step 4 — Submit the MEQ evaluation again and capture the exact error**
+
+After clicking Try Again in the app, check the shell output for the logged error detail. Paste the full log output here.
+
+**Step 5 — Based on what the log shows, apply one of these fixes:**
+
+If `hasBaseURL: false` — the Anthropic base URL env var is missing. The route returns 503 for missing base URL but double-check this is set in Replit's AI integrations panel, not just Secrets.
+
+If `hasApiKey: false` — the API key is missing or still set to `"placeholder"`. Check Replit AI integrations panel.
+
+If the error message contains `timeout` or `ETIMEDOUT` — reduce `max_tokens` from 16000 to 8000 and test again.
+
+If the error message contains `invalid_api_key` or `401` — the API key is wrong. Check Replit AI integrations panel.
+
+If the error message contains `model_not_found` — change model from `claude-sonnet-4-6` to `claude-sonnet-4-5` and test.
+
+**Report back with the exact error detail from the log before making any other changes.**
+
+---
+
+Paste the shell output after Step 4 and I will tell you exactly what to fix.

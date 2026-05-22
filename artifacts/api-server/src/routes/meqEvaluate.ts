@@ -24,7 +24,7 @@ router.post("/meq-evaluate", async (req, res) => {
   try {
     const message = await client.messages.create({
       model: "claude-sonnet-4-6",
-      max_tokens: 16000,
+      max_tokens: 8000,
       messages: [{ role: "user", content: prompt }],
     });
 
@@ -32,9 +32,21 @@ router.post("/meq-evaluate", async (req, res) => {
     const text = block.type === "text" ? block.text : "";
 
     res.json({ text });
-  } catch (err) {
-    req.log?.error(err, "MEQ evaluate failed");
-    res.status(502).json({ error: "AI evaluation failed" });
+  } catch (err: any) {
+    const detail = {
+      name: err?.name,
+      message: err?.message,
+      status: err?.status,
+      type: err?.type,
+      promptLength: prompt?.length,
+      model: "claude-sonnet-4-6",
+      maxTokens: 16000,
+    };
+    req.log?.error(detail, "MEQ evaluate failed");
+    res.status(502).json({
+      error: "AI evaluation failed",
+      detail: process.env.NODE_ENV === "development" ? detail : undefined,
+    });
   }
 });
 
