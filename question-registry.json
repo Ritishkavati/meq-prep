@@ -1,0 +1,52 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2026-05-23",
+  "totalQuestions": 3,
+  "questions": [
+    {
+      "id": "meq_001",
+      "title": "Adil — Consultation Liaison",
+      "usedIn": "daily_meq",
+      "primaryDomain": "Management / Disposition",
+      "ageGroup": "26-64",
+      "setting": "Medical ward / CL",
+      "clinicalTheme": "Treatment refusal, capacity assessment, opioid dependence",
+      "culturalTag": "Afghan refugee, CALD",
+      "pressureSequence": "Refusal → capacity assessment → discharge planning → ethics of discharge",
+      "finalDilemma": "Ethics of discharge to foreseeable harm",
+      "patientName": "Adil",
+      "createdAt": "2026-05-23",
+      "status": "active"
+    },
+    {
+      "id": "meq_002",
+      "title": "Danica — Perinatal Psychiatry",
+      "usedIn": "daily_meq",
+      "primaryDomain": "Ethics / Professionalism / Legal",
+      "ageGroup": "perinatal",
+      "setting": "Community / outpatient",
+      "clinicalTheme": "Bipolar disorder in pregnancy, valproate embryopathy",
+      "culturalTag": "none",
+      "pressureSequence": "Assessment → medication ethics → fetal harm → competing duties",
+      "finalDilemma": "Maternal autonomy vs fetal welfare",
+      "patientName": "Danica",
+      "createdAt": "2026-05-23",
+      "status": "active"
+    },
+    {
+      "id": "meq_003",
+      "title": "Hypnotics Quality Improvement",
+      "usedIn": "daily_meq",
+      "primaryDomain": "Governance / Systems / Leadership",
+      "ageGroup": "26-64",
+      "setting": "Acute inpatient",
+      "clinicalTheme": "QI audit, hypnotic prescribing, non-pharmacological sleep",
+      "culturalTag": "none",
+      "pressureSequence": "Implementation planning → physical health → metrics → non-compliant consultants",
+      "finalDilemma": "Governance escalation for non-compliance",
+      "patientName": "none",
+      "createdAt": "2026-05-23",
+      "status": "active"
+    }
+  ]
+}
