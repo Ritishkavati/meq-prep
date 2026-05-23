@@ -1071,7 +1071,7 @@ const errorTypeLabel = (t) =>
 // MAIN COMPONENT
 // ============================================================
 export default function DailyMEQMode() {
-  const [phase, setPhase] = useState("list"); // list | attempt_history | mode_select | stem | pathway_select | evaluating | view_key | assessment
+  const [phase, setPhase] = useState("list"); // list | attempt_history | stem | pathway_select | evaluating | view_key | assessment
   const [selectedMEQ, setSelectedMEQ] = useState(null);
   const [currentAttempt, setCurrentAttempt] = useState(null);
   const [currentStemIndex, setCurrentStemIndex] = useState(0);
@@ -1200,12 +1200,7 @@ export default function DailyMEQMode() {
     if (!existingAttempt) updateAndPersistAttempt(attempt);
   }
 
-  function confirmModeAndStart(mode) {
-    setTimerMode(mode);
-    setStemStartTime(0);
-    setTimerActive(true);
-    setPhase("stem");
-  }
+
 
   function navigateToStem(targetIdx) {
     if (targetIdx === currentStemIndex) return;
@@ -1525,43 +1520,7 @@ export default function DailyMEQMode() {
     );
   }
 
-  // ── MODE SELECT PHASE ──────────────────────────────────────
-  if (phase === "mode_select" && selectedMEQ) {
-    return (
-      <div className="max-w-2xl mx-auto px-4 py-10">
-        <button onClick={goBackToList} className="text-xs text-gray-400 hover:text-gray-700 transition-colors mb-6 block">
-          ← MEQ List
-        </button>
-        <div className="mb-8">
-          <h2 className="text-2xl font-bold text-gray-900">{selectedMEQ.title}</h2>
-          <p className="text-sm text-gray-500 mt-1">
-            {selectedMEQ.totalMarks} marks · {selectedMEQ.totalTimeMinutes} minutes · {selectedMEQ.stems.length} stems
-          </p>
-        </div>
-        <h3 className="text-lg font-semibold text-gray-800 mb-4">Choose your practice mode</h3>
-        <div className="grid gap-4 sm:grid-cols-2">
-          <button
-            onClick={() => confirmModeAndStart("practice")}
-            className="text-left p-5 bg-white border-2 border-gray-200 rounded-2xl hover:border-gray-900 hover:shadow-md transition-all group"
-          >
-            <div className="font-bold text-gray-900 text-base mb-2">Practice Mode</div>
-            <p className="text-sm text-gray-500 leading-relaxed">
-              Timer runs but nothing is forced at zero. Keep writing and submit when ready.
-            </p>
-          </button>
-          <button
-            onClick={() => confirmModeAndStart("exam")}
-            className="text-left p-5 bg-gray-900 border-2 border-gray-900 rounded-2xl hover:bg-gray-800 transition-all"
-          >
-            <div className="font-bold text-white text-base mb-2">Exam Mode</div>
-            <p className="text-sm text-gray-300 leading-relaxed">
-              Auto-submits when time runs out. Exactly like the real exam.
-            </p>
-          </button>
-        </div>
-      </div>
-    );
-  }
+
 
   // ── LIST PHASE ─────────────────────────────────────────────
   if (phase === "list") {
