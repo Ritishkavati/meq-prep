@@ -1591,10 +1591,10 @@ export default function DailyMEQMode() {
           <h1 className="text-2xl font-bold text-gray-900">Daily MEQ</h1>
           <a
             href="#"
-            onClick={(e) => { e.preventDefault(); window.location.href = (import.meta.env.BASE_URL ?? "").replace(/\/$/, "") + "/meq-progress"; }}
+            onClick={(e) => { e.preventDefault(); window.location.href = (import.meta.env.BASE_URL ?? "").replace(/\/$/, "") + "/phases"; }}
             className="text-xs text-gray-400 hover:text-gray-700 transition-colors whitespace-nowrap"
           >
-            View Progress →
+            ← Home
           </a>
         </div>
 
