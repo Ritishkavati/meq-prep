@@ -1,5 +1,6 @@
 // @ts-nocheck
 import { useState, useEffect, useRef } from "react";
+import { useLocation } from "wouter";
 
 // ============================================================
 // COMMAND WORDS
@@ -1071,6 +1072,7 @@ const errorTypeLabel = (t) =>
 // MAIN COMPONENT
 // ============================================================
 export default function DailyMEQMode() {
+  const [, setLocation] = useLocation();
   const [phase, setPhase] = useState("list"); // list | attempt_history | stem | pathway_select | evaluating | view_key | assessment
   const [selectedMEQ, setSelectedMEQ] = useState(null);
   const [currentAttempt, setCurrentAttempt] = useState(null);
@@ -1548,13 +1550,12 @@ export default function DailyMEQMode() {
         {/* Header */}
         <div className="flex items-center justify-between gap-4 mb-4">
           <h1 className="text-2xl font-bold text-gray-900">Daily MEQ</h1>
-          <a
-            href="#"
-            onClick={(e) => { e.preventDefault(); window.location.href = (import.meta.env.BASE_URL ?? "").replace(/\/$/, "") + "/phases"; }}
+          <button
+            onClick={() => setLocation("/phases")}
             className="text-xs text-gray-400 hover:text-gray-700 transition-colors whitespace-nowrap"
           >
             ← Back to study modes
-          </a>
+          </button>
         </div>
 
         {/* Domain dropdown */}
