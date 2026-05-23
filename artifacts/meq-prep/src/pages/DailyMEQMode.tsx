@@ -1553,7 +1553,7 @@ export default function DailyMEQMode() {
             onClick={(e) => { e.preventDefault(); window.location.href = (import.meta.env.BASE_URL ?? "").replace(/\/$/, "") + "/phases"; }}
             className="text-xs text-gray-400 hover:text-gray-700 transition-colors whitespace-nowrap"
           >
-            ← Home
+            ← Back to study modes
           </a>
         </div>
 
