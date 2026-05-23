@@ -1,0 +1,155 @@
+Yes. Exactly right.
+
+So the completed MEQ behaviour is:
+
+When a candidate opens a completed MEQ from the list, they see a **history of all their attempts** for that MEQ — Attempt 1, Attempt 2, Attempt 3 — each showing the date, total score, and pass/fail. They click any attempt to see the full six-box feedback for that specific attempt. No AI call. Instantly rendered from stored data.
+
+This means:
+- Attempt 1 from two weeks ago — click to see that feedback
+- Attempt 2 from last week — click to see the improvement
+- Most recent attempt — always available
+
+This serves two purposes simultaneously. Revision — they can re-read the model answer and corrections any time. Progress tracking — they can see their score improving across attempts on the same case.
+
+**Confirming the full build list:**
+
+One — Attempt history viewer for completed MEQs. All attempts, clickable, instant from stored data, no AI re-call.
+
+Two — MEQ list organised with domain and status filters.
+
+Three — Progress Dashboard showing completion, scores, command word compliance, domain strengths and weaknesses, all attempts clickable.
+
+Four — Daily MEQ contributes 30% to course progress in the Phases page.
+
+**Now writing the agent prompt.**
+
+---
+
+**TASK: Four changes to the Daily MEQ module and Progress Dashboard**
+
+**Files to modify:**
+- `artifacts/meq-prep/src/pages/DailyMEQMode.tsx`
+- `artifacts/meq-prep/src/pages/Phases.tsx`
+- `artifacts/meq-prep/src/App.tsx` (add new route if needed)
+
+**Do not change Quiz Mode. Do not change Exam Mode. Do not change the MEQ bank data. Do not change the six-box assessment rendering.**
+
+---
+
+**CHANGE 1 — Attempt history viewer for completed MEQs**
+
+In the MEQ list (home phase of DailyMEQMode), when a candidate clicks a MEQ that has at least one completed attempt:
+
+Do not immediately start a new attempt. Instead show an **Attempt History screen** for that MEQ containing:
+
+- MEQ title and topic at the top
+- A list of all completed attempts for this MEQ, ordered most recent first
+- Each attempt shows: attempt number, date completed, total score (e.g. 18/30), percentage, pass/borderline/fail badge
+- Each attempt is clickable — clicking it loads the full assessment page for that attempt using the stored evaluation data, no AI call
+- Two buttons at the bottom: "Start New Attempt" and "Back to MEQ List"
+- "Start New Attempt" creates a fresh attempt and goes to stem 1.1
+
+The stored evaluation data already exists in localStorage under `meq_v3_attempts`. Load it and render the existing assessment page component with that attempt's data.
+
+---
+
+**CHANGE 2 — MEQ list filters**
+
+Add filter chips above the MEQ list on the home screen. Two rows of filters:
+
+Row 1 — Status filters:
+- All
+- Not Started
+- In Progress
+- Completed
+
+Row 2 — Domain filters (based on the `topic` field of each MEQ):
+- All Domains
+- Consultation Liaison
+- Quality Improvement and Governance
+- Perinatal Psychiatry / Ethics
+- (add any other topics that exist in MEQ_BANK)
+
+Style the chips to match the existing design — small rounded pills, dark when selected, light border when unselected.
+
+When a filter is selected, show only MEQs matching that filter. Filters from different rows combine — e.g. "Completed" + "Consultation Liaison" shows only completed CL MEQs.
+
+---
+
+**CHANGE 3 — Progress Dashboard page**
+
+Create a new page at `/meq-progress` (new file: `artifacts/meq-prep/src/pages/MEQProgress.tsx`).
+
+Add the route to `App.tsx`:
+```tsx
+import MEQProgress from "@/pages/MEQProgress";
+// in Router:
+<Route path="/meq-progress" component={MEQProgress} />
+```
+
+Add a navigation link to this page from the Daily MEQ home screen — a small "View Progress" link or button near the top of the MEQ list.
+
+The Progress Dashboard page must show:
+
+**Section 1 — Overall summary cards (top row):**
+- MEQs completed (number)
+- Average score % across all evaluated attempts
+- Command word compliance rate (percentage of stems where commandWordCompliance was true)
+- Total stems attempted
+
+**Section 2 — Domain performance table:**
+For each domain that appears in completed MEQs, show:
+- Domain name
+- Average marks earned vs available across all stems in that domain
+- Colour coded: green ≥75%, amber 50–74%, red <50%
+
+To calculate this: loop through all evaluated attempts, for each stem evaluation loop through `domainBreakdown` array, group by domain name, calculate average.
+
+**Section 3 — All attempts history:**
+A list of every evaluated attempt across all MEQs, ordered most recent first. Each row shows:
+- MEQ title
+- Date
+- Score and percentage
+- Pass/borderline/fail badge
+- Click to view → loads the assessment page for that attempt from stored data
+
+**Section 4 — Weakest areas panel:**
+Based on domain performance data, show the 3 domains with the lowest average score with a specific revision note for each.
+
+All data comes from localStorage `meq_v3_attempts`. No API calls on this page.
+
+---
+
+**CHANGE 4 — Daily MEQ contributes 30% to course progress**
+
+In `artifacts/meq-prep/src/pages/Phases.tsx`, find where course progress is calculated.
+
+Currently progress = Quiz Mode questions completed / 229 total questions.
+
+Update the calculation:
+
+```
+Total progress = (Quiz progress × 0.70) + (MEQ progress × 0.30)
+```
+
+Where:
+- Quiz progress = quizzes completed / 229 (capped at 1.0)
+- MEQ progress = MEQs with at least one evaluated attempt / total MEQs in MEQ_BANK (capped at 1.0)
+
+Load MEQ attempt data from localStorage `meq_v3_attempts` to calculate MEQ progress.
+
+Update the Phases page to show this breakdown visually — e.g. "Quiz Mode: 70% of course · Daily MEQ: 30% of course" as a small note under the progress bar.
+
+---
+
+**VERIFICATION after changes:**
+
+```bash
+grep -n "meq-progress\|MEQProgress\|attemptHistory\|domainPerformance" artifacts/meq-prep/src/pages/DailyMEQMode.tsx artifacts/meq-prep/src/App.tsx 2>/dev/null | head -20
+```
+
+```bash
+pnpm run typecheck
+```
+
+Must pass clean. Do not push to GitHub.

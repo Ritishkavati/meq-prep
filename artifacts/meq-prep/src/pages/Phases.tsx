@@ -20,6 +20,15 @@ function incrementModeCount(key: string): void {
   try { localStorage.setItem(key, String(getModeCount(key) + 1)); } catch {}
 }
 
+function loadMEQAttempts(): Array<{ status: string; meqId: string }> {
+  try {
+    const raw = localStorage.getItem("meq_v3_attempts");
+    return raw ? JSON.parse(raw) : [];
+  } catch {
+    return [];
+  }
+}
+
 export default function Phases() {
   const { fullName, candidateNumber, examYear } = useCandidate();
   const [, setLocation] = useLocation();
@@ -30,6 +39,22 @@ export default function Phases() {
   const totalQuizzesCompleted = getTotalQuizzesCompleted(candidateNumber ?? "");
   const feedback = getCandidateFeedback(candidateNumber ?? "");
   const [showAllAttempted, setShowAllAttempted] = useState(false);
+
+  const meqProgress = useMemo(() => {
+    const attempts = loadMEQAttempts();
+    const evaluatedIds = new Set(
+      attempts.filter((a) => a.status === "evaluated").map((a) => a.meqId)
+    );
+    return Math.min(evaluatedIds.size / 3, 1.0);
+  }, []);
+
+  const quizFraction =
+    quizCompletion.totalStems > 0
+      ? Math.min(quizCompletion.uniqueAttempted / quizCompletion.totalStems, 1)
+      : 0;
+  const quizContribution = quizFraction * 70;
+  const meqContribution = meqProgress * 30;
+  const totalProgressPct = quizContribution + meqContribution;
 
   const attemptedStems = useMemo(() => {
     if (!candidateNumber) return [] as QuizAttempt[];
@@ -106,20 +131,20 @@ export default function Phases() {
             Course Progress
           </p>
           <span className="text-2xl font-bold text-accent">
-            {quizCompletion.courseContribution.toFixed(1)}%
+            {totalProgressPct.toFixed(1)}%
           </span>
         </div>
         <div className="h-2.5 w-full bg-slate-100 rounded-full overflow-hidden">
           <div
             className="h-full bg-accent rounded-full transition-all"
-            style={{ width: `${(quizCompletion.courseContribution / 30) * 100}%` }}
+            style={{ width: `${totalProgressPct}%` }}
           />
         </div>
         <div className="flex items-center justify-between text-xs text-muted-foreground">
           <span>
-            {quizCompletion.uniqueAttempted} of {quizCompletion.totalStems} total questions completed
+            {quizCompletion.uniqueAttempted} of {quizCompletion.totalStems} questions · {Math.round(meqProgress * 3)}/3 MEQs
           </span>
-          <span>Quiz module = 30% of course</span>
+          <span>Quiz Mode: 70% · Daily MEQ: 30%</span>
         </div>
       </div>
 
@@ -214,7 +239,7 @@ export default function Phases() {
                 </span>
                 <span>·</span>
                 <span className="font-semibold text-accent">
-                  {quizCompletion.courseContribution.toFixed(1)}% of course
+                  {quizContribution.toFixed(1)}% of course
                 </span>
               </div>
               {quizCompletion.totalStems > 0 && (
@@ -248,13 +273,23 @@ export default function Phases() {
               <p className="text-xs text-muted-foreground mb-2 leading-relaxed">
                 Complete staged MEQ papers — 3–4 progressive stems, 1 mark per minute, full AI evaluation at RANZCP examiner standard at the end.
               </p>
-              <div className="flex items-center gap-3 text-xs text-muted-foreground">
+              <div className="flex flex-wrap items-center gap-3 text-xs text-muted-foreground">
                 <span>
-                  <span className="font-semibold text-primary">3</span> MEQs available
+                  <span className="font-semibold text-primary">{Math.round(meqProgress * 3)}</span> of 3 MEQs completed
                 </span>
                 <span>·</span>
-                <span className="font-semibold text-accent">AI-graded</span>
+                <span className="font-semibold text-accent">
+                  {meqContribution.toFixed(1)}% of course
+                </span>
               </div>
+              {meqProgress > 0 && (
+                <div className="mt-2 h-1.5 w-full max-w-xs bg-slate-100 rounded-full overflow-hidden">
+                  <div
+                    className="h-full bg-accent rounded-full"
+                    style={{ width: `${meqProgress * 100}%` }}
+                  />
+                </div>
+              )}
             </div>
             <Link
               href="/meq-daily"

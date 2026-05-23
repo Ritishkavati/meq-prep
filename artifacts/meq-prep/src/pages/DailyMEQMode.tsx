@@ -1065,7 +1065,7 @@ const errorTypeLabel = (t) =>
 // MAIN COMPONENT
 // ============================================================
 export default function DailyMEQMode() {
-  const [phase, setPhase] = useState("list"); // list | mode_select | stem | evaluating | assessment
+  const [phase, setPhase] = useState("list"); // list | attempt_history | mode_select | stem | evaluating | assessment
   const [selectedMEQ, setSelectedMEQ] = useState(null);
   const [currentAttempt, setCurrentAttempt] = useState(null);
   const [currentStemIndex, setCurrentStemIndex] = useState(0);
@@ -1084,9 +1084,33 @@ export default function DailyMEQMode() {
   const evalTimerRef = useRef(null);
   const autoSubmitFiredRef = useRef(false);
   const autoSubmitHandlerRef = useRef(null);
+  const [statusFilter, setStatusFilter] = useState("all");
+  const [domainFilter, setDomainFilter] = useState("all");
+  const [cameFromHistory, setCameFromHistory] = useState(false);
 
   useEffect(() => {
     setAllAttempts(loadAllAttempts());
+  }, []);
+
+  useEffect(() => {
+    const requestedId = localStorage.getItem("meq_view_attempt");
+    if (!requestedId) return;
+    localStorage.removeItem("meq_view_attempt");
+    const all = loadAllAttempts();
+    const attempt = all.find((a) => a.attemptId === requestedId);
+    if (attempt) {
+      const meq = MEQ_BANK.find((m) => m.id === attempt.meqId);
+      if (meq && attempt.evaluation) {
+        setAllAttempts(all);
+        setSelectedMEQ(meq);
+        setCurrentAttempt(attempt);
+        setExpandedStems(
+          Object.fromEntries(meq.stems.map((s) => [s.stemNumber, true]))
+        );
+        setCameFromHistory(false);
+        setPhase("assessment");
+      }
+    }
   }, []);
 
   useEffect(() => {
@@ -1341,6 +1365,31 @@ export default function DailyMEQMode() {
     setTimerMode(null);
     autoSubmitFiredRef.current = false;
     setError(null);
+    setCameFromHistory(false);
+  }
+
+  function showAttemptHistory(meq) {
+    setSelectedMEQ(meq);
+    setCurrentAttempt(null);
+    setPhase("attempt_history");
+  }
+
+  function viewAttempt(attempt) {
+    const meq = MEQ_BANK.find((m) => m.id === attempt.meqId);
+    if (!meq || !attempt.evaluation) return;
+    setSelectedMEQ(meq);
+    setCurrentAttempt(attempt);
+    setExpandedStems(
+      Object.fromEntries(meq.stems.map((s) => [s.stemNumber, true]))
+    );
+    setCameFromHistory(true);
+    setPhase("assessment");
+  }
+
+  function goBackToHistory() {
+    setCurrentAttempt(null);
+    setCameFromHistory(false);
+    setPhase("attempt_history");
   }
 
   function viewLastAssessment(meqId) {
@@ -1359,6 +1408,106 @@ export default function DailyMEQMode() {
       );
       setPhase("assessment");
     }
+  }
+
+  // ── ATTEMPT HISTORY PHASE ──────────────────────────────────
+  if (phase === "attempt_history" && selectedMEQ) {
+    const stats = getMEQStats(selectedMEQ.id, allAttempts);
+    const sortedAttempts = [...stats.evaluated].sort(
+      (a, b) =>
+        new Date(b.completedAt ?? 0).getTime() -
+        new Date(a.completedAt ?? 0).getTime()
+    );
+    return (
+      <div className="max-w-3xl mx-auto px-4 py-6">
+        <button
+          onClick={goBackToList}
+          className="text-xs text-gray-400 hover:text-gray-700 transition-colors mb-6 block"
+        >
+          ← MEQ List
+        </button>
+        <div className="mb-6">
+          <h2 className="text-2xl font-bold text-gray-900">{selectedMEQ.title}</h2>
+          <p className="text-sm text-gray-500 mt-1">
+            {selectedMEQ.topic} · {selectedMEQ.totalMarks} marks · {selectedMEQ.totalTimeMinutes} minutes
+          </p>
+        </div>
+
+        <div className="space-y-3 mb-6">
+          {sortedAttempts.length === 0 ? (
+            <div className="text-sm text-gray-400 text-center py-8">No completed attempts yet.</div>
+          ) : (
+            sortedAttempts.map((attempt, idx) => {
+              const pct = Math.round(
+                ((attempt.evaluation?.totalMarksEarned ?? 0) / selectedMEQ.totalMarks) * 100
+              );
+              const attemptNum = sortedAttempts.length - idx;
+              const pl = passLabel(attempt.evaluation?.passMark);
+              const date = attempt.completedAt
+                ? new Date(attempt.completedAt).toLocaleDateString("en-AU", {
+                    day: "numeric",
+                    month: "short",
+                    year: "numeric",
+                  })
+                : "—";
+              return (
+                <button
+                  key={attempt.attemptId}
+                  onClick={() => viewAttempt(attempt)}
+                  className="w-full text-left bg-white border border-gray-200 rounded-xl p-4 hover:border-gray-400 hover:shadow-sm transition-all"
+                >
+                  <div className="flex items-center justify-between gap-3 flex-wrap">
+                    <div>
+                      <div className="flex items-center gap-2 flex-wrap mb-1">
+                        <span className="text-sm font-bold text-gray-900">Attempt {attemptNum}</span>
+                        <span className={`text-xs px-2 py-0.5 rounded-full border font-semibold ${pl.cls}`}>
+                          {pl.text}
+                        </span>
+                      </div>
+                      <p className="text-xs text-gray-400">{date}</p>
+                    </div>
+                    <div className="text-right">
+                      <div className={`text-xl font-black ${scoreColor(pct)}`}>
+                        {attempt.evaluation?.totalMarksEarned}/{selectedMEQ.totalMarks}
+                      </div>
+                      <div className="text-xs text-gray-400">{pct}%</div>
+                    </div>
+                  </div>
+                  {attempt.evaluation?.stems?.length > 0 && (
+                    <div className="mt-2 pt-2 border-t border-gray-100 flex flex-wrap gap-3 text-xs">
+                      {attempt.evaluation.stems.map((s) => (
+                        <span
+                          key={s.stemNumber}
+                          className={s.commandWordCompliance ? "text-emerald-600" : "text-red-500"}
+                        >
+                          {s.stemNumber}: {s.marksEarned}/{s.marksAvailable}M
+                          {s.commandWordCompliance ? " ✓" : " ✗CW"}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                </button>
+              );
+            })
+          )}
+        </div>
+
+        <div className="flex gap-3">
+          <button
+            onClick={() => startMEQ(selectedMEQ)}
+            className="flex-1 py-3 bg-gray-900 text-white rounded-xl text-sm font-semibold hover:bg-gray-800 transition-colors"
+          >
+            Start New Attempt
+          </button>
+          <button
+            onClick={goBackToList}
+            className="flex-1 py-3 border-2 border-gray-200 rounded-xl text-sm font-semibold text-gray-700 hover:border-gray-400 transition-colors"
+          >
+            Back to MEQ List
+          </button>
+        </div>
+      </div>
+    );
   }
 
   // ── MODE SELECT PHASE ──────────────────────────────────────
@@ -1401,18 +1550,92 @@ export default function DailyMEQMode() {
 
   // ── LIST PHASE ─────────────────────────────────────────────
   if (phase === "list") {
+    const MEQ_TOPICS = [...new Set(MEQ_BANK.map((m) => m.topic))];
+    const meqsWithStats = MEQ_BANK.map((meq) => ({
+      meq,
+      stats: getMEQStats(meq.id, allAttempts),
+    }));
+    const filteredMEQs = meqsWithStats.filter(({ meq, stats }) => {
+      if (statusFilter !== "all" && stats.status !== statusFilter) return false;
+      if (domainFilter !== "all" && meq.topic !== domainFilter) return false;
+      return true;
+    });
+
     return (
       <div className="max-w-4xl mx-auto px-4 py-6">
-        <div className="mb-7">
-          <h1 className="text-3xl font-bold text-gray-900 tracking-tight">Daily MEQ</h1>
-          <p className="text-sm text-gray-500 mt-1">
-            Staged MEQ papers · {MEQ_BANK.length} MEQs · AI feedback at RANZCP examiner standard
-          </p>
+        <div className="flex items-start justify-between gap-4 mb-5">
+          <div>
+            <h1 className="text-3xl font-bold text-gray-900 tracking-tight">Daily MEQ</h1>
+            <p className="text-sm text-gray-500 mt-1">
+              Staged MEQ papers · {MEQ_BANK.length} MEQs · AI feedback at RANZCP examiner standard
+            </p>
+          </div>
+          <a
+            href="#"
+            onClick={(e) => { e.preventDefault(); window.location.href = (import.meta.env.BASE_URL ?? "").replace(/\/$/, "") + "/meq-progress"; }}
+            className="text-xs text-gray-400 hover:text-gray-700 transition-colors whitespace-nowrap mt-1"
+          >
+            View Progress →
+          </a>
         </div>
 
+        {/* Status filters */}
+        <div className="flex flex-wrap gap-2 mb-2">
+          {[
+            { key: "all", label: "All" },
+            { key: "not_started", label: "Not Started" },
+            { key: "in_progress", label: "In Progress" },
+            { key: "completed", label: "Completed" },
+          ].map(({ key, label }) => (
+            <button
+              key={key}
+              onClick={() => setStatusFilter(key)}
+              className={`text-xs px-3 py-1.5 rounded-full border font-medium transition-colors ${
+                statusFilter === key
+                  ? "bg-gray-900 text-white border-gray-900"
+                  : "bg-white text-gray-600 border-gray-300 hover:border-gray-500"
+              }`}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
+
+        {/* Domain filters */}
+        <div className="flex flex-wrap gap-2 mb-5">
+          <button
+            onClick={() => setDomainFilter("all")}
+            className={`text-xs px-3 py-1.5 rounded-full border font-medium transition-colors ${
+              domainFilter === "all"
+                ? "bg-gray-900 text-white border-gray-900"
+                : "bg-white text-gray-600 border-gray-300 hover:border-gray-500"
+            }`}
+          >
+            All Domains
+          </button>
+          {MEQ_TOPICS.map((topic) => (
+            <button
+              key={topic}
+              onClick={() => setDomainFilter(topic)}
+              className={`text-xs px-3 py-1.5 rounded-full border font-medium transition-colors ${
+                domainFilter === topic
+                  ? "bg-gray-900 text-white border-gray-900"
+                  : "bg-white text-gray-600 border-gray-300 hover:border-gray-500"
+              }`}
+            >
+              {topic}
+            </button>
+          ))}
+        </div>
+
+        {filteredMEQs.length === 0 && (
+          <div className="text-center py-12 text-gray-400 text-sm">
+            No MEQs match the selected filters.
+          </div>
+        )}
+
         <div className="space-y-4">
-          {MEQ_BANK.map((meq) => {
-            const stats = getMEQStats(meq.id, allAttempts);
+          {filteredMEQs.map(({ meq, stats }) => {
             const { status, inProgressAttempt, bestScore, bestPct, evaluated } = stats;
             return (
               <div key={meq.id} className="bg-white border border-gray-200 rounded-2xl p-5 shadow-sm">
@@ -1460,11 +1683,11 @@ export default function DailyMEQMode() {
                       </>
                     ) : status === "completed" ? (
                       <>
-                        <button onClick={() => viewLastAssessment(meq.id)} className="px-4 py-2 bg-gray-900 text-white rounded-lg text-sm font-semibold hover:bg-gray-800 transition-colors whitespace-nowrap">
-                          View Results
+                        <button onClick={() => showAttemptHistory(meq)} className="px-4 py-2 bg-gray-900 text-white rounded-lg text-sm font-semibold hover:bg-gray-800 transition-colors whitespace-nowrap">
+                          View History
                         </button>
                         <button onClick={() => startMEQ(meq)} className="px-4 py-2 border border-gray-300 text-gray-600 rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors whitespace-nowrap">
-                          Retry MEQ
+                          New Attempt
                         </button>
                       </>
                     ) : (
@@ -1477,20 +1700,27 @@ export default function DailyMEQMode() {
 
                 {evaluated.length > 0 && (
                   <div className="mt-3 pt-3 border-t border-gray-100">
-                    <p className="text-xs text-gray-400 mb-1.5">Attempt history</p>
+                    <p className="text-xs text-gray-400 mb-1.5">{evaluated.length} attempt{evaluated.length !== 1 ? "s" : ""} completed — <button onClick={() => showAttemptHistory(meq)} className="underline hover:text-gray-600">view all</button></p>
                     <div className="flex flex-wrap gap-2">
-                      {evaluated.slice(-5).map((a) => {
-                        const pct = Math.round(((a.evaluation?.totalMarksEarned ?? 0) / meq.totalMarks) * 100);
-                        return (
-                          <span key={a.attemptId} className={`text-xs px-2 py-0.5 rounded border font-medium ${
-                            pct >= 75 ? "bg-emerald-50 border-emerald-200 text-emerald-700"
-                            : pct >= 55 ? "bg-amber-50 border-amber-200 text-amber-700"
-                            : "bg-red-50 border-red-200 text-red-700"
-                          }`}>
-                            {new Date(a.completedAt).toLocaleDateString("en-AU", { day: "numeric", month: "short" })} — {a.evaluation?.totalMarksEarned}/{meq.totalMarks} ({pct}%)
-                          </span>
-                        );
-                      })}
+                      {[...evaluated]
+                        .sort((a, b) => new Date(b.completedAt ?? 0).getTime() - new Date(a.completedAt ?? 0).getTime())
+                        .slice(0, 5)
+                        .map((a) => {
+                          const pct = Math.round(((a.evaluation?.totalMarksEarned ?? 0) / meq.totalMarks) * 100);
+                          return (
+                            <button
+                              key={a.attemptId}
+                              onClick={() => viewAttempt(a)}
+                              className={`text-xs px-2 py-0.5 rounded border font-medium hover:opacity-80 transition-opacity ${
+                                pct >= 75 ? "bg-emerald-50 border-emerald-200 text-emerald-700"
+                                : pct >= 55 ? "bg-amber-50 border-amber-200 text-amber-700"
+                                : "bg-red-50 border-red-200 text-red-700"
+                              }`}
+                            >
+                              {new Date(a.completedAt).toLocaleDateString("en-AU", { day: "numeric", month: "short" })} — {a.evaluation?.totalMarksEarned}/{meq.totalMarks} ({pct}%)
+                            </button>
+                          );
+                        })}
                     </div>
                   </div>
                 )}
@@ -1689,7 +1919,12 @@ export default function DailyMEQMode() {
             <h2 className="text-xl font-bold text-gray-900">{selectedMEQ.title}</h2>
             <p className="text-sm text-gray-500">{selectedMEQ.examSource} · Full MEQ Assessment</p>
           </div>
-          <button onClick={goBackToList} className="text-sm text-gray-400 hover:text-gray-700 flex-shrink-0">← Back</button>
+          <button
+            onClick={cameFromHistory ? goBackToHistory : goBackToList}
+            className="text-sm text-gray-400 hover:text-gray-700 flex-shrink-0"
+          >
+            ← Back
+          </button>
         </div>
 
         {/* Overall score card */}

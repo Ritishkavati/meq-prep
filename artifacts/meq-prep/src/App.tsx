@@ -16,6 +16,7 @@ import PSBrainImport from "@/pages/brain/PSBrainImport";
 import AIReviewExport from "@/pages/brain/AIReviewExport";
 import ReviewMode from "@/pages/ReviewMode";
 import DailyMEQMode from "@/pages/DailyMEQMode";
+import MEQProgress from "@/pages/MEQProgress";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -28,6 +29,7 @@ function Router() {
       <Route path="/exam" component={FullExam} />
       <Route path="/review" component={ReviewMode} />
       <Route path="/meq-daily" component={DailyMEQMode} />
+      <Route path="/meq-progress" component={MEQProgress} />
       <Route path="/brain" component={BrainDashboard} />
       <Route path="/brain/upload" component={BrainUpload} />
       <Route path="/brain/review" component={BrainReview} />
