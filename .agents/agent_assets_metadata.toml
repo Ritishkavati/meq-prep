@@ -30,3 +30,9 @@ id = "MXjpBhsVmpeOv9O1x8FQ_"
 uri = "file://question_complexity_audit.json"
 type = "unspecified"
 title = "MEQ Prep — Question Complexity Audit"
+
+[[outputs]]
+id = "97Q1ZuAr4u06QXk1wUnNr"
+uri = "file://question-registry.json"
+type = "unspecified"
+title = "question-registry.json"
