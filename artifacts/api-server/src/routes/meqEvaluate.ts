@@ -17,7 +17,7 @@ router.post("/meq-evaluate", async (req, res) => {
   }
 
   if (!process.env.AI_INTEGRATIONS_ANTHROPIC_BASE_URL) {
-    res.status(503).json({ error: "AI evaluation unavailable" });
+    res.status(503).json({ error: "Assessment unavailable — please try again" });
     return;
   }
 
@@ -44,7 +44,7 @@ router.post("/meq-evaluate", async (req, res) => {
     };
     req.log?.error(detail, "MEQ evaluate failed");
     res.status(502).json({
-      error: "AI evaluation failed",
+      error: "Assessment unavailable — please try again",
       detail: process.env.NODE_ENV === "development" ? detail : undefined,
     });
   }
