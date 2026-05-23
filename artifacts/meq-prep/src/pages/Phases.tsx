@@ -3,7 +3,7 @@ import { Link, useLocation } from "wouter";
 import { useCandidate } from "@/lib/store";
 import { Header } from "@/components/Header";
 import {
-  ListChecks, BookOpen, ClipboardList, ArrowRight, BarChart2,
+  ListChecks, BookOpen, ClipboardList, ArrowRight, BarChart2, LogOut,
 } from "lucide-react";
 import {
   getQuizModuleCompletion, getTotalQuizzesCompleted,
@@ -27,7 +27,7 @@ function loadMEQAttempts(): Array<{ status: string; meqId: string }> {
 }
 
 export default function Phases() {
-  const { candidateNumber } = useCandidate();
+  const { candidateNumber, clearCandidate } = useCandidate();
   const [, setLocation] = useLocation();
   const [examCount, setExamCount] = useState(0);
 
@@ -72,9 +72,18 @@ export default function Phases() {
     <div className="max-w-3xl mx-auto p-4 md:p-8 pt-8 md:pt-12">
       <Header />
 
-      <h2 className="text-lg font-serif font-bold text-primary mt-8 mb-3">
-        Your Study Modules
-      </h2>
+      <div className="flex items-center justify-between mt-8 mb-3">
+        <h2 className="text-lg font-serif font-bold text-primary">
+          Your Study Modules
+        </h2>
+        <button
+          onClick={() => { clearCandidate(); setLocation("/"); }}
+          className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-red-600 transition-colors"
+        >
+          <LogOut className="w-3.5 h-3.5" />
+          Sign out
+        </button>
+      </div>
 
       <div className="flex flex-col gap-3 mb-8">
 

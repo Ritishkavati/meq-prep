@@ -21,8 +21,8 @@ export default function Registration() {
 
       <div className="bg-card rounded-2xl shadow-md border border-card-border p-6 md:p-10 mb-8">
         <div className="mb-8">
-          <h2 className="text-3xl font-serif text-primary font-bold mb-2">Candidate Registration</h2>
-          <p className="text-muted-foreground">Enter your registration number to begin</p>
+          <h2 className="text-3xl font-serif text-primary font-bold mb-2">Sign In</h2>
+          <p className="text-muted-foreground">Enter your registration number to access your study modules</p>
         </div>
 
         <form onSubmit={handleBegin} className="space-y-6">
