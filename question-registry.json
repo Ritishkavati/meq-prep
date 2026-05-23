@@ -1,7 +1,7 @@
 {
   "version": "1.0",
   "lastUpdated": "2026-05-23",
-  "totalQuestions": 7,
+  "totalQuestions": 8,
   "questions": [
     {
       "id": "meq_001",
@@ -105,6 +105,21 @@
       "pressureSequence": "Delirium assessment with sedation pressure and multiple prescribing contraindications → complex non-pharmacological and pharmacological management with Parkinson's and QTc constraints → contested discharge decision between whānau home care and residential respite → haloperidol administered via verbal order causes aspiration requiring open disclosure and governance response",
       "finalDilemma": "Open disclosure to the daughter and root-cause analysis after haloperidol was administered despite documented Parkinson's disease and QTc prolongation, causing rigidity and aspiration risk, via a verbal order from a covering doctor who had not read the CL note",
       "patientName": "Hemi Thompson",
+      "createdAt": "2026-05-23",
+      "status": "active"
+    },
+    {
+      "id": "meq_008",
+      "title": "Mika — Aboriginal Adolescent, Psychosis Risk and Cultural Re-engagement",
+      "usedIn": "daily_meq",
+      "primaryDomain": "Communication / Collaboration",
+      "ageGroup": "13-17",
+      "setting": "CAMHS",
+      "clinicalTheme": "CAMHS and ED assessment of a 15-year-old Aboriginal boy with possible psychosis, cannabis use, online threat and cultural mistrust; tests cultural formulation of the deceased uncle's voice, competing duties around refusal and third-party protection, and consultant re-engagement strategy after disengagement with refusal of a no-risk certificate to the school.",
+      "culturalTag": "Aboriginal",
+      "pressureSequence": "Diagnostic assessment requiring cultural differentiation of voice hearing before psychosis diagnosis → management of refusal, risk to named peer, and information-sharing under police pressure → disengagement with missed appointments, school demanding no-risk certificate, and registrar suggesting case closure",
+      "finalDilemma": "Refusing the school's no-risk certificate demand, preventing premature case closure by the registrar, and orchestrating assertive re-engagement through the Aboriginal health worker after the family feels blamed",
+      "patientName": "Mika",
       "createdAt": "2026-05-23",
       "status": "active"
     }
