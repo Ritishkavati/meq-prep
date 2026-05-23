@@ -1,7 +1,7 @@
 {
   "version": "1.0",
   "lastUpdated": "2026-05-23",
-  "totalQuestions": 3,
+  "totalQuestions": 4,
   "questions": [
     {
       "id": "meq_001",
@@ -45,6 +45,21 @@
       "pressureSequence": "Implementation planning → physical health monitoring → QI metrics → non-compliant consultant management",
       "finalDilemma": "Governance escalation for senior clinician non-compliance with evidence-based protocol",
       "patientName": "none",
+      "createdAt": "2026-05-23",
+      "status": "active"
+    },
+    {
+      "id": "meq_004",
+      "title": "Aaliyah — Postpartum Psychosis, Cultural Safety and System Failure",
+      "usedIn": "daily_meq",
+      "primaryDomain": "Ethics / Professionalism / Legal",
+      "ageGroup": "perinatal",
+      "setting": "ED",
+      "clinicalTheme": "Postpartum psychosis with hypertensive crisis in an Aboriginal woman; tests capacity assessment, treatment refusal, Aboriginal cultural safety in discharge decisions, competing ethical tensions including alliance vs compulsory care, and system escalation when no mother-baby unit bed is available.",
+      "culturalTag": "Aboriginal",
+      "pressureSequence": "Medical and psychiatric risk assessment with organic exclusion → capacity optimisation and treatment refusal with delusional belief driving refusal → three-way ethical conflict between cultural autonomy, family care offer, and infant safety escalated by active nursery removal attempt → system failure with no MBU, adult unit refusing baby, and bed manager coercion to discharge",
+      "finalDilemma": "Safe disposition for a postpartum psychosis patient when no mother-baby unit is available, the adult unit will not accommodate the infant, and a junior registrar proposes AMA documentation for a patient who likely lacks capacity",
+      "patientName": "Aaliyah",
       "createdAt": "2026-05-23",
       "status": "active"
     }
