@@ -1,0 +1,203 @@
+Perfect. Now I have everything I need. Here is the complete agent prompt:
+
+---
+
+**TASK: UI restructure and domain organisation across the MEQ Prep app**
+
+**Files to modify:**
+- `artifacts/meq-prep/src/pages/Phases.tsx`
+- `artifacts/meq-prep/src/pages/DailyMEQMode.tsx`
+- `artifacts/meq-prep/src/pages/MEQProgress.tsx` (create new)
+- `artifacts/meq-prep/src/App.tsx`
+
+**Do not change Quiz Mode. Do not change the MEQ bank question content. Do not change the six-box assessment rendering. Do not change the writing flow.**
+
+---
+
+**CHANGE 1 — Add primaryDomain field to every MEQ in MEQ_BANK**
+
+In `DailyMEQMode.tsx`, add a `primaryDomain` field to every MEQ object in `MEQ_BANK`. Use exactly one of these seven values:
+
+```
+"Governance / Systems / Leadership"
+"Ethics / Professionalism / Legal"
+"Communication / Collaboration"
+"Treatment / Scholarship"
+"Management / Disposition"
+"Formulation / Diagnostic Reasoning"
+"Assessment Maintenance"
+```
+
+Map the existing MEQs as follows:
+- Adil — Consultation Liaison → `"Management / Disposition"`
+- Danica — Perinatal Psychiatry → `"Ethics / Professionalism / Legal"`
+- Hypnotics Quality Improvement → `"Governance / Systems / Leadership"`
+
+Every future MEQ added to MEQ_BANK must include exactly one `primaryDomain` from this list. One domain per MEQ. No double entries.
+
+---
+
+**CHANGE 2 — Simplify the Phases/Candidate page to four modules only**
+
+In `Phases.tsx`, remove everything except four clean module cards:
+
+1. **Quiz Mode** — existing card, keep as is
+2. **Daily MEQ** — existing card, keep as is
+3. **Exam Mode** — existing card, keep as is
+4. **Progress** — new card linking to `/meq-progress`
+
+Remove from the Phases page:
+- Candidate profile card
+- Course progress bar and percentage
+- "Questions You've Answered" section
+- "Review My Answers" section
+- "Performance Feedback" section
+- Any other sections not in the four modules above
+
+The page heading should be "Your Study Modules" — four cards, nothing else, clean layout.
+
+Keep the RANZCP MEQ Prep header and footer disclaimer exactly as they are.
+
+---
+
+**CHANGE 3 — Restructure the Daily MEQ list page**
+
+In `DailyMEQMode.tsx`, replace the current two-row filter chips with a single domain dropdown.
+
+**Header row:**
+- Left: "Daily MEQ" heading
+- Right: "View Progress →" link to `/meq-progress`
+
+**Below header:**
+A single dropdown labelled "Domain" with these options:
+```
+All Domains
+Governance / Systems / Leadership
+Ethics / Professionalism / Legal
+Communication / Collaboration
+Treatment / Scholarship
+Management / Disposition
+Formulation / Diagnostic Reasoning
+Assessment Maintenance
+```
+
+When a domain is selected, show only MEQs where `primaryDomain` matches the selected domain.
+
+Remove the status filter chips entirely from this page. Status is shown on each individual MEQ tile instead.
+
+**MEQ tile design — simplified:**
+
+Each tile shows:
+- MEQ title and `primaryDomain` label (small, grey)
+- Number of stems, total marks, total time
+- Status badge: "Not Started" / "In Progress" / "Completed"
+- If completed: best score e.g. "Best: 13/30 (43%)" and number of attempts
+- If completed: a small "View History" link below the score
+
+**Tile buttons:**
+- Not Started → single button: "Start MEQ →"
+- In Progress → single button: "Continue MEQ →"
+- Completed → two buttons: "View History" (outline) and "New Attempt" (filled)
+
+Remove stem command word chips from the tile. The candidate does not need to see stem details before starting.
+
+---
+
+**CHANGE 4 — Question tile click behaviour**
+
+When candidate clicks "Start MEQ" or "Continue MEQ":
+- Go directly to the writing flow
+- Show only: MEQ title at top, stem number, marks, countdown timer, vignette, question, answer textarea, Save/Submit button
+- No other details. No domain info. No stem breakdown. Clean writing environment.
+
+When candidate clicks "View History":
+- Show attempt history screen for that MEQ
+- List all completed attempts, most recent first
+- Each attempt row: date, score, pass/borderline/fail badge
+- If attempt has examiner assessment stored → "View Feedback" button → loads stored six-box assessment page, no API call
+- If attempt has View Key stored → "View Key" button → loads stored key page, no API call
+- "New Attempt" button at bottom
+- "← Back" link top left
+
+---
+
+**CHANGE 5 — Create Progress page at `/meq-progress`**
+
+Create `artifacts/meq-prep/src/pages/MEQProgress.tsx`.
+
+Add to `App.tsx`:
+```tsx
+import MEQProgress from "@/pages/MEQProgress";
+<Route path="/meq-progress" component={MEQProgress} />
+```
+
+The Progress page has four sections only. No other content.
+
+**Section 1 — Quiz Mode progress:**
+- Percentage of quiz questions attempted (attempted / 229)
+- Small progress bar
+- List of recently attempted quiz questions with date and score percentage
+- Each row clickable to view stored feedback — no API call
+- "Go to Quiz Mode →" link
+
+**Section 2 — Daily MEQ progress:**
+- Percentage of MEQs with at least one completed attempt (completed / MEQ_BANK.length)
+- Small progress bar
+- List of completed MEQs with date, score, pass/borderline/fail badge
+- Each row clickable to view stored assessment — no API call
+- "Go to Daily MEQ →" link
+
+**Section 3 — Practice Exam:**
+- Label: "Practice Exam"
+- Single line: "Coming soon"
+- Greyed out, no functionality
+
+**Section 4 — Overall performance feedback:**
+This section calculates from stored localStorage data and shows:
+
+- **Strong areas:** domains where average score ≥ 70% across all evaluated MEQ stems
+- **Areas to focus:** domains where average score < 50% across all evaluated MEQ stems
+- **Overall trend:** if more than one attempt exists on the same MEQ, show whether score improved, stayed same, or declined
+
+Calculate domain averages by looping through `meq_v3_attempts` → evaluated attempts → `stems` array → `domainBreakdown` array → group by domain name → average marksEarned/marksAvailable.
+
+Display as two simple lists:
+```
+Strong areas: [domain], [domain]
+Focus areas: [domain], [domain]
+
+Your score on [MEQ name] improved from X% to Y% across attempts.
+```
+
+No charts, no complex visualisations. Plain text with colour coding — green for strong, amber for focus.
+
+---
+
+**VERIFICATION:**
+
+```bash
+grep -n "primaryDomain" artifacts/meq-prep/src/pages/DailyMEQMode.tsx | head -10
+```
+
+Must show the field on at least three MEQ objects.
+
+```bash
+grep -n "meq-progress\|MEQProgress" artifacts/meq-prep/src/App.tsx
+```
+
+Must show the import and route.
+
+```bash
+pnpm run typecheck
+```
+
+Must pass clean.
+
+---
+
+After all changes confirm:
+- Phases page shows exactly four module cards and nothing else
+- Daily MEQ page shows the domain dropdown and simplified tiles
+- Progress page exists at `/meq-progress` with four sections
+- No stem command word chips visible on MEQ tiles
+- Writing flow is clean — stem number, marks, timer, vignette, question, textarea only

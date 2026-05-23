@@ -53,6 +53,7 @@ const MEQ_BANK = [
     case: "Adil, 32",
     examSource: "November 2025 Pilot",
     topic: "Consultation Liaison",
+    primaryDomain: "Management / Disposition",
     totalMarks: 30,
     totalTimeMinutes: 30,
     stems: [
@@ -288,6 +289,7 @@ const MEQ_BANK = [
     case: "Danica, 34",
     examSource: "March 2025",
     topic: "Perinatal Psychiatry / Ethics",
+    primaryDomain: "Ethics / Professionalism / Legal",
     totalMarks: 25,
     totalTimeMinutes: 25,
     stems: [
@@ -489,6 +491,7 @@ const MEQ_BANK = [
     case: "Inpatient Unit QI",
     examSource: "November 2025 Pilot",
     topic: "Quality Improvement and Governance",
+    primaryDomain: "Governance / Systems / Leadership",
     totalMarks: 26,
     totalTimeMinutes: 26,
     stems: [
@@ -1103,15 +1106,19 @@ export default function DailyMEQMode() {
     const attempt = all.find((a) => a.attemptId === requestedId);
     if (attempt) {
       const meq = MEQ_BANK.find((m) => m.id === attempt.meqId);
-      if (meq && attempt.evaluation) {
+      if (meq) {
         setAllAttempts(all);
         setSelectedMEQ(meq);
         setCurrentAttempt(attempt);
-        setExpandedStems(
-          Object.fromEntries(meq.stems.map((s) => [s.stemNumber, true]))
-        );
         setCameFromHistory(false);
-        setPhase("assessment");
+        if (attempt.status === "view_key") {
+          setPhase("view_key");
+        } else if (attempt.evaluation) {
+          setExpandedStems(
+            Object.fromEntries(meq.stems.map((s) => [s.stemNumber, true]))
+          );
+          setPhase("assessment");
+        }
       }
     }
   }, []);
@@ -1185,10 +1192,11 @@ export default function DailyMEQMode() {
     setStemAnswer(savedAnswer);
     setTimer(0);
     setStemStartTime(0);
-    setTimerMode(null);
     autoSubmitFiredRef.current = false;
     setError(null);
-    setPhase("mode_select");
+    setTimerMode("exam");
+    setTimerActive(true);
+    setPhase("stem");
     if (!existingAttempt) updateAndPersistAttempt(attempt);
   }
 
@@ -1557,96 +1565,66 @@ export default function DailyMEQMode() {
 
   // ── LIST PHASE ─────────────────────────────────────────────
   if (phase === "list") {
-    const MEQ_TOPICS = [...new Set(MEQ_BANK.map((m) => m.topic))];
+    const DOMAIN_OPTIONS = [
+      "All Domains",
+      "Governance / Systems / Leadership",
+      "Ethics / Professionalism / Legal",
+      "Communication / Collaboration",
+      "Treatment / Scholarship",
+      "Management / Disposition",
+      "Formulation / Diagnostic Reasoning",
+      "Assessment Maintenance",
+    ];
     const meqsWithStats = MEQ_BANK.map((meq) => ({
       meq,
       stats: getMEQStats(meq.id, allAttempts),
     }));
-    const filteredMEQs = meqsWithStats.filter(({ meq, stats }) => {
-      if (statusFilter !== "all" && stats.status !== statusFilter) return false;
-      if (domainFilter !== "all" && meq.topic !== domainFilter) return false;
+    const filteredMEQs = meqsWithStats.filter(({ meq }) => {
+      if (domainFilter !== "all" && meq.primaryDomain !== domainFilter) return false;
       return true;
     });
 
     return (
-      <div className="max-w-4xl mx-auto px-4 py-6">
-        <div className="flex items-start justify-between gap-4 mb-5">
-          <div>
-            <h1 className="text-3xl font-bold text-gray-900 tracking-tight">Daily MEQ</h1>
-            <p className="text-sm text-gray-500 mt-1">
-              Staged MEQ papers · {MEQ_BANK.length} MEQs · Examiner feedback
-            </p>
-          </div>
+      <div className="max-w-3xl mx-auto px-4 py-6">
+        {/* Header */}
+        <div className="flex items-center justify-between gap-4 mb-4">
+          <h1 className="text-2xl font-bold text-gray-900">Daily MEQ</h1>
           <a
             href="#"
             onClick={(e) => { e.preventDefault(); window.location.href = (import.meta.env.BASE_URL ?? "").replace(/\/$/, "") + "/meq-progress"; }}
-            className="text-xs text-gray-400 hover:text-gray-700 transition-colors whitespace-nowrap mt-1"
+            className="text-xs text-gray-400 hover:text-gray-700 transition-colors whitespace-nowrap"
           >
             View Progress →
           </a>
         </div>
 
-        {/* Status filters */}
-        <div className="flex flex-wrap gap-2 mb-2">
-          {[
-            { key: "all", label: "All" },
-            { key: "not_started", label: "Not Started" },
-            { key: "in_progress", label: "In Progress" },
-            { key: "completed", label: "Completed" },
-          ].map(({ key, label }) => (
-            <button
-              key={key}
-              onClick={() => setStatusFilter(key)}
-              className={`text-xs px-3 py-1.5 rounded-full border font-medium transition-colors ${
-                statusFilter === key
-                  ? "bg-gray-900 text-white border-gray-900"
-                  : "bg-white text-gray-600 border-gray-300 hover:border-gray-500"
-              }`}
-            >
-              {label}
-            </button>
-          ))}
-        </div>
-
-        {/* Domain filters */}
-        <div className="flex flex-wrap gap-2 mb-5">
-          <button
-            onClick={() => setDomainFilter("all")}
-            className={`text-xs px-3 py-1.5 rounded-full border font-medium transition-colors ${
-              domainFilter === "all"
-                ? "bg-gray-900 text-white border-gray-900"
-                : "bg-white text-gray-600 border-gray-300 hover:border-gray-500"
-            }`}
+        {/* Domain dropdown */}
+        <div className="mb-5">
+          <select
+            value={domainFilter === "all" ? "All Domains" : domainFilter}
+            onChange={(e) =>
+              setDomainFilter(e.target.value === "All Domains" ? "all" : e.target.value)
+            }
+            className="w-full sm:w-72 text-sm border border-gray-300 rounded-lg px-3 py-2 bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent"
           >
-            All Domains
-          </button>
-          {MEQ_TOPICS.map((topic) => (
-            <button
-              key={topic}
-              onClick={() => setDomainFilter(topic)}
-              className={`text-xs px-3 py-1.5 rounded-full border font-medium transition-colors ${
-                domainFilter === topic
-                  ? "bg-gray-900 text-white border-gray-900"
-                  : "bg-white text-gray-600 border-gray-300 hover:border-gray-500"
-              }`}
-            >
-              {topic}
-            </button>
-          ))}
+            {DOMAIN_OPTIONS.map((opt) => (
+              <option key={opt} value={opt}>{opt}</option>
+            ))}
+          </select>
         </div>
 
         {filteredMEQs.length === 0 && (
           <div className="text-center py-12 text-gray-400 text-sm">
-            No MEQs match the selected filters.
+            No MEQs available for the selected domain.
           </div>
         )}
 
-        <div className="space-y-4">
+        <div className="space-y-3">
           {filteredMEQs.map(({ meq, stats }) => {
             const { status, inProgressAttempt, bestScore, bestPct, evaluated } = stats;
             return (
               <div key={meq.id} className="bg-white border border-gray-200 rounded-2xl p-5 shadow-sm">
-                <div className="flex items-start justify-between gap-4 flex-wrap">
+                <div className="flex items-start justify-between gap-4">
                   <div className="flex-1 min-w-0">
                     <div className="flex flex-wrap items-center gap-2 mb-1">
                       <h3 className="font-bold text-gray-900">{meq.title}</h3>
@@ -1660,77 +1638,61 @@ export default function DailyMEQMode() {
                         {status === "completed" ? "Completed" : status === "in_progress" ? "In Progress" : "Not Started"}
                       </span>
                     </div>
-                    <p className="text-xs text-gray-400 mb-3">{meq.examSource} · {meq.topic}</p>
-                    <div className="flex flex-wrap gap-4 text-xs text-gray-500 mb-3">
+                    <p className="text-xs text-gray-400 mb-2">{meq.primaryDomain}</p>
+                    <div className="flex flex-wrap gap-3 text-xs text-gray-500">
                       <span><span className="font-semibold text-gray-700">{meq.stems.length}</span> stems</span>
                       <span><span className="font-semibold text-gray-700">{meq.totalMarks}</span> marks</span>
                       <span><span className="font-semibold text-gray-700">{meq.totalTimeMinutes}</span> min</span>
                       {bestScore !== null && bestPct !== null && (
-                        <span>Best: <span className={`font-bold ${scoreColor(bestPct)}`}>{bestScore}/{meq.totalMarks} ({bestPct}%)</span></span>
+                        <span>Best: <span className={`font-semibold ${scoreColor(bestPct)}`}>{bestScore}/{meq.totalMarks} ({bestPct}%)</span></span>
+                      )}
+                      {evaluated.length > 1 && (
+                        <span>{evaluated.length} attempts</span>
                       )}
                     </div>
-                    <div className="flex flex-wrap gap-1.5">
-                      {meq.stems.map((s) => (
-                        <span key={s.stemNumber} className={`text-xs border rounded-md px-2 py-0.5 font-medium ${cwBadge(s.commandWord)}`}>
-                          {s.stemNumber} · {s.marks}M · {COMMAND_WORDS[s.commandWord]?.short}
-                        </span>
-                      ))}
-                    </div>
+                    {status === "completed" && (
+                      <button
+                        onClick={() => showAttemptHistory(meq)}
+                        className="text-xs text-gray-400 hover:text-gray-700 underline mt-2 block"
+                      >
+                        View history
+                      </button>
+                    )}
                   </div>
 
                   <div className="flex flex-col gap-2 flex-shrink-0">
                     {status === "in_progress" && inProgressAttempt ? (
-                      <>
-                        <button onClick={() => startMEQ(meq, inProgressAttempt)} className="px-4 py-2 bg-amber-600 text-white rounded-lg text-sm font-semibold hover:bg-amber-700 transition-colors whitespace-nowrap">
-                          Continue →
-                        </button>
-                        <button onClick={() => startMEQ(meq)} className="px-4 py-2 border border-gray-300 text-gray-600 rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors whitespace-nowrap">
-                          Start Fresh
-                        </button>
-                      </>
+                      <button
+                        onClick={() => startMEQ(meq, inProgressAttempt)}
+                        className="px-4 py-2 bg-amber-600 text-white rounded-lg text-sm font-semibold hover:bg-amber-700 transition-colors whitespace-nowrap"
+                      >
+                        Continue MEQ →
+                      </button>
                     ) : status === "completed" ? (
                       <>
-                        <button onClick={() => showAttemptHistory(meq)} className="px-4 py-2 bg-gray-900 text-white rounded-lg text-sm font-semibold hover:bg-gray-800 transition-colors whitespace-nowrap">
-                          View History
-                        </button>
-                        <button onClick={() => startMEQ(meq)} className="px-4 py-2 border border-gray-300 text-gray-600 rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors whitespace-nowrap">
+                        <button
+                          onClick={() => startMEQ(meq)}
+                          className="px-4 py-2 bg-gray-900 text-white rounded-lg text-sm font-semibold hover:bg-gray-800 transition-colors whitespace-nowrap"
+                        >
                           New Attempt
+                        </button>
+                        <button
+                          onClick={() => showAttemptHistory(meq)}
+                          className="px-4 py-2 border border-gray-300 text-gray-600 rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors whitespace-nowrap"
+                        >
+                          View History
                         </button>
                       </>
                     ) : (
-                      <button onClick={() => startMEQ(meq)} className="px-4 py-2 bg-gray-900 text-white rounded-lg text-sm font-semibold hover:bg-gray-800 transition-colors whitespace-nowrap">
+                      <button
+                        onClick={() => startMEQ(meq)}
+                        className="px-4 py-2 bg-gray-900 text-white rounded-lg text-sm font-semibold hover:bg-gray-800 transition-colors whitespace-nowrap"
+                      >
                         Start MEQ →
                       </button>
                     )}
                   </div>
                 </div>
-
-                {evaluated.length > 0 && (
-                  <div className="mt-3 pt-3 border-t border-gray-100">
-                    <p className="text-xs text-gray-400 mb-1.5">{evaluated.length} attempt{evaluated.length !== 1 ? "s" : ""} completed — <button onClick={() => showAttemptHistory(meq)} className="underline hover:text-gray-600">view all</button></p>
-                    <div className="flex flex-wrap gap-2">
-                      {[...evaluated]
-                        .sort((a, b) => new Date(b.completedAt ?? 0).getTime() - new Date(a.completedAt ?? 0).getTime())
-                        .slice(0, 5)
-                        .map((a) => {
-                          const pct = Math.round(((a.evaluation?.totalMarksEarned ?? 0) / meq.totalMarks) * 100);
-                          return (
-                            <button
-                              key={a.attemptId}
-                              onClick={() => viewAttempt(a)}
-                              className={`text-xs px-2 py-0.5 rounded border font-medium hover:opacity-80 transition-opacity ${
-                                pct >= 75 ? "bg-emerald-50 border-emerald-200 text-emerald-700"
-                                : pct >= 55 ? "bg-amber-50 border-amber-200 text-amber-700"
-                                : "bg-red-50 border-red-200 text-red-700"
-                              }`}
-                            >
-                              {new Date(a.completedAt).toLocaleDateString("en-AU", { day: "numeric", month: "short" })} — {a.evaluation?.totalMarksEarned}/{meq.totalMarks} ({pct}%)
-                            </button>
-                          );
-                        })}
-                    </div>
-                  </div>
-                )}
               </div>
             );
           })}
