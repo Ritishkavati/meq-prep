@@ -1,7 +1,7 @@
 {
   "version": "1.0",
   "lastUpdated": "2026-05-23",
-  "totalQuestions": 4,
+  "totalQuestions": 7,
   "questions": [
     {
       "id": "meq_001",
@@ -60,6 +60,51 @@
       "pressureSequence": "Medical and psychiatric risk assessment with organic exclusion → capacity optimisation and treatment refusal with delusional belief driving refusal → three-way ethical conflict between cultural autonomy, family care offer, and infant safety escalated by active nursery removal attempt → system failure with no MBU, adult unit refusing baby, and bed manager coercion to discharge",
       "finalDilemma": "Safe disposition for a postpartum psychosis patient when no mother-baby unit is available, the adult unit will not accommodate the infant, and a junior registrar proposes AMA documentation for a patient who likely lacks capacity",
       "patientName": "Aaliyah",
+      "createdAt": "2026-05-23",
+      "status": "active"
+    },
+    {
+      "id": "meq_005",
+      "title": "Mason — Inpatient Near-Miss, Observation Failure and Governance",
+      "usedIn": "daily_meq",
+      "primaryDomain": "Governance / Systems / Leadership",
+      "ageGroup": "26-64",
+      "setting": "inpatient",
+      "clinicalTheme": "Near-miss inpatient suicide attempt following unsafe observation reduction during a short-staffed shift; tests immediate consultant response, post-incident risk and legal status management, competing governance and bed-management pressures, and M&M preparation with complaint response.",
+      "culturalTag": "none",
+      "pressureSequence": "Near-miss discovery with immediate safety response → patient anger, denial, and request to leave plus farewell message collateral → systemic failures revealed with bed manager transfer pressure → complaint, distressed registrar, and M&M summary required simultaneously",
+      "finalDilemma": "Providing a factual M&M summary, responding to a formal complaint, supporting a distressed registrar, and implementing governance escalation simultaneously after a near-miss that involved a policy breach during a short-staffed shift",
+      "patientName": "Mason",
+      "createdAt": "2026-05-23",
+      "status": "active"
+    },
+    {
+      "id": "meq_006",
+      "title": "Nina — Adolescent Trauma, Competing Duties and Post-Overdose Disposition",
+      "usedIn": "daily_meq",
+      "primaryDomain": "Ethics / Professionalism / Legal",
+      "ageGroup": "13-17",
+      "setting": "CAMHS",
+      "clinicalTheme": "CAMHS assessment of a 15-year-old sexual assault witness with daily suicidal ideation, self-harm, and cannabis use; tests adolescent confidentiality, Gillick competence, competing duties to family, school, and justice system, and post-overdose disposition without adolescent beds.",
+      "culturalTag": "none",
+      "pressureSequence": "First assessment with confidentiality demand and suicidal ideation → engagement crisis with multiple contact refusals and disengagement threat → simultaneous duties to mother, school, and justice system in a single session → impulsive overdose with no adolescent bed and conditional safety plan",
+      "finalDilemma": "Post-overdose disposition for a 15-year-old with no adolescent beds available, an inadequate conditional safety plan, and an active court hearing as an imminent precipitating stressor",
+      "patientName": "Nina",
+      "createdAt": "2026-05-23",
+      "status": "active"
+    },
+    {
+      "id": "meq_007",
+      "title": "Hemi Thompson — Delirium, Parkinson's Polypharmacy and Adverse Medication Event",
+      "usedIn": "daily_meq",
+      "primaryDomain": "Governance / Systems / Leadership",
+      "ageGroup": "65+",
+      "setting": "CL",
+      "clinicalTheme": "CL assessment of delirium in a Māori elder with Parkinson's disease and polypharmacy; tests assessment prioritisation with sedation request, delirium management with multiple pharmacological contraindications including haloperidol and promethazine, discharge capacity with whānau involvement, and open disclosure with root-cause analysis after an adverse medication event.",
+      "culturalTag": "Māori",
+      "pressureSequence": "Delirium assessment with sedation pressure and multiple prescribing contraindications → complex non-pharmacological and pharmacological management with Parkinson's and QTc constraints → contested discharge decision between whānau home care and residential respite → haloperidol administered via verbal order causes aspiration requiring open disclosure and governance response",
+      "finalDilemma": "Open disclosure to the daughter and root-cause analysis after haloperidol was administered despite documented Parkinson's disease and QTc prolongation, causing rigidity and aspiration risk, via a verbal order from a covering doctor who had not read the CL note",
+      "patientName": "Hemi Thompson",
       "createdAt": "2026-05-23",
       "status": "active"
     }
