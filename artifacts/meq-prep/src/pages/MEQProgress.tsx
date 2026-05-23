@@ -127,7 +127,7 @@ export default function MEQProgress() {
         <div className="text-5xl mb-4">📊</div>
         <h1 className="text-2xl font-bold text-gray-900 mb-2">MEQ Progress</h1>
         <p className="text-gray-500 text-sm max-w-sm mx-auto">
-          Complete your first MEQ and receive AI feedback to start tracking your
+          Complete your first MEQ and submit for examiner assessment to start tracking your
           progress across domains, command words, and attempts.
         </p>
         <Link

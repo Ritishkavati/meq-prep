@@ -1,0 +1,196 @@
+Clear. Two clean pathways after submission:
+
+**Path A — "View Key"**
+Static. Instant. No API call.
+- Candidate's own answer per stem
+- Static model answer / marking guide per stem (Box 4 only)
+- Done. They self-assess.
+
+**Path B — "Examiner Assessment"**
+Full six-box feedback. Processed by examiner.
+- All six boxes per stem
+- Message: "Your MEQ has been submitted for examiner assessment. This typically takes 10–15 minutes."
+- Per-stem progress checklist while processing
+
+Both always show the candidate's own written answer.
+
+No AI language anywhere. No Anthropic, Claude, GPT references anywhere in the app or metadata.
+
+---
+
+Here is the complete agent prompt:
+
+---
+
+**TASK: Four changes to the MEQ Prep app**
+
+**Files to modify:**
+- `artifacts/meq-prep/src/pages/DailyMEQMode.tsx`
+- `artifacts/meq-prep/src/pages/Phases.tsx`
+- `artifacts/meq-prep/src/App.tsx`
+- `artifacts/meq-prep/index.html` (if it exists, for meta tags)
+- Create new file: `artifacts/meq-prep/src/pages/MEQProgress.tsx`
+
+**Do not change Quiz Mode. Do not change the MEQ bank data. Do not change the six-box rendering logic.**
+
+---
+
+**CHANGE 1 — Two pathways after MEQ submission**
+
+After the candidate clicks "Submit Full MEQ for Evaluation" and all stems are saved, instead of immediately triggering evaluation, show a **pathway selection screen**.
+
+This screen shows:
+
+- The MEQ title and total marks
+- The candidate's stem answers listed briefly (stem number + first 20 words of their answer)
+- Two large buttons:
+
+**Button A: "View Key"**
+Label: `View Key`
+Description under button: `See the model answer for each stem instantly`
+
+**Button B: "Examiner Assessment"**
+Label: `Examiner Assessment`
+Description under button: `Receive detailed feedback on your answers — takes 10–15 minutes`
+
+---
+
+**Path A behaviour — View Key:**
+
+When candidate clicks "View Key":
+- No API call
+- Render a results page showing for each stem:
+  - **"Your Answer"** section — the candidate's exact submitted answer in full
+  - **"Model Answer"** section — the static marking guide from `stem.domains` formatted as domain groups with mark-earning lines, writing tip from `stem.postExaminerNote`, and zero-mark traps from `stem.zeroMarkTraps`
+- No score, no yield classification, no inline correction, no feedback, no concept box
+- At the bottom: two buttons — "Retry MEQ" and "Next MEQ"
+- This view is also accessible from the attempt history (completed MEQs show this instantly)
+
+Format the model answer exactly as:
+
+```
+DOMAIN NAME (X marks)
+• Point 1 in marking guide format
+• Point 2
+• Point 3
+
+Writing tip: [from postExaminerNote]
+
+Zero-mark traps:
+⚠ Trap 1
+⚠ Trap 2
+```
+
+---
+
+**Path B behaviour — Examiner Assessment:**
+
+When candidate clicks "Examiner Assessment":
+- Show message screen: "Your MEQ has been submitted for examiner assessment. Results are typically available within 10–15 minutes."
+- Show per-stem progress checklist — stem 1.1, 1.2, 1.3, 1.4 — each showing pending, then spinner, then green tick as each completes
+- Process stems sequentially using the existing `submitForEvaluation` function
+- When all stems complete, render the full six-box assessment page as currently built
+- At the bottom: "Retry MEQ" and "Next MEQ" buttons
+
+---
+
+**CHANGE 2 — Attempt history for completed MEQs**
+
+In the MEQ list home screen, when a candidate clicks a MEQ that has at least one completed attempt, show an **Attempt History screen** instead of immediately starting a new attempt.
+
+The screen shows:
+- MEQ title and topic
+- List of all completed attempts, most recent first
+- Each attempt row: attempt number, date, score (e.g. 18/30), percentage, pass/borderline/fail badge
+- Each attempt row is clickable — if the attempt has a full evaluation stored, clicking shows the six-box assessment page from stored data (no API call). If the attempt only has a View Key result stored, clicking shows the View Key page from stored data.
+- Two buttons at the bottom: "Start New Attempt" and "Back to list"
+
+---
+
+**CHANGE 3 — Remove all AI language from the entire app**
+
+Search the entire codebase for every instance of the following strings and replace as specified:
+
+Find → Replace:
+- `AI evaluation` → `Examiner assessment`
+- `AI feedback` → `Examiner feedback`
+- `AI graded` → `Examiner graded`
+- `AI-graded` → `Examiner graded`
+- `AI evaluation unavailable` → `Assessment unavailable`
+- `AI evaluation failed` → `Assessment failed`
+- `evaluated by AI` → `assessed by examiner`
+- `At RANZCP examiner standard · ` → `` (remove this prefix where it appears with AI context)
+- `Checking command words · domain coverage · time management` → `Reviewing your answers`
+- Any string containing `Anthropic`, `Claude`, `GPT`, `artificial intelligence`, `machine learning`, `automated` → remove or replace with neutral language
+
+In `index.html` or equivalent entry HTML file:
+- Page title: `MEQ Prep — RANZCP Examination Preparation`
+- Meta description: `Staged MEQ practice with examiner-standard marking and model answers for RANZCP fellowship examination candidates`
+- Remove any meta tags referencing AI, automation, or specific AI product names
+
+In the evaluating spinner screen, replace all text with:
+- Heading: `Submitting for examiner assessment`
+- Subheading: `Reviewing your answers · [X] stems · [X] marks`
+- Timer text: `[time] elapsed — results typically available within 10–15 minutes`
+
+In `meqEvaluate.ts` error messages that are user-facing, replace:
+- `"AI evaluation failed"` → `"Assessment unavailable — please try again"`
+- `"AI evaluation unavailable"` → `"Assessment service unavailable"`
+
+---
+
+**CHANGE 4 — Progress Dashboard**
+
+Create `artifacts/meq-prep/src/pages/MEQProgress.tsx`.
+
+Add to `App.tsx`:
+```tsx
+import MEQProgress from "@/pages/MEQProgress";
+<Route path="/meq-progress" component={MEQProgress} />
+```
+
+Add a "Progress" link to the Daily MEQ home screen header.
+
+The Progress Dashboard reads from localStorage `meq_v3_attempts` and shows:
+
+**Section 1 — Summary cards:**
+- MEQs completed (at least one evaluated attempt)
+- Average score % across all evaluated attempts
+- Command word compliance rate (stems where commandWordCompliance was true / total stems evaluated)
+- Total stems attempted
+
+**Section 2 — Domain performance:**
+Loop through all evaluated attempts → each stem's `domainBreakdown` array → group by domain name → calculate average marksEarned/marksAvailable per domain. Display as a table, colour coded: green ≥75%, amber 50–74%, red <50%.
+
+**Section 3 — All attempts:**
+Every evaluated attempt across all MEQs, most recent first. Each row: MEQ title, date, score, badge. Clickable to view stored six-box assessment — no API call.
+
+**Section 4 — Weakest domains:**
+Three lowest-scoring domains with a note: "Focus revision on [domain name] — averaging [X]% across your attempts."
+
+**Section 5 — Daily MEQ contributes 30% to course progress.**
+In `Phases.tsx`, find where course progress percentage is calculated. Update:
+
+```
+Total progress = (Quiz progress × 0.70) + (MEQ progress × 0.30)
+```
+
+Where MEQ progress = MEQs with at least one evaluated attempt / `MEQ_BANK.length`, capped at 1.0.
+
+Update the Phases page progress bar and description to show: "Quiz Mode: 70% · Daily MEQ: 30%"
+
+---
+
+**VERIFICATION:**
+
+```bash
+grep -rn "AI evaluation\|AI feedback\|AI graded\|Anthropic\|artificial intelligence" artifacts/meq-prep/src/ | grep -v ".map" | head -20
+```
+
+This must return nothing.
+
+```bash
+pnpm run typecheck
+```
+
+Must pass clean.

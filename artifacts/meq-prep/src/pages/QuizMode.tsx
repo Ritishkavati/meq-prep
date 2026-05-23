@@ -791,7 +791,7 @@ function ResultsScreen({
       });
       if (!response.ok) throw new Error("Request failed");
       const data = await response.json() as { feedback?: string };
-      setAiFeedback(data.feedback ?? "AI feedback unavailable");
+      setAiFeedback(data.feedback ?? "Feedback unavailable");
     } catch {
       setAiFeedbackError(true);
     } finally {

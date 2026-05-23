@@ -732,14 +732,17 @@ function persistAllAttempts(attempts) {
 
 function getMEQStats(meqId, allAttempts) {
   const meqAttempts = allAttempts.filter((a) => a.meqId === meqId);
-  const evaluated = meqAttempts.filter((a) => a.status === "evaluated");
+  const evaluated = meqAttempts.filter(
+    (a) => a.status === "evaluated" || a.status === "view_key"
+  );
   const inProgressAttempt = meqAttempts.find((a) => a.status === "in_progress");
   const meq = MEQ_BANK.find((m) => m.id === meqId);
 
   let bestScore = null;
   let bestPct = null;
-  if (evaluated.length && meq) {
-    const scores = evaluated.map((a) => a.evaluation?.totalMarksEarned ?? 0);
+  const scoredAttempts = evaluated.filter((a) => a.evaluation);
+  if (scoredAttempts.length && meq) {
+    const scores = scoredAttempts.map((a) => a.evaluation?.totalMarksEarned ?? 0);
     bestScore = Math.max(...scores);
     bestPct = Math.round((bestScore / meq.totalMarks) * 100);
   }
@@ -1065,7 +1068,7 @@ const errorTypeLabel = (t) =>
 // MAIN COMPONENT
 // ============================================================
 export default function DailyMEQMode() {
-  const [phase, setPhase] = useState("list"); // list | attempt_history | mode_select | stem | evaluating | assessment
+  const [phase, setPhase] = useState("list"); // list | attempt_history | mode_select | stem | pathway_select | evaluating | view_key | assessment
   const [selectedMEQ, setSelectedMEQ] = useState(null);
   const [currentAttempt, setCurrentAttempt] = useState(null);
   const [currentStemIndex, setCurrentStemIndex] = useState(0);
@@ -1148,7 +1151,7 @@ export default function DailyMEQMode() {
     };
     setCurrentAttempt(finalAttempt);
     updateAndPersistAttempt(finalAttempt);
-    submitForEvaluation(finalAttempt);
+    setPhase("pathway_select");
   };
 
   useEffect(() => {
@@ -1248,7 +1251,7 @@ export default function DailyMEQMode() {
     if (isLast) {
       clearInterval(timerRef.current);
       setTimerActive(false);
-      submitForEvaluation(updatedAttempt);
+      setPhase("pathway_select");
     } else {
       const nextStem = selectedMEQ.stems[nextStemIndex];
       const savedNext =
@@ -1376,14 +1379,18 @@ export default function DailyMEQMode() {
 
   function viewAttempt(attempt) {
     const meq = MEQ_BANK.find((m) => m.id === attempt.meqId);
-    if (!meq || !attempt.evaluation) return;
+    if (!meq) return;
     setSelectedMEQ(meq);
     setCurrentAttempt(attempt);
-    setExpandedStems(
-      Object.fromEntries(meq.stems.map((s) => [s.stemNumber, true]))
-    );
     setCameFromHistory(true);
-    setPhase("assessment");
+    if (attempt.status === "view_key") {
+      setPhase("view_key");
+    } else if (attempt.evaluation) {
+      setExpandedStems(
+        Object.fromEntries(meq.stems.map((s) => [s.stemNumber, true]))
+      );
+      setPhase("assessment");
+    }
   }
 
   function goBackToHistory() {
@@ -1567,7 +1574,7 @@ export default function DailyMEQMode() {
           <div>
             <h1 className="text-3xl font-bold text-gray-900 tracking-tight">Daily MEQ</h1>
             <p className="text-sm text-gray-500 mt-1">
-              Staged MEQ papers · {MEQ_BANK.length} MEQs · AI feedback at RANZCP examiner standard
+              Staged MEQ papers · {MEQ_BANK.length} MEQs · Examiner feedback
             </p>
           </div>
           <a
@@ -1834,15 +1841,211 @@ export default function DailyMEQMode() {
           }`}
         >
           {isLastStem
-            ? "Submit Full MEQ for Evaluation →"
+            ? "Submit Full MEQ →"
             : `Save & Next Stem (${selectedMEQ.stems[currentStemIndex + 1]?.stemNumber}) →`}
         </button>
 
         <p className="text-xs text-gray-400 text-center mt-2">
           {isLastStem
-            ? "All stems submitted together for AI evaluation at RANZCP examiner standard."
+            ? "You will choose how to review your answers after submitting."
             : "Your answer is saved. You cannot return to previous stems after proceeding."}
         </p>
+      </div>
+    );
+  }
+
+  // ── PATHWAY SELECT PHASE ───────────────────────────────────
+  if (phase === "pathway_select" && currentAttempt && selectedMEQ) {
+    return (
+      <div className="max-w-2xl mx-auto px-4 py-10">
+        <div className="mb-6 text-center">
+          <h2 className="text-2xl font-bold text-gray-900">{selectedMEQ.title}</h2>
+          <p className="text-sm text-gray-500 mt-1">
+            {selectedMEQ.stems.length} stems · {selectedMEQ.totalMarks} marks — all answers saved
+          </p>
+        </div>
+
+        {/* Stem answer preview */}
+        <div className="mb-8 space-y-2">
+          {selectedMEQ.stems.map((stem) => {
+            const ans = currentAttempt.answers.find((a) => a.stemNumber === stem.stemNumber);
+            const words = (ans?.answerText ?? "").trim().split(/\s+/);
+            const preview = words.slice(0, 20).join(" ");
+            const hasMore = words.length > 20;
+            return (
+              <div key={stem.stemNumber} className="bg-gray-50 border border-gray-200 rounded-lg px-4 py-2.5">
+                <div className="text-xs font-semibold text-gray-500 mb-0.5">
+                  Stem {stem.stemNumber} · {stem.marks}M
+                </div>
+                <p className="text-xs text-gray-700 leading-relaxed">
+                  {preview
+                    ? `${preview}${hasMore ? "…" : ""}`
+                    : <span className="italic text-gray-400">No answer submitted</span>}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+
+        <p className="text-sm text-gray-600 text-center mb-6 font-medium">
+          How would you like to review your answers?
+        </p>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <button
+            onClick={() => {
+              const vkAttempt = {
+                ...currentAttempt,
+                status: "view_key",
+                completedAt: new Date().toISOString(),
+              };
+              setCurrentAttempt(vkAttempt);
+              updateAndPersistAttempt(vkAttempt);
+              setPhase("view_key");
+            }}
+            className="flex flex-col items-center gap-3 p-6 bg-white border-2 border-gray-200 rounded-2xl hover:border-gray-900 hover:shadow-sm transition-all"
+          >
+            <div className="text-3xl">📋</div>
+            <div className="font-bold text-gray-900 text-lg">View Key</div>
+            <div className="text-xs text-gray-500 text-center leading-relaxed">
+              See the model answer for each stem instantly
+            </div>
+          </button>
+
+          <button
+            onClick={() => submitForEvaluation(currentAttempt)}
+            className="flex flex-col items-center gap-3 p-6 bg-gray-900 border-2 border-gray-900 rounded-2xl hover:bg-gray-800 transition-all"
+          >
+            <div className="text-3xl">🎓</div>
+            <div className="font-bold text-white text-lg">Examiner Assessment</div>
+            <div className="text-xs text-gray-300 text-center leading-relaxed">
+              Receive detailed feedback on your answers — takes 10–15 minutes
+            </div>
+          </button>
+        </div>
+
+        <button
+          onClick={goBackToList}
+          className="mt-6 text-xs text-gray-400 hover:text-gray-600 transition-colors block mx-auto"
+        >
+          ← Cancel and go back
+        </button>
+      </div>
+    );
+  }
+
+  // ── VIEW KEY PHASE ─────────────────────────────────────────
+  if (phase === "view_key" && currentAttempt && selectedMEQ) {
+    return (
+      <div className="max-w-3xl mx-auto px-4 py-6 space-y-5">
+        <div className="flex items-start justify-between">
+          <div>
+            <h2 className="text-xl font-bold text-gray-900">{selectedMEQ.title}</h2>
+            <p className="text-sm text-gray-500">{selectedMEQ.examSource} · Model Answer Key</p>
+          </div>
+          <button
+            onClick={cameFromHistory ? goBackToHistory : goBackToList}
+            className="text-sm text-gray-400 hover:text-gray-700 flex-shrink-0"
+          >
+            ← Back
+          </button>
+        </div>
+
+        {selectedMEQ.stems.map((stem) => {
+          const ans = currentAttempt.answers.find((a) => a.stemNumber === stem.stemNumber);
+          return (
+            <div key={stem.stemNumber} className="bg-white border border-gray-200 rounded-2xl overflow-hidden">
+              <div className="px-5 py-4 border-b border-gray-100 bg-gray-50">
+                <div className="text-sm font-bold text-gray-900 mb-0.5">
+                  Stem {stem.stemNumber} · {stem.marks} mark{stem.marks !== 1 ? "s" : ""}
+                </div>
+                <p className="text-xs text-gray-500 leading-relaxed">
+                  {stem.question.split("\n")[0]}
+                </p>
+              </div>
+              <div className="px-5 pb-5 pt-4 space-y-4">
+                {/* Your Answer */}
+                <div>
+                  <div className="text-xs font-bold text-gray-500 uppercase tracking-wide mb-2">
+                    Your Answer
+                  </div>
+                  <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+                    {ans?.answerText ? (
+                      <p className="text-sm text-gray-800 leading-relaxed whitespace-pre-wrap">
+                        {ans.answerText}
+                      </p>
+                    ) : (
+                      <p className="text-sm text-gray-400 italic">No answer submitted</p>
+                    )}
+                    {ans && (
+                      <div className="text-xs text-gray-400 mt-2">
+                        {Math.round((ans.timeUsedSeconds ?? 0) / 60)} min used of {stem.timeMinutes} min
+                      </div>
+                    )}
+                  </div>
+                </div>
+
+                {/* Model Answer */}
+                <div>
+                  <div className="text-xs font-bold text-gray-500 uppercase tracking-wide mb-2">
+                    Model Answer
+                  </div>
+                  <div className="bg-emerald-50 border border-emerald-200 rounded-lg p-4 space-y-3">
+                    {stem.domains.map((domain) => (
+                      <div key={domain.name}>
+                        <div className="text-xs font-bold text-emerald-800 mb-1">
+                          {domain.name.toUpperCase()} ({domain.marks} mark{domain.marks !== 1 ? "s" : ""})
+                        </div>
+                        <ul className="space-y-0.5">
+                          {domain.keyPoints.map((pt, i) => (
+                            <li key={i} className="text-xs text-emerald-900 flex gap-1.5">
+                              <span className="flex-shrink-0 mt-0.5">•</span>
+                              <span>{pt}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                    {stem.postExaminerNote && (
+                      <div className="pt-2 border-t border-emerald-200">
+                        <div className="text-xs font-semibold text-emerald-700 mb-1">Writing tip</div>
+                        <p className="text-xs text-emerald-800 leading-relaxed">{stem.postExaminerNote}</p>
+                      </div>
+                    )}
+                    {stem.zeroMarkTraps?.length > 0 && (
+                      <div className="pt-2 border-t border-emerald-200">
+                        <div className="text-xs font-semibold text-red-600 mb-1">Zero-mark traps</div>
+                        <ul className="space-y-0.5">
+                          {stem.zeroMarkTraps.map((trap, i) => (
+                            <li key={i} className="text-xs text-red-700 flex gap-1.5">
+                              <span className="flex-shrink-0">⚠</span>
+                              <span>{trap}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </div>
+            </div>
+          );
+        })}
+
+        <div className="flex gap-3 pb-8">
+          <button
+            onClick={() => startMEQ(selectedMEQ)}
+            className="flex-1 py-3 border-2 border-gray-200 rounded-xl text-sm font-semibold text-gray-700 hover:border-gray-400 transition-colors"
+          >
+            Retry MEQ
+          </button>
+          <button
+            onClick={goBackToList}
+            className="flex-1 py-3 bg-gray-900 text-white rounded-xl text-sm font-semibold hover:bg-gray-800 transition-colors"
+          >
+            Next MEQ →
+          </button>
+        </div>
       </div>
     );
   }
@@ -1876,12 +2079,12 @@ export default function DailyMEQMode() {
     return (
       <div className="max-w-3xl mx-auto px-4 py-24 flex flex-col items-center text-center">
         <div className="w-12 h-12 border-2 border-gray-900 border-t-transparent rounded-full animate-spin mb-6" />
-        <h2 className="text-xl font-bold text-gray-900 mb-2">Evaluating your MEQ</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-2">Submitting for examiner assessment</h2>
         <p className="text-gray-500 text-sm">
-          At RANZCP examiner standard · {selectedMEQ?.stems.length} stems · {selectedMEQ?.totalMarks} marks
+          Reviewing your answers · {selectedMEQ?.stems.length} stems · {selectedMEQ?.totalMarks} marks
         </p>
         <p className="text-gray-400 text-xs mt-3">
-          Checking command words · domain coverage · time management
+          Results typically available within 10–15 minutes
         </p>
         <div className="mt-6 flex flex-col items-center gap-3">
           {selectedMEQ?.stems.map((s, idx) => (

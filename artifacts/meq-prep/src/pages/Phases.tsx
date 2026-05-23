@@ -271,7 +271,7 @@ export default function Phases() {
             <div className="flex-1 min-w-0">
               <h3 className="text-base font-serif font-bold text-primary mb-0.5">Daily MEQ</h3>
               <p className="text-xs text-muted-foreground mb-2 leading-relaxed">
-                Complete staged MEQ papers — 3–4 progressive stems, 1 mark per minute, full AI evaluation at RANZCP examiner standard at the end.
+                Complete staged MEQ papers — 3–4 progressive stems, 1 mark per minute, full examiner assessment at the end.
               </p>
               <div className="flex flex-wrap items-center gap-3 text-xs text-muted-foreground">
                 <span>
