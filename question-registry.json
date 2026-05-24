@@ -1,7 +1,7 @@
 {
   "version": "1.0",
   "lastUpdated": "2026-05-23",
-  "totalQuestions": 13,
+  "totalQuestions": 17,
   "questions": [
     {
       "id": "meq_001",
@@ -195,6 +195,66 @@
       "pressureSequence": "Dialysis refusal with cultural-versus-psychotic distinction requiring Māori health assessment → acute hyperkalaemia with ECG changes and renal consultant demanding incompetence declaration → discharge to remote community after hui with carer burden and practical access barriers → death after missed dialysis with daughter complaint and registrar moral injury",
       "finalDilemma": "Responding to a complaint that culture overrode medical care, supporting a distressed registrar who fears causing Wiremu's death, and conducting a governance review that examines systems rather than assigns individual blame after a Māori patient dies following a documented capacitous refusal of dialysis",
       "patientName": "Wiremu",
+      "createdAt": "2026-05-23",
+      "status": "active"
+    },
+    {
+      "id": "meq_014",
+      "title": "Youth Mental Health Service — Aboriginal Regional Area, Partnership and Safety",
+      "usedIn": "daily_meq",
+      "primaryDomain": "Governance / Systems / Leadership",
+      "ageGroup": "13-17",
+      "setting": "community",
+      "clinicalTheme": "Establishing a hybrid youth mental health service in a regional Aboriginal area; tests service model clarification before design, policy brief development using local data, inter-agency partnership conflict management balancing medical governance and community ownership, and patient-safety review after a 16-year-old Aboriginal girl overdoses following a referral pathway failure.",
+      "culturalTag": "Aboriginal",
+      "pressureSequence": "Service model clarification with competing hospital and ACCHO interests → policy brief using ED and disengagement data → partnership conflict with NGO, ACCHO, schools and community leaders → pathway failure resulting in Aboriginal adolescent overdose requiring simultaneous clinical response and system review",
+      "finalDilemma": "Responding to a 16-year-old Aboriginal girl's overdose after a referral pathway failure while simultaneously conducting a system review that identifies GP communication, NGO escalation threshold, and CAMHS discharge-across-communities gaps without attributing blame to individual partners",
+      "patientName": "Marli",
+      "createdAt": "2026-05-23",
+      "status": "active"
+    },
+    {
+      "id": "meq_015",
+      "title": "Remote Youth Crisis — Telehealth, Workforce Risk and Pathway Failure",
+      "usedIn": "daily_meq",
+      "primaryDomain": "Governance / Systems / Leadership",
+      "ageGroup": "13-17",
+      "setting": "community",
+      "clinicalTheme": "Remote youth mental health crisis management and service governance; tests immediate telehealth risk triage for a suicidal 13-year-old, workforce and supervision recommendations for remote services with a junior registrar and nurse practitioner, managing competing expectations around local autonomy and specialist oversight, and incident review after a 14-year-old girl re-presents after self-harm following high-risk discharge to a cousin.",
+      "culturalTag": "none",
+      "pressureSequence": "Immediate remote crisis triage with junior registrar and nurse practitioner requesting antidepressant → workforce and supervision recommendations for remote youth pathway → competing stakeholder expectations with resource constraint → 14-year-old re-presents after self-harm following high-risk discharge without adequate supervision",
+      "finalDilemma": "Conducting a systems review after a 14-year-old girl re-presents following self-harm after being discharged to her cousin because no bed or transport was available, while simultaneously supporting a distressed registrar who felt pressured to make the least bad decision",
+      "patientName": "Liam",
+      "createdAt": "2026-05-23",
+      "status": "active"
+    },
+    {
+      "id": "meq_016",
+      "title": "ECT Service Audit, Change Management and Consumer Complaint",
+      "usedIn": "daily_meq",
+      "primaryDomain": "Governance / Systems / Leadership",
+      "ageGroup": "26-64",
+      "setting": "inpatient",
+      "clinicalTheme": "ECT service audit design and governance leadership; tests clinically meaningful audit design under staff resistance, governance and consumer communication response to five identified process gaps, change management balancing urgency and professional autonomy with nursing safety intelligence, and open disclosure response to a formal consumer complaint about memory information, family exclusion and inpatient communication failure.",
+      "culturalTag": "none",
+      "pressureSequence": "Audit design under senior psychiatrist resistance and workload framing → five audit findings with informal consumer complaints → change presentation with defensive senior staff, ignored nursing concerns, and consumer experience gap → formal consumer complaint requiring open disclosure and service strengthening",
+      "finalDilemma": "Responding to a formal consumer complaint about persistent memory problems and family exclusion while simultaneously advising the hospital executive, completing the change process, and feeding complaint themes back into the audit cycle without attributing premature individual blame",
+      "patientName": "none",
+      "createdAt": "2026-05-23",
+      "status": "active"
+    },
+    {
+      "id": "meq_017",
+      "title": "Documentation, GP Liaison, Lithium Toxicity and Shared-Care Quality Assurance",
+      "usedIn": "daily_meq",
+      "primaryDomain": "Governance / Systems / Leadership",
+      "ageGroup": "26-64",
+      "setting": "community",
+      "clinicalTheme": "Community mental health team documentation and GP liaison quality assurance; tests just-culture problem assessment without premature blame, governance and process change recommendations including minimum standards and high-risk medication fail-safes, consultant response to lithium toxicity balancing accountability and psychological safety, and leading a shared-care meeting with GPs and consumers to develop sustainable shared-care boundaries after an adverse event.",
+      "culturalTag": "none",
+      "pressureSequence": "GP complaints with multiple professional groups attributing blame to each other → audit findings of five documentation gaps with no agreed minimum standard → clinical service manager blame framing followed by lithium toxicity adverse outcome → GP liaison meeting with staff defensiveness, specialist-versus-GP responsibility debate and consumer medication gap",
+      "finalDilemma": "Leading a GP-staff-consumer meeting to develop a sustainable shared-care process after a lithium toxicity adverse outcome, while managing staff defensiveness, a consultant who believes GPs should take more monitoring responsibility, and a consumer representative who names patient medication understanding as an unaddressed gap",
+      "patientName": "none",
       "createdAt": "2026-05-23",
       "status": "active"
     }

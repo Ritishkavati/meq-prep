@@ -116,5 +116,22 @@
     "candidateAnswer": "16 years - consent - gilick competency - and include parents in the process or SDM frame work \nSH attempt evaluation intension lethality, access to the medication, previous attempt current risk \nfluoxetine - Seratinin syndrome, physical examination and hyponatremina \nPCM hepatic functions, and med review medical concerns first and delirium \nmse : level of engagement + capacity + need for MHA and risk containment \nconsent + confidentiality overided by risk \nno safe discharge until medically cleared and no safe discharge plan - duty of care emergency ",
     "totalMarks": 22,
     "estimatedMarks": 1
+  },
+  {
+    "timestamp": "2026-05-24T03:58:21.770Z",
+    "questionId": "ED-001",
+    "identifiedSignalIds": [
+      "s2"
+    ],
+    "missedSignalIds": [
+      "s1",
+      "s3",
+      "s4",
+      "s5",
+      "s6"
+    ],
+    "candidateAnswer": "Extended history\nExtensive\nDeterioration of sociooccupational function\nUse of methamphetamine as self-medication\n",
+    "totalMarks": 25,
+    "estimatedMarks": 6
   }
 ]
