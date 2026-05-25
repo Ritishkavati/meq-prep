@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useMemo } from "react";
 import { Link, useLocation } from "wouter";
 import { useCandidate } from "@/lib/store";
+import { useAdmin } from "@/lib/adminStore";
 import { Header } from "@/components/Header";
 import {
-  ListChecks, BookOpen, ClipboardList, ArrowRight, BarChart2, LogOut, NotebookPen,
+  ListChecks, BookOpen, ClipboardList, ArrowRight, BarChart2, LogOut, NotebookPen, ShieldCheck,
 } from "lucide-react";
 import {
   getQuizModuleCompletion, getTotalQuizzesCompleted,
@@ -27,7 +28,8 @@ function loadMEQAttempts(): Array<{ status: string; meqId: string }> {
 }
 
 export default function Phases() {
-  const { candidateNumber, clearCandidate } = useCandidate();
+  const { candidateNumber, setCandidateNumber, clearCandidate } = useCandidate();
+  const { isAdmin } = useAdmin();
   const [, setLocation] = useLocation();
   const [examCount, setExamCount] = useState(0);
 
@@ -52,8 +54,12 @@ export default function Phases() {
   const meqContribution = meqProgress * 30;
 
   useEffect(() => {
-    if (!candidateNumber) setLocation("/");
-  }, [candidateNumber, setLocation]);
+    if (!candidateNumber && isAdmin) {
+      setCandidateNumber("ADMIN-PREVIEW");
+    } else if (!candidateNumber && !isAdmin) {
+      setLocation("/");
+    }
+  }, [candidateNumber, isAdmin, setCandidateNumber, setLocation]);
 
   useEffect(() => {
     if (candidateNumber) {
@@ -71,6 +77,21 @@ export default function Phases() {
   return (
     <div className="max-w-3xl mx-auto p-4 md:p-8 pt-8 md:pt-12">
       <Header />
+
+      {isAdmin && (
+        <div className="flex items-center justify-between gap-3 bg-amber-50 border border-amber-200 rounded-xl px-4 py-2.5 mt-4 text-xs">
+          <div className="flex items-center gap-1.5 text-amber-700 font-medium">
+            <ShieldCheck className="w-3.5 h-3.5 flex-shrink-0" />
+            Admin preview mode — viewing as ADMIN-PREVIEW
+          </div>
+          <button
+            onClick={() => setLocation("/admin")}
+            className="text-amber-700 hover:text-amber-900 font-semibold whitespace-nowrap underline underline-offset-2"
+          >
+            Back to dashboard
+          </button>
+        </div>
+      )}
 
       <div className="flex items-center justify-between mt-8 mb-3">
         <h2 className="text-lg font-serif font-bold text-primary">

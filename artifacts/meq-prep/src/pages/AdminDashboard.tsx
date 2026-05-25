@@ -8,8 +8,9 @@ import {
 import {
   ShieldCheck, LogOut, Users, Activity, BarChart2,
   Trash2, RefreshCw, ChevronDown, ChevronUp, TrendingUp,
-  Calendar, Award, BookOpen,
+  Calendar, Award, BookOpen, Eye,
 } from "lucide-react";
+import { useCandidate } from "@/lib/store";
 
 const BASE = import.meta.env.BASE_URL.replace(/\/$/, "");
 
@@ -88,6 +89,7 @@ type Tab = "overview" | "candidates" | "metrics";
 
 export default function AdminDashboard() {
   const { isAdmin, isLoading, logout, token } = useAdmin();
+  const { setCandidateNumber } = useCandidate();
   const [, setLocation] = useLocation();
   const [stats, setStats] = useState<AdminStats | null>(null);
   const [statsLoading, setStatsLoading] = useState(false);
@@ -160,6 +162,16 @@ export default function AdminDashboard() {
             </span>
           </div>
           <div className="flex items-center gap-2">
+            <button
+              onClick={() => {
+                setCandidateNumber("ADMIN-PREVIEW");
+                setLocation("/phases");
+              }}
+              className="flex items-center gap-1.5 text-sm px-3 py-1.5 rounded-lg border border-teal-300 bg-teal-50 text-teal-700 hover:bg-teal-100 transition-colors font-medium"
+            >
+              <Eye className="w-3.5 h-3.5" />
+              <span>Preview App</span>
+            </button>
             <button
               onClick={fetchStats}
               disabled={statsLoading}
