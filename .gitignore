@@ -48,3 +48,6 @@ Thumbs.db
 .cache/
 .local/
 attached_assets/Pasted-*.txt
+
+# Runtime logs — never commit
+artifacts/api-server/logs/

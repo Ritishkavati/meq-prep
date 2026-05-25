@@ -5,35 +5,48 @@ import path from "path";
 
 const router = Router();
 
-const SESSION_SECRET = process.env.SESSION_SECRET ?? "dev-secret-fallback";
+const SESSION_SECRET = process.env.SESSION_SECRET;
 const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD ?? "";
 const TOKEN_EXPIRY_MS = 8 * 60 * 60 * 1000;
 const LOG_PATH = path.resolve(process.cwd(), "logs", "attempts.json");
 
+function getSecret(): string {
+  if (!SESSION_SECRET) {
+    throw new Error("SESSION_SECRET environment variable is not set — admin auth unavailable");
+  }
+  return SESSION_SECRET;
+}
+
 function sign(payload: object): string {
+  const secret = getSecret();
   const data = JSON.stringify(payload);
   const b64 = Buffer.from(data).toString("base64url");
   const sig = crypto
-    .createHmac("sha256", SESSION_SECRET)
+    .createHmac("sha256", secret)
     .update(b64)
     .digest("base64url");
   return `${b64}.${sig}`;
 }
 
-function verify(token: string): object | null {
+function verify(token: string): { role?: string; exp?: number } | null {
   try {
+    const secret = getSecret();
     const [b64, sig] = token.split(".");
     if (!b64 || !sig) return null;
     const expected = crypto
-      .createHmac("sha256", SESSION_SECRET)
+      .createHmac("sha256", secret)
       .update(b64)
       .digest("base64url");
-    if (!crypto.timingSafeEqual(Buffer.from(sig), Buffer.from(expected))) return null;
+    if (
+      sig.length !== expected.length ||
+      !crypto.timingSafeEqual(Buffer.from(sig), Buffer.from(expected))
+    ) return null;
     const payload = JSON.parse(Buffer.from(b64, "base64url").toString()) as {
       exp?: number;
       role?: string;
     };
     if (!payload.exp || Date.now() > payload.exp) return null;
+    if (payload.role !== "admin") return null;
     return payload;
   } catch {
     return null;
@@ -41,7 +54,11 @@ function verify(token: string): object | null {
 }
 
 function requireAdmin(req: any, res: any, next: any) {
-  const auth = req.headers.authorization ?? "";
+  if (!SESSION_SECRET) {
+    res.status(503).json({ error: "Admin auth not configured — SESSION_SECRET missing" });
+    return;
+  }
+  const auth = (req.headers.authorization as string) ?? "";
   const token = auth.startsWith("Bearer ") ? auth.slice(7) : "";
   const payload = verify(token);
   if (!payload) {
