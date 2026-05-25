@@ -3,7 +3,7 @@ import { Link, useLocation } from "wouter";
 import { useCandidate } from "@/lib/store";
 import { Header } from "@/components/Header";
 import {
-  ListChecks, BookOpen, ClipboardList, ArrowRight, BarChart2, LogOut,
+  ListChecks, BookOpen, ClipboardList, ArrowRight, BarChart2, LogOut, NotebookPen,
 } from "lucide-react";
 import {
   getQuizModuleCompletion, getTotalQuizzesCompleted,
@@ -213,6 +213,32 @@ export default function Phases() {
               className="flex-shrink-0 flex items-center gap-2 w-full sm:w-auto justify-center px-5 py-2.5 bg-white text-primary border-2 border-primary hover:bg-primary hover:text-white rounded-lg text-sm font-semibold transition-colors whitespace-nowrap"
             >
               View Progress <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </div>
+
+        {/* Notes */}
+        <div className="bg-card rounded-2xl border border-card-border shadow-sm px-6 py-5">
+          <div className="flex items-start sm:items-center gap-4 flex-col sm:flex-row">
+            <div className="flex-shrink-0 w-11 h-11 rounded-xl bg-accent/10 flex items-center justify-center">
+              <NotebookPen className="w-5 h-5 text-accent" />
+            </div>
+            <div className="flex-1 min-w-0">
+              <h3 className="text-base font-serif font-bold text-primary mb-0.5">Notes</h3>
+              <p className="text-xs text-muted-foreground leading-relaxed">
+                Structured study notes with section navigation, personal annotations, highlights and exam application boxes.
+              </p>
+              <div className="mt-1.5 flex items-center gap-1.5">
+                <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-accent/10 text-accent">
+                  Comprehensive Psychiatric Discharge Plan
+                </span>
+              </div>
+            </div>
+            <Link
+              href="/notes"
+              className="flex-shrink-0 flex items-center gap-2 w-full sm:w-auto justify-center px-5 py-2.5 bg-white text-primary border-2 border-primary hover:bg-primary hover:text-white rounded-lg text-sm font-semibold transition-colors whitespace-nowrap"
+            >
+              Open Notes <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
         </div>

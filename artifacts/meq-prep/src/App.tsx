@@ -20,6 +20,7 @@ import DailyMEQMode from "@/pages/DailyMEQMode";
 import MEQProgress from "@/pages/MEQProgress";
 import AdminLogin from "@/pages/AdminLogin";
 import AdminDashboard from "@/pages/AdminDashboard";
+import Notes from "@/pages/Notes";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -40,6 +41,7 @@ function Router() {
       <Route path="/brain/ps/add" component={PSBrainAdd} />
       <Route path="/brain/ps/import" component={PSBrainImport} />
       <Route path="/brain/ai-export" component={AIReviewExport} />
+      <Route path="/notes" component={Notes} />
       <Route path="/admin/login" component={AdminLogin} />
       <Route path="/admin" component={AdminDashboard} />
       <Route component={NotFound} />
