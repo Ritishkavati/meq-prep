@@ -1,18 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import { useLocation } from "wouter";
 import { ArrowRight, ShieldCheck } from "lucide-react";
 import { useCandidate } from "@/lib/store";
 import { Header } from "@/components/Header";
 
+const ALLOWED_REGISTRATIONS = [
+  "REG-2026-0001",
+  "REG-2026-0002",
+  "REG-2026-0003",
+  "REG-2026-0004",
+  "REG-2026-0005",
+];
+
 export default function Registration() {
   const { candidateNumber, setCandidateNumber } = useCandidate();
   const [, setLocation] = useLocation();
+  const [error, setError] = useState("");
 
   const handleBegin = (e: React.FormEvent) => {
     e.preventDefault();
-    if (candidateNumber.trim()) {
-      setLocation("/phases");
+    const trimmed = candidateNumber.trim().toUpperCase();
+    if (!ALLOWED_REGISTRATIONS.includes(trimmed)) {
+      setError("Registration number not recognised. Please check and try again.");
+      return;
     }
+    setError("");
+    setCandidateNumber(trimmed);
+    setLocation("/phases");
   };
 
   return (
@@ -33,12 +47,15 @@ export default function Registration() {
             <input
               id="candidateNumber"
               type="text"
-              placeholder="e.g. REG-2026-0042"
+              placeholder="e.g. REG-2026-0001"
               autoFocus
-              className="w-full h-12 px-4 rounded-lg border border-input bg-background focus:outline-none focus:ring-2 focus:ring-accent transition-all"
+              className={`w-full h-12 px-4 rounded-lg border bg-background focus:outline-none focus:ring-2 focus:ring-accent transition-all ${error ? "border-red-400 focus:ring-red-300" : "border-input"}`}
               value={candidateNumber}
-              onChange={(e) => setCandidateNumber(e.target.value)}
+              onChange={(e) => { setCandidateNumber(e.target.value); setError(""); }}
             />
+            {error && (
+              <p className="text-sm text-red-500 mt-1">{error}</p>
+            )}
           </div>
 
           <div className="pt-4">
