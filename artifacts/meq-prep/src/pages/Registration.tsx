@@ -1,6 +1,6 @@
 import React from "react";
 import { useLocation } from "wouter";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ShieldCheck } from "lucide-react";
 import { useCandidate } from "@/lib/store";
 import { Header } from "@/components/Header";
 
@@ -54,8 +54,15 @@ export default function Registration() {
         </form>
       </div>
 
-      <div className="text-center text-xs text-muted-foreground pb-8">
-        Educational preparation tool only. Not an official RANZCP product.
+      <div className="text-center text-xs text-muted-foreground pb-8 space-y-2">
+        <p>Educational preparation tool only. Not an official RANZCP product.</p>
+        <button
+          onClick={() => setLocation("/admin/login")}
+          className="inline-flex items-center gap-1 text-xs text-muted-foreground/50 hover:text-muted-foreground transition-colors"
+        >
+          <ShieldCheck className="w-3 h-3" />
+          Admin
+        </button>
       </div>
     </div>
   );

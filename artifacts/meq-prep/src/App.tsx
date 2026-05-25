@@ -2,6 +2,7 @@ import { Switch, Route, Router as WouterRouter } from "wouter";
 import { CandidateProvider } from "@/lib/store";
 import { BrainProvider } from "@/lib/brainStore";
 import { PositionStatementProvider } from "@/lib/positionStatementStore";
+import { AdminProvider } from "@/lib/adminStore";
 import Registration from "@/pages/Registration";
 import Phases from "@/pages/Phases";
 import DailyPractice from "@/pages/DailyPractice";
@@ -17,6 +18,8 @@ import AIReviewExport from "@/pages/brain/AIReviewExport";
 import ReviewMode from "@/pages/ReviewMode";
 import DailyMEQMode from "@/pages/DailyMEQMode";
 import MEQProgress from "@/pages/MEQProgress";
+import AdminLogin from "@/pages/AdminLogin";
+import AdminDashboard from "@/pages/AdminDashboard";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -37,6 +40,8 @@ function Router() {
       <Route path="/brain/ps/add" component={PSBrainAdd} />
       <Route path="/brain/ps/import" component={PSBrainImport} />
       <Route path="/brain/ai-export" component={AIReviewExport} />
+      <Route path="/admin/login" component={AdminLogin} />
+      <Route path="/admin" component={AdminDashboard} />
       <Route component={NotFound} />
     </Switch>
   );
@@ -44,15 +49,17 @@ function Router() {
 
 function App() {
   return (
-    <CandidateProvider>
-      <BrainProvider>
-        <PositionStatementProvider>
-          <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
-            <Router />
-          </WouterRouter>
-        </PositionStatementProvider>
-      </BrainProvider>
-    </CandidateProvider>
+    <AdminProvider>
+      <CandidateProvider>
+        <BrainProvider>
+          <PositionStatementProvider>
+            <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
+              <Router />
+            </WouterRouter>
+          </PositionStatementProvider>
+        </BrainProvider>
+      </CandidateProvider>
+    </AdminProvider>
   );
 }
 
