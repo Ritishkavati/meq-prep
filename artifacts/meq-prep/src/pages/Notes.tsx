@@ -782,32 +782,7 @@ export default function Notes() {
     return () => observers.forEach((o) => o.disconnect());
   }, [expandedSections]);
 
-  // ── Dashboard early return (after all hooks) ────────────────────────────
-
-  if (!selectedNoteId) {
-    return (
-      <NotesDashboard
-        candidateId={candidateId}
-        onSelectNote={setSelectedNoteId}
-        onBack={() => setLocation("/phases")}
-      />
-    );
-  }
-
-  // ── Computed stats ──────────────────────────────────────────────────────
-
-  const completedCount = note.sections.filter(
-    (s) => progress[sectionKey(note.id, s.id)]?.completed,
-  ).length;
-  const totalSections = note.sections.length;
-  const progressPct = Math.round((completedCount / totalSections) * 100);
-  const notesCount = note.sections.filter((s) => {
-    const k = sectionKey(note.id, s.id);
-    return personalNotes[k]?.content?.trim();
-  }).length;
-  const highlightsCount = Object.values(highlights).filter(Boolean).length;
-
-  // ── Handlers ────────────────────────────────────────────────────────────
+  // ── Handlers (must be before any early return — Rules of Hooks) ─────────
 
   const handleToggleExpand = useCallback((sectionId: string) => {
     setExpandedSections((prev) => {
@@ -842,7 +817,6 @@ export default function Notes() {
       noteSaveTimers.current[sectionId] = setTimeout(() => {
         setPersonalNotesState((prev) => savePersonalNote(candidateId, sk, content, prev));
       }, 500);
-      // Optimistic update for UI
       setPersonalNotesState((prev) => ({
         ...prev,
         [sk]: { content, updatedAt: new Date().toISOString() },
@@ -869,8 +843,6 @@ export default function Notes() {
     [handleJumpToSection],
   );
 
-  // ── Anti-copy handlers ──────────────────────────────────────────────────
-
   const preventCopy = useCallback((e: React.ClipboardEvent) => {
     const target = e.target as HTMLElement;
     if (target.tagName === "TEXTAREA" || target.tagName === "INPUT") return;
@@ -882,6 +854,31 @@ export default function Notes() {
     if (target.tagName === "TEXTAREA" || target.tagName === "INPUT") return;
     e.preventDefault();
   }, []);
+
+  // ── Dashboard early return (now truly after all hooks) ───────────────────
+
+  if (!selectedNoteId) {
+    return (
+      <NotesDashboard
+        candidateId={candidateId}
+        onSelectNote={setSelectedNoteId}
+        onBack={() => setLocation("/phases")}
+      />
+    );
+  }
+
+  // ── Computed stats ──────────────────────────────────────────────────────
+
+  const completedCount = note.sections.filter(
+    (s) => progress[sectionKey(note.id, s.id)]?.completed,
+  ).length;
+  const totalSections = note.sections.length;
+  const progressPct = Math.round((completedCount / totalSections) * 100);
+  const notesCount = note.sections.filter((s) => {
+    const k = sectionKey(note.id, s.id);
+    return personalNotes[k]?.content?.trim();
+  }).length;
+  const highlightsCount = Object.values(highlights).filter(Boolean).length;
 
   // ── Left nav ────────────────────────────────────────────────────────────
 
