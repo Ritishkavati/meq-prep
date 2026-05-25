@@ -51,9 +51,9 @@ interface AdminStats {
   avgScore: number | null;
   candidates: Candidate[];
   recentAttempts: RecentAttempt[];
-  questionStats: QuestionStat[];
-  scoreDistribution: Array<{ label: string; count: number }>;
-  dailyActivity: Array<{ date: string; count: number }>;
+  questionStats?: QuestionStat[];
+  scoreDistribution?: Array<{ label: string; count: number }>;
+  dailyActivity?: Array<{ date: string; count: number }>;
 }
 
 // ── Helpers ──────────────────────────────────────────────────────────────────
@@ -455,6 +455,10 @@ function MetricsTab({
     return <div className="text-sm text-muted-foreground py-10 text-center">Loading…</div>;
   }
 
+  const dailyActivity = stats?.dailyActivity ?? [];
+  const scoreDistribution = stats?.scoreDistribution ?? [];
+  const questionStats = stats?.questionStats ?? [];
+
   if (!stats?.totalAttempts) {
     return (
       <div className="bg-card rounded-2xl border border-card-border p-10 text-center">
@@ -463,8 +467,6 @@ function MetricsTab({
       </div>
     );
   }
-
-  const activityMax = Math.max(...stats.dailyActivity.map((d) => d.count), 1);
 
   return (
     <div className="space-y-5">
@@ -476,7 +478,7 @@ function MetricsTab({
         </div>
         <div className="h-36">
           <ResponsiveContainer width="100%" height="100%">
-            <BarChart data={stats.dailyActivity} margin={{ top: 4, right: 4, left: -20, bottom: 0 }}>
+            <BarChart data={dailyActivity} margin={{ top: 4, right: 4, left: -20, bottom: 0 }}>
               <XAxis
                 dataKey="date"
                 tickFormatter={fmtDate}
@@ -508,12 +510,12 @@ function MetricsTab({
           <TrendingUp className="w-4 h-4 text-emerald-500" />
           <h3 className="text-sm font-semibold text-primary">Score Distribution</h3>
         </div>
-        {stats.scoreDistribution.every((b) => b.count === 0) ? (
+        {scoreDistribution.every((b) => b.count === 0) ? (
           <p className="text-xs text-muted-foreground py-4 text-center">No scored attempts yet</p>
         ) : (
           <div className="h-36">
             <ResponsiveContainer width="100%" height="100%">
-              <BarChart data={stats.scoreDistribution} margin={{ top: 4, right: 4, left: -20, bottom: 0 }}>
+              <BarChart data={scoreDistribution} margin={{ top: 4, right: 4, left: -20, bottom: 0 }}>
                 <XAxis
                   dataKey="label"
                   tick={{ fontSize: 9, fill: "#94a3b8" }}
@@ -531,7 +533,7 @@ function MetricsTab({
                   contentStyle={{ fontSize: 11, borderRadius: 8 }}
                 />
                 <Bar dataKey="count" radius={[3, 3, 0, 0]}>
-                  {stats.scoreDistribution.map((_, i) => (
+                  {scoreDistribution.map((_, i) => (
                     <Cell key={i} fill={DIST_COLOURS[i % DIST_COLOURS.length]} />
                   ))}
                 </Bar>
@@ -542,7 +544,7 @@ function MetricsTab({
       </div>
 
       {/* Question performance table */}
-      {stats.questionStats.length > 0 && (
+      {questionStats.length > 0 && (
         <div className="bg-card rounded-2xl shadow-sm border border-card-border overflow-hidden">
           <div className="flex items-center gap-2 p-4 border-b border-card-border">
             <BookOpen className="w-4 h-4 text-violet-500" />
@@ -560,13 +562,13 @@ function MetricsTab({
                 </tr>
               </thead>
               <tbody className="divide-y divide-card-border">
-                {stats.questionStats.map((q) => {
+                {questionStats.map((q) => {
                   const barPct = q.avgScore ?? 0;
                   const barColour =
                     barPct >= 70 ? "bg-emerald-400" :
                     barPct >= 50 ? "bg-amber-400" :
                                   "bg-red-400";
-                  const maxCount = Math.max(...stats.questionStats.map((x) => x.count), 1);
+                  const maxCount = Math.max(...questionStats.map((x) => x.count), 1);
                   return (
                     <tr key={q.questionId} className="hover:bg-muted/20">
                       <td className="px-4 py-2 font-mono text-primary">{q.questionId}</td>
