@@ -54,14 +54,14 @@ export default function Registration() {
         </form>
       </div>
 
-      <div className="text-center text-xs text-muted-foreground pb-8 space-y-2">
-        <p>Educational preparation tool only. Not an official RANZCP product.</p>
+      <div className="text-center text-xs text-muted-foreground pb-8">
+        <p className="mb-3">Educational preparation tool only. Not an official RANZCP product.</p>
         <button
           onClick={() => setLocation("/admin/login")}
-          className="inline-flex items-center gap-1 text-xs text-muted-foreground/50 hover:text-muted-foreground transition-colors"
+          className="inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-lg border border-input bg-card text-muted-foreground hover:text-primary hover:border-primary transition-colors"
         >
-          <ShieldCheck className="w-3 h-3" />
-          Admin
+          <ShieldCheck className="w-3.5 h-3.5" />
+          Admin Login
         </button>
       </div>
     </div>
