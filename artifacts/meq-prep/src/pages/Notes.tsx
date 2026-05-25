@@ -17,8 +17,8 @@ import {
   BarChart3,
 } from "lucide-react";
 import { useCandidate } from "@/lib/store";
-import { DISCHARGE_PLAN } from "@/lib/notesData";
-import type { NoteSection, ColorTag } from "@/lib/notesData";
+import { ALL_NOTES } from "@/lib/notesData";
+import type { Note, NoteSection, ColorTag } from "@/lib/notesData";
 import {
   getProgress,
   getPersonalNotes,
@@ -368,7 +368,7 @@ function SectionCard({
                 <KeyPointRow
                   key={idx}
                   point={point}
-                  isHighlighted={!!highlights[highlightKey(section.id.replace("s", "discharge_plan_s"), section.id, idx)] || !!highlights[highlightKey("discharge_plan", section.id, idx)]}
+                  isHighlighted={!!highlights[highlightKey(noteId, section.id, idx)]}
                   onToggle={() => onToggleHighlight(idx)}
                 />
               ))}
@@ -376,15 +376,17 @@ function SectionCard({
           </div>
 
           {/* MEQ application box */}
-          <div className="mb-4 bg-green-50 border border-green-200 rounded-xl p-4">
-            <div className="flex items-center gap-1.5 mb-2">
-              <FileText className="w-3.5 h-3.5 text-green-600" />
-              <span className="text-xs font-bold text-green-700 uppercase tracking-wide">
-                Use This in MEQs
-              </span>
+          {section.meqApplication && (
+            <div className="mb-4 bg-green-50 border border-green-200 rounded-xl p-4">
+              <div className="flex items-center gap-1.5 mb-2">
+                <FileText className="w-3.5 h-3.5 text-green-600" />
+                <span className="text-xs font-bold text-green-700 uppercase tracking-wide">
+                  Use This in MEQs
+                </span>
+              </div>
+              <p className="text-sm text-green-800 leading-relaxed">{section.meqApplication}</p>
             </div>
-            <p className="text-sm text-green-800 leading-relaxed">{section.meqApplication}</p>
-          </div>
+          )}
 
           {/* Common trap */}
           {section.commonTrap && (
@@ -540,13 +542,172 @@ function MyNotesPanel({
   );
 }
 
+// ── Per-note stats helper ─────────────────────────────────────────────────────
+
+function getNoteStats(candidateId: string, note: Note) {
+  const progress = getProgress(candidateId);
+  const personalNotes = getPersonalNotes(candidateId);
+  const highlights = getHighlights(candidateId);
+  const completedCount = note.sections.filter(
+    (s) => progress[sectionKey(note.id, s.id)]?.completed,
+  ).length;
+  const notesCount = note.sections.filter((s) =>
+    personalNotes[sectionKey(note.id, s.id)]?.content?.trim(),
+  ).length;
+  const highlightsCount = note.sections.reduce((acc, s) => {
+    return (
+      acc +
+      s.keyPoints.filter((_, idx) => highlights[highlightKey(note.id, s.id, idx)]).length
+    );
+  }, 0);
+  return {
+    completedCount,
+    notesCount,
+    highlightsCount,
+    totalSections: note.sections.length,
+    progressPct: Math.round((completedCount / note.sections.length) * 100),
+  };
+}
+
+// ── Note dashboard card ───────────────────────────────────────────────────────
+
+function NoteCard({
+  note,
+  candidateId,
+  onClick,
+}: {
+  note: Note;
+  candidateId: string;
+  onClick: () => void;
+}) {
+  const { completedCount, notesCount, highlightsCount, totalSections, progressPct } =
+    getNoteStats(candidateId, note);
+  const accent = COLOR[note.sections[0].colorTag];
+
+  return (
+    <button
+      onClick={onClick}
+      className="w-full text-left bg-white rounded-2xl border border-slate-200 shadow-sm p-5 hover:shadow-md hover:border-accent transition-all group"
+    >
+      <div className="flex items-start gap-4">
+        <div
+          className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 ${accent.headerBg} ${accent.headerBorder} border`}
+        >
+          <BookOpen className={`w-5 h-5 ${accent.heading}`} />
+        </div>
+        <div className="flex-1 min-w-0">
+          <h3 className="text-base font-bold text-primary leading-snug mb-1 group-hover:text-accent transition-colors">
+            {note.title}
+          </h3>
+          <p className="text-xs text-slate-500 mb-3 leading-relaxed">{note.description}</p>
+          <div className="flex flex-wrap gap-2 mb-3">
+            {note.category.split(" / ").map((cat) => (
+              <span
+                key={cat}
+                className="text-[10px] font-semibold bg-slate-100 text-slate-600 px-2 py-0.5 rounded-full"
+              >
+                {cat}
+              </span>
+            ))}
+          </div>
+          <div className="flex items-center gap-4">
+            {/* Progress bar */}
+            <div className="flex items-center gap-1.5 flex-1">
+              <div className="flex-1 h-1.5 bg-slate-100 rounded-full overflow-hidden">
+                <div
+                  className="h-full bg-accent rounded-full transition-all"
+                  style={{ width: `${progressPct}%` }}
+                />
+              </div>
+              <span className="text-[10px] text-slate-500 shrink-0">{progressPct}%</span>
+            </div>
+            <span className="text-[10px] text-slate-400">
+              {completedCount}/{totalSections} sections
+            </span>
+            {notesCount > 0 && (
+              <span className="text-[10px] text-blue-400 flex items-center gap-0.5">
+                <PenLine className="w-3 h-3" /> {notesCount}
+              </span>
+            )}
+            {highlightsCount > 0 && (
+              <span className="text-[10px] text-yellow-500 flex items-center gap-0.5">
+                <Star className="w-3 h-3" fill="currentColor" /> {highlightsCount}
+              </span>
+            )}
+          </div>
+        </div>
+        <ChevronRight className="w-4 h-4 text-slate-300 group-hover:text-accent mt-1 shrink-0 transition-colors" />
+      </div>
+    </button>
+  );
+}
+
+// ── Notes dashboard ───────────────────────────────────────────────────────────
+
+function NotesDashboard({
+  candidateId,
+  onSelectNote,
+  onBack,
+}: {
+  candidateId: string;
+  onSelectNote: (noteId: string) => void;
+  onBack: () => void;
+}) {
+  return (
+    <div className="min-h-screen bg-slate-50">
+      <div className="sticky top-0 z-30 bg-primary text-white shadow-md">
+        <div className="px-4 py-3 flex items-center gap-3">
+          <button
+            onClick={onBack}
+            className="p-1.5 rounded-lg hover:bg-white/20 transition-colors shrink-0"
+          >
+            <ArrowLeft className="w-4 h-4" />
+          </button>
+          <div>
+            <h1 className="text-sm font-bold leading-tight">Study Notes</h1>
+            <p className="text-[11px] text-white/60">RANZCP MEQ Preparation</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="max-w-2xl mx-auto px-4 py-8">
+        <div className="mb-6">
+          <h2 className="text-2xl font-serif font-bold text-primary mb-1">Study Notes</h2>
+          <p className="text-sm text-muted-foreground">
+            Select a note to study. Your progress, highlights and personal notes are saved
+            automatically per candidate.
+          </p>
+        </div>
+
+        <div className="space-y-4">
+          {ALL_NOTES.map((note) => (
+            <NoteCard
+              key={note.id}
+              note={note}
+              candidateId={candidateId}
+              onClick={() => onSelectNote(note.id)}
+            />
+          ))}
+        </div>
+
+        <div className="mt-10 text-center text-xs text-slate-300">
+          {candidateId} — Educational preparation tool only
+        </div>
+      </div>
+    </div>
+  );
+}
+
 // ── Main page ────────────────────────────────────────────────────────────────
 
 export default function Notes() {
   const { candidateNumber } = useCandidate();
   const [, setLocation] = useLocation();
-  const note = DISCHARGE_PLAN;
   const candidateId = candidateNumber || "unknown";
+
+  // Which note is open (null = dashboard)
+  const [selectedNoteId, setSelectedNoteId] = useState<string | null>(null);
+  const note = ALL_NOTES.find((n) => n.id === selectedNoteId) ?? ALL_NOTES[0];
 
   const [progress, setProgressState] = useState<ProgressMap>(() =>
     getProgress(candidateId),
@@ -574,10 +735,27 @@ export default function Notes() {
     if (!candidateNumber) setLocation("/");
   }, [candidateNumber, setLocation]);
 
+  // Reset viewer state when switching notes
+  useEffect(() => {
+    if (selectedNoteId) {
+      const n = ALL_NOTES.find((nn) => nn.id === selectedNoteId);
+      if (n) {
+        setExpandedSections(new Set([n.sections[0].id]));
+        setActiveSectionId(n.sections[0].id);
+        setShowMobileNav(false);
+        setShowMobileNotes(false);
+        // Re-read localStorage for fresh state
+        setProgressState(getProgress(candidateId));
+        setPersonalNotesState(getPersonalNotes(candidateId));
+        setHighlightsState(getHighlights(candidateId));
+      }
+    }
+  }, [selectedNoteId, candidateId]);
+
   // Save last viewed
   useEffect(() => {
-    saveLastViewed(candidateId, note.id);
-  }, [candidateId, note.id]);
+    if (selectedNoteId) saveLastViewed(candidateId, note.id);
+  }, [candidateId, note.id, selectedNoteId]);
 
   // Tab blur
   useEffect(() => {
@@ -603,6 +781,18 @@ export default function Notes() {
     });
     return () => observers.forEach((o) => o.disconnect());
   }, [expandedSections]);
+
+  // ── Dashboard early return (after all hooks) ────────────────────────────
+
+  if (!selectedNoteId) {
+    return (
+      <NotesDashboard
+        candidateId={candidateId}
+        onSelectNote={setSelectedNoteId}
+        onBack={() => setLocation("/phases")}
+      />
+    );
+  }
 
   // ── Computed stats ──────────────────────────────────────────────────────
 
@@ -773,7 +963,7 @@ export default function Notes() {
         <div className="sticky top-0 z-30 bg-primary text-white shadow-md">
           <div className="px-4 py-3 flex items-center gap-3">
             <button
-              onClick={() => setLocation("/phases")}
+              onClick={() => setSelectedNoteId(null)}
               className="p-1.5 rounded-lg hover:bg-white/20 transition-colors shrink-0"
             >
               <ArrowLeft className="w-4 h-4" />
@@ -947,8 +1137,8 @@ export default function Notes() {
                   All sections completed
                 </h3>
                 <p className="text-sm text-green-700">
-                  You have worked through all 21 sections of this note. Review your highlights and
-                  personal notes to consolidate your learning.
+                  You have worked through all {totalSections} sections of this note. Review your
+                  highlights and personal notes to consolidate your learning.
                 </p>
               </div>
             )}
