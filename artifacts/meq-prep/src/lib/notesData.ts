@@ -1265,4 +1265,450 @@ export const COMPLAINT_PROCESS: Note = {
   ],
 };
 
-export const ALL_NOTES: Note[] = [DISCHARGE_PLAN, CONFLICT_MANAGEMENT, COMPLAINT_PROCESS];
+export const INCIDENT_MANAGEMENT: Note = {
+  id: "incident_management",
+  title: "Incident Management, Adverse Events and Near Misses in Psychiatry",
+  category: "Clinical Governance / Patient Safety / Leadership",
+  description:
+    "A consultant-level framework for managing psychiatric incidents, adverse events and near misses, including inpatient suicide or near-miss, ligature events, absconding, assault, medication error, missed observations, delayed review, handover failure, death after discharge, restraint or seclusion injury and child-safety failure.",
+  sections: [
+    {
+      id: "s01",
+      order: 1,
+      title: "Core Principle",
+      colorTag: "blue",
+      explanation:
+        "An incident or near miss is not simply 'something bad happened.' In psychiatry, it tests whether the consultant can move from clinical reaction to governance response. A good consultant response does four things at the same time: protects people immediately, preserves facts, communicates transparently, and improves the system.",
+      keyPoints: [
+        "First priority is current safety, not assigning blame.",
+        "Treat serious incidents as both clinical events and governance events.",
+        "Preserve records early — before memories fade or documents are altered.",
+        "Support patient, family, other patients and staff.",
+        "Use just culture rather than blame culture.",
+        "Close the loop with action and re-audit — not just an incident form.",
+      ],
+      meqApplication:
+        "In incident stems, do not answer only 'assess the patient.' Add governance: incident notification, open disclosure, documentation, RCA or M&M, action plan and re-audit.",
+      commonTrap:
+        "Only completing an incident form without managing current safety and system learning.",
+    },
+    {
+      id: "s02",
+      order: 2,
+      title: "What Counts as an Incident, Adverse Event or Near Miss",
+      colorTag: "amber",
+      explanation:
+        "These three categories have different definitions but all require a response. Near misses matter because they reveal system vulnerability before major harm occurs.",
+      keyPoints: [
+        "INCIDENT: an event that affected, or could have affected, patient safety, staff safety, service quality or public safety. Examples: ligature attempt, absconding, assault, missed observations, wrong medication, delayed review, discharge without follow-up, restraint injury, privacy breach, child-safety failure.",
+        "ADVERSE EVENT: an incident where harm actually occurred. Examples: wrong medication caused hypotension and fall, seclusion caused injury, patient attempted suicide after missed observation, lithium toxicity after unclear handover, patient died after discharge without assertive follow-up.",
+        "NEAR MISS: an event that could have caused harm but did not because of chance, early detection or rescue. Examples: ligature found before loss of consciousness, wrong medication drawn up but not administered, patient absconded but returned safely.",
+        "Near misses matter because they reveal system vulnerability before major harm occurs — they should be reported and reviewed with the same seriousness as adverse events.",
+      ],
+      commonTrap:
+        "Not reporting near misses because 'no harm occurred.' Near misses are governance events.",
+    },
+    {
+      id: "s03",
+      order: 3,
+      title: "Immediate Safety Response",
+      colorTag: "red",
+      explanation:
+        "The first consultant question is: 'Who is unsafe now, and what must happen in the next 5 to 30 minutes?' Governance review comes after the clinical situation is stabilised.",
+      keyPoints: [
+        "AFFECTED PATIENT: review airway/breathing/circulation and physical injuries if relevant, arrange urgent medical review or transfer if needed, review mental state and risk, increase observations if needed, remove immediate means of harm, review leave and legal status.",
+        "OTHER PATIENTS: check who witnessed the event, move distressed patients away from the scene, assess whether others are triggered or at risk, prevent rumours spreading, provide group or individual support if needed.",
+        "STAFF: ensure staff are physically safe, remove from immediate danger, arrange debrief after containment, check for injury/shock/guilt/distress, offer supervision, EAP or time out where needed.",
+        "FAMILY OR CARERS: identify next of kin or nominated contact, consider whether urgent contact is required, prepare for family meeting if serious harm or death occurred, communicate honestly and compassionately within confidentiality limits.",
+      ],
+      commonTrap:
+        "Starting governance review before stabilising the immediate clinical situation.",
+    },
+    {
+      id: "s04",
+      order: 4,
+      title: "Preserve Facts Early",
+      colorTag: "purple",
+      explanation:
+        "Do not let the team reconstruct the story loosely from memory days later. Fact preservation is a governance responsibility, not a bureaucratic one.",
+      keyPoints: [
+        "PRESERVE: clinical notes, risk assessments, observation charts, nursing notes, medication chart, seclusion/restraint records, leave forms, handover notes, phone-call records, incident report, discharge summary, CCTV if available under policy, staff roster and staffing levels, patient belongings or ligature item if relevant, emails or messages, collateral from family/GP/police/ambulance/NGO.",
+        "DO NOT: alter notes retrospectively, delete records, 'tidy up' documentation, blame individuals in the chart, ask staff to coordinate stories, delay reporting because 'no harm occurred.'",
+        "If clarification is needed, add a clearly dated addendum — do not overwrite the original entry.",
+        "Records that are altered, deleted or missing after a serious incident become a governance and legal problem independent of the original event.",
+      ],
+      commonTrap:
+        "Retrospective rewriting or defensive documentation after an incident.",
+    },
+    {
+      id: "s05",
+      order: 5,
+      title: "Incident Notification and Escalation",
+      colorTag: "purple",
+      explanation:
+        "Incidents should be reported through the local incident-management system. Serious events need senior escalation. In MEQs, naming who you notify and why demonstrates clinical governance thinking.",
+      keyPoints: [
+        "NOTIFY DEPENDING ON SEVERITY: treating consultant, nurse unit manager, clinical director, service manager, hospital executive if serious, risk/governance unit, complaints unit if complaint likely, privacy officer if information breach, pharmacy if medication event, training director or supervisor if registrar involved.",
+        "ALSO CONSIDER: medical indemnity or legal team if serious harm, death or regulatory risk; police, coroner or child protection where required.",
+        "Serious incident = do not manage informally within the team to avoid embarrassment or blame. Informal management of serious incidents is itself a governance failure.",
+        "The incident-management system creates a formal record that drives review, action and re-audit.",
+      ],
+      meqApplication:
+        "State clearly who you would notify and why. This shows clinical governance thinking — it is consistently rewarded in MEQ scoring.",
+      commonTrap:
+        "Managing a serious incident informally within the team because everyone is embarrassed or afraid of blame.",
+    },
+    {
+      id: "s06",
+      order: 6,
+      title: "Support for Patient, Family and Staff",
+      colorTag: "teal",
+      explanation:
+        "Incident management is not only an investigation. It is also a containment process. Distressed staff make errors, withdraw from care, become defensive or document poorly — supporting them improves patient safety.",
+      keyPoints: [
+        "PATIENT SUPPORT: provide immediate physical and psychiatric care, explain what is happening, avoid blaming language, offer support person or advocate, reassess risk and care plan, continue care despite complaint or incident review.",
+        "FAMILY SUPPORT: offer private meeting, acknowledge distress, allow questions/anger/grief, give facts known so far, avoid speculation, explain next steps, offer support services, arrange follow-up meeting.",
+        "STAFF SUPPORT: immediate debrief once safe, check injuries and psychological distress, support junior staff and registrars, avoid public blame, offer supervision or EAP, clarify expectations for statements and documentation, encourage indemnity advice if formal process.",
+        "KEY PRINCIPLE: staff support is not avoiding accountability. Distressed staff make errors, withdraw from care, become defensive or document poorly. Supporting them improves safety.",
+      ],
+      commonTrap:
+        "Only supporting the patient/family and forgetting staff, or only protecting staff and forgetting the patient/family.",
+    },
+    {
+      id: "s07",
+      order: 7,
+      title: "Open Disclosure",
+      colorTag: "green",
+      explanation:
+        "Open disclosure is required when healthcare did not go to plan and harm occurred or may have occurred. It is not the same as admitting legal liability. It is a structured, transparent and compassionate discussion about what happened, what is known, what is not yet known and what will happen next.",
+      keyPoints: [
+        "OPEN DISCLOSURE SHOULD INCLUDE: acknowledgement that something happened, apology or expression of regret, facts known at the time, what is still being investigated, consequences for the patient, immediate treatment and support, how the review will occur, how the patient or family will be updated, what will be done to reduce recurrence.",
+        "DO NOT: say nothing until legal clears it when immediate acknowledgement is needed, speculate, blame one staff member prematurely, promise outcomes before investigation, disappear after the first meeting.",
+        "Open disclosure may happen in stages — early disclosure can acknowledge distress and known facts, later disclosure can address findings and system actions.",
+        "Open disclosure is not a legal admission of liability. You can apologise for distress and acknowledge harm without making legal admissions — this is expected and appropriate.",
+      ],
+      meqApplication:
+        "If harm occurred, mention open disclosure, family meeting, factual explanation, apology or expression of regret, ongoing support and review process. These are separate but concurrent with the clinical response.",
+      commonTrap:
+        "Avoiding open disclosure because of legal fear, or waiting until the entire investigation is complete before acknowledging distress.",
+    },
+    {
+      id: "s08",
+      order: 8,
+      title: "Factual Documentation After an Incident",
+      colorTag: "blue",
+      explanation:
+        "Documentation must be factual, contemporaneous and defensible. Write as if the note will be read by a coroner, Ahpra investigator, patient, family, clinical director, or court.",
+      keyPoints: [
+        "DOCUMENT: what happened, time and location, who found the patient/event, patient's physical and mental state, immediate actions taken, medical review, family/carer communication, staff informed, incident notification, legal and leave status, updated risk plan, follow-up plan, open disclosure plan if relevant.",
+        "AVOID: 'Nurse failed to observe' before review, 'Patient manipulative', 'Family difficult', 'Registrar negligent', retrospective rewriting, speculation about motives, defensive commentary.",
+        "GOOD EXAMPLE: 'At 14:20 the patient was found in the ensuite with a bedsheet tied to the shower rail. Nursing staff removed the ligature and commenced immediate assessment. Medical review was arranged. The patient was distressed and reported ongoing suicidal intent. Observations were increased to constant visual observation. Incident report completed and clinical director notified.'",
+        "A note that reads as defensive or blaming is a governance problem in itself — it signals that documentation was used to protect the author rather than to record clinical facts.",
+      ],
+      commonTrap:
+        "Using documentation to defend yourself rather than record facts and clinical reasoning.",
+    },
+    {
+      id: "s09",
+      order: 9,
+      title: "Morbidity and Mortality Meeting or Case Conference",
+      colorTag: "teal",
+      explanation:
+        "A serious incident should usually trigger a structured case review, M&M meeting, clinical review or RCA depending on severity. The purpose is system learning, not blame allocation.",
+      keyPoints: [
+        "PURPOSE: understand what happened, identify clinical and system contributors, support learning, avoid recurrence, ensure accountability without scapegoating.",
+        "REVIEW SHOULD INCLUDE: timeline, index risk formulation, observation decisions, staffing level, handover, escalation, medication, physical environment, policy adherence, documentation, communication with family/GP/community team, supervision, discharge or leave decisions, cultural/family/trauma factors.",
+        "SHOULD NOT BECOME: public humiliation of registrar or nurse, defensive meeting, blame allocation exercise, generic 'we need better communication' conclusion without action.",
+        "The consultant's role in M&M is to model just culture — not to protect people from accountability, and not to scapegoat them.",
+      ],
+      commonTrap:
+        "Holding a meeting that produces no measurable action — learning without action is incomplete governance.",
+    },
+    {
+      id: "s10",
+      order: 10,
+      title: "Root Cause Analysis",
+      colorTag: "purple",
+      explanation:
+        "Root cause analysis is used for serious, high-risk or high-impact events. It asks: 'How did the system allow this to happen?' It is focused on system contributors, not the last person in the chain.",
+      keyPoints: [
+        "RCA PRINCIPLES: thorough, fair, efficient, independent where appropriate, focused on system contributors not scapegoating.",
+        "RCA TEAM may include: clinical risk manager, consultant psychiatrist or clinical director, nursing representative, pharmacist if medication issue, consumer/carer representative where appropriate, staff member indirectly involved, service manager, quality/safety officer.",
+        "RCA STEPS: verify the incident → commission RCA team → map timeline → identify critical events → analyse causes and contributing factors → identify root causes → support findings with evidence → generate solutions → provide recommendations.",
+        "COMMON ROOT CAUSES IN PSYCHIATRY: unclear observation policy, inadequate ligature audit, poor environmental safety, poor handover, delayed escalation, unclear consultant responsibility, registrar working beyond competence, inadequate supervision, bed pressure, staff shortage, poor medication reconciliation, poor discharge summary, no GP handover, no family/carer contact, no child-safety pathway, policy exists but not workable.",
+      ],
+      commonTrap:
+        "Calling something an RCA but only blaming the last person involved — that is not RCA, it is scapegoating.",
+    },
+    {
+      id: "s11",
+      order: 11,
+      title: "Just Culture and Avoiding Blame Culture",
+      colorTag: "green",
+      explanation:
+        "A just culture is not 'no accountability.' It means fair accountability — distinguishing human error from at-risk behaviour from reckless behaviour, and examining the system that allowed each to occur.",
+      keyPoints: [
+        "JUST CULTURE ASKS: was this human error, at-risk behaviour, or reckless behaviour? Was the system unsafe? Was the person trained? Was the policy clear? Was supervision available? Were staffing levels safe? Was there pressure to take shortcuts? Would another reasonable clinician have acted similarly?",
+        "AFTER AN INCIDENT, teams often polarise: nurses blame doctors, doctors blame nurses, staff blame bed pressure, managers blame documentation, families blame the whole service, registrars blame themselves.",
+        "THE CONSULTANT MUST HOLD THE MIDDLE GROUND: support people, identify accountability, fix the system.",
+        "Just culture accountability: console human error, coach at-risk behaviour, consider disciplinary action for reckless behaviour — but always examine the system that allowed each.",
+      ],
+      commonTrap:
+        "Thinking 'no blame' means no one is accountable — just culture requires both support and proportionate accountability.",
+    },
+    {
+      id: "s12",
+      order: 12,
+      title: "Action Plan After Incident Review",
+      colorTag: "green",
+      explanation:
+        "A review without action is weak governance. Every recommendation needs a named owner, a timeframe and a re-audit date.",
+      keyPoints: [
+        "ACTION PLAN SHOULD INCLUDE: what will change, who is responsible, timeframe, resources required, how staff will be trained, how compliance will be measured, how outcome will be reviewed, how patient/family feedback is incorporated, when re-audit will occur.",
+        "MISSED OBSERVATION INCIDENT: clarify observation policy, train staff, implement escalation prompt, audit observation charts weekly for 3 months, review staffing triggers, require consultant sign-off for reducing high-level observations.",
+        "MEDICATION ERROR: medication reconciliation on admission, high-risk medication alert, pharmacist review, independent double-check, prescriber education, eMAR alert, open disclosure training, re-audit.",
+        "DEATH AFTER DISCHARGE: review discharge decision, follow-up timeframe, safety plan quality, GP communication, family/carer involvement, missed-appointment policy, implement high-risk discharge checklist.",
+      ],
+      commonTrap:
+        "Recommending 'staff education' only, without process change, named ownership and re-audit.",
+    },
+    {
+      id: "s13",
+      order: 13,
+      title: "Re-Audit and Closing the Loop",
+      colorTag: "green",
+      explanation:
+        "Re-audit proves whether the system actually changed. Without re-audit, recommendations remain aspirational. Closing the loop means feeding the result back to staff, governance and where appropriate the patient or family.",
+      keyPoints: [
+        "RE-AUDIT SHOULD ASK: did compliance improve, did incidents reduce, did documentation improve, did staff understand the new process, did patient/family experience improve, are changes sustainable, did we create new problems?",
+        "EXAMPLES: re-audit observation charts after ligature near-miss; re-audit lithium monitoring after toxicity; re-audit seclusion documentation after restraint injury; re-audit discharge summaries after post-discharge death; re-audit handover after wrong-patient medication error.",
+        "CLOSING THE LOOP MEANS: feedback to staff, feedback to patient/family where appropriate, governance committee review, action plan completed, repeat measurement, ongoing monitoring.",
+        "Re-audit is the difference between governance that improves safety and governance that produces paperwork.",
+      ],
+      commonTrap:
+        "Writing recommendations but never checking if they were implemented — incomplete governance loop.",
+    },
+    {
+      id: "s14",
+      order: 14,
+      title: "Inpatient Suicide or Near-Miss",
+      colorTag: "red",
+      explanation:
+        "Inpatient suicide or near-miss is one of the most serious governance events in psychiatry. The review must examine both clinical decision-making and system factors — not only whether the patient denied suicidal ideation.",
+      keyPoints: [
+        "EXAMPLES: hanging or ligature attempt, overdose with ward medication, jumping attempt, self-strangulation, severe cutting, concealed means.",
+        "IMMEDIATE RESPONSE: emergency medical care, remove means, increase observation, reassess mental state and legal status, notify consultant/NUM/clinical director, preserve scene/items if serious, support witnesses, inform family as appropriate, complete incident report, consider open disclosure, trigger RCA or M&M.",
+        "REVIEW SHOULD EXAMINE: risk formulation, observation level, room and environment, belongings search, ligature audit, leave status, medication access, staffing, handover, patient engagement, escalation when risk changed.",
+        "Key governance signal: Was the environment ligature-safe? Was observation adequate? Was known risk communicated across handover? These are system questions, not personal blame questions.",
+      ],
+      commonTrap:
+        "Focusing only on whether the patient denied suicidal ideation before the event — ignoring environment, observation, handover and system factors.",
+    },
+    {
+      id: "s15",
+      order: 15,
+      title: "Ligature Event",
+      colorTag: "red",
+      explanation:
+        "A ligature event requires both an urgent clinical response and an environmental governance response. The physical environment is a clinical governance responsibility.",
+      keyPoints: [
+        "IMMEDIATE RESPONSE: remove ligature safely, arrange medical assessment for airway or neck injury, assess consciousness and neurological signs, review mental state and suicide intent, remove potential ligature points/items, review observation level, document object/location/time, complete incident report.",
+        "SYSTEM REVIEW: environmental ligature audit, room allocation, observation quality, staff response time, whether known risk was communicated, whether policy was followed.",
+        "A ligature event always requires an environmental audit — not only review of the patient's clinical risk.",
+        "Ligature-safe environments are a governance responsibility, not only a facilities management task.",
+      ],
+      meqApplication:
+        "Mention both clinical care and environmental safety review — examiners look for both streams.",
+      commonTrap:
+        "Treating ligature event only as a patient-risk issue and missing environmental governance.",
+    },
+    {
+      id: "s16",
+      order: 16,
+      title: "Absconding",
+      colorTag: "amber",
+      explanation:
+        "An absconding event requires immediate risk-stratified action. For involuntary patients with serious suicide, violence or vulnerability risk, waiting passively for return is not acceptable.",
+      keyPoints: [
+        "IMMEDIATE RESPONSE: determine legal status and risk, search ward and hospital grounds, notify senior nurse and consultant, contact family/carer if appropriate, contact police if serious risk or legal requirement, document time last seen/clothing/risk/likely destination, update risk plan on return.",
+        "REVIEW: observation or leave status, door/security procedures, patient triggers, staffing, handover, escalation before absconding, whether return plan was clear.",
+        "Risk stratification drives urgency: involuntary patient with active suicide risk requires police notification and active search; voluntary patient with low risk may require monitoring and a return plan.",
+      ],
+      commonTrap:
+        "Waiting passively for the patient to return when there is serious suicide, violence or vulnerability risk.",
+    },
+    {
+      id: "s17",
+      order: 17,
+      title: "Assault on Ward",
+      colorTag: "red",
+      explanation:
+        "Assault on a ward requires managing three simultaneous streams: the alleged perpetrator, the victim, and the ward environment. All three are governance responsibilities.",
+      keyPoints: [
+        "IMMEDIATE RESPONSE: separate people, treat injuries, assess victim and alleged perpetrator, ensure staff and patient safety, consider security or police, notify treating consultants, preserve evidence, complete incident report, support witnesses.",
+        "REVIEW: antecedents, missed warning signs, staffing, de-escalation attempts, observation, ward mix, substance use, environmental triggers, trauma/cultural issues, whether restrictive practice was used appropriately.",
+        "The victim, the alleged perpetrator and the witnesses all need individual clinical responses — not just management of the person who caused the assault.",
+      ],
+      commonTrap:
+        "Only managing the perpetrator and forgetting the victim, witnesses and ward safety environment.",
+    },
+    {
+      id: "s18",
+      order: 18,
+      title: "Medication Error, Wrong Patient or Wrong Medication",
+      colorTag: "red",
+      explanation:
+        "Medication errors require immediate medical assessment, pharmacy involvement, incident reporting, open disclosure if harm occurred, and a system review covering prescribing, dispensing and administration — not just correction of the error.",
+      keyPoints: [
+        "IMMEDIATE RESPONSE: assess patient medically, identify medication/dose/route/time, contact pharmacy/toxicology/medical team if required, monitor vitals and investigations, stop or withhold further doses if needed, inform consultant and pharmacy, preserve medication chart or eMAR, complete incident report, consider open disclosure if harm or potential harm.",
+        "REVIEW: prescribing, dispensing, administration, patient identification, handover, verbal orders, allergy alerts, high-risk medication policy, pharmacy staffing, eMAR design.",
+        "HIGH-YIELD MEDICATIONS in psychiatry MEQs: lithium, clozapine, valproate, benzodiazepines, high-dose antipsychotics, depot medication.",
+        "Medication error review must cover the whole chain — prescriber, pharmacist, nurse, system design — not only the person who administered the dose.",
+      ],
+      commonTrap:
+        "Only correcting the medication and missing monitoring, disclosure, pharmacy review and system fix.",
+    },
+    {
+      id: "s19",
+      order: 19,
+      title: "Missed Observation or Delayed Review",
+      colorTag: "amber",
+      explanation:
+        "Missed observations and delayed reviews are frequent MEQ scenarios. Both require an immediate clinical response and a governance response examining why the gap occurred.",
+      keyPoints: [
+        "MISSED OBSERVATION — IMMEDIATE: check patient safety now, review risk, reinstate appropriate observation level, notify consultant and NUM, document gap honestly, complete incident report if harm or significant near miss.",
+        "MISSED OBSERVATION — REVIEW: why was observation missed, staffing, acuity, handover, policy clarity, observation documentation, staff training, consultant sign-off process for reducing observations.",
+        "DELAYED REVIEW — IMMEDIATE: review patient now, manage any harm, apologise for delay if appropriate, notify senior staff if serious, document timeline.",
+        "DELAYED REVIEW — REVIEW: triage process, escalation rules, registrar workload, consultant availability, ED/ward communication, handover, after-hours cover.",
+      ],
+      commonTrap:
+        "Saying 'review completed now' and ignoring why the delay occurred — the system that allowed the delay is the governance problem.",
+    },
+    {
+      id: "s20",
+      order: 20,
+      title: "Failure of Handover",
+      colorTag: "amber",
+      explanation:
+        "Handover failure is a patient safety event, not an administrative inconvenience. Critical information lost at handover creates discontinuity of risk management that can result in serious harm.",
+      keyPoints: [
+        "IMMEDIATE RESPONSE: clarify current treating responsibility, review patient risk now, correct missing plan, inform receiving team/GP/family if needed, document new plan.",
+        "REVIEW: handover template, discharge summary, high-risk flags, verbal and written handover process, responsibility for follow-up, missed test results, cross-cover arrangements, consultant responsibility.",
+        "EXAMPLES: GP not told lithium monitoring needed, community team not informed of suicide risk, registrar not told patient was on constant observation, wrong team assumes another team is responsible.",
+        "Handover failure is often the final link in a chain of system failures — the review should map the whole chain, not only the person who received the handover.",
+      ],
+      commonTrap:
+        "Treating handover failure as an administrative problem rather than a patient safety event requiring governance review.",
+    },
+    {
+      id: "s21",
+      order: 21,
+      title: "Death After Discharge",
+      colorTag: "red",
+      explanation:
+        "Death after discharge is a high-level governance event. It requires family support, staff support, record preservation, incident review, possible coroner involvement, M&M or RCA, and system action — not only a review of the discharge decision.",
+      keyPoints: [
+        "IMMEDIATE RESPONSE: confirm facts sensitively, inform clinical director and service manager, support family, support staff, preserve records, notify coroner or police according to local policy, complete incident report, seek medicolegal advice, plan team debrief.",
+        "REVIEW: discharge decision, risk formulation, family/carer involvement, medication supply, follow-up timing, missed appointments, GP handover, safety plan quality, bed pressure contribution, documentation.",
+        "Key governance questions: Was the discharge decision defensible? Was the follow-up timely? Was the safety plan specific? Was the GP briefed? Was family involved? Was bed pressure a factor?",
+        "Death after discharge may trigger a mandatory notification, coroner's inquiry, or Ahpra investigation — medicolegal advice should be sought early.",
+      ],
+      meqApplication:
+        "This is a high-level governance event. Mention family support, open disclosure, staff support, record preservation, incident review, possible coroner, M&M or RCA and system action alongside clinical review.",
+      commonTrap:
+        "Jumping straight to defending the discharge decision rather than managing family, staff, records and governance first.",
+    },
+    {
+      id: "s22",
+      order: 22,
+      title: "Restraint or Seclusion Injury",
+      colorTag: "red",
+      explanation:
+        "Restraint and seclusion injury requires a clinical response, a governance response and a service-improvement response. Justifying restraint because the ward was busy or understaffed is never an acceptable answer.",
+      keyPoints: [
+        "IMMEDIATE RESPONSE: stop restrictive practice as soon as safe, arrange medical assessment for injury, review mental state and triggers, inform senior staff, complete incident report, debrief patient and staff, consider complaint or open disclosure if harm occurred.",
+        "REVIEW: was it last resort, were alternatives attempted, was legal and policy process followed, was monitoring adequate, were staff trained, was trauma-informed care used, was restraint prolonged unnecessarily, was there environmental or staffing contribution?",
+        "SERVICE IMPROVEMENT: de-escalation training, restrictive-practice audit, post-incident debrief process, trauma-informed care, environmental changes, consumer/carer feedback, governance review.",
+        "Seclusion and restraint are high-scrutiny interventions — every incident triggers mandatory reporting requirements in most Australian and New Zealand jurisdictions.",
+      ],
+      commonTrap:
+        "Justifying restraint or seclusion because the ward was busy or understaffed — this is not a defence, it is a system failure requiring governance action.",
+    },
+    {
+      id: "s23",
+      order: 23,
+      title: "Child-Safety Failure",
+      colorTag: "red",
+      explanation:
+        "Child safety failures in psychiatry occur when the parenting risk of a patient is not adequately assessed, communicated or managed. They require immediate child safety action and a governance response — they are not family matters.",
+      keyPoints: [
+        "EXAMPLES: psychotic or manic parent removed child from school, unsafe discharge to home with children, child exposed to violence or overdose, mother with postpartum psychosis attempts to remove infant, adolescent discharged without safeguarding plan.",
+        "IMMEDIATE RESPONSE: ensure child safety now, clarify who has care of children, consider child protection advice or notification, review patient's mental state and parenting risk, involve family/carer where safe, document confidentiality and information-sharing decisions, update discharge/contact plan.",
+        "REVIEW: was child risk identified, was collateral obtained, was family included appropriately, were child protection thresholds considered, was school or daycare informed where necessary, was there a clear parenting/contact restriction plan?",
+        "Child safety is a mandatory reporting area in all Australian and New Zealand jurisdictions — when in doubt, consult child protection services. Consultation is not the same as notification.",
+      ],
+      commonTrap:
+        "Treating child safety as a family issue rather than a clinical governance and safeguarding issue with mandatory reporting obligations.",
+    },
+    {
+      id: "s24",
+      order: 24,
+      title: "MEQ-Ready Response Structure",
+      colorTag: "blue",
+      explanation:
+        "When asked 'How would you respond to this incident/adverse event/near miss?' use this eight-domain structure. Candidates who address all eight domains consistently pass; candidates who stop at clinical review do not.",
+      keyPoints: [
+        "1. IMMEDIATE SAFETY: review and treat affected patient, protect other patients/children/staff/public, increase observation or containment if needed, review legal status/leave/access to means, arrange physical examination if injury/overdose/restraint/ligature.",
+        "2. COMMUNICATION AND SUPPORT: inform senior staff, support patient, support family/carer, support staff and registrar, offer debrief, consider advocate/interpreter/cultural support.",
+        "3. NOTIFICATION AND GOVERNANCE: complete incident report, escalate to clinical director/risk/governance, notify pharmacy/privacy/child protection/police/coroner/legal as relevant, seek medicolegal or indemnity advice if serious.",
+        "4. OPEN DISCLOSURE: acknowledge harm or distress, provide facts known, avoid speculation, explain review process, arrange follow-up meeting.",
+        "5. DOCUMENTATION: factual timeline, current risk assessment, actions taken, people informed, updated plan, preserve records.",
+        "6. REVIEW: M&M, case conference or RCA depending on severity — map timeline, identify critical events, identify system contributors, avoid scapegoating.",
+        "7. ACTION PLAN: policy or process change, staff education, environmental change, role clarification, handover/observation/medication/discharge checklist.",
+        "8. CLOSE THE LOOP: re-audit, feedback to staff, feedback to patient/family where appropriate, monitor outcomes, report to governance committee.",
+      ],
+      meqApplication:
+        "Use these eight domains as answer headings. The examiner wants to see all eight — not just the clinical review in domain 1.",
+      commonTrap:
+        "Forgetting the final step: re-audit and feedback — a response without closing the loop is incomplete governance.",
+    },
+    {
+      id: "s25",
+      order: 25,
+      title: "High-Yield Examiner Phrases",
+      colorTag: "green",
+      explanation:
+        "These phrases signal governance thinking. Use them to open or close sections of your MEQ answer — they show the examiner you understand that incidents are both clinical events and system events.",
+      keyPoints: [
+        "'I would treat this as both an immediate clinical event and a clinical governance event.'",
+        "'The first priority is current safety, not assigning blame.'",
+        "'I would preserve records and document a factual timeline.'",
+        "'I would support the patient, family, other patients and staff affected.'",
+        "'If harm occurred, I would consider open disclosure through the appropriate pathway.'",
+        "'The review should examine systems, supervision, workload, handover and policy, not only the last person involved.'",
+        "'Recommendations should have named owners, timelines and re-audit.'",
+        "'A just-culture response supports staff while maintaining accountability.'",
+      ],
+      commonTrap:
+        "Common traps that cost marks: only reassessing the patient and missing governance; only completing an incident form and missing clinical care; blaming the registrar or nurse early; failing to support staff; avoiding open disclosure because of legal fear; giving speculative explanations; retrospectively altering notes; ignoring other patients who witnessed the event; ignoring child or public safety; failing to identify RCA or M&M; recommending education only without system change; failing to re-audit.",
+    },
+    {
+      id: "s26",
+      order: 26,
+      title: "Consultant-Level Summary",
+      colorTag: "green",
+      explanation:
+        "A consultant should first ensure immediate safety for the patient and others, provide urgent clinical and physical assessment, and update the risk and legal management plan. Senior staff should be notified, incident reporting completed, records preserved and a factual timeline documented. The consultant should support the patient, family, other patients and staff, and consider open disclosure if harm occurred. The incident should be reviewed through M&M, clinical governance or RCA depending on severity, with a just-culture focus on system contributors. The outcome should be a clear action plan with named responsibility, timelines and re-audit to confirm improvement.",
+      keyPoints: [
+        "IMMEDIATE: safety for all, clinical and physical assessment, risk and legal update, senior notification, records preserved.",
+        "SUPPORT: patient, family, other patients, staff, registrar — simultaneous streams, not sequential.",
+        "GOVERNANCE: incident report, escalation, open disclosure where indicated, M&M or RCA, just culture.",
+        "CLOSE THE LOOP: named action plan, re-audit, feedback — the examiner's last mark is often here.",
+      ],
+      meqApplication:
+        "Close every incident MEQ answer with a re-audit and governance statement. This is consistently where the highest-scoring candidates separate themselves.",
+    },
+  ],
+};
+
+export const ALL_NOTES: Note[] = [DISCHARGE_PLAN, CONFLICT_MANAGEMENT, COMPLAINT_PROCESS, INCIDENT_MANAGEMENT];
