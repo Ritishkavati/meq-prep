@@ -42,3 +42,9 @@ id = "GYzrw6JLU8HI7E9l4vJcC"
 uri = "file://artifacts/meq-prep/meq_questions.json"
 type = "unspecified"
 title = "MEQ Questions — All 229 Questions (JSON)"
+
+[[outputs]]
+id = "mxmpiK5WZiior02Pqeiw3"
+uri = "file://artifacts/meq-prep/daily_meq_bank.json"
+type = "unspecified"
+title = "Daily MEQ Bank — 21 Cases (JSON)"
