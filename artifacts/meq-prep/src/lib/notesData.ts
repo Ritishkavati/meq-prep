@@ -7137,4 +7137,1158 @@ export const RESEARCH_GOVERNANCE: Note = {
   ],
 };
 
-export const ALL_NOTES: Note[] = [DISCHARGE_PLAN, CONFLICT_MANAGEMENT, COMPLAINT_PROCESS, INCIDENT_MANAGEMENT, CLINICAL_AUDIT, OPEN_DISCLOSURE, RESTRICTIVE_PRACTICES, RESTRICTIVE_PRACTICES_MEQ, CONFIDENTIALITY, CAPACITY_CONSENT, SUPERVISION_TRAINING, WHS_STAFF_SAFETY, CULTURAL_SAFETY, RESEARCH_GOVERNANCE];
+export const RESOURCE_ALLOCATION_ETHICS: Note = {
+  id: "resource_allocation_ethics",
+  title: "Financial / Resource Allocation and Ethics in Psychiatry",
+  category: "Ethics in Psychiatry / Clinical Governance / Leadership / Resource Allocation",
+  description:
+    "A consultant-level framework for ethical resource allocation in psychiatry, including bed scarcity, expensive treatment, rural resources, staffing allocation, ECT theatre access, one adolescent bed available, long-stay patients occupying acute beds, and service director requests for rationing.",
+  sections: [
+    {
+      id: "s01",
+      order: 1,
+      title: "Core Principle",
+      colorTag: "blue",
+      explanation:
+        "Resource scarcity does not remove duty of care. The consultant must not silently accept unsafe care — the response is transparent clinical prioritisation, honest communication, escalation and advocacy.",
+      keyPoints: [
+        "STRONG CONSULTANT ANSWER: 'I would not silently lower the standard of care because resources are limited. I would make a clinically prioritised, transparent, documented decision using fair criteria, provide the safest available alternative care, escalate the resource gap, communicate honestly with patients/families/staff, and advocate for the resources required to meet the expected standard.'",
+        "THE CONSULTANT MUST BALANCE: duty to the individual patient, duty to other patients waiting, duty to staff safety, duty to the service, fairness and non-discrimination, clinical urgency, least restrictive care, transparency, accountability and advocacy.",
+        "SCARCE RESOURCE ETHICAL TENSION: 'There is tension between my duty of care to the patient in front of me and my duty of justice to other patients who also need scarce resources. A defensible consultant position is to prioritise according to transparent clinical criteria, provide the safest available alternative, document the reasoning, and escalate the resource gap rather than quietly accepting unsafe care.'",
+        "DO NOT SILENTLY LOWER STANDARD: resource scarcity does not remove duty of care — do not quietly lower observation, discharge, admission, ECT, follow-up or staffing standards to fit the resource gap.",
+      ],
+      commonTrap:
+        "Saying 'no beds' or 'no resources' as if duty of care ends.",
+    },
+    {
+      id: "s02",
+      order: 2,
+      title: "Central Ethical Tension",
+      colorTag: "purple",
+      explanation:
+        "The examiner is testing consultant ethical judgement, not bed management alone. Presenting an operational shortcut as an ethical decision is the core mark-losing error.",
+      keyPoints: [
+        "MEQ PHRASE: 'There is tension between my duty of care to the patient in front of me and my duty of justice to other patients who also need scarce resources. A defensible consultant position is to prioritise according to transparent clinical criteria, provide the safest available alternative, document the reasoning, and escalate the resource gap rather than quietly accepting unsafe care.'",
+        "This is stronger than: 'There are no beds, so discharge the least unwell patient.'",
+        "KEY POINT: the examiner is testing consultant ethical judgement, not bed management alone.",
+        "RESOURCE ESCALATION LADDER: bed manager → clinical director → service director → executive on-call → statewide/regional coordinator → private/regional options → ethics/legal/governance if unresolved risk.",
+      ],
+      commonTrap:
+        "Presenting an operational shortcut as an ethical decision.",
+    },
+    {
+      id: "s03",
+      order: 3,
+      title: "Four Ethical Principles in Resource Allocation",
+      colorTag: "purple",
+      explanation:
+        "Resource allocation requires all four principles simultaneously. Only discussing beneficence to one patient and ignoring justice to others is a consistent mark-losing error.",
+      keyPoints: [
+        "AUTONOMY: respect the patient's preferences, informed consent, values and choices. Autonomy does not mean the patient can demand any scarce resource regardless of clinical priority.",
+        "BENEFICENCE: act in the patient's best interests. Example: a suicidal adolescent may benefit from the only adolescent bed.",
+        "NON-MALEFICENCE: avoid preventable harm. Example: discharging a still-psychotic patient because of bed pressure may create foreseeable harm.",
+        "JUSTICE: allocate resources fairly. Example: the only adolescent bed should be allocated by clinical urgency, risk, likely benefit, vulnerability and alternatives — not by which family shouts loudest.",
+      ],
+      commonTrap:
+        "Only discussing beneficence to one patient and ignoring justice to others.",
+    },
+    {
+      id: "s04",
+      order: 4,
+      title: "Distributive Justice",
+      colorTag: "purple",
+      explanation:
+        "Fairness does not always mean first come, first served — in healthcare, fairness means priority according to clinical need, urgency and likely benefit. Using first come, first served when another patient has more urgent preventable harm is unjust.",
+      keyPoints: [
+        "DISTRIBUTIVE JUSTICE REQUIRES: consistent criteria, clinical prioritisation, transparency, documentation, avoidance of discrimination, review of inequity, appeal/escalation pathways, consumer/carer communication, system advocacy.",
+        "FAIR CRITERIA: severity of illness, immediacy of risk, vulnerability, likelihood of benefit, lack of safe alternatives, reversibility/preventability of harm, duration of need, impact on others (including children/public safety), least restrictive safe option, equity considerations (rurality, disability, culture, language barriers).",
+        "FAIR CRITERIA / UNFAIR CRITERIA — FAIR: clinical urgency, risk, vulnerability, likely benefit, lack of alternatives, preventability of harm. UNFAIR: diagnosis stigma, family pressure, media risk, private status, staff preference, clinician convenience, ethnicity, disability, gender, cultural background or 'difficult patient' labels.",
+        "Fairness is not sameness — equity may require additional or different resources to achieve fair access and safe outcomes.",
+      ],
+      commonTrap:
+        "Using first come, first served when another patient has more urgent preventable harm.",
+    },
+    {
+      id: "s05",
+      order: 5,
+      title: "Unfair Allocation Criteria",
+      colorTag: "red",
+      explanation:
+        "Unfair allocation criteria masquerade as clinical judgement. Denying admission or resources because the patient is labelled 'borderline,' 'manipulative,' 'frequent presenter' or 'non-compliant' is discriminatory.",
+      keyPoints: [
+        "UNFAIR CRITERIA: social worth, popularity with staff, family pressure, media risk, private insurance status in a public allocation decision, ethnicity, gender, disability, diagnosis stigma, personality disorder label, 'difficult patient' label, clinician convenience, bed manager pressure alone, fear of complaint alone.",
+        "A DEFENSIBLE CONSULTANT ASKS: 'What is the clinical need, risk, likely benefit, vulnerability and available alternative for this person now?'",
+        "Personality disorder, frequent presentation and voluntary legal status are not fair grounds for denying admission or resources when clinical need, risk and safety alternatives are the correct criteria.",
+        "Media risk (high-profile patient or family) and family pressure are symmetrically unfair — neither should inflate or deflate clinical priority.",
+      ],
+      commonTrap:
+        "Denying admission or resources because the patient is labelled 'borderline,' 'manipulative,' 'frequent presenter' or 'non-compliant.'",
+    },
+    {
+      id: "s06",
+      order: 6,
+      title: "Duty of Care Under Scarcity",
+      colorTag: "blue",
+      explanation:
+        "Duty of care does not mean you can always provide the ideal resource — it means you must provide a reasonable, safe, clinically defensible response. Equating lack of resource with permission to provide no plan is the core error.",
+      keyPoints: [
+        "WHEN THE IDEAL RESOURCE IS UNAVAILABLE, DUTY OF CARE REQUIRES: reassessing clinical risk, identifying the safest available option, increasing observation or outreach if needed, using interim supports, communicating the limitation honestly, documenting why ideal care was unavailable, escalating to the person with operational authority, advocating for additional resources, reviewing frequently, not abandoning the patient.",
+        "USEFUL PHRASE: 'The absence of the ideal resource does not justify absence of care.'",
+        "Duty of care is not an all-or-nothing standard — when the ideal is unavailable, the obligation is to provide the safest available alternative, not to stop caring.",
+        "Documenting why the ideal care was unavailable is both clinically and medico-legally important — it shows the decision was not negligent but was a reasoned response to a constrained environment.",
+      ],
+      commonTrap:
+        "Equating lack of resource with permission to provide no plan.",
+    },
+    {
+      id: "s07",
+      order: 7,
+      title: "Do Not Silently Lower the Standard of Care",
+      colorTag: "red",
+      explanation:
+        "Naming the gap, managing the risk, escalating the gap and documenting the decision are the four required steps. Pretending an unsafe workaround is normal care is one of the most important examiner points.",
+      keyPoints: [
+        "UNSAFE ANSWER: 'No adolescent bed, so admit to adult ward and monitor.'",
+        "BETTER ANSWER: 'If an adolescent bed is unavailable, I would document that the standard pathway is not available, escalate to the clinical director/bed manager, seek regional/private/interstate alternatives if appropriate, and if temporary adult admission is unavoidable, implement enhanced safeguards, CAMHS input, family involvement, child-safe environment, observation and rapid review.'",
+        "THE FOUR STEPS: name the gap → manage the risk → escalate the gap → document the decision.",
+        "The 'silent workaround' is ethically worse than an acknowledged gap — it hides the resource failure from governance, prevents advocacy and exposes the clinician to individual accountability for a system-level problem.",
+      ],
+      commonTrap:
+        "Pretending an unsafe workaround is normal care.",
+    },
+    {
+      id: "s08",
+      order: 8,
+      title: "Transparent Criteria",
+      colorTag: "purple",
+      explanation:
+        "Resource allocation must be based on criteria that can be explained to patients, families, staff and executives. Making allocation decisions privately without criteria or documentation is a governance failure.",
+      keyPoints: [
+        "GOOD CRITERIA ARE: clinically relevant, consistent, documented, known to the team, open to review, not discriminatory, linked to policy where possible, flexible enough for unusual risk.",
+        "EXAMPLES OF BED ALLOCATION CRITERIA: acute risk to self/others, severe mental illness requiring containment/treatment, need for involuntary care, inability to be safely managed in community, lack of supervision/support, medical/psychiatric complexity, child/public safety risk, likely benefit from admission.",
+        "Transparency protects both patients (from arbitrary decisions) and clinicians (from accusations of discrimination or bias) — it is both an ethical and a medico-legal requirement.",
+        "BUSINESS CASE THINKING: problem, demand, risk, incidents, options, preferred solution, cost, workforce, implementation, metrics and consumer impact.",
+      ],
+      commonTrap:
+        "Making allocation decisions privately without criteria or documentation.",
+    },
+    {
+      id: "s09",
+      order: 9,
+      title: "Clinical Prioritisation",
+      colorTag: "blue",
+      explanation:
+        "Clinical prioritisation is not the same as 'who arrived first.' Prioritising the loudest referral source rather than clinical risk is unjust.",
+      keyPoints: [
+        "PRIORITISE USING: urgency, severity, likelihood of deterioration, preventability of harm, vulnerability, whether delay is safe, whether another safe pathway exists, intensity/duration of resource needed, likely benefit, impact on other patients.",
+        "EXAMPLE: two patients need the only acute bed. Patient A has chronic suicidal ideation, is settled, has family and can engage with crisis team. Patient B has severe psychotic depression, is not eating, has high suicide risk and family cannot supervise. Patient B likely has higher priority because of imminent risk, medical deterioration and lack of safe alternative. Patient A still needs a documented safety plan, follow-up and contingency pathway.",
+        "Even the patient who does not receive the scarce resource still has a duty of care obligation — they need a documented safety plan, follow-up and contingency pathway.",
+        "Clinical prioritisation must be documented — if the decision is later questioned, the record must show which criteria were used and why one patient's need was more urgent than another's.",
+      ],
+      commonTrap:
+        "Prioritising the loudest referral source rather than clinical risk.",
+    },
+    {
+      id: "s10",
+      order: 10,
+      title: "Avoiding Discrimination",
+      colorTag: "red",
+      explanation:
+        "Resource allocation can easily become discriminatory when teams use labels rather than clinical criteria. Using diagnosis, behaviour or stigma as a proxy for clinical priority is discrimination.",
+      keyPoints: [
+        "WATCH FOR: 'Borderline patients should not get beds.' / 'He always presents.' / 'She is too difficult.' / 'Older adults do not benefit.' / 'Forensic patients are dangerous, keep them longer.' / 'Refugee family is too complex.' / 'Aboriginal family never attends.' / 'Intellectual disability is not our job.' / 'Substance use means self-inflicted.'",
+        "These are not fair allocation criteria — they are diagnoses, behaviours or demographic characteristics masquerading as clinical reasoning.",
+        "Substance use does not mean the harm is self-inflicted and therefore lower priority — the ethical question is current clinical need, risk and likely benefit, not causation.",
+        "Frequent presentation is a clinical signal (unmet need, poor community follow-up, service system gap) — not a ground for lower priority in the current acute episode.",
+      ],
+      commonTrap:
+        "Using diagnosis, behaviour or stigma as a proxy for clinical priority.",
+    },
+    {
+      id: "s11",
+      order: 11,
+      title: "Bed Scarcity",
+      colorTag: "red",
+      explanation:
+        "Bed scarcity is the most common resource-allocation MEQ stem. Treating voluntary legal status as a safe discharge criterion is the most common mark-losing shortcut.",
+      keyPoints: [
+        "GOOD RESPONSE: assess current clinical need of the patient needing admission, review all current inpatients for safe discharge or step-down (not rushed discharge), consider leave beds/transfer/step-up/step-down/crisis accommodation/private/regional options, increase community/crisis support if admission unavailable, escalate to bed manager/clinical director/executive on-call, document resource constraint and clinical reasoning, communicate honestly with patient/family, review frequently.",
+        "UNSAFE SHORTCUTS: discharge the 'least popular' patient, discharge because they are voluntary, refuse admission because the patient has BPD/personality disorder, place adolescent in adult ward without safeguards, keep patient in ED without psychiatric review, say 'no beds' without escalation.",
+        "Voluntary status means the patient can technically leave — it does not mean they are clinically safe to be discharged under bed pressure.",
+        "A 'safe discharge' requires the same clinical standards under bed pressure as at any other time — the presence of bed pressure does not lower the clinical threshold for safe discharge.",
+      ],
+      commonTrap:
+        "Treating voluntary legal status as a safe discharge criterion.",
+    },
+    {
+      id: "s12",
+      order: 12,
+      title: "One Adolescent Bed Available",
+      colorTag: "red",
+      explanation:
+        "This is classic exam material. Using adult ward admission as a routine solution rather than last resort with safeguards is the core error.",
+      keyPoints: [
+        "PRIORITISE USING: immediate suicide/self-harm risk, psychosis/mania/severe depression, eating disorder medical/psychiatric risk, family capacity to supervise, child protection risk, developmental vulnerability, ability to use alternative care, risk of adult ward admission, distance/rurality, school/community supports, likely benefit from admission.",
+        "IF ADOLESCENT BED UNAVAILABLE: regional child/adolescent bed search, private bed if appropriate/funded, paediatric ward with CAMHS consultation, adult ward only as last resort with safeguards, crisis team daily contact, family safety plan, means removal, school/GP involvement, child protection if supervision unsafe, senior escalation.",
+        "Adult ward admission of an adolescent requires enhanced safeguards — named CAMHS contact, daily review, child-safe environment, family involvement, separate observation, rapid transfer plan — not just a standard admission.",
+        "The adolescent who does not receive the bed still needs a documented risk assessment, safety plan and follow-up — they have not been discharged from clinical responsibility.",
+      ],
+      commonTrap:
+        "Using adult ward admission as a routine solution rather than last resort with safeguards.",
+    },
+    {
+      id: "s13",
+      order: 13,
+      title: "Long-Stay Patient Occupying Acute Bed",
+      colorTag: "amber",
+      explanation:
+        "Long-stay patients have rights to safe, appropriate discharge planning — and acute patients have rights to timely admission. Unsafe discharge of the long-stay patient to solve bed pressure is a clinical and ethical failure.",
+      keyPoints: [
+        "AVOID DEHUMANISING LANGUAGE: do not say 'bed blocker.' Say: 'a patient with prolonged admission whose current care needs may no longer be best met in an acute inpatient unit.'",
+        "ASSESS: current mental state and risk, ongoing need for acute admission, functional needs, housing/NDIS/aged-care barriers, guardianship/administration, family/carer capacity, occupational therapy assessment, community provider availability, step-down/rehabilitation options, patient's preferences and rights, risk if discharged prematurely, harm from prolonged admission.",
+        "ETHICAL TENSION: 'There is tension between the long-stay patient's right to safe, appropriate discharge planning and the acute needs of patients waiting for admission.'",
+        "Prolonged acute admission may itself cause harm (institutionalisation, loss of community links, exposure to acute ward environment) — the ethical case for transition is not only about freeing the bed, but about the long-stay patient's own interests.",
+      ],
+      commonTrap:
+        "Unsafe discharge of the long-stay patient to solve bed pressure.",
+    },
+    {
+      id: "s14",
+      order: 14,
+      title: "Expensive Treatment",
+      colorTag: "purple",
+      explanation:
+        "Expensive treatment decisions must be based on evidence, clinical necessity, urgency, likely benefit and fair criteria. Saying yes because of family pressure or no because it is expensive, without clinical/evidence/fairness analysis, are both errors.",
+      keyPoints: [
+        "EXAMPLES: ECT access, rTMS or ketamine, clozapine monitoring resources, psychological therapy package, specialist neurodevelopmental assessment, intensive community package, inpatient eating disorder bed, private transfer, interstate specialist service.",
+        "ASK: is treatment evidence-based for this indication, is it clinically necessary or optional, are standard treatments exhausted, what is urgency, what is likely benefit, what are risks, are cheaper safe alternatives available, is there policy/funding pathway, are criteria applied consistently, is there conflict of interest, has patient been informed honestly, is appeal/second opinion available?",
+        "Expensive treatments that are evidence-based, clinically necessary and without safe cheaper alternatives should not be withheld solely on cost — that is distributive injustice.",
+        "Where funding pathway requires specific criteria, apply those criteria consistently — not based on which family advocates most effectively.",
+      ],
+      commonTrap:
+        "Saying yes because of family pressure or no because it is expensive, without clinical/evidence/fairness analysis.",
+    },
+    {
+      id: "s15",
+      order: 15,
+      title: "Rural Resource Scarcity",
+      colorTag: "amber",
+      explanation:
+        "Rurality changes the delivery model — it does not change the ethical obligation to provide safe, timely and culturally appropriate care. Accepting a lower standard of care because the patient lives rurally is unjust.",
+      keyPoints: [
+        "PROBLEMS: no local psychiatrist, no adolescent bed, no ECT theatre, no interpreter, no AOD service, no crisis team, long transport distances, limited GP cover, limited private options, cultural/community constraints, police/ambulance as default transport, telehealth limitations.",
+        "CONSULTANT RESPONSE: use telepsychiatry where appropriate, support GP/local team, clarify escalation pathway, use regional hub referral, arrange safe transport if needed, involve family/community supports with consent, involve ACCHO/cultural services where relevant, document unavailable resources, escalate inequity, develop business case if recurrent, do not accept rurality as justification for unsafe care.",
+        "MEQ PHRASE: 'Rurality changes the delivery model, not the ethical obligation to provide safe, timely and culturally appropriate care.'",
+        "Rural resource scarcity should be escalated and documented — pattern documentation is the basis for business cases and workforce planning.",
+      ],
+      commonTrap:
+        "Accepting a lower standard of care because the patient lives rurally.",
+    },
+    {
+      id: "s16",
+      order: 16,
+      title: "Staffing Allocation",
+      colorTag: "red",
+      explanation:
+        "Staffing is both a resource and a safety issue. Changing the clinical care standard to fit unsafe staffing is a patient-safety failure.",
+      keyPoints: [
+        "ALLOCATE BASED ON: patient acuity, observation requirements, seclusion/restraint risk, new admissions, staff skill mix, junior staff supervision, physical health complexity, language/cultural needs, gender/trauma safety, home-visit risk, after-hours risk, fatigue.",
+        "AVOID: leaving junior staff unsupported, using restrictive practice to compensate for low staffing, sending lone workers into high-risk homes, ignoring staff fatigue, reducing observations only because staffing is short.",
+        "Observations are based on clinical risk, not available staff — if staffing is insufficient for required observation level, escalate the staffing gap, do not lower the observation level to match the available staff.",
+        "Using restrictive practice (seclusion, restraint) to compensate for low staffing is both an ethical failure and a clinical governance breach.",
+      ],
+      commonTrap:
+        "Changing the clinical care standard to fit unsafe staffing.",
+    },
+    {
+      id: "s17",
+      order: 17,
+      title: "ECT Theatre Access",
+      colorTag: "purple",
+      explanation:
+        "ECT theatre scarcity requires transparent clinical prioritisation. Giving the theatre slot to the most senior consultant's patient instead of the most clinically urgent patient is unjust.",
+      keyPoints: [
+        "PRIORITISE: catatonia, severe psychotic depression, life-threatening refusal of food/fluids, high suicide risk, severe treatment-resistant illness with functional collapse, continuation ECT where relapse risk is severe, anaesthetic/medical urgency, patients whose delay creates foreseeable serious harm.",
+        "ALSO CONSIDER: consent/capacity/tribunal pathway, anaesthetic safety, cognitive adverse effects, patient travel burden, equity across public/private/rural patients, waiting list transparency, documentation of priority decision.",
+        "Continuation ECT for a patient at very high relapse risk may be clinically as urgent as acute ECT for a new presentation — the priority decision must be based on clinical consequences of delay, not treatment history.",
+        "A transparent waiting list with documented clinical priority decisions is the governance standard — verbal queue management between consultants is not.",
+      ],
+      commonTrap:
+        "Giving theatre slot to the most senior consultant's patient instead of the most clinically urgent patient.",
+    },
+    {
+      id: "s18",
+      order: 18,
+      title: "Service Director Asks for Rationing",
+      colorTag: "purple",
+      explanation:
+        "Rationing, if unavoidable, should be explicit, ethically justified, clinically governed and monitored — not hidden inside individual discharge decisions. Quietly raising admission thresholds without governance or monitoring is covert rationing.",
+      keyPoints: [
+        "EXAMPLE STEM: 'The service director asks consultants to reduce admissions by 20% and restrict long admissions due to budget pressure.'",
+        "STRONG RESPONSE: ask for explicit policy/criteria, ensure clinical governance input, involve consumer/carer perspectives, assess patient safety impact, avoid covert rationing by individual clinicians, develop transparent prioritisation criteria, monitor adverse outcomes, escalate unsafe consequences, document decisions, advocate for funding/staffing, ensure legal/MHA duties are met, do not misrepresent service availability to patients.",
+        "KEY PHRASE: 'Rationing, if unavoidable, should be explicit, ethically justified, clinically governed and monitored — not hidden inside individual discharge decisions.'",
+        "When a service director's instruction conflicts with individual patient duty of care, the consultant has an obligation to raise the conflict formally — this is not insubordination, it is governance.",
+      ],
+      commonTrap:
+        "Quietly raising admission thresholds without governance or monitoring.",
+    },
+    {
+      id: "s19",
+      order: 19,
+      title: "Transparent Communication With Patients and Families",
+      colorTag: "teal",
+      explanation:
+        "Communicate honestly without blaming the system helplessly. Being honest about scarcity but not offering an interim plan is insufficient — honesty plus action is required.",
+      keyPoints: [
+        "SAY: 'The clinically preferred option is an adolescent inpatient bed. That bed is not currently available. I am escalating this and searching for alternatives. While that occurs, we will put in place the safest interim plan: observation, family support, crisis review and daily reassessment.'",
+        "AVOID: 'There is nothing we can do.' / 'You are not sick enough.' / 'No beds, go home.' / 'The manager said no.' / 'Try ED again if worse.' / 'This is just how the system is.'",
+        "Blaming the system without offering an interim plan abandons the patient — the consultant's role is to maximise safety within the constrained system, not to report constraints as an outcome.",
+        "Honest communication about resource constraints, combined with a clear interim plan, maintains therapeutic alliance and reduces the risk of the patient or family disengaging.",
+      ],
+      commonTrap:
+        "Being honest about scarcity but not offering an interim plan.",
+    },
+    {
+      id: "s20",
+      order: 20,
+      title: "Documentation",
+      colorTag: "purple",
+      explanation:
+        "Documentation must capture both the clinical reasoning and the resource constraint and escalation steps. Documenting the resource outcome but not the clinical reasoning or escalation is inadequate.",
+      keyPoints: [
+        "DOCUMENT: clinical assessment, risk formulation, resource requested, why it was clinically indicated, resource unavailable, alternatives considered, prioritisation criteria used, who was consulted, escalation steps, patient/family communication, interim safety plan, review timeframe, unresolved risk, advocacy/business case if systemic.",
+        "POOR NOTE: 'No beds. Discharge with crisis number.'",
+        "BETTER NOTE: 'Admission clinically indicated due to escalating psychotic depression, refusal of food and active suicidal intent. No adolescent bed available statewide at 18:00 despite escalation to bed manager and clinical director. Paediatric admission with CAMHS daily review arranged as interim; parents informed; 1:1 nursing, means restriction and transfer request active. Reassess in morning.'",
+        "Good documentation of resource scarcity and escalation protects the clinician — it demonstrates that the decision was not negligent but was the best available response to a constrained environment.",
+      ],
+      commonTrap:
+        "Documenting the resource outcome but not the clinical reasoning or escalation.",
+    },
+    {
+      id: "s21",
+      order: 21,
+      title: "Escalation",
+      colorTag: "purple",
+      explanation:
+        "Escalation recognises that some resource decisions exceed individual consultant authority. Keeping system-level risk at individual consultant level is both unsafe and unfair.",
+      keyPoints: [
+        "ESCALATION MAY INCLUDE: bed manager, clinical director, service director, executive on-call, risk manager, child/adolescent network, statewide bed coordinator, private provider, transfer centre, ethics committee, legal/MHA advice, funding panel, coroner/critical incident governance after harm, business case to executive.",
+        "KEY POINT: escalation is not dumping the problem — it recognises that some resource decisions exceed individual consultant authority.",
+        "RESOURCE ESCALATION LADDER: bed manager → clinical director → service director → executive on-call → statewide/regional coordinator → private/regional options → ethics/legal/governance if unresolved risk.",
+        "When escalation fails to resolve the resource gap, the consultant must document that escalation occurred, what response was received, and what interim plan was implemented — this creates accountability at the appropriate governance level.",
+      ],
+      commonTrap:
+        "Keeping system-level risk at individual consultant level.",
+    },
+    {
+      id: "s22",
+      order: 22,
+      title: "Resource Advocacy",
+      colorTag: "green",
+      explanation:
+        "Consultants should advocate for safe service resources using data, pathway and governance routes. Writing 'advocate for more resources' without data, pathway or governance route is insufficient.",
+      keyPoints: [
+        "ADVOCACY MAY INCLUDE: incident reports showing harm/near misses, audit data, waiting-list data, ED boarding data, seclusion/restraint data, staff injury data, delayed discharge data, readmission rates, consumer/carer complaints, rural travel burden, business case, committee submission, partnership with NGOs/ACCHOs/GPs, workforce proposal.",
+        "Incident data is the most powerful advocacy lever — a series of documented adverse outcomes or near-misses attributable to resource scarcity is the governance case for investment.",
+        "Advocacy through the correct governance channel is more effective than individual complaint — consumer/carer committees, quality/safety committees, clinical governance forums and media submissions are the legitimate pathways.",
+        "BUSINESS CASE THINKING: problem definition, patient-safety risk, current demand, gap between demand and capacity, impact on outcomes, incidents/complaints/near misses, options considered, preferred option, cost estimate, workforce implications, risks of not acting, implementation plan, evaluation metrics, consumer/carer input, equity/cultural/rural impact.",
+      ],
+      commonTrap:
+        "Writing 'advocate for more resources' without data, pathway or governance route.",
+    },
+    {
+      id: "s23",
+      order: 23,
+      title: "Business Case Thinking",
+      colorTag: "green",
+      explanation:
+        "A business case is not just 'we need more money.' Asking for resources without linking the request to safety, demand, outcomes and evaluation will not succeed.",
+      keyPoints: [
+        "INCLUDE: problem definition, patient-safety risk, current demand, gap between demand and capacity, impact on outcomes, incidents/complaints/near misses, options considered, preferred option, cost estimate, workforce implications, risks of not acting, implementation plan, evaluation metrics, consumer/carer input, equity/cultural/rural impact.",
+        "RURAL ECT ACCESS EXAMPLE: current waiting time, number of patients transferred, costs of transfer, adverse outcomes from delay, theatre/anaesthetic constraints, staffing model, patient/carer burden, proposed session expansion, audit metrics.",
+        "Executives respond to safety risk and cost of inaction — framing the business case as 'current practice is creating preventable harm and costing more in transfers/readmissions than the proposed solution' is more persuasive than 'we need more resources.'",
+        "Evaluation metrics in the business case create accountability — they allow the service to demonstrate that the investment produced the expected improvement.",
+      ],
+      commonTrap:
+        "Asking for resources without linking the request to safety, demand, outcomes and evaluation.",
+    },
+    {
+      id: "s24",
+      order: 24,
+      title: "Not Every Resource Request Should Be Granted",
+      colorTag: "amber",
+      explanation:
+        "Ethical allocation also means saying no when a request is not justified. Equating patient/family request with ethical entitlement to a scarce resource ignores distributive justice.",
+      keyPoints: [
+        "REASONS TO DECLINE: not clinically indicated, poor evidence for indication, disproportionate burden compared with likely benefit, safer alternative available, patient preference unsupported by clinical need, request would unfairly deny urgent care to others, conflict of interest, service not commissioned for that care, risk cannot be safely managed in that setting.",
+        "THE 'NO' MUST BE: reasoned, documented, communicated respectfully, paired with an alternative plan, open to review/second opinion where appropriate.",
+        "A reasoned 'no' with an alternative plan is ethically superior to a reluctant 'yes' that uses resources needed by higher-priority patients.",
+        "Second opinion should be offered when a request is declined — this is both a fairness and a transparency requirement, and protects the consultant from accusations of arbitrary denial.",
+      ],
+      commonTrap:
+        "Equating patient/family request with ethical entitlement to a scarce resource.",
+    },
+    {
+      id: "s25",
+      order: 25,
+      title: "Resource Allocation and Compulsory Care",
+      colorTag: "purple",
+      explanation:
+        "Do not use the Mental Health Act to solve resource problems. Using legal compulsion to compensate for missing social or community resources is a misuse of MHA powers.",
+      keyPoints: [
+        "EXAMPLES OF MISUSE: keeping someone involuntary because housing is unavailable, using CTO because community team has no capacity for voluntary outreach, delaying discharge because no NGO package exists despite no MHA criteria, detaining someone because family refuses to take them home.",
+        "If compulsory care is needed, it must meet legal criteria. Resource limitations may affect the discharge plan, but they cannot create legal criteria by themselves.",
+        "Keeping a patient involuntary beyond the period when MHA criteria are met — because there is no housing — exposes the patient to unlawful deprivation of liberty and the clinician to legal liability.",
+        "The correct response to missing community resources is escalation and advocacy for those resources — not extending compulsory care to compensate for a service gap.",
+      ],
+      commonTrap:
+        "Using legal compulsion to compensate for missing social or community resources.",
+    },
+    {
+      id: "s26",
+      order: 26,
+      title: "Resource Allocation and Restrictive Practice",
+      colorTag: "red",
+      explanation:
+        "Do not use restrictive practice because of resource scarcity. Using seclusion, restraint or forced medication as resource management is both clinically and ethically wrong.",
+      keyPoints: [
+        "UNSAFE: seclusion because ward short-staffed, restraint because no quiet room, forced medication because staff cannot provide de-escalation, denying leave because no escort staff without reviewing risk, confining patient because no step-down bed.",
+        "Restrictive practice requires its own last-resort safety criteria, not staffing convenience.",
+        "Seclusion to compensate for low staffing is a governance breach, a rights violation and a safety risk — it does not protect the patient, it harms them.",
+        "The correct response to insufficient staffing for required de-escalation is to escalate the staffing gap — not to substitute restraint for the de-escalation that cannot be provided.",
+      ],
+      commonTrap:
+        "Using seclusion, restraint or forced medication as resource management.",
+    },
+    {
+      id: "s27",
+      order: 27,
+      title: "Resource Allocation and Cultural Equity",
+      colorTag: "green",
+      explanation:
+        "Scarcity can worsen inequity. Providing the same pathway to everyone even when that pathway is inaccessible to some groups is inequitable, not fair.",
+      keyPoints: [
+        "WATCH FOR: rural Aboriginal community lacking youth service, interpreter unavailable after hours, refugee patient excluded due to 'complexity,' culturally unsafe hospital pathway causing disengagement, ACCHO not funded for mental health partnership, telehealth offered where no privacy or internet exists.",
+        "USEFUL PHRASE: 'Equity is not sameness. It may require additional or different resources to achieve fair access and safe outcomes.'",
+        "Fair allocation may require more support, not identical support, for groups facing higher barriers.",
+        "A telehealth appointment offered to a patient in a rural community with no private space, no reliable internet and no digital literacy is not equitable access — it is the appearance of access without the reality.",
+      ],
+      commonTrap:
+        "Providing the same pathway to everyone even when that pathway is inaccessible to some groups.",
+    },
+    {
+      id: "s28",
+      order: 28,
+      title: "Resource Allocation and Private/Public Interface",
+      colorTag: "purple",
+      explanation:
+        "Private/public status should not influence clinical prioritisation. Allowing private/public status to influence clinical prioritisation unfairly is discrimination.",
+      keyPoints: [
+        "POTENTIAL ISSUES: public patient asked to pay privately for urgent care, private patient gets faster ECT, private bed considered because public bed unavailable, consultant has private interest in service, pressure to transfer 'easy' patients privately, mixed incentives.",
+        "PRINCIPLES: declare conflicts, use clinical criteria, do not disadvantage public patients unfairly, do not pressure patients financially, document rationale, follow local policy, maintain standard public-care advocacy.",
+        "A conflict of interest exists when the consultant has a financial interest in a private facility to which they are considering transferring a patient — this must be declared and managed.",
+        "Using a private bed for a public patient when no public bed is available may be appropriate as a last resort — but it should be clinically driven, documented and not used to benefit the consultant financially.",
+      ],
+      commonTrap:
+        "Allowing private/public status to influence clinical prioritisation unfairly.",
+    },
+    {
+      id: "s29",
+      order: 29,
+      title: "Long Waiting Lists",
+      colorTag: "amber",
+      explanation:
+        "Waiting lists are resource-allocation systems requiring active governance. Treating waitlisting as a safe endpoint rather than an active risk-management process is a patient-safety failure.",
+      keyPoints: [
+        "GOVERNANCE REQUIRES: triage criteria, risk review intervals, escalation for deterioration, communication with referrers, crisis pathway, documentation, active management not passive list, audit of waiting times and harm, equity monitoring, consumer/carer information.",
+        "UNSAFE: 'Patient is on waitlist.'",
+        "BETTER: 'Patient is on waitlist with risk category, review date, crisis plan, GP advice, escalation criteria and named responsible service.'",
+        "A patient on a waiting list is still the service's clinical responsibility — if their risk escalates while waiting, the service must have a mechanism to detect and respond to that escalation.",
+      ],
+      commonTrap:
+        "Treating waitlisting as a safe endpoint rather than an active risk-management process.",
+    },
+    {
+      id: "s30",
+      order: 30,
+      title: "MEQ Examples and Traps",
+      colorTag: "blue",
+      explanation:
+        "Eight worked examples covering the most common resource allocation MEQ stems. In each, the core error is ignoring the patient who does not receive the scarce resource.",
+      keyPoints: [
+        "EXAMPLE 1 — BED SCARCITY: ED has suicidal patient needing admission; ward full; bed manager asks to discharge a voluntary patient. TRAP: discharge voluntary patient because voluntary equals safer. BETTER: review all patients clinically, discharge only if safe, escalate bed shortage, create interim ED safety plan, document criteria and avoid legal-status-based discrimination.",
+        "EXAMPLE 2 — ONE ADOLESCENT BED: two adolescents need the only bed: one after overdose with family support, one psychotic and refusing food. TRAP: admit first referred. BETTER: prioritise by acuity, risk, medical compromise, family capacity, alternatives and likely benefit; document and provide safe plan for the other.",
+        "EXAMPLE 3 — EXPENSIVE TREATMENT: family demands ketamine/rTMS/ECT access for treatment-resistant depression. TRAP: say yes because family pressure or no because expensive. BETTER: assess evidence, indication, urgency, alternatives, capacity/consent, funding criteria, second opinion and interim standard care.",
+        "EXAMPLE 4 — LONG-STAY PATIENT: executive pressures discharge of long-stay psychosis patient to free bed. TRAP: discharge to unsafe housing. BETTER: review current need, functional/housing barriers, step-down options, guardianship/NDIS, executive escalation and safe transition plan.",
+        "EXAMPLE 5 — RURAL RESOURCE: no local psychiatrist/ECT/adolescent bed. TRAP: accept lower standard because rural. BETTER: use telehealth/regional pathway/transfer/escalation, document gap, safety-plan locally and advocate for recurring resource solution.",
+        "EXAMPLE 6 — ECT THEATRE ACCESS: two consultants compete for ECT slot. TRAP: give slot to senior consultant's patient. BETTER: prioritise by transparent clinical urgency — catatonia, life-threatening depression, suicide/nutrition risk, likely benefit and delay risk.",
+        "EXAMPLE 7 — STAFFING ALLOCATION: nurse-in-charge says staffing too low for observations. TRAP: reduce observations to match staffing. BETTER: observations are based on clinical risk — escalate staffing gap, request additional staff/security, prioritise tasks and document unresolved risk.",
+        "EXAMPLE 8 — SERVICE DIRECTOR ASKS FOR RATIONING: director asks consultants to reduce admissions due to budget. TRAP: quietly raise threshold without telling anyone. BETTER: develop explicit criteria, governance oversight, risk monitoring, consumer communication, escalation and advocacy.",
+      ],
+      commonTrap:
+        "Ignoring the patient who does not receive the scarce resource.",
+    },
+    {
+      id: "s31",
+      order: 31,
+      title: "Command-Word Discipline",
+      colorTag: "amber",
+      explanation:
+        "Resource allocation answers require fairness with explanation of how the decision is made. Listing fairness without explaining how the decision is made loses marks.",
+      keyPoints: [
+        "LIST: distributive justice, clinical prioritisation, transparent criteria, avoid discrimination, document decision, escalate resource gap, provide safest alternative, advocate for resources.",
+        "OUTLINE (list and justify): 'Use transparent criteria — because scarce resources must be allocated fairly and consistently, not by pressure or clinician preference. Escalate the shortage — because individual consultants should not silently absorb system-level risk. Document alternatives — because the record must show why the chosen plan was the safest available option.'",
+        "DESCRIBE (list and explain): 'Prioritise by clinical urgency and likely benefit — because first-come-first-served allocation may be unfair when another patient has more immediate preventable harm. Communicate constraints honestly — because patients and families need to know what is clinically preferred, what is unavailable, and what interim safety plan is being used.'",
+        "DISCUSS (name the tension): 'There is tension between duty to the individual patient and justice for other patients needing the same scarce resource. A defensible position is to use transparent clinical criteria, avoid discrimination, provide the safest alternative, document reasoning and escalate the resource deficit.'",
+      ],
+      commonTrap:
+        "Listing fairness without explaining how the decision is made.",
+    },
+    {
+      id: "s32",
+      order: 32,
+      title: "Examiner Phrases",
+      colorTag: "green",
+      explanation:
+        "Use these phrases to signal consultant-level resource allocation reasoning. Missing the language of justice, transparency, escalation and documentation signals registrar-level thinking.",
+      keyPoints: [
+        "'Resource scarcity does not remove duty of care.'",
+        "'I would not silently lower the standard of care.'",
+        "'The decision should be based on transparent clinical criteria, not who shouts loudest.'",
+        "'Fairness is not always first come, first served.'",
+        "'Legal status alone is not a fair bed-allocation criterion.'",
+        "'I would provide the safest available alternative while escalating the unavailable ideal resource.'",
+        "'Rationing should be explicit, ethically justified, clinically governed and monitored.'",
+        "'Equity is not sameness; some groups need additional support to achieve fair access.'",
+        "'The absence of a bed does not justify unsafe discharge.'",
+        "'I would document the resource constraint, alternatives considered, escalation and review plan.'",
+      ],
+      commonTrap:
+        "Missing the language of justice, transparency, escalation and documentation.",
+    },
+    {
+      id: "s33",
+      order: 33,
+      title: "Consultant-Level Summary",
+      colorTag: "green",
+      explanation:
+        "This paragraph is reusable in MEQ stems involving bed scarcity, one adolescent bed, ECT theatre access, rural resource shortage, staffing allocation, long-stay patients and service-level rationing.",
+      keyPoints: [
+        "ETHICAL FRAMING: 'I would treat resource allocation as an ethical and clinical governance decision. Resource scarcity does not remove duty of care, and I would not silently lower the standard of care.'",
+        "ALLOCATION: 'I would assess clinical urgency, risk, vulnerability, likely benefit and safe alternatives, then allocate the scarce resource using transparent, non-discriminatory criteria.'",
+        "INTERIM CARE AND ESCALATION: 'For patients who do not receive the preferred resource, I would provide the safest available interim plan, communicate honestly, document the reasoning and review frequently. If the shortage creates unsafe care, I would escalate through bed management, clinical director or executive pathways and advocate using data, incidents, waiting times and consumer impact.'",
+        "FULL PARAGRAPH: 'I would treat resource allocation as an ethical and clinical governance decision. Resource scarcity does not remove duty of care, and I would not silently lower the standard of care. I would assess clinical urgency, risk, vulnerability, likely benefit and safe alternatives, then allocate the scarce resource using transparent, non-discriminatory criteria. For patients who do not receive the preferred resource, I would provide the safest available interim plan, communicate honestly, document the reasoning and review frequently. If the shortage creates unsafe care, I would escalate through bed management, clinical director or executive pathways and advocate using data, incidents, waiting times and consumer impact. The aim is fair, accountable allocation while maintaining individual care and system-level advocacy.'",
+      ],
+      meqApplication:
+        "This paragraph should be reusable in MEQ stems involving bed scarcity, one adolescent bed, ECT theatre access, rural resource shortage, staffing allocation, long-stay patients and service-level rationing.",
+    },
+  ],
+};
+
+export const ETHICS_OVERRIDING_PRINCIPLES: Note = {
+  id: "ethics_overriding_principles",
+  title: "Ethics in Psychiatry: Overriding Principles and MEQ Framework",
+  category: "Ethics in Psychiatry / Professionalism / Legal-Ethical Reasoning / Governance",
+  description:
+    "A comprehensive ethics framework for RANZCP MEQ answers, covering autonomy, beneficence, non-maleficence, justice, dignity, capacity, confidentiality, duty to protect, least restrictive care, cultural safety, child safety, resource fairness, professional boundaries, open disclosure and governance accountability.",
+  sections: [
+    {
+      id: "s01",
+      order: 1,
+      title: "Core Principle",
+      colorTag: "blue",
+      explanation:
+        "Ethics in psychiatry is not abstract philosophy — it is how the consultant makes defensible decisions when duties conflict. Writing values words without a practical consultant decision is the core mark-losing error.",
+      keyPoints: [
+        "A GOOD ETHICS ANSWER: names the ethical tension, identifies affected parties, applies clinical facts, assesses capacity and consent, considers law and policy, balances autonomy and safety, uses least restrictive care, communicates transparently, documents reasoning, reviews the decision.",
+        "MEQ PHRASE: 'There is tension between X and Y. A defensible consultant position is Z because...'",
+        "ETHICAL TENSION SENTENCE BUILDER: 'There is tension between [autonomy/confidentiality/beneficence/justice] and [safety/duty to protect/child safety/resource fairness]. A defensible consultant position is [specific action] because [specific clinical/legal/ethical rationale].'",
+        "ETHICS IS NOT VALUES TALK ONLY: an ethics answer must include clinical facts, capacity, law/policy, risk, proportionality, communication, documentation and review — not just a list of principles.",
+      ],
+      commonTrap:
+        "Writing values words without a practical consultant decision.",
+    },
+    {
+      id: "s02",
+      order: 2,
+      title: "The Four Principles",
+      colorTag: "purple",
+      explanation:
+        "The four principles must be applied together, not in isolation. Applying one principle in isolation and ignoring the others is the classic mark-losing approach.",
+      keyPoints: [
+        "AUTONOMY: respect the patient's right to make informed decisions, including risky or unwise decisions if they have capacity.",
+        "BENEFICENCE: act to benefit the patient and promote recovery, relief of suffering and wellbeing.",
+        "NON-MALEFICENCE: avoid preventable harm, including harm from treatment, coercion, stigma, neglect or unsafe discharge.",
+        "JUSTICE: treat people fairly and allocate resources equitably, without discrimination or stigma.",
+        "FOUR PRINCIPLES CORE CARD: autonomy — beneficence — non-maleficence — justice. In any MEQ ethics stem, name all four and explain how they apply to this specific situation.",
+      ],
+      commonTrap:
+        "Applying one principle in isolation and ignoring the others.",
+    },
+    {
+      id: "s03",
+      order: 3,
+      title: "Overriding Principles in Psychiatry",
+      colorTag: "red",
+      explanation:
+        "Some duties may override ordinary autonomy or confidentiality — but only under strict, proportionate, lawful and time-limited conditions. Thinking 'safety overrides autonomy' means any restrictive action is justified is incorrect.",
+      keyPoints: [
+        "EXAMPLES: serious and imminent risk to patient or others, child protection, duty to warn/protect identifiable person, emergency treatment when patient lacks capacity, compulsory treatment under Mental Health Act criteria, court order or lawful requirement, public safety, lack of capacity with serious preventable harm, protection from exploitation/abuse/coercion.",
+        "OVERRIDING MUST BE: lawful, necessary, proportionate, least restrictive, time-limited, documented, reviewed.",
+        "OVERRIDING DUTIES CARD: serious and imminent risk, child protection, duty to warn/protect, emergency treatment, incapacity with serious preventable harm, court/legal requirement, public safety, least restrictive lawful compulsory treatment.",
+        "Overriding is not a blank cheque — each action must be proportionate to the specific risk, and must be the least restrictive means of managing that risk.",
+      ],
+      commonTrap:
+        "Thinking 'safety overrides autonomy' means any restrictive action is justified.",
+    },
+    {
+      id: "s04",
+      order: 4,
+      title: "Autonomy",
+      colorTag: "blue",
+      explanation:
+        "Autonomy means respecting the person's values, preferences, choices, dignity and right to self-determination — including risky or unwise choices when capacity is present. Equating autonomy with doing whatever the patient requests, even when capacity, risk or legality are not established, misapplies the principle.",
+      keyPoints: [
+        "IN PSYCHIATRY, AUTONOMY APPEARS IN: refusing medication, refusing admission, refusing family involvement, refusing ECT, choosing discharge, advance directives, gender identity, cultural/spiritual care preferences, end-of-life decisions, information sharing preferences.",
+        "AUTONOMY REQUIRES: capacity, adequate information, voluntariness, no coercion, understanding of consequences.",
+        "An unwise decision is not necessarily an incapacitous decision — a patient who understands the consequences of refusing medication and chooses to refuse has exercised autonomy, even if clinicians disagree with the choice.",
+        "Advance directives express autonomy across time — a patient who has capacity now can direct their future care, including specifying treatments they do not want if they lose capacity.",
+      ],
+      commonTrap:
+        "Equating autonomy with doing whatever the patient requests, even when capacity, risk or legality are not established.",
+    },
+    {
+      id: "s05",
+      order: 5,
+      title: "Beneficence",
+      colorTag: "green",
+      explanation:
+        "Beneficence means acting for the patient's benefit — and must be balanced with autonomy. Using 'best interests' to override a capacitous refusal misapplies beneficence.",
+      keyPoints: [
+        "EXAMPLES: treating psychosis, preventing suicide, providing ECT for life-threatening depression, engaging family/supports with consent, advocating for resources, offering trauma-informed care, treating physical health, supporting recovery and autonomy.",
+        "Beneficence must be balanced with autonomy. A treatment that benefits the patient clinically may still require consent or legal authority.",
+        "'Best interests' is the correct framework for patients who lack capacity — it is not a justification for overriding capacitous refusal.",
+        "Beneficence includes long-term benefit — sometimes the most beneficial action is to respect an informed refusal and maintain therapeutic trust, rather than forcing a treatment that the patient will disengage from.",
+      ],
+      commonTrap:
+        "Using 'best interests' to override a capacitous refusal.",
+    },
+    {
+      id: "s06",
+      order: 6,
+      title: "Non-Maleficence",
+      colorTag: "red",
+      explanation:
+        "Non-maleficence means avoiding preventable harm — including harm from the service or treatment, not only from illness. Only thinking of harm from illness and not harm from the service or treatment misses half the principle.",
+      keyPoints: [
+        "HARMS IN PSYCHIATRY INCLUDE: suicide or violence, medication adverse effects, coercion and trauma, seclusion/restraint injury, stigma, privacy breach, cultural harm, family/child harm, unsafe discharge, over-treatment, under-treatment, diagnostic error, staff injury.",
+        "Harm from unnecessary seclusion, coercive medication or premature discharge is as real as harm from untreated psychosis — the principle of non-maleficence applies to both.",
+        "Stigma and diagnostic labelling are harms — applying a diagnosis that is inaccurate, premature or used to justify resource denial causes real and sometimes irreversible harm to the patient's life and treatment.",
+        "Privacy breach is harm — disclosure of psychiatric history to an employer, insurer or family member without consent can have serious consequences for the patient's livelihood, relationships and safety.",
+      ],
+      commonTrap:
+        "Only thinking of harm from illness and not harm from the service or treatment.",
+    },
+    {
+      id: "s07",
+      order: 7,
+      title: "Justice",
+      colorTag: "purple",
+      explanation:
+        "Justice means fairness — which is not always sameness. Treating identical access as fair access when some patients face greater barriers misapplies justice.",
+      keyPoints: [
+        "IN PSYCHIATRY, JUSTICE APPEARS IN: bed allocation, access to ECT, rural service gaps, interpreter access, cultural equity, disability access, avoiding discrimination by diagnosis, public/private interface, waiting lists, staff workload and safety, compulsory treatment safeguards.",
+        "Justice is not always sameness — equity may require extra support to overcome barriers.",
+        "Compulsory treatment safeguards (tribunal review, advocacy, rights information) are a justice mechanism — they ensure that deprivation of liberty occurs through a fair and reviewable process.",
+        "Justice applies to staff as well as patients — fair workload, safe rostering, protection from occupational violence and equitable access to supervision are justice issues.",
+      ],
+      commonTrap:
+        "Treating identical access as fair access when some patients face greater barriers.",
+    },
+    {
+      id: "s08",
+      order: 8,
+      title: "Dignity and Respect",
+      colorTag: "green",
+      explanation:
+        "Dignity is central in psychiatry because patients may be frightened, disinhibited, psychotic, intoxicated, traumatised or dependent on services. Focusing only on risk containment and missing humiliation, stigma or cultural harm neglects this principle.",
+      keyPoints: [
+        "PRESERVE DIGNITY BY: private conversations, respectful language, correct name/pronouns, cultural safety, trauma-informed examination, least restrictive care, avoiding humiliation, explaining decisions, involving supports with consent, protecting privacy.",
+        "Dignity under compulsory treatment is both a legal and ethical requirement — even when a patient is being detained or treated without consent, they retain the right to respectful, trauma-informed care.",
+        "Using correct name and pronouns for transgender and gender-diverse patients is a basic dignity requirement, not an optional courtesy.",
+        "Explaining each clinical step to a frightened, psychotic or intoxicated patient — even when they appear not to understand — is a dignity practice that also reduces escalation risk.",
+      ],
+      commonTrap:
+        "Focusing only on risk containment and missing humiliation, stigma or cultural harm.",
+    },
+    {
+      id: "s09",
+      order: 9,
+      title: "Capacity as an Ethics Gateway",
+      colorTag: "amber",
+      explanation:
+        "Many ethical decisions depend on capacity assessment. Declaring incapacity because the patient disagrees with clinicians conflates disagreement with impaired capacity.",
+      keyPoints: [
+        "CAPACITY IS: decision-specific, time-specific, functional, supported before substituted.",
+        "ASK WHETHER THE PATIENT CAN: understand, retain, use or weigh, communicate.",
+        "If capacity is present, respect refusal even if unwise. If capacity is impaired and harm is serious, consider substitute decision-making, emergency treatment or Mental Health Act pathway.",
+        "MEQ ETHICS TRAP CARD: never write only 'respect autonomy' or only 'ensure safety.' Good answers balance autonomy, safety, law, culture, family, system and documentation.",
+      ],
+      commonTrap:
+        "Declaring incapacity because the patient disagrees with clinicians.",
+    },
+    {
+      id: "s10",
+      order: 10,
+      title: "Informed Consent",
+      colorTag: "purple",
+      explanation:
+        "Valid informed consent requires capacity, information, voluntariness and documentation. Documenting 'consented' without explaining what was discussed or whether consent was voluntary is inadequate.",
+      keyPoints: [
+        "VALID INFORMED CONSENT REQUIRES: capacity, information about nature and purpose, benefits, risks, alternatives, no-treatment option, consequences of refusal, voluntariness, opportunity for questions, documentation.",
+        "IN PSYCHIATRY, INFORMED CONSENT MAY BE COMPLEX DUE TO: psychosis, mania, depression, cognitive impairment, language barriers, family pressure, trauma, MHA status, ECT safeguards.",
+        "Consent is a process, not a signature — a single information session is insufficient if the patient was acutely unwell, frightened or under pressure at the time.",
+        "ECT consent requires specific safeguards — capacity assessment, voluntary or tribunal authorisation, ongoing consent at each treatment, right to withdraw.",
+      ],
+      commonTrap:
+        "Documenting 'consented' without explaining what was discussed or whether consent was voluntary.",
+    },
+    {
+      id: "s11",
+      order: 11,
+      title: "Refusal of Treatment",
+      colorTag: "amber",
+      explanation:
+        "A capacitous patient can refuse treatment even if the refusal is risky or distressing. Treating refusal as proof of poor insight or incapacity conflates clinical disagreement with legal incapacity.",
+      keyPoints: [
+        "RESPONSE: assess decision-specific capacity, optimise communication, explore reasons, explain consequences, offer alternatives, address fear/culture/trauma, involve supports with consent, assess risk, respect capacitous refusal, use lawful pathway if incapacity and serious harm, document.",
+        "Exploring the reasons for refusal often resolves it — fear of side effects, past trauma with treatment, cultural beliefs and misinformation are all addressable reasons that may change with time and good communication.",
+        "A patient who refuses lithium despite knowing the relapse risk has made an informed, capacitous decision — the appropriate response is to respect it, explore it, offer alternatives and maintain engagement.",
+        "The legal pathway (MHA, guardianship) applies only when capacity is impaired and legal criteria are met — it is not a tool for overriding unwise capacitous decisions.",
+      ],
+      commonTrap:
+        "Treating refusal as proof of poor insight or incapacity.",
+    },
+    {
+      id: "s12",
+      order: 12,
+      title: "Least Restrictive Care",
+      colorTag: "green",
+      explanation:
+        "Least restrictive care means using the minimum restriction necessary to manage risk. Using restrictive care because it is easier, faster or preferred by staff/family misapplies this principle.",
+      keyPoints: [
+        "LEAST RESTRICTIVE CARE APPLIES TO: admission versus community care, voluntary versus involuntary care, observation levels, seclusion/restraint, forced medication, CTOs, information sharing, discharge restrictions, child/family involvement.",
+        "Least restrictive does not mean no care — a patient who is acutely suicidal and lacks capacity may need compulsory admission, which is the least restrictive option that adequately manages the risk.",
+        "Restrictive care that is faster and easier for staff (routine seclusion, sedation for agitation) is not least restrictive — it is a staff preference masquerading as clinical practice.",
+        "CTO is a restrictive care measure — its use should be proportionate to relapse risk and least restrictive alternatives should be documented before deciding a CTO is necessary.",
+      ],
+      commonTrap:
+        "Using restrictive care because it is easier, faster or preferred by staff/family.",
+    },
+    {
+      id: "s13",
+      order: 13,
+      title: "Confidentiality",
+      colorTag: "purple",
+      explanation:
+        "Confidentiality supports trust and engagement. Either sharing everything with family or refusing to receive collateral are both errors.",
+      keyPoints: [
+        "START WITH CONSENT: who can we speak to, what can we share, what should not be shared, can we receive collateral?",
+        "CONFIDENTIALITY IS NOT ABSOLUTE. Limited disclosure may be justified for: serious risk, child protection, duty to warn/protect, legal requirement, safe clinical handover, emergency care.",
+        "Receiving collateral from family does not require the patient's consent — but sharing clinical information with family usually does.",
+        "Sharing minimum necessary information means disclosing only the specific details needed to address the specific risk — not a general handover of the clinical history.",
+      ],
+      commonTrap:
+        "Either sharing everything with family or refusing to receive collateral.",
+    },
+    {
+      id: "s14",
+      order: 14,
+      title: "Duty to Warn and Protect",
+      colorTag: "red",
+      explanation:
+        "Duty to protect may arise when there is a specific, identifiable threat. Maintaining confidentiality despite serious identifiable threat is a patient-safety and governance failure.",
+      keyPoints: [
+        "DUTY TO PROTECT MAY ARISE WHEN THERE IS: specific threat, identifiable victim, access to means, history of violence, psychosis or intoxication, domestic violence/stalking, imminent discharge/leave increasing opportunity.",
+        "ACTIONS MAY INCLUDE: reassess risk, restrict leave/discharge, notify senior staff, use MHA if criteria met, notify police, warn victim if necessary, share minimum necessary information, document reasoning.",
+        "The Tarasoff principle is contextualised in Australian law — there is no universal statutory duty to warn, but there may be a duty to protect through reasonable steps, which may include notification.",
+        "Disclosure to warn a victim should be the minimum necessary — identity of the patient, nature of the threat, actions being taken — not a complete clinical handover.",
+      ],
+      commonTrap:
+        "Maintaining confidentiality despite serious identifiable threat.",
+    },
+    {
+      id: "s15",
+      order: 15,
+      title: "Child Safety",
+      colorTag: "red",
+      explanation:
+        "Child safety can override ordinary confidentiality and adult preferences. Treating child safety as a family issue rather than a safeguarding duty is a mandatory reporting failure.",
+      keyPoints: [
+        "CONSIDER CHILD PROTECTION WHEN: child exposed to violence/psychosis/intoxication/unsafe driving, child incorporated into delusions, parent's relapse affects caregiving, family violence, neglect risk, unsafe school pickup, adolescent self-harm/abuse/exploitation, other parent cannot protect.",
+        "Mandatory reporting obligations vary by jurisdiction and professional role — know your state/territory obligations and the threshold for reporting in your setting.",
+        "Reporting to child protection does not end clinical involvement — the treating team continues to engage with the parent and the child as part of the safety plan.",
+        "An assessment that a parent's mental illness poses risk to a child must be based on specific clinical findings, not diagnostic stereotyping — having a mental illness does not automatically make someone an unsafe parent.",
+      ],
+      commonTrap:
+        "Treating child safety as a family issue rather than a safeguarding duty.",
+    },
+    {
+      id: "s16",
+      order: 16,
+      title: "Family and Carer Ethics",
+      colorTag: "teal",
+      explanation:
+        "Family/carers play multiple roles and must be engaged ethically. Either excluding family completely or allowing family wishes to override patient autonomy are both errors.",
+      keyPoints: [
+        "FAMILY/CARERS MAY BE: supportive, source of collateral, essential for discharge, distressed, coercive, source of risk, potential victims, culturally important, legally authorised substitute decision-makers.",
+        "ETHICAL APPROACH: seek patient consent, receive collateral, share minimum necessary information, balance autonomy/safety/family involvement, avoid family pressure replacing patient decision-making, document.",
+        "Distressed family members need support and information — but their distress does not give them authority to override a capacitous patient's decisions.",
+        "A legally appointed substitute decision-maker (guardian, enduring power of attorney for health) has authority only within the scope of their appointment — and must act according to the patient's values and best interests, not their own preferences.",
+      ],
+      commonTrap:
+        "Either excluding family completely or allowing family wishes to override patient autonomy.",
+    },
+    {
+      id: "s17",
+      order: 17,
+      title: "Cultural Safety",
+      colorTag: "green",
+      explanation:
+        "Cultural safety is ethical practice. Writing 'respect culture' but not changing communication, pathway, governance or power misses the governance dimension.",
+      keyPoints: [
+        "CULTURAL SAFETY INCLUDES: interpreter access, Aboriginal liaison/health worker involvement, ACCHO partnership, Elders/family/community involvement with consent, avoiding racism, avoiding pathologising cultural experiences, understanding refugee trauma and mistrust, monitoring inequity, responding to racism complaints.",
+        "Cultural safety is judged by the patient, family and community — not by the service's intention.",
+        "Racism is a harm — experiencing racism in a healthcare setting causes psychological injury, reduces trust and increases the risk of future disengagement from services.",
+        "Cultural safety and clinical safety are not in competition — they reinforce each other. A culturally unsafe service produces poorer clinical outcomes.",
+      ],
+      commonTrap:
+        "Writing 'respect culture' but not changing communication, pathway, governance or power.",
+    },
+    {
+      id: "s18",
+      order: 18,
+      title: "Professional Boundaries",
+      colorTag: "purple",
+      explanation:
+        "Boundaries protect patients, clinicians and therapeutic integrity. Normalising boundary crossing because the clinician intended kindness misses the harm it causes.",
+      keyPoints: [
+        "BOUNDARY RISKS: gifts, social media contact, dual relationships, sexual/romantic conduct, treating friends/family, over-disclosure, favouritism, forensic/treating role conflict, staff-patient relationships, dependency.",
+        "Boundary crossings exist on a spectrum from minor (accepting a small gift) to major (sexual contact) — all require reflection, and most require documentation or supervision discussion.",
+        "Social media contact with patients blurs the professional boundary even when the contact appears benign — patients may access personal information about the clinician and the asymmetry of the therapeutic relationship is compromised.",
+        "'I intended kindness' is not a defence against boundary violations — the therapeutic harm of boundary crossing is caused by the crossing itself, not by intent.",
+      ],
+      commonTrap:
+        "Normalising boundary crossing because the clinician intended kindness.",
+    },
+    {
+      id: "s19",
+      order: 19,
+      title: "Dual Roles: Treating Versus Forensic",
+      colorTag: "amber",
+      explanation:
+        "Psychiatrists may face conflict between treating role and assessment for court, employer, insurer, tribunal or risk report. Using therapeutic information for forensic purpose without role clarity is an ethical breach.",
+      keyPoints: [
+        "PRINCIPLES: clarify role, explain limits of confidentiality, obtain consent where required, avoid misleading patient, avoid treating/forensic role conflict where possible, document, use independent assessor if needed.",
+        "A treating psychiatrist should generally not also provide a forensic or medico-legal report on the same patient — the roles create conflicting obligations (therapeutic alliance versus impartial assessment).",
+        "When dual roles are unavoidable, the patient must be explicitly informed which hat the clinician is wearing at each interaction — and which confidentiality rules apply.",
+        "Information obtained in a treating context (e.g. disclosures made under the expectation of therapeutic confidentiality) should not be used in a forensic report without the patient's informed consent.",
+      ],
+      commonTrap:
+        "Using therapeutic information for forensic purpose without role clarity.",
+    },
+    {
+      id: "s20",
+      order: 20,
+      title: "Truthfulness and Transparency",
+      colorTag: "green",
+      explanation:
+        "Ethical psychiatry requires honesty with patients about diagnosis, risk, treatment limits and resource constraints. Avoiding honest discussion to preserve alliance creates later mistrust.",
+      keyPoints: [
+        "ETHICAL HONESTY INCLUDES: diagnosis and formulation, risks and uncertainty, treatment benefits and harms, resource constraints, adverse events, complaint process, open disclosure, limits of confidentiality, legal status.",
+        "Honest uncertainty is more ethical than false reassurance — 'I am not sure yet but here is what I know and what I am doing' is a more defensible position than overconfident prognosis.",
+        "Disclosing resource constraints ('the clinical ideal is X, but what is available is Y, and here is why and what I am doing about it') is both honest and clinically appropriate.",
+        "Transparency about legal status — informing a patient that they are being detained, on a CTO or subject to a tribunal hearing — is a rights requirement, not optional.",
+      ],
+      commonTrap:
+        "Avoiding honest discussion to preserve alliance, creating later mistrust.",
+    },
+    {
+      id: "s21",
+      order: 21,
+      title: "Open Disclosure",
+      colorTag: "green",
+      explanation:
+        "Open disclosure is required when care did not go to plan and harm occurred or may have occurred. Referring to complaints unit without acknowledging harm misses the open disclosure obligation.",
+      keyPoints: [
+        "OPEN DISCLOSURE INCLUDES: patient safety now, acknowledge event, apology or regret, known facts, unknowns, immediate care plan, support person, investigation, follow-up meeting, documentation, staff support, system learning.",
+        "An apology in open disclosure does not constitute an admission of liability — in most Australian jurisdictions, apologies made as part of open disclosure are protected.",
+        "Open disclosure is a conversation, not a letter — it requires a face-to-face meeting in a private setting, a support person for the patient/family, and time for questions.",
+        "Staff support after open disclosure is part of the process — clinicians involved in an adverse event also experience distress, and the open disclosure process should include debrief and support for the team.",
+      ],
+      commonTrap:
+        "Referring to complaints unit without acknowledging harm.",
+    },
+    {
+      id: "s22",
+      order: 22,
+      title: "Restrictive Practice Ethics",
+      colorTag: "red",
+      explanation:
+        "Seclusion, restraint and forced medication create ethical tension between safety and coercion minimisation. Using restrictive practice as punishment, convenience or substitute for staffing is an ethical and governance violation.",
+      keyPoints: [
+        "PRINCIPLES: last resort, least restrictive, legal authority, proportionality, dignity, trauma-informed approach, monitoring, medical review, documentation, debrief, governance review.",
+        "Seclusion and restraint should never be punitive — punishing a patient for behaviour driven by psychosis, mania or delirium through restrictive practice is both unethical and unlawful.",
+        "Trauma-informed restrictive practice acknowledges that restraint and seclusion are inherently traumatising and may re-traumatise patients with prior trauma histories — every episode requires debrief and review.",
+        "Governance review of every seclusion/restraint episode is not bureaucratic overhead — it is the mechanism by which the service learns whether it is reducing restrictive practice and whether individual episodes met the last-resort threshold.",
+      ],
+      commonTrap:
+        "Using restrictive practice as punishment, convenience or substitute for staffing.",
+    },
+    {
+      id: "s23",
+      order: 23,
+      title: "Resource Justice",
+      colorTag: "purple",
+      explanation:
+        "Resource scarcity requires distributive justice. Silently lowering standard of care because resources are scarce is an ethical failure.",
+      keyPoints: [
+        "USE: transparent criteria, clinical urgency, likely benefit, vulnerability, lack of alternatives, avoid discrimination, document, escalate, advocate.",
+        "Resource justice connects to cultural justice — scarcity disproportionately affects already disadvantaged groups, and this inequity must be named, monitored and addressed.",
+        "Distributive justice in resources is not only about individual allocation decisions — it is also about advocacy for equitable service design, funding and workforce.",
+        "Silent acceptance of resource scarcity normalises unsafe care and prevents governance from identifying and responding to the problem.",
+      ],
+      commonTrap:
+        "Silently lowering standard of care because resources are scarce.",
+    },
+    {
+      id: "s24",
+      order: 24,
+      title: "Staff Safety Ethics",
+      colorTag: "red",
+      explanation:
+        "Staff safety is an ethical issue — not separate from patient care ethics. Treating assault, stalking or burnout as normal psychiatric work is an ethical and governance failure.",
+      keyPoints: [
+        "ETHICAL BALANCE: continue patient care, protect staff from foreseeable harm, avoid punitive response, do not normalise occupational violence, use safer model of care, report and review WHS risk, support staff after harm.",
+        "Staff safety is a patient safety issue — a traumatised, threatened or exhausted workforce cannot deliver safe, therapeutic care.",
+        "The 'safer model of care' — clinic instead of home visit, two-person visit, security support, telehealth — protects staff without abandoning the patient.",
+        "Burnout and moral injury are foreseeable harms of poorly resourced, high-acuity psychiatric work — they are organisational and governance failures, not individual resilience failures.",
+      ],
+      commonTrap:
+        "Treating assault, stalking or burnout as normal psychiatric work.",
+    },
+    {
+      id: "s25",
+      order: 25,
+      title: "Trainee Supervision Ethics",
+      colorTag: "purple",
+      explanation:
+        "Supervision involves three simultaneous duties — to the patient, to the trainee and to the system. Protecting trainee by hiding unsafe practice, or protecting patient by abandoning trainee, are both ethical failures.",
+      keyPoints: [
+        "SUPERVISION INVOLVES: duty to patient, duty to trainee, duty to system.",
+        "ETHICAL APPROACH: ensure patient safety, support trainee, provide feedback, match supervision to competence/risk, escalate serious concerns, avoid scapegoating, document supervision.",
+        "A consultant who allows an unsafe trainee to continue practising without escalation is failing both the trainee (who needs intervention and support) and the patient (who deserves competent care).",
+        "Supervision documentation protects the trainee (evidence of guidance received) and the consultant (evidence that appropriate oversight was provided) — it is a governance requirement, not optional.",
+      ],
+      commonTrap:
+        "Protecting trainee by hiding unsafe practice, or protecting patient by abandoning trainee.",
+    },
+    {
+      id: "s26",
+      order: 26,
+      title: "Ethics and Law",
+      colorTag: "purple",
+      explanation:
+        "Ethics and law overlap but are not identical. Assuming legal compliance is enough for ethical practice ignores the higher standard that ethics demands.",
+      keyPoints: [
+        "LAW SETS MINIMUM REQUIREMENTS: MHA, capacity law, guardianship, privacy, child protection, duty of care, court orders.",
+        "ETHICS ASKS: is this respectful, is it fair, is it least restrictive, is it transparent, is it culturally safe, is it clinically proportionate, is it accountable?",
+        "Lawful care is necessary but not sufficient — involuntary admission that meets legal criteria but is conducted without dignity, without cultural safety and without least restrictive principle is legally defensible but ethically inadequate.",
+        "Ethics provides the standard above the legal floor — it is what distinguishes care that is merely permitted from care that is good.",
+      ],
+      commonTrap:
+        "Assuming legal compliance is enough for ethical practice.",
+    },
+    {
+      id: "s27",
+      order: 27,
+      title: "Ethical Decision-Making Framework",
+      colorTag: "blue",
+      explanation:
+        "Use this structured framework in any ethics MEQ. Jumping to a decision without naming the competing duties misses the reasoning the examiner is looking for.",
+      keyPoints: [
+        "STEP 1-6: (1) define the ethical problem, (2) identify stakeholders, (3) clarify clinical facts, (4) assess capacity and consent, (5) identify risks, (6) identify applicable law/policy.",
+        "STEP 7-12: (7) identify ethical principles in tension, (8) consider options, (9) choose least restrictive proportionate option, (10) communicate transparently, (11) document reasoning, (12) review outcome.",
+        "The framework is a thinking tool, not a rigid script — in an MEQ, you demonstrate that you have worked through each step, even if you do not label them explicitly.",
+        "Naming the competing principles ('there is tension between autonomy and safety because...') demonstrates the ethical reasoning the examiner is looking for — not just the decision reached.",
+      ],
+      commonTrap:
+        "Jumping to a decision without naming the competing duties.",
+    },
+    {
+      id: "s28",
+      order: 28,
+      title: "Overriding Autonomy",
+      colorTag: "red",
+      explanation:
+        "Autonomy may be overridden only under strict conditions. Overriding autonomy because the patient is making a decision clinicians dislike misapplies the override.",
+      keyPoints: [
+        "EXAMPLES WHERE AUTONOMY MAY BE OVERRIDDEN: serious risk with MHA criteria, emergency treatment when lacking capacity, child protection, public safety, duty to protect, court order, incapacity with serious preventable harm.",
+        "SAFEGUARDS: legal authority, least restrictive option, proportionality, time limitation, review, documentation, appeal/rights information.",
+        "Overriding autonomy without legal authority is unlawful — 'clinical necessity' is not a legal authority for compulsory treatment in Australian jurisdictions.",
+        "Rights information must be provided when autonomy is overridden — the patient must know what authority is being used, what their rights are, how to appeal and who can advocate for them.",
+      ],
+      commonTrap:
+        "Overriding autonomy because the patient is making a decision clinicians dislike.",
+    },
+    {
+      id: "s29",
+      order: 29,
+      title: "Overriding Confidentiality",
+      colorTag: "red",
+      explanation:
+        "Confidentiality may be overridden in specific circumstances but only with proportionate disclosure. Sharing more than necessary once an exception applies is a privacy breach.",
+      keyPoints: [
+        "CONFIDENTIALITY MAY BE OVERRIDDEN FOR: serious and imminent risk, duty to warn/protect, child protection, legal requirement, safe clinical handover, emergency care.",
+        "SAFEGUARDS: seek consent first if possible, share minimum necessary information, disclose to person/agency best able to reduce risk, document rationale, inform patient where safe/appropriate.",
+        "Minimum necessary information means disclosing what is needed to address the specific risk — for a threat of violence, this is the nature of the threat and the identity of the person making it, not the complete psychiatric history.",
+        "Where confidentiality is breached without consent, the patient should be informed after the fact (where safe) — transparency is a governance and trust requirement even in emergency situations.",
+      ],
+      commonTrap:
+        "Sharing more than necessary once an exception applies.",
+    },
+    {
+      id: "s30",
+      order: 30,
+      title: "Overriding Family Wishes",
+      colorTag: "amber",
+      explanation:
+        "Family wishes may be overridden in specific circumstances. Letting distressed family become the decision-maker when patient has capacity is a violation of autonomy.",
+      keyPoints: [
+        "FAMILY WISHES MAY BE OVERRIDDEN WHEN: patient has capacity and chooses differently, family request is unsafe or coercive, family demand breaches confidentiality, family refuse necessary care without authority, child safety is at risk, substitute decision-maker is not acting according to patient's values/best interests.",
+        "Distress is not authority — a distressed family member who demands information, demands a particular treatment or demands that the patient be detained does not have legal authority to override a capacitous patient's wishes.",
+        "A substitute decision-maker who appears to be acting in their own interests rather than the patient's interests should be challenged — through advocacy, guardianship tribunal or clinical governance.",
+        "Family conflict over treatment decisions may require mediation, ethics consultation or legal clarification — it should not be resolved by clinicians taking sides.",
+      ],
+      commonTrap:
+        "Letting distressed family become the decision-maker when patient has capacity.",
+    },
+    {
+      id: "s31",
+      order: 31,
+      title: "Overriding Patient Preference for Discharge",
+      colorTag: "red",
+      explanation:
+        "A patient's wish to leave may be overridden only if legal criteria are met. Keeping the patient because family or staff are anxious, without legal criteria, is unlawful detention.",
+      keyPoints: [
+        "ASSESS: capacity, mental illness, risk, less restrictive options, supports, legal criteria, MHA pathway, documentation, rights information.",
+        "A voluntary patient who wants to leave must be allowed to leave unless legal criteria for involuntary detention are met — staff anxiety or family request are not legal criteria.",
+        "Before initiating MHA criteria for a patient wishing to leave, consider whether there are less restrictive alternatives — safety plan with family, crisis team involvement, GP follow-up — that manage the risk without deprivation of liberty.",
+        "If MHA criteria are met, the process must include rights information, advocacy access, documented clinical reasoning and clear review timeframes.",
+      ],
+      commonTrap:
+        "Keeping the patient because family or staff are anxious, without legal criteria.",
+    },
+    {
+      id: "s32",
+      order: 32,
+      title: "MEQ Ethics Examples",
+      colorTag: "blue",
+      explanation:
+        "Six worked examples covering the most common ethics MEQ stems. In each, failing to state the ethical tension explicitly is the core mark-losing error.",
+      keyPoints: [
+        "EXAMPLE 1 — CONFIDENTIALITY vs DUTY TO PROTECT: patient threatens ex-partner and refuses disclosure. ETHICAL ISSUE: confidentiality versus serious identifiable risk. DEFENSIBLE POSITION: seek consent if safe, but disclose minimum necessary to police/victim if serious foreseeable harm.",
+        "EXAMPLE 2 — AUTONOMY vs BENEFICENCE: capacitous patient refuses lithium despite relapse risk. ETHICAL ISSUE: autonomy versus relapse prevention. DEFENSIBLE POSITION: respect refusal, explore reasons, offer alternatives, relapse plan and follow-up.",
+        "EXAMPLE 3 — FAMILY WISHES vs PATIENT AUTONOMY: family demands ECT but patient refuses and has capacity. ETHICAL ISSUE: family distress versus patient autonomy. DEFENSIBLE POSITION: respect capacitous refusal, address family distress and revisit if capacity changes.",
+        "EXAMPLE 4 — LEAST RESTRICTIVE CARE vs SAFETY: psychotic patient refuses admission and threatens self. ETHICAL ISSUE: autonomy/least restrictive care versus serious harm. DEFENSIBLE POSITION: consider involuntary admission only if criteria met and no safe less restrictive option.",
+        "EXAMPLE 5 — JUSTICE vs INDIVIDUAL BENEFIT: one adolescent bed available. ETHICAL ISSUE: duty to individual versus fair allocation. DEFENSIBLE POSITION: transparent clinical prioritisation and safe alternative plan for other patient.",
+        "EXAMPLE 6 — CULTURAL SAFETY vs URGENT RISK: refugee patient refuses interpreter and appears medically unwell. ETHICAL ISSUE: autonomy/cultural trust versus urgent safety. DEFENSIBLE POSITION: urgent medical triage with best available communication, then full assessment with acceptable interpreter.",
+      ],
+      commonTrap:
+        "Not stating the ethical tension explicitly.",
+    },
+    {
+      id: "s33",
+      order: 33,
+      title: "Command-Word Discipline",
+      colorTag: "amber",
+      explanation:
+        "Ethics answers require case-specific justification, not generic ethical words. Using ethical words without case-specific justification loses marks even when the principles are correct.",
+      keyPoints: [
+        "LIST: autonomy, beneficence, non-maleficence, justice, capacity, least restrictive care, duty to protect, documentation.",
+        "OUTLINE (list and justify): 'Assess capacity — because autonomy depends on ability to make this specific decision. Use least restrictive care — because safety interventions should not exceed what is necessary. Document reasoning — because ethical decisions must be accountable.'",
+        "DESCRIBE (list and explain): 'Share minimum necessary information — because confidentiality exceptions permit proportionate safety disclosure, not unrestricted release.'",
+        "DISCUSS (name the tension): 'There is tension between X and Y. A defensible consultant position is Z because...'",
+      ],
+      commonTrap:
+        "Using ethical words without case-specific justification.",
+    },
+    {
+      id: "s34",
+      order: 34,
+      title: "Examiner Phrases",
+      colorTag: "green",
+      explanation:
+        "Use these phrases to signal consultant-level ethics reasoning. Writing generic 'ethical principles' without taking a consultant position signals registrar-level thinking.",
+      keyPoints: [
+        "'There is tension between autonomy and safety.'",
+        "'A defensible consultant position is...'",
+        "'Capacity is decision-specific and time-specific.'",
+        "'An unwise decision is not necessarily an incapacitous decision.'",
+        "'Confidentiality is not absolute, but disclosure must be minimum necessary.'",
+        "'Least restrictive care does not mean no care.'",
+        "'Family involvement is important but does not replace patient autonomy.'",
+        "'Resource scarcity does not remove duty of care.'",
+        "'Cultural safety is judged by the patient, family and community.'",
+        "'Open disclosure is a transparency and governance duty.'",
+        "'Lawfulness is necessary but not always sufficient for ethical care.'",
+        "'I would document the reasoning, not only the decision.'",
+      ],
+      commonTrap:
+        "Writing generic 'ethical principles' without taking a consultant position.",
+    },
+    {
+      id: "s35",
+      order: 35,
+      title: "Common Ethics Traps",
+      colorTag: "amber",
+      explanation:
+        "Use this as a pre-submit checklist for any ethics MEQ stem. Answering 'it depends' without deciding what you would do is the most common mark-losing approach.",
+      keyPoints: [
+        "Respecting autonomy without assessing capacity.",
+        "Ensuring safety without considering least restrictive care.",
+        "Sharing with family without consent or safety basis.",
+        "Maintaining confidentiality despite serious identifiable threat.",
+        "Using MHA for housing/resource problems.",
+        "Letting family override capacitous patient.",
+        "Ignoring cultural safety.",
+        "Ignoring staff safety.",
+        "Ignoring justice/resource fairness.",
+        "Failing to name the ethical tension.",
+        "Failing to document reasoning.",
+        "Treating legal compliance as the whole ethical answer.",
+        "Avoiding taking a defensible position.",
+      ],
+      meqApplication:
+        "Use this as a pre-submit checklist for any ethics MEQ stem — any item relevant to the stem that is absent from your answer is a lost mark.",
+    },
+    {
+      id: "s36",
+      order: 36,
+      title: "Consultant-Level Summary",
+      colorTag: "green",
+      explanation:
+        "This paragraph is reusable in almost any RANZCP ethics/governance MEQ stem — it is the template for a defensible consultant ethics answer.",
+      keyPoints: [
+        "CLINICAL AND CAPACITY: 'I would approach this as an ethical decision requiring clinical facts, capacity assessment, legal awareness and transparent reasoning.'",
+        "PRINCIPLES AND POSITION: 'I would identify the competing duties — usually autonomy, beneficence, non-maleficence, justice, confidentiality, safety, cultural respect or resource fairness — and take a defensible consultant position.'",
+        "OVERRIDES AND DOCUMENTATION: 'If autonomy or confidentiality must be overridden, I would ensure the action is lawful, necessary, proportionate, least restrictive, time-limited and documented.'",
+        "FULL PARAGRAPH: 'I would approach this as an ethical decision requiring clinical facts, capacity assessment, legal awareness and transparent reasoning. I would identify the competing duties — usually autonomy, beneficence, non-maleficence, justice, confidentiality, safety, cultural respect or resource fairness — and take a defensible consultant position. If autonomy or confidentiality must be overridden, I would ensure the action is lawful, necessary, proportionate, least restrictive, time-limited and documented. I would communicate honestly with the patient, family and team, provide support and alternatives where possible, and review the decision through appropriate clinical or governance pathways. The aim is not simply to choose safety or autonomy, but to make a fair, accountable and clinically safe decision.'",
+      ],
+      meqApplication:
+        "This paragraph should be reusable in almost any RANZCP ethics/governance MEQ stem.",
+    },
+  ],
+};
+
+export const ALL_NOTES: Note[] = [DISCHARGE_PLAN, CONFLICT_MANAGEMENT, COMPLAINT_PROCESS, INCIDENT_MANAGEMENT, CLINICAL_AUDIT, OPEN_DISCLOSURE, RESTRICTIVE_PRACTICES, RESTRICTIVE_PRACTICES_MEQ, CONFIDENTIALITY, CAPACITY_CONSENT, SUPERVISION_TRAINING, WHS_STAFF_SAFETY, CULTURAL_SAFETY, RESEARCH_GOVERNANCE, RESOURCE_ALLOCATION_ETHICS, ETHICS_OVERRIDING_PRINCIPLES];
