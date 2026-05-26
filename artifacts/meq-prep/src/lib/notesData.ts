@@ -6540,4 +6540,601 @@ export const CULTURAL_SAFETY: Note = {
   ],
 };
 
-export const ALL_NOTES: Note[] = [DISCHARGE_PLAN, CONFLICT_MANAGEMENT, COMPLAINT_PROCESS, INCIDENT_MANAGEMENT, CLINICAL_AUDIT, OPEN_DISCLOSURE, RESTRICTIVE_PRACTICES, RESTRICTIVE_PRACTICES_MEQ, CONFIDENTIALITY, CAPACITY_CONSENT, SUPERVISION_TRAINING, WHS_STAFF_SAFETY, CULTURAL_SAFETY];
+export const RESEARCH_GOVERNANCE: Note = {
+  id: "research_governance",
+  title: "Research Governance versus Audit Governance in Psychiatry",
+  category: "Clinical Governance / Research Ethics / Audit / Quality Improvement",
+  description:
+    "A consultant-level framework for distinguishing research, audit, quality improvement and service evaluation in psychiatry, including observational studies in schizophrenia, vulnerable participants, consent and capacity, ethics approval, data privacy, conflicts of interest, authorship, adverse findings during a study, cultural consultation and publication governance.",
+  sections: [
+    {
+      id: "s01",
+      order: 1,
+      title: "Core Principle",
+      colorTag: "blue",
+      explanation:
+        "Research, audit and quality improvement are all part of good psychiatry — but they are governed differently. The first job is to classify the project correctly, then match the governance pathway to its risk, participants and intent.",
+      keyPoints: [
+        "AUDIT AND QI ASK: 'Are we providing care according to accepted standards, and how can we improve local practice?' RESEARCH ASKS: 'What new knowledge can we generate that may apply beyond this local service?'",
+        "GOOD MEQ ANSWER: 'I would first clarify whether the proposal is audit, quality improvement, service evaluation or research. I would then match the governance pathway to the project risk, participants, consent requirements, data privacy, vulnerability, cultural considerations, publication intent and need to act on adverse findings.'",
+        "KEY POINT: do not block useful audit by over-medicalising governance, but do not call research an audit to avoid ethics approval.",
+        "MEQ TENSION: 'There is tension between generating useful knowledge and protecting vulnerable participants. A defensible consultant position is to support research or audit that has clear value, proportionate ethics/governance review, valid consent or lawful waiver, privacy safeguards, cultural consultation where relevant, and a plan to act on clinically significant findings.'",
+      ],
+      commonTrap:
+        "Assuming that because a project uses existing records it does not need governance review.",
+    },
+    {
+      id: "s02",
+      order: 2,
+      title: "Why This Is Examinable",
+      colorTag: "blue",
+      explanation:
+        "The examiner wants to see governance maturity across ethics, consent, privacy, culture, publication integrity and patient safety. Answering only with 'get ethics approval' and missing consent, vulnerability, privacy, adverse findings and authorship loses marks.",
+      keyPoints: [
+        "MEQ STEM PATTERNS: audit versus research, ECT audit, metabolic monitoring audit, discharge-summary audit, observational study in schizophrenia, research with involuntary inpatients, consent and capacity for research, publication based on patient data.",
+        "MORE PATTERNS: vulnerable participants, cultural consultation, authorship disputes, adverse findings during study, researcher conflict of interest, trainee pressured to collect data, pharmaceutical-sponsored study, patient complains they did not know their records were used.",
+        "KEY POINT: the examiner wants to see governance maturity — ethics, consent, privacy, culture, publication integrity and patient safety.",
+        "Governance maturity means knowing which pathway applies, why it applies, and what to do when something goes wrong during a study — not just 'seek HREC approval.'",
+      ],
+      commonTrap:
+        "Answering only with 'get ethics approval' and missing consent, vulnerability, privacy, adverse findings and authorship.",
+    },
+    {
+      id: "s03",
+      order: 3,
+      title: "Audit Versus Research",
+      colorTag: "purple",
+      explanation:
+        "The label attached to a project does not determine its governance pathway — its purpose and methods do. Calling a project an audit just because it uses local data, even when it is designed to answer a new generalisable research question, is the core classification error.",
+      keyPoints: [
+        "AUDIT: measures current practice against explicit standards, uses accepted guidelines/policy/benchmarks, aims to improve local care, usually involves existing practice or records, should lead to action and re-audit.",
+        "QUALITY IMPROVEMENT: tests or implements changes to improve local systems, may use PDSA/PDCA cycles, focuses on service performance and patient outcomes, needs governance and risk review.",
+        "SERVICE EVALUATION: assesses whether a service or program is working as intended, may examine access/outcomes/patient experience/efficiency, may overlap with audit or QI.",
+        "RESEARCH: uses systematic methods to generate new knowledge, may test hypotheses, may involve intervention/randomisation/data linkage/novel measures, usually aims for generalisable findings, requires research ethics and governance review.",
+        "AUDIT vs RESEARCH COMPARISON: Audit = measures current practice against existing standards to improve local care. QI = tests or implements changes to improve local systems. Service evaluation = assesses whether a service is working as intended. Research = generates new, generalisable knowledge using systematic methods. Publication intent alone does not automatically make something research, but public dissemination increases governance and ethics scrutiny.",
+      ],
+      commonTrap:
+        "Calling a project an audit just because it uses local data, even when it is designed to answer a new generalisable research question.",
+    },
+    {
+      id: "s04",
+      order: 4,
+      title: "Audit Is Still Governance",
+      colorTag: "green",
+      explanation:
+        "Audit does not mean 'no governance.' Collecting audit data but not acting on findings or re-auditing defeats the purpose of the audit.",
+      keyPoints: [
+        "A GOOD AUDIT SHOULD HAVE: clear aim, explicit standard or benchmark, defined population, data items, data privacy plan, approval through local audit/QI governance, consumer or carer input where relevant, feedback to clinicians, action plan, re-audit.",
+        "AUDIT EXAMPLES IN PSYCHIATRY: ECT consent documentation audit, clozapine blood monitoring audit, lithium monitoring audit, metabolic monitoring audit, seclusion/restraint audit, discharge summary completion audit, CAMHS transition audit, suicide-risk pathway audit.",
+        "The 'audit cycle' — measure, compare to standard, change, re-measure — is what distinguishes a real audit from a data extraction exercise.",
+        "ETHICS/GOVERNANCE DECISION TREE: (1) Is this research, audit, QI or service evaluation? (2) Does it involve patients/staff/records/tissue/genetic data/linkage? (3) Is there more than low risk? (4) Are participants vulnerable? (5) Is consent required or waived? (6) Is HREC review required? (7) Is site governance approval required? (8) Is cultural review required? (9) Will findings be published? (10) Who owns data and authorship?",
+      ],
+      commonTrap:
+        "Collecting audit data but not acting on findings or re-auditing.",
+    },
+    {
+      id: "s05",
+      order: 5,
+      title: "Publication Intent and Blurred Boundaries",
+      colorTag: "amber",
+      explanation:
+        "Publication intent alone does not automatically make a project research, but it increases governance and ethics scrutiny. Starting as 'audit' then publishing as research without ethics/governance clearance is a research integrity breach.",
+      keyPoints: [
+        "ASK WHEN BOUNDARIES ARE BLURRED: was the project designed from the start to create generalisable knowledge, are methods beyond routine audit, is there randomisation/intervention/novel hypothesis, are identifiable or sensitive data used, are vulnerable participants included, is consent needed or waived?",
+        "ALSO ASK: does local policy require HREC or low-risk review before publication, have participants or governance bodies been told about dissemination?",
+        "MEQ PHRASE: 'I would not rely on labels. I would ask the ethics/governance office to confirm the correct pathway before data collection or publication.'",
+        "Many services have a policy that any project intended for publication must be registered with the research governance office before data collection — 'we started as audit' is not a defence if the project was designed to publish.",
+      ],
+      commonTrap:
+        "Starting as 'audit' then publishing as research without ethics/governance clearance.",
+    },
+    {
+      id: "s06",
+      order: 6,
+      title: "Ethics Approval Versus Governance Approval",
+      colorTag: "purple",
+      explanation:
+        "Ethics approval and site governance approval are separate processes. Thinking HREC approval alone means the hospital/service must allow the project to proceed is incorrect.",
+      keyPoints: [
+        "ETHICS APPROVAL ASKS: 'Is this ethically acceptable for participants?' It considers scientific merit, risk-benefit balance, consent, vulnerable participants, privacy, data management, cultural safety, participant information, complaints and adverse-event response.",
+        "SITE GOVERNANCE APPROVAL ASKS: 'Can this be safely and properly conducted at this site?' It considers local resources, staff workload, access to records, indemnity/insurance, contracts, data storage, local policies, credentialing, conflict of interest and impact on clinical care.",
+        "Both approvals are required for research conducted in a health service — HREC approval does not authorise site access.",
+        "VULNERABLE PARTICIPANT WARNING: psychiatric diagnosis alone does not remove capacity, but psychosis/mania/depression/cognitive impairment/coercion/dependency/involuntary status/homelessness/trauma/forensic status/youth and Aboriginal/refugee status may increase vulnerability and require extra safeguards.",
+      ],
+      commonTrap:
+        "Thinking HREC approval alone means the hospital/service must allow the project to proceed.",
+    },
+    {
+      id: "s07",
+      order: 7,
+      title: "HREC and Low-Risk Review",
+      colorTag: "purple",
+      explanation:
+        "Not all projects require full HREC review, but every project should be triaged through the correct governance pathway. Assuming retrospective chart review never requires ethics review is incorrect.",
+      keyPoints: [
+        "POSSIBLE PATHWAYS: local audit/QI registration, low-risk ethics review, full HREC review, site-specific assessment, Aboriginal ethics review or cultural governance review, research governance office review, data custodian approval, consent waiver request, clinical trials governance if applicable.",
+        "FACTORS INCREASING ETHICS SCRUTINY: vulnerable participants, involuntary patients, impaired capacity, sensitive mental health/AOD/forensic data, identifiable data, data linkage, genetic/tissue data, intervention beyond usual care, randomisation, deception, more than low risk.",
+        "MORE FACTORS: Aboriginal and Torres Strait Islander participants or communities, publication of potentially identifiable case material.",
+        "The National Statement (NHMRC) distinguishes low-risk, negligible-risk and greater-than-low-risk research — the pathway depends on the level of risk, not only the type of project.",
+      ],
+      commonTrap:
+        "Assuming retrospective chart review never requires ethics review.",
+    },
+    {
+      id: "s08",
+      order: 8,
+      title: "Consent in Research",
+      colorTag: "teal",
+      explanation:
+        "Research consent is distinct from clinical treatment consent. Assuming a patient can be included in research because they are already receiving care from the service conflates clinical and research relationships.",
+      keyPoints: [
+        "RESEARCH CONSENT SHOULD BE: voluntary, informed, specific enough, capacity-based, free from coercion, documented, able to be withdrawn where possible.",
+        "PARTICIPANTS SHOULD UNDERSTAND: purpose of study, what participation involves, risks and benefits, alternatives (including non-participation), confidentiality and data use, who will access data, whether treatment is affected, who funds the study, how complaints are made, what happens if concerning findings emerge.",
+        "MEQ PHRASE: 'Consent for clinical treatment is not the same as consent for research.'",
+        "ADVERSE FINDING DURING STUDY: research role does not remove clinical duty — serious risk, suicidality, psychosis, abuse, child safety, medication toxicity or medical deterioration must trigger a pre-defined safety pathway.",
+      ],
+      commonTrap:
+        "Assuming a patient can be included in research because they are already receiving care from the service.",
+    },
+    {
+      id: "s09",
+      order: 9,
+      title: "Capacity to Consent to Research",
+      colorTag: "amber",
+      explanation:
+        "Capacity for research consent is decision-specific and time-specific. Excluding all people with schizophrenia as incapable, or assuming all have capacity without checking, are both errors.",
+      keyPoints: [
+        "ASSESS WHETHER THE PERSON CAN: understand the study purpose, understand what participation involves, understand risks/benefits/alternatives, understand voluntary nature, understand withdrawal rights, weigh information in relation to their own situation, communicate a choice.",
+        "PSYCHIATRIC DIAGNOSIS ALONE DOES NOT REMOVE CAPACITY. Capacity may be impaired by: psychosis, mania, severe depression, cognitive impairment, delirium, intoxication, sedation, intellectual disability, acute distress, therapeutic misconception.",
+        "Capacity can fluctuate — a person may not have capacity during acute psychosis but regain it when stabilised, and assessment should be timed accordingly.",
+        "Where capacity is impaired, supported decision-making, substitute consent or ethics-approved waiver may be options — exclusion of all people with impaired capacity is rarely justified and may constitute unjust exclusion from potentially beneficial research.",
+      ],
+      commonTrap:
+        "Excluding all people with schizophrenia as incapable, or assuming all have capacity without checking.",
+    },
+    {
+      id: "s10",
+      order: 10,
+      title: "Therapeutic Misconception",
+      colorTag: "amber",
+      explanation:
+        "Therapeutic misconception occurs when a participant misunderstands research as treatment designed primarily for their personal benefit. Recruiting an inpatient without addressing perceived coercion is the core error.",
+      keyPoints: [
+        "HIGH-RISK SITUATIONS: treating psychiatrist recruits own patient, patient is involuntary, patient hopes participation improves discharge chances, patient believes refusal will affect care, study uses clinical language, research visit occurs in ward setting, participant has psychosis/cognitive impairment/low health literacy.",
+        "PREVENTION: separate clinical care from research recruitment where possible, explain voluntary nature clearly, state that refusal will not affect treatment, use plain language, allow time, use interpreter/advocate where needed, check understanding, document consent process.",
+        "Therapeutic misconception is not the participant's failure — it is a foreseeable effect of recruiting in a clinical setting, where power imbalance is inherent.",
+        "Even when a participant correctly understands the research purpose, they may still believe (incorrectly) that participation will improve their care — this belief must be explored explicitly, not assumed to be absent.",
+      ],
+      commonTrap:
+        "Recruiting an inpatient without addressing perceived coercion.",
+    },
+    {
+      id: "s11",
+      order: 11,
+      title: "Vulnerable Populations in Psychiatry",
+      colorTag: "red",
+      explanation:
+        "Vulnerability does not mean automatic exclusion — it means extra safeguards are required. Either exploiting vulnerability or excluding vulnerable groups without justification are both ethical failures.",
+      keyPoints: [
+        "VULNERABLE PARTICIPANTS MAY INCLUDE: involuntary patients, acutely psychotic or manic patients, severe depression or suicidality, cognitive impairment or delirium, intellectual disability or autism, children and adolescents, older adults, Aboriginal and Torres Strait Islander peoples, refugees and asylum seekers, homeless people, forensic or prisoners.",
+        "ALSO VULNERABLE: people with substance dependence, people dependent on the service for care/housing/legal reports, people with limited English proficiency.",
+        "SAFEGUARDS: independent consent process, supported decision-making, interpreter, advocate, delay recruitment until clinically stable if possible, clear statement that care is unaffected, minimise burden, monitor distress, ethics review, cultural consultation where relevant.",
+        "Excluding all vulnerable participants from research perpetuates a knowledge gap — the people most affected by a condition are underrepresented in the evidence base that guides their treatment.",
+      ],
+      commonTrap:
+        "Either exploiting vulnerability or excluding vulnerable groups without justification.",
+    },
+    {
+      id: "s12",
+      order: 12,
+      title: "Observational Study in Schizophrenia",
+      colorTag: "blue",
+      explanation:
+        "Classic MEQ scenario: consultant wants to conduct an observational study of relapse predictors using clinic records and optional interviews. Thinking 'observational' means no ethical risk misses the full governance picture.",
+      keyPoints: [
+        "GOVERNANCE ISSUES: is this research or audit, HREC/low-risk review, site governance, consent or waiver of consent for records, capacity to consent for interviews, risk of coercion if treating team recruits, privacy and data de-identification, data security.",
+        "ALSO: how to manage relapse/suicide/violence disclosures during interview, cultural and interpreter access, consumer input into design, authorship and trainee role, plan for dissemination.",
+        "Observational does not mean low-risk — sensitive psychiatric records combined with interviews of involuntary or recently relapsed patients involves consent, privacy, capacity and adverse-finding risks.",
+        "AUTHORSHIP AND PUBLICATION INTEGRITY: authorship requires substantial contribution, accountability and approval of final work — do not offer authorship as favour, coercion or reward, do not exclude junior contributors unfairly.",
+      ],
+      commonTrap:
+        "Thinking 'observational' means no ethical risk.",
+    },
+    {
+      id: "s13",
+      order: 13,
+      title: "Use of Existing Records",
+      colorTag: "purple",
+      explanation:
+        "Using existing clinical records still requires governance. Letting a registrar or researcher browse records without approval or role-based need is both a privacy breach and a governance failure.",
+      keyPoints: [
+        "CONSIDER: are data identifiable/re-identifiable/de-identified, who will access records, is access within normal role, is patient consent required, is waiver of consent appropriate, who is data custodian, where will data be stored, will data leave the health service, will data be linked.",
+        "ALSO CONSIDER: will results identify small groups, is publication planned.",
+        "MINIMUM NECESSARY DATA: collect only what is needed — data minimisation is both a privacy requirement and a governance principle.",
+        "Role-based access controls mean that accessing records for research when not in a treating role is a breach, even if the clinician has general access to the system.",
+      ],
+      commonTrap:
+        "Letting a registrar or researcher browse records without approval or role-based need.",
+    },
+    {
+      id: "s14",
+      order: 14,
+      title: "Privacy and Data Management",
+      colorTag: "purple",
+      explanation:
+        "Psychiatry data are among the most sensitive in healthcare. Assuming de-identification is adequate when small local samples are easily re-identifiable is a common privacy governance failure.",
+      keyPoints: [
+        "DATA GOVERNANCE SHOULD INCLUDE: data minimisation, de-identification or coding, secure storage, access controls, data custodian approval, data transfer agreement if external, retention and destruction plan, audit trail, password protection/encryption, separation of identifiers from dataset, plan for publications involving small numbers, breach response plan.",
+        "PSYCHIATRY DATA ARE HIGHLY SENSITIVE: diagnosis, AOD history, trauma, forensic history, suicidality, family violence, sexuality/gender identity, child protection, involuntary treatment.",
+        "Small sample sizes in psychiatry research (e.g. a rural service with 3 inpatients of a particular cultural background) mean de-identified data can be re-identified by local readers — additional protection or aggregation is required.",
+        "A data breach involving psychiatric records can cause significant harm — employment discrimination, relationship breakdown, legal consequences — and must be treated as a serious adverse event.",
+      ],
+      commonTrap:
+        "Assuming de-identification is adequate when small local samples are easily re-identifiable.",
+    },
+    {
+      id: "s15",
+      order: 15,
+      title: "Waiver of Consent",
+      colorTag: "amber",
+      explanation:
+        "A waiver of consent may be appropriate in some circumstances but must be approved through the correct pathway. Self-authorising a waiver of consent because obtaining consent is inconvenient is a research ethics breach.",
+      keyPoints: [
+        "WAIVER MAY BE CONSIDERED FOR: low-risk retrospective record review where consent is impracticable and privacy protections are strong — but this must be approved through the appropriate ethics/governance pathway.",
+        "QUESTIONS FOR WAIVER CONSIDERATION: why is consent impracticable, what is the public or service benefit, what is the risk of harm, can data be de-identified, are vulnerable groups involved, could patients reasonably object, is there a mechanism for opt-out if appropriate, is data access limited, is publication planned?",
+        "The ethical justification for a waiver is that the public benefit outweighs the interference with autonomy — not that consent is difficult to obtain.",
+        "Even when a waiver is approved, participants should be able to opt out of their data being used, wherever this is practicable.",
+      ],
+      commonTrap:
+        "Self-authorising a waiver of consent because obtaining consent is inconvenient.",
+    },
+    {
+      id: "s16",
+      order: 16,
+      title: "Consent and Capacity in Audit/QI",
+      colorTag: "amber",
+      explanation:
+        "Audit and QI may not always require individual consent, but ethical issues still exist. Assuming audit never involves consent questions is incorrect.",
+      keyPoints: [
+        "CONSIDER CONSENT OR EXTRA REVIEW IF: patients are contacted directly, interviews/surveys are used, identifiable sensitive data are used, vulnerable groups are involved, results may affect care, data leave the service, small groups may be identifiable, publication is planned, there is more than low risk.",
+        "Routine de-identified service data used solely for local improvement is the clearest case for no consent requirement — but each departure from this baseline requires consideration.",
+        "Consumer involvement in designing the audit (not just the results) improves relevance and increases trust in the process.",
+        "Even if no individual consent is required, the service should have a clear policy on how patients are informed that their data may be used for audit purposes — usually through the admission information/consent form.",
+      ],
+      commonTrap:
+        "Assuming audit never involves consent questions.",
+    },
+    {
+      id: "s17",
+      order: 17,
+      title: "Research With Children and Adolescents",
+      colorTag: "red",
+      explanation:
+        "Children and adolescents are a vulnerable group requiring extra safeguards and independent voice. Getting parent consent but ignoring the young person's assent, distress or refusal is an ethical failure.",
+      keyPoints: [
+        "CONSIDER: child/adolescent capacity and maturity, parent/guardian consent, young person assent, confidentiality, self-harm disclosures, abuse/child protection, school involvement, family coercion, cultural factors, burden of participation, whether participation affects care.",
+        "MEQ PHRASE: 'I would ensure the young person is not treated as merely an object of parent or school consent.'",
+        "A child who assents to participation but whose parent refuses should not be enrolled — but a child who refuses participation, even if parents consent, should not be enrolled either.",
+        "Self-harm or abuse disclosures during research with a young person trigger the same child-protection obligations as in clinical settings — the research relationship does not alter mandatory reporting duties.",
+      ],
+      commonTrap:
+        "Getting parent consent but ignoring the young person's assent, distress or refusal.",
+    },
+    {
+      id: "s18",
+      order: 18,
+      title: "Aboriginal and Torres Strait Islander Research Governance",
+      colorTag: "green",
+      explanation:
+        "Research involving Aboriginal and Torres Strait Islander peoples, communities, data, knowledge or services requires cultural governance, not only standard ethics. Adding an Aboriginal variable to a dataset without cultural governance or community benefit is extractive research.",
+      keyPoints: [
+        "CONSIDER: Indigenous leadership, community benefit, ACCHO partnership, community consultation before design, data sovereignty, cultural safety, ownership and control of data, local approval pathways, avoiding deficit framing, Aboriginal workforce involvement, feedback of results to community, sustainability and accountability, cultural review/Aboriginal ethics committee where required.",
+        "MEQ PHRASE: 'I would not treat Aboriginal participants as a subgroup added after design. I would seek Aboriginal governance and partnership from the beginning.'",
+        "The AIATSIS Code of Ethics requires community consent, not only individual consent, for research involving Aboriginal and Torres Strait Islander peoples — this is a higher standard than standard HREC consent.",
+        "Data sovereignty means communities have the right to govern collection, ownership and application of data about their people — hospital data ownership does not override this right.",
+      ],
+      commonTrap:
+        "Adding an Aboriginal variable to a dataset without cultural governance or community benefit.",
+    },
+    {
+      id: "s19",
+      order: 19,
+      title: "Refugee, CALD and Interpreter Governance in Research",
+      colorTag: "teal",
+      explanation:
+        "CALD and refugee participants require specific protections in research. Using English-only consent forms for participants with limited English is a consent validity failure.",
+      keyPoints: [
+        "CONSIDER: professional interpreter for consent and interviews, translated participant information sheets, literacy and health literacy, fear of authorities, visa/residency concerns, torture/trauma triggers, confidentiality in small communities, family interpreter risks, cultural meaning of research, community organisation consultation, avoiding coercion through treating clinicians.",
+        "Translated consent forms must be translated by a professional, not a family member or bilingual staff member — and must be back-translated to verify accuracy.",
+        "Fear that research data will be shared with immigration authorities is a rational concern for refugee and asylum-seeker participants — the consent process must address this explicitly.",
+        "Avoiding coercion through treating clinicians applies with particular force for refugees who may fear that refusing research will affect their clinical care or legal reports.",
+      ],
+      commonTrap:
+        "Using English-only consent forms for participants with limited English.",
+    },
+    {
+      id: "s20",
+      order: 20,
+      title: "Conflicts of Interest",
+      colorTag: "purple",
+      explanation:
+        "Conflicts of interest may be financial, professional, academic, relational or service-based. Assuming conflict of interest matters only when money is involved misses the full range of governance risks.",
+      keyPoints: [
+        "EXAMPLES: pharmaceutical-sponsored study, consultant wants publication for promotion, registrar pressured to collect data, service director wants favourable audit result, researcher is treating psychiatrist, NGO partner wants positive evaluation, research funding linked to recruitment numbers, authorship promised for loyalty rather than contribution.",
+        "MANAGE BY: declare conflicts, separate clinical care from recruitment where possible, independent consent process, oversight committee, transparent analysis plan, data access controls, authorship agreement, independent statistician if needed, report negative findings honestly.",
+        "Financial conflict of interest (pharmaceutical sponsorship) is the most visible — but academic conflict (wanting a positive result for career advancement) and relational conflict (treating team recruiting own patients) are equally important in psychiatry.",
+        "A research funding agreement that links payment to recruitment numbers creates a direct conflict between participant welfare and research income — this must be disclosed and managed through independent oversight.",
+      ],
+      commonTrap:
+        "Assuming conflict of interest matters only when money is involved.",
+    },
+    {
+      id: "s21",
+      order: 21,
+      title: "Treating Clinician as Researcher",
+      colorTag: "amber",
+      explanation:
+        "When the treating psychiatrist recruits their own patient, the risk of perceived coercion is inherent. Saying 'I know the patient well, so recruitment is easier' without recognising the power imbalance is the core error.",
+      keyPoints: [
+        "RISKS: perceived pressure, therapeutic misconception, patient believes refusal affects care, boundary confusion, selective recruitment, over-disclosure by patient, difficulty managing adverse findings.",
+        "SAFEGUARDS: independent recruiter where possible, clear voluntary explanation, written information, cooling-off time, capacity assessment, documentation, option to decline without consequences, separate research and clinical notes where appropriate, protocol for clinical risk discovered in research.",
+        "'I know the patient well' is a risk factor for therapeutic misconception, not a protection against it — familiarity may increase the patient's trust that participation will help them personally.",
+        "Where independent recruitment is not possible, at minimum the consent conversation should be conducted by a team member who is not the primary treating psychiatrist.",
+      ],
+      commonTrap:
+        "Saying 'I know the patient well, so recruitment is easier' without recognising power imbalance.",
+    },
+    {
+      id: "s22",
+      order: 22,
+      title: "Governance Support and Research Feasibility",
+      colorTag: "green",
+      explanation:
+        "Research feasibility includes governance, not just clinical logistics. Starting data collection before approvals, protocol and data plan are finalised is a research integrity breach.",
+      keyPoints: [
+        "BEFORE STARTING, ENSURE: supervisor/principal investigator identified, project protocol, ethics/governance pathway, data custodian approval, statistics/methodology support, consumer input, cultural consultation if relevant, funding and resources, research training for staff.",
+        "ALSO ENSURE: time allocation, storage and privacy plan, adverse finding protocol, publication and authorship plan.",
+        "A project that is clinically feasible but lacks ethics approval, data governance or an adverse-finding protocol should not commence — the approval process is not a formality.",
+        "Research training for staff collecting data is part of governance — a researcher who does not understand consent validity or adverse-finding protocols is a governance risk.",
+      ],
+      commonTrap:
+        "Starting data collection before approvals, protocol and data plan are finalised.",
+    },
+    {
+      id: "s23",
+      order: 23,
+      title: "Scientific Merit and Poor Research",
+      colorTag: "purple",
+      explanation:
+        "Ethical research must have value and methodological quality. Approving a weak project because 'it is only observational' is unethical — it exposes participants to burden or risk without meaningful benefit.",
+      keyPoints: [
+        "CHECK: clear research question, appropriate design, adequate sample, valid measures, feasible recruitment, bias minimisation, analysis plan, consumer/community relevance, plan for dissemination, plan to act on findings if clinically relevant.",
+        "Poor-quality research is unethical because it exposes participants to burden or risk without meaningful benefit — scientific merit is therefore an ethics requirement, not just an academic standard.",
+        "A study that is too small to answer its own question definitively is wasting participant time and creating risk without producing usable evidence — power calculation is an ethics matter.",
+        "HREC review includes scientific merit assessment — a methodologically weak study can and should be rejected on ethics grounds, not only on scientific ones.",
+      ],
+      commonTrap:
+        "Approving a weak project because 'it is only observational.'",
+    },
+    {
+      id: "s24",
+      order: 24,
+      title: "Authorship",
+      colorTag: "purple",
+      explanation:
+        "Authorship should reflect genuine contribution and accountability — not hierarchy, loyalty or favour. Offering authorship as favour, reward or hierarchy entitlement is a research integrity violation.",
+      keyPoints: [
+        "AUTHORSHIP SHOULD REFLECT: substantial contribution to conception/design/data/analysis/interpretation, drafting or critical revision, approval of final version, accountability for the work.",
+        "AUTHORSHIP INTEGRITY: order discussed early, contributors acknowledged appropriately, junior staff not exploited, senior staff not given honorary authorship, data collectors not automatically authors unless contribution meets criteria.",
+        "AUTHORSHIP AND PUBLICATION INTEGRITY CARD: authorship requires substantial contribution, accountability and approval of final work — do not offer authorship as favour, coercion or reward, do not exclude junior contributors unfairly.",
+        "Ghost authorship (unnamed contributors who did the work) and gift/honorary authorship (named non-contributors) are both research integrity violations — the ICMJE criteria are the standard reference.",
+      ],
+      commonTrap:
+        "Offering authorship as favour, reward or hierarchy entitlement.",
+    },
+    {
+      id: "s25",
+      order: 25,
+      title: "Publication and Dissemination",
+      colorTag: "green",
+      explanation:
+        "Publication should be honest, responsible and respectful of participants. Publishing a 'de-identified' case report that local readers can identify is a privacy breach and an ethics violation.",
+      keyPoints: [
+        "BEFORE PUBLICATION: confirm ethics/governance approval permits dissemination, de-identify data, avoid small-cell re-identification, obtain consent for case details if identifiable, report methods honestly, declare conflicts, include negative findings, avoid overstating conclusions.",
+        "ALSO BEFORE PUBLICATION: share results with service/community where appropriate, acknowledge contributors, follow journal and institutional policy.",
+        "Negative findings must be published — selective publication of positive results distorts the evidence base and misleads clinicians who rely on published literature.",
+        "Case reports of rare presentations require particular care — even with name removal, details such as location, cultural background, age, occupation and treatment combination may identify a patient to local colleagues.",
+      ],
+      commonTrap:
+        "Publishing a 'de-identified' case report that local readers can identify.",
+    },
+    {
+      id: "s26",
+      order: 26,
+      title: "Adverse Findings During Study",
+      colorTag: "red",
+      explanation:
+        "Research role does not remove clinical duty. Treating concerning disclosures as 'research data only' is a patient-safety failure and an ethics violation.",
+      keyPoints: [
+        "ADVERSE FINDINGS MAY INCLUDE: suicidal intent, homicidal threat, psychotic relapse, severe depression, child abuse or neglect, family violence, medication toxicity, serious physical-health abnormality, cognitive deterioration, unsafe driving, intoxication/withdrawal, capacity concerns, participant distress during interview.",
+        "RESPONSE: have protocol before study starts, inform participant of limits of confidentiality during consent, assess immediate risk, notify treating team according to protocol, escalate child protection/police if legal threshold met, arrange urgent clinical review if needed, document clinical and research actions, report serious adverse events if required, review whether study procedures caused harm.",
+        "The protocol for managing adverse findings must exist before the study starts — it cannot be improvised when a participant discloses active suicidal planning.",
+        "Participants should be told during consent that if they disclose serious risk to themselves or others, the research team has obligations that override research confidentiality — this is not optional, it is required.",
+      ],
+      commonTrap:
+        "Treating concerning disclosures as 'research data only.'",
+    },
+    {
+      id: "s27",
+      order: 27,
+      title: "Adverse Events and Safety Reporting",
+      colorTag: "red",
+      explanation:
+        "For interventional studies or clinical trials, safety reporting must be explicit and pre-defined. Having ethics approval but no practical pathway for deteriorating participants is a governance failure.",
+      keyPoints: [
+        "PLAN: define adverse event and serious adverse event, reporting timelines, who is notified, participant withdrawal criteria, emergency unblinding if applicable, clinical responsibility, insurance/indemnity, trial steering or safety monitoring, incident reporting if patient harmed, governance committee reporting.",
+        "The National Clinical Trials Governance Framework requires that sites have active oversight of participant safety, not just paper approvals.",
+        "Serious adverse events must be reported to the HREC within defined timelines (often 72 hours) — late reporting is a governance breach, not just an administrative error.",
+        "Participant withdrawal criteria must be defined in advance — a participant who deteriorates during an interventional study should have a clear pathway to exit safely, with continued access to clinical care.",
+      ],
+      commonTrap:
+        "Having ethics approval but no practical pathway for deteriorating participants.",
+    },
+    {
+      id: "s28",
+      order: 28,
+      title: "Acting on Audit Adverse Findings",
+      colorTag: "red",
+      explanation:
+        "Audit findings may reveal immediate patient-safety problems. Treating audit findings as academic data rather than current patient-safety risks is a clinical governance failure.",
+      keyPoints: [
+        "EXAMPLES: ECT given without proper consent documentation, clozapine blood monitoring missed, lithium levels overdue, discharge summaries not sent, suicide-risk follow-up not completed, seclusion reviews overdue, high metabolic risk not monitored, child-safety documentation missing.",
+        "RESPONSE: do not wait until final report if current patients are at risk, notify clinical lead, fix urgent patient-safety gaps, document escalation, prepare action plan, give feedback without blame, re-audit after changes.",
+        "An audit finding that identifies a current patient at risk (e.g. clozapine blood not checked in the required timeframe) triggers an immediate clinical obligation — the audit process does not suspend clinical duty.",
+        "The action plan from an audit should have named owners, timelines and a re-audit date — without these three elements, the audit cycle is incomplete.",
+      ],
+      commonTrap:
+        "Treating audit findings as academic data rather than current patient-safety risks.",
+    },
+    {
+      id: "s29",
+      order: 29,
+      title: "Research Misconduct and Integrity Concerns",
+      colorTag: "red",
+      explanation:
+        "Research misconduct requires formal governance response, not informal management. Trying to manage suspected misconduct informally because the researcher is senior protects the institution, not participants.",
+      keyPoints: [
+        "RESEARCH INTEGRITY CONCERNS INCLUDE: fabrication, falsification, plagiarism, selective reporting, undeclared conflicts, data manipulation, duplicate publication, guest/honorary authorship, suppressing negative findings, recruiting without consent, using records without approval, breaching privacy, coercing junior staff, misrepresenting audit as research.",
+        "RESPONSE: preserve records, seek advice from research governance office, escalate to research integrity advisor if available, protect participants, protect whistleblowers, avoid informal cover-up, document factually, follow institutional process.",
+        "The Australian Code for Responsible Conduct of Research requires institutions to respond to research integrity concerns through a formal process — informal mediation is not an appropriate response to fabrication or falsification.",
+        "Protecting whistleblowers is a governance obligation — a junior researcher who raises concerns about a senior colleague's data must be protected from retaliation.",
+      ],
+      commonTrap:
+        "Trying to manage suspected misconduct informally because the researcher is senior.",
+    },
+    {
+      id: "s30",
+      order: 30,
+      title: "Trainees and Research Pressure",
+      colorTag: "amber",
+      explanation:
+        "Trainees may be exploited in research contexts under the guise of career development. Calling exploitative research pressure 'career development' is the core framing error.",
+      keyPoints: [
+        "TRAINEES MAY BE PRESSURED TO: collect data without approval, recruit their own patients, add a supervisor as author, work unpaid hours, ignore privacy concerns, produce publishable results, avoid reporting negative findings.",
+        "CONSULTANT RESPONSE: clarify governance approval, protect trainee from coercion, ensure supervision, clarify authorship early, ensure workload is reasonable, escalate misconduct or bullying, support research training, separate training opportunity from exploitation.",
+        "A trainee who collects data without ethics approval is exposed to personal professional risk — the consultant who directed this is accountable for the governance failure.",
+        "Authorship promised to a trainee for recruiting patients is a conflict of interest — it creates pressure to recruit regardless of participant welfare.",
+      ],
+      commonTrap:
+        "Calling exploitative research pressure 'career development.'",
+    },
+    {
+      id: "s31",
+      order: 31,
+      title: "Consumer and Carer Involvement",
+      colorTag: "green",
+      explanation:
+        "Consumer and carer involvement improves relevance and acceptability of research and audit. Adding consumer review after the protocol is already finalised is tokenism.",
+      keyPoints: [
+        "USE CONSUMER INVOLVEMENT FOR: research question development, participant information sheets, consent process, outcome measures, burden of participation, safety protocols, dissemination, service redesign after audit.",
+        "Involve consumers meaningfully, not tokenistically.",
+        "Consumer involvement in developing the participant information sheet consistently improves readability and reduces misunderstanding — it is not just procedurally required, it improves the consent process.",
+        "Consumers with lived experience of the condition being studied can identify outcome measures that matter to patients, not just to researchers — this is a quality and ethics improvement, not only a governance box-tick.",
+      ],
+      commonTrap:
+        "Adding consumer review after protocol is already finalised.",
+    },
+    {
+      id: "s32",
+      order: 32,
+      title: "Governance After Study Completion",
+      colorTag: "green",
+      explanation:
+        "Research and audit obligations continue after data collection ends. Completing a study for publication but not feeding learning back into clinical care misses the purpose of the work.",
+      keyPoints: [
+        "AFTER COMPLETION: analyse according to plan, protect data, report findings honestly, share results with service, share results with participants/community where appropriate, implement audit/QI recommendations, re-audit, publish responsibly, close ethics/governance reporting requirements, retain/destroy data according to approval, update policies if needed.",
+        "Data retention and destruction must follow the approved plan — retaining identifiable research data beyond the approved period is a privacy governance breach.",
+        "Feeding findings back to the service closes the governance loop — research that improves academic knowledge without improving local practice has failed one of its core ethical justifications.",
+        "If results are shared with participants or communities, plain language summaries that are actually readable are required — not a copy of the published paper.",
+      ],
+      commonTrap:
+        "Completing a study for publication but not feeding learning back into clinical care.",
+    },
+    {
+      id: "s33",
+      order: 33,
+      title: "MEQ Example Traps",
+      colorTag: "blue",
+      explanation:
+        "Seven worked examples covering the most common research governance MEQ stems. In each, the core error is missing that research governance includes ethics, privacy, consent, authorship, culture and adverse findings.",
+      keyPoints: [
+        "EXAMPLE 1 — AUDIT VS RESEARCH: consultant wants to review schizophrenia admissions and publish relapse predictors. TRAP: call it audit. BETTER: clarify it is research (generalisable knowledge); seek ethics/governance review, consent/waiver and privacy plan.",
+        "EXAMPLE 2 — ECT AUDIT: audit finds missing consent documentation in current ECT patients. TRAP: wait until report. BETTER: escalate current safety issue, review affected patients, fix documentation/consent pathway, report through governance and re-audit.",
+        "EXAMPLE 3 — INVOLUNTARY PATIENT RESEARCH: involuntary patient asked to join medication study. TRAP: assume incapacity or assume consent valid. BETTER: assess capacity, voluntariness, coercion risk, independent consent, ethics approval and treatment unaffected by refusal.",
+        "EXAMPLE 4 — ABORIGINAL RESEARCH CONSULTATION: team wants Aboriginal youth data without ACCHO involvement. TRAP: use data because hospital owns it. BETTER: seek Aboriginal cultural governance, ACCHO/community consultation, data sovereignty and ethics approval.",
+        "EXAMPLE 5 — ADVERSE FINDING: participant discloses active suicidal plan during research interview. TRAP: treat as confidential research data. BETTER: follow safety protocol, assess risk, notify treating team/emergency pathway, document and report if required.",
+        "EXAMPLE 6 — AUTHORSHIP: senior consultant asks to be first author despite little contribution. TRAP: agree due to hierarchy. BETTER: discuss authorship criteria, contribution, accountability and institutional policy.",
+        "EXAMPLE 7 — PUBLICATION: registrar wants to publish a rare case from a small town. TRAP: remove name only. BETTER: assess identifiability, obtain consent if needed, consult governance, disguise non-essential details and avoid harm.",
+      ],
+      commonTrap:
+        "Missing that research governance includes ethics, privacy, consent, authorship, culture and adverse findings.",
+    },
+    {
+      id: "s34",
+      order: 34,
+      title: "Command-Word Discipline",
+      colorTag: "amber",
+      explanation:
+        "Research governance questions require structured, justified responses. Writing 'get ethics approval' without explaining why or what else is needed loses marks.",
+      keyPoints: [
+        "LIST: clarify audit versus research, ethics/governance review, consent or waiver, privacy plan, vulnerable participant safeguards, conflict declaration, adverse finding protocol, authorship plan.",
+        "OUTLINE (list and justify): 'Clarify project type — because audit, QI and research have different governance pathways. Seek HREC/governance advice — because psychiatric participants and sensitive records create ethical and privacy risks. Plan adverse finding response — because research interviews may reveal suicide, abuse, psychosis or medical risk.'",
+        "DESCRIBE (list and explain): 'Assess capacity and voluntariness — because psychiatric patients may understand information but feel coerced if their treating team is recruiting them. De-identify and restrict data access — because mental health records contain highly sensitive and potentially re-identifiable information.'",
+        "DISCUSS (name the tension): 'There is tension between generating useful knowledge and protecting vulnerable participants. A defensible consultant position is to support research or audit that has clear value, proportionate ethics/governance review, valid consent or lawful waiver, privacy safeguards, cultural consultation where relevant, and a plan to act on clinically significant findings.'",
+      ],
+      commonTrap:
+        "Writing 'get ethics approval' without explaining why or what else is needed.",
+    },
+    {
+      id: "s35",
+      order: 35,
+      title: "Examiner Phrases",
+      colorTag: "green",
+      explanation:
+        "Use these phrases to signal consultant-level research governance reasoning. Missing governance language — HREC, site governance, consent/waiver, data custodian, vulnerability, adverse findings and authorship — signals registrar-level thinking.",
+      keyPoints: [
+        "'I would first clarify whether this is audit, quality improvement, service evaluation or research.'",
+        "'Audit measures care against existing standards and must lead to action and re-audit.'",
+        "'Research aims to generate generalisable knowledge and requires ethics and governance review.'",
+        "'Publication intent increases governance scrutiny, even if the project began as audit.'",
+        "'Psychiatric diagnosis alone does not remove capacity, but vulnerability requires safeguards.'",
+        "'Consent for treatment is not consent for research.'",
+        "'The treating relationship may create perceived coercion, so independent recruitment should be considered.'",
+        "'I would collect the minimum necessary data and protect against re-identification.'",
+        "'Research does not remove clinical duty when serious risk is discovered.'",
+        "'Authorship should reflect genuine contribution and accountability.'",
+        "'Aboriginal and Torres Strait Islander research requires cultural governance and community benefit, not tokenistic consultation.'",
+      ],
+      commonTrap:
+        "Missing governance language: HREC, site governance, consent/waiver, data custodian, vulnerability, adverse findings and authorship.",
+    },
+    {
+      id: "s36",
+      order: 36,
+      title: "Consultant-Level Summary",
+      colorTag: "green",
+      explanation:
+        "This paragraph is reusable in MEQ stems involving audit versus research, schizophrenia observational studies, vulnerable participants, consent/capacity, ethics approval, publication, authorship disputes and adverse findings during study.",
+      keyPoints: [
+        "CLASSIFICATION AND GOVERNANCE: 'I would first clarify whether the project is audit, QI, service evaluation or research, because each has different governance requirements. Audit should measure practice against explicit standards, lead to action and re-audit; research aiming to generate generalisable knowledge requires ethics and site governance review.'",
+        "PARTICIPANT PROTECTION: 'I would ensure scientific merit, proportional risk review, valid consent or lawful waiver, capacity and voluntariness safeguards, privacy and data-custodian approval, conflict-of-interest declarations, cultural governance where relevant, and a protocol for adverse findings such as suicidality, abuse or medical deterioration.'",
+        "INTEGRITY AND FEEDBACK: 'Publication and authorship should follow research integrity principles, and findings should be fed back to the service, participants or community where appropriate.'",
+        "FULL PARAGRAPH: 'I would first clarify whether the project is audit, QI, service evaluation or research, because each has different governance requirements. Audit should measure practice against explicit standards, lead to action and re-audit; research aiming to generate generalisable knowledge requires ethics and site governance review. I would ensure scientific merit, proportional risk review, valid consent or lawful waiver, capacity and voluntariness safeguards, privacy and data-custodian approval, conflict-of-interest declarations, cultural governance where relevant, and a protocol for adverse findings such as suicidality, abuse or medical deterioration. Publication and authorship should follow research integrity principles, and findings should be fed back to the service, participants or community where appropriate.'",
+      ],
+      meqApplication:
+        "This paragraph should be reusable in MEQ stems involving audit versus research, schizophrenia observational studies, vulnerable participants, consent/capacity, ethics approval, publication, authorship disputes and adverse findings during study.",
+    },
+  ],
+};
+
+export const ALL_NOTES: Note[] = [DISCHARGE_PLAN, CONFLICT_MANAGEMENT, COMPLAINT_PROCESS, INCIDENT_MANAGEMENT, CLINICAL_AUDIT, OPEN_DISCLOSURE, RESTRICTIVE_PRACTICES, RESTRICTIVE_PRACTICES_MEQ, CONFIDENTIALITY, CAPACITY_CONSENT, SUPERVISION_TRAINING, WHS_STAFF_SAFETY, CULTURAL_SAFETY, RESEARCH_GOVERNANCE];
