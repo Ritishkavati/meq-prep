@@ -757,11 +757,25 @@ export default function Notes() {
     if (selectedNoteId) saveLastViewed(candidateId, note.id);
   }, [candidateId, note.id, selectedNoteId]);
 
-  // Tab blur
+  // Tab blur — 3-second grace period before activating overlay
   useEffect(() => {
-    const handler = () => setIsBlurred(document.hidden);
+    let blurTimer: ReturnType<typeof setTimeout> | null = null;
+    const handler = () => {
+      if (document.hidden) {
+        blurTimer = setTimeout(() => setIsBlurred(true), 3000);
+      } else {
+        if (blurTimer !== null) {
+          clearTimeout(blurTimer);
+          blurTimer = null;
+        }
+        setIsBlurred(false);
+      }
+    };
     document.addEventListener("visibilitychange", handler);
-    return () => document.removeEventListener("visibilitychange", handler);
+    return () => {
+      document.removeEventListener("visibilitychange", handler);
+      if (blurTimer !== null) clearTimeout(blurTimer);
+    };
   }, []);
 
   // IntersectionObserver: track active section as user scrolls
