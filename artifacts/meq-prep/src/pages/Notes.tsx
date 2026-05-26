@@ -571,73 +571,65 @@ function getNoteStats(candidateId: string, note: Note) {
 
 // ── Note dashboard card ───────────────────────────────────────────────────────
 
+const CHAPTER_TITLES: Record<string, string> = {
+  confidentiality: "Confidentiality, Privacy & Information Sharing",
+  capacity_consent: "Capacity, Consent & Treatment Refusal",
+  open_disclosure: "Open Disclosure",
+  incident_management: "Incident Management",
+  complaint_process: "Complaint Process",
+  conflict_management: "Conflict Resolution – Dynamics in Mental Health",
+  restrictive_practices: "Restrictive Practices – 1",
+  restrictive_practices_meq: "Restrictive Practices – 2",
+  discharge_plan: "Comprehensive Psychiatry Discharge Plan",
+  clinical_audit: "Clinical Audit, Quality Improvement & Change Management",
+  supervision_training: "Supervision & Training – Trainee Governance",
+  whs_staff_safety: "Staff Safety in Psychiatry",
+  cultural_safety: "Cultural Safety & Supervision",
+  resource_allocation_ethics: "Resource Allocation & Ethics in Psychiatry",
+  research_governance: "Research & Audit Governance",
+  ethics_overriding_principles: "Ethics in Psychiatry: Overriding Principles & MEQ Framework",
+};
+
 function NoteCard({
   note,
+  index,
   candidateId,
   onClick,
 }: {
   note: Note;
+  index: number;
   candidateId: string;
   onClick: () => void;
 }) {
   const { completedCount, notesCount, highlightsCount, totalSections, progressPct } =
     getNoteStats(candidateId, note);
   const accent = COLOR[note.sections[0].colorTag];
+  const chapterTitle = CHAPTER_TITLES[note.id] ?? note.title;
 
   return (
     <button
       onClick={onClick}
-      className="w-full text-left bg-white rounded-2xl border border-slate-200 shadow-sm p-5 hover:shadow-md hover:border-accent transition-all group"
+      className="w-full text-left bg-white rounded-xl border border-slate-200 shadow-sm px-5 py-4 hover:shadow-md hover:border-accent transition-all group flex items-center gap-4"
     >
-      <div className="flex items-start gap-4">
-        <div
-          className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 ${accent.headerBg} ${accent.headerBorder} border`}
-        >
-          <BookOpen className={`w-5 h-5 ${accent.heading}`} />
-        </div>
-        <div className="flex-1 min-w-0">
-          <h3 className="text-base font-bold text-primary leading-snug mb-1 group-hover:text-accent transition-colors">
-            {note.title}
-          </h3>
-          <p className="text-xs text-slate-500 mb-3 leading-relaxed">{note.description}</p>
-          <div className="flex flex-wrap gap-2 mb-3">
-            {note.category.split(" / ").map((cat) => (
-              <span
-                key={cat}
-                className="text-[10px] font-semibold bg-slate-100 text-slate-600 px-2 py-0.5 rounded-full"
-              >
-                {cat}
-              </span>
-            ))}
-          </div>
-          <div className="flex items-center gap-4">
-            {/* Progress bar */}
-            <div className="flex items-center gap-1.5 flex-1">
-              <div className="flex-1 h-1.5 bg-slate-100 rounded-full overflow-hidden">
-                <div
-                  className="h-full bg-accent rounded-full transition-all"
-                  style={{ width: `${progressPct}%` }}
-                />
-              </div>
-              <span className="text-[10px] text-slate-500 shrink-0">{progressPct}%</span>
-            </div>
-            <span className="text-[10px] text-slate-400">
-              {completedCount}/{totalSections} sections
-            </span>
-            {notesCount > 0 && (
-              <span className="text-[10px] text-blue-400 flex items-center gap-0.5">
-                <PenLine className="w-3 h-3" /> {notesCount}
-              </span>
-            )}
-            {highlightsCount > 0 && (
-              <span className="text-[10px] text-yellow-500 flex items-center gap-0.5">
-                <Star className="w-3 h-3" fill="currentColor" /> {highlightsCount}
-              </span>
-            )}
-          </div>
-        </div>
-        <ChevronRight className="w-4 h-4 text-slate-300 group-hover:text-accent mt-1 shrink-0 transition-colors" />
+      <span
+        className={`w-8 h-8 rounded-lg flex items-center justify-center shrink-0 text-sm font-bold ${accent.headerBg} ${accent.heading} border ${accent.headerBorder}`}
+      >
+        {index + 1}
+      </span>
+      <span className="flex-1 min-w-0 text-sm font-semibold text-primary group-hover:text-accent transition-colors leading-snug">
+        {chapterTitle}
+      </span>
+      <div className="flex items-center gap-2 shrink-0">
+        {progressPct > 0 && (
+          <span className="text-[10px] text-slate-400">{progressPct}%</span>
+        )}
+        {notesCount > 0 && <PenLine className="w-3 h-3 text-blue-400" />}
+        {highlightsCount > 0 && <Star className="w-3 h-3 text-yellow-400" fill="currentColor" />}
+        {completedCount === totalSections && totalSections > 0 && (
+          <CheckCircle className="w-3.5 h-3.5 text-green-500" />
+        )}
       </div>
+      <ChevronRight className="w-4 h-4 text-slate-300 group-hover:text-accent shrink-0 transition-colors" />
     </button>
   );
 }
@@ -673,17 +665,14 @@ function NotesDashboard({
       <div className="max-w-2xl mx-auto px-4 py-8">
         <div className="mb-6">
           <h2 className="text-2xl font-serif font-bold text-primary mb-1">Study Notes</h2>
-          <p className="text-sm text-muted-foreground">
-            Select a note to study. Your progress, highlights and personal notes are saved
-            automatically per candidate.
-          </p>
         </div>
 
-        <div className="space-y-4">
-          {ALL_NOTES.map((note) => (
+        <div className="space-y-2">
+          {ALL_NOTES.map((note, index) => (
             <NoteCard
               key={note.id}
               note={note}
+              index={index}
               candidateId={candidateId}
               onClick={() => onSelectNote(note.id)}
             />
