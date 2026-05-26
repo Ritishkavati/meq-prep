@@ -1,0 +1,1 @@
+- [Text highlight store](text-highlight-store.md) — meq_thl_v1_{cid} in localStorage, keyed by noteId; separate from star-highlight system.

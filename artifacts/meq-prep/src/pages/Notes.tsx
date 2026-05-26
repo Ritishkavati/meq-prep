@@ -32,6 +32,8 @@ import {
   highlightKey,
 } from "@/lib/notesStore";
 import type { ProgressMap, PersonalNoteMap, HighlightMap } from "@/lib/notesStore";
+import { loadTextHLs, saveTextHLs } from "@/lib/textHighlightStore";
+import type { TextHL } from "@/lib/textHighlightStore";
 
 // ── Colour system ────────────────────────────────────────────────────────────
 
@@ -130,6 +132,113 @@ const TAG_LABEL: Record<ColorTag, string> = {
   navy: "Framework",
 };
 
+// ── Text highlight helpers ────────────────────────────────────────────────────
+
+const HL_STYLE: Record<TextHL["color"], React.CSSProperties> = {
+  yellow:    { backgroundColor: "#fef08a", borderRadius: "2px", padding: "0 1px" },
+  green:     { backgroundColor: "#bbf7d0", borderRadius: "2px", padding: "0 1px" },
+  blue:      { backgroundColor: "#bfdbfe", borderRadius: "2px", padding: "0 1px" },
+  pink:      { backgroundColor: "#fbcfe8", borderRadius: "2px", padding: "0 1px" },
+  underline: { textDecoration: "underline 2px solid #475569", borderRadius: "2px", padding: "0 1px" },
+};
+
+function HighlightedText({ text, highlights }: { text: string; highlights: TextHL[] }) {
+  if (!highlights.length) return <>{text}</>;
+
+  type Range = { start: number; end: number; hl: TextHL };
+  const ranges: Range[] = [];
+
+  for (const hl of highlights) {
+    let idx = 0;
+    while (idx < text.length) {
+      const pos = text.indexOf(hl.text, idx);
+      if (pos === -1) break;
+      ranges.push({ start: pos, end: pos + hl.text.length, hl });
+      idx = pos + hl.text.length;
+    }
+  }
+
+  if (!ranges.length) return <>{text}</>;
+  ranges.sort((a, b) => a.start - b.start);
+
+  const nodes: React.ReactNode[] = [];
+  let cursor = 0;
+  for (const r of ranges) {
+    if (r.start < cursor) continue;
+    if (r.start > cursor) nodes.push(text.slice(cursor, r.start));
+    nodes.push(
+      <mark key={`${r.hl.id}-${r.start}`} style={HL_STYLE[r.hl.color]}>
+        {text.slice(r.start, r.end)}
+      </mark>,
+    );
+    cursor = r.end;
+  }
+  if (cursor < text.length) nodes.push(text.slice(cursor));
+  return <>{nodes}</>;
+}
+
+// ── Floating highlight toolbar ────────────────────────────────────────────────
+
+interface ToolbarState {
+  x: number;
+  y: number;
+  text: string;
+}
+
+const HL_OPTS: { color: TextHL["color"]; bg: string; label: string }[] = [
+  { color: "yellow",    bg: "#fef08a", label: "Yellow" },
+  { color: "green",     bg: "#bbf7d0", label: "Green" },
+  { color: "blue",      bg: "#bfdbfe", label: "Blue" },
+  { color: "pink",      bg: "#fbcfe8", label: "Pink" },
+  { color: "underline", bg: "transparent", label: "Underline" },
+];
+
+function FloatingHighlightToolbar({
+  toolbar,
+  onApply,
+  onClear,
+}: {
+  toolbar: ToolbarState;
+  onApply: (color: TextHL["color"]) => void;
+  onClear: () => void;
+}) {
+  const toolbarWidth = 228;
+  const left = Math.min(Math.max(toolbar.x - toolbarWidth / 2, 8), window.innerWidth - toolbarWidth - 8);
+  const top = toolbar.y - 52;
+
+  return (
+    <div
+      id="hl-toolbar"
+      style={{ position: "fixed", left, top, zIndex: 9999, width: toolbarWidth }}
+      className="bg-white rounded-xl shadow-xl border border-slate-200 px-2 py-1.5 flex items-center gap-1"
+      onMouseDown={(e) => e.preventDefault()}
+    >
+      <span className="text-[10px] text-slate-400 font-medium pr-1 shrink-0">Highlight</span>
+      {HL_OPTS.map((opt) => (
+        <button
+          key={opt.color}
+          title={opt.label}
+          onClick={() => onApply(opt.color)}
+          className="w-6 h-6 rounded-full border border-slate-300 hover:scale-110 transition-transform flex items-center justify-center shrink-0"
+          style={{ backgroundColor: opt.bg }}
+        >
+          {opt.color === "underline" && (
+            <span className="text-[9px] font-bold text-slate-600 underline leading-none">U</span>
+          )}
+        </button>
+      ))}
+      <div className="w-px h-4 bg-slate-200 mx-0.5 shrink-0" />
+      <button
+        title="Remove all highlights on this text"
+        onClick={onClear}
+        className="w-6 h-6 rounded-full bg-slate-100 hover:bg-red-100 border border-slate-200 hover:border-red-300 flex items-center justify-center transition-colors shrink-0"
+      >
+        <X className="w-3 h-3 text-slate-400 hover:text-red-500" />
+      </button>
+    </div>
+  );
+}
+
 // ── Watermark ────────────────────────────────────────────────────────────────
 
 function Watermark({ candidateId }: { candidateId: string }) {
@@ -212,10 +321,11 @@ function NavItem({ section, isActive, isCompleted, hasNotes, hasHighlights, onCl
 interface KeyPointRowProps {
   point: string;
   isHighlighted: boolean;
+  textHighlights: TextHL[];
   onToggle: () => void;
 }
 
-function KeyPointRow({ point, isHighlighted, onToggle }: KeyPointRowProps) {
+function KeyPointRow({ point, isHighlighted, textHighlights, onToggle }: KeyPointRowProps) {
   return (
     <div
       className={`flex items-start gap-2 px-3 py-2.5 rounded-lg border transition-colors ${
@@ -225,7 +335,9 @@ function KeyPointRow({ point, isHighlighted, onToggle }: KeyPointRowProps) {
       }`}
     >
       <span className="text-accent mt-0.5 shrink-0 text-sm font-bold">→</span>
-      <span className="text-sm text-slate-700 flex-1 leading-snug">{point}</span>
+      <span className="text-sm text-slate-700 flex-1 leading-snug">
+        <HighlightedText text={point} highlights={textHighlights} />
+      </span>
       <button
         onMouseDown={(e) => e.preventDefault()}
         onClick={onToggle}
@@ -251,6 +363,7 @@ interface SectionCardProps {
   isCompleted: boolean;
   hasPersonalNote: boolean;
   highlights: HighlightMap;
+  textHighlights: TextHL[];
   onToggleExpand: () => void;
   onToggleComplete: () => void;
   onToggleHighlight: (idx: number) => void;
@@ -265,6 +378,7 @@ function SectionCard({
   isCompleted,
   hasPersonalNote,
   highlights,
+  textHighlights,
   onToggleExpand,
   onToggleComplete,
   onToggleHighlight,
@@ -329,7 +443,9 @@ function SectionCard({
       {isExpanded && (
         <div className="bg-white px-5 py-5">
           {/* Explanation */}
-          <p className="text-sm text-slate-700 leading-relaxed mb-5">{section.explanation}</p>
+          <p className="text-sm text-slate-700 leading-relaxed mb-5">
+            <HighlightedText text={section.explanation} highlights={textHighlights} />
+          </p>
 
           {/* Examples */}
           {section.examples && section.examples.length > 0 && (
@@ -343,10 +459,10 @@ function SectionCard({
                   <li key={i} className="text-sm text-slate-600 leading-relaxed">
                     {ex.startsWith("'") ? (
                       <blockquote className="border-l-4 border-slate-300 pl-3 italic text-slate-700">
-                        {ex}
+                        <HighlightedText text={ex} highlights={textHighlights} />
                       </blockquote>
                     ) : (
-                      <span>• {ex}</span>
+                      <span>• <HighlightedText text={ex} highlights={textHighlights} /></span>
                     )}
                   </li>
                 ))}
@@ -369,6 +485,7 @@ function SectionCard({
                   key={idx}
                   point={point}
                   isHighlighted={!!highlights[highlightKey(noteId, section.id, idx)]}
+                  textHighlights={textHighlights}
                   onToggle={() => onToggleHighlight(idx)}
                 />
               ))}
@@ -384,7 +501,9 @@ function SectionCard({
                   Use This in MEQs
                 </span>
               </div>
-              <p className="text-sm text-green-800 leading-relaxed">{section.meqApplication}</p>
+              <p className="text-sm text-green-800 leading-relaxed">
+                <HighlightedText text={section.meqApplication} highlights={textHighlights} />
+              </p>
             </div>
           )}
 
@@ -397,7 +516,9 @@ function SectionCard({
                   Common Trap
                 </span>
               </div>
-              <p className="text-sm text-amber-800 leading-relaxed">{section.commonTrap}</p>
+              <p className="text-sm text-amber-800 leading-relaxed">
+                <HighlightedText text={section.commonTrap} highlights={textHighlights} />
+              </p>
             </div>
           )}
 
@@ -716,6 +837,13 @@ export default function Notes() {
   const [showMobileNav, setShowMobileNav] = useState(false);
   const [showMobileNotes, setShowMobileNotes] = useState(false);
 
+  // Text highlight state
+  const [textHLsByNote, setTextHLsByNote] = useState<Record<string, TextHL[]>>(() =>
+    loadTextHLs(candidateId),
+  );
+  const [toolbar, setToolbar] = useState<ToolbarState | null>(null);
+  const readingAreaRef = useRef<HTMLDivElement>(null);
+
   const noteSaveTimers = useRef<Record<string, ReturnType<typeof setTimeout>>>({});
   const sectionRefs = useRef<Record<string, HTMLElement | null>>({});
 
@@ -857,6 +985,71 @@ export default function Notes() {
     if (target.tagName === "TEXTAREA" || target.tagName === "INPUT") return;
     e.preventDefault();
   }, []);
+
+  // ── Text highlight handlers ──────────────────────────────────────────────
+
+  const handleReadingMouseUp = useCallback(() => {
+    const sel = window.getSelection();
+    if (!sel || sel.isCollapsed || !sel.toString().trim()) return;
+    if (!readingAreaRef.current?.contains(sel.anchorNode)) {
+      setToolbar(null);
+      return;
+    }
+    const range = sel.getRangeAt(0);
+    const rect = range.getBoundingClientRect();
+    setToolbar({
+      x: rect.left + rect.width / 2,
+      y: rect.top,
+      text: sel.toString().trim(),
+    });
+  }, []);
+
+  const handleAddHL = useCallback(
+    (color: TextHL["color"]) => {
+      if (!toolbar) return;
+      const hl: TextHL = {
+        id: `${Date.now()}-${Math.random().toString(36).slice(2, 7)}`,
+        text: toolbar.text,
+        color,
+      };
+      setTextHLsByNote((prev) => {
+        const existing = prev[note.id] || [];
+        if (existing.some((h) => h.text === hl.text && h.color === hl.color)) return prev;
+        const next = { ...prev, [note.id]: [...existing, hl] };
+        saveTextHLs(candidateId, next);
+        return next;
+      });
+      setToolbar(null);
+      window.getSelection()?.removeAllRanges();
+    },
+    [toolbar, note.id, candidateId],
+  );
+
+  const handleClearHL = useCallback(() => {
+    if (!toolbar) return;
+    const selText = toolbar.text;
+    setTextHLsByNote((prev) => {
+      const next = {
+        ...prev,
+        [note.id]: (prev[note.id] || []).filter((h) => h.text !== selText),
+      };
+      saveTextHLs(candidateId, next);
+      return next;
+    });
+    setToolbar(null);
+    window.getSelection()?.removeAllRanges();
+  }, [toolbar, note.id, candidateId]);
+
+  // Close toolbar when clicking outside it
+  useEffect(() => {
+    if (!toolbar) return;
+    const handler = (e: MouseEvent) => {
+      const el = document.getElementById("hl-toolbar");
+      if (el && !el.contains(e.target as Node)) setToolbar(null);
+    };
+    document.addEventListener("mousedown", handler);
+    return () => document.removeEventListener("mousedown", handler);
+  }, [toolbar]);
 
   // ── Dashboard early return (now truly after all hooks) ───────────────────
 
@@ -1087,10 +1280,12 @@ export default function Notes() {
 
           {/* Main content */}
           <div
-            className="flex-1 min-w-0 p-4 md:p-6 no-select"
+            className="flex-1 min-w-0 p-4 md:p-6"
             ref={(el) => {
               sectionRefs.current["root"] = el;
+              (readingAreaRef as React.MutableRefObject<HTMLDivElement | null>).current = el;
             }}
+            onMouseUp={handleReadingMouseUp}
           >
             {/* Note intro card */}
             <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-5 mb-6">
@@ -1121,6 +1316,7 @@ export default function Notes() {
                   isCompleted={!!progress[sk]?.completed}
                   hasPersonalNote={!!personalNotes[sk]?.content?.trim()}
                   highlights={highlights}
+                  textHighlights={textHLsByNote[note.id] || []}
                   onToggleExpand={() => handleToggleExpand(section.id)}
                   onToggleComplete={() => handleToggleComplete(section.id)}
                   onToggleHighlight={(idx) => handleToggleHighlight(section.id, idx)}
@@ -1162,6 +1358,15 @@ export default function Notes() {
           </div>
         </div>
       </div>
+
+      {/* Floating text highlight toolbar */}
+      {toolbar && (
+        <FloatingHighlightToolbar
+          toolbar={toolbar}
+          onApply={handleAddHL}
+          onClear={handleClearHL}
+        />
+      )}
     </>
   );
 }
