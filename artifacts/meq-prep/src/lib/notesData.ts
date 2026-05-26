@@ -5386,4 +5386,466 @@ export const SUPERVISION_TRAINING: Note = {
   ],
 };
 
-export const ALL_NOTES: Note[] = [DISCHARGE_PLAN, CONFLICT_MANAGEMENT, COMPLAINT_PROCESS, INCIDENT_MANAGEMENT, CLINICAL_AUDIT, OPEN_DISCLOSURE, RESTRICTIVE_PRACTICES, RESTRICTIVE_PRACTICES_MEQ, CONFIDENTIALITY, CAPACITY_CONSENT, SUPERVISION_TRAINING];
+export const WHS_STAFF_SAFETY: Note = {
+  id: "whs_staff_safety",
+  title: "Work Health and Safety / Staff Safety in Psychiatry",
+  category: "Clinical Governance / Leadership / WHS / Staff Safety",
+  description:
+    "A consultant-level framework for managing work health and safety and staff safety in psychiatry, including assault on staff, threats from patients or families, stalking of clinicians, unsafe home visits, lone-worker risk, staff psychological injury after incidents, bullying, fatigue, burnout and unsafe facilities.",
+  sections: [
+    {
+      id: "s01",
+      order: 1,
+      title: "Core Principle",
+      colorTag: "blue",
+      explanation:
+        "Staff safety is not separate from patient care. The consultant must simultaneously balance patient-centred care, least restrictive practice, staff safety, public safety, legal duties, therapeutic alliance and service governance.",
+      keyPoints: [
+        "GOOD CONSULTANT ANSWER: 'I would treat this as both an immediate safety issue and a WHS governance issue. I would first make the environment safe, ensure injured or threatened staff receive medical and psychological support, report and document the incident, review patient risk and treatment, and then address system contributors such as staffing, facilities, lone-worker procedures, duress systems and occupational violence training.'",
+        "KEY POINT: staff safety is a patient-safety issue — an understaffed, threatened or traumatised workforce cannot deliver safe care.",
+        "IMMEDIATE SAFETY FIRST: (1) Who is unsafe now? (2) Remove staff from danger. (3) Call security or police if needed. (4) Treat injuries. (5) Protect other patients. (6) Notify senior staff. (7) Report and document.",
+        "OCCUPATIONAL VIOLENCE IS NOT NORMAL: occupational violence should not be normalised as part of psychiatric work — it requires immediate containment, staff support, reporting, review and system controls.",
+      ],
+      commonTrap:
+        "Treating staff assault or threats as 'part of the job.'",
+    },
+    {
+      id: "s02",
+      order: 2,
+      title: "What Counts as a WHS / Staff Safety Issue?",
+      colorTag: "purple",
+      explanation:
+        "WHS in psychiatry extends far beyond 'call security.' It includes prevention, risk assessment, safe systems of work, reporting, support and return-to-work. Only managing the immediate incident and missing WHS governance loses marks.",
+      keyPoints: [
+        "PHYSICAL HAZARDS: physical assault on staff, threats from patient/family/visitor, stalking of clinician, unsafe home visit, lone-worker risk, lack of duress alarm, inadequate security response, poor manual handling or environmental hazards, unsafe transport or rural outreach.",
+        "PSYCHOSOCIAL HAZARDS: staff psychological injury after suicide/restraint/assault/complaint, bullying/harassment/discrimination, fatigue/burnout/unsafe rosters, repeated occupational violence, excessive caseload or unrealistic demand, unsafe culture where staff do not report incidents.",
+        "ENVIRONMENTAL HAZARDS: unsafe ED or ward layout, unsafe facilities, poor lighting, inadequate secure doors, unsafe home-visit vehicles.",
+        "KEY POINT: do not reduce WHS to 'call security' — it includes prevention, risk assessment, safe systems of work, reporting, support and return-to-work.",
+      ],
+      commonTrap:
+        "Only managing the immediate incident and missing WHS governance.",
+    },
+    {
+      id: "s03",
+      order: 3,
+      title: "Immediate Safety Response",
+      colorTag: "red",
+      explanation:
+        "For any staff-safety incident, ask 'Who is unsafe now?' first. Starting with a policy review before making the environment safe is a classic mark-losing error.",
+      keyPoints: [
+        "IMMEDIATE STEPS: remove staff from immediate danger, call security/code black according to local policy, call police if serious threat/weapon/assault/stalking/public risk, separate patient/family/visitor from staff where possible, attend to injured staff and patients.",
+        "ALSO: arrange medical assessment, preserve scene/evidence if serious, ensure other patients are safe, increase observation or review legal status if patient-related, notify senior nurse/consultant/manager, document and complete incident report.",
+        "This is not about punishing the patient — it is about containing immediate risk and preventing further harm.",
+        "Immediate safety and ongoing therapeutic care are not mutually exclusive — contain the risk first, then re-engage therapeutically from a safer structure.",
+      ],
+      commonTrap:
+        "Starting with a policy review before making the environment safe.",
+    },
+    {
+      id: "s04",
+      order: 4,
+      title: "Balancing Patient Care and Staff Safety",
+      colorTag: "purple",
+      explanation:
+        "This is the central MEQ tension. Choosing either patient care or staff safety instead of creating a safer model of care is the core mark-losing error.",
+      keyPoints: [
+        "MEQ TENSION: 'There is tension between maintaining therapeutic engagement and protecting staff from foreseeable harm. A defensible consultant position is to continue patient care in the least restrictive safe manner, while not requiring staff to accept preventable violence, stalking or psychological injury as part of the job.'",
+        "STAFF SAFETY DOES NOT JUSTIFY: punitive care, retaliatory discharge, excessive restraint, stigma, abandoning the patient, refusal to assess someone in genuine crisis.",
+        "PATIENT-CENTRED CARE DOES NOT JUSTIFY: sending staff alone into unsafe homes, ignoring stalking, tolerating threats, minimising assault, pressuring staff to return before fit, hiding incidents to avoid complaints.",
+        "The solution is always a safer model of care — clinic review instead of home visit, two-person visit, security support, telehealth, modified contact arrangements — not a forced choice between care and safety.",
+      ],
+      commonTrap:
+        "Choosing either patient care or staff safety instead of creating a safer model of care.",
+    },
+    {
+      id: "s05",
+      order: 5,
+      title: "Assault on Staff",
+      colorTag: "red",
+      explanation:
+        "Assault requires an immediate response and a follow-up governance response. Normalising assault because the patient was unwell is a patient-safety and WHS failure.",
+      keyPoints: [
+        "IMMEDIATE RESPONSE: ensure scene is safe, separate patient and staff member, provide first aid and medical review, assess staff injuries and psychological distress, assess patient's mental state/intoxication/delirium/violence risk, protect other patients and staff, consider security/police depending on severity, review observation/leave/legal status, notify senior staff/manager, complete incident report.",
+        "FOLLOW-UP: staff debrief, psychological support/EAP, workers compensation pathway if needed, police report if staff wishes or serious assault, open disclosure/complaint process if patient also injured, review antecedents and preventability.",
+        "GOVERNANCE FOLLOW-UP: update patient formulation and violence prevention plan, review ward staffing/environment/security, governance review for repeated assaults.",
+        "A patient's mental illness explains the assault — it does not excuse the absence of a prevention plan, adequate staffing or safe environment.",
+      ],
+      commonTrap:
+        "Normalising assault because the patient was unwell.",
+    },
+    {
+      id: "s06",
+      order: 6,
+      title: "Threats From Patient, Family or Visitor",
+      colorTag: "red",
+      explanation:
+        "Threats may be verbal, written, online, in person or through repeated calls. All must be taken seriously and assessed for immediacy and credibility — reassuring staff that the family is 'just distressed' without assessing the threat is inadequate.",
+      keyPoints: [
+        "EXAMPLES: 'I know where you live.' / 'I will wait for you after work.' / Family member threatens to sue or attack staff. / Visitor becomes aggressive on ward. / Patient sends threatening emails. / Ex-partner threatens clinician involved in family violence assessment.",
+        "RESPONSE: take threats seriously, assess immediacy/specificity/means/history, ensure staff member is not left alone with person, notify senior nurse/manager/security, consider police if credible threat, restrict visitor access if needed, set behavioural expectations, review patient risk formulation.",
+        "ALSO: document exact words (this is evidence), support staff psychologically, develop safety plan.",
+        "MEQ TRAP — POOR: 'Reassure staff the family is distressed.' BETTER: 'Validate distress but assess threat credibility, protect staff, use security/police if needed, set boundaries, document exact words and review patient/family contact plan.'",
+      ],
+      commonTrap:
+        "Reassuring staff without assessing threat credibility.",
+    },
+    {
+      id: "s07",
+      order: 7,
+      title: "Stalking of Clinician",
+      colorTag: "red",
+      explanation:
+        "Stalking is a serious staff-safety issue requiring a structured clinical and governance response. Calling stalking 'transference' and failing to manage staff safety is a consistent mark-losing error.",
+      keyPoints: [
+        "EXAMPLES: patient repeatedly waits outside clinic, follows clinician to car, sends repeated emails/messages, contacts clinician's family, posts about clinician online, attends clinician's private practice or home, threatens after boundary setting.",
+        "RESPONSE: do not minimise, preserve evidence (messages/emails/screenshots/dates/times), inform manager/clinical director/security, risk assess patient, avoid clinician meeting patient alone, consider transfer of care if therapeutic boundary is unsafe.",
+        "ALSO: consider police intervention or restraining order depending on threat, check confidentiality and digital footprint, support clinician, document, governance review if service systems exposed staff details.",
+        "MEQ PHRASE: 'I would treat stalking as a foreseeable staff-safety and boundary risk, not as ordinary transference or therapeutic attachment.'",
+      ],
+      commonTrap:
+        "Calling stalking 'transference' and failing to manage staff safety.",
+    },
+    {
+      id: "s08",
+      order: 8,
+      title: "Unsafe Home Visits",
+      colorTag: "amber",
+      explanation:
+        "Home visits are high-yield in community psychiatry MEQs. The error is sending staff on a home visit because 'engagement matters' without completing a structured risk assessment and adjusting the plan.",
+      keyPoints: [
+        "BEFORE A HOME VISIT, ASSESS — PATIENT FACTORS: recent aggression, psychosis/paranoia, intoxication, threats, weapons, domestic violence, animals, other people in home, past unsafe visits.",
+        "BEFORE A HOME VISIT, ASSESS — ENVIRONMENT: location known, phone reception, remote area, safe parking, exits, lighting, time of day, neighbourhood risk.",
+        "BEFORE A HOME VISIT, ASSESS — STAFF FACTORS: lone worker, new staff, trainee, fatigue, gender/cultural safety issue, staff previously threatened.",
+        "CONTROLS: two-person visit for high risk, clear itinerary and check-in/check-out, duress alarm or mobile phone, park for quick exit, sit near exit, do not enter if unsafe, leave if risk escalates, notify team if plans change, consider police welfare check if imminent risk, document risk assessment.",
+        "MEQ TRAP — POOR: 'Send case manager to assess.' BETTER: 'Conduct home-visit risk assessment, consider two staff/police/clinic review, check-in system, duress alarm and do not send lone worker into foreseeable danger.'",
+      ],
+      commonTrap:
+        "Completing risk assessment but not changing the visit plan when risk is identified.",
+    },
+    {
+      id: "s09",
+      order: 9,
+      title: "Lone-Worker Risk",
+      colorTag: "amber",
+      explanation:
+        "Lone work occurs across many psychiatry settings and requires explicit risk controls. Allowing lone work because 'that is how the service has always operated' is a governance failure.",
+      keyPoints: [
+        "LONE WORK OCCURS IN: rural outreach, home visits, after-hours ED consults, community crisis response, telehealth from remote clinic, overnight inpatient cover, transport with patient, isolated interview rooms.",
+        "RISK CONTROLS: avoid lone work for high-risk assessments, roster second staff or security, duress alarm, check-in/check-out protocol, safe interview room, clear exit, phone/radio coverage, staff location known, escalation plan, transport plan, fatigue management.",
+        "'That is how the service has always operated' is not a defence — foreseeable risk that has been accepted as normal is still a WHS liability.",
+        "Even in settings where some lone work is unavoidable, explicit controls must be in place — not left to individual staff judgement.",
+      ],
+      commonTrap:
+        "Allowing lone work because 'that is how the service has always operated.'",
+    },
+    {
+      id: "s10",
+      order: 10,
+      title: "Security and Police",
+      colorTag: "red",
+      explanation:
+        "Security and police are safety resources, not clinical substitutes. The response must be proportionate, least restrictive and culturally safe — but serious imminent risk cannot go unaddressed.",
+      keyPoints: [
+        "USE SECURITY WHEN: immediate violence or threat, unsafe visitor, staff need safe escort, ward containment issue, weapon concern, patient absconding with immediate safety risk, ED violence.",
+        "USE POLICE WHEN: serious assault, weapon, credible threat to staff/family/public, stalking, serious property damage, patient missing with serious risk, family violence risk, criminal behaviour requiring police response.",
+        "CULTURAL SAFETY: for Aboriginal, refugee, trauma, youth or forensic patients, consider risk of retraumatisation and use cultural/advocacy support where possible — but do not avoid police where serious imminent safety risk exists.",
+        "Either overusing police for behavioural control or avoiding police despite serious credible threat are both governance failures.",
+      ],
+      commonTrap:
+        "Either overusing police for behavioural control or avoiding police despite a serious credible threat.",
+    },
+    {
+      id: "s11",
+      order: 11,
+      title: "Duress Alarms and Safe Facilities",
+      colorTag: "purple",
+      explanation:
+        "Safe facilities are a governance responsibility. Placing responsibility on individual staff vigilance rather than system safety is the core facility-governance error.",
+      keyPoints: [
+        "CHECK: duress alarms work and staff know how to use them, response time is tested, interview rooms have two exits where possible, furniture not usable as weapons, clear sightlines, safe waiting rooms, CCTV policy, secure doors, safe parking, lighting, reception screens where needed, after-hours access control, safe room for de-escalation, personal alarms for outreach, rural/remote communication systems.",
+        "MEQ TRAP — POOR: 'Remind staff to be careful.' BETTER: 'Review environmental controls, duress alarm function, response drills, staffing, interview-room layout and escalation procedures.'",
+        "A duress alarm that nobody has tested and nobody knows how to use is not a safety control — it is a false reassurance.",
+        "After any incident, audit whether the existing controls actually worked — not just whether they were in place on paper.",
+      ],
+      commonTrap:
+        "Placing responsibility on individual staff vigilance rather than system safety controls.",
+    },
+    {
+      id: "s12",
+      order: 12,
+      title: "Staffing Ratios and Workload Risk",
+      colorTag: "amber",
+      explanation:
+        "Unsafe staffing is both a WHS and a patient-safety issue. Using restrictive practice or rushed discharge to compensate for unsafe staffing is a clinical governance failure.",
+      keyPoints: [
+        "RISKS INCREASE WITH: high acuity, inexperienced staff mix, frequent seclusion/restraint, ED boarding, high leave observations, multiple admissions, staff sickness, locum gaps, overtime, poor handover, no security, high community caseload, rural travel, no after-hours consultant support.",
+        "CONSULTANT ROLE: name the operational risk, prioritise urgent work, escalate to nurse manager or service director, document unsafe staffing concerns, adjust admissions/leave where clinically justified, request additional staff or security, use bed-management escalation.",
+        "ALSO: avoid using seclusion/restraint to compensate for staffing, review incidents and near misses, contribute to workforce planning.",
+        "Documenting 'unsafe staffing' formally protects the consultant and the team — and creates a governance paper trail for escalation.",
+      ],
+      commonTrap:
+        "Using restrictive practice or rushed discharge to compensate for unsafe staffing.",
+    },
+    {
+      id: "s13",
+      order: 13,
+      title: "Post-Incident Debrief",
+      colorTag: "teal",
+      explanation:
+        "Debrief is required after assault, threats, restraint, suicide, serious self-harm, death, stalking, critical incident or major complaint. Saying 'debrief staff' without defining psychological support, system learning or action is insufficient.",
+      keyPoints: [
+        "IMMEDIATE DEFUSING (right after incident): brief, voluntary, safety-focused, check injuries, identify immediate support, ensure staffing cover, identify urgent risk controls.",
+        "FORMAL DEBRIEF (later, when safe): multidisciplinary, includes psychological support, reviews what happened, identifies system factors, avoids blame, updates safety plans, leads to documented actions.",
+        "Defusing and formal debrief are two distinct processes with different timing, format and purposes — conflating them into a single 'debrief' misses both.",
+        "The formal debrief should produce documented actions with owners and timelines — not just a conversation.",
+      ],
+      commonTrap:
+        "Saying 'debrief staff' but not defining psychological support, system learning or action.",
+    },
+    {
+      id: "s14",
+      order: 14,
+      title: "Psychological Support After Incident",
+      colorTag: "green",
+      explanation:
+        "Staff may develop acute stress reactions, PTSD symptoms, moral injury or burnout after incidents. Treating psychological injury as weakness rather than work-related harm is a WHS governance failure.",
+      keyPoints: [
+        "STAFF MAY DEVELOP: acute stress reaction, guilt, shame, fear, anger, sleep disturbance, hypervigilance, avoidance, PTSD symptoms, depression, moral injury, burnout.",
+        "SUPPORT OPTIONS: immediate check-in, time out from clinical area, EAP, peer support, supervisor support, GP or independent care, trauma-informed support, workers compensation if injured, graduated return to work, review of workload.",
+        "AVOID: pressuring staff to discuss details repeatedly — this can re-traumatise and create secondary harm.",
+        "MEQ TRAP — POOR: 'Debrief staff.' BETTER: 'Check immediate psychological injury, offer EAP/GP/peer support, adjust duties if needed, document workplace injury pathway and review return-to-work plan.'",
+      ],
+      commonTrap:
+        "Treating psychological injury as weakness rather than work-related harm.",
+    },
+    {
+      id: "s15",
+      order: 15,
+      title: "Reporting",
+      colorTag: "purple",
+      explanation:
+        "Reporting is not blame — it allows the service to identify hazards, support staff and prevent recurrence. Completing only a clinical incident report and missing WHS reporting is incomplete governance.",
+      keyPoints: [
+        "REPORT THROUGH: incident management system, WHS/occupational violence reporting, line manager or NUM, clinical director/service manager, security report, police report if indicated, workers compensation process, risk register.",
+        "ALSO REPORT TO: health and safety representative/committee, occupational violence committee, regulator notification if notifiable incident, governance committee for patterns.",
+        "Occupational violence is both a clinical incident and a WHS incident — both streams require separate reports.",
+        "Patterns of unreported incidents represent a cultural failure ('they didn't report it because nothing ever happens') as much as an individual failure — culture change is part of the governance response.",
+      ],
+      commonTrap:
+        "Completing only a clinical incident report and missing the WHS reporting stream.",
+    },
+    {
+      id: "s16",
+      order: 16,
+      title: "Occupational Violence Policy",
+      colorTag: "purple",
+      explanation:
+        "An occupational violence policy means the service actively prevents and responds to violence — it does not mean abandoning clinically unwell patients. Using 'zero tolerance' to justify punitive care or exclusion is a misapplication.",
+      keyPoints: [
+        "POLICY SHOULD COVER: definition of violence and aggression, zero tolerance of violence (not zero care of patients), risk assessment, de-escalation, code black/security response, police criteria, duress alarm use, home-visit safety, lone-worker procedure, post-incident medical and psychological support.",
+        "POLICY SHOULD ALSO COVER: reporting requirements, investigation and feedback, staff training, visitor restrictions, patient behavioural agreements where appropriate, review of repeated incidents.",
+        "KEY PHRASE: 'Zero tolerance means the service actively prevents and responds to violence; it does not mean abandoning clinically unwell patients.'",
+        "A behavioural agreement with a patient who has been violent can be therapeutic and safety-promoting — it sets expectations and gives the patient agency, while documenting the clinical risk.",
+      ],
+      commonTrap:
+        "Using 'zero tolerance' to justify punitive care or exclusion without safe alternative care.",
+    },
+    {
+      id: "s17",
+      order: 17,
+      title: "Staff Psychological Injury as WHS",
+      colorTag: "amber",
+      explanation:
+        "Psychological hazards are WHS issues requiring prevention, support, reporting and system review. Seeing psychological injury as personal resilience failure rather than a workplace hazard misses the governance dimension.",
+      keyPoints: [
+        "PSYCHOLOGICAL INJURY MAY ARISE FROM: occupational violence, repeated threats, bullying, sexual harassment, racism, moral injury, repeated suicide exposure, poor support, high workload, unsafe rosters, poor organisational justice, role conflict, traumatic material.",
+        "KEY POINT: psychological hazards are work health and safety issues — they require prevention, support, reporting and system review, not just individual resilience.",
+        "Moral injury (the harm from doing or witnessing something that violates one's moral code — such as unsafe staffing forcing poor care) is increasingly recognised as a distinct psychological hazard in psychiatry.",
+        "A service with high rates of psychological injury claims should treat this as a system signal requiring governance review — not individual management of affected staff.",
+      ],
+      commonTrap:
+        "Seeing psychological injury as personal resilience failure rather than a workplace hazard.",
+    },
+    {
+      id: "s18",
+      order: 18,
+      title: "Bullying, Harassment and Discrimination",
+      colorTag: "red",
+      explanation:
+        "Bullying is a WHS issue, not merely 'interpersonal conflict.' Calling bullying a 'personality clash' and missing governance responsibility is a consistent mark-losing error.",
+      keyPoints: [
+        "EXAMPLES: repeated humiliation, shouting or intimidation, racist or sexist comments, exclusion, unreasonable work demands, retaliation after complaint, sexual harassment, belittling junior staff, targeting peer workers or cultural workers.",
+        "RESPONSE: ensure immediate safety, listen and validate, document factual pattern, use local bullying/HR process, protect from retaliation, support affected staff, consider patient-safety impact, address culture not only individuals, escalate serious or repeated conduct, monitor outcomes.",
+        "Bullying creates a culture where staff do not raise safety concerns or incident reports — it is therefore a patient-safety risk, not only a staff-welfare issue.",
+        "The response must address both the individual conduct and the cultural/systemic factors — an HR process for the perpetrator alone does not fix the culture.",
+      ],
+      commonTrap:
+        "Calling bullying a 'personality clash' and missing governance responsibility.",
+    },
+    {
+      id: "s19",
+      order: 19,
+      title: "Fatigue and Burnout",
+      colorTag: "amber",
+      explanation:
+        "Fatigue and burnout create safety risks for staff and patients. Treating burnout as an individual coping problem only misses the system/governance dimension.",
+      keyPoints: [
+        "RISK FACTORS: long shifts, repeated nights/on-calls, insufficient breaks, overtime, high acuity, moral distress, repeated trauma, bullying, poor control, inadequate supervision, service gaps, rural travel, exam/training pressures.",
+        "CONSULTANT RESPONSE: identify fatigue as operational risk, check immediate fitness for duty, remove staff from unsafe duties if impaired, ensure rest breaks, escalate unsafe roster, review workload, support leave, EAP/GP support, monitor return, do not normalise chronic exhaustion.",
+        "MEQ TRAP — POOR: 'Encourage resilience.' BETTER: 'Address fatigue as a work-system hazard: workload, roster, breaks, supervision, staffing and psychological support.'",
+        "A fatigued consultant or registrar making high-stakes decisions at the end of a long shift is a patient-safety risk — not a personal performance issue.",
+      ],
+      commonTrap:
+        "Treating burnout as an individual coping problem only.",
+    },
+    {
+      id: "s20",
+      order: 20,
+      title: "Unsafe Facilities",
+      colorTag: "purple",
+      explanation:
+        "Unsafe facilities are a consultant governance responsibility. Telling staff to compensate for unsafe design by being more vigilant places system responsibility on individuals.",
+      keyPoints: [
+        "UNSAFE FACILITIES INCLUDE: no safe interview rooms, no or broken duress alarms, poor lighting or parking, overcrowded ED, mixed acuity ward, poor sightlines, unsafe furniture, no safe outdoor space, inadequate secure doors, no staff retreat area, no private family room, unsafe home-visit fleet or vehicles, poor phone coverage.",
+        "CONSULTANT GOVERNANCE RESPONSE: document hazards, escalate to service manager, add to risk register, use interim controls, conduct environmental audit, consult staff/HSR, consumer/carer input if relevant, capital works or business case if needed, use incident data to support case, monitor actions.",
+        "Interim controls while waiting for capital works are mandatory — interim = not acceptable permanently, but essential now.",
+        "Incident data is the strongest lever for capital works arguments — aggregate near-misses and incidents to build the governance case.",
+      ],
+      commonTrap:
+        "Telling staff to compensate for unsafe design by being more vigilant.",
+    },
+    {
+      id: "s21",
+      order: 21,
+      title: "Home Visit Risk Assessment Template",
+      colorTag: "teal",
+      explanation:
+        "A structured pre-visit risk assessment must change the visit plan when risk is identified — completing the checklist but proceeding unchanged defeats its purpose.",
+      keyPoints: [
+        "PATIENT FACTORS: recent aggression, psychosis/paranoia, intoxication, threats, weapons, domestic violence, animals, unknown visitors, past unsafe visits.",
+        "ENVIRONMENT: location known, phone reception, remote area, safe parking, exits, lighting, time of day, neighbourhood risk.",
+        "STAFF FACTORS: lone worker, new staff, trainee, fatigue, gender/cultural safety issue, staff previously threatened by this patient.",
+        "CONTROLS: two staff, police/ambulance if needed, duress alarm, check-in/check-out, clinic appointment instead, telehealth, daylight visit, clear exit plan, do not enter if unsafe.",
+      ],
+      meqApplication:
+        "The home visit risk assessment is reusable in any community psychiatry stem — cite patient, environment and staff factors, then name the specific controls you would implement.",
+      commonTrap:
+        "Completing risk assessment but not changing the visit plan when risk is identified.",
+    },
+    {
+      id: "s22",
+      order: 22,
+      title: "Return to Work After Incident",
+      colorTag: "green",
+      explanation:
+        "Return-to-work planning may be needed after assault, stalking, psychological injury, serious complaint or critical incident. Expecting staff to return to the same unsafe environment without changes is a WHS governance failure.",
+      keyPoints: [
+        "RETURN TO WORK — CONSIDER: medical clearance, psychological readiness, worker preference, graded return, modified duties, avoiding contact with perpetrator if needed, security escort or parking.",
+        "ALSO CONSIDER: supervision support, debrief and reflective practice, workers compensation process, review of workplace controls, regular check-ins, confidentiality of staff health details.",
+        "RETURN TO WORK CARD: medical and psychological readiness + modified duties + avoid contact with perpetrator if needed + regular check-ins + confidentiality of staff health details + review of workplace controls.",
+        "Return to work should not occur by pressure or guilt — it should be safe, supported and planned.",
+      ],
+      commonTrap:
+        "Expecting staff to return to the same unsafe environment without changes.",
+    },
+    {
+      id: "s23",
+      order: 23,
+      title: "MEQ Example Traps",
+      colorTag: "blue",
+      explanation:
+        "Six worked examples covering the most common WHS/staff-safety MEQ stems. In each, the core error is seeing WHS as human resources only rather than clinical governance.",
+      keyPoints: [
+        "EXAMPLE 1 — ASSAULT ON NURSE: nurse punched by involuntary patient; team says 'it happens.' TRAP: normalising violence. BETTER: ensure immediate safety, treat staff injury, review patient risk/legal status, report occupational violence, support nurse, review antecedents and staffing/environment.",
+        "EXAMPLE 2 — UNSAFE HOME VISIT: case manager asked to visit paranoid patient alone after threats. TRAP: sending staff because 'engagement matters.' BETTER: home-visit risk assessment, consider two staff/police/clinic review, check-in system, duress alarm — do not send lone worker into foreseeable danger.",
+        "EXAMPLE 3 — STALKING CLINICIAN: patient waits near psychiatrist's car park and sends personal messages. TRAP: calling it transference only. BETTER: treat as stalking/boundary/WHS risk — preserve evidence, inform manager/security, risk assess patient, change contact arrangements, consider police, support clinician.",
+        "EXAMPLE 4 — STAFF PSYCHOLOGICAL INJURY: registrar avoids ward after patient suicide. TRAP: 'Attend debrief.' BETTER: assess acute stress, fitness for duty and suicide risk if concerned; offer GP/EAP/peer support, adjust workload and plan return.",
+        "EXAMPLE 5 — BULLYING: NUM repeatedly humiliates junior nurses and peer workers. TRAP: 'Personality clash.' BETTER: treat as WHS and culture issue — listen, document pattern, use HR/WHS pathway, protect from retaliation, address patient-safety impact.",
+        "EXAMPLE 6 — UNSAFE FACILITY: interview room has no alarm and patient blocks the door. TRAP: tell staff to be careful. BETTER: remove immediate risk, stop use of unsafe room, escalate facility hazard, arrange controls and document on risk register.",
+      ],
+      commonTrap:
+        "Seeing WHS as human resources only rather than clinical governance.",
+    },
+    {
+      id: "s24",
+      order: 24,
+      title: "Command-Word Discipline",
+      colorTag: "amber",
+      explanation:
+        "WHS stems require mechanism and rationale, not generic 'support staff.' Answering with generic support without explaining safety mechanism, reporting and system controls loses marks.",
+      keyPoints: [
+        "LIST: concise items — 'Immediate safety. Medical review. Security/police. Incident report. Staff support. WHS review.'",
+        "OUTLINE (list and justify): 'Remove staff from danger — because the immediate duty is to prevent further harm. Report as occupational violence — because assault is a WHS incident, not merely challenging behaviour. Review system controls — because repeated violence may reflect staffing, facility or training gaps.'",
+        "DESCRIBE (list and explain): 'Conduct home-visit risk assessment — because community staff may be exposed to foreseeable violence, weapons, intoxication, domestic violence or isolation without immediate backup.'",
+        "DISCUSS (name the tension): 'There is tension between maintaining patient access to care and protecting staff from foreseeable harm. A defensible position is to continue care through a safer model — clinic review, two-person visit, security/police support or telehealth — rather than sending staff into avoidable danger.'",
+      ],
+      commonTrap:
+        "Answering with generic 'support staff' without explaining safety mechanism, reporting and system controls.",
+    },
+    {
+      id: "s25",
+      order: 25,
+      title: "Examiner Phrases",
+      colorTag: "green",
+      explanation:
+        "Use these phrases to signal consultant-level WHS reasoning. Missing the language of WHS governance, occupational violence, psychosocial hazard and system controls signals registrar-level thinking.",
+      keyPoints: [
+        "'I would treat this as both an immediate safety issue and a WHS governance issue.'",
+        "'Staff safety is a patient-safety issue.'",
+        "'Occupational violence should not be normalised as part of psychiatric work.'",
+        "'I would not send staff alone into a foreseeable unsafe home visit.'",
+        "'Zero tolerance of violence does not mean zero care for the patient.'",
+        "'The response should include immediate containment, staff support, reporting, investigation and system controls.'",
+        "'Debrief should address staff psychological injury, not only operational learning.'",
+        "'Bullying and fatigue are psychosocial hazards and should be managed as WHS risks.'",
+        "'Unsafe facilities require escalation through risk register, management and governance structures.'",
+      ],
+      commonTrap:
+        "Missing the language of WHS governance, occupational violence, psychosocial hazard and system controls.",
+    },
+    {
+      id: "s26",
+      order: 26,
+      title: "Common Traps",
+      colorTag: "amber",
+      explanation:
+        "Use this as a pre-submit checklist for any WHS/staff-safety MEQ stem. Each item is a documented mark-losing gap.",
+      keyPoints: [
+        "Normalising staff assault.",
+        "Focusing only on patient risk and ignoring staff injury.",
+        "Calling security but omitting follow-up and reporting.",
+        "Sending staff on unsafe home visits.",
+        "Failing to mention duress/check-in systems.",
+        "Ignoring police where credible serious threat exists.",
+        "Treating stalking as transference only.",
+        "Saying 'debrief' without psychological support.",
+        "Ignoring workers compensation or return-to-work.",
+        "Reducing burnout to resilience training.",
+        "Treating bullying as interpersonal conflict.",
+        "Ignoring unsafe facilities.",
+        "Using restrictive practice as substitute for staffing.",
+        "Failing to escalate repeated occupational violence to governance.",
+      ],
+      meqApplication:
+        "Use this as a pre-submit checklist for WHS/staff-safety stems — any item present in the stem that is absent from your answer is a lost mark.",
+    },
+    {
+      id: "s27",
+      order: 27,
+      title: "Consultant-Level Summary",
+      colorTag: "green",
+      explanation:
+        "This paragraph is reusable in MEQ stems involving assault on staff, threats, stalking, unsafe home visits, lone-worker risk, staff psychological injury, bullying, fatigue, burnout and unsafe facilities.",
+      keyPoints: [
+        "IMMEDIATE SAFETY: 'I would treat staff safety as a clinical governance and WHS issue. My first priority is immediate safety: remove staff from danger, call security or police if needed, provide medical care and protect other patients.'",
+        "CLINICAL AND STAFF SUPPORT: 'I would then review the patient's clinical risk and care plan while ensuring the affected staff member receives debrief, psychological support, reporting and return-to-work planning if needed.'",
+        "GOVERNANCE: 'I would document and report the incident, review occupational violence, staffing, facility, duress and lone-worker controls, and escalate repeated or serious hazards through WHS, risk register and governance processes.'",
+        "FULL PARAGRAPH: 'I would treat staff safety as a clinical governance and WHS issue. My first priority is immediate safety: remove staff from danger, call security or police if needed, provide medical care and protect other patients. I would then review the patient's clinical risk and care plan while ensuring the affected staff member receives debrief, psychological support, reporting and return-to-work planning if needed. I would document and report the incident, review occupational violence, staffing, facility, duress and lone-worker controls, and escalate repeated or serious hazards through WHS, risk register and governance processes. The aim is to continue patient care through a safe model, not normalise preventable harm to staff.'",
+      ],
+      meqApplication:
+        "This paragraph should be reusable in MEQ stems involving assault on staff, threats, stalking, unsafe home visits, lone-worker risk, staff psychological injury, bullying, fatigue, burnout and unsafe facilities.",
+    },
+  ],
+};
+
+export const ALL_NOTES: Note[] = [DISCHARGE_PLAN, CONFLICT_MANAGEMENT, COMPLAINT_PROCESS, INCIDENT_MANAGEMENT, CLINICAL_AUDIT, OPEN_DISCLOSURE, RESTRICTIVE_PRACTICES, RESTRICTIVE_PRACTICES_MEQ, CONFIDENTIALITY, CAPACITY_CONSENT, SUPERVISION_TRAINING, WHS_STAFF_SAFETY];
