@@ -202,7 +202,7 @@ function FloatingHighlightToolbar({
   onApply: (color: TextHL["color"]) => void;
   onClear: () => void;
 }) {
-  const toolbarWidth = 228;
+  const toolbarWidth = 252;
   const left = Math.min(Math.max(toolbar.x - toolbarWidth / 2, 8), window.innerWidth - toolbarWidth - 8);
   const top = toolbar.y - 52;
 
@@ -227,13 +227,19 @@ function FloatingHighlightToolbar({
           )}
         </button>
       ))}
-      <div className="w-px h-4 bg-slate-200 mx-0.5 shrink-0" />
+      {/* No colour — removes highlights for selected text */}
       <button
-        title="Remove all highlights on this text"
+        title="No colour (remove highlight)"
         onClick={onClear}
-        className="w-6 h-6 rounded-full bg-slate-100 hover:bg-red-100 border border-slate-200 hover:border-red-300 flex items-center justify-center transition-colors shrink-0"
+        className="w-6 h-6 rounded-full border border-slate-300 hover:scale-110 transition-transform flex items-center justify-center shrink-0 relative overflow-hidden bg-white"
       >
-        <X className="w-3 h-3 text-slate-400 hover:text-red-500" />
+        <span
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background:
+              "linear-gradient(to bottom right, transparent calc(50% - 0.5px), #ef4444 calc(50% - 0.5px), #ef4444 calc(50% + 0.5px), transparent calc(50% + 0.5px))",
+          }}
+        />
       </button>
     </div>
   );
