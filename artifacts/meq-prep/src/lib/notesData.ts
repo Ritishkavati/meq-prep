@@ -3786,4 +3786,499 @@ export const RESTRICTIVE_PRACTICES_MEQ: Note = {
   ],
 };
 
-export const ALL_NOTES: Note[] = [DISCHARGE_PLAN, CONFLICT_MANAGEMENT, COMPLAINT_PROCESS, INCIDENT_MANAGEMENT, CLINICAL_AUDIT, OPEN_DISCLOSURE, RESTRICTIVE_PRACTICES, RESTRICTIVE_PRACTICES_MEQ];
+export const CONFIDENTIALITY: Note = {
+  id: "confidentiality",
+  title: "Confidentiality, Privacy and Information Sharing in Psychiatry",
+  category: "Ethics / Legal Reasoning / Communication / Clinical Governance",
+  description:
+    "A consultant-level framework for managing confidentiality, privacy and information sharing in psychiatry, including family requests, GP handover, NGO collateral, school risk requests, police requests, third-party warning, child protection, wrong-recipient discharge summaries, ED privacy breaches, social media breaches and patient recording staff.",
+  sections: [
+    {
+      id: "s01",
+      order: 1,
+      title: "Core Principle",
+      colorTag: "blue",
+      explanation:
+        "Confidentiality is central to psychiatric care because patients disclose highly sensitive information: trauma, sexuality, violence, self-harm, psychosis, substance use, family conflict, forensic history and shame. But confidentiality is not absolute.",
+      keyPoints: [
+        "GOOD CONSULTANT ANSWER: 'I would seek the patient's consent first wherever possible, clarify what information is needed and why, share only the minimum necessary information, and document the rationale. If there is serious risk to the patient, children, identifiable others or public safety, limited disclosure may be justified or required.'",
+        "Consent first where possible — confidentiality supports therapeutic alliance.",
+        "Confidentiality is not absolute — safety and legal duties may justify limited disclosure.",
+        "Disclosure should be proportionate and documented.",
+        "CRITICAL DISTINCTION: receiving collateral and disclosing information are different tasks with different thresholds.",
+      ],
+      commonTrap:
+        "Either over-sharing everything or refusing all communication because of confidentiality — both extremes lose marks.",
+    },
+    {
+      id: "s02",
+      order: 2,
+      title: "MEQ Decision Framework",
+      colorTag: "blue",
+      explanation:
+        "Whenever information sharing appears in a stem, work through five questions: who is asking, what are they asking for, what is the legal or clinical basis, what is the minimum necessary disclosure, and what must be documented.",
+      keyPoints: [
+        "A. WHO IS ASKING? Patient, family/carer, parent/guardian, partner, GP, NGO/support worker, school, police, employer, legal agency, advocate, another treating team, media, social media/public forum.",
+        "B. WHAT ARE THEY ASKING FOR? General update, diagnosis, medication, risk assessment, discharge plan, admission confirmation, capacity opinion, fitness to drive/work/school, risk clearance, records, collateral exchange, third-party warning, child-safety information.",
+        "C. LEGAL/CLINICAL BASIS? Patient consent, implied consent for direct healthcare, serious risk, child protection, required by law, court/subpoena, Mental Health Act process, duty to protect/warn, clinical handover, privacy breach response, or no lawful basis.",
+        "D. MINIMUM NECESSARY DISCLOSURE: share only what is needed. Do NOT disclose full diagnosis if not needed, trauma history if not relevant, unrelated substance/sexual/forensic history, another patient's details, speculative risk opinions, family gossip, staff opinions or pejorative labels.",
+        "E. DOCUMENT: request received, requester identity/role, information requested, patient consent or refusal, capacity if relevant, collateral received, risk assessment, legal/safety basis, what was and wasn't disclosed, to whom, when, advice sought, patient informed, follow-up plan.",
+      ],
+      commonTrap:
+        "Answering 'yes' or 'no' to disclosure without clarifying purpose, authority and minimum necessary information.",
+    },
+    {
+      id: "s03",
+      order: 3,
+      title: "Consent First",
+      colorTag: "green",
+      explanation:
+        "The default position is to seek the patient's consent before disclosing information. Consent is not all-or-nothing — patients can consent to some disclosures and not others.",
+      keyPoints: [
+        "CONSENT MUST BE: informed, specific enough, current, voluntary, capacity-based and documented.",
+        "ASK: 'Who can we speak to?' / 'What can we share?' / 'What should we not share?' / 'Can we receive information from them even if you do not want us to disclose details?' / 'Are there safety concerns if we contact them?'",
+        "NUANCED CONSENT EXAMPLES: patient may agree for GP to know about medication but not tell family about trauma; young person may agree to school supports but not disclosure of self-harm details.",
+        "MEQ TRAP — STEM: 'Patient says Do not tell my wife anything.' POOR: 'Do not speak to the wife.' BETTER: 'Respect refusal of disclosure but clarify whether collateral can be received; explain confidentiality limits; consider limited disclosure only if serious safety risk to wife, children or public.'",
+      ],
+      commonTrap:
+        "Treating consent as all-or-nothing — a patient's refusal of disclosure does not prevent receiving collateral.",
+    },
+    {
+      id: "s04",
+      order: 4,
+      title: "Receiving Collateral vs Disclosing Information",
+      colorTag: "teal",
+      explanation:
+        "This is one of the highest-yield MEQ distinctions. You can usually receive information from family, GP, school, NGO or police without disclosing confidential patient information — these are two entirely different actions with different thresholds.",
+      keyPoints: [
+        "RECEIVING COLLATERAL: you can usually listen to information from family, GP, school, NGO or police without breaching confidentiality. USEFUL PHRASE: 'I may not be able to share details without the patient's consent, but I can listen to your concerns and include them in the risk assessment.'",
+        "COLLATERAL IS ESPECIALLY IMPORTANT WHEN: family reports suicide risk, partner reports violence, school reports child-safety concerns, NGO reports deterioration, GP reports medication non-adherence, police report threats, pharmacy reports unsafe medication use.",
+        "DISCLOSING INFORMATION requires consent or another lawful/ethical basis: continuity of care, serious risk, child protection, public safety, legal requirement, Mental Health Act process, duty to warn/protect, or approved internal governance.",
+        "MEQ TRAP — STEM: 'A mother phones saying her son is psychotic and threatening his neighbour. Patient refused family contact.' POOR: 'Cannot speak to mother due to confidentiality.' BETTER: 'Receive her collateral, clarify the threat, assess risk urgently, document, and consider limited disclosure or action if there is serious risk to an identifiable person.'",
+      ],
+      commonTrap:
+        "Refusing to receive collateral because the patient refused disclosure — these are separate obligations.",
+    },
+    {
+      id: "s05",
+      order: 5,
+      title: "Minimum Necessary Disclosure",
+      colorTag: "green",
+      explanation:
+        "When disclosure is justified, share the least information needed to achieve the safety or care purpose. A valid reason to disclose is not permission to disclose everything.",
+      keyPoints: [
+        "GP DISCHARGE PLAN — APPROPRIATE: diagnosis/formulation, medication changes, monitoring requirements, side effects, risk plan, relapse signs, follow-up responsibilities. NOT APPROPRIATE: unnecessary trauma/sexuality/family conflict/unrelated forensic details.",
+        "SCHOOL — APPROPRIATE: safety plan, supervision needs, re-entry plan, who to contact if risk escalates, reasonable adjustments. USUALLY NOT APPROPRIATE: full diagnosis, detailed trauma history, medication details unless necessary, family allegations.",
+        "POLICE — APPROPRIATE: immediate risk information, identifiable threat, relevant description/location, legal status needed for safe return, minimum information to prevent harm. USUALLY NOT APPROPRIATE: full psychiatric history, irrelevant personal details, speculative labels.",
+        "The valid reason for disclosure (safety, child protection, legal requirement) defines the scope — it does not expand the scope to the whole file.",
+      ],
+      commonTrap:
+        "Treating a valid reason to disclose as permission to disclose everything.",
+    },
+    {
+      id: "s06",
+      order: 6,
+      title: "Serious and Imminent Risk / Serious Threat",
+      colorTag: "red",
+      explanation:
+        "Confidentiality can be overridden when disclosure is necessary to lessen or prevent a serious threat to life, health or safety. This requires structured reasoning — not reflexive disclosure.",
+      keyPoints: [
+        "POSSIBLE TARGETS OF RISK: patient, child, partner, identifiable third party, staff, public, school community, driving/transport users, vulnerable adult.",
+        "QUESTIONS BEFORE DISCLOSURE: Is the risk serious? Is it imminent or foreseeable? Is the person identifiable? Can risk be managed by less intrusive means? Can the patient be persuaded to consent? What information is strictly necessary? Who is best placed to reduce the risk? Should police/child protection/family/school/victim be notified? Have I sought senior/legal advice if time allows? Have I documented the reasoning?",
+        "MEQ PHRASE: 'I would first seek consent, but if there is a serious and foreseeable risk to an identifiable person, confidentiality is not absolute. I would make a proportionate disclosure to the person or agency best able to reduce the risk and document the rationale.'",
+        "Serious + foreseeable + identifiable = the three tests for overriding confidentiality on safety grounds.",
+      ],
+      commonTrap:
+        "Hiding behind confidentiality when there is serious foreseeable harm to an identifiable person.",
+    },
+    {
+      id: "s07",
+      order: 7,
+      title: "Duty to Warn / Duty to Protect",
+      colorTag: "red",
+      explanation:
+        "This appears in many psychiatry exams because it tests autonomy, confidentiality and public safety simultaneously. The duty to warn/protect requires structured decision-making, not automatic disclosure.",
+      keyPoints: [
+        "WHEN TO CONSIDER: specific threat, identifiable victim, escalating psychosis or paranoia, access to weapons, history of violence, stalking or domestic violence, command hallucinations, fixation on school/workplace/person, loss of impulse control, substance intoxication, discharge or leave increases opportunity.",
+        "POSSIBLE ACTIONS: urgent review, increase observation, cancel leave or discharge, use Mental Health Act if criteria met, notify clinical director/senior, notify police, warn identifiable victim if necessary, inform relevant mental health team, involve family/carer if safety requires, document decision-making, seek medicolegal advice if time allows.",
+        "MEQ TRAP — STEM: 'Patient says When I leave, I will kill my ex-partner but refuses consent.' POOR: 'Maintain confidentiality.' BETTER: 'This is a serious threat to an identifiable person — urgently assess risk, consider compulsory treatment/leave restriction, notify senior staff, consider police and warning the ex-partner if necessary, share minimum information required for safety and document the rationale.'",
+        "DUTY TO PROTECT BOX: 'There is tension between confidentiality and duty to protect. A defensible consultant position is to seek consent first, but if there is serious foreseeable harm to an identifiable person, make a proportionate disclosure to the person or agency best able to reduce risk.'",
+      ],
+      commonTrap:
+        "Only documenting the threat but not acting to protect the identifiable person.",
+    },
+    {
+      id: "s08",
+      order: 8,
+      title: "Child Protection and Child-Safety Information Sharing",
+      colorTag: "red",
+      explanation:
+        "Child safety is a major confidentiality exception. A child's safety may override the parent's preference for non-disclosure. Treating child safety as a family preference issue rather than a safeguarding issue is a consistent mark-losing error.",
+      keyPoints: [
+        "CONSIDER CHILD PROTECTION ADVICE OR NOTIFICATION WHEN: child exposed to violence/overdose/psychosis/intoxication/unsafe driving, child incorporated into delusions, unsafe school pick-up, neglect risk, family violence, parent's relapse affects caregiving, other parent cannot protect, adolescent at risk of exploitation or abuse, young person refuses family contact but safety risk is serious.",
+        "MEQ PHRASE: 'I would explain confidentiality limits and consider child-protection advice or notification because the child's safety may override the parent's preference for non-disclosure.'",
+        "SCHOOL LIAISON — CLARIFY: what school needs to know to keep the child safe, whether consent is available, whether child protection or safety overrides consent, who should communicate, what should not be disclosed. Do not give school a broad psychiatric report unless there is a clear basis.",
+        "Child protection notification is mandatory in most jurisdictions once a threshold is reached — discretion ends at that point.",
+      ],
+      commonTrap:
+        "Treating child safety as a family preference issue rather than a safeguarding issue.",
+    },
+    {
+      id: "s09",
+      order: 9,
+      title: "Family Wants Information",
+      colorTag: "teal",
+      explanation:
+        "This is the commonest practical scenario. Start with patient consent and capacity, then consider family role, safety issues and what family actually needs to know.",
+      keyPoints: [
+        "START WITH: patient consent, patient capacity, family role (carer/support/collateral source/potential victim/source of risk), safety issues, what family needs to know, what patient does not want shared.",
+        "WITHOUT CONSENT — YOU CAN USUALLY SAY: 'I can listen to your concerns.' / 'I will pass this to the treating team.' / 'If there is an immediate risk, call emergency services.' / 'I cannot confirm details without consent.' / 'I can explain general service processes.'",
+        "WITH CONSENT — MAY SHARE: diagnosis/formulation, relapse signs, medication purpose/side effects, crisis plan, follow-up, how family can support, when to escalate.",
+        "WITHOUT CONSENT BUT SERIOUS RISK EXISTS — share only what is needed for safety, e.g.: 'Do not allow unsupervised child pickup.' / 'Call emergency services if he attends intoxicated and threatening.' / 'Contact crisis team if he stops sleeping and becomes threatening.'",
+        "MEQ TRAP — STEM: 'Family asks for diagnosis and medication because patient is refusing discharge planning.' POOR: 'Tell them everything because they are family.' BETTER: 'Seek consent; if refused, receive collateral and provide general support, but only share specific information if required for serious safety or legal reasons.'",
+      ],
+      commonTrap:
+        "Confusing family distress with automatic permission to disclose.",
+    },
+    {
+      id: "s10",
+      order: 10,
+      title: "GP Wants Discharge Plan",
+      colorTag: "green",
+      explanation:
+        "This is not usually a privacy problem if the GP is part of ongoing care — it is a safe handover requirement. Treating GP handover as optional despite high-risk medication or risk follow-up is a clinical governance failure.",
+      keyPoints: [
+        "SHARE WITH GP: diagnosis and formulation, admission reason, risk formulation, medication changes, monitoring requirements, abnormal results, side effects to monitor, relapse signs, follow-up dates, crisis plan, who is responsible for bloods/results, contact details for urgent advice.",
+        "MEQ TRAP — STEM: 'Patient refuses GP letter after discharge on lithium.' POOR: 'Respect refusal and discharge.' BETTER: 'Explore reasons, explain that GP communication is needed for safe monitoring, assess capacity, consider whether limited disclosure is necessary to prevent serious harm, arrange alternative monitoring if GP contact is refused, and document the risk-benefit decision.'",
+        "Lithium, clozapine, high-dose antipsychotics and other high-risk medications require monitoring — refusing GP communication is a clinical risk, not just a preference.",
+        "If the patient lacks capacity or the risk is serious enough, limited disclosure for safe medical follow-up may be justified without consent.",
+      ],
+      commonTrap:
+        "Treating GP handover as optional despite high-risk medication or risk follow-up needs.",
+    },
+    {
+      id: "s11",
+      order: 11,
+      title: "NGO / Support Worker Emails Collateral",
+      colorTag: "teal",
+      explanation:
+        "NGOs often provide valuable information but may blur clinical roles. The response involves receiving their collateral appropriately and sharing only what the NGO needs for safe support — not the full clinical record.",
+      keyPoints: [
+        "RECEIVING NGO INFORMATION — CAN RECEIVE: missed appointments, functional decline, housing risk, substance use, threats, disengagement, child-safety concerns, medication non-adherence, deterioration in self-care.",
+        "DISCLOSING TO NGO — CLARIFY: patient consent, NGO role, information-sharing agreement, what the NGO needs for safe support, what clinical information is unnecessary, escalation pathway, whether NGO is being asked to carry clinical risk.",
+        "GOOD SHARED-CARE DISCLOSURE — APPROPRIATE: risk triggers, what to do if deterioration occurs, crisis team number, appointment plan, boundaries and after-hours rules, safe engagement strategies. USUALLY INAPPROPRIATE: full trauma history, detailed diagnosis if not needed, family secrets, forensic details not relevant, speculative formulation.",
+        "MEQ TRAP — STEM: 'NGO worker sends repeated emails saying patient is manipulative and dangerous, asking for full file.' POOR: 'Send file to keep them informed.' BETTER: 'Receive concerns, clarify factual observations, seek patient consent for information sharing, share only what is necessary for the NGO role and risk escalation, and avoid transferring clinical risk to NGO.'",
+      ],
+      commonTrap:
+        "Either ignoring NGO collateral or giving the NGO the whole file.",
+    },
+    {
+      id: "s12",
+      order: 12,
+      title: "School Asks for Risk Clearance",
+      colorTag: "amber",
+      explanation:
+        "Schools often ask for 'clearance' after self-harm, aggression, psychosis, eating disorder or threats. Do not provide 'no risk' guarantees — provide a functional safety plan instead.",
+      keyPoints: [
+        "DO NOT PROVIDE 'no risk' guarantees. INSTEAD PROVIDE: current clinical opinion within limits, functional recommendations, safety plan, warning signs, supervision needs, return-to-school plan, who to contact if concerns arise, review timeframe.",
+        "WITH CONSENT — SHARE RELEVANT: attendance plan, safety supports, medication side effects affecting learning if necessary, crisis plan, accommodations, parent/guardian involvement.",
+        "WITHOUT CONSENT — only share if safety/legal threshold is met: child protection, serious threat to student/staff, unsafe behaviour involving school, safeguarding issue.",
+        "MEQ TRAP — STEM: 'School principal asks whether student is safe to return after threatening another student.' POOR: 'Tell school he has psychosis and is now low risk.' BETTER: 'With consent, provide a functional safety/re-entry plan; if serious risk to identifiable student, consider limited disclosure/police/school safety action; avoid blanket risk clearance.'",
+      ],
+      commonTrap:
+        "Giving a 'safe to return' letter that overstates certainty.",
+    },
+    {
+      id: "s13",
+      order: 13,
+      title: "Police Ask for Details",
+      colorTag: "purple",
+      explanation:
+        "Police requests vary significantly. Do not automatically disclose everything — clarify the legal basis and safety purpose before deciding what to share.",
+      keyPoints: [
+        "CLARIFY: what information police request, whether there is consent, whether there is a warrant/subpoena/legal requirement, whether there is immediate serious risk, whether patient is missing or absconded, whether patient is involuntary and absent without leave, whether there is an identifiable threat, whether disclosure is necessary for enforcement or safety, whether senior/legal advice is needed.",
+        "APPROPRIATE DISCLOSURE: patient description/location risk if absconded and high risk, information needed to locate missing high-risk patient, specific threat information, legal status relevant to safe return, immediate risk to officers/public.",
+        "USUALLY AVOID: full history, unrelated trauma/sexual/substance details, speculative diagnosis, another patient's information.",
+        "MEQ TRAP — STEM: 'Police ask Is he a schizophrenic? We need his full history.' POOR: 'Give diagnosis because police asked.' BETTER: 'Clarify legal basis and safety purpose; share only minimum necessary information for immediate risk management; document disclosure; seek senior/legal advice if not urgent.'",
+      ],
+      commonTrap:
+        "Treating police request as automatic authority for full disclosure.",
+    },
+    {
+      id: "s14",
+      order: 14,
+      title: "Patient Recording Staff",
+      colorTag: "amber",
+      explanation:
+        "Patients may record consultations or staff interactions. The response must be proportionate — reacting punitively and escalating conflict is a governance problem in itself.",
+      keyPoints: [
+        "FIRST RESPONSE: stay calm, ask why they are recording, check local policy, clarify consent of staff/patients present, avoid discussing other patients, offer written summary if trust issue, consider whether recording escalates risk, document.",
+        "IF RECORDING IN SHARED WARD OR ED — concern is higher because it may capture other patients, confidential conversations, staff identifiers, clinical information and distressed people.",
+        "YOU MAY NEED TO: move to private area, ask them to stop recording others, explain privacy of other patients, involve senior nurse/security only if necessary and proportionate, avoid coercive response.",
+        "MEQ TRAP — STEM: 'Patient records the ward round and captures another patient in distress.' POOR: 'Confiscate phone.' BETTER: 'Explain privacy concerns, move to private setting, ask recording to stop/delete content involving others according to policy, document, and escalate if there is ongoing privacy/safety risk.'",
+      ],
+      commonTrap:
+        "Reacting punitively and escalating conflict rather than addressing privacy proportionately.",
+    },
+    {
+      id: "s15",
+      order: 15,
+      title: "Staff Talking Loudly in ED or Waiting Room",
+      colorTag: "red",
+      explanation:
+        "This is a privacy breach and dignity issue. Treating privacy humiliation as minor because no physical harm occurred is a consistent mark-losing error.",
+      keyPoints: [
+        "EXAMPLES: staff use birth name loudly after patient requested affirmed name, staff discuss diagnosis in waiting area, staff mention self-harm or sexual assault in corridor, family overhears medication details, security/triage loudly discuss risk history.",
+        "RESPONSE: stop the conversation, move to private area, apologise or acknowledge distress, assess whether harm occurred, notify senior staff if significant, document, consider complaint/open disclosure pathway, staff education, review ED privacy processes.",
+        "MEQ TRAP — STEM: 'Patient says Everyone heard them call me borderline and drug-seeking.' POOR: 'Reassure patient staff were busy.' BETTER: 'Acknowledge privacy and stigma concerns, move to private space, ensure clinical care continues, document, inform senior staff, offer complaint pathway and address staff culture.'",
+        "Stigmatising language in a public space is both a privacy breach and a dignity/discrimination issue — both streams require response.",
+      ],
+      commonTrap:
+        "Treating privacy humiliation as minor because no physical harm occurred.",
+    },
+    {
+      id: "s16",
+      order: 16,
+      title: "Wrong-Recipient Discharge Summary",
+      colorTag: "red",
+      explanation:
+        "This is both a privacy breach and a patient-safety risk. Correcting the clinical handover but ignoring the privacy breach is incomplete governance.",
+      keyPoints: [
+        "IMMEDIATE ACTIONS: identify what was sent and who received it, ask recipient to delete/return securely according to policy, notify privacy/governance unit, inform treating consultant or manager, assess risk of serious harm, notify patient if required by policy, resend correct summary, document, review system cause.",
+        "SYSTEM CAUSES TO REVIEW: wrong patient selected, outdated GP details, no verification process, admin workload, EMR auto-fill problem, no second check for high-risk summaries, unclear responsibility.",
+        "MEQ TRAP — STEM: 'Discharge summary with psychosis, AOD and forensic history sent to wrong GP.' POOR: 'Send correct one now.' BETTER: 'Contain breach, notify privacy/governance, assess serious harm, inform patient as required, correct handover, document, incident report and review EMR/verification process.'",
+        "The disclosure of psychosis, AOD and forensic history to the wrong recipient may meet the notifiable data breach threshold — this requires privacy officer assessment.",
+      ],
+      commonTrap:
+        "Correcting the clinical handover but ignoring the privacy breach governance stream.",
+    },
+    {
+      id: "s17",
+      order: 17,
+      title: "Social Media Breach",
+      colorTag: "red",
+      explanation:
+        "Social media is high-risk because 'de-identified' cases can still be identifiable. Deleting the post does not fix the breach — the information has already been disclosed.",
+      keyPoints: [
+        "EXAMPLES: staff posts 'wild night on psych ward' with details, clinician discusses rare case online, photo from ward includes patient, staff comments on patient complaint online, psychiatrist engages with patient on social media, patient identified through location/time/context.",
+        "RESPONSE: preserve evidence, stop further disclosure, ask staff NOT to delete evidence before governance advice, notify manager/privacy/governance, assess patient harm, inform patient if required, offer complaint/open disclosure if distress or harm, HR/professional conduct pathway if serious, staff education, social media policy review.",
+        "MEQ TRAP — STEM: 'Registrar posted a de-identified case online but patient recognised themselves.' POOR: 'Tell registrar to delete it.' BETTER: 'Preserve evidence, contain further disclosure, notify senior/privacy/governance, support patient, consider complaint/open disclosure, support registrar while addressing conduct, review social media policy/training.'",
+        "Ask staff NOT to delete before governance advice — preservation of evidence is required for investigation.",
+      ],
+      commonTrap:
+        "Thinking deleting the post fixes the breach — the disclosure has already occurred and requires governance response.",
+    },
+    {
+      id: "s18",
+      order: 18,
+      title: "Privacy Breach Response",
+      colorTag: "purple",
+      explanation:
+        "Privacy breach response follows a four-step logic: contain, assess, notify and prevent. Treating a privacy breach as only an administrative problem misses the clinical and governance dimensions.",
+      keyPoints: [
+        "STEP 1 — CONTAIN: stop further disclosure, recall email or fax if possible, secure records, remove online material according to governance advice, restrict access, inform manager/privacy officer.",
+        "STEP 2 — ASSESS: what information was disclosed, who received it, did it include sensitive mental health/AOD/sexual/forensic/trauma/child-safety data, what is the likelihood of serious harm, does remedial action reduce harm, is notifiable data breach threshold met?",
+        "STEP 3 — NOTIFY (depending on severity and policy): patient, privacy officer, clinical director/service manager, OAIC if required, digital health agency if My Health Record involved, insurer/legal if serious, AHPRA if professional conduct threshold.",
+        "STEP 4 — PREVENT RECURRENCE: EMR verification, staff training, privacy reminders, role-based access review, audit access logs, secure email/fax protocol, social media policy, handover process.",
+      ],
+      commonTrap:
+        "Treating a privacy breach as only an administrative problem.",
+    },
+    {
+      id: "s19",
+      order: 19,
+      title: "Information Sharing With Treating Colleagues",
+      colorTag: "green",
+      explanation:
+        "Sharing with treating colleagues is usually appropriate when needed for care. Under-sharing with treating teams creates unsafe care — the psychiatric confidentiality instinct must not override clinical handover obligations.",
+      keyPoints: [
+        "EXAMPLES: inpatient to community team, ED to CL psychiatry, CAMHS to adult mental health, GP to psychiatrist, psychiatrist to pharmacist, mental health to medical team, psychiatrist to ECT team.",
+        "SHARE INFORMATION NEEDED FOR SAFE CARE: diagnosis/formulation, current risk, medication, monitoring needs, legal status, follow-up, crisis plan, handover responsibilities.",
+        "MEQ TRAP — STEM: 'Psychiatric team does not tell medical team about overdose intent because confidentiality.' POOR: 'Maintain psychiatric confidentiality.' BETTER: 'Share relevant risk and treatment information with the treating medical team because it is necessary for safe care, while limiting disclosure to clinically relevant information.'",
+        "Implied consent for direct healthcare covers information sharing between treating clinicians — this does not require explicit consent for every handover.",
+      ],
+      commonTrap:
+        "Under-sharing with treating teams and creating unsafe care in the name of confidentiality.",
+    },
+    {
+      id: "s20",
+      order: 20,
+      title: "Information Sharing With Advocates",
+      colorTag: "teal",
+      explanation:
+        "Advocates may be legal, consumer, cultural, disability or mental health advocates. Seeing advocacy as interference rather than part of rights-based care is a governance failure.",
+      keyPoints: [
+        "CLARIFY: who they represent, patient consent, authority, what information they request, whether they need records or a meeting, whether patient wants them present.",
+        "SHARE: with consent — relevant information for advocacy. Without consent — usually only general process information unless safety/legal basis exists.",
+        "DO NOT: treat advocate as enemy, disclose more than authorised, ignore rights-based concern, withhold information the patient has authorised.",
+        "Advocacy is a patient right in most mental health legislation — obstruction of legitimate advocacy may be a rights violation.",
+      ],
+      commonTrap:
+        "Seeing advocacy as interference rather than part of rights-based care.",
+    },
+    {
+      id: "s21",
+      order: 21,
+      title: "Capacity, Young People and Substitute Decision-Making",
+      colorTag: "purple",
+      explanation:
+        "Information sharing depends on decision-making capacity and, for young people, on developmental maturity. Age alone does not determine confidentiality.",
+      keyPoints: [
+        "ADULTS WITH CAPACITY INTACT: the patient generally controls disclosure unless serious safety/legal exceptions apply.",
+        "ADULTS WITH IMPAIRED CAPACITY: involve substitute decision-maker or guardian where lawful, provide information needed for decisions, still involve patient as much as possible, document capacity and basis for disclosure.",
+        "YOUNG PEOPLE — CONSIDER: maturity/Gillick competence, parent/guardian role, child protection, confidentiality needed for engagement, safety threshold, school/family involvement, family violence or coercion.",
+        "MEQ TRAP — STEM: 'A 15-year-old refuses parent disclosure after self-harm but plans to return home where abuse is alleged.' POOR: 'Tell parents because she is under 18.' BETTER: 'Assess maturity/capacity, safety, abuse risk and child protection duties; do not automatically disclose to parents if this may increase risk, but act to protect the young person.'",
+      ],
+      commonTrap:
+        "Assuming age alone determines confidentiality — a mature young person may have confidentiality rights, and parental disclosure may increase risk if abuse is present.",
+    },
+    {
+      id: "s22",
+      order: 22,
+      title: "Third-Party Warning: Practical Steps",
+      colorTag: "red",
+      explanation:
+        "When serious third-party risk exists, a structured response is required — clinical management of the patient AND warning/protection of the identifiable victim run simultaneously.",
+      keyPoints: [
+        "STEPS: (1) Reassess patient immediately, (2) Clarify threat specificity, (3) Identify victim or group, (4) Assess access to means, (5) Review psychosis/intoxication/impulse control, (6) Consider admission/compulsory treatment/leave cancellation, (7) Seek senior or medicolegal advice if time permits, (8) Notify police if necessary, (9) Warn victim or agency if necessary and proportionate, (10) Share minimum necessary information, (11) Document fully.",
+        "DOCUMENTATION MUST INCLUDE: exact threat, risk formulation, alternatives considered, consent discussion, why disclosure was necessary, who was informed, what was disclosed, advice sought, ongoing plan.",
+        "Warning the victim without also managing the patient's clinical risk and legal status is incomplete — both streams are required simultaneously.",
+        "Minimum necessary information for a third-party warning: 'There is a serious threat to your safety from X — please contact police and take safety precautions.' The clinical history does not need to be disclosed.",
+      ],
+      commonTrap:
+        "Warning the victim without also managing the patient's clinical risk and legal status.",
+    },
+    {
+      id: "s23",
+      order: 23,
+      title: "MEQ Example Traps",
+      colorTag: "blue",
+      explanation:
+        "Seven worked examples covering the most common confidentiality/information-sharing scenarios in MEQ stems. In each, the real examiner issue is information sharing, not only clinical risk.",
+      keyPoints: [
+        "EXAMPLE 1 — FAMILY WANTS INFO: Wife phones asking whether husband is admitted and what medication he is on. He refuses consent. TRAP: give full update or refuse all contact. BETTER: receive collateral, encourage patient consent, provide general support, explain confidentiality limits, disclose only if serious safety risk.",
+        "EXAMPLE 2 — SCHOOL RISK CLEARANCE: School asks if student is 'safe' after threats. TRAP: provide blanket clearance. BETTER: with consent, provide functional safety plan; if identifiable risk exists, disclose minimum necessary; avoid no-risk guarantees.",
+        "EXAMPLE 3 — POLICE FULL HISTORY: Police ask for diagnosis and full file after neighbourhood disturbance. TRAP: treat police request as automatic authority. BETTER: clarify legal basis and safety purpose, provide minimum necessary for serious risk/enforcement if justified, document.",
+        "EXAMPLE 4 — NGO ASKS FOR FILE: NGO says they need the file to support housing. TRAP: send full notes. BETTER: clarify role and consent; share functional supports, crisis triggers and escalation plan, not full psychiatric record.",
+        "EXAMPLE 5 — WRONG GP DISCHARGE SUMMARY: Discharge summary sent to wrong GP. TRAP: just resend correctly. BETTER: contain breach, notify privacy/governance, assess serious harm, inform patient if required, correct handover, incident report and system fix.",
+        "EXAMPLE 6 — PATIENT RECORDS STAFF: Patient records ward interaction with another patient visible. TRAP: confiscate phone or ignore. BETTER: explain privacy issue, move to private area, ask recording stop, follow policy, protect other patient privacy and document.",
+        "EXAMPLE 7 — THREAT TO EX-PARTNER: Patient says he will kill his ex-partner after discharge and refuses consent. TRAP: maintain confidentiality. BETTER: serious identifiable threat may justify disclosure/action — reassess risk, restrict leave/discharge, notify senior/police/victim if necessary, document.",
+      ],
+      commonTrap:
+        "Missing that the real examiner issue is information sharing governance, not only clinical risk management.",
+    },
+    {
+      id: "s24",
+      order: 24,
+      title: "Command-Word Discipline",
+      colorTag: "amber",
+      explanation:
+        "Confidentiality stems frequently carry command-word traps. Writing generic confidentiality statements without case-specific justification loses marks regardless of whether the content is correct.",
+      keyPoints: [
+        "LIST: give items only — 'Seek consent. Receive collateral. Share minimum necessary information. Document. Escalate if serious risk.'",
+        "OUTLINE (list and justify): each point needs a because-clause — 'Seek consent from the patient — because disclosure to family or school should occur with consent unless safety or legal exceptions apply. Receive collateral from the family — because their information may materially change risk assessment even if disclosure back to them is limited.'",
+        "DESCRIBE (list and explain): explain mechanism — 'Limit disclosure to minimum necessary information — because the ethical/legal exception is safety-based and does not justify broad release of unrelated clinical history.'",
+        "DISCUSS (name the tension): 'There is tension between confidentiality and duty to protect. A defensible consultant position is to seek consent first, but if there is serious foreseeable harm to an identifiable person, make a proportionate disclosure to the agency/person best able to reduce risk.'",
+      ],
+      commonTrap:
+        "Writing generic confidentiality statements without case-specific justification.",
+    },
+    {
+      id: "s25",
+      order: 25,
+      title: "Documentation Checklist",
+      colorTag: "purple",
+      explanation:
+        "For any confidentiality or information-sharing issue, documentation must capture both the conversation and the consent/risk basis for the decision. 'Spoke to wife' is not sufficient documentation.",
+      keyPoints: [
+        "DOCUMENT: request received, requester identity and role, information requested, patient consent or refusal, capacity if relevant, collateral received, risk assessment, legal/safety basis for disclosure, what was disclosed, what was not disclosed, to whom, when, senior/legal/privacy advice, patient informed where appropriate, follow-up plan.",
+        "POOR NOTE: 'Spoke to wife.'",
+        "BETTER NOTE: 'Wife phoned reporting patient had threatened to take children from school and drive interstate. Patient had refused disclosure to wife earlier. I received collateral only, reviewed child-safety risk, discussed with consultant, and provided wife with crisis contact advice without disclosing clinical details. Child protection advice sought due to potential child-safety risk.'",
+        "The documentation should answer: what was the request, what was the consent/risk basis, what was and wasn't shared, why, and what happens next.",
+      ],
+      commonTrap:
+        "Documenting the conversation but not the consent/risk basis for disclosure or non-disclosure.",
+    },
+    {
+      id: "s26",
+      order: 26,
+      title: "Governance Response to Repeated Privacy Problems",
+      colorTag: "purple",
+      explanation:
+        "If the service has repeated issues — wrong summaries, corridor conversations, social media posts, insecure emails — treat it as clinical governance, not isolated admin errors.",
+      keyPoints: [
+        "ACTIONS: incident reports, privacy officer review, audit of breaches, staff education, EMR access audit, discharge-summary verification process, secure email protocol, ED privacy redesign, signage and private rooms, social media policy education, role-based access review, consumer feedback, re-audit.",
+        "MEQ PHRASE: 'I would treat repeated privacy breaches as a clinical governance issue, not isolated admin errors.'",
+        "Repeated breaches indicate a system problem — governance response must include data collection, root cause analysis, environmental/process change and re-audit.",
+        "Consumer feedback is essential — patients and families often identify privacy risks that staff do not notice.",
+      ],
+      commonTrap:
+        "Treating each privacy breach as a one-off without system review.",
+    },
+    {
+      id: "s27",
+      order: 27,
+      title: "Examiner Phrases",
+      colorTag: "green",
+      explanation:
+        "Use these phrases to signal consultant-level confidentiality reasoning. They should appear in answers involving families, GP handover, NGOs, schools, police, third-party risk, discharge summaries and social media.",
+      keyPoints: [
+        "'I would seek consent first, but confidentiality is not absolute.'",
+        "'I can receive collateral without necessarily disclosing information.'",
+        "'If disclosure is required, I would share the minimum necessary information for the safety or care purpose.'",
+        "'I would document the request, consent decision, risk basis and exact information shared.'",
+        "'Family involvement is clinically important, but it must respect confidentiality unless serious safety concerns justify limited disclosure.'",
+        "'A school or employer should not receive a broad psychiatric report when a functional safety plan would suffice.'",
+        "'Police involvement does not automatically authorise full disclosure.'",
+        "'Wrong-recipient discharge summary is both a privacy breach and a patient-safety issue.'",
+        "'Social media obligations are the same as professional obligations in person.'",
+        "'Where a serious identifiable threat exists, confidentiality may yield to duty to protect.'",
+      ],
+      commonTrap:
+        "Failing to use the language of proportionality, minimum necessary disclosure and documentation.",
+    },
+    {
+      id: "s28",
+      order: 28,
+      title: "Common Traps",
+      colorTag: "amber",
+      explanation:
+        "Use this as a checklist before finalising any answer involving information sharing. Each item represents a documented mark-losing gap.",
+      keyPoints: [
+        "Saying 'confidentiality means I cannot talk to family' — you can always receive collateral.",
+        "Disclosing full diagnosis to school/employer unnecessarily.",
+        "Giving police full history without clarifying authority/purpose.",
+        "Ignoring NGO collateral because patient refused disclosure.",
+        "Failing to document disclosure reasoning.",
+        "Failing to inform GP/community team of essential risk/medication information.",
+        "Overlooking child protection.",
+        "Giving blanket 'safe to return' letters.",
+        "Ignoring privacy breach after wrong discharge summary.",
+        "Treating social media breach as minor.",
+        "Forgetting duty to warn/protect.",
+        "Forgetting that other patients' confidentiality still matters after ward incidents.",
+      ],
+      meqApplication:
+        "Use this as a checklist before finalising any answer involving information sharing — any item present in the stem that is absent from your answer is a lost mark.",
+    },
+    {
+      id: "s29",
+      order: 29,
+      title: "Consultant-Level Summary",
+      colorTag: "green",
+      explanation:
+        "This paragraph is reusable in MEQ stems involving families, GP handover, NGOs, school requests, police requests, third-party risk, wrong-recipient discharge summaries, social media breaches and staff privacy breaches.",
+      keyPoints: [
+        "CONSENT/COLLATERAL: 'I would start by clarifying who is requesting information, what they need, and the purpose of disclosure. I would seek the patient's consent first and assess capacity where relevant. I can receive collateral even when disclosure is not permitted.'",
+        "DISCLOSURE THRESHOLD: 'If information must be shared for safe care, child protection, legal requirement or serious risk to an identifiable person, I would disclose only the minimum necessary information to the person or agency best able to reduce risk.'",
+        "DOCUMENTATION: 'I would document the consent decision, risk basis, information shared and follow-up plan.'",
+        "PRIVACY BREACH: 'Privacy breaches should be contained, escalated to governance/privacy processes, disclosed where required, and used for system improvement.'",
+        "FULL PARAGRAPH: 'I would start by clarifying who is requesting information, what they need, and the purpose of disclosure. I would seek the patient's consent first and assess capacity where relevant. I can receive collateral even when disclosure is not permitted. If information must be shared for safe care, child protection, legal requirement or serious risk to an identifiable person, I would disclose only the minimum necessary information to the person or agency best able to reduce risk, and document the consent decision, risk basis, information shared and follow-up plan. Privacy breaches should be contained, escalated to governance/privacy processes, disclosed where required, and used for system improvement.'",
+      ],
+      meqApplication:
+        "This paragraph should be reusable in MEQ stems involving families, GP handover, NGOs, school requests, police requests, third-party risk, wrong-recipient discharge summaries, social media breaches and staff privacy breaches.",
+    },
+  ],
+};
+
+export const ALL_NOTES: Note[] = [DISCHARGE_PLAN, CONFLICT_MANAGEMENT, COMPLAINT_PROCESS, INCIDENT_MANAGEMENT, CLINICAL_AUDIT, OPEN_DISCLOSURE, RESTRICTIVE_PRACTICES, RESTRICTIVE_PRACTICES_MEQ, CONFIDENTIALITY];
