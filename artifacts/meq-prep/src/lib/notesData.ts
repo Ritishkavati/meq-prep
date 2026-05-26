@@ -4281,4 +4281,583 @@ export const CONFIDENTIALITY: Note = {
   ],
 };
 
-export const ALL_NOTES: Note[] = [DISCHARGE_PLAN, CONFLICT_MANAGEMENT, COMPLAINT_PROCESS, INCIDENT_MANAGEMENT, CLINICAL_AUDIT, OPEN_DISCLOSURE, RESTRICTIVE_PRACTICES, RESTRICTIVE_PRACTICES_MEQ, CONFIDENTIALITY];
+export const CAPACITY_CONSENT: Note = {
+  id: "capacity_consent",
+  title: "Capacity, Consent and Treatment Refusal Governance",
+  category: "Legal Reasoning / Ethics / Clinical Governance / Mental Health Act",
+  description:
+    "A consultant-level framework for assessing capacity, obtaining consent and managing treatment refusal in psychiatry, including refusal of medical treatment on psychiatric wards, psychotic refusal of antibiotics, ECT consent, adolescent consent, older adult placement refusal, delirium and fluctuating capacity, family demands, substitute decision-maker conflict, advance directives and Mental Health Act interface.",
+  sections: [
+    {
+      id: "s01",
+      order: 1,
+      title: "Core Principle",
+      colorTag: "blue",
+      explanation:
+        "Capacity is functional, decision-specific and time-specific. A patient may have capacity to consent to routine medication but not to refuse life-saving antibiotics while psychotic or delirious. A person can make an unwise decision and still have capacity.",
+      keyPoints: [
+        "DO NOT WRITE: 'The patient lacks capacity.' WRITE: 'I would assess whether the patient has capacity to refuse this specific treatment at this specific time, after optimising communication and treating reversible causes.'",
+        "CAPACITY FORMULA: decision-specific + time-specific + functional + supported before substituted.",
+        "Capacity is NOT global — one incapacitous decision does not mean incapacity for all decisions.",
+        "REFUSAL ≠ INCAPACITY: a patient can make an unwise or risky decision and still have full capacity.",
+        "MHA IS NOT A BLANKET AUTHORITY: involuntary status does not automatically authorise all medical treatment, ECT, restraint, information disclosure or convenience sedation.",
+      ],
+      commonTrap:
+        "Calling the patient 'incapable' globally rather than assessing the specific decision at the specific time.",
+    },
+    {
+      id: "s02",
+      order: 2,
+      title: "Functional Capacity Assessment",
+      colorTag: "blue",
+      explanation:
+        "A practical capacity assessment asks four functional questions. In psychiatry, the key step is often 'use or weigh' — a patient may repeat facts correctly but be unable to apply them to their own situation due to delusion, severe depression or delirium.",
+      keyPoints: [
+        "FUNCTIONAL 4-STEP: (1) UNDERSTAND the relevant information, (2) RETAIN it long enough to decide, (3) USE OR WEIGH the information in relation to their own situation, (4) COMMUNICATE a decision by speech, writing, gesture, behaviour or assisted communication.",
+        "PSYCHOSIS EXAMPLE: a psychotic patient may repeat facts about antibiotics but refuse because they believe antibiotics are poisoned — they understand but cannot weigh.",
+        "DEPRESSION EXAMPLE: a severely depressed patient may understand ECT but be unable to weigh benefits because of nihilistic guilt.",
+        "DELIRIUM EXAMPLE: a delirious patient may agree at one moment and refuse the next — fluctuating capacity, not a stable decision.",
+        "ADOLESCENT EXAMPLE: an articulate young person may make a refusal dominated by acute suicidality — verbal fluency is not capacity.",
+      ],
+      meqApplication:
+        "Always explain capacity using the four functional elements — not only 'has insight' or 'understands.' Factual repetition is not the same as valid capacity.",
+      commonTrap:
+        "Equating factual repetition with valid capacity — the examiner is looking for the 'use or weigh' element.",
+    },
+    {
+      id: "s03",
+      order: 3,
+      title: "Decision-Specific Capacity",
+      colorTag: "green",
+      explanation:
+        "Always name the exact decision being assessed. Capacity for one decision does not mean capacity for all decisions.",
+      keyPoints: [
+        "CAPACITY CAN BE ASSESSED FOR: antibiotics, ECT, lithium, depot medication, admission, discharge, leave, surgery, dialysis, placement, information sharing, family contact, return to driving/work, refusing home supports, appointing a substitute decision-maker, making or applying an advance directive.",
+        "THE WRONG QUESTION: 'Does he have capacity?' THE RIGHT QUESTION: 'Does he have capacity to refuse IV antibiotics for sepsis today, given his paranoid belief that staff are poisoning him?'",
+        "A patient with dementia may lack capacity for financial decisions but retain capacity for personal care decisions.",
+        "A patient in a manic episode may retain capacity for some low-stakes decisions but lose it for high-stakes irreversible ones.",
+      ],
+      commonTrap:
+        "Assuming capacity for one decision means capacity for all decisions.",
+    },
+    {
+      id: "s04",
+      order: 4,
+      title: "Time-Specific and Fluctuating Capacity",
+      colorTag: "amber",
+      explanation:
+        "Capacity can fluctuate — assess at the best time and repeat if the clinical state changes. One confused refusal during delirium is not a stable capacitous refusal.",
+      keyPoints: [
+        "CAUSES OF FLUCTUATING CAPACITY: delirium, intoxication, withdrawal, mania, psychosis, severe depression, pain, sedation, sleep deprivation, infection, hypoxia, metabolic disturbance, cognitive impairment, language barrier, fear or trauma.",
+        "ASSESS AT THE BEST TIME: after pain relief, after delirium treatment, when most alert, with interpreter, with hearing aids or glasses, after sleep, after medication side effects settle, with trusted support person.",
+        "Do NOT make a permanent incapacity decision based on a temporary reversible state.",
+        "MEQ TRAP — 'He refused dialysis this morning but agreed yesterday.' BETTER: 'This may be fluctuating capacity due to delirium/sepsis/sedation — assess at the best alert period, clarify understanding and values, and avoid a final decision from one inconsistent statement.'",
+      ],
+      commonTrap:
+        "Treating one confused refusal during delirium as a stable capacitous refusal — delirium requires treatment and reassessment, not acceptance of the refusal.",
+    },
+    {
+      id: "s05",
+      order: 5,
+      title: "Optimising Capacity",
+      colorTag: "green",
+      explanation:
+        "Before concluding incapacity, try to improve the person's ability to decide. Declaring incapacity without first addressing communication, delirium, pain or language barriers is a governance failure.",
+      keyPoints: [
+        "OPTIMISE BY: treating delirium/pain/hypoxia/intoxication/withdrawal, reducing sedation, using professional interpreter, using hearing aids/glasses/communication aids, using simple language, giving written or visual information, repeating information, allowing time, choosing quiet/private setting.",
+        "ALSO: involving trusted support person if patient agrees, addressing fear/stigma/cultural concerns, explaining alternatives, checking understanding, revisiting decision when mental state improves.",
+        "MEQ PHRASE: 'I would optimise capacity before concluding incapacity.'",
+        "Each optimisation step should be documented — 'interpreter present, hearing aids used, quiet room, simple language, repeated twice' demonstrates due process.",
+      ],
+      commonTrap:
+        "Declaring incapacity without first addressing communication, delirium, pain or language barriers.",
+    },
+    {
+      id: "s06",
+      order: 6,
+      title: "Interpreter and Communication Aids",
+      colorTag: "teal",
+      explanation:
+        "A capacity assessment is invalid if the person could not properly understand due to language, hearing, cognitive, cultural or communication barriers. Use a professional interpreter, not family, for significant decisions.",
+      keyPoints: [
+        "USE: professional interpreter (not family) for significant decisions, culturally appropriate explanation, visual aids, easy-read material, communication boards, hearing aids or glasses, speech pathology if needed, disability liaison, Aboriginal liaison or cultural worker where appropriate.",
+        "Do NOT assume capacity is absent because the patient cannot express themselves in English.",
+        "Do NOT assume capacity is present because the patient nods politely.",
+        "Using a family member as interpreter for high-stakes consent/refusal decisions is both clinically and legally inadequate — family may have conflicts of interest, may filter information, or may not be trained.",
+      ],
+      commonTrap:
+        "Using family as interpreter for high-stakes consent/refusal decisions.",
+    },
+    {
+      id: "s07",
+      order: 7,
+      title: "Supported Decision-Making",
+      colorTag: "green",
+      explanation:
+        "Supported decision-making means helping the person make their own decision rather than replacing their decision too early. The aim is not to persuade the patient to agree with the team — the aim is to help them make a valid decision.",
+      keyPoints: [
+        "SUPPORTS MAY INCLUDE: family/carer if patient agrees, nominated person, peer worker, advocate, cultural worker, interpreter, written information, repeated discussions, clinician explanation, spiritual care, trusted GP or case manager.",
+        "ESPECIALLY IMPORTANT FOR: intellectual disability, autism, older adults, adolescents, psychosis with partial insight, trauma or mistrust, culturally complex decisions, ECT fear, treatment refusal in medical wards.",
+        "Supported decision-making comes before substituted decision-making — exhaust support options before concluding a substitute is needed.",
+        "Supporting someone to make a decision they have the right to make (including a risky one) is different from persuading them to make the 'right' decision.",
+      ],
+      commonTrap:
+        "Jumping to substitute decision-making before trying supported decision-making.",
+    },
+    {
+      id: "s08",
+      order: 8,
+      title: "Informed Consent",
+      colorTag: "purple",
+      explanation:
+        "Valid informed consent requires capacity, adequate information, voluntariness and documentation. Documenting 'consented' without showing what information was provided or whether capacity and voluntariness were assessed is inadequate.",
+      keyPoints: [
+        "VALID INFORMED CONSENT REQUIRES: capacity, adequate information, voluntariness, opportunity to ask questions, understanding of risks/benefits/alternatives, understanding of consequences of refusal, no coercion, documentation.",
+        "IN PSYCHIATRY, INFORMED CONSENT SHOULD COVER: diagnosis/formulation, proposed treatment, expected benefits, common and serious risks, side effects, alternatives, no-treatment option, consequences of refusal, monitoring, duration, withdrawal of consent, legal framework if involuntary.",
+        "Voluntariness is often underassessed — a patient who agrees under pressure from family, fear of seclusion or desperation for discharge may not be giving truly voluntary consent.",
+        "Consent is a process, not a signature — ongoing discussion, answered questions and documented understanding are required.",
+      ],
+      commonTrap:
+        "Documenting 'consented' without showing what information was provided or whether capacity and voluntariness were assessed.",
+    },
+    {
+      id: "s09",
+      order: 9,
+      title: "Treatment Refusal",
+      colorTag: "amber",
+      explanation:
+        "A capacitous patient can refuse treatment, even if the refusal seems unwise, risky or distressing to family and staff. Refusing is not the same as lacking capacity.",
+      keyPoints: [
+        "ASSESS: what treatment is refused, reason for refusal, understanding of illness, understanding of treatment, appreciation of personal consequences, ability to weigh risks and benefits, consistency with values, mental illness effect on reasoning, delirium/intoxication/sedation, coercion or family pressure, urgency and reversibility.",
+        "MEQ PHRASE: 'An unwise decision is not necessarily an incapacitous decision.'",
+        "MEQ TENSION BOX: 'There is tension between autonomy and duty of care. A defensible consultant position is to respect a capacitous refusal, even if risky, but to use the least restrictive lawful pathway if incapacity from mental disorder or delirium creates serious preventable harm.'",
+        "When a capacitous refusal is accepted, care planning continues — safety planning, palliative input, family meeting, risk discussion, follow-up and review if capacity changes are all still required.",
+      ],
+      commonTrap:
+        "Declaring incapacity because the patient refuses what clinicians recommend.",
+    },
+    {
+      id: "s10",
+      order: 10,
+      title: "Refusal and Risk",
+      colorTag: "red",
+      explanation:
+        "When refusal creates risk, use a structured ten-step approach. Respecting a capacitous refusal does not mean no further care planning — it means working around the refusal safely.",
+      keyPoints: [
+        "STRUCTURED APPROACH: (1) Assess capacity for the specific refusal, (2) Optimise capacity and communication, (3) Clarify the risk if refusal is accepted, (4) Clarify whether delay is possible, (5) Seek second opinion or senior advice if high stakes, (6) Use substitute decision-maker if incapacity confirmed, (7) Use emergency treatment powers if urgent and lawful, (8) Use MHA only if criteria fit mental-health treatment or mental illness-related risk, (9) Document reasoning, (10) Continue therapeutic engagement.",
+        "A VALID REFUSAL MAY STILL REQUIRE: safety planning, palliative care, family meeting, risk discussion, follow-up, review if capacity changes.",
+        "The risk of the refusal must be weighed against the risk and burden of overriding it — both are clinical decisions requiring documentation.",
+        "A second opinion is good practice when refusal is high stakes, capacity is borderline, or legal challenge is foreseeable.",
+      ],
+      commonTrap:
+        "Thinking respect for refusal means no further care planning — the care obligation continues around the refusal.",
+    },
+    {
+      id: "s11",
+      order: 11,
+      title: "Refusal of Medical Treatment on Psychiatric Ward",
+      colorTag: "red",
+      explanation:
+        "An inpatient with schizophrenia refusing insulin, antibiotics, anticoagulation or wound care requires a separate capacity and legal analysis — the Mental Health Act does not automatically authorise physical treatment.",
+      keyPoints: [
+        "ASSESS: capacity for this medical decision, whether refusal is caused by delusion/mania/depression/delirium, urgency of medical risk, whether the person understands consequences, whether medical team has explained treatment, whether treatment can wait.",
+        "ALSO CONSIDER: whether substitute decision-maker/guardian can decide, emergency treatment authority, MHA interface if mental illness is driving refusal, need for transfer to medical ward, least restrictive option.",
+        "MEQ TRAP: 'He is involuntary, so we can give antibiotics.' BETTER: 'Involuntary status may authorise psychiatric treatment under the relevant Act, but refusal of antibiotics requires separate assessment of capacity, medical urgency and lawful authority for non-psychiatric treatment.'",
+        "Get legal or ethics advice early in high-stakes cases — the intersection of MHA, guardianship legislation and emergency treatment provisions is complex and jurisdiction-specific.",
+      ],
+      commonTrap:
+        "Using psychiatric detention as a blanket authority for physical healthcare.",
+    },
+    {
+      id: "s12",
+      order: 12,
+      title: "Psychotic Refusal of Antibiotics",
+      colorTag: "red",
+      explanation:
+        "Classic CL psychiatry stem: a patient with pneumonia refuses antibiotics because 'the nurses are poisoning me.' The key issue is whether the delusional belief prevents the 'use or weigh' step — not whether the patient can repeat the word 'antibiotic.'",
+      keyPoints: [
+        "APPROACH: assess mental state and psychotic basis of refusal, assess capacity for antibiotic refusal, ask patient to explain illness/antibiotic purpose/consequences of refusal, determine whether delusion prevents weighing.",
+        "THEN: treat psychosis or agitation where appropriate, optimise communication, involve medical team, consider less restrictive options (oral alternative, trusted clinician, family support, explanation).",
+        "IF LACKS CAPACITY AND TREATMENT URGENT: use lawful substitute or emergency pathway; if mental illness criteria met, consider MHA for psychiatric treatment and detention if needed; document capacity and legal basis.",
+        "KEY SENTENCE: 'He may understand the words infection and antibiotic but lack capacity if delusional poisoning beliefs prevent him from weighing the treatment's personal benefits and risks.'",
+      ],
+      commonTrap:
+        "Assuming factual understanding equals capacity despite delusional appraisal — the 'use or weigh' step is where capacity fails in this scenario.",
+    },
+    {
+      id: "s13",
+      order: 13,
+      title: "Emergency Treatment",
+      colorTag: "red",
+      explanation:
+        "Emergency treatment may be used when delay risks death or serious deterioration, the patient lacks capacity, no substitute is available in time, treatment is necessary and proportionate, and local legislation permits it. It is not a convenience pathway.",
+      keyPoints: [
+        "INDICATIONS: antibiotics for sepsis, airway/ventilation after overdose, urgent surgery after trauma, treatment of NMS or serotonin syndrome, severe lithium toxicity, hypoglycaemia, urgent sedation only for immediate safety.",
+        "EMERGENCY TREATMENT MUST BE: least restrictive, time-limited, proportionate, reviewed once immediate danger passes, documented clearly, followed by capacity reassessment.",
+        "Emergency treatment powers do not authorise treatment for staff convenience, routine care while 'capacity is unclear', or treatment the patient has previously refused with capacity.",
+        "Once the emergency passes, reassess capacity and restart the consent process.",
+      ],
+      commonTrap:
+        "Using emergency treatment powers for non-urgent convenience — these powers have a high threshold and require documentation.",
+    },
+    {
+      id: "s14",
+      order: 14,
+      title: "ECT Consent",
+      colorTag: "purple",
+      explanation:
+        "ECT consent questions are frequent because they combine severity, capacity, family pressure, stigma, law, risk and governance. Family views are important but do not bypass the jurisdictional ECT consent and authorisation pathway.",
+      keyPoints: [
+        "DO NOT: proceed with ECT because family agrees, avoid ECT because family threatens complaint/media, assume severe depression automatically removes capacity, assume a substitute decision-maker can simply sign for ECT.",
+        "ASSESS: severity and urgency, diagnosis and indication, suicide/nutritional/catatonia risk, capacity to consent/refuse ECT, psychotic guilt or nihilism affecting weighing, patient's prior wishes, advance directive, family views, religious or cultural meaning.",
+        "PROCESS: explore reasons for refusal, address misinformation and fear, discuss risks/benefits/alternatives, consider advance directive, involve family with consent, obtain second opinion or legal pathway where required, tribunal or statutory approval if lacking capacity or involuntary pathway requires it, document.",
+        "MEQ PHRASE: 'Family views are important, but they do not bypass the jurisdictional ECT consent and authorisation pathway.'",
+      ],
+      commonTrap:
+        "Letting family consent or family objection determine ECT instead of capacity assessment and the legal pathway.",
+    },
+    {
+      id: "s15",
+      order: 15,
+      title: "Adolescent Consent and Refusal",
+      colorTag: "teal",
+      explanation:
+        "Adolescent cases are high yield because the patient may be articulate, risky and legally complex. Apparent intelligence is not enough — articulation is not capacity.",
+      keyPoints: [
+        "CONSIDER: maturity/Gillick competence, decision-specific capacity, suicidality/self-harm, intoxication or delirium after overdose, family involvement, child protection, school/guardian role, confidentiality, cultural/family issues, immediate medical risk, whether refusal is stable or crisis-driven, local child/mental health legislation.",
+        "MEQ TRAP: 'She is articulate, so she can refuse.' BETTER: 'I would not accept articulation as capacity — I would assess decision-specific capacity, suicidality, overdose consequences, family/safeguarding context, and legal authority for continued treatment or admission.'",
+        "A 15-year-old may have Gillick competence for some decisions (GP consultation, contraception) but lack capacity for others (refusing life-saving treatment while acutely suicidal).",
+        "Acutely suicidal refusal may itself indicate impaired capacity to weigh — suicidality can prevent realistic personal appraisal of risk.",
+      ],
+      commonTrap:
+        "Assuming chronological age or verbal fluency settles capacity.",
+    },
+    {
+      id: "s16",
+      order: 16,
+      title: "Older Adult Refusing Placement",
+      colorTag: "teal",
+      explanation:
+        "Older adult placement cases test autonomy versus safety. Dementia does not automatically mean incapacity for placement — assess the accommodation decision specifically.",
+      keyPoints: [
+        "ASSESS CAPACITY FOR: accommodation decision, accepting home supports, medication management, finances, personal care, driving, appointing substitute decision-maker.",
+        "EXPLORE: values (independence, home, pets, spouse memories), cognition or dementia, delirium or depression, functional ability, ADLs/IADLs, home safety, carer capacity, risk of neglect or exploitation, least restrictive alternatives, home-care package, supported decision-making, guardian/administrator if lacking capacity and no safe plan.",
+        "A person with mild dementia may retain capacity to refuse placement while accepting home supports — capacity is decision-specific.",
+        "Values matter — a person who accepts falls risk to remain at home with their dog may be making a capacitous decision consistent with lifelong values.",
+      ],
+      commonTrap:
+        "Assuming dementia automatically means incapacity for placement — assess the specific accommodation decision.",
+    },
+    {
+      id: "s17",
+      order: 17,
+      title: "Delirium and Fluctuating Capacity",
+      colorTag: "amber",
+      explanation:
+        "Delirium is a capacity red flag. Features include fluctuating consciousness, inattention, disorientation and perceptual disturbance. A delirious refusal requires treatment of the delirium and reassessment — not acceptance of the refusal.",
+      keyPoints: [
+        "DELIRIUM FEATURES: fluctuating consciousness, inattention, disorientation, perceptual disturbance, sleep-wake disturbance, medical precipitants, waxing and waning capacity.",
+        "APPROACH: treat delirium cause, delay non-urgent decisions, assess at best time, repeat assessment, use interpreter/hearing aids/glasses, involve family for baseline and values, use substitute or emergency decision-making if urgent, avoid relying on a single lucid or confused statement.",
+        "MEQ TRAP: 'He refused dialysis this morning but agreed yesterday.' BETTER: 'This may be fluctuating capacity due to delirium/sepsis/sedation — assess at the best alert period with interpreter, clarify understanding and values, avoid making a final decision from one inconsistent statement.'",
+        "Even a moment of lucidity during delirium may not constitute valid capacity — assess systematically using the functional four steps.",
+      ],
+      commonTrap:
+        "Taking a delirious refusal at face value without reassessment.",
+    },
+    {
+      id: "s18",
+      order: 18,
+      title: "Family Demanding Treatment",
+      colorTag: "teal",
+      explanation:
+        "Family distress does not replace patient consent. If the patient has capacity, family cannot override. If the patient lacks capacity, family should reflect the patient's values and best interests — not their own fear or grief.",
+      keyPoints: [
+        "COMMON FAMILY DEMANDS: 'Make her have ECT.' / 'He must continue dialysis.' / 'She cannot refuse surgery.' / 'Give sedation; we cannot manage.' / 'Do not tell him the diagnosis.' / 'We want him admitted.' / 'We refuse discharge.'",
+        "APPROACH: validate distress, explain patient autonomy and capacity, assess whether family are giving collateral or applying pressure, explore patient's values, hold family meeting, involve ethics/palliative/medical team if needed, clarify substitute decision-maker role, document.",
+        "If patient has capacity, family cannot override — document this clearly.",
+        "If patient lacks capacity and family have legal substitute authority, their decision must still reflect the patient's known values and best interests — not what the family prefers.",
+      ],
+      commonTrap:
+        "Letting family anxiety become the treatment plan.",
+    },
+    {
+      id: "s19",
+      order: 19,
+      title: "Substitute Decision-Maker",
+      colorTag: "purple",
+      explanation:
+        "A substitute decision-maker holds legal authority to make decisions when a patient lacks capacity — but their authority is specific, not unlimited. Substitute consent does not make clinically inappropriate treatment appropriate.",
+      keyPoints: [
+        "MAY BE: guardian, enduring guardian, person responsible, medical treatment decision-maker, parent/guardian for child, tribunal-appointed decision-maker, statutory health attorney (jurisdiction-specific).",
+        "CLARIFY: who legally holds authority, what decisions they can make, whether authority covers this treatment, whether patient currently has capacity, whether advance directive exists, whether decision reflects patient's values, whether there is conflict of interest, whether decision is clinically appropriate, whether emergency or tribunal pathway is needed.",
+        "KEY POINT: substitute consent does not make clinically inappropriate treatment appropriate — a guardian cannot authorise unnecessary sedation, futile surgery or punishment-based restraint.",
+        "The nearest relative is not automatically the legal decision-maker — confirm legal authority before proceeding.",
+      ],
+      commonTrap:
+        "Assuming the nearest relative automatically has legal decision-making authority.",
+    },
+    {
+      id: "s20",
+      order: 20,
+      title: "Substitute Decision-Maker Conflict",
+      colorTag: "amber",
+      explanation:
+        "Conflicts occur when family disagree, substitute decision-maker conflicts with patient's known wishes, or there is uncertainty about legal authority. The response requires confirming legal authority before mediating content.",
+      keyPoints: [
+        "CONFLICTS MAY ARISE WHEN: family disagree with each other, substitute decision-maker conflicts with patient's known wishes, family demand futile treatment, family refuse necessary treatment, guardian/EPOA appears influenced by burden or finances, cultural or religious values are used to override patient values, staff are uncertain who has authority.",
+        "APPROACH: confirm legal authority, clarify patient's prior wishes and values, seek collateral from multiple sources, involve treating team, involve ethics/legal/guardianship tribunal if needed, use interim safety plan, do not ask psychiatry to 'pick a family member,' document rationale.",
+        "An EPOA's authority may be challenged if there is evidence of undue influence, financial conflict of interest or decisions clearly contrary to the patient's known values.",
+        "The guardianship tribunal is the appropriate body to resolve authority disputes — not the treating team.",
+      ],
+      commonTrap:
+        "Mediating family conflict without first confirming legal authority.",
+    },
+    {
+      id: "s21",
+      order: 21,
+      title: "Advance Directives",
+      colorTag: "purple",
+      explanation:
+        "Advance directives record a person's future wishes when they have capacity. They should be sought proactively and treated as strong evidence of values — not ignored because the patient is currently unwell.",
+      keyPoints: [
+        "MAY INCLUDE: medications preferred or refused, ECT preference or refusal, admission preferences, nominated contacts, children/pets/work arrangements, early warning signs, preferred hospital, cultural or spiritual needs, information-sharing preferences.",
+        "GOOD ADVANCE DIRECTIVES ARE: clear, specific, made when the person had capacity, voluntary, current, accessible to clinicians, shared with relevant supports.",
+        "Ask about advance directives as part of every admission or care plan — proactive, not reactive.",
+        "Ignoring an advance directive because the patient is currently unwell misses the entire purpose of the directive — it exists precisely for this situation.",
+      ],
+      commonTrap:
+        "Ignoring an advance directive because the patient is currently unwell.",
+    },
+    {
+      id: "s22",
+      order: 22,
+      title: "Limits of Advance Directives",
+      colorTag: "amber",
+      explanation:
+        "Advance directives are important but not always determinative. Check validity, applicability and the statutory framework before deciding whether the directive is binding.",
+      keyPoints: [
+        "CHECK: did the person have capacity when making it, was it voluntary, was it informed, is it clear and specific, does it apply to current circumstances, is it current or outdated, does local MHA override it in compulsory treatment, does tribunal/guardian authority affect it, is emergency treatment required?",
+        "MEQ PHRASE: 'I would treat the advance directive as strong evidence of wishes and values, but check validity, applicability and the relevant statutory framework before deciding whether it is binding.'",
+        "An advance directive refusing ECT may be overridden by a tribunal decision in some jurisdictions — know the local rules.",
+        "An outdated advance directive (written years ago before effective treatment was available) should be weighed, not automatically followed or ignored.",
+      ],
+      commonTrap:
+        "Treating all advance directives as either automatically binding or automatically irrelevant.",
+    },
+    {
+      id: "s23",
+      order: 23,
+      title: "MHA Interface: What Examiners Commonly Test",
+      colorTag: "purple",
+      explanation:
+        "Mental Health Act questions often test whether you know that compulsory care is not simply 'patient refuses.' Using the MHA as a shortcut rather than applying criteria is the most common MHA mark-losing error.",
+      keyPoints: [
+        "FREQUENT MHA ISSUES: criteria for involuntary treatment, inpatient treatment order, community treatment order, referral/assessment/examination pathway, capacity and informed consent, least restrictive alternative, risk of serious harm or deterioration, no less restrictive safe option.",
+        "ALSO TESTED: rights/advocacy/tribunal review, treatment/support/discharge plan, ECT special pathway, seclusion/restraint separate safeguards, urgent non-psychiatric treatment interface, children/adolescents, Aboriginal/cultural assessment considerations, confidentiality/information sharing, revocation/variation of CTO, transport orders/police assistance.",
+        "The MHA is not a blanket authority — it authorises specific psychiatric treatment in specific circumstances, with specific review rights.",
+        "Every MHA use should be accompanied by: least restrictive alternative reasoning, legal criteria application, documentation, rights information and tribunal/review timeline.",
+      ],
+      commonTrap:
+        "Using the Mental Health Act as a shortcut rather than applying criteria.",
+    },
+    {
+      id: "s24",
+      order: 24,
+      title: "Involuntary Treatment: Exam Logic",
+      colorTag: "purple",
+      explanation:
+        "A person may require compulsory treatment only when specific criteria are met. 'Poor insight' alone without risk and treatment need does not meet compulsory treatment criteria.",
+      keyPoints: [
+        "COMPULSORY TREATMENT BROADLY REQUIRES: mental illness present, treatment is needed, serious risk or deterioration if untreated, person lacks capacity or does not consent as required under the Act, no less restrictive safe option, legal criteria are met.",
+        "DO NOT USE MHA BECAUSE OF: bed pressure, family anxiety, treatment non-preference alone, homelessness alone, personality conflict, clinician convenience, 'poor insight' without risk and treatment need, refusal of social supports alone.",
+        "Least restrictive alternative must be genuinely considered and documented — voluntary treatment, CTO, home treatment, supported accommodation and crisis plans should all be weighed.",
+        "Rights information must be provided when MHA status changes — the patient has the right to know their legal status, to seek review and to access an advocate.",
+      ],
+      meqApplication:
+        "Always mention least restrictive option and legal criteria in any MHA answer — their absence signals registrar-level thinking.",
+      commonTrap:
+        "Equating 'poor insight' with compulsory treatment criteria.",
+    },
+    {
+      id: "s25",
+      order: 25,
+      title: "CTO / Community Treatment Order",
+      colorTag: "purple",
+      explanation:
+        "A CTO may be appropriate for severe mental illness with relapse risk, non-adherence and repeated admissions — but it is not a discharge tool for team anxiety.",
+      keyPoints: [
+        "A CTO MAY BE RELEVANT WHEN: severe mental illness, relapse with non-adherence, repeated admissions, treatment works when taken, patient disengages when unwell, risk can be managed in community if treatment continues, inpatient detention is not necessary, community order is least restrictive lawful option.",
+        "A CTO SHOULD NOT BE USED: to solve housing, to force social compliance, because team is anxious, as punishment for non-adherence, when voluntary engagement is realistic, without community resources to implement it.",
+        "A CTO requires community infrastructure — assertive outreach, depot clinic, case manager, crisis plan, housing stability — without these it is an order without a plan.",
+        "CTO revocation/recall must be considered when the patient deteriorates — the CTO is not set and forget.",
+      ],
+      commonTrap:
+        "Using CTO as a discharge tool because the team is anxious, rather than because legal criteria and least restrictive care support it.",
+    },
+    {
+      id: "s26",
+      order: 26,
+      title: "ECT and MHA Interface",
+      colorTag: "purple",
+      explanation:
+        "ECT questions commonly combine capacity, urgency, family disagreement, advance directives, media pressure and statutory pathway. Urgency increases the need for senior/legal clarity — it does not erase capacity and statutory requirements.",
+      keyPoints: [
+        "COMMON ECT STEM ELEMENTS: severe depression with psychotic guilt, refusal due to fear or prior trauma, family disagreement, capacity uncertainty, urgent medical risk from refusal of food/fluids, advance directive, tribunal or second-opinion pathway, media complaint pressure.",
+        "APPROACH: assess indication and urgency, assess capacity to consent/refuse ECT, explore reasons for refusal, address misinformation and fear, discuss risks/benefits/alternatives, consider advance directive, involve family with consent, obtain second opinion or legal pathway where required, tribunal or statutory approval if lacking capacity or involuntary pathway requires it, document.",
+        "TRAP 5 FROM SECTION 30: urgency equals skip legal pathway. CORRECTION: urgency increases need for senior/legal clarity — it does not erase capacity and statutory requirements.",
+        "The ECT statutory pathway (second opinion, tribunal, authorisation) exists precisely for urgent situations — use it, don't bypass it.",
+      ],
+      commonTrap:
+        "Skipping the legal pathway because ECT is clinically indicated — urgency clarifies the process, it does not remove it.",
+    },
+    {
+      id: "s27",
+      order: 27,
+      title: "Medical Treatment vs Psychiatric Treatment",
+      colorTag: "red",
+      explanation:
+        "The MHA usually governs treatment for mental illness. Medical treatment refusal (antibiotics, surgery, dialysis, blood transfusion, insulin) requires separate legal analysis. Treating non-psychiatric treatment as automatically covered by psychiatric involuntary status is a consistent mark-losing error.",
+      keyPoints: [
+        "MEDICAL TREATMENT REFUSAL MAY REQUIRE: ordinary capacity law, substitute decision-maker, guardianship legislation, emergency treatment provisions, public health legislation, court order, common law necessity, hospital policy.",
+        "EXAMPLES OF MEDICAL TREATMENT NOT COVERED BY MHA ALONE: antibiotics, surgery, dialysis, blood transfusion, nutrition/hydration, insulin, anticoagulation.",
+        "If the refusal is caused by mental illness, the MHA may help with detention or psychiatric treatment, but it may not automatically authorise the medical procedure.",
+        "Get legal or ethics advice in high-stakes cases — the intersection of MHA, guardianship, emergency treatment and common law is complex and jurisdiction-specific.",
+      ],
+      commonTrap:
+        "Treating non-psychiatric treatment as automatically covered by psychiatric involuntary status.",
+    },
+    {
+      id: "s28",
+      order: 28,
+      title: "Capacity and Chemical Restraint / Convenience Sedation",
+      colorTag: "red",
+      explanation:
+        "Substitute consent cannot justify poor clinical practice. Medication used to compensate for inadequate staffing may be chemical restraint, not treatment — even if a family member agrees.",
+      keyPoints: [
+        "EXAMPLE: residential aged care facility asks for regular quetiapine because staffing is short, and EPOA agrees.",
+        "KEY POINTS: substitute consent does not make inappropriate intervention appropriate, medication used to compensate for inadequate staffing may be chemical restraint, psychotropic medication needs a valid clinical indication, use non-pharmacological and environmental strategies first, assess pain/delirium/infection/trauma/communication/unmet needs, monitor side effects, document rationale and review plan.",
+        "EXAM PHRASE: 'Even if a substitute decision-maker agrees, the intervention must still have a valid clinical indication, be proportionate, monitored, and not be used for staff convenience.'",
+        "The standard for prescribing does not change because the patient lacks capacity — if anything, it increases, because the patient cannot protect themselves from inappropriate treatment.",
+      ],
+      commonTrap:
+        "Accepting family or facility pressure for sedation without clinical indication.",
+    },
+    {
+      id: "s29",
+      order: 29,
+      title: "Documentation",
+      colorTag: "purple",
+      explanation:
+        "Capacity documentation must be defensible — it should show the reasoning, not just the conclusion. 'Lacks capacity. Treat.' is inadequate and potentially indefensible.",
+      keyPoints: [
+        "DOCUMENT: exact decision, information provided, risks/benefits/alternatives explained, patient's words, understanding, appreciation of personal consequences, ability to weigh, communication method, interpreter or communication aids, supports used, mental state factors affecting capacity, delirium/intoxication/pain/sedation assessment, collateral and prior wishes, advance directive.",
+        "ALSO DOCUMENT: substitute decision-maker details, legal basis for proceeding/refusing/overriding, second opinion or legal advice, follow-up/reassessment plan.",
+        "POOR DOCUMENTATION: 'Lacks capacity. Treat.'",
+        "BETTER DOCUMENTATION: 'Capacity assessed for refusal of IV antibiotics for pneumonia. Patient can repeat that antibiotics treat infection but states antibiotics are poison placed by ASIO and cannot weigh risk of untreated pneumonia. No delirium on assessment; interpreter used. Lacks capacity for this decision at this time. Medical team informed; substitute/emergency treatment pathway discussed; review planned tomorrow.'",
+      ],
+      commonTrap:
+        "Documenting conclusion without reasoning — 'lacks capacity' is a conclusion, not a capacity assessment.",
+    },
+    {
+      id: "s30",
+      order: 30,
+      title: "MEQ Example Traps",
+      colorTag: "amber",
+      explanation:
+        "Eight common reasoning errors in capacity and consent MEQ stems. Each represents a specific cognitive shortcut that loses marks.",
+      keyPoints: [
+        "TRAP 1: Articulate patient equals capacity. CORRECTION: A patient can speak fluently and still lack capacity if delusion, depression, suicidality or delirium prevents weighing.",
+        "TRAP 2: Refusal equals incapacity. CORRECTION: A capacitous person may refuse treatment, even life-sustaining treatment.",
+        "TRAP 3: Family wants treatment equals consent. CORRECTION: Family views are collateral/support unless they have legal substitute authority, and even then they must act within patient's values/best interests.",
+        "TRAP 4: Involuntary patient equals can force anything. CORRECTION: MHA authority is specific — it does not automatically authorise all medical procedures, ECT, restraint or information disclosure.",
+        "TRAP 5: ECT urgency equals skip legal pathway. CORRECTION: Urgency increases need for senior/legal clarity — it does not erase capacity and statutory requirements.",
+        "TRAP 6: Older adult refusing placement equals dementia incapacity. CORRECTION: Assess the accommodation decision specifically — they may value independence and accept risk.",
+        "TRAP 7: Delirious refusal equals valid refusal. CORRECTION: Treat delirium and reassess; use emergency/substitute pathway if urgent.",
+        "TRAP 8: Advance directive equals always binding. CORRECTION: Check capacity at creation, specificity, applicability, currency and statutory limits.",
+      ],
+      commonTrap:
+        "Thinking capacity is a diagnosis rather than a functional decision-specific assessment.",
+    },
+    {
+      id: "s31",
+      order: 31,
+      title: "MEQ-Ready Answer Structure",
+      colorTag: "blue",
+      explanation:
+        "When asked 'How would you assess capacity / respond to refusal?' use this ten-domain structure. Not defining the exact decision before assessing capacity is the most common opening error.",
+      keyPoints: [
+        "1. DEFINE THE DECISION: what is being accepted or refused?",
+        "2. ASSESS URGENCY AND SAFETY: can the decision wait, or is emergency treatment needed?",
+        "3. OPTIMISE CAPACITY: interpreter, communication aids, treat delirium/pain/intoxication, allow time.",
+        "4. GIVE INFORMED EXPLANATION: nature, purpose, benefits, risks, alternatives, consequences of refusal.",
+        "5. FUNCTIONAL ASSESSMENT: understand, retain, use/weigh, communicate.",
+        "6. EXPLORE VALUES AND REASONS: fear, culture, trauma, religion, delusion, depression, family pressure.",
+        "7. CONSIDER LEGAL FRAMEWORK: consent law, substitute decision-maker, MHA, emergency treatment, ECT pathway, guardianship.",
+        "8. MAKE LEAST RESTRICTIVE PLAN: respect capacitous refusal or use lawful override if incapacity/serious risk.",
+        "9. COMMUNICATE: patient, family, treating team, advocate, tribunal/legal where relevant.",
+        "10. DOCUMENT AND REVIEW: capacity may change; reassess if fluctuating.",
+      ],
+      meqApplication:
+        "Use these ten domains as answer headings — the examiner is looking for all ten, not just the clinical assessment.",
+      commonTrap:
+        "Not defining the exact decision before assessing capacity.",
+    },
+    {
+      id: "s32",
+      order: 32,
+      title: "Command-Word Discipline",
+      colorTag: "amber",
+      explanation:
+        "Capacity stems frequently carry command-word traps. Giving a capacity definition without applying it to the case loses marks regardless of whether the definition is correct.",
+      keyPoints: [
+        "LIST: concise items only — 'Decision-specific capacity. Interpreter. Risks/benefits. Alternatives. Substitute decision-maker. MHA pathway. Documentation.'",
+        "OUTLINE (list and justify): 'Use interpreter — because language barriers can falsely appear as incapacity. Assess decision-specific capacity — because capacity for placement differs from capacity for antibiotics or ECT. Document reasoning — because treatment refusal decisions are legally and clinically high risk.'",
+        "DESCRIBE (list and explain): 'Assess ability to use and weigh information — because psychosis or severe depression may let the patient repeat facts while preventing realistic personal appraisal of risk.'",
+        "DISCUSS (name tension and take position): 'There is tension between autonomy and duty of care. A defensible consultant position is to respect a capacitous refusal, even if risky, but to use the least restrictive lawful pathway if incapacity from mental disorder or delirium creates serious preventable harm.'",
+      ],
+      commonTrap:
+        "Giving a capacity definition without applying it to the case.",
+    },
+    {
+      id: "s33",
+      order: 33,
+      title: "Examiner Phrases",
+      colorTag: "green",
+      explanation:
+        "Use these phrases to signal consultant-level capacity reasoning. They should appear in answers involving treatment refusal, medical ward liaison, ECT, adolescent refusal, delirium, older adult placement and MHA pathways.",
+      keyPoints: [
+        "'Capacity is decision-specific and time-specific.'",
+        "'An unwise decision is not necessarily an incapacitous decision.'",
+        "'I would optimise capacity before concluding incapacity.'",
+        "'The key question is whether the patient can use and weigh the information in relation to their own situation.'",
+        "'Family distress does not replace the patient's valid consent.'",
+        "'Substitute consent does not make clinically inappropriate treatment appropriate.'",
+        "'The Mental Health Act is not a blanket authority for all medical treatment.'",
+        "'ECT requires the specific statutory pathway if the patient lacks capacity or is involuntary.'",
+        "'If refusal is capacitous, I would respect it and manage risk around it.'",
+        "'If capacity is fluctuating, I would reassess at the best time and use emergency/substitute pathways only if delay is unsafe.'",
+      ],
+      commonTrap:
+        "Missing consultant-level legal/governance language — clinical description without legal framing signals registrar-level thinking.",
+    },
+    {
+      id: "s34",
+      order: 34,
+      title: "Consultant-Level Summary",
+      colorTag: "green",
+      explanation:
+        "This paragraph is reusable in MEQ stems involving treatment refusal, medical ward liaison, ECT, adolescent refusal, delirium, older adult placement, family demands, substitute decision-maker conflict and MHA pathways.",
+      keyPoints: [
+        "DEFINE AND ASSESS: 'I would treat capacity as functional, decision-specific and time-specific. I would first define the exact decision, assess urgency, optimise communication and capacity, explain the proposed treatment including risks, benefits, alternatives and consequences of refusal.'",
+        "FUNCTIONAL ASSESSMENT: 'I would then assess whether the patient can understand, retain, use or weigh the information and communicate a choice.'",
+        "IF CAPACITY PRESENT: 'If the patient has capacity, their refusal should generally be respected even if risky.'",
+        "IF CAPACITY IMPAIRED: 'If capacity is impaired and delay is unsafe, I would use the least restrictive lawful pathway, such as substitute decision-making, emergency treatment provisions, Mental Health Act processes or tribunal/statutory ECT approval.'",
+        "FULL PARAGRAPH: 'I would treat capacity as functional, decision-specific and time-specific. I would first define the exact decision, assess urgency, optimise communication and capacity, explain the proposed treatment including risks, benefits, alternatives and consequences of refusal, and then assess whether the patient can understand, retain, use or weigh the information and communicate a choice. If the patient has capacity, their refusal should generally be respected even if risky. If capacity is impaired and delay is unsafe, I would use the least restrictive lawful pathway, such as substitute decision-making, emergency treatment provisions, Mental Health Act processes or tribunal/statutory ECT approval. I would document the assessment, patient's words, supports used, legal basis, family/substitute views and review plan.'",
+      ],
+      meqApplication:
+        "This paragraph should be reusable in MEQ stems involving treatment refusal, medical ward liaison, ECT, adolescent refusal, delirium, older adult placement, family demands, substitute decision-maker conflict and Mental Health Act pathways.",
+    },
+  ],
+};
+
+export const ALL_NOTES: Note[] = [DISCHARGE_PLAN, CONFLICT_MANAGEMENT, COMPLAINT_PROCESS, INCIDENT_MANAGEMENT, CLINICAL_AUDIT, OPEN_DISCLOSURE, RESTRICTIVE_PRACTICES, RESTRICTIVE_PRACTICES_MEQ, CONFIDENTIALITY, CAPACITY_CONSENT];
