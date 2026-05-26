@@ -2225,4 +2225,511 @@ export const CLINICAL_AUDIT: Note = {
   ],
 };
 
-export const ALL_NOTES: Note[] = [DISCHARGE_PLAN, CONFLICT_MANAGEMENT, COMPLAINT_PROCESS, INCIDENT_MANAGEMENT, CLINICAL_AUDIT];
+export const OPEN_DISCLOSURE: Note = {
+  id: "open_disclosure",
+  title: "Open Disclosure in Psychiatry",
+  category: "Clinical Governance / Communication / Patient Safety / Professionalism",
+  description:
+    "A consultant-level framework for open disclosure in psychiatry after adverse events, harm, potential harm, failed handover, medication error, restraint or seclusion injury, post-discharge suicide, delayed diagnosis, or registrar error.",
+  sections: [
+    {
+      id: "s01",
+      order: 1,
+      title: "Core Principle",
+      colorTag: "blue",
+      explanation:
+        "Open disclosure is separate from complaints. It is the health service response when healthcare did not go to plan and harm occurred, or may have occurred. It is a structured, transparent and compassionate communication process with the patient, family or carers — not an admission of liability, and not about allocating blame.",
+      keyPoints: [
+        "Open disclosure is NOT the same as a complaint response — it addresses the adverse event and its consequences, not the concern raised.",
+        "Open disclosure is NOT an admission of legal liability — you can acknowledge harm and apologise for distress without making legal admissions.",
+        "THE CONSULTANT TASK: ensure the patient is safe now, acknowledge what went wrong, communicate early and honestly, explain what is known and uncertain, listen to the patient/family, offer apology or expression of regret, arrange support, explain further investigation, document accurately, feed findings into governance.",
+        "Open disclosure tests transparency, accountability, family communication, staff support and governance maturity — all of which are assessed in final MEQ stems.",
+      ],
+      meqApplication:
+        "In final stems, open disclosure tests transparency, accountability, family communication, staff support and governance maturity. Address all of these — not just the clinical response.",
+      commonTrap:
+        "Confusing open disclosure with complaint handling, or avoiding disclosure because of medicolegal fear.",
+    },
+    {
+      id: "s02",
+      order: 2,
+      title: "When Open Disclosure Is Triggered",
+      colorTag: "red",
+      explanation:
+        "Open disclosure should be considered when care did not go to plan and there was actual harm, potential harm, major distress, unexpected escalation of care, significant near miss, loss of trust, serious family concern or an adverse event requiring governance review.",
+      keyPoints: [
+        "PSYCHIATRY EXAMPLES: medication adverse event, wrong dose or wrong-patient medication, lithium toxicity after poor discharge advice, clozapine monitoring failure, delayed diagnosis or delayed review, seclusion or restraint injury, patient assaulted on ward, ligature event or near miss, post-discharge suicide, failed handover to community team, registrar error causing harm, wrong discharge summary sent to GP, child-safety failure, privacy breach causing distress, failure to inform family after serious incident.",
+        "HIGHER-LEVEL RESPONSE usually needed for: death, major harm, significant escalation of care, major psychological or emotional distress, serious family concern, serious complaint or loss of trust.",
+        "LOWER-LEVEL RESPONSE may be enough for: no permanent harm, minor distress, near miss, no-harm incident.",
+        "Do not wait for a complaint before initiating disclosure — the trigger is the adverse event or potential harm, not the family's response to it.",
+      ],
+      commonTrap:
+        "Thinking open disclosure is only needed after death or severe physical harm — it applies to a broad range of psychiatric adverse events.",
+    },
+    {
+      id: "s03",
+      order: 3,
+      title: "Open Disclosure Versus Complaint Response",
+      colorTag: "purple",
+      explanation:
+        "Complaint response and open disclosure overlap but are not the same process. In MEQ stems where a family has complained after harm occurred, both processes should be addressed separately.",
+      keyPoints: [
+        "COMPLAINT RESPONSE answers: what concern was raised, how will the complaint be managed, who will review it, what is the outcome, what if the complainant is dissatisfied?",
+        "OPEN DISCLOSURE answers: what happened, what harm occurred or may have occurred, what is known now, what is not yet known, what are we doing for the patient now, what review will happen, how will we prevent recurrence?",
+        "KEY PHRASE: 'I would manage the complaint pathway separately from open disclosure: the complaint process addresses the concern raised, while open disclosure addresses the adverse event and its consequences for the patient and family.'",
+        "Both processes run concurrently — one does not replace the other.",
+      ],
+      meqApplication:
+        "If the stem says a family has complained after harm occurred, include both the complaint process and open disclosure — describe them as separate but concurrent streams.",
+      commonTrap:
+        "Saying 'refer to complaints unit' and failing to acknowledge the adverse event and harm — the complaint process does not substitute for open disclosure.",
+    },
+    {
+      id: "s04",
+      order: 4,
+      title: "Who Should Lead Open Disclosure",
+      colorTag: "teal",
+      explanation:
+        "For serious events, open disclosure should usually be led by the most senior clinician responsible for the patient's care — someone with enough knowledge to acknowledge harm, answer clinical questions and commit to review.",
+      keyPoints: [
+        "APPROPRIATE LEADS IN PSYCHIATRY: treating consultant, on-call consultant if event occurs after hours, clinical director for serious harm or death, service manager plus consultant for system-level event, nurse unit manager as co-lead if nursing process involved, cultural liaison or consumer liaison support where appropriate.",
+        "USUALLY NOT APPROPRIATE TO LEAD ALONE: distressed junior doctor involved in the event, registrar without supervision, staff member accused in the complaint, manager with no clinical knowledge, clinician who does not know the patient and cannot answer clinical questions.",
+        "KEY PHRASE: 'The meeting should be led by a senior clinician with knowledge of the event and enough authority to acknowledge harm, answer clinical questions and commit to review.'",
+        "The lead clinician does not need to have all the answers — but they must be able to explain what is known, what is unknown, and what will happen next.",
+      ],
+      commonTrap:
+        "Leaving the registrar or most junior person involved to speak to the family alone after a serious adverse event.",
+    },
+    {
+      id: "s05",
+      order: 5,
+      title: "Preparation Before the First Meeting",
+      colorTag: "green",
+      explanation:
+        "Open disclosure should not be improvised in the corridor. Preparation protects the patient, family and staff — and determines whether the meeting is productive or harmful.",
+      keyPoints: [
+        "CLARIFY BEFORE THE MEETING: what happened, what is definitely known, what is uncertain, what harm occurred, what is being done clinically now, what the patient or family already know, who should attend.",
+        "SUPPORT NEEDS: does the patient need a support person, advocate, interpreter, cultural worker or carer? Does staff need support before the meeting? Is medicolegal or risk advice needed?",
+        "REVIEW STATUS: is the incident under RCA, M&M, coroner, police or child protection review? This affects what can be said.",
+        "PSYCHIATRY-SPECIFIC PREPARATION: current mental state and capacity, suicide or self-harm risk, family violence or coercive control concerns, confidentiality boundaries, whether disclosure could destabilise the patient, whether the patient wants family or carers present, whether family is bereaved/angry/frightened/blaming, whether staff are traumatised or defensive.",
+      ],
+      commonTrap:
+        "Meeting family before knowing basic facts or before deciding who is allowed to receive information — this can cause additional harm.",
+    },
+    {
+      id: "s06",
+      order: 6,
+      title: "What to Say Early",
+      colorTag: "blue",
+      explanation:
+        "The early conversation should be clear, honest and limited to known facts. Acknowledge, apologise, explain what is known, state what is uncertain, and describe next steps — in that order.",
+      keyPoints: [
+        "USEFUL OPENING: 'I am sorry this has happened. I want to explain what we know so far, what we do not yet know, what we are doing now to keep [patient] safe, and how we will review what happened.'",
+        "INCLUDE: acknowledgement, apology or expression of regret, factual information known so far, uncertainty, immediate care plan, support available, next review steps, contact person, follow-up meeting.",
+        "AVOID: speculation, blaming staff, blaming patient, saying 'nothing went wrong' before review, giving guarantees, discussing confidential details about another patient, making legal admissions outside advice, defensive language.",
+        "The first meeting does not need to explain everything — its purpose is to acknowledge, apologise, state what is known, and commit to a follow-up process.",
+      ],
+      commonTrap:
+        "Trying to explain everything in the first meeting before the review has occurred — premature explanation of causation before investigation is both inaccurate and legally risky.",
+    },
+    {
+      id: "s07",
+      order: 7,
+      title: "Apology or Expression of Regret",
+      colorTag: "green",
+      explanation:
+        "Open disclosure should include a sincere apology or expression of regret. An apology acknowledges harm and distress — it does not require admitting personal negligence or legal liability.",
+      keyPoints: [
+        "APPROPRIATE WORDING: 'I am sorry this happened.' / 'I am sorry for the distress this has caused.' / 'We are sorry that care did not go as expected.' / 'I am sorry you were not informed earlier.'",
+        "IMPORTANT DISTINCTION: you can say 'I am sorry this happened' without saying 'I personally caused this through negligence.' These are different statements.",
+        "MEQ PHRASE: 'I would apologise for the harm and distress, while avoiding speculation or premature attribution of blame.'",
+        "Avoiding all apology because of medicolegal fear is both clinically inappropriate and counterproductive — families who receive an early apology are less likely to litigate, not more.",
+      ],
+      meqApplication:
+        "Always include an apology or expression of regret in open disclosure MEQ answers — its absence is a consistent mark-losing omission.",
+      commonTrap:
+        "Avoiding any apology because of fear that it will be treated as admission of liability.",
+    },
+    {
+      id: "s08",
+      order: 8,
+      title: "Factual Explanation",
+      colorTag: "blue",
+      explanation:
+        "Patients and families want to understand what happened. Factual explanation uses three categories: known facts, unknown facts (still under review), and next steps.",
+      keyPoints: [
+        "KNOWN FACTS: 'The medication was administered at 21:10.' / 'The lithium level was high when checked in ED.' / 'The discharge summary did not include a next blood-test date.' / 'The outpatient team had not received the handover.'",
+        "UNKNOWN FACTS: 'We do not yet know why the handover did not occur.' / 'We need to review the medication chart and staff accounts.' / 'We need to check whether the policy was followed.'",
+        "NEXT STEPS: 'This will be reviewed through the incident process.' / 'We will meet again when more information is available.' / 'You will be given a contact person.'",
+        "Families typically want answers to: what happened, when, who was involved, what was done immediately, what is being done now, could it happen again, was it preventable, will someone be accountable, what will change.",
+      ],
+      commonTrap:
+        "Speculating about causation or promising that the event was definitely preventable before the review has occurred.",
+    },
+    {
+      id: "s09",
+      order: 9,
+      title: "Patient and Family Questions",
+      colorTag: "teal",
+      explanation:
+        "A strong consultant does not just deliver information — they invite questions, listen, and remain non-defensive when family expresses anger or distress.",
+      keyPoints: [
+        "ASK: 'What is your understanding of what happened?' / 'What are your main concerns now?' / 'What questions do you want answered?' / 'Who else would you like involved?' / 'What support do you need today?' / 'What would help rebuild trust?'",
+        "IF FAMILY IS ANGRY: acknowledge anger, allow emotion, avoid defensiveness, pause if needed, keep boundaries, offer follow-up. Anger is an expected response to harm — do not treat it as an obstacle.",
+        "USEFUL PHRASE WHEN ANGRY: 'I can hear how angry and distressed you are. I cannot answer everything today, but I will explain what we know, what is being reviewed, and when we will meet again.'",
+        "IF ASKED 'Was this your fault?': 'We are reviewing exactly what happened. I do not want to speculate before that review is complete. What I can say now is that we are sorry this happened, and we will look carefully at the clinical and system factors.'",
+      ],
+      commonTrap:
+        "Becoming defensive when family expresses anger — defensiveness destroys trust and escalates conflict in open disclosure meetings.",
+    },
+    {
+      id: "s10",
+      order: 10,
+      title: "Support Person, Advocate, Interpreter and Cultural Support",
+      colorTag: "teal",
+      explanation:
+        "Open disclosure should be patient-centred and accessible. For patients with psychosis, mania, trauma, intellectual disability, youth or older adult cognitive impairment, repeat information and provide written summaries — do not assume the patient understood because the meeting occurred.",
+      keyPoints: [
+        "OFFER: family or carer involvement if patient consents or if patient is deceased/incapacitated, consumer liaison or patient advocate, interpreter, Aboriginal liaison worker, cultural worker, peer worker, spiritual care, GP or community provider where appropriate, legal or rights advocate if involuntary care context.",
+        "MEQ PHRASE: 'I would offer a support person, advocate, interpreter or cultural worker and ask the patient or family who should be present.'",
+        "For patients with cognitive or mental state impairment: repeat information, provide written summaries, and revisit disclosure when capacity improves.",
+        "Do not assume the standard nuclear-family meeting format suits every patient — ask who should be present rather than deciding unilaterally.",
+      ],
+      meqApplication:
+        "Mention support person, advocate, interpreter or cultural worker in any open disclosure MEQ answer — this signals patient-centred and culturally safe practice.",
+      commonTrap:
+        "Holding a disclosure meeting that the patient cannot understand because of language, cognitive, cultural or emotional barriers.",
+    },
+    {
+      id: "s11",
+      order: 11,
+      title: "Further Investigation",
+      colorTag: "purple",
+      explanation:
+        "Open disclosure does not replace investigation. It runs alongside it. Do not promise a conclusion before the investigation has occurred — and do not treat the disclosure meeting as the investigation.",
+      keyPoints: [
+        "INVESTIGATION MAY INCLUDE: incident report, ward review, medication review, pharmacy review, M&M meeting, clinical case review, root cause analysis, privacy review, restraint/seclusion review, child-safety review, coroner or police process, external regulatory process.",
+        "USEFUL PHRASE: 'There will be a review of what happened. It will look at the timeline, clinical decisions, handover, documentation, staffing, supervision and system processes. We will update you as the review progresses.'",
+        "Key governance point: do not promise a conclusion before the investigation has occurred — premature conclusions are inaccurate and can be legally damaging.",
+        "Open disclosure and investigation are parallel processes — the disclosure meeting informs the family that review is occurring; the review itself generates the findings that inform the follow-up meeting.",
+      ],
+      commonTrap:
+        "Treating open disclosure as the investigation itself — the disclosure meeting acknowledges and communicates; the investigation determines what happened and why.",
+    },
+    {
+      id: "s12",
+      order: 12,
+      title: "Follow-Up Meeting",
+      colorTag: "green",
+      explanation:
+        "Open disclosure usually needs more than one meeting, especially after serious harm. The first meeting acknowledges and explains; the follow-up meeting provides findings, explains contributing factors, and closes the loop.",
+      keyPoints: [
+        "FIRST MEETING PURPOSE: acknowledge event, apologise or express regret, explain known facts, explain immediate care, outline review process, offer support, agree contact person.",
+        "FOLLOW-UP MEETING PURPOSE: answer questions, provide review findings, explain contributing factors, explain system changes, check ongoing support needs, provide written information, close or continue the process.",
+        "FOLLOW-UP MEETING SHOULD INCLUDE: what has been found so far, what remains uncertain, what actions have been taken, what will change, how the patient/family can seek further review.",
+        "A single meeting after serious harm is almost never sufficient — families need time to process and return with further questions.",
+      ],
+      commonTrap:
+        "Having one meeting after serious harm and then providing no follow-up — this is an incomplete open disclosure process.",
+    },
+    {
+      id: "s13",
+      order: 13,
+      title: "Documentation",
+      colorTag: "purple",
+      explanation:
+        "Document open disclosure carefully. The documentation must record what was discussed, not just that a meeting occurred.",
+      keyPoints: [
+        "DOCUMENT: adverse event or potential harm, who was informed, who attended meeting, patient/family questions, facts explained, uncertainty explained, apology or expression of regret, immediate care plan, support offered, review or investigation process, contact person, follow-up meeting date, written information provided, medicolegal or risk advice sought, if disclosure delayed or limited — why.",
+        "AVOID: speculation, blame, defensive notes, pejorative labels, retrospective alteration, 'family was difficult', 'patient demanding compensation', undocumented verbal conversations.",
+        "The documentation should read as a clear factual record of what was discussed — not a defence of the clinician's actions.",
+        "If the documentation shows only 'open disclosure completed,' it is inadequate — the specific content, questions, and follow-up arrangements must all be recorded.",
+      ],
+      commonTrap:
+        "Documenting that 'open disclosure completed' without recording what was actually discussed and what follow-up was arranged.",
+    },
+    {
+      id: "s14",
+      order: 14,
+      title: "Medicolegal and Indemnity Advice",
+      colorTag: "amber",
+      explanation:
+        "Open disclosure is compatible with medicolegal advice. You can be transparent, empathetic and still respond carefully. Medicolegal advice should inform the process — not prevent timely acknowledgement and support.",
+      keyPoints: [
+        "SEEK MEDICOLEGAL ADVICE WHEN: death occurred, serious harm occurred, coroner likely, Ahpra or external complaint likely, legal letter received, sexual or boundary allegation, restraint or seclusion injury, serious medication adverse event, privacy breach, registrar error under your supervision, family threatens legal action, you are asked to provide formal statement.",
+        "IMPORTANT BALANCE: do not use medicolegal advice as a reason to avoid empathy — seek advice early but proceed with acknowledgement, expression of regret, clinical care and support.",
+        "DEFENSIBLE PHRASE: 'I would seek medicolegal advice early, but this should not prevent timely acknowledgement, expression of regret, clinical care and support.'",
+        "Waiting for legal clearance before acknowledging obvious distress or harm is both clinically inappropriate and practically counterproductive.",
+      ],
+      commonTrap:
+        "Waiting for legal advice before even acknowledging distress or harm — early acknowledgement and medicolegal advice are not mutually exclusive.",
+    },
+    {
+      id: "s15",
+      order: 15,
+      title: "Staff Support",
+      colorTag: "teal",
+      explanation:
+        "Open disclosure can be emotionally difficult for staff. Staff support does not remove accountability — it helps staff participate honestly and safely in review and repair. Distressed staff avoid patients, document defensively and make further errors.",
+      keyPoints: [
+        "STAFF MAY FEEL: guilt, shame, fear of blame, fear of litigation, anger, defensiveness, sadness, anxiety about career consequences, moral injury, avoidance of patient or family.",
+        "SUPPORT SHOULD INCLUDE: debrief, supervision, EAP, peer support, registrar supervisor or Director of Training if trainee involved, indemnity advice, time out if distressed, clear instructions about documentation and statements, protection from scapegoating.",
+        "Key point: staff support does not remove accountability — it enables honest participation in review and prevents secondary harm from stressed clinicians.",
+        "The registrar or nurse involved in an adverse event is at high risk of burnout, withdrawal from care and documentation problems if not supported.",
+      ],
+      commonTrap:
+        "Forgetting the registrar or nurse involved after an adverse event — they are a second victim of the incident and need structured support.",
+    },
+    {
+      id: "s16",
+      order: 16,
+      title: "Medication Adverse Event",
+      colorTag: "red",
+      explanation:
+        "Medication adverse events require both a clinical response and an open disclosure response. The medication must be corrected, but disclosure, documentation and system review are equally required.",
+      keyPoints: [
+        "EXAMPLES: wrong dose, wrong-patient medication, lithium toxicity after unclear discharge advice, haloperidol given despite Parkinsonism or QTc risk, clozapine missed bloods, valproate in pregnancy without counselling, benzodiazepine over-sedation and fall.",
+        "IMMEDIATE ACTIONS: assess and treat patient, stop or withhold medication if needed, call medical team/pharmacy/toxicology, check vitals and investigations, clarify what was prescribed and administered, preserve medication chart or eMAR, notify consultant/pharmacy/NUM, complete incident report.",
+        "OPEN DISCLOSURE CONTENT: what medication was involved, what effect occurred, what is being done medically, what is known and unknown about cause, what review will occur, what monitoring is planned, apology or regret, how recurrence will be reduced.",
+        "EXAMPLE PHRASE: 'I am sorry this medication event occurred. We have stopped the medication, arranged medical monitoring, and involved pharmacy. We are reviewing the prescribing, dispensing and administration steps to understand how it happened.'",
+      ],
+      commonTrap:
+        "Correcting the medication but failing to disclose, document or review the medication system.",
+    },
+    {
+      id: "s17",
+      order: 17,
+      title: "Delayed Diagnosis or Delayed Review",
+      colorTag: "amber",
+      explanation:
+        "Delayed diagnosis or review is a frequent psychiatric adverse event. Open disclosure must acknowledge the delay, avoid premature attribution of blame, and explain the review of triage, escalation, handover and supervision.",
+      keyPoints: [
+        "EXAMPLES: delirium missed, serotonin syndrome missed, NMS not recognised, sepsis dismissed as behavioural, high suicide risk not reviewed, child-safety concern not escalated, ED delay leading to harm.",
+        "OPEN DISCLOSURE CONTENT: acknowledge delay, explain what is known, avoid blaming a single clinician prematurely, describe current treatment, explain review of triage/escalation/handover/supervision, offer apology or regret, outline future prevention.",
+        "EXAMPLE PHRASE: 'I am sorry there was a delay in recognising and responding to the deterioration. The priority now is treatment and safety. We will review the timeline, handover, escalation process and supervision arrangements.'",
+        "Calling the delay 'unavoidable' before reviewing the pathway is premature, factually unjustified, and likely to damage trust.",
+      ],
+      commonTrap:
+        "Calling the delay 'unavoidable' before reviewing the pathway — this closes off accountability before the facts are known.",
+    },
+    {
+      id: "s18",
+      order: 18,
+      title: "Seclusion or Restraint Injury",
+      colorTag: "red",
+      explanation:
+        "Seclusion or restraint injury requires open disclosure focused on the injury, the review of last-resort criteria, and future reduction strategies — not a defence of the decision.",
+      keyPoints: [
+        "EXAMPLES: physical injury during restraint, prolonged seclusion without review, dignity failure, observation failure, trauma reaction, family not informed.",
+        "IMMEDIATE ACTIONS: medical assessment, cease restrictive practice as soon as safe, review mental state and triggers, support patient, support staff, incident report, review legal and policy compliance.",
+        "OPEN DISCLOSURE CONTENT: acknowledge injury or distress, explain why restrictive practice was used if known, explain what is being medically assessed, explain review process, apologise for harm or distress, avoid discussing confidential details of other patients, explain debrief and future reduction strategies.",
+        "Do not disclose another patient's details to explain what triggered the restraint — focus on what happened to this patient and what is being reviewed.",
+      ],
+      commonTrap:
+        "Defending restraint or seclusion because the ward was busy or the patient was difficult — these are not defences, they are system failures requiring governance action.",
+    },
+    {
+      id: "s19",
+      order: 19,
+      title: "Post-Discharge Suicide",
+      colorTag: "red",
+      explanation:
+        "Post-discharge suicide is one of the highest-yield MEQ scenarios. It requires an immediate multi-stream response: family support, staff support, record preservation, governance notification, medicolegal advice and structured open disclosure — not a defence of the discharge decision.",
+      keyPoints: [
+        "IMMEDIATE PRIORITIES: confirm facts sensitively, notify clinical director and service manager, preserve records, support family, support staff and registrar, consider coroner or police according to local policy, incident report, medicolegal advice, plan family meeting.",
+        "OPEN DISCLOSURE CONTENT: condolences, acknowledge grief and anger, explain what is known about discharge and follow-up, avoid speculation about causation, acknowledge any known process failure, apologise or express regret appropriately, explain internal review or RCA, offer support, provide contact person, arrange follow-up meeting.",
+        "KEY PHRASE: 'I would not speculate that closer follow-up would definitely have prevented the death, but I would acknowledge the failed handover and ensure it is reviewed transparently.'",
+        "A post-discharge death may trigger mandatory coroner notification — seek medicolegal advice early.",
+      ],
+      commonTrap:
+        "Jumping straight to defending the discharge decision rather than acknowledging grief, supporting family and staff, and committing to transparent review.",
+    },
+    {
+      id: "s20",
+      order: 20,
+      title: "Failed Handover",
+      colorTag: "amber",
+      explanation:
+        "Failed handover is a patient safety event, not an administrative error. Open disclosure must acknowledge what information should have been transferred, explain immediate corrective actions, and commit to a system review.",
+      keyPoints: [
+        "EXAMPLES: outpatient team unaware of discharge, GP not told lithium monitoring needed, CAMHS/adult transfer lost, NGO told to manage risk without escalation pathway, discharge summary sent late or to wrong provider.",
+        "OPEN DISCLOSURE CONTENT: acknowledge the handover failure, explain what information should have been transferred, explain immediate corrective actions, apologise for distress or harm, clarify ongoing care plan, explain review of communication process, provide contact person.",
+        "SYSTEM ACTIONS: handover template, high-risk discharge checklist, confirmation of receipt, named responsible clinician, GP/community escalation pathway, re-audit.",
+        "Failed handover that causes clinical risk is a governance event requiring incident reporting and RCA — not just a process correction.",
+      ],
+      commonTrap:
+        "Calling handover failure an administrative error when it caused clinical risk — this minimises a governance failure and signals poor understanding of patient safety.",
+    },
+    {
+      id: "s21",
+      order: 21,
+      title: "Registrar Error",
+      colorTag: "teal",
+      explanation:
+        "Open disclosure after registrar error must balance patient/family transparency with registrar support. The consultant must not scapegoat the registrar, but must also not hide the event to protect them.",
+      keyPoints: [
+        "IMMEDIATE ACTIONS: correct patient care, consultant review, preserve records, inform clinical director if serious, support registrar, obtain registrar account, incident report, consider indemnity advice, consider open disclosure.",
+        "DURING OPEN DISCLOSURE — SAY: 'A review will look at the clinical decision, supervision, handover, workload and system factors.' DO NOT SAY: 'The registrar made a mistake and caused this.'",
+        "STAFF-SUPPORT STREAM: supervision, debrief, training director if needed, welfare check, medical defence or indemnity advice, learning plan if required.",
+        "The supervisor (consultant) has both a duty of care to the patient and a supervisory duty to the registrar — both must be addressed simultaneously.",
+      ],
+      commonTrap:
+        "Blaming the registrar in front of the family (scapegoating) or hiding the event entirely to protect the registrar (covering up) — both are governance failures.",
+    },
+    {
+      id: "s22",
+      order: 22,
+      title: "Lower-Level Versus Higher-Level Open Disclosure",
+      colorTag: "blue",
+      explanation:
+        "Open disclosure is not a one-size-fits-all process. The level of response should match the severity of harm and distress.",
+      keyPoints: [
+        "LOWER-LEVEL RESPONSE is usually for: no permanent harm, no escalation in care, minor distress, near miss, no-harm incident. May involve: clinician directly involved, prompt explanation, apology or regret, documentation, local improvement, minimal follow-up unless requested.",
+        "HIGHER-LEVEL RESPONSE is usually for: death, major harm, escalation of care, severe psychological distress, serious complaint, significant loss of trust, patient or family request. Requires: senior clinician, preparation meeting, formal open disclosure meeting, support person or advocate, written follow-up, investigation or RCA, governance reporting, further meeting after findings.",
+        "Using a brief informal apology for a serious event that requires formal senior-led disclosure is a governance failure.",
+        "Escalating to higher-level process when only lower-level is needed can also be harmful — it signals to families that the situation is more serious than it is.",
+      ],
+      commonTrap:
+        "Using a brief informal apology for an event that needs formal senior-led disclosure — the level of response must match the severity of harm.",
+    },
+    {
+      id: "s23",
+      order: 23,
+      title: "Patient Lacks Capacity or Is Deceased",
+      colorTag: "purple",
+      explanation:
+        "Open disclosure must be adapted when the patient lacks capacity or has died. Do not exclude the patient entirely because capacity is impaired — adapt and revisit.",
+      keyPoints: [
+        "IF PATIENT LACKS CAPACITY: involve substitute decision-maker or guardian according to local law, involve family/carers if appropriate, provide information in a way the patient can understand where possible, repeat discussion when capacity improves if relevant, document why the disclosure pathway was adapted.",
+        "IF PATIENT IS DECEASED: communicate with next of kin or family according to policy, offer condolences, preserve records, notify coroner or police where required, offer family meeting, support staff, explain review process.",
+        "Capacity is often fluctuating in psychiatry — plan to revisit disclosure when mental state or capacity improves.",
+        "Document specifically why capacity was impaired at the time and how the disclosure was adapted.",
+      ],
+      commonTrap:
+        "Excluding the patient entirely because capacity is impaired, instead of adapting communication and revisiting later when capacity improves.",
+    },
+    {
+      id: "s24",
+      order: 24,
+      title: "Cultural Safety in Open Disclosure",
+      colorTag: "teal",
+      explanation:
+        "Open disclosure must be culturally safe. A standard meeting format may be inappropriate for Aboriginal and Torres Strait Islander patients, CALD families, Māori or Pasifika whānau, or patients from communities where shame, stigma and mistrust of health services are significant.",
+      keyPoints: [
+        "CONSIDER: interpreter, Aboriginal liaison worker, cultural worker, Māori/Pasifika whānau involvement in NZ context, spiritual care, family/community decision-making, gender of clinician where relevant, shame/stigma/mistrust, previous coercive experiences, culturally appropriate meeting format.",
+        "MEQ PHRASE: 'I would offer culturally appropriate support and ask the patient or family who should be present, rather than assuming the usual nuclear-family meeting is adequate.'",
+        "Cultural safety is not a box to tick — it requires asking what the patient and family need, not assuming the standard format works.",
+        "Previous coercive psychiatric experiences (involuntary treatment, seclusion, historic over-representation in restrictive practices) may significantly affect trust and engagement in open disclosure.",
+      ],
+      commonTrap:
+        "Holding a disclosure meeting in a standard format that does not fit the patient's cultural, linguistic or family context.",
+    },
+    {
+      id: "s25",
+      order: 25,
+      title: "Confidentiality When Another Patient Is Involved",
+      colorTag: "purple",
+      explanation:
+        "When an adverse event involves another patient (assault, sexual incident, ward incident), open disclosure must acknowledge the event without breaching the other patient's confidentiality.",
+      keyPoints: [
+        "YOU CAN: acknowledge distress, explain what happened to their family member, explain what is being done to keep them safe, explain incident review process.",
+        "YOU CANNOT: disclose another patient's diagnosis, disclose another patient's legal status, disclose another patient's treatment, blame the other patient publicly.",
+        "USEFUL PHRASE: 'I cannot discuss another patient's private clinical details, but I can explain what happened to your daughter, what we are doing for her safety, and how the incident will be reviewed.'",
+        "This boundary applies even when the family is angry — confidentiality of the other patient does not yield to family pressure.",
+      ],
+      commonTrap:
+        "Breaching another patient's confidentiality because the family is angry — anger does not create a right to another patient's clinical information.",
+    },
+    {
+      id: "s26",
+      order: 26,
+      title: "Duty of Candour",
+      colorTag: "purple",
+      explanation:
+        "Some jurisdictions have statutory duty of candour obligations for serious adverse events. The basic clinical approach remains the same: safety, acknowledgement, apology/regret, factual explanation, support, investigation, documentation and system learning.",
+      keyPoints: [
+        "MEQ PHRASE: 'I would follow local open disclosure policy and check whether statutory duty of candour requirements apply.'",
+        "Duty of candour strengthens the obligation for transparent communication — it does not change the fundamental approach, but it makes disclosure legally required rather than professionally expected.",
+        "Local legislation and health-service policy should be checked for specific notification timeframes, required documentation and reporting obligations.",
+        "Ignoring local duty of candour or open disclosure policy in a serious harm event is itself a governance and professional conduct failure.",
+      ],
+      commonTrap:
+        "Ignoring local duty of candour or open disclosure policy in a serious harm event — this adds a governance failure to the original clinical one.",
+    },
+    {
+      id: "s27",
+      order: 27,
+      title: "Documentation Checklist",
+      colorTag: "blue",
+      explanation:
+        "A clear documentation checklist ensures the open disclosure record is complete, defensible and useful for governance review.",
+      keyPoints: [
+        "DOCUMENT: adverse event or potential harm, date and time event identified, immediate clinical actions, patient condition and risk, who was informed, who attended disclosure discussion, what facts were explained, what uncertainty was explained, apology or expression of regret, questions asked by patient/family, support offered, advocate/interpreter/cultural worker involvement, investigation or review process explained, contact person, follow-up meeting date, medicolegal or risk advice, governance notifications, plan to update patient/family.",
+        "DO NOT DOCUMENT: blame, speculation, defensive commentary, 'family unreasonable', 'patient threatening complaint', legal conclusions, retrospective changes without addendum.",
+        "The documentation is a clinical record and a governance record — it should read as a factual account of a structured process, not a defence of decisions made.",
+        "Failing to document the patient or family's questions and what follow-up was promised creates a gap that cannot be reconstructed later.",
+      ],
+      commonTrap:
+        "Failing to document the patient or family's questions and what follow-up was promised — these are the items most commonly scrutinised in subsequent review.",
+    },
+    {
+      id: "s28",
+      order: 28,
+      title: "MEQ-Ready Structure",
+      colorTag: "blue",
+      explanation:
+        "When asked 'How would you conduct open disclosure?' use this six-domain structure. Stopping after apology and not arranging investigation or follow-up meeting is the most common failure.",
+      keyPoints: [
+        "1. IMMEDIATE SAFETY: treat patient harm, review risk, ensure current care is safe, prevent further harm.",
+        "2. PREPARE: gather known facts, identify unknowns, notify senior staff or governance, seek medicolegal advice if serious, decide who should lead, arrange support person/interpreter/advocate, support staff involved.",
+        "3. FIRST DISCLOSURE MEETING: private setting, acknowledge event, apologise or express regret, explain known facts, explain uncertainty, describe current care, invite patient/family questions, listen to their account, explain next steps, provide contact person.",
+        "4. INVESTIGATION/REVIEW: incident report, M&M/RCA/case review as appropriate, review systems/supervision/handover/workload/policy, avoid blame.",
+        "5. FOLLOW-UP MEETING: provide updates, share findings where appropriate, explain contributing factors, explain actions to prevent recurrence, provide written information, offer further support.",
+        "6. DOCUMENTATION AND CLOSURE: document all discussions, record questions and answers, confirm follow-up, document when process is complete, feed learning into governance.",
+      ],
+      meqApplication:
+        "Use these six domains as answer headings. The examiner wants to see all six — not just the first meeting.",
+      commonTrap:
+        "Stopping after apology and not arranging investigation or follow-up meeting — an apology without investigation and closure is not open disclosure.",
+    },
+    {
+      id: "s29",
+      order: 29,
+      title: "Examiner Phrases",
+      colorTag: "green",
+      explanation:
+        "These phrases signal governance maturity and consistently appear in high-scoring open disclosure MEQ answers.",
+      keyPoints: [
+        "'Open disclosure is separate from complaint management.'",
+        "'I would acknowledge harm and apologise for distress without speculating or assigning blame before review.'",
+        "'The meeting should be led by a senior clinician familiar with the case.'",
+        "'I would explain what is known, what is not yet known, and what will be reviewed.'",
+        "'I would invite the patient or family to ask questions and identify what they want answered.'",
+        "'I would offer a support person, advocate, interpreter or cultural worker.'",
+        "'I would support staff involved, especially junior doctors, while maintaining accountability.'",
+        "'I would document the open disclosure discussion and arrange a follow-up meeting after investigation.'",
+        "'The process should end with system learning, not only an apology.'",
+      ],
+      commonTrap:
+        "Common traps that cost marks: confusing open disclosure with complaint handling; saying 'wait for investigation before speaking'; apologising defensively or not at all; speculating about causation; blaming the registrar or nurse; hiding behind medicolegal fear; forgetting staff support; failing to offer family support; disclosing another patient's confidential information; omitting follow-up meeting; omitting documentation; omitting governance or RCA; failing to explain what will change.",
+    },
+    {
+      id: "s30",
+      order: 30,
+      title: "Consultant-Level Summary",
+      colorTag: "green",
+      explanation:
+        "A consultant should treat open disclosure as a structured governance and communication process. After ensuring immediate patient safety, the consultant should prepare with the MDT, clarify known facts and uncertainties, notify senior governance and seek medicolegal advice if serious. A senior clinician familiar with the case should meet the patient and family in a private setting, acknowledge the event, apologise or express regret, explain what is known and unknown, invite questions, offer support, and describe the investigation and follow-up process. The discussion should be documented carefully. Staff involved should be supported. The review should lead to system learning, action and feedback to the patient or family where appropriate.",
+      keyPoints: [
+        "IMMEDIATE: patient safety, clinical care, fact preservation, senior notification, medicolegal advice if serious.",
+        "FIRST MEETING: acknowledge, apologise, known facts, uncertainty, current care, questions, support, next steps, contact person.",
+        "INVESTIGATION: incident report, M&M/RCA, system review, just culture — parallel to disclosure, not sequential.",
+        "FOLLOW-UP AND CLOSURE: findings shared, contributing factors explained, system changes described, documentation complete, learning fed into governance.",
+      ],
+      meqApplication:
+        "Close every open disclosure MEQ answer with system learning and governance feedback — this is where the highest-scoring candidates consistently separate themselves.",
+    },
+  ],
+};
+
+export const ALL_NOTES: Note[] = [DISCHARGE_PLAN, CONFLICT_MANAGEMENT, COMPLAINT_PROCESS, INCIDENT_MANAGEMENT, CLINICAL_AUDIT, OPEN_DISCLOSURE];
