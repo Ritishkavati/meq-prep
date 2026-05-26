@@ -5848,4 +5848,696 @@ export const WHS_STAFF_SAFETY: Note = {
   ],
 };
 
-export const ALL_NOTES: Note[] = [DISCHARGE_PLAN, CONFLICT_MANAGEMENT, COMPLAINT_PROCESS, INCIDENT_MANAGEMENT, CLINICAL_AUDIT, OPEN_DISCLOSURE, RESTRICTIVE_PRACTICES, RESTRICTIVE_PRACTICES_MEQ, CONFIDENTIALITY, CAPACITY_CONSENT, SUPERVISION_TRAINING, WHS_STAFF_SAFETY];
+export const CULTURAL_SAFETY: Note = {
+  id: "cultural_safety",
+  title: "Cultural Safety, Institutional Racism, Interpreters and Conflict Governance",
+  category: "Clinical Governance / Cultural Safety / Communication / Ethics",
+  description:
+    "A consultant-level framework for system-level cultural safety and institutional racism governance in psychiatry, with detailed interpreter and conflict-management guidance covering Aboriginal patient disengagement, refugee mistrust, interpreter access, family interpreter conflict, small-community confidentiality, ACCHO partnership, cultural supervision, data monitoring and racism complaints.",
+  sections: [
+    {
+      id: "s01",
+      order: 1,
+      title: "Core Principle",
+      colorTag: "blue",
+      explanation:
+        "Cultural safety is judged by the patient, family and community — not by the service's intention. A service is not culturally safe because it says 'we treat everyone the same.' Writing only 'be culturally sensitive' without governance actions is the core mark-losing error.",
+      keyPoints: [
+        "CULTURAL SAFETY ASKS: 'Who is not engaging, who is being harmed, who is being misdiagnosed, who feels unsafe, and what must change in our service?' — not 'do our staff have good intentions?'",
+        "CULTURAL SAFETY vs CULTURAL COMPETENCE: cultural competence = staff knowledge and skills. Cultural safety = patient, family and community experience of respectful, safe, accountable care.",
+        "STRONG MEQ ANSWER: 'I would treat this as both a clinical-safety and cultural-governance issue. I would respond to the immediate patient concern, acknowledge the possibility of culturally unsafe care or racism, involve Aboriginal liaison/cultural workers and community-controlled partners where appropriate, review interpreter and communication systems, examine service data and complaints, and implement changes with community governance rather than relying only on staff education.'",
+        "GOVERNANCE UPGRADE — WEAK: 'Provide cultural awareness training.' CONSULTANT: 'Review cultural safety through community partnership, interpreter access, Aboriginal liaison, data monitoring, complaints, workforce, cultural supervision, pathway redesign and re-audit.'",
+      ],
+      commonTrap:
+        "Writing only 'be culturally sensitive' without governance actions.",
+    },
+    {
+      id: "s02",
+      order: 2,
+      title: "Why This Is Examinable",
+      colorTag: "blue",
+      explanation:
+        "The examiner wants you to see both the patient-level issue and the system-level cultural safety issue. Answering only with individual cultural formulation and missing service governance loses marks.",
+      keyPoints: [
+        "MEQ STEM PATTERNS: Aboriginal patient disengages after culturally unsafe care, refugee patient refuses treatment due to mistrust, interpreter not used, service excludes Elders/community, misdiagnosis of culturally meaningful experience, family/community not consulted.",
+        "MORE PATTERNS: complaint of racism, Aboriginal youth clinic planned without ACCHO consultation, ED staff misgender/stereotype/shame or expose a culturally vulnerable patient, discharge plan ignores cultural/community support.",
+        "The examiner expects both an immediate clinical response and a service governance response — candidates who give only one dimension lose half the marks.",
+        "KEY POINT: the examiner wants you to see both the patient-level issue and the system-level cultural safety issue.",
+      ],
+      commonTrap:
+        "Answering only with individual cultural formulation and missing service governance.",
+    },
+    {
+      id: "s03",
+      order: 3,
+      title: "Cultural Safety Versus Cultural Competence",
+      colorTag: "purple",
+      explanation:
+        "Cultural competence is staff knowledge. Cultural safety is the patient and community experience of care, supported by governance, accountability and service redesign. Thinking cultural safety is achieved by one-off staff education is a persistent mark-losing error.",
+      keyPoints: [
+        "CULTURAL COMPETENCE OFTEN MEANS: knowledge of cultural groups, awareness of traditions, communication skills, interpreter use, avoiding stereotypes.",
+        "CULTURAL SAFETY ASKS: was the person respected, was power shared, was racism identified and addressed, did the service adapt, was the community involved, did the patient/family feel safe, did outcomes improve, did complaints lead to change?",
+        "EXAM PHRASE: 'Cultural competence is staff knowledge; cultural safety is the patient and community experience of care, supported by governance, accountability and service redesign.'",
+        "A service can have well-trained staff and still produce culturally unsafe outcomes — the difference lies in accountability, power-sharing and system-level change.",
+      ],
+      commonTrap:
+        "Thinking cultural safety is achieved by one-off staff education.",
+    },
+    {
+      id: "s04",
+      order: 4,
+      title: "Institutional Racism",
+      colorTag: "red",
+      explanation:
+        "Institutional racism means service policies, routines, culture, data, staffing, access pathways or decision-making structures produce inequitable or unsafe outcomes — even if individuals do not intend harm. Looking only for individual racist intent and missing systemic patterns is the core error.",
+      keyPoints: [
+        "EXAMPLES: Aboriginal families labelled 'non-compliant' when service model is inaccessible, interpreter not booked because 'their English is good enough,' refugee mistrust framed as paranoia without trauma context, Elders/community excluded from youth-service design.",
+        "MORE EXAMPLES: Aboriginal health workers used informally but not paid/supported/included in governance, complaints of racism handled as 'miscommunication' only, cultural leave/Sorry Business/family obligations treated as poor engagement.",
+        "DATA-LEVEL EXAMPLES: seclusion/restraint rates not monitored by Aboriginality or ethnicity, admission/discharge data not reviewed for inequity, service policies require hospital attendance when community-based care would be safer.",
+        "Institutional racism does not require a racist individual — it operates through the accumulated effect of policies, norms and structures that were designed without equity in mind.",
+      ],
+      commonTrap:
+        "Looking only for individual racist intent and missing systemic patterns.",
+    },
+    {
+      id: "s05",
+      order: 5,
+      title: "Cultural Governance",
+      colorTag: "purple",
+      explanation:
+        "Cultural governance means cultural safety is built into how the service is led, measured and improved. Adding cultural training but leaving the same unsafe service pathway unchanged is the consistent governance gap.",
+      keyPoints: [
+        "CULTURAL GOVERNANCE INCLUDES: Aboriginal and Torres Strait Islander leadership, ACCHO partnership, community consultation, cultural advisory group, Aboriginal liaison/health workers embedded in pathways, interpreter governance, cultural supervision.",
+        "ALSO INCLUDES: cultural safety audit, racism complaint process, data monitoring by Aboriginality/language/ethnicity, staff training with accountability, consumer/carer/community feedback, service redesign.",
+        "MEQ PHRASE: 'I would treat this as cultural governance, not only cultural awareness training.'",
+        "The word 'governance' signals to the examiner that you understand accountability, measurability and system-level change — not just good intentions.",
+      ],
+      commonTrap:
+        "Adding cultural training but leaving the same unsafe service pathway unchanged.",
+    },
+    {
+      id: "s06",
+      order: 6,
+      title: "Aboriginal Patient Disengages After Culturally Unsafe Care",
+      colorTag: "green",
+      explanation:
+        "Disengagement should be documented as a service-related barrier until proven otherwise. Labelling it as non-compliance before reviewing service barriers is a governance failure.",
+      keyPoints: [
+        "IMMEDIATE CLINICAL RESPONSE: contact patient/family in a respectful non-blaming way, ask whether they want Aboriginal liaison/health worker involvement, clarify current risk and safety, offer choice of location (clinic, ACCHO, home visit, community setting, telehealth).",
+        "ALSO: ask who should be involved (family, Elder, trusted worker, cultural support), avoid 'DNA/non-compliant' language, document engagement barrier as service-related until proven otherwise.",
+        "GOVERNANCE RESPONSE: review what happened, ask whether the service failed to ask about family/community decision-making, check whether Aboriginal liaison was offered, review staff communication, review appointment location/transport/cost/stigma/confidentiality.",
+        "ALSO: discuss with ACCHO or cultural governance group, update pathway so future disengagement triggers culturally safe outreach.",
+      ],
+      commonTrap:
+        "Labelling disengagement as non-compliance before reviewing service barriers.",
+    },
+    {
+      id: "s07",
+      order: 7,
+      title: "Refugee Patient Refuses Treatment Due to Mistrust",
+      colorTag: "amber",
+      explanation:
+        "Refugee mistrust may reflect trauma, detention, torture, authority fear, prior coercion, racism, visa insecurity, language barriers or stigma. Treating mistrust as psychosis only is the core error.",
+      keyPoints: [
+        "DO NOT immediately pathologise mistrust. Assess: psychosis, delirium, depression, PTSD, substance use, trauma triggers in hospital, fear of authorities, fear of information affecting visa/residency, shame/stigma, health literacy, language needs, family/community supports, previous experiences with services.",
+        "RESPONSE: use professional interpreter, explain role and confidentiality, avoid coercive or paternalistic tone, offer refugee health/cultural liaison, validate mistrust without colluding with delusion, separate clinical treatment from immigration/police processes where possible.",
+        "ALSO: involve trusted GP/community organisation if consented, allow time and repeated explanations.",
+        "Mistrust of services is a rational response to prior coercive care, detention, or systematic violence — distinguishing between mistrust-as-trauma and mistrust-as-psychosis requires time, interpreter support and cultural consultation.",
+      ],
+      commonTrap:
+        "Treating mistrust as psychosis only.",
+    },
+    {
+      id: "s08",
+      order: 8,
+      title: "Interpreter Use Is Patient Safety",
+      colorTag: "teal",
+      explanation:
+        "Interpreter use is not just courtesy — it is a patient-safety and clinical-safety intervention. Thinking interpreter use is optional if the patient has some conversational English is a consistent mark-losing error.",
+      keyPoints: [
+        "INTERPRETER USE AFFECTS: diagnosis, risk assessment, capacity, consent, trauma disclosure, child safety, domestic violence assessment, medication counselling, Mental Health Act explanations, discharge planning.",
+        "STRONG MEQ ANSWER: 'I would use a professional interpreter as a patient-safety and cultural-safety intervention, because inaccurate communication can invalidate capacity assessment, distort mental-state findings, conceal risk, worsen mistrust and lead to unsafe treatment or discharge.'",
+        "Acute illness, fear, delirium, psychosis or trauma may reduce second-language ability — a patient who speaks conversational English when well may be unable to communicate accurately when distressed or unwell.",
+        "NSQHS Partnering with Consumers Standard supports interpreter access as a communication and partnership system, not an optional add-on.",
+      ],
+      commonTrap:
+        "Thinking interpreter use is optional if the patient has some conversational English.",
+    },
+    {
+      id: "s09",
+      order: 9,
+      title: "Interpreter Three-Phase Model",
+      colorTag: "teal",
+      explanation:
+        "Use this structure in any MEQ involving interpreter use. Using the interpreter as a cultural expert or decision-maker rather than a communication professional conflates roles inappropriately.",
+      keyPoints: [
+        "BEFORE: check whether interpreter is needed, confirm language and dialect, check gender preference, check whether interpreter from small community creates confidentiality concern, obtain patient consent where possible, brief interpreter on purpose of interview, explain need for accurate and verbatim translation, clarify confidentiality, consider phone/video interpreter if local community issue, arrange urgent triage first if waiting would be unsafe.",
+        "DURING: speak to patient not interpreter, use short sentences, avoid jargon, ask one question at a time, pause for interpretation, clarify confusing responses, ask for verbatim translation where mental state matters, observe non-verbal behaviour, check understanding.",
+        "AFTER: ask interpreter about language clarity/idioms of distress/communication issues, ask whether patient sounded coherent or disorganised in their own language, ask about cultural or linguistic misunderstandings, document interpreter name/ID/language/mode/limitations, do not ask interpreter to diagnose.",
+        "INTERPRETER CONFLICT MATRIX — PATIENT REFUSES: risk = invalid assessment; response = explore reason, offer alternatives; document = refusal and alternatives offered. FAMILY INTERPRETS: risk = distorted information, invalid capacity; response = use professional interpreter; document = why family was not used for high-stakes assessment. SMALL COMMUNITY: risk = confidentiality breach, refusal of care; response = phone/video from outside community. INTERPRETER BIASED: risk = invalid assessment; response = pause, restate role, switch interpreter. DV/TRAUMA: risk = safety breach, retelling harm; response = professional female interpreter if preferred, private space. URGENT MEDICAL RISK: risk = delay causes harm; response = limited triage assessment, then interpreter asap.",
+      ],
+      commonTrap:
+        "Using interpreter as a cultural expert or decision-maker rather than a communication professional.",
+    },
+    {
+      id: "s10",
+      order: 10,
+      title: "Patient Refuses Interpreter",
+      colorTag: "amber",
+      explanation:
+        "Interpreter refusal must be explored, not accepted at face value and documented. Continuing in English without documenting limitations or offering alternatives is an inadequate response.",
+      keyPoints: [
+        "REASONS FOR REFUSAL: shame, confidentiality fear, small community gossip, political/religious/community conflict, fear interpreter is linked to past oppressors, fear immigration/police involvement, paranoia, trauma, gender mismatch, family pressure, preference to speak English to avoid stigma.",
+        "RESPONSE: explore reason for refusal, explain interpreter confidentiality and professional role, offer telephone/video interpreter, offer different dialect or gender interpreter, offer interpreter from outside the local community, assess capacity to refuse interpreter if high-stakes decision, do limited urgent assessment if medically unsafe to wait, document refusal/alternatives offered/limitations.",
+        "MEQ PHRASE: 'I would explore interpreter refusal rather than assuming non-engagement.'",
+        "Interpreter refusal due to community fear may be the most important clinical finding of the encounter — it signals the level of trust the patient has in the service and shapes the entire therapeutic relationship.",
+      ],
+      commonTrap:
+        "Continuing in English without documenting limitations or offering alternatives.",
+    },
+    {
+      id: "s11",
+      order: 11,
+      title: "Family Wants to Interpret",
+      colorTag: "amber",
+      explanation:
+        "Family interpreting may feel acceptable to the patient and can support engagement, but it can seriously distort assessment. Using a son/daughter/spouse as interpreter for trauma, family violence, capacity or consent is a consistent mark-losing error.",
+      keyPoints: [
+        "RISKS: family edits or censors information, patient withholds trauma/domestic violence/sexuality/self-harm/psychosis, child becomes interpreter for adult distress, family conflict or coercion, shame, inaccurate medical vocabulary, loss of confidentiality, family controls narrative, capacity assessment becomes invalid.",
+        "CONSULTANT POSITION: 'I would use a professional interpreter for assessment, capacity, risk and consent. Family can still be involved as collateral and support with the patient's consent, but should not be the main interpreter for high-stakes or sensitive clinical decisions.'",
+        "The most dangerous family interpreter scenario is a spouse interpreting a domestic violence assessment — the patient cannot disclose safely, the interpreter controls what is communicated, and the clinician may have no way of knowing what is being omitted.",
+        "ROLE SEPARATION: interpreter translates. Family provides collateral/support with consent. Cultural worker advises on cultural safety. Aboriginal liaison/health worker supports engagement and cultural pathway. Clinician remains responsible for diagnosis, risk, capacity and treatment decisions.",
+      ],
+      commonTrap:
+        "Using a son/daughter/spouse as interpreter for trauma, family violence, capacity or consent.",
+    },
+    {
+      id: "s12",
+      order: 12,
+      title: "Interpreter From Small Community",
+      colorTag: "amber",
+      explanation:
+        "Small-community interpreter conflict is common in refugee, Aboriginal, rural, islander or small migrant communities. Assuming confidentiality statement alone removes small-community fear misses the lived reality of these communities.",
+      keyPoints: [
+        "RISKS: patient fears gossip, interpreter knows family, community politics, shame, trauma disclosure blocked, family violence risk, patient refuses care, interpreter bias or discomfort.",
+        "MANAGEMENT: ask patient privately if interpreter is acceptable, offer phone/video interpreter from another region, check dialect and gender preference, document concern and alternative offered, do not force local interpreter if it destroys trust unless emergency requires temporary pragmatic communication, arrange follow-up with suitable interpreter.",
+        "In a small refugee community, a formal confidentiality statement does not overcome the lived reality that the interpreter will see the patient's family at community events — the patient's fear is rational, not paranoid.",
+        "Telephone and video interpreter services remove the community overlap — this is the practical solution, not a reassurance that confidentiality will be maintained.",
+      ],
+      commonTrap:
+        "Assuming confidentiality statement alone removes small-community fear.",
+    },
+    {
+      id: "s13",
+      order: 13,
+      title: "Interpreter Bias or Inaccurate Translation",
+      colorTag: "red",
+      explanation:
+        "Warning signs must be acted upon — not noted and continued. Accepting a capacity or risk assessment when interpreter accuracy was doubtful is a patient-safety failure.",
+      keyPoints: [
+        "WARNING SIGNS: interpreter answers for patient, interpreter summarises long answers briefly, interpreter argues with patient, interpreter appears shocked or embarrassed, interpreter gives advice, interpreter speaks to family rather than patient, interpreter refuses to translate taboo content, patient becomes more fearful.",
+        "MANAGEMENT: pause interview, restate interpreter role, ask for verbatim translation, clarify confusing answers, switch interpreter if needed, document limitations, repeat high-stakes assessment if accuracy doubtful.",
+        "A capacity assessment or suicide risk assessment conducted through a biased or inaccurate interpreter is clinically unreliable — it must be repeated, not just noted.",
+        "Documenting interpreter limitations protects the clinician and creates a record for any subsequent review — always document interpreter name/ID, language, mode and any concerns.",
+      ],
+      commonTrap:
+        "Accepting a capacity or risk assessment when interpreter accuracy was doubtful.",
+    },
+    {
+      id: "s14",
+      order: 14,
+      title: "Domestic Violence and Sexual Trauma Interpreter Conflict",
+      colorTag: "red",
+      explanation:
+        "Family interpreters are unsafe in domestic violence or sexual trauma. Allowing spouse, parent or older child to interpret because they are available is a patient-safety failure.",
+      keyPoints: [
+        "USE: professional interpreter, female interpreter if patient prefers, female staff where possible, private space, no partner/family in room unless patient freely wants it and safety permits, explanation of confidentiality limits, child-safety assessment, trauma-informed pace.",
+        "AVOID: repeated retelling of trauma where possible — each retelling in an unsafe setting adds to harm, not assessment.",
+        "A domestic violence patient interpreting through their partner cannot safely disclose abuse — the interpreter controls both what is asked and what is reported.",
+        "In ED settings, ensure male security staff are not the primary contact with a traumatised female refugee patient — gender-sensitive care, female staff presence, covering body, proceeding slowly and explaining each step are basic dignity requirements.",
+      ],
+      commonTrap:
+        "Allowing spouse, parent or older child to interpret because they are available.",
+    },
+    {
+      id: "s15",
+      order: 15,
+      title: "Capacity and Consent With Interpreters",
+      colorTag: "red",
+      explanation:
+        "Capacity assessment through poor language support is weak or invalid. Accepting 'yes doctor' as informed consent is a consistent mark-losing error.",
+      keyPoints: [
+        "A PATIENT MAY APPEAR: thought disordered when actually language-discordant, cognitively impaired when unable to understand English, consenting when only nodding politely, refusing when they do not understand, paranoid when mistrust is trauma/cultural/authority-related.",
+        "MEQ PHRASE: 'I would not rely on an English-language capacity assessment if the patient's preferred language is different. I would repeat the assessment with an appropriate interpreter and document the language limitations of any earlier assessment.'",
+        "Polite nodding is not consent — in many cultures, direct disagreement with a doctor is considered disrespectful, and 'yes' may mean 'I hear you' rather than 'I agree and understand.'",
+        "Any capacity or consent decision made without adequate language support must be reviewed — document the limitation clearly, and do not treat it as final.",
+      ],
+      commonTrap:
+        "Accepting 'yes doctor' as informed consent.",
+    },
+    {
+      id: "s16",
+      order: 16,
+      title: "Urgent Medical Risk Versus Waiting for Interpreter",
+      colorTag: "red",
+      explanation:
+        "Urgent care and adequate language support are not mutually exclusive — triage now, then complete the proper assessment with an interpreter. Either delaying urgent care or treating a limited emergency conversation as a complete assessment are both errors.",
+      keyPoints: [
+        "EXAMPLES WHERE WAITING IS UNSAFE: head injury, sepsis, delirium, overdose, lithium toxicity, domestic violence injury, severe agitation, child safety emergency.",
+        "APPROACH: do not delay urgent medical stabilisation, conduct limited immediate safety/medical assessment using best available communication, use bilingual staff only as emergency bridge if policy permits, arrange professional interpreter as soon as possible.",
+        "ALSO: repeat full psychiatric/capacity/risk assessment once interpreter available, document limitations of the urgent assessment.",
+        "MEQ PHRASE: 'I would not delay urgent medical care while waiting for an interpreter, but I would not treat a limited emergency conversation as a complete psychiatric or capacity assessment.'",
+      ],
+      commonTrap:
+        "Either delaying urgent care or completing a full assessment without an interpreter.",
+    },
+    {
+      id: "s17",
+      order: 17,
+      title: "Child/Adolescent Interpreter Conflict",
+      colorTag: "teal",
+      explanation:
+        "Never use a child as interpreter for adult mental health, domestic violence, trauma, sexual matters, suicide risk or family violence. Allowing parents to interpret a young person's self-harm, sexual exploitation or trauma disclosure is a child-safety failure.",
+      keyPoints: [
+        "NEVER: use a child as interpreter for adult mental health, domestic violence, trauma, sexual matters, suicide risk or family violence.",
+        "IN CAMHS, ALSO CONSIDER: young person's confidentiality, parent control of narrative, family shame, mature minor capacity, child protection, school demands, gender preference, interpreter neutrality, need to interview young person alone.",
+        "MEQ PHRASE: 'I would separate the need for family involvement from the need for independent communication with the young person.'",
+        "A child interpreting their parent's suicidality, psychosis or family violence is exposed to traumatic material they should not carry — it is both a clinical and a child-protection issue.",
+      ],
+      commonTrap:
+        "Allowing parents to interpret a young person's self-harm, sexual exploitation or trauma disclosure.",
+    },
+    {
+      id: "s18",
+      order: 18,
+      title: "Role Separation in Complex Cultural Assessments",
+      colorTag: "teal",
+      explanation:
+        "Separate roles clearly in complex cultural assessments. Expecting interpreter or cultural worker to make clinical decisions transfers clinical responsibility inappropriately.",
+      keyPoints: [
+        "INTERPRETER: translates accurately, maintains confidentiality, does not diagnose, does not advocate unless separately appointed, does not censor.",
+        "FAMILY: provides collateral, supports patient if patient consents, may help with values/history, should not control the narrative.",
+        "CULTURAL WORKER / ABORIGINAL LIAISON: supports cultural safety, advises on engagement/family/community pathway and cultural context, helps bridge service/community, should not be asked to carry clinical responsibility alone.",
+        "CLINICIAN: retains responsibility for diagnosis, risk, capacity, consent, treatment and documentation — this responsibility cannot be delegated to the interpreter, cultural worker or family.",
+      ],
+      commonTrap:
+        "Expecting interpreter or cultural worker to make clinical decisions.",
+    },
+    {
+      id: "s19",
+      order: 19,
+      title: "Interpreter Access as Governance",
+      colorTag: "purple",
+      explanation:
+        "Interpreter access is a service-safety system, not an individual clinician responsibility. Treating interpreter failures as one-off clinician errors rather than system problems is a governance gap.",
+      keyPoints: [
+        "GOVERNANCE QUESTIONS: are interpreters available after hours, are clinicians trained to work with interpreters, are family members being used inappropriately, are gender/dialect/confidentiality issues considered, are interpreter refusals explored respectfully, are interpreter delays causing unsafe care?",
+        "MORE GOVERNANCE QUESTIONS: are interpreter needs recorded in the file, are written materials translated, are cognitive/capacity/risk assessments being done without adequate language support?",
+        "GOVERNANCE ACTIONS: interpreter booking pathway, after-hours interpreter access, documentation template for interpreter use/refusal, audit capacity/risk assessments in CALD patients, staff training, translated medication/discharge information, incident review when interpreter failure causes harm.",
+        "A service that has no after-hours interpreter access is systematically exposing CALD patients to unsafe care — this is a governance failure, not a series of individual clinician errors.",
+      ],
+      commonTrap:
+        "Treating interpreter failures as one-off clinician errors rather than system problems.",
+    },
+    {
+      id: "s20",
+      order: 20,
+      title: "Aboriginal Liaison and Aboriginal Health Workers",
+      colorTag: "green",
+      explanation:
+        "Aboriginal liaison officers, Aboriginal mental health workers and Aboriginal health practitioners are governance partners, not a fix for institutional racism. Calling Aboriginal liaison only after the patient disengages, instead of embedding them in the pathway, is tokenism.",
+      keyPoints: [
+        "THEY MAY SUPPORT: engagement and trust-building, cultural consultation, family/community liaison, explaining service processes, helping staff understand local context, culturally safe risk assessment, discharge planning, Sorry Business/kinship/local community dynamics, complaints and open disclosure.",
+        "AVOID TOKENISM: do not expect Aboriginal staff to fix institutional racism alone, do not use them only after conflict, do not ask them to carry unpaid community labour, do not expose them to racism without support, do not exclude them from decision-making, do not ignore cultural supervision needs.",
+        "Aboriginal health workers must be paid appropriately, included in governance decisions, protected from vicarious trauma and supported with cultural supervision — not used only when the mainstream service has already failed.",
+        "Early embedding (before disengagement) is more effective than crisis deployment after the therapeutic relationship is damaged.",
+      ],
+      commonTrap:
+        "Calling Aboriginal liaison only after the patient disengages, instead of embedding them in the pathway.",
+    },
+    {
+      id: "s21",
+      order: 21,
+      title: "ACCHO Partnership",
+      colorTag: "green",
+      explanation:
+        "Aboriginal Community Controlled Health Organisations are key governance partners, not just referral options. Designing a hospital model first and then asking ACCHO to endorse it is tokenism.",
+      keyPoints: [
+        "ACCHO PARTNERSHIP MAY INVOLVE: co-designing youth clinics, shared triage pathways, joint care planning, warm referral, culturally safe outreach, shared training, governance committee representation, data-sharing agreements, community feedback, crisis pathways, social and emotional wellbeing model integration.",
+        "MEQ PHRASE: 'ACCHO partnership should occur before service design, not after the model is already decided.'",
+        "Co-design is not the same as consultation — co-design means community and ACCHO are decision-making partners from the beginning, not stakeholders asked to approve a pre-determined plan.",
+        "ACCHO partnership legitimises the service in the community — services that bypass it may be technically available but practically inaccessible, especially to young people and families who have experienced prior institutional harm.",
+      ],
+      commonTrap:
+        "Designing a hospital model first and then asking ACCHO to endorse it.",
+    },
+    {
+      id: "s22",
+      order: 22,
+      title: "Elders, Family and Community Consultation",
+      colorTag: "teal",
+      explanation:
+        "Family and community involvement may be central to safety and engagement, but must be balanced with confidentiality, adolescent autonomy and immediate risk. Assuming cultural safety means automatic broad family disclosure is an error.",
+      keyPoints: [
+        "ASK: who does the patient want involved, are there Elders/Aunties/Uncles/cultural supports they trust, are there family violence or coercion concerns, what information can be shared, can collateral be received even if disclosure is limited, are child-safety thresholds met, is there a cultural/community decision-making process relevant to care?",
+        "MEQ PHRASE: 'I would seek consent to involve family/Elders/community supports where culturally appropriate, but still respect confidentiality and make limited safety disclosures only where serious risk requires it.'",
+        "In many Aboriginal and Torres Strait Islander communities, family and community decision-making is culturally central — excluding Elders from a discharge plan may directly undermine recovery.",
+        "Family involvement is beneficial where the family is a support; it is harmful where the family is a source of risk — distinguishing these requires asking the patient directly, not assuming.",
+      ],
+      commonTrap:
+        "Assuming cultural safety means automatic broad family disclosure.",
+    },
+    {
+      id: "s23",
+      order: 23,
+      title: "Misdiagnosis of Culturally Meaningful Experience",
+      colorTag: "amber",
+      explanation:
+        "Culturally meaningful experiences may be mistaken for psychosis, dissociation, personality pathology or 'non-compliance.' Over-pathologising culturally meaningful experience without cultural consultation is a clinical and governance failure.",
+      keyPoints: [
+        "EXAMPLES: spiritual experiences, hearing or sensing ancestors, grief practices, Sorry Business, culturally specific distress language, shame/silence in trauma, avoidance of eye contact, family decision-making, mistrust of authorities after trauma, refugee religious healing preference, Indigenous connection to Country.",
+        "CLINICAL GOVERNANCE RISKS: unnecessary antipsychotic medication, coercive care, seclusion/restraint, disengagement, complaint, family/community harm, poor outcomes.",
+        "The question is not whether the experience is real but whether it causes distress, impairs function, breaches reality testing or poses risk — cultural consultation and collateral information from family/community are essential before pathologising.",
+        "Misdiagnosis of cultural experience as psychosis may result in unnecessary antipsychotic medication, forced treatment, and permanent damage to the therapeutic relationship.",
+      ],
+      commonTrap:
+        "Over-pathologising culturally meaningful experience without cultural consultation.",
+    },
+    {
+      id: "s24",
+      order: 24,
+      title: "Cultural Formulation Is Still Required",
+      colorTag: "blue",
+      explanation:
+        "Governance does not replace clinical formulation. Writing 'cultural safety' but not asking what the patient believes is happening misses the formulation entirely.",
+      keyPoints: [
+        "INCLUDE IN FORMULATION: identity and language, migration/refugee/colonisation history, connection to Country/community, explanatory model, family and kinship, spirituality, stigma/shame, racism/discrimination exposure, trauma, social determinants.",
+        "ALSO INCLUDE: help-seeking pathway, service barriers, preferred supports, risks of coercion or misdiagnosis.",
+        "The explanatory model question — 'what do you think is happening?' — is the most powerful single question in cultural formulation, and the one most often omitted.",
+        "Cultural formulation and cultural governance are both required — formulation informs the individual treatment plan; governance changes the service for future patients.",
+      ],
+      commonTrap:
+        "Writing 'cultural safety' but not asking what the patient believes is happening.",
+    },
+    {
+      id: "s25",
+      order: 25,
+      title: "Responding to Racism Complaints",
+      colorTag: "red",
+      explanation:
+        "A racism complaint is not merely a communication problem — it requires acknowledgement, patient support, fair investigation, cultural governance and service learning. Explaining that staff 'did not mean it' rather than addressing impact and system response is the core error.",
+      keyPoints: [
+        "IMMEDIATE RESPONSE: acknowledge complaint seriously, ensure patient safety and ongoing care, offer Aboriginal liaison/cultural support/interpreter/advocate/consumer liaison, prevent retaliation or defensive behaviour, separate immediate clinical care from complaint investigation, document factual account, escalate to manager/clinical director/complaints unit, offer open disclosure if harm occurred, support staff but do not minimise racism.",
+        "REVIEW: speak with patient/family in culturally safe setting, identify what happened and its impact, obtain staff accounts, review records/CCTV/ED logs if relevant, examine whether similar complaints exist, assess whether racism was individual/systemic/both, agree actions and follow-up.",
+        "CLOSE THE LOOP: apologise where appropriate, explain findings, describe changes, offer ongoing care choices, review whether trust can be repaired, report to cultural governance/quality committee.",
+        "RACISM COMPLAINT RESPONSE: racism complaints are not just communication problems — they require acknowledgement, patient support, fair investigation, cultural governance and service learning. Intent does not erase impact.",
+      ],
+      commonTrap:
+        "Explaining that staff 'did not mean it' rather than addressing impact and system response.",
+    },
+    {
+      id: "s26",
+      order: 26,
+      title: "Staff Training",
+      colorTag: "green",
+      explanation:
+        "Staff training is necessary but weak if used alone. Writing 'provide cultural awareness training' as the whole governance plan is the most common and most penalised error in this topic.",
+      keyPoints: [
+        "TRAINING SHOULD COVER: cultural safety (not just cultural awareness), racism and unconscious bias, local history and colonisation, social and emotional wellbeing, trauma-informed care, interpreter use, working with Aboriginal liaison/health workers, working with ACCHOs, refugee trauma and settlement stress, family/community decision-making, confidentiality and cultural supports, misdiagnosis risks, responding to racism complaints.",
+        "TRAINING MUST BE LINKED TO: supervision, audit, data, performance expectations, consumer feedback, service redesign.",
+        "Training without accountability is education theatre — it generates good will but does not change the system.",
+        "GOVERNANCE UPGRADE: training is one element of a multi-component governance response, not the entire response.",
+      ],
+      commonTrap:
+        "Writing 'provide cultural awareness training' as the whole governance plan.",
+    },
+    {
+      id: "s27",
+      order: 27,
+      title: "Cultural Supervision",
+      colorTag: "green",
+      explanation:
+        "Cultural supervision provides structured reflection on cultural safety, power, racism and culturally informed practice. Outsourcing responsibility to the cultural supervisor is inappropriate — the treating team remains clinically accountable.",
+      keyPoints: [
+        "CULTURAL SUPERVISION MAY INVOLVE: Aboriginal senior clinician/health worker where appropriate, cultural consultant, transcultural mental health service, refugee health clinician, peer/lived experience worker, clinical supervisor trained in cultural safety.",
+        "USE CULTURAL SUPERVISION FOR: complex Aboriginal family/community decision-making, repeated disengagement, clinician uncertainty about spiritual experiences, racism complaints, refugee trauma/mistrust, boundary/confidentiality concerns in small communities, service-design decisions.",
+        "KEY POINT: cultural supervision supports the team, but the treating team remains clinically accountable.",
+        "Cultural supervision is not a one-off consult — for complex ongoing presentations, it should be embedded as a regular part of team supervision, not accessed only in crisis.",
+      ],
+      commonTrap:
+        "Outsourcing responsibility to the cultural supervisor.",
+    },
+    {
+      id: "s28",
+      order: 28,
+      title: "Cultural Safety Audit",
+      colorTag: "purple",
+      explanation:
+        "Audit without redesign is data collection without change. Collecting audit data but not redesigning the pathway misses the purpose of the audit.",
+      keyPoints: [
+        "AUDIT QUESTIONS: are Aboriginal and Torres Strait Islander patients identified respectfully and accurately, are interpreters used when needed, are Aboriginal liaison referrals offered and documented, are ACCHO referrals or warm handovers occurring, are family/Elder/community supports offered with consent?",
+        "MORE AUDIT QUESTIONS: are seclusion/restraint rates monitored by Aboriginality/ethnicity, are complaints of racism recorded and acted on, are discharge outcomes equitable, are no-show/disengagement rates higher for particular groups, are consumer/family experiences measured, is cultural safety included in M&M/adverse event review?",
+        "An audit that finds disproportionate seclusion rates for Aboriginal patients but produces no policy change is worse than no audit — it documents awareness without action.",
+        "Audit findings should be returned to the cultural governance group, ACCHO partners and consumer/community representatives — closing the loop on data is part of the accountability.",
+      ],
+      commonTrap:
+        "Collecting audit data but not redesigning the pathway.",
+    },
+    {
+      id: "s29",
+      order: 29,
+      title: "Data Monitoring",
+      colorTag: "purple",
+      explanation:
+        "Data should be used to reveal inequity, not to blame communities. Using data to blame patient groups for disengagement reverses the governance logic.",
+      keyPoints: [
+        "MONITOR: access/referral rates, wait times, acceptance rates, no-show/disengagement, involuntary treatment, seclusion/restraint, medication use, diagnosis patterns, ED presentations, readmissions, discharge against medical advice, follow-up after discharge, complaint themes, interpreter use, Aboriginal liaison referrals.",
+        "ALSO MONITOR: outcomes by Aboriginality, ethnicity, preferred language and refugee background.",
+        "MEQ PHRASE: 'I would review service data for inequity and combine it with community and consumer experience, because numbers alone do not define cultural safety.'",
+        "Data disaggregated by Aboriginality and ethnicity is essential — aggregate data hides inequity, which is why many services do not see the problem until they stratify the data.",
+      ],
+      commonTrap:
+        "Using data to blame patient groups for disengagement.",
+    },
+    {
+      id: "s30",
+      order: 30,
+      title: "Service Redesign",
+      colorTag: "green",
+      explanation:
+        "Culturally safe service redesign co-designs the solution with the community. Creating a service that is technically available but practically inaccessible is the outcome of redesign without genuine community partnership.",
+      keyPoints: [
+        "REDESIGN MAY INCLUDE: co-location with ACCHO, outreach rather than hospital-only clinic, Aboriginal-led intake options, drop-in plus triage model, flexible appointment times, transport support, family/community meeting spaces, interpreter availability, culturally safe waiting rooms, recruitment and retention of Aboriginal workforce.",
+        "ALSO: youth confidentiality pathway, school/ACCHO/shared-care model, trauma-informed ED pathway, referral criteria that do not exclude culturally complex presentations, culturally safe complaint process.",
+        "GOVERNANCE POINT: do not design the service first and 'consult' later — that is tokenism.",
+        "A service in the right location with wrong community ownership will be avoided — community control of design is the single most important predictor of engagement.",
+      ],
+      commonTrap:
+        "Creating a service that is technically available but practically inaccessible.",
+    },
+    {
+      id: "s31",
+      order: 31,
+      title: "Aboriginal Youth Service Governance",
+      colorTag: "green",
+      explanation:
+        "For a youth clinic in an Aboriginal regional area, the service must be built with — not for — the community. Starting a youth clinic quickly because funding is available, without cultural governance and community trust, is a governance failure.",
+      keyPoints: [
+        "ADDRESS BEFORE OPENING: ACCHO partnership, Elders/community consultation, Aboriginal youth voice, confidentiality for young people, family/kinship decision-making, self-harm triage and crisis response, school referral pathways, AOD integration, hospital/ED interface.",
+        "ALSO BEFORE OPENING: child protection interface, cultural workforce, transport and outreach, data and evaluation, funding accountability.",
+        "Fast implementation driven by funding timelines, without community consultation, produces services that are distrusted, underused and potentially harmful — the funding itself creates a governance risk.",
+        "MEQ PHRASE: 'I would not open the service until ACCHO partnership, Elders consultation and Aboriginal youth voice are embedded in both governance and design.'",
+      ],
+      commonTrap:
+        "Starting a youth clinic quickly because funding is available, without cultural governance and community trust.",
+    },
+    {
+      id: "s32",
+      order: 32,
+      title: "Refugee and CALD Governance",
+      colorTag: "teal",
+      explanation:
+        "Refugee/CALD cultural safety requires a systematic, not opportunistic, response. Treating refugee mistrust as poor insight only misses the governance dimension.",
+      keyPoints: [
+        "REQUIRES: professional interpreter access, translated materials, trauma-informed care, careful confidentiality explanation, awareness of authority/police/detention trauma, collaboration with refugee health/community organisations, avoidance of family interpreters for sensitive issues.",
+        "ALSO REQUIRES: understanding stigma and shame, assessment of settlement stress/visa insecurity/family disruption, school/community collaboration when appropriate.",
+        "Many CALD communities have had prior experiences with authorities using shared information against them — visa insecurity, detention and deportation are real fears that make confidentiality assurances harder to accept.",
+        "Refugee health is not a sub-specialty — all psychiatrists seeing CALD patients need interpreter governance, trauma-informed practice and community partnership skills.",
+      ],
+      commonTrap:
+        "Treating refugee mistrust as poor insight only.",
+    },
+    {
+      id: "s33",
+      order: 33,
+      title: "Complaint of Interpreter Failure",
+      colorTag: "red",
+      explanation:
+        "Interpreter failure requires an immediate clinical review, not just an administrative response. Defending the earlier assessment rather than repeating it safely is a patient-safety failure.",
+      keyPoints: [
+        "INTERPRETER FAILURE MAY INVOLVE: interpreter not used, wrong dialect, family member used for domestic violence/trauma, confidentiality breach in small community, interpreter appears biased, clinician talks to interpreter not patient, consent/capacity assessed in English despite limited proficiency, discharge instructions not translated.",
+        "RESPONSE: assess immediate clinical harm, repeat assessment with appropriate interpreter, apologise or acknowledge concern, document limitations of prior assessment, revise diagnosis/capacity/risk plan if needed, complete incident/complaint report if harm, review interpreter access system, arrange staff training.",
+        "The patient complaint about interpreter failure is also a signal about the system — review whether this was an individual failure or a systemic gap in after-hours or dialect-specific access.",
+        "Any clinical decision based on an inadequate interpreter — including capacity assessment, risk assessment or informed consent — must be reviewed and potentially revised.",
+      ],
+      commonTrap:
+        "Defending the earlier assessment rather than repeating it safely.",
+    },
+    {
+      id: "s34",
+      order: 34,
+      title: "Family/Community Not Consulted",
+      colorTag: "amber",
+      explanation:
+        "'Not consulted' may mean different things — the response requires clarification before action. Assuming family/community involvement is always appropriate without checking consent and safety is the core error.",
+      keyPoints: [
+        "CLARIFY: did patient consent to family/community involvement, is the patient an adolescent or adult, are there confidentiality limits, is family a support/source of risk/source of coercion, is child protection involved, did service ask who the patient wanted involved, were cultural decision-making processes ignored?",
+        "MEQ PHRASE: 'Family/community consultation is culturally important, but it must occur with attention to consent, confidentiality, safety and the patient's own preferences.'",
+        "The failure may be that the service did not ask — 'who would you like involved in your care?' is a basic question that is routinely omitted in busy ED and inpatient settings.",
+        "In Aboriginal and Torres Strait Islander communities, family and community consultation may be culturally required for major decisions — the service failure may be structural (forms designed without a section for family/community preferences) rather than individual.",
+      ],
+      commonTrap:
+        "Assuming family/community involvement is always appropriate without checking consent and safety.",
+    },
+    {
+      id: "s35",
+      order: 35,
+      title: "Cultural Safety in ED/Inpatient Settings",
+      colorTag: "red",
+      explanation:
+        "High-acuity settings produce the highest risk of cultural safety failures. Focusing on risk control and missing dignity, trauma and cultural safety is the consistent error.",
+      keyPoints: [
+        "HIGH-RISK FAILURES: loud discussion of identity/diagnosis in waiting room, no interpreter, male security with traumatised female refugee patient, patient in revealing gown without dignity, staff dismissing spiritual explanation as psychosis, Aboriginal patient placed in seclusion without cultural support, family/Elder excluded, racist comments by staff or other patients, discharge before cultural/community safety plan.",
+        "RESPONSE: address immediate dignity and safety, use interpreter/cultural support, reduce unnecessary staff/security, use gender-sensitive care where possible, explain each step, review privacy and trauma triggers, document and escalate if harm or racism occurred.",
+        "The ED is where cultural safety failures are most acute and most consequential — a traumatised refugee patient exposed to male security, bright lights, confiscated clothing and repeated strangers asking questions in an incomprehensible language may re-experience detention.",
+        "Culturally unsafe inpatient care is not just uncomfortable — it can trigger PTSD, worsen psychosis, destroy therapeutic trust and lead to discharge against advice.",
+      ],
+      commonTrap:
+        "Focusing on risk control and missing dignity, trauma and cultural safety.",
+    },
+    {
+      id: "s36",
+      order: 36,
+      title: "Responding to Staff Racism",
+      colorTag: "red",
+      explanation:
+        "Intent does not erase impact. Minimising racism as humour, stress or misunderstanding avoids the governance responsibility.",
+      keyPoints: [
+        "IF STAFF MAKE RACIST COMMENTS OR BEHAVE IN A RACIST WAY: stop immediate harm, support patient/family, document facts, escalate to manager/clinical director, use complaint and HR/professional conduct pathways, offer open disclosure if harm occurred, support other staff affected (especially Aboriginal staff), review whether behaviour reflects broader team culture, provide training and supervision, monitor recurrence.",
+        "DO NOT SAY: 'They did not mean it.' Intent does not erase impact.",
+        "Aboriginal staff who witness racism towards patients also experience harm — they need support, not to be expected to manage the aftermath alone.",
+        "A single racist incident may be an individual failure; repeated incidents without governance action signal a cultural and leadership failure at service level.",
+      ],
+      commonTrap:
+        "Minimising racism as humour, stress or misunderstanding.",
+    },
+    {
+      id: "s37",
+      order: 37,
+      title: "Cultural Safety and Restrictive Practice",
+      colorTag: "purple",
+      explanation:
+        "Cultural safety governance should review whether Aboriginal, refugee or CALD patients are disproportionately subject to restrictive practices. Reviewing restrictive practice rates without looking at Aboriginality, ethnicity, language or refugee background conceals inequity.",
+      keyPoints: [
+        "REVIEW WHETHER DISPROPORTIONATE: security presence, restraint, seclusion, forced medication, involuntary orders, police transport, ED boarding, discharge against advice, complaints about disrespect.",
+        "IF DISPARITY EXISTS, REVIEW: staff bias, communication barriers, interpreter use, trauma triggers, lack of cultural support, environmental factors, policy thresholds, escalation practices, data quality.",
+        "Disproportionate seclusion of Aboriginal patients is both a rights issue and a governance failure — it signals that de-escalation approaches are not being adapted for cultural context.",
+        "Collecting seclusion data without Aboriginality disaggregation is complicit in hiding the inequity — it is a governance choice, not an administrative oversight.",
+      ],
+      commonTrap:
+        "Reviewing restrictive practice rates without looking at Aboriginality, ethnicity, language or refugee background.",
+    },
+    {
+      id: "s38",
+      order: 38,
+      title: "Cultural Safety and Diagnosis",
+      colorTag: "blue",
+      explanation:
+        "Cultural safety does not mean avoiding diagnosis — it means diagnosing carefully. Either pathologising culture or excusing serious illness as culture are both clinical failures.",
+      keyPoints: [
+        "ASK: is this experience culturally meaningful, is there distress/impairment/loss of reality testing/risk, what do family/community say is normal or concerning, is there trauma/dissociation/delirium, could interpreter/language issues be mistaken for thought disorder, could racism or service mistrust be mistaken for paranoia, have we used collateral and cultural consultation?",
+        "MEQ PHRASE: 'I would avoid both over-pathologising culturally meaningful experiences and under-treating serious mental illness because of cultural assumptions.'",
+        "Under-treating serious mental illness as 'cultural' is as dangerous as over-treating cultural experience as psychosis — the balance requires cultural consultation, collateral and time.",
+        "Cultural consultation does not transfer clinical responsibility — the treating clinician must integrate cultural consultation into the formulation and treatment plan.",
+      ],
+      commonTrap:
+        "Either pathologising culture or excusing serious illness as culture.",
+    },
+    {
+      id: "s39",
+      order: 39,
+      title: "MEQ Example Traps",
+      colorTag: "blue",
+      explanation:
+        "Seven worked examples covering the most common cultural safety MEQ stems. In each, the core error is missing that the real issue is cultural safety governance, not just rapport.",
+      keyPoints: [
+        "EXAMPLE 1 — ABORIGINAL DISENGAGES: staff dismiss family concerns; man misses appointments. TRAP: label non-compliance. BETTER: explore culturally unsafe care, involve Aboriginal liaison/ACCHO, review family engagement with consent, adapt pathway and audit disengagement.",
+        "EXAMPLE 2 — REFUGEE REFUSES TREATMENT: patient says hospital cannot be trusted. TRAP: treat mistrust as delusion only. BETTER: assess psychosis/delirium but also trauma/authority fear/interpreter needs/health literacy and culturally safe engagement.",
+        "EXAMPLE 3 — INTERPRETER NOT USED: capacity done in English because patient 'seemed okay.' TRAP: accept assessment. BETTER: repeat with professional interpreter, document limitation, review harm and system access to interpreters.",
+        "EXAMPLE 4 — ACCHO EXCLUDED: hospital opens youth clinic without ACCHO consultation. TRAP: add cultural training after opening. BETTER: pause/revise model, partner with ACCHO/Elders/youth, redesign governance and evaluation.",
+        "EXAMPLE 5 — RACISM COMPLAINT: family says staff treated them as 'dangerous Aboriginal relatives.' TRAP: reassure that staff meant well. BETTER: acknowledge impact, investigate, offer cultural support, review staff conduct/system practice and close loop with changes.",
+        "EXAMPLE 6 — FAMILY INTERPRETER CONFLICT: adult son insists on interpreting capacity assessment. TRAP: accept because family knows patient. BETTER: use professional interpreter for capacity, involve son as support/collateral with consent, document reasons.",
+        "EXAMPLE 7 — SMALL COMMUNITY INTERPRETER: refugee patient refuses interpreter because interpreter knows her husband's family. TRAP: record refusal and proceed in English. BETTER: offer phone/video interpreter from outside community, explore safety and confidentiality fears, document limitations.",
+      ],
+      commonTrap:
+        "Missing that the real issue is cultural safety governance, not just rapport.",
+    },
+    {
+      id: "s40",
+      order: 40,
+      title: "Command-Word Discipline",
+      colorTag: "amber",
+      explanation:
+        "Cultural safety questions require case-specific justification, not generic lists. Listing cultural strategies without case-specific justification loses marks even when the strategies are correct.",
+      keyPoints: [
+        "LIST: ACCHO partnership, Aboriginal liaison, interpreter access, community consultation, cultural safety audit, staff training, data monitoring, complaint pathway.",
+        "OUTLINE (list and justify): 'Involve ACCHO early — because service legitimacy and engagement depend on community-controlled partnership, not hospital-only planning. Audit interpreter use — because missed interpreter access can invalidate consent, capacity and risk assessment. Monitor seclusion by Aboriginality/ethnicity — because inequitable restrictive practice may reveal institutional racism.'",
+        "DESCRIBE (list and explain): 'Create cultural governance group — because cultural safety needs ongoing community oversight, not one-off consultation. Respond to racism complaint through complaint and governance pathways — because racism can be both individual misconduct and system failure.'",
+        "DISCUSS (name the tension): 'There is tension between urgent clinical service delivery and genuine community partnership. A defensible consultant position is to avoid tokenistic rapid implementation and instead co-design a safe model with ACCHO, Elders, young people and families, because culturally unsafe services may increase disengagement and risk.'",
+      ],
+      commonTrap:
+        "Listing cultural strategies without case-specific justification.",
+    },
+    {
+      id: "s41",
+      order: 41,
+      title: "Examiner Phrases",
+      colorTag: "green",
+      explanation:
+        "Use these phrases to signal consultant-level cultural safety reasoning. Missing the words governance, partnership, interpreter safety, data and redesign signals registrar-level thinking.",
+      keyPoints: [
+        "'Cultural safety is judged by the patient, family and community, not by the service's intention.'",
+        "'I would treat this as cultural governance, not only cultural awareness training.'",
+        "'I would avoid labelling disengagement as non-compliance until service barriers and cultural safety have been reviewed.'",
+        "'Interpreter access is a patient-safety system.'",
+        "'A professional interpreter is required for high-stakes assessment, capacity, consent, risk and trauma.'",
+        "'Family can support and provide collateral, but should not replace a professional interpreter for sensitive assessments.'",
+        "'ACCHO partnership should occur before service design, not after the model is already decided.'",
+        "'Racism complaints require acknowledgement, fair investigation, patient support and system learning.'",
+        "'I would use data to identify inequity but community experience to understand it.'",
+        "'I would avoid both over-pathologising cultural experience and under-treating serious illness.'",
+        "'Cultural safety includes governance, workforce, data, complaint response and service redesign.'",
+      ],
+      commonTrap:
+        "Missing the words governance, partnership, interpreter safety, data and redesign.",
+    },
+    {
+      id: "s42",
+      order: 42,
+      title: "Consultant-Level Summary",
+      colorTag: "green",
+      explanation:
+        "This paragraph is reusable in MEQ stems involving Aboriginal disengagement, refugee mistrust, interpreter conflict, racism complaint, ACCHO exclusion, culturally unsafe ED/inpatient care and service redesign.",
+      keyPoints: [
+        "IMMEDIATE PRIORITY: 'I would treat cultural safety as a clinical governance issue, not simply a cultural-awareness issue. My first priority is to ensure the patient is clinically safe and respectfully re-engaged, using professional interpreter, Aboriginal liaison, cultural worker, family or Elder involvement with consent where appropriate.'",
+        "GOVERNANCE: 'I would acknowledge and investigate culturally unsafe care, interpreter failure or racism through complaint and governance pathways, while maintaining ongoing care.'",
+        "SERVICE LEVEL: 'At service level, I would partner with ACCHOs/community leaders, embed cultural supervision, monitor interpreter use, disengagement, restrictive practice and complaints data, and redesign pathways with consumer, family and community input.'",
+        "FULL PARAGRAPH: 'I would treat cultural safety as a clinical governance issue, not simply a cultural-awareness issue. My first priority is to ensure the patient is clinically safe and respectfully re-engaged, using professional interpreter, Aboriginal liaison, cultural worker, family or Elder involvement with consent where appropriate. I would acknowledge and investigate culturally unsafe care, interpreter failure or racism through complaint and governance pathways, while maintaining ongoing care. At service level, I would partner with ACCHOs/community leaders, embed cultural supervision, monitor interpreter use, disengagement, restrictive practice and complaints data, and redesign pathways with consumer, family and community input. The aim is a service that is accessible, anti-racist, clinically safe and accountable to the people it serves.'",
+      ],
+      meqApplication:
+        "This paragraph should be reusable in MEQ stems involving Aboriginal disengagement, refugee mistrust, interpreter conflict, racism complaint, ACCHO exclusion, culturally unsafe ED/inpatient care and service redesign.",
+    },
+  ],
+};
+
+export const ALL_NOTES: Note[] = [DISCHARGE_PLAN, CONFLICT_MANAGEMENT, COMPLAINT_PROCESS, INCIDENT_MANAGEMENT, CLINICAL_AUDIT, OPEN_DISCLOSURE, RESTRICTIVE_PRACTICES, RESTRICTIVE_PRACTICES_MEQ, CONFIDENTIALITY, CAPACITY_CONSENT, SUPERVISION_TRAINING, WHS_STAFF_SAFETY, CULTURAL_SAFETY];
