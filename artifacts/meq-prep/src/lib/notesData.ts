@@ -4860,4 +4860,530 @@ export const CAPACITY_CONSENT: Note = {
   ],
 };
 
-export const ALL_NOTES: Note[] = [DISCHARGE_PLAN, CONFLICT_MANAGEMENT, COMPLAINT_PROCESS, INCIDENT_MANAGEMENT, CLINICAL_AUDIT, OPEN_DISCLOSURE, RESTRICTIVE_PRACTICES, RESTRICTIVE_PRACTICES_MEQ, CONFIDENTIALITY, CAPACITY_CONSENT];
+export const SUPERVISION_TRAINING: Note = {
+  id: "supervision_training",
+  title: "Supervision, Training and Registrar Governance",
+  category: "Clinical Governance / Leadership / Supervision / Professionalism",
+  description:
+    "A consultant-level framework for supervision, training and registrar governance in psychiatry, including registrar working beyond competence, poor after-hours supervision, consultant unavailable, unsafe discharge by trainee, trainee burnout, bullying by senior staff, exam/training difficulty, impaired trainee, registrar complaint and supervision failure after an adverse event.",
+  sections: [
+    {
+      id: "s01",
+      order: 1,
+      title: "Core Principle",
+      colorTag: "blue",
+      explanation:
+        "Supervision is not only education. In psychiatry, supervision is a patient-safety, professional-development and governance process. A consultant supervising a registrar has three simultaneous duties.",
+      keyPoints: [
+        "THREE DUTIES OF SUPERVISOR: (1) DUTY TO THE PATIENT — ensure safe, ethical and clinically appropriate care. (2) DUTY TO THE TRAINEE — provide teaching, support, feedback and a safe learning environment. (3) DUTY TO THE SYSTEM — ensure clear escalation, documentation, governance and role clarity.",
+        "GOOD MEQ ANSWER: 'I would treat this as both a clinical safety issue and a supervision governance issue. I would ensure the patient is safe now, clarify the registrar's level of competence and supervision needs, provide immediate support and feedback, escalate to the supervisor/DOT if required, and document the supervision and patient-care plan.'",
+        "Supervision is a patient-safety function first — educational and supportive functions operate within that frame.",
+        "The three duties run simultaneously — neglecting any one creates a governance gap.",
+      ],
+      commonTrap:
+        "Seeing supervision as only trainee education and missing patient-safety governance.",
+    },
+    {
+      id: "s02",
+      order: 2,
+      title: "Supervision Is Not Friendship, Therapy or Performance Punishment",
+      colorTag: "purple",
+      explanation:
+        "Supervision should be regular, planned, private, educational, clinically relevant, supportive, honest, culturally safe, documented where needed and linked to patient safety. Being 'supportive' by avoiding direct feedback or necessary escalation is not supervision — it is avoidance.",
+      keyPoints: [
+        "SUPERVISION IS: regular, planned, private, educational, clinically relevant, supportive, honest, culturally safe, documented where needed, linked to patient safety.",
+        "SUPERVISION IS NOT: casual corridor reassurance only, using the registrar to cover service gaps without support, humiliating correction, therapy for the trainee, a place to hide safety concerns, a substitute for employer HR processes, a way to avoid formal escalation when patients are unsafe.",
+        "KEY POINT: supervision should support learning but cannot hide serious patient-safety, conduct or impairment concerns.",
+        "A supervisor who protects a trainee from accountability to avoid conflict is creating a governance failure, not providing support.",
+      ],
+      commonTrap:
+        "Being 'supportive' by avoiding direct feedback or necessary escalation.",
+    },
+    {
+      id: "s03",
+      order: 3,
+      title: "Three Functions of Supervision",
+      colorTag: "teal",
+      explanation:
+        "Use the three functions of supervision framework in MEQ answers. Providing education only and missing patient safety or trainee wellbeing is a consistent mark-losing gap.",
+      keyPoints: [
+        "1. NORMATIVE — monitoring safe, ethical and professional practice. Ask: Is the registrar practising safely? Are patients being reviewed appropriately? Are risk decisions defensible? Is the registrar escalating? Is documentation adequate? Are legal/MHA decisions correct?",
+        "2. EDUCATIVE/FORMATIVE — developing skill, knowledge, attitudes and understanding. Ask: What does the registrar need to learn? What feedback is needed? What cases should be reviewed together? Is direct observation needed? Are WBAs, EPAs or ITAs relevant?",
+        "3. SUPPORTIVE/RESTORATIVE — providing a safe space for reflection on experiences and learning. Ask: Is the registrar distressed, burnt out, ashamed after an adverse event, overwhelmed after-hours, experiencing bullying, impaired or avoiding supervision?",
+        "MEQ PHRASE: 'I would hold all three functions of supervision: patient-safety oversight, educational feedback and trainee support.'",
+      ],
+      meqApplication:
+        "Name all three functions explicitly when asked how you supervise — the examiner is looking for normative (safety), formative (education) and restorative (wellbeing).",
+      commonTrap:
+        "Providing education only and missing patient safety or trainee wellbeing.",
+    },
+    {
+      id: "s04",
+      order: 4,
+      title: "Supervision Structure",
+      colorTag: "purple",
+      explanation:
+        "A safe supervision structure requires named responsibility, clear escalation and protected time. Assuming supervision exists because a consultant is nominally attached to the team is a governance failure.",
+      keyPoints: [
+        "SAFE SUPERVISION STRUCTURE INCLUDES: named principal supervisor, clear consultant line of clinical responsibility, regular supervision time, after-hours escalation pathway, case review process, direct observation where needed, feedback and assessment process, trainee welfare check, documentation of supervision concerns, DOT/Training Director involvement if needed.",
+        "PRACTICAL SUPERVISION QUESTIONS: Does the registrar know who supervises them? Can they contact a consultant during business hours? Can they contact a consultant after hours? Which decisions need consultant discussion? Which decisions need direct consultant review? What happens if the consultant is unavailable? Is supervision protected or repeatedly cancelled?",
+        "A nominally attached consultant who is perpetually unavailable is not a supervision structure — it is a gap with a name on it.",
+        "Repeatedly cancelled supervision creates risk that should be escalated to the clinical director.",
+      ],
+      commonTrap:
+        "Assuming supervision exists because a consultant is nominally attached to the team.",
+    },
+    {
+      id: "s05",
+      order: 5,
+      title: "Direct Versus Indirect Supervision",
+      colorTag: "blue",
+      explanation:
+        "The level of supervision should match the registrar's competence and the clinical risk — not simply their year of training. Senior registrars still require direct supervision for high-risk or unfamiliar situations.",
+      keyPoints: [
+        "USE DIRECT SUPERVISION WHEN: junior trainee, new rotation, high-risk patient, unfamiliar setting, MHA/capacity/ECT/seclusion decision, complex discharge, serious medication decision, patient complaint, registrar has performance concern, registrar is distressed or impaired, prior unsafe decision, after-hours escalation reveals difficulty.",
+        "EXAMPLES OF DIRECT SUPERVISION: consultant reviews patient before discharge, observes family meeting, joins ED assessment, reviews capacity assessment, checks lithium/ECT/clozapine plan, observes registrar interview.",
+        "INDIRECT SUPERVISION IS APPROPRIATE WHEN: registrar has demonstrated competence, risk is routine or moderate, decision is reversible, escalation pathway is clear, consultant is contactable, patient is not high risk, documentation is reviewed.",
+        "MEQ PHRASE: 'The level of supervision should match the registrar's competence and the clinical risk, not simply their year of training.'",
+      ],
+      commonTrap:
+        "Letting a senior registrar work independently in a high-risk situation just because they are senior.",
+    },
+    {
+      id: "s06",
+      order: 6,
+      title: "Assessing Registrar Competence",
+      colorTag: "blue",
+      explanation:
+        "Do not assume competence from seniority. Competence is task-specific, setting-specific and state-specific — a senior registrar may lack competence for an unfamiliar decision or may be impaired.",
+      keyPoints: [
+        "ASSESS: stage of training, experience in setting, familiarity with MHA/legal processes, prior performance, ability to formulate risk, ability to escalate uncertainty, documentation quality, prescribing safety, communication with families/MDT, response to feedback, professionalism, fatigue or burnout, cultural safety, ability to manage after-hours pressure.",
+        "EVIDENCE OF COMPETENCE MAY INCLUDE: direct observation, case-based discussion, WBA/EPA/ITA feedback, MDT feedback, documentation review, prescribing review, patient/family feedback, pattern of escalation and judgement.",
+        "Competence is not a fixed trait — a competent registrar under good conditions may be incompetent when fatigued, after an adverse event, or in an unfamiliar setting.",
+        "The entrustment question: 'Can this registrar safely perform this task at this time, in this setting, with this level of supervision?'",
+      ],
+      commonTrap:
+        "Assuming 'senior registrar' means safe for all complex decisions.",
+    },
+    {
+      id: "s07",
+      order: 7,
+      title: "Entrustment Thinking",
+      colorTag: "green",
+      explanation:
+        "Entrustment is dynamic — it changes with patient risk, registrar state, setting and available supports. Ignoring setting and risk when deciding supervision level is the classic entrustment error.",
+      keyPoints: [
+        "ENTRUSTMENT QUESTION: 'Can this registrar safely perform this task at this time, in this setting, with this level of supervision?'",
+        "ENTRUSTMENT CHANGES WITH: patient risk, complexity, registrar fatigue, after-hours setting, available supports, previous performance, consultant familiarity with registrar, system pressure.",
+        "EXAMPLE: a registrar may be entrusted to discharge a low-risk patient in business hours but NOT a high-risk suicidal adolescent at midnight with no family meeting and no bed.",
+        "MEQ TRAP — STEM: 'Stage 3 registrar says I can discharge her; I'm senior.' POOR: 'Agree because senior registrar.' BETTER: 'Seniority informs but does not determine entrustment — review the risk, complexity, registrar's previous competence and whether consultant review is needed before discharge.'",
+      ],
+      commonTrap:
+        "Ignoring setting and risk when deciding supervision level.",
+    },
+    {
+      id: "s08",
+      order: 8,
+      title: "Escalation Pathways",
+      colorTag: "purple",
+      explanation:
+        "Safe supervision requires explicit escalation. Telling the registrar to 'call if worried' without defining what must be escalated is not a supervision plan — it is a gap.",
+      keyPoints: [
+        "THE REGISTRAR SHOULD KNOW: who to call, when to call, which decisions require consultant discussion, which require direct review, which require MHA/legal advice, which require ED/medical escalation, which require clinical director involvement, which require incident reporting.",
+        "ESCALATE FOR: suicidal or homicidal risk, child safety, involuntary treatment decisions, seclusion/restraint, ECT/capacity, complex discharge, complaint, adverse event, medication error, high-risk prescribing, family/media/legal pressure, registrar distress or impairment, uncertainty.",
+        "Escalation thresholds must be explicit and agreed — 'call if you're worried' leaves the threshold entirely to the registrar's judgement in a high-pressure moment.",
+        "Escalation pathways should be written into the on-call handover, orientation pack and supervision plan.",
+      ],
+      commonTrap:
+        "Telling the registrar to 'call if worried' without defining what must be escalated.",
+    },
+    {
+      id: "s09",
+      order: 9,
+      title: "Consultant Unavailable",
+      colorTag: "red",
+      explanation:
+        "Consultant unavailability is a governance failure, not a registrar weakness. The registrar should not be left carrying consultant-level risk without a clear line of senior responsibility.",
+      keyPoints: [
+        "IF CONSULTANT IS UNAVAILABLE: identify immediate patient safety issues, obtain alternative consultant or on-call support, notify clinical director if repeated or unsafe, clarify interim decision-making authority, document attempts to contact and advice obtained, ensure registrar is not left carrying consultant-level risk, review roster and escalation policy, feed into governance if systemic.",
+        "MEQ PHRASE: 'A registrar should not be left as the de facto consultant for high-risk decisions without a clear line of senior responsibility.'",
+        "A culture where consultants discourage calls, or are systematically unavailable, is a patient-safety and governance problem requiring clinical director escalation.",
+        "Document every failed escalation attempt — time, method, outcome — both for patient safety and for the governance review.",
+      ],
+      commonTrap:
+        "Blaming the registrar for not escalating when no reliable consultant escalation pathway existed.",
+    },
+    {
+      id: "s10",
+      order: 10,
+      title: "Poor After-Hours Supervision",
+      colorTag: "red",
+      explanation:
+        "After-hours supervision failures are systemic, not simply individual registrar errors. Treating after-hours unsafe decisions as only registrar judgement problems misses the governance dimension.",
+      keyPoints: [
+        "AFTER-HOURS SUPERVISION FAILS WHEN: consultant not contactable, registrar afraid to call, 'call only if desperate' culture, unclear thresholds, high ED/bed pressure, no handover of high-risk patients, registrar covering unfamiliar wards, no backup for MHA decisions, fatigue.",
+        "IMMEDIATE ACTIONS: ensure current patients are safe, contact on-call consultant or second consultant, clarify decisions requiring direct consultant review, support registrar, document advice and escalation, review after-hours policy, improve handover and escalation criteria.",
+        "MEQ TRAP — STEM: 'Registrar discharged suicidal patient at 2 am because consultant does not like being called.' POOR: 'Teach registrar to call next time.' BETTER: 'Review patient safety, support registrar, investigate call culture, clarify escalation and consultant availability, involve clinical director, audit after-hours high-risk discharges.'",
+        "The 'consultant does not like being called' culture is a governance failure requiring clinical director escalation — not a registrar communication problem.",
+      ],
+      commonTrap:
+        "Treating after-hours unsafe decisions as only registrar judgement problems.",
+    },
+    {
+      id: "s11",
+      order: 11,
+      title: "Registrar Working Beyond Competence",
+      colorTag: "red",
+      explanation:
+        "Delegation does not remove consultant accountability for ensuring the task is within the registrar's competence. Calling unsafe delegation a 'learning opportunity' is a patient-safety failure.",
+      keyPoints: [
+        "EXAMPLES: first-year registrar making complex MHA decision alone, registrar asked to lead ECT consent/capacity assessment without support, registrar discharging high-risk patient after overdose, registrar covering PICU/HDU without senior backup, registrar managing clozapine myocarditis concern alone, registrar chairing hostile family meeting alone, registrar reviewing forensic threat without consultant input.",
+        "RESPONSE: stop unsafe delegation, review the patient, clarify registrar's competence, provide direct supervision, adjust workload, set escalation rules, document supervision plan, discuss with principal supervisor/DOT if pattern, review service rostering if systemic.",
+        "MEQ PHRASE: 'Delegation does not remove consultant accountability for ensuring the task is within the registrar's competence and that appropriate supervision is available.'",
+        "A 'learning opportunity' framing is only valid when the registrar has adequate support — solo high-stakes decisions without backup are not educational, they are unsafe.",
+      ],
+      commonTrap:
+        "Calling unsafe delegation a 'learning opportunity.'",
+    },
+    {
+      id: "s12",
+      order: 12,
+      title: "Unsafe Discharge by Trainee",
+      colorTag: "red",
+      explanation:
+        "This is a very common MEQ pattern. The immediate priority is patient safety, then understanding what supervision was available — not immediate blame.",
+      keyPoints: [
+        "EXAMPLES: registrar discharges after overdose without family contact, documents 'denies SI, low risk,' no GP/community handover, no medication monitoring plan, no child-safety plan, no consultant discussion, patient re-presents or self-harms.",
+        "IMMEDIATE RESPONSE: locate/review patient if possible, arrange welfare check if needed, contact community team/GP/family if appropriate, update risk plan, discuss with registrar, clarify what advice was sought, review notes and handover, inform consultant/clinical director if serious, incident report if harm/near miss, support registrar, identify supervision/system gaps.",
+        "BEFORE ATTRIBUTING BLAME, ASK: Was the registrar supervised? Was consultant contact available? Was there bed pressure? Was documentation template poor? Was handover inadequate? Was the registrar working beyond competence? Were escalation criteria unclear?",
+        "The unsafe discharge is always the immediate problem — the supervision failure is the governance problem that must be investigated in parallel.",
+      ],
+      commonTrap:
+        "Blaming the trainee without reviewing supervision, handover and system pressure.",
+    },
+    {
+      id: "s13",
+      order: 13,
+      title: "Feedback",
+      colorTag: "teal",
+      explanation:
+        "Feedback should be timely, specific, behavioural, linked to patient safety, balanced, private, respectful, documented if significant and followed by an action plan. Giving vague reassurance after a serious safety concern is not feedback — it is avoidance.",
+      keyPoints: [
+        "FEEDBACK STRUCTURE: 'When X happened, the clinical risk was Y. In future, I expect Z. I will support you by doing A, and we will review progress by B.'",
+        "FEEDBACK MUST BE: timely, specific, behavioural, linked to patient safety, balanced, private, respectful, documented if significant, followed by an action plan.",
+        "AVOID: humiliation, vague criticism ('you are unsafe' without examples), saving all feedback for end of term, giving only reassurance after serious error, giving only criticism to a distressed trainee.",
+        "Significant feedback (especially after a safety concern) must be documented — a verbal conversation with no record provides no governance trail and no accountability.",
+      ],
+      commonTrap:
+        "Giving vague reassurance after a serious safety concern instead of clear feedback and a supervision plan.",
+    },
+    {
+      id: "s14",
+      order: 14,
+      title: "Supporting Distressed Trainee",
+      colorTag: "green",
+      explanation:
+        "A distressed trainee requires support, referral and safe work planning — not the supervisor becoming their treating psychiatrist. Maintaining the boundary between supervisor and treating clinician is essential.",
+      keyPoints: [
+        "DISTRESSED TRAINEE MAY PRESENT WITH: crying, shame after adverse event, avoidance of patients, insomnia, panic, irritability, reduced concentration, errors, cynicism, hopelessness, suicidal ideation, substance use, exam failure distress, bullying impact.",
+        "IMMEDIATE APPROACH: private conversation, empathic non-judgemental enquiry, assess immediate safety (including suicidal ideation if concerned), ask about impairment at work, reduce clinical load temporarily if needed, arrange cover if unsafe to continue.",
+        "SUPPORT PATHWAY: encourage GP or independent treating doctor, offer EAP/peer support, involve supervisor/DOT if training impacted, maintain boundaries (supervisor is not the treating psychiatrist), document only necessary work/safety actions.",
+        "The boundary exists to protect both the trainee and the supervisor — treating your own supervisee creates dual-role conflicts and undermines safe care for both.",
+      ],
+      commonTrap:
+        "Becoming the trainee's therapist rather than supporting referral and safe work planning.",
+    },
+    {
+      id: "s15",
+      order: 15,
+      title: "Trainee Burnout",
+      colorTag: "amber",
+      explanation:
+        "Burnout is not just a personal weakness. It may signal unsafe workload, poor supervision, rota gaps, moral injury or workplace culture. Treating burnout as only a resilience problem misses the governance dimension.",
+      keyPoints: [
+        "ASSESS FOR BURNOUT: workload and hours, after-hours burden, complexity of cases, sleep, leave, supervision access, exam pressure, bullying or discrimination, family stress, substance use, errors or near misses, patient safety impact.",
+        "MANAGEMENT: immediate safety review of clinical duties, reduce workload or remove from high-risk role if needed, ensure leave/rest, GP/EAP/independent care, supervision review, DOT/training director if training affected, roster/workload escalation to clinical director, monitor return to full duties.",
+        "MEQ TRAP — STEM: 'Trainee says I'm just tired, I'll be fine after repeated errors.' POOR: 'Offer supportive words.' BETTER: 'Assess impairment and patient safety, reduce duties if unsafe, arrange support/medical care, review workload and supervision, involve supervisor/DOT if training or safety is affected.'",
+        "Burnout-related impairment is a patient-safety concern — clinical duties must be adjusted until the trainee is safe to work at full capacity.",
+      ],
+      commonTrap:
+        "Treating burnout as only a resilience problem.",
+    },
+    {
+      id: "s16",
+      order: 16,
+      title: "Impaired Trainee",
+      colorTag: "red",
+      explanation:
+        "Impairment requires immediate removal from clinical duties and support — having a quiet word and allowing the trainee to keep working is patient-unsafe and professionally indefensible.",
+      keyPoints: [
+        "IMPAIRMENT MAY BE DUE TO: alcohol/substance use, depression, mania/hypomania, psychosis, cognitive disorder, medication effects, sleep deprivation, burnout, physical illness.",
+        "RED FLAGS: smell of alcohol, dishevelled appearance, lateness, inappropriate comments to patients, prescribing errors, unexplained absence, emotional volatility, unsafe judgement, complaints, colleagues covering for them.",
+        "IMMEDIATE ACTIONS: (1) protect patients now, (2) remove trainee from clinical duties if impaired, (3) arrange safe transport home or medical assessment, (4) do not allow driving if intoxicated, (5) notify appropriate senior/clinical director/supervisor, (6) encourage independent medical care, (7) consider mandatory notification if threshold met, (8) document facts — not diagnoses or gossip, (9) plan supported return only when safe.",
+        "Mandatory notification to AHPRA must be considered when impairment places the public at risk — this is a legal obligation, not a discretionary act.",
+      ],
+      commonTrap:
+        "Having a quiet word and allowing the trainee to keep working despite impairment.",
+    },
+    {
+      id: "s17",
+      order: 17,
+      title: "Bullying by Senior Staff",
+      colorTag: "red",
+      explanation:
+        "Bullying by senior staff is both a trainee welfare issue and a patient-safety/culture issue. Framing bullying as trainee weakness rather than workplace governance risk is a consistent mark-losing error.",
+      keyPoints: [
+        "EXAMPLES: humiliation in ward round, shouting, racist or sexist comments, threats about assessment, exclusion from learning, unreasonable workloads, retaliatory rosters, undermining after exam failure, sexual harassment.",
+        "RESPONSE: ensure trainee immediate safety, listen and validate, clarify facts/pattern/witnesses, assess patient-safety impact, offer support and reporting options, involve supervisor/DOT/medical education unit if appropriate, use employer bullying/HR pathway, escalate serious conduct, protect trainee from retaliation, document factually.",
+        "MEQ TRAP — STEM: 'Senior consultant says registrar is too fragile after she reports being shouted at.' POOR: 'Encourage resilience.' BETTER: 'Assess bullying/harassment, support trainee, ensure fair process, protect from retaliation, involve DOT/HR as appropriate and address patient-safety/culture implications.'",
+        "Bullying creates a culture where registrars do not escalate clinical concerns — it is therefore directly linked to patient safety, not only trainee welfare.",
+      ],
+      commonTrap:
+        "Framing bullying as trainee weakness rather than workplace governance risk.",
+    },
+    {
+      id: "s18",
+      order: 18,
+      title: "Exam or Training Difficulty",
+      colorTag: "amber",
+      explanation:
+        "Exam failure or training difficulty may be educational, wellbeing-related or performance-related. Treating it as purely personal failure or purely a service problem, without a targeted learning plan, loses marks.",
+      keyPoints: [
+        "ASSESS: which requirement failed, pattern or isolated event, clinical competence concerns, exam anxiety, language or cultural issues, neurodiversity, burnout, supervision quality, protected teaching time, workplace stress, bullying or discrimination, personal stressors, insight and learning plan.",
+        "MANAGEMENT: supportive meeting, normalise difficulty without minimising, identify specific gaps, targeted learning plan, supervisor and DOT involvement, adjust cases and learning opportunities, exam preparation strategy, consider leave or reduced load if burnt out, document agreed plan, monitor progress.",
+        "A targeted learning plan must identify specific gaps, set measurable goals, assign responsibilities, set a review date and document progress — not simply offer 'more supervision.'",
+        "Language and cultural barriers, neurodiversity and discrimination are system factors that may require adjustments — not only personal remediation.",
+      ],
+      commonTrap:
+        "Treating exam failure as either purely personal failure or purely a service problem, without a targeted learning plan.",
+    },
+    {
+      id: "s19",
+      order: 19,
+      title: "Managing Performance Concerns",
+      colorTag: "purple",
+      explanation:
+        "Performance concerns should be addressed early and fairly — waiting until end-of-rotation to disclose concerns is a governance failure for the trainee, future patients and the training program.",
+      keyPoints: [
+        "EXAMPLES: poor risk formulation, unsafe prescribing, poor documentation, repeated lateness, poor MDT communication, failure to escalate, boundary issues, poor professionalism, repeated complaints, inadequate capacity/MHA decisions.",
+        "PROCESS: (1) clarify facts and examples, (2) separate patient safety from education, (3) give direct feedback, (4) ask trainee's perspective, (5) explore wellbeing/impairment/system factors, (6) set clear expectations, (7) create learning/remediation plan, (8) increase supervision if needed, (9) involve principal supervisor/DOT early if significant, (10) document agreed plan, (11) review progress, (12) escalate to employer/HR where conduct, safety or employment issue requires it.",
+        "Patient-safety concerns within a performance process must be managed immediately — the performance process does not suspend the duty to protect patients.",
+        "Informal management of serious performance concerns (no documentation, no DOT involvement, no review date) creates risk for the trainee, future patients and the supervisor.",
+      ],
+      commonTrap:
+        "Waiting until end-of-rotation to disclose concerns.",
+    },
+    {
+      id: "s20",
+      order: 20,
+      title: "Training Director / DOT Involvement",
+      colorTag: "purple",
+      explanation:
+        "DOT involvement is not punishment — it provides training governance, fairness and support. Trying to manage repeated serious training concerns informally without DOT involvement is a governance failure.",
+      keyPoints: [
+        "INVOLVE DOT/TRAINING GOVERNANCE WHEN: trainee is working beyond competence, supervision requirements are not being met, repeated performance concerns, trainee in difficulty, exam or training failure with service impact, bullying/harassment affects training, supervisor-trainee conflict, supervision relationship breaks down, significant illness or impairment, adverse event involving registrar, unsafe training post, remote supervision concerns, need for targeted learning plan.",
+        "KEY POINT: DOT involvement is not punishment — it provides training governance, fairness and support for both the trainee and the supervisor.",
+        "Early DOT involvement allows a fair process, protects the trainee from informal management and ensures the training program meets its accreditation obligations.",
+        "Trying to manage repeated serious concerns informally exposes the supervisor, the service and the training program to governance and accreditation risk.",
+      ],
+      commonTrap:
+        "Trying to manage repeated serious training concerns informally without DOT involvement.",
+    },
+    {
+      id: "s21",
+      order: 21,
+      title: "Duty to Patient vs Duty to Trainee",
+      colorTag: "purple",
+      explanation:
+        "This is the central MEQ tension in supervision questions. Choosing either patient safety or trainee support instead of doing both is the core mark-losing error.",
+      keyPoints: [
+        "MEQ TENSION SENTENCE: 'There is tension between supporting the trainee and protecting patients. A defensible consultant position is to support the trainee compassionately while ensuring patient safety, direct supervision, escalation and accountability.'",
+        "EXAMPLES WHERE TENSION APPEARS: trainee made unsafe discharge, registrar intoxicated at work, registrar bullied and avoiding work, registrar error caused adverse event, registrar refuses feedback, registrar asks you not to tell DOT, patient complains about registrar.",
+        "Patient safety comes first — but trainee support still matters. Do not scapegoat the trainee, hide unsafe practice to protect them, ignore system/supervision factors, or abandon them after an error.",
+        "DUTY TO PATIENT VS DUTY TO TRAINEE BOX: 'I would support the trainee compassionately while ensuring patient safety, direct supervision, escalation and accountability — these are not in conflict if approached correctly.'",
+      ],
+      commonTrap:
+        "Choosing either patient safety or trainee support instead of doing both.",
+    },
+    {
+      id: "s22",
+      order: 22,
+      title: "Supervision Failure After Adverse Event",
+      colorTag: "red",
+      explanation:
+        "After an adverse event involving a registrar, the review must examine both the registrar's decision-making and the supervision system that allowed the decision to occur. Reviewing only the registrar's error and missing the supervision system is a governance failure.",
+      keyPoints: [
+        "EXAMPLES: registrar discharged patient who later suicided, registrar missed delirium, registrar prescribed unsafe medication, registrar failed to notify community team, registrar reduced observations without consultant review, registrar managed restraint/ECT/capacity decision alone.",
+        "IMMEDIATE RESPONSE: ensure patient/family safety, support staff and registrar, preserve records, review what supervision was available, ask what advice was sought, incident report/open disclosure if harm, involve clinical director if serious, involve supervisor/DOT if training issue, review after-hours/consultant availability, identify system contributors, avoid blame culture, create action plan.",
+        "SUPERVISION FAILURE WARNING: 'The review should examine both the registrar's decision-making and the supervision system that allowed the decision to occur.'",
+        "The system review must ask: Was the supervision structure adequate? Were escalation thresholds clear? Was the consultant available? Was there bed or time pressure that overrode clinical judgement? Were expectations of the registrar realistic for their stage?",
+      ],
+      commonTrap:
+        "Reviewing only the registrar's error and missing the supervision system.",
+    },
+    {
+      id: "s23",
+      order: 23,
+      title: "Registrar Complaint",
+      colorTag: "purple",
+      explanation:
+        "A complaint about a registrar requires four parallel streams: patient-care, complaint process, registrar support and governance. Either protecting the registrar from all accountability or blaming them without support and process are both failures.",
+      keyPoints: [
+        "PATIENT-CARE STREAM: ensure current patient safety, review risk, arrange follow-up or welfare check, correct any care gap.",
+        "COMPLAINT STREAM: read complaint, clarify allegations, use hospital complaints pathway, obtain registrar account, preserve records, involve consultant or clinical director.",
+        "REGISTRAR-SUPPORT STREAM: private discussion, check distress, supervisor/DOT if needed, indemnity advice if formal or external complaint, learning plan if performance issue.",
+        "GOVERNANCE STREAM: supervision review, documentation review, workload and after-hours review, policy/process improvement.",
+      ],
+      commonTrap:
+        "Either protecting the registrar from all accountability or blaming them without support and process.",
+    },
+    {
+      id: "s24",
+      order: 24,
+      title: "Documentation of Supervision",
+      colorTag: "purple",
+      explanation:
+        "Giving advice but leaving no record after a high-risk supervision decision is a governance failure. Documentation provides accountability, a governance trail and a basis for review.",
+      keyPoints: [
+        "DOCUMENT SUPERVISION WHEN: high-risk patient decision discussed, consultant advice given, trainee instructed to review or escalate, performance concern raised, trainee distressed or impaired, patient complaint, adverse event, supervision plan changed, DOT or clinical director involved.",
+        "DOCUMENT: date and time, participants, patient/case discussed if relevant, advice given, decisions made, supervision level required, follow-up actions, trainee's response, welfare/support offered if relevant, escalation to supervisor/DOT/clinical director, review date.",
+        "AVOID: pejorative comments, diagnosing trainee in supervision note, gossip, blaming language, vague 'spoken to registrar,' hidden informal warnings.",
+        "BETTER NOTE: 'Discussed with Dr X after discharge concern. Reviewed case facts, risk formulation and need for consultant discussion for high-risk overdose discharges. Dr X was distressed and accepted feedback. Patient follow-up arranged today. Increased supervision for discharge decisions for two weeks. Principal supervisor informed.'",
+      ],
+      commonTrap:
+        "Giving advice but leaving no record after a high-risk supervision decision.",
+    },
+    {
+      id: "s25",
+      order: 25,
+      title: "Remote/Rural Supervision",
+      colorTag: "amber",
+      explanation:
+        "Remote supervision requires extra structure. Assuming phone availability is adequate supervision without reliability, escalation and onsite backup is a governance failure.",
+      keyPoints: [
+        "REMOTE SUPERVISION NEEDS: approved training post, named principal supervisor, supplementary onsite supervisor if needed, orientation, risk-management matrix, clear escalation pathway, scheduled supervision, protected time, reliable phone/video contact, after-hours cover, local emergency support, documentation, review of training quality.",
+        "MEQ TRAP — STEM: 'Rural registrar says consultant is available by phone but rarely answers.' POOR: 'Encourage registrar to call earlier.' BETTER: 'Clarify consultant availability, create formal escalation pathway, appoint supplementary supervisor, review safety of the training post and escalate to DOT/clinical director if supervision is unreliable.'",
+        "A rural registrar with unreliable phone-only supervision and no onsite backup is working in an unsafe training post — this requires DOT escalation, not individual problem-solving.",
+        "Remote posts require explicit onsite emergency support arrangements — what happens if a patient deteriorates acutely and the remote consultant is unreachable?",
+      ],
+      commonTrap:
+        "Assuming phone availability is adequate supervision without reliability, escalation and onsite backup.",
+    },
+    {
+      id: "s26",
+      order: 26,
+      title: "Difficult Conversation With Registrar",
+      colorTag: "teal",
+      explanation:
+        "Difficult conversations require structure. Being kind but unclear, or being direct but humiliating, are both supervision failures.",
+      keyPoints: [
+        "START: private setting, clarify purpose, supportive but direct tone. EXPLORE: 'Can you tell me what happened?' / 'How are you going?' / 'What was your understanding of the risk?' / 'What support did you have?' / 'Were there workload or personal factors?'",
+        "FEEDBACK: specific behaviour, patient-safety impact, expected standard.",
+        "PLAN: immediate patient action, supervision level, learning goals, wellbeing support, review date, escalation if needed.",
+        "CLOSE: summarise, check understanding, document. DO NOT: ambush, shame, minimise, avoid direct feedback, turn supervision into therapy.",
+      ],
+      commonTrap:
+        "Being kind but unclear, or being direct but humiliating.",
+    },
+    {
+      id: "s27",
+      order: 27,
+      title: "MEQ Example Traps",
+      colorTag: "blue",
+      explanation:
+        "Seven worked examples covering the most common supervision and registrar governance MEQ stems. In each, the core error is treating a system problem as only an individual problem.",
+      keyPoints: [
+        "EXAMPLE 1 — REGISTRAR BEYOND COMPETENCE: first-year registrar asked to assess ECT capacity alone. TRAP: 'They should learn by doing.' BETTER: Direct consultant supervision, legal/ECT pathway, observe and teach, document supervision.",
+        "EXAMPLE 2 — POOR AFTER-HOURS SUPERVISION: registrar discharged high-risk overdose at 2 am without consultant call. TRAP: Blame registrar only. BETTER: Review patient safety, support registrar, investigate call culture, clarify escalation and consultant availability.",
+        "EXAMPLE 3 — CONSULTANT UNAVAILABLE: registrar repeatedly cannot contact consultant. TRAP: Tell registrar to keep trying. BETTER: Immediate alternate consultant cover, clinical director escalation, supervision pathway review.",
+        "EXAMPLE 4 — TRAINEE BURNOUT: registrar crying after multiple complex on-calls. TRAP: Reassure and send back to work. BETTER: Assess safety/impairment, reduce load if needed, GP/EAP, supervisor/DOT, workload review.",
+        "EXAMPLE 5 — BULLYING BY SENIOR STAFF: registrar says consultant humiliates them in ward rounds. TRAP: 'Develop thicker skin.' BETTER: Support trainee, assess facts/risk, protect from retaliation, use HR/DOT process, address culture.",
+        "EXAMPLE 6 — IMPAIRED TRAINEE: registrar smells of alcohol and upset a patient. TRAP: 'Have a quiet word and let them finish shift.' BETTER: Remove from clinical duties, ensure patient safety, arrange safe transport/support, notify senior, consider mandatory notification threshold.",
+        "EXAMPLE 7 — SUPERVISION FAILURE AFTER ADVERSE EVENT: medication error after verbal order from covering registrar. TRAP: Blame registrar. BETTER: Treat patient, open disclosure if harm, support registrar, review supervision/handover/workload/verbal-order policy.",
+      ],
+      commonTrap:
+        "Missing that registrar problems are often also supervision-system problems.",
+    },
+    {
+      id: "s28",
+      order: 28,
+      title: "Command-Word Discipline",
+      colorTag: "amber",
+      explanation:
+        "Supervision stems carry command-word traps. Listing 'support registrar' without explaining how or why loses marks — the examiner is looking for mechanism and rationale.",
+      keyPoints: [
+        "LIST: concise items — 'Patient safety. Registrar support. Supervision review. DOT involvement. Documentation.'",
+        "OUTLINE (list and justify): 'Review patient safety — because supervision concerns are governance issues only if current care is safe. Support the registrar — because distress or impairment may worsen risk and prevent honest learning. Involve DOT — because repeated competence concerns affect training progression and require formal oversight.'",
+        "DESCRIBE (list and explain): 'Increase direct supervision temporarily — because the registrar has demonstrated difficulty with high-risk discharge decisions and needs consultant review before repeating the task.'",
+        "DISCUSS (name the tension): 'There is tension between supporting a trainee's learning and protecting patients from foreseeable harm. A defensible position is to provide compassionate support and targeted supervision while escalating significant safety or performance concerns through the appropriate training and employer pathways.'",
+      ],
+      commonTrap:
+        "Listing 'support registrar' without explaining how or why.",
+    },
+    {
+      id: "s29",
+      order: 29,
+      title: "Examiner Phrases",
+      colorTag: "green",
+      explanation:
+        "Use these phrases to signal consultant-level supervision reasoning. Missing the words 'supervision governance,' 'direct supervision,' 'escalation pathway' and 'DOT' signals registrar-level thinking.",
+      keyPoints: [
+        "'This is both a patient-safety issue and a supervision governance issue.'",
+        "'The registrar should not be carrying consultant-level risk without clear supervision.'",
+        "'The level of supervision should match competence and clinical risk.'",
+        "'I would support the trainee while maintaining accountability.'",
+        "'I would separate training support from employer disciplinary processes.'",
+        "'I would involve the principal supervisor and DOT early if there are repeated or serious concerns.'",
+        "'I would not wait until the end-of-rotation ITA to raise significant performance concerns.'",
+        "'After an adverse event, I would review the supervision system, not only the registrar's decision.'",
+        "'Bullying and discrimination are patient-safety issues as well as trainee-welfare issues.'",
+      ],
+      commonTrap:
+        "Missing the words supervision governance, direct supervision, escalation pathway and DOT.",
+    },
+    {
+      id: "s30",
+      order: 30,
+      title: "Common Traps",
+      colorTag: "amber",
+      explanation:
+        "Use this as a pre-submit checklist for any registrar/supervision MEQ question. Each item is a documented mark-losing gap.",
+      keyPoints: [
+        "Focus only on patient care and miss supervision governance.",
+        "Focus only on trainee support and miss patient safety.",
+        "Blame the registrar without reviewing supervision.",
+        "Fail to involve DOT/principal supervisor.",
+        "Ignore after-hours consultant availability.",
+        "Ignore bullying or burnout.",
+        "Treat impairment as a private matter only.",
+        "Over-document personal health details unnecessarily.",
+        "Fail to document supervision advice.",
+        "Confuse supervision with therapy.",
+        "Wait until end of term to raise concerns.",
+        "Let service pressure override training safety.",
+        "Fail to escalate repeated unsafe practice.",
+      ],
+      meqApplication:
+        "Use this section as a pre-submit checklist for registrar/supervision questions — any item present in the stem that is absent from your answer is a lost mark.",
+    },
+    {
+      id: "s31",
+      order: 31,
+      title: "Consultant-Level Summary",
+      colorTag: "green",
+      explanation:
+        "This paragraph is reusable in MEQ stems involving registrar error, unsafe discharge, poor supervision, consultant unavailable, after-hours decisions, trainee distress, burnout, bullying, impaired trainee and adverse events.",
+      keyPoints: [
+        "PATIENT SAFETY AND GOVERNANCE: 'I would treat registrar supervision as a clinical governance function. My first priority is patient safety, followed by timely support, feedback and education for the registrar.'",
+        "COMPETENCE AND ESCALATION: 'I would clarify the registrar's competence, supervision needs and escalation pathway, increase direct supervision for high-risk decisions if needed, and ensure the principal supervisor and DOT are involved for repeated or serious concerns.'",
+        "DISTRESS AND IMPAIRMENT: 'If the registrar is distressed, bullied or impaired, I would provide immediate support, adjust duties if safety is affected, and use appropriate training, employer or regulatory pathways.'",
+        "DOCUMENTATION: 'Supervision advice and significant concerns should be documented factually, with a clear plan, review date and accountability.'",
+        "FULL PARAGRAPH: 'I would treat registrar supervision as a clinical governance function. My first priority is patient safety, followed by timely support, feedback and education for the registrar. I would clarify the registrar's competence, supervision needs and escalation pathway, increase direct supervision for high-risk decisions if needed, and ensure the principal supervisor and DOT are involved for repeated or serious concerns. If the registrar is distressed, bullied or impaired, I would provide immediate support, adjust duties if safety is affected, and use appropriate training, employer or regulatory pathways. Supervision advice and significant concerns should be documented factually, with a clear plan, review date and accountability.'",
+      ],
+      meqApplication:
+        "This paragraph should be reusable in MEQ stems involving registrar error, unsafe discharge, poor supervision, consultant unavailable, after-hours decisions, trainee distress, burnout, bullying, impaired trainee and adverse events.",
+    },
+  ],
+};
+
+export const ALL_NOTES: Note[] = [DISCHARGE_PLAN, CONFLICT_MANAGEMENT, COMPLAINT_PROCESS, INCIDENT_MANAGEMENT, CLINICAL_AUDIT, OPEN_DISCLOSURE, RESTRICTIVE_PRACTICES, RESTRICTIVE_PRACTICES_MEQ, CONFIDENTIALITY, CAPACITY_CONSENT, SUPERVISION_TRAINING];
