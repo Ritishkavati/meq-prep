@@ -1711,4 +1711,518 @@ export const INCIDENT_MANAGEMENT: Note = {
   ],
 };
 
-export const ALL_NOTES: Note[] = [DISCHARGE_PLAN, CONFLICT_MANAGEMENT, COMPLAINT_PROCESS, INCIDENT_MANAGEMENT];
+export const CLINICAL_AUDIT: Note = {
+  id: "clinical_audit",
+  title: "Clinical Audit, Quality Improvement and Change Management in Psychiatry",
+  category: "Clinical Governance / Quality Improvement / Leadership",
+  description:
+    "A consultant-level framework for conducting clinical audits, quality improvement projects and change management in psychiatry, including ECT audit, hypnotic prescribing audit, metabolic monitoring audit, clozapine monitoring, lithium monitoring, discharge-summary audit, seclusion/restraint audit, suicide-risk pathway audit, documentation audit and CAMHS transition audit.",
+  sections: [
+    {
+      id: "s01",
+      order: 1,
+      title: "Core Principle",
+      colorTag: "blue",
+      explanation:
+        "Clinical audit is not simply collecting data. It is a practice-improvement cycle. The purpose is to answer: 'Are we doing what we should be doing, according to an agreed standard, and if not, how will we change practice and check improvement?'",
+      keyPoints: [
+        "Audit measures actual practice against an agreed standard — without a standard it becomes opinion.",
+        "Audit should lead to practical improvement, not just a report.",
+        "Audit is part of clinical governance — it answers whether the system is working.",
+        "Audit should not be framed as a disciplinary exercise.",
+        "Re-audit is necessary to complete the cycle — data without change is incomplete.",
+        "A good audit response has five parts: define the problem, choose standards, measure current practice, implement change, re-audit and report back.",
+      ],
+      meqApplication:
+        "In audit questions, do not only say 'collect data.' Always add standards, baseline measurement, stakeholder engagement, change intervention, re-audit and governance reporting.",
+      commonTrap:
+        "Doing an audit that collects data but does not change practice — the cycle is incomplete without change and re-audit.",
+    },
+    {
+      id: "s02",
+      order: 2,
+      title: "Audit as Clinical Governance",
+      colorTag: "purple",
+      explanation:
+        "Clinical governance means the service has systems to maintain and improve safety, reliability and quality of care. Audit is one of the practical tools used to test whether the system is working. Audit is not separate from patient care — it is a way of improving patient safety, communication, consistency and accountability.",
+      keyPoints: [
+        "GOVERNANCE QUESTIONS AUDIT CAN ANSWER: Are ECT consent forms complete? Are lithium levels checked after discharge? Are clozapine bloods being monitored? Are discharge summaries reaching GPs on time? Are high-risk patients reviewed after missed appointments? Are seclusion episodes documented and reviewed? Are CAMHS-to-adult transitions completed with warm handover?",
+        "Audit data feeds governance committees, quality reports and accreditation processes.",
+        "Name the safety or governance issue that triggered the audit before describing the audit method — this shows examiners you understand why audit matters.",
+        "Audit findings that are not reported to governance have limited impact — the committee provides authority, resources and accountability for change.",
+      ],
+      meqApplication:
+        "Name the safety/governance issue that triggered the audit before describing the audit method — this is a consistent MEQ scoring cue.",
+      commonTrap:
+        "Treating audit as an academic task rather than a clinical governance tool linked to patient safety and system improvement.",
+    },
+    {
+      id: "s03",
+      order: 3,
+      title: "Audit Versus Research",
+      colorTag: "blue",
+      explanation:
+        "Audit and research have different purposes, methods and ethical requirements. Confusing them — particularly calling research an audit to avoid ethics review — is both a governance failure and a professional conduct issue.",
+      keyPoints: [
+        "AUDIT asks: 'Are we meeting an agreed standard?' It measures existing practice, compares against standards/policy/guidelines, uses existing clinical data, aims to improve local care, does not randomise, does not test new treatments, and requires re-audit.",
+        "RESEARCH asks: 'What is the best practice or new knowledge?' It tests a hypothesis, aims to generate generalisable knowledge, may involve new interventions or randomisation, requires ethics committee review, informed consent, and considers publication/authorship/data governance.",
+        "AUDIT EXAMPLES: audit whether lithium levels are documented before discharge; audit whether ECT consent and cognitive screening were completed; audit whether discharge summaries were sent within 48 hours; audit whether metabolic monitoring occurred for patients on antipsychotics.",
+        "RESEARCH EXAMPLES: trialling a new psychological intervention, comparing two medication strategies prospectively, testing a new model of care to generate generalisable evidence.",
+      ],
+      commonTrap:
+        "Calling research an audit to avoid ethics review — this is a governance and professional conduct failure, not just a technicality.",
+    },
+    {
+      id: "s04",
+      order: 4,
+      title: "Choosing an Audit Topic",
+      colorTag: "green",
+      explanation:
+        "Good audit topics are chosen because they matter, not because they are easy. Topics should be clinically important, high risk, common, measurable, linked to standards, and likely to improve patient outcomes.",
+      keyPoints: [
+        "CHOOSE TOPICS THAT ARE: clinically important, high risk, common, measurable, linked to standards, likely to improve patient outcomes, feasible to change, relevant to complaints or incidents, and important to patients/carers/staff.",
+        "HIGH-YIELD PSYCHIATRY AUDIT TOPICS: ECT audit, hypnotic/benzodiazepine prescribing audit, metabolic monitoring audit, clozapine monitoring audit, lithium monitoring audit, discharge-summary audit, seclusion/restraint audit, suicide-risk pathway audit, documentation audit, CAMHS transition audit.",
+        "If the stem includes a complaint, near miss, medication error, poor handover or inconsistent practice — frame the audit as a response to a patient-safety concern. This signals governance thinking.",
+        "The best audit topic is often identified by a pattern in incident reports, complaints, accreditation findings or clinical observation — not by convenience.",
+      ],
+      meqApplication:
+        "If the stem includes a complaint, near miss, medication error, poor handover or inconsistent practice, frame the audit as a response to a patient-safety concern.",
+      commonTrap:
+        "Choosing an audit topic without explaining why it matters for safety or quality — examiners expect a clear rationale.",
+    },
+    {
+      id: "s05",
+      order: 5,
+      title: "Choosing Standards",
+      colorTag: "purple",
+      explanation:
+        "Audit needs a standard. Without a standard, it becomes opinion. Standards provide the benchmark against which current practice is measured.",
+      keyPoints: [
+        "STANDARDS MAY COME FROM: local hospital policy, state mental health policy, NSQHS standards, RANZCP guidelines or position statements, medication safety guidelines, ECT standards, clozapine protocols, Mental Health Act requirements, national safety alerts, accreditation standards, accepted professional guidelines, service-level KPIs.",
+        "ECT STANDARDS: consent/capacity documented before treatment, cognitive baseline documented, cognitive monitoring repeated during course, anaesthetic assessment completed, ECT prescription documented, treatment response reviewed, adverse effects documented and acted on.",
+        "DISCHARGE SUMMARY STANDARDS: summary sent within required timeframe, medication changes explained, monitoring plan documented, follow-up appointment documented, crisis plan included, GP responsibility clearly stated.",
+        "SECLUSION/RESTRAINT STANDARDS: last resort, alternatives attempted, legal criteria documented, medical review completed, observations documented, debrief completed, governance review completed.",
+      ],
+      commonTrap:
+        "Auditing whether 'care was good' without measurable standards — vague criteria cannot be reliably measured or compared over time.",
+    },
+    {
+      id: "s06",
+      order: 6,
+      title: "Baseline Data",
+      colorTag: "blue",
+      explanation:
+        "Baseline data shows what is currently happening before change. It answers: how big is the problem, where is the gap, which patients are affected, and what is the starting point for improvement?",
+      keyPoints: [
+        "DATA SOURCES: EMR notes, medication charts, ECT register, clozapine register, incident reports, complaints, discharge summaries, GP feedback, consumer feedback, carer feedback, pharmacy records, ward observation charts, seclusion/restraint register, pathology results, referral/triage database, appointment attendance data.",
+        "CHECK DATA QUALITY: sample size, timeframe, inclusion and exclusion criteria, missing data, reliability of data, need for manual review.",
+        "EQUITY LENS: check whether consumer/carer experience is captured; check whether Aboriginal, CALD, older adult or youth subgroups are affected differently.",
+        "Baseline data establishes the 'before' — without it, re-audit cannot demonstrate whether change occurred.",
+      ],
+      commonTrap:
+        "Collecting easy data rather than the data that answers the safety question — convenience should not drive data selection.",
+    },
+    {
+      id: "s07",
+      order: 7,
+      title: "Audit Criteria",
+      colorTag: "green",
+      explanation:
+        "Audit criteria should be clear, measurable and linked to the standard. Weak criteria cannot be reliably assessed or compared. Strong criteria define who, what, when, and to what standard.",
+      keyPoints: [
+        "WEAK CRITERION: 'Good documentation.' — cannot be measured reliably.",
+        "STRONG CRITERION: 'In 90% of discharges, the discharge summary includes medication changes, rationale, monitoring plan, follow-up date and crisis contact.'",
+        "GOOD CRITERIA HAVE: defined population, measurable item, timeframe, expected standard (target), data source, responsible reviewer.",
+        "LITHIUM AUDIT CRITERIA: lithium level documented within appropriate timeframe before discharge, renal function documented, thyroid function documented, calcium documented, next blood-test date documented, GP informed of monitoring responsibility, toxicity warning documented.",
+        "CAMHS TRANSITION CRITERIA: transition meeting occurred before transfer, young person attended joint appointment, risk plan transferred, medication plan transferred, GP informed, adult follow-up occurred within agreed timeframe, non-attendance plan documented.",
+      ],
+      commonTrap:
+        "Making criteria too vague to measure — if two reviewers looking at the same chart would disagree, the criterion is not strong enough.",
+    },
+    {
+      id: "s08",
+      order: 8,
+      title: "Stakeholder Engagement",
+      colorTag: "teal",
+      explanation:
+        "Audit fails when it is imposed on people. Engaging stakeholders before data collection builds trust, improves data quality, increases acceptance of findings and makes change more likely.",
+      keyPoints: [
+        "STAKEHOLDERS MAY INCLUDE: psychiatrists, registrars, nurses, psychologists, social workers, occupational therapists, pharmacists, anaesthetists (for ECT), GPs, NGOs, peer workers, consumers, carers, Aboriginal or cultural liaison workers, quality/governance staff, data analysts, service managers.",
+        "WHY ENGAGEMENT MATTERS: people support change when they understand why the audit matters, how data will be used, that it is not a witch-hunt, what standard is being applied, how results will be fed back, and how they can shape the improvement plan.",
+        "USEFUL PHRASES: 'This is a patient-safety and quality-improvement project.' / 'We are auditing the system, not hunting for individual blame.' / 'We will agree the criteria before data collection.' / 'Feedback will be aggregated unless there is an immediate safety concern.'",
+        "Engaging stakeholders early also surfaces workflow barriers — information that is critical for designing realistic change interventions.",
+      ],
+      commonTrap:
+        "Announcing an audit without involving the staff who need to change practice — this is a reliable way to produce resistance and incomplete data.",
+    },
+    {
+      id: "s09",
+      order: 9,
+      title: "Consumer and Carer Involvement",
+      colorTag: "teal",
+      explanation:
+        "Consumers and carers should not be added only at the end. They can identify what matters to patients, whether information was understandable, whether consent felt meaningful, whether discharge felt safe, and whether the service response was respectful.",
+      keyPoints: [
+        "ECT AUDIT: consumer input may identify poor explanation of memory risk, anxiety about anaesthetic process, lack of family involvement, stigma or unclear expected number of treatments.",
+        "DISCHARGE AUDIT: consumer/carer input may identify that the plan was not understood, crisis number was unclear, GP did not receive summary, carer did not know relapse signs, or medication side effects were not explained.",
+        "CAMHS TRANSITION AUDIT: young people may identify that the adult service felt intimidating, family involvement changed abruptly, appointment location was inaccessible, or confidentiality was poorly explained.",
+        "Consumer involvement should shape audit criteria, not just validate findings — include patient experience measures from the design stage.",
+      ],
+      meqApplication:
+        "Mention consumer/carer involvement when audit affects consent, communication, experience, safety planning or discharge — examiners look for this across governance answers.",
+      commonTrap:
+        "Using consumer involvement as tokenism rather than incorporating feedback into audit criteria and change design.",
+    },
+    {
+      id: "s10",
+      order: 10,
+      title: "Audit Cycle",
+      colorTag: "green",
+      explanation:
+        "Use a five-stage audit cycle. Stopping after stage 3 (measurement) and never implementing change is the most common audit failure in clinical practice and in MEQ answers.",
+      keyPoints: [
+        "STAGE 1 — PREPARE: clarify problem, purpose, standard, stakeholders, sample, data source, governance approval, resources, timeline, privacy/confidentiality, and who will do the work.",
+        "STAGE 2 — SELECT CRITERIA: choose measurable indicators, target compliance, standards, inclusion/exclusion criteria, and data collection tool.",
+        "STAGE 3 — MEASURE PERFORMANCE: collect baseline data, quantitative results, qualitative feedback if relevant, subgroup differences, and variation between units/teams if relevant.",
+        "STAGE 4 — MAKE IMPROVEMENTS: develop education, prompts/templates, workflow redesign, checklist, policy update, role clarification, consumer information, supervision process, electronic alerts.",
+        "STAGE 5 — SUSTAIN IMPROVEMENTS: use re-audit, dashboard, governance reporting, induction, regular feedback, policy embedding and accountability.",
+      ],
+      commonTrap:
+        "Stopping after stage 3 and never implementing change — measurement without action is not clinical governance.",
+    },
+    {
+      id: "s11",
+      order: 11,
+      title: "PDSA / PDCA Cycle",
+      colorTag: "green",
+      explanation:
+        "PDSA (Plan, Do, Study, Act) or PDCA (Plan, Do, Check, Act) prevents large, untested changes being imposed across a service. It tests change on a small scale first, reviews the result, and then expands or adjusts.",
+      keyPoints: [
+        "PLAN: define the problem and intervention. Example: discharge summaries often omit lithium monitoring — plan to add a lithium-monitoring prompt to the discharge template.",
+        "DO: test on a small scale. Example: use the prompt for 10 lithium discharges over one month.",
+        "STUDY / CHECK: check what happened. Example: did summaries include lithium level, renal function, thyroid function, next blood-test date and responsible clinician?",
+        "ACT: decide next step. Example: modify prompt, educate registrars, expand across the service and re-audit in three months.",
+        "PDSA helps engage staff because changes can be tried, reviewed and improved — it is less threatening than a whole-service mandate.",
+      ],
+      commonTrap:
+        "Trying to change the whole service at once without testing the process — large untested changes are harder to embed and easier to resist.",
+    },
+    {
+      id: "s12",
+      order: 12,
+      title: "Feedback Without Blame",
+      colorTag: "amber",
+      explanation:
+        "Feedback is central to audit, but feedback presented punitively creates resistance, defensiveness, poor documentation and disengagement. Good feedback is factual, system-focused and leads to practical support.",
+      keyPoints: [
+        "GOOD FEEDBACK IS: timely, uses agreed standards, factual, focused on systems, anonymised where possible, explains clinical significance, includes examples of good practice, asks staff what barriers exist, and leads to practical support.",
+        "FEEDBACK STRUCTURE: (1) why we audited, (2) what standard we used, (3) what data we reviewed, (4) what we found, (5) what this means for patient care, (6) what staff think the barriers are, (7) what we will change, (8) when we will re-audit.",
+        "AVOID: naming and shaming, 'gotcha' audit, blaming registrars, blaming nurses, blaming admin, presenting unexplained variation as incompetence, ignoring workload barriers.",
+        "Feedback that feels punitive reliably produces defensive documentation, incomplete data in the next audit cycle, and disengagement from quality improvement.",
+      ],
+      commonTrap:
+        "Using audit findings to embarrass staff rather than improve care — this destroys the psychological safety needed for honest audit data.",
+    },
+    {
+      id: "s13",
+      order: 13,
+      title: "Implementing Change",
+      colorTag: "green",
+      explanation:
+        "Audit only matters if it leads to change. Change can occur at individual, team, system and consumer levels. Implementation should address workflow barriers, not simply tell staff to do better.",
+      keyPoints: [
+        "INDIVIDUAL LEVEL: feedback, supervision, prescribing review, documentation education, peer review, reflective practice.",
+        "TEAM LEVEL: MDT workflow change, nursing-medical handover template, shared checklist, pharmacist involvement, team education, case conference process.",
+        "SYSTEM LEVEL: EMR prompt, policy update, high-risk medication register, governance dashboard, escalation pathway, mandatory checklist, new referral or triage process, resource allocation.",
+        "CONSUMER LEVEL: patient information sheet, shared care plan, carer education, feedback process, culturally adapted information.",
+      ],
+      commonTrap:
+        "Recommending only education when the real barrier is workflow, staffing, unclear roles or poor EMR design — education alone rarely sustains change.",
+    },
+    {
+      id: "s14",
+      order: 14,
+      title: "Managing Resistant Senior Doctors",
+      colorTag: "amber",
+      explanation:
+        "Senior doctors may resist audit because of fear of loss of autonomy, reputational concerns, extra workload or concern that standards are invalid. The approach requires respect, early involvement, fair process and — if necessary — governance escalation.",
+      keyPoints: [
+        "REASONS FOR RESISTANCE: fear of loss of autonomy, fear of criticism, fear of litigation, reputational concerns, extra workload, bureaucratic burden, concern standards are invalid, loss of professional ownership.",
+        "START WITH RESPECT: frame as 'We need to check whether our system reliably meets agreed safety standards' — not 'You are doing unsafe practice.'",
+        "INVOLVE THEM EARLY: ask senior doctors to help choose standards, refine criteria, identify meaningful data, interpret findings, design improvements and act as champions.",
+        "PROTECT FAIRNESS: use agreed standards, present aggregated data initially, anonymise clinician-level data unless safety requires otherwise, adjust for case mix, offer right of reply, avoid public blame.",
+        "ESCALATE IF NEEDED: if resistance blocks necessary safety improvement, involve clinical director, report through governance committee, set minimum safety standards, use policy mandates and monitor compliance.",
+      ],
+      commonTrap:
+        "Either avoiding senior resistance completely (and the safety gap persists) or confronting it aggressively without engagement (and resistance escalates).",
+    },
+    {
+      id: "s15",
+      order: 15,
+      title: "Change Management Principles",
+      colorTag: "blue",
+      explanation:
+        "Audit tells you the gap. Change management closes it. Effective change requires a shared reason for change, a coalition of supporters, removal of barriers, and making the desired behaviour easy.",
+      keyPoints: [
+        "CREATE A SHARED REASON FOR CHANGE: memory complaints after ECT, lithium toxicity after discharge, repeated missed clozapine bloods, seclusion injuries, GP complaints about discharge summaries, young people lost during CAMHS transition.",
+        "BUILD A COALITION: consultant champion, nursing lead, registrar representative, pharmacist, admin/data person, consumer/carer representative, quality manager, service manager.",
+        "REMOVE BARRIERS: too many forms, EMR hard to use, no time for documentation, unclear ownership, no pharmacist support, no clinic slot for monitoring, no GP communication pathway.",
+        "MAKE THE DESIRED BEHAVIOUR EASY: one-page template, auto-populated discharge summary, lithium prompt, ECT checklist, standard clinic pathway, shared-care protocol.",
+        "MEASURE AND FEED BACK: use monthly dashboard, spot audit, re-audit, team feedback and governance report to maintain momentum.",
+      ],
+      commonTrap:
+        "Creating a policy that looks good but is too hard for staff to use — implementation must remove barriers, not add steps.",
+    },
+    {
+      id: "s16",
+      order: 16,
+      title: "Reporting to Governance Committee",
+      colorTag: "purple",
+      explanation:
+        "Audit findings should go somewhere. Keeping findings within a small group limits impact and removes the authority, resources and accountability that governance committees provide.",
+      keyPoints: [
+        "REPORT TO: clinical governance committee, quality and safety committee, M&M meeting, ECT committee, medicines committee, seclusion/restraint reduction committee, CAMHS/adult transition governance group, or executive/service director if high risk.",
+        "REPORT SHOULD INCLUDE: audit aim, standard used, sample and timeframe, data source, baseline compliance, key gaps, patient safety implications, stakeholder feedback, action plan, responsible owners, timeline, re-audit date, unresolved barriers requiring executive support.",
+        "GOOD GOVERNANCE REPORT LANGUAGE: 'The audit identified a latent safety risk: high-risk medication monitoring was not reliably documented at discharge. The proposed response is a discharge-template prompt, pharmacist review for lithium/clozapine discharges, registrar education, GP shared-care letter and re-audit in three months.'",
+        "Governance reporting creates accountability — named owners and timelines reported to a committee are far more likely to be acted on than informal agreements.",
+      ],
+      commonTrap:
+        "Keeping audit findings within a small group and not reporting to the governance structure that can support, resource and mandate change.",
+    },
+    {
+      id: "s17",
+      order: 17,
+      title: "Re-Audit",
+      colorTag: "green",
+      explanation:
+        "Re-audit is not optional. Without re-audit, the audit cycle is incomplete. Re-audit proves whether the change actually worked, sustained, and did not create new problems.",
+      keyPoints: [
+        "RE-AUDIT ANSWERS: did compliance improve, did the change work, did staff use the new process, did patient outcomes improve, did unintended consequences occur, should the change be standardised/revised/abandoned?",
+        "LITHIUM AUDIT AFTER 3 MONTHS: percentage of discharge summaries with next lithium level date, percentage with named clinician reviewing results, percentage with renal/thyroid/calcium documented, GP satisfaction.",
+        "ECT AUDIT AFTER NEW CHECKLIST: percentage completed consent/capacity forms, percentage cognitive monitoring documented, percentage memory complaints pathway used, consumer experience feedback.",
+        "CAMHS TRANSITION AUDIT AFTER PROTOCOL: percentage joint transition meetings, percentage adult appointments attended, percentage GP handover completed, percentage non-attendance followed up.",
+      ],
+      commonTrap:
+        "Assuming the change worked without measuring it — implementation without re-audit is an incomplete governance cycle.",
+    },
+    {
+      id: "s18",
+      order: 18,
+      title: "Barriers to Audit and Change",
+      colorTag: "amber",
+      explanation:
+        "Common barriers are predictable. A good governance response identifies them in advance and proposes specific strategies — not just 'we will try harder.'",
+      keyPoints: [
+        "COMMON BARRIERS: lack of time, no data support, poor EMR access, unclear standards, too many competing priorities, defensive senior clinicians, junior staff turnover, no consumer involvement, poor leadership, fear of blame, audit fatigue, change fatigue, no resources, no re-audit.",
+        "LACK OF TIME: choose focused audit, use small sample, involve quality team, delegate data collection, use existing registers.",
+        "RESISTANCE: involve clinicians early, agree standards, anonymise initial feedback, emphasise patient safety, avoid blame.",
+        "POOR DATA: improve documentation template, use manual review if needed, define data fields clearly, pilot data collection tool.",
+        "NO RESOURCES: escalate to governance, prioritise high-risk areas, propose staged implementation, use cost/risk/benefit argument.",
+        "CHANGE FATIGUE: choose one or two high-impact changes, stop low-value processes, show early wins, thank staff.",
+      ],
+      commonTrap:
+        "Identifying barriers but not proposing how to overcome them — MEQ answers must include both problem and solution.",
+    },
+    {
+      id: "s19",
+      order: 19,
+      title: "ECT Audit Template",
+      colorTag: "red",
+      explanation:
+        "ECT is a high-risk, high-scrutiny intervention. An ECT audit must cover consent, cognitive monitoring, adverse effects, communication and consumer experience — not only whether the procedure was performed.",
+      keyPoints: [
+        "AIM: to assess whether ECT practice meets safety, consent, cognitive monitoring and communication standards.",
+        "STANDARDS: consent and capacity documented, legal authority documented if applicable, anaesthetic review completed, baseline cognition documented, treatment parameters recorded, adverse effects monitored, post-course communication completed.",
+        "DATA SOURCES: ECT register, medical record, consent forms, anaesthetic notes, cognitive screening, incident or complaint data, consumer feedback.",
+        "STAKEHOLDERS: ECT psychiatrists, ECT nurse, anaesthetist, inpatient team, consumers and carers, governance.",
+        "POSSIBLE INTERVENTIONS: ECT checklist, cognitive monitoring pathway, memory complaint pathway, consumer information sheet, team training, re-audit.",
+      ],
+      commonTrap:
+        "Auditing only consent forms and ignoring cognition, adverse effects, communication and consumer experience.",
+    },
+    {
+      id: "s20",
+      order: 20,
+      title: "Hypnotic Prescribing Audit Template",
+      colorTag: "amber",
+      explanation:
+        "Hypnotic and benzodiazepine prescribing is a common safety concern in inpatient psychiatry. Audit must cover indication, duration, alternatives offered, and discharge continuation — not only whether a drug was prescribed.",
+      keyPoints: [
+        "AIM: to reduce inappropriate benzodiazepine or hypnotic prescribing.",
+        "STANDARDS: indication documented, short-term use only unless justified, review date documented, non-pharmacological sleep strategies offered, older adult/falls risk considered, discharge continuation reviewed, driving and sedation warnings provided where relevant.",
+        "DATA SOURCES: medication charts, discharge summaries, incident or falls data, pharmacy reports.",
+        "POSSIBLE INTERVENTIONS: sleep protocol, PRN review in ward round, stop dates, pharmacist alerts, patient sleep hygiene sheet, re-audit prescribing.",
+      ],
+      commonTrap:
+        "Reducing prescribing without offering sleep alternatives or managing withdrawal and dependence risk.",
+    },
+    {
+      id: "s21",
+      order: 21,
+      title: "Metabolic Monitoring Audit Template",
+      colorTag: "green",
+      explanation:
+        "Patients on antipsychotics are at high cardiometabolic risk. Metabolic monitoring audit must cover not only whether measurements were taken, but whether abnormal results were acted on and communicated to the GP.",
+      keyPoints: [
+        "AIM: to assess whether patients on antipsychotics receive appropriate metabolic monitoring and follow-up.",
+        "STANDARDS: weight/BMI, waist circumference where used, blood pressure, glucose or HbA1c, lipids, smoking status, lifestyle advice, GP communication, action for abnormal results.",
+        "DATA SOURCES: pathology, progress notes, medication chart, GP letters, metabolic clinic data.",
+        "POSSIBLE INTERVENTIONS: metabolic monitoring form, nurse-led metabolic clinic, pathology prompts, GP template, pharmacist or nurse reminders, re-audit.",
+      ],
+      commonTrap:
+        "Documenting abnormal metabolic results without assigning responsibility for follow-up — the result is documented but not acted on.",
+    },
+    {
+      id: "s22",
+      order: 22,
+      title: "Clozapine Monitoring Audit Template",
+      colorTag: "red",
+      explanation:
+        "Clozapine monitoring requires more than FBC checks. A comprehensive audit covers constipation, metabolic monitoring, smoking status, myocarditis risk during initiation, missed-dose risk, and GP communication.",
+      keyPoints: [
+        "AIM: to assess whether clozapine monitoring and side-effect management are reliable.",
+        "STANDARDS: blood monitoring current, bowel chart or constipation assessment, smoking status recorded, metabolic monitoring, myocarditis monitoring during initiation, missed-dose plan, pharmacy handover, GP communication.",
+        "POSSIBLE INTERVENTIONS: clozapine checklist, bowel protocol, pharmacy-led monitoring, smoking-status prompt, patient education, re-audit.",
+      ],
+      commonTrap:
+        "Auditing FBC only and missing constipation, smoking status, myocarditis, metabolic monitoring and missed-dose risk — these are the clozapine complications that kill.",
+    },
+    {
+      id: "s23",
+      order: 23,
+      title: "Lithium Monitoring Audit Template",
+      colorTag: "red",
+      explanation:
+        "Lithium monitoring is especially critical around discharge, when responsibility for monitoring transfers from the inpatient team to the GP. The audit must check that someone specific is named to order and review results.",
+      keyPoints: [
+        "AIM: to assess whether lithium monitoring and patient education are reliable, especially around discharge.",
+        "STANDARDS: serum lithium level documented, renal function documented, thyroid function documented, calcium documented, pregnancy status where relevant, toxicity education documented, interaction warnings documented, GP handover completed, next blood-test date documented, named person responsible for reviewing results.",
+        "POSSIBLE INTERVENTIONS: lithium discharge checklist, GP shared-care letter, pathology request before discharge, pharmacist counselling, patient lithium information card, re-audit.",
+      ],
+      commonTrap:
+        "Sending the patient to the GP without specifying who orders and reviews the lithium results — this is how lithium toxicity after discharge occurs.",
+    },
+    {
+      id: "s24",
+      order: 24,
+      title: "Discharge-Summary Audit Template",
+      colorTag: "teal",
+      explanation:
+        "A discharge summary audit must assess whether the summary contains clinically useful information for safe transfer of care — not merely whether a summary exists.",
+      keyPoints: [
+        "AIM: to improve safe transfer of care from inpatient unit to GP and community team.",
+        "STANDARDS: sent within local timeframe, diagnosis and formulation included, risk plan included, medication changes and rationale included, monitoring instructions included, follow-up appointment included, crisis plan included, named responsible clinician included, family/carer plan included if relevant.",
+        "POSSIBLE INTERVENTIONS: discharge summary template, consultant sign-off for high-risk discharges, pharmacist review, GP feedback loop, re-audit.",
+      ],
+      commonTrap:
+        "Auditing whether a summary exists rather than whether it contains clinically useful information — an empty or generic summary is a governance failure.",
+    },
+    {
+      id: "s25",
+      order: 25,
+      title: "Seclusion/Restraint Audit Template",
+      colorTag: "red",
+      explanation:
+        "Seclusion and restraint audit is a mandatory governance process in most Australian and New Zealand mental health services. It must address culture, documentation, training and consumer experience — not only paperwork compliance.",
+      keyPoints: [
+        "AIM: to reduce restrictive practice and improve safety documentation.",
+        "STANDARDS: last-resort rationale, alternatives attempted, legal criteria, observation and physical monitoring, senior review, debrief, consumer feedback, duration and review frequency.",
+        "POSSIBLE INTERVENTIONS: de-escalation training, seclusion review form, post-event debrief, restrictive-practice dashboard, consumer review, re-audit.",
+      ],
+      commonTrap:
+        "Treating seclusion/restraint audit as paperwork rather than culture and safety improvement — compliance with forms does not mean the culture has changed.",
+    },
+    {
+      id: "s26",
+      order: 26,
+      title: "Suicide-Risk Pathway Audit Template",
+      colorTag: "red",
+      explanation:
+        "A suicide-risk pathway audit must assess whether safety plans are specific and actionable, not merely whether a risk form was completed. A generic or blank safety plan is a safety failure regardless of whether the form exists.",
+      keyPoints: [
+        "AIM: to assess whether high-risk patients receive reliable risk formulation, safety planning and follow-up.",
+        "STANDARDS: risk formulation documented, safety plan completed, means restriction discussed, family/carer involvement considered, follow-up within required timeframe, non-attendance escalation plan, GP/community handover, crisis contacts documented.",
+        "POSSIBLE INTERVENTIONS: safety-plan template, post-discharge call within 24–72 hours, missed-appointment pathway, family/carer contact prompt, re-audit.",
+      ],
+      commonTrap:
+        "Auditing whether a risk form was completed rather than whether the plan was specific and actionable.",
+    },
+    {
+      id: "s27",
+      order: 27,
+      title: "CAMHS Transition Audit Template",
+      colorTag: "teal",
+      explanation:
+        "CAMHS-to-adult transition is a high-risk period for disengagement and clinical deterioration. Transition must be treated as a staged handover, not a referral letter.",
+      keyPoints: [
+        "AIM: to improve transition from CAMHS to adult or youth services.",
+        "STANDARDS: transition planning starts early, joint CAMHS/adult meeting documented, young person consent and confidentiality discussed, family involvement considered, risk plan transferred, medication plan transferred, first adult/youth appointment booked, non-attendance followed up, GP informed.",
+        "POSSIBLE INTERVENTIONS: transition checklist, joint CAMHS/adult clinic, transition coordinator, young person information sheet, family meeting, re-audit.",
+      ],
+      commonTrap:
+        "Treating transition as a referral letter rather than a staged handover — a referral letter does not ensure the young person actually attends or that risk information is transferred.",
+    },
+    {
+      id: "s28",
+      order: 28,
+      title: "MEQ-Ready Answer Structure",
+      colorTag: "blue",
+      explanation:
+        "When asked 'How would you conduct an audit or quality improvement project?' use this ten-domain structure. Candidates who describe data collection only and not the change process do not pass governance MEQ stems.",
+      keyPoints: [
+        "1. CLARIFY PURPOSE: what problem triggered the audit — patient safety, complaint, incident, accreditation, variation in care or service improvement?",
+        "2. DEFINE SCOPE: which patients, timeframe, setting, pathway, data sources?",
+        "3. CHOOSE STANDARDS: local policy, RANZCP/state guidance, NSQHS standards, medication/ECT/seclusion/clozapine policy, legal requirements.",
+        "4. ENGAGE STAKEHOLDERS: consultants, nurses, registrars, pharmacists, consumers/carers, GPs/NGOs if relevant, quality/governance team.",
+        "5. DEFINE CRITERIA: specific, measurable, linked to standards, relevant to patient safety.",
+        "6. COLLECT BASELINE DATA: retrospective or prospective, clear sample, data tool, confidentiality/privacy.",
+        "7. ANALYSE AND FEEDBACK: present findings, no-blame approach, explain patient-safety relevance, identify barriers.",
+        "8. IMPLEMENT CHANGE: template/checklist, education, workflow redesign, policy update, role clarification, EMR prompt.",
+        "9. RE-AUDIT: set timeframe, measure same criteria, compare results, adjust plan.",
+        "10. REPORT AND SUSTAIN: governance committee, action owners, timeline, dashboard, embed in policy/induction.",
+      ],
+      meqApplication:
+        "Use these ten domains as answer headings. The examiner wants to see all ten — not just data collection and findings.",
+      commonTrap:
+        "Describing data collection only and not describing the change process — this is the single most common failure in governance MEQ stems.",
+    },
+    {
+      id: "s29",
+      order: 29,
+      title: "Examiner Phrases",
+      colorTag: "green",
+      explanation:
+        "These phrases signal governance thinking and differentiate high-scoring candidates. Use them to open or close sections of your MEQ answer.",
+      keyPoints: [
+        "'I would frame this as a clinical governance and patient-safety audit, not a disciplinary exercise.'",
+        "'The audit should measure current practice against explicit standards.'",
+        "'The audit cycle is incomplete unless findings lead to change and re-audit.'",
+        "'Feedback should be no-blame, factual and linked to patient outcomes.'",
+        "'Senior clinicians should be engaged early in defining standards and interpreting results.'",
+        "'Consumer and carer experience should be included where the process affects consent, communication or care experience.'",
+        "'Implementation should address workflow barriers, not simply tell staff to do better.'",
+        "'Results should be reported to the clinical governance committee with named actions, owners and timelines.'",
+      ],
+      commonTrap:
+        "Common traps that cost marks: confusing audit with research; collecting data without choosing a standard; auditing too many things at once; ignoring stakeholders; ignoring consumer or carer experience; blaming individuals before understanding workflow; presenting feedback punitively; failing to implement change; failing to re-audit; saying 'educate staff' only; ignoring workload or resource barriers; ignoring resistant senior doctors; failing to report to governance; failing to link audit to patient outcomes.",
+    },
+    {
+      id: "s30",
+      order: 30,
+      title: "Consultant-Level Summary",
+      colorTag: "green",
+      explanation:
+        "A consultant should design audit as a clinical governance project. The process should define the patient-safety problem, agree explicit standards, collect baseline data, and involve the MDT, consumers and relevant external partners. Results should be fed back in a no-blame manner, practical changes implemented, findings reported to governance with named responsibilities, timelines and a re-audit date. The aim is to confirm that care has improved and that the change is sustained.",
+      keyPoints: [
+        "DESIGN: patient-safety problem, agreed standards, baseline data, MDT and consumer involvement.",
+        "FEEDBACK: no-blame, factual, linked to patient outcomes, barriers identified.",
+        "IMPLEMENT: templates, prompts, workflow redesign, training, role clarification, policy update — address barriers, not just intent.",
+        "SUSTAIN: governance reporting, named owners, timelines, re-audit to confirm improvement, embed in induction and policy.",
+      ],
+      meqApplication:
+        "Close every audit MEQ answer with a re-audit and governance reporting statement — this is consistently where the highest-scoring candidates separate themselves.",
+    },
+  ],
+};
+
+export const ALL_NOTES: Note[] = [DISCHARGE_PLAN, CONFLICT_MANAGEMENT, COMPLAINT_PROCESS, INCIDENT_MANAGEMENT, CLINICAL_AUDIT];
