@@ -36,3 +36,9 @@ id = "97Q1ZuAr4u06QXk1wUnNr"
 uri = "file://question-registry.json"
 type = "unspecified"
 title = "question-registry.json (21 questions)"
+
+[[outputs]]
+id = "GYzrw6JLU8HI7E9l4vJcC"
+uri = "file://artifacts/meq-prep/meq_questions.json"
+type = "unspecified"
+title = "MEQ Questions — All 229 Questions (JSON)"
