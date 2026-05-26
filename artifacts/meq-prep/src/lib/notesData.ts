@@ -2732,4 +2732,546 @@ export const OPEN_DISCLOSURE: Note = {
   ],
 };
 
-export const ALL_NOTES: Note[] = [DISCHARGE_PLAN, CONFLICT_MANAGEMENT, COMPLAINT_PROCESS, INCIDENT_MANAGEMENT, CLINICAL_AUDIT, OPEN_DISCLOSURE];
+export const RESTRICTIVE_PRACTICES: Note = {
+  id: "restrictive_practices",
+  title: "Restrictive Practices: Seclusion, Restraint and Forced Medication",
+  category: "Clinical Governance / Patient Safety / Legal-Ethical Practice / Leadership",
+  description:
+    "A consultant-level framework for managing restrictive practices in psychiatry, including seclusion, physical restraint, mechanical restraint, chemical restraint, forced medication, rapid tranquillisation, ED restrictive practice, youth/older adult/ID settings, patient/family complaints, post-seclusion debrief and service-level reduction strategies.",
+  sections: [
+    {
+      id: "s01",
+      order: 1,
+      title: "Core Principle",
+      colorTag: "blue",
+      explanation:
+        "Restrictive practice is not a treatment plan. It is an emergency safety intervention. Seclusion, restraint and forced medication may be necessary in rare emergencies to prevent serious harm, but they must be last resort, least restrictive, legally authorised, time-limited, closely monitored, documented, reviewed and followed by debrief and prevention planning.",
+      keyPoints: [
+        "Restrictive practice must NEVER be used: as punishment, for staff convenience, because the ward is short-staffed, to compensate for poor facilities, to enforce compliance, to make a patient 'learn a lesson', or as a threat to coerce behaviour.",
+        "Restrictive practice is high-risk clinical governance — it requires legal authority, monitoring and review.",
+        "It must be safety-focused, not behaviour-control-focused.",
+        "Every episode should trigger debrief and prevention planning.",
+      ],
+      commonTrap:
+        "Treating seclusion or restraint as routine ward management rather than a last-resort emergency safety intervention.",
+    },
+    {
+      id: "s02",
+      order: 2,
+      title: "Definitions",
+      colorTag: "blue",
+      explanation:
+        "Understanding precise definitions matters in MEQs and clinical practice — particularly the distinction between medication used to treat illness and medication used primarily to restrict movement.",
+      keyPoints: [
+        "SECLUSION: confinement of a person alone in a room or area from which free exit is prevented.",
+        "PHYSICAL RESTRAINT: use of bodily force to restrict movement.",
+        "CHEMICAL RESTRAINT: medication used primarily to restrict movement or behaviour rather than to treat illness.",
+        "MECHANICAL RESTRAINT: use of a device to restrict movement.",
+        "FORCED MEDICATION / EMERGENCY SEDATION: medication administered without consent in an emergency or under relevant legal authority.",
+        "RESTRICTIVE PRACTICE: broader term covering seclusion, physical restraint, mechanical restraint, chemical restraint, environmental restriction and forced treatment.",
+      ],
+      commonTrap:
+        "Calling all emergency medication 'treatment' without considering whether it is functioning as chemical restraint.",
+    },
+    {
+      id: "s03",
+      order: 3,
+      title: "Ethical Frame",
+      colorTag: "purple",
+      explanation:
+        "Restrictive practice creates immediate ethical tension. A defensible consultant position names the tension and resolves it with a least-restrictive, time-limited, dignity-preserving approach.",
+      keyPoints: [
+        "COMMON TENSIONS: autonomy vs safety, dignity vs emergency containment, least restrictive care vs foreseeable harm, staff safety vs coercion minimisation, rapid control vs trauma-informed care, legal authority vs therapeutic alliance, individual safety vs ward safety.",
+        "DEFENSIBLE CONSULTANT POSITION: 'I would use the least restrictive intervention likely to maintain immediate safety, for the shortest possible duration, with active review and a plan to return to collaborative care.'",
+        "Restrictive practice has human-rights implications — it can feel humiliating, disempowering, frightening, punitive or re-traumatising.",
+        "In 'Discuss' questions: name the tension, take a defensible position, do not simply describe what you would do.",
+      ],
+      meqApplication:
+        "For 'Discuss' questions, name the ethical tension and take a defensible consultant position — examiners are looking for ethical reasoning, not just clinical description.",
+      commonTrap:
+        "Discussing staff safety only and ignoring dignity, autonomy and trauma.",
+    },
+    {
+      id: "s04",
+      order: 4,
+      title: "Last Resort Principle",
+      colorTag: "amber",
+      explanation:
+        "Restrictive practice is justified only when specific conditions are met. Each condition must be satisfied — not just imminent risk alone.",
+      keyPoints: [
+        "REQUIRED CONDITIONS: imminent or serious risk of harm, less restrictive alternatives have failed or are not feasible, intervention is proportionate to the risk, authorised under law and policy, trained staff are available, monitoring and review can occur, environment is safe, aim is safety — not punishment or convenience.",
+        "MEQ PHRASE: 'I would ensure restraint or seclusion is used only as a last resort after de-escalation, environmental modification, oral medication and collaborative options have failed or are unsafe.'",
+        "Proportionality matters — the level of restriction must match the level and immediacy of risk.",
+        "Faster is not safer — using restraint because it is quicker than de-escalation is a governance failure.",
+      ],
+      meqApplication:
+        "Always name the last resort principle before describing any restrictive intervention — it frames the entire response as governance-aware.",
+      commonTrap:
+        "Using restraint because it is faster than de-escalation.",
+    },
+    {
+      id: "s05",
+      order: 5,
+      title: "Least Restrictive Care",
+      colorTag: "green",
+      explanation:
+        "Least restrictive care means using the minimum necessary restriction to manage the immediate risk. It does not mean doing nothing — it means matching the intervention to the level and immediacy of risk.",
+      keyPoints: [
+        "ESCALATION PATHWAY: (1) engagement and verbal de-escalation → (2) quiet space or low-stimulus environment → (3) sensory modulation → (4) trusted staff or family involvement → (5) address pain/hunger/fear/intoxication/withdrawal → (6) oral medication → (7) increased observation → (8) brief physical intervention to prevent immediate harm → (9) emergency IM medication if necessary → (10) seclusion or restraint only when unavoidable.",
+        "Least restrictive care is not passive — it is active, structured and documented.",
+        "Each step should be tried or explicitly justified as unsafe before escalating.",
+        "The order is a guide, not a rigid protocol — immediate severe violence may require skipping early steps.",
+      ],
+      commonTrap:
+        "Equating 'least restrictive' with unsafe passivity — failure to act when risk is immediate is also a governance failure.",
+    },
+    {
+      id: "s06",
+      order: 6,
+      title: "De-Escalation First",
+      colorTag: "green",
+      explanation:
+        "De-escalation is the default first-line intervention unless there is immediate danger. It requires skill, environment and time — all of which can be structured.",
+      keyPoints: [
+        "USE: calm voice, non-threatening posture, enough space and clear exit route, reduced audience and stimulation, listening to grievance, offering choices, offering food/drink/blanket/quiet room, addressing pain/fear/withdrawal/intoxication/confusion, involving trusted person if safe, offering oral medication.",
+        "AVOID: arguing with delusions, cornering/crowding/prolonged eye contact, setting ultimatums early, raising voice, showing frustration, threatening restraint.",
+        "SET clear, respectful limits — not ultimatums that escalate the situation.",
+        "De-escalation is a clinical skill — lack of training is a workforce development gap, not a justification for skipping it.",
+      ],
+      meqApplication:
+        "In agitation stems, always mention de-escalation before restrictive practice unless the risk is immediate and severe — its omission is a consistent mark-losing gap.",
+      commonTrap:
+        "Going straight to IM medication without trying or considering de-escalation.",
+    },
+    {
+      id: "s07",
+      order: 7,
+      title: "Legal Criteria and Authority",
+      colorTag: "purple",
+      explanation:
+        "Restrictive practice must comply with local legislation and service policy. Jurisdiction-specific wording differs, but the general principles are stable. Involuntary legal status alone does not automatically authorise any restraint or forced medication.",
+      keyPoints: [
+        "CONSIDER: voluntary or involuntary legal status, decision-making capacity, emergency treatment provisions, Mental Health Act authority, duty of care, legal authority for forced medication, whether seclusion/restraint is permitted in that setting, who can authorise it.",
+        "ALSO CONSIDER: required review frequency, required documentation or register, patient rights information, notification to nominated person/family/guardian if required, tribunal/reporting obligations where relevant.",
+        "MEQ PHRASE: 'I would check local Mental Health Act and service policy because seclusion, restraint and forced medication require specific legal authority, documentation and review.'",
+        "Emergency treatment provisions allow short-term action — they do not replace the requirement for legal review and documentation.",
+      ],
+      commonTrap:
+        "Assuming involuntary status automatically authorises any restraint or forced medication — each type of restrictive practice has its own legal threshold.",
+    },
+    {
+      id: "s08",
+      order: 8,
+      title: "Dignity and Trauma-Informed Approach",
+      colorTag: "green",
+      explanation:
+        "Restrictive practice can be traumatic for patients and staff. Trauma-informed care requires assuming trauma may be present and structuring the intervention to minimise re-traumatisation — even when restraint is unavoidable.",
+      keyPoints: [
+        "TRAUMA-INFORMED CARE MEANS: assume trauma may be present, reduce coercion where possible, explain what is happening, preserve dignity, offer choice wherever possible, avoid unnecessary exposure, avoid humiliating language, use culturally safe approaches, avoid gender-insensitive staffing where possible.",
+        "ALSO: avoid prolonged prone restraint, attend to toileting/hydration/pain/clothing/menstrual care, return control to the patient as soon as safe, debrief afterwards.",
+        "MEQ PHRASE: 'Even if restraint is unavoidable, the manner of restraint must remain trauma-informed: explain, protect dignity, monitor, minimise duration and debrief.'",
+        "How restrictive practice is conducted is as important as whether it was clinically justified.",
+      ],
+      commonTrap:
+        "Justifying rough or humiliating practice because the patient was aggressive — the manner of restraint is a governance issue independent of the clinical justification.",
+    },
+    {
+      id: "s09",
+      order: 9,
+      title: "Monitoring During Restraint, Seclusion and Forced Medication",
+      colorTag: "red",
+      explanation:
+        "Monitoring is not optional — it is part of the intervention. Sedating a patient and leaving them unmonitored is a serious clinical and governance failure.",
+      keyPoints: [
+        "PHYSICAL RESTRAINT MONITORING: airway, breathing, circulation, consciousness, oxygen saturation, pulse, blood pressure, respiratory rate, temperature if indicated, signs of positional asphyxia, pain or injury, agitation level, need to cease as soon as possible.",
+        "AFTER IM MEDICATION / RAPID TRANQUILLISATION: respiratory rate, oxygen saturation, pulse, blood pressure, temperature, level of consciousness, airway protection, extrapyramidal symptoms, QTc/cardiac risk where relevant, over-sedation, need for medical transfer.",
+        "SECLUSION MONITORING: mental state, risk to self, physical state, distress, hydration, toileting, temperature and comfort, injury, medication effects, readiness to end seclusion, review frequency.",
+        "Monitoring frequency and documentation requirements are set by local policy — know your policy and document compliance.",
+      ],
+      commonTrap:
+        "Sedating a patient and leaving them unmonitored — this is a patient safety failure that can be fatal.",
+    },
+    {
+      id: "s10",
+      order: 10,
+      title: "Medical Review",
+      colorTag: "red",
+      explanation:
+        "Medical review is required after or during restrictive practice in a range of situations. Treating restraint as a purely behavioural event and missing physical-health risk is a consistent MEQ failure.",
+      keyPoints: [
+        "MEDICAL REVIEW IS REQUIRED WHEN: physical restraint occurred, IM sedation or forced medication was used, injury occurred, patient is heavily sedated, prolonged seclusion or restraint occurred, patient has medical comorbidity.",
+        "ALSO REQUIRED WHEN: intoxication/withdrawal/delirium is possible, patient is an older adult/young person/pregnant/has intellectual disability, there is respiratory/cardiac/neurological risk, patient complains of pain or distress.",
+        "MEQ PHRASE: 'I would arrange prompt medical review because restraint, seclusion and emergency sedation carry physical risks, particularly respiratory compromise, injury, delirium, intoxication and medication adverse effects.'",
+        "Medical review is both a clinical and governance requirement — its absence after a significant episode is a documentation and policy gap.",
+      ],
+      commonTrap:
+        "Treating restraint as a purely behavioural event and missing physical-health risk.",
+    },
+    {
+      id: "s11",
+      order: 11,
+      title: "Documentation",
+      colorTag: "purple",
+      explanation:
+        "Documentation must be contemporaneous, factual and specific. Documenting the event without documenting alternatives tried or legal authority is the most common documentation failure in restrictive practice.",
+      keyPoints: [
+        "DOCUMENT: reason for restrictive practice, immediate risk, alternatives tried or considered, why less restrictive options were insufficient, legal authority, who authorised the intervention, time commenced, staff involved, type of restraint/seclusion/medication, medication dose/route/time.",
+        "ALSO DOCUMENT: physical and mental-state monitoring, injuries, medical review, duration, reviews and decision to continue or end, family/nominated person contact where relevant, debrief offered, incident report, plan to prevent recurrence.",
+        "AVOID: 'patient was difficult', 'staff had no choice' without evidence, 'for behaviour management', retrospective notes, pejorative labels, vague 'risk to others' without specifics.",
+        "Good documentation answers: what was the risk, what was tried first, who authorised it, how long did it last, what was monitored, and what happens next.",
+      ],
+      commonTrap:
+        "Documenting the event without documenting alternatives tried or legal authority — these are the two elements most scrutinised in governance review.",
+    },
+    {
+      id: "s12",
+      order: 12,
+      title: "Reporting and Review",
+      colorTag: "purple",
+      explanation:
+        "Restrictive practice events should trigger service-level review, not just clinical note completion. Completing the seclusion register without reviewing preventability is incomplete governance.",
+      keyPoints: [
+        "REPORT THROUGH: seclusion/restraint register, incident reporting system, nurse unit manager, treating consultant, clinical director if serious, restrictive-practice committee, quality and safety committee, complaints unit if complaint arises, legal/risk team if injury or serious harm, external statutory reporting where required.",
+        "REVIEW SHOULD ASK: was it necessary, was it lawful, were alternatives attempted, was it proportionate, was it the shortest duration possible, was dignity protected, was monitoring adequate, was medical review timely, was family/carer informed appropriately, what can prevent recurrence?",
+        "Reporting obligations vary by jurisdiction — some require statutory notification for any seclusion episode.",
+        "The review is not a blame exercise — it is a learning and prevention process.",
+      ],
+      commonTrap:
+        "Completing the seclusion register but not reviewing preventability — the register records what happened; the review determines what should change.",
+    },
+    {
+      id: "s13",
+      order: 13,
+      title: "Debrief Patient and Staff",
+      colorTag: "teal",
+      explanation:
+        "Debrief is both a clinical and governance intervention. It must involve both the patient and staff — and must lead to an updated care plan and prevention plan.",
+      keyPoints: [
+        "PATIENT DEBRIEF — ASK: what happened from your perspective, what made you feel unsafe or angry, what helped, what made it worse, were you injured, was anything humiliating or frightening, what can we do differently next time, what early warning signs should staff notice, what alternatives would you prefer?",
+        "STAFF DEBRIEF — ASK: what was the trigger, what alternatives were tried, what worked, what escalated the situation, was anyone injured, was policy followed, was monitoring adequate, did staffing or environment contribute, what should change?",
+        "Debrief should lead to an updated care plan and individual prevention plan — not just a conversation.",
+        "Debriefing staff only and not the patient is a consistent failure — the patient's perspective is both clinically valuable and an open disclosure obligation.",
+      ],
+      commonTrap:
+        "Debriefing staff only and not the patient — and debriefing without translating findings into a changed care plan.",
+    },
+    {
+      id: "s14",
+      order: 14,
+      title: "Patient/Family Complaint After Restraint or Seclusion",
+      colorTag: "red",
+      explanation:
+        "This is a classic RANZCP MEQ scenario. The response requires both open disclosure (if harm occurred) and complaint management — as parallel streams, not sequential ones.",
+      keyPoints: [
+        "IMMEDIATE APPROACH: ensure patient is safe now, review physical and psychological harm, acknowledge distress, explain complaint and open disclosure pathways, preserve records, review incident report and policy, speak with staff involved, offer meeting with patient/family, involve senior nurse or clinical director where appropriate, avoid defensiveness.",
+        "IN THE MEETING: apologise or express regret where appropriate, explain known facts, acknowledge suboptimal care if clear, explain what is still being reviewed, avoid blaming individuals early, explain future prevention, offer further support, mitigate risk of future disengagement.",
+        "Both the complaint pathway and open disclosure run concurrently — one does not replace the other.",
+        "Defending staff immediately rather than acknowledging harm destroys trust and escalates the complaint.",
+      ],
+      meqApplication:
+        "Mention complaint process, open disclosure if harm occurred, incident review and system improvement — all four streams should appear in the MEQ answer.",
+      commonTrap:
+        "Defending staff immediately rather than acknowledging harm and reviewing the incident fairly.",
+    },
+    {
+      id: "s15",
+      order: 15,
+      title: "Staff Using Threat of Restraint",
+      colorTag: "amber",
+      explanation:
+        "Threatening restraint is itself a governance problem — even when no restraint actually occurs. It escalates fear and aggression, damages trust, may be coercive and unlawful, and normalises restrictive practice.",
+      keyPoints: [
+        "EXAMPLES: 'If you do not take medication, we will restrain you.' / 'Stop yelling or you will go to seclusion.' / 'If you refuse observations, we will hold you down.' / 'Security will sort you out.'",
+        "WHY THIS IS UNSAFE: escalates fear and aggression, damages trust, may be coercive and unlawful, is not trauma-informed, normalises restrictive practice, may reflect staff anxiety or poor skill, may lead to complaints.",
+        "CONSULTANT RESPONSE: stop the practice, clarify expectations with staff, provide de-escalation training, review ward culture, support anxious staff, audit incidents, reinforce that restrictive practice is not punishment or a negotiation tool.",
+        "Coercive language is a ward culture indicator — its presence signals a need for workforce development and leadership intervention.",
+      ],
+      commonTrap:
+        "Ignoring coercive language because 'no restraint actually happened' — the threat itself is a governance problem.",
+    },
+    {
+      id: "s16",
+      order: 16,
+      title: "Restrictive Practice in ED",
+      colorTag: "red",
+      explanation:
+        "ED restrictive practice is high risk because of noise, crowding, intoxication, delirium, unclear legal authority and rushed sedation. The most important first step is ruling out medical causes of agitation.",
+      keyPoints: [
+        "HIGH-RISK FACTORS IN ED: noise and crowding, long waits, intoxication, delirium or medical illness, limited psychiatric spaces, security presence, unclear legal authority, rushed sedation, poor monitoring after sedation, stigma and discrimination, handover gaps.",
+        "CONSULTANT APPROACH: prioritise de-escalation and medical assessment, assess delirium/intoxication/withdrawal/pain/hypoxia/head injury/hypoglycaemia, use quiet area if possible, involve family or support person if safe, offer oral medication first, use IM medication only when necessary.",
+        "ALSO: ensure resuscitation and monitoring capacity, clarify legal authority, document rationale and monitoring, ensure handover to psychiatry or inpatient team, review restraint/seclusion episode after transfer.",
+        "Treating ED agitation as purely psychiatric and missing delirium, intoxication or medical deterioration is both a clinical and governance failure.",
+      ],
+      commonTrap:
+        "Treating ED agitation as purely psychiatric and missing delirium, intoxication or medical deterioration.",
+    },
+    {
+      id: "s17",
+      order: 17,
+      title: "Youth Setting",
+      colorTag: "teal",
+      explanation:
+        "Restrictive practice in children and adolescents carries extra risk because of developmental trauma, attachment disruption, and the high potential for retraumatisation. An adult restrictive-practice response is rarely appropriate.",
+      keyPoints: [
+        "CONSIDER: developmental trauma, attachment disruption, child protection involvement, family/whānau involvement, school or care setting, capacity and consent, developmental communication, risk of retraumatisation, cultural safety, need for paediatric medical review.",
+        "USE FIRST: trusted adult, family/whānau/cultural worker, quiet child-safe space, sensory tools, verbal containment, food/blanket/comfort items, time, safe oral medication if needed, medical review.",
+        "Consent and capacity must be assessed developmentally — not using adult standards.",
+        "Child protection obligations apply — if restrictive practice involves child protection concerns, notify accordingly.",
+      ],
+      commonTrap:
+        "Using an adult restrictive-practice response in a young person without developmental or trauma formulation.",
+    },
+    {
+      id: "s18",
+      order: 18,
+      title: "Older Adult Setting",
+      colorTag: "teal",
+      explanation:
+        "Restrictive practice in older adults is high risk because agitation often reflects an underlying medical cause — not a primary psychiatric emergency. Sedating without identifying the cause is both clinically inappropriate and dangerous.",
+      keyPoints: [
+        "AGITATION MAY REFLECT: delirium, pain, infection, constipation, urinary retention, hypoxia, medication side effects, dementia, sensory impairment, fear.",
+        "RISKS OF RESTRICTIVE PRACTICE IN OLDER ADULTS: falls, delirium worsening, pressure injury, aspiration, stroke/cardiac events, over-sedation, loss of mobility, death, carer distress.",
+        "FIRST APPROACH: diagnose cause of behaviour, pain relief, hydration, toileting, sensory aids, familiar staff or family, reduce noise, behavioural analysis, avoid anticholinergic/sedating burden, medication only as last resort at lowest effective dose.",
+        "Any sedating medication in an older adult requires careful dose selection, monitoring and medical review.",
+      ],
+      commonTrap:
+        "Sedating an older adult with 'behavioural disturbance' without looking for delirium, pain or medical cause.",
+    },
+    {
+      id: "s19",
+      order: 19,
+      title: "Intellectual Disability / Neurodevelopmental Setting",
+      colorTag: "teal",
+      explanation:
+        "Restrictive practice risk is increased when staff misinterpret communication as 'behaviour.' Most escalation in this population represents unmet needs, not treatment-resistant agitation.",
+      keyPoints: [
+        "CONSIDER: communication needs, sensory overload, pain or medical cause, routine disruption, trauma, unmet needs, autism/ID support plan, positive behaviour support, carer input, environmental triggers.",
+        "PLAN: communication aids, sensory profile, known calming strategies, positive behaviour support plan, carer/family involvement, avoid repeated coercion, medication only with clear indication and monitoring, report and review any restrictive practice.",
+        "Positive behaviour support is the evidence-based framework for this population — it replaces reactive restrictive practice with proactive strategy.",
+        "Restricting a person with ID who is distressed without understanding the communicative function of the behaviour is a clinical governance failure.",
+      ],
+      commonTrap:
+        "Attributing distress to 'challenging behaviour' without assessing communication, sensory and medical needs.",
+    },
+    {
+      id: "s20",
+      order: 20,
+      title: "Forced Medication / Rapid Tranquillisation",
+      colorTag: "red",
+      explanation:
+        "Forced medication is high-stakes. It requires a clinical indication, legal authority, safety checks, appropriate drug selection, post-administration monitoring and review. Using IM sedation as a shortcut when oral medication was possible is a governance failure.",
+      keyPoints: [
+        "BEFORE GIVING — CHECK: indication, immediate risk, alternatives attempted, capacity and consent, legal authority, allergies, medical comorbidity, intoxication, pregnancy where relevant, current medications, QTc/cardiac risk, respiratory risk, elderly/frail/youth status, staffing and monitoring capacity, resuscitation availability.",
+        "PREFER: oral medication, familiar medication if known, lowest effective dose, avoid unnecessary polypharmacy, avoid excessive benzodiazepine/antipsychotic combination, rapid review after effect.",
+        "Parenteral psychotropics require monitoring because of respiratory, cardiovascular and airway risks — resuscitation equipment and trained staff must be immediately available.",
+        "Key distinction: medication to treat acute illness vs medication used primarily to restrict movement — the second is chemical restraint and requires chemical restraint documentation and authority.",
+      ],
+      commonTrap:
+        "Using IM sedation as a shortcut when the patient could have accepted oral medication.",
+    },
+    {
+      id: "s21",
+      order: 21,
+      title: "Service-Level Reduction Strategies",
+      colorTag: "green",
+      explanation:
+        "Restrictive practice reduction is a leadership and change-management task, not only a bedside skill. Telling staff to 'do better' without structural change reliably fails.",
+      keyPoints: [
+        "LEADERSHIP AND CULTURE: set expectation that restrictive practice is last resort, senior review of every episode, speak up against threats or punitive use, include restrictive practice in governance meetings, support staff without blaming staff.",
+        "DATA: measure seclusion/restraint rates, duration, time of day, patient group, ward, staff mix, injuries, repeat episodes, ethnicity/cultural disparities, complaints, debrief completion.",
+        "WORKFORCE DEVELOPMENT: de-escalation training, trauma-informed care, cultural safety, safe restraint technique, rapid tranquillisation monitoring, reflective practice, simulation training.",
+        "INDIVIDUAL PREVENTION TOOLS: sensory modulation plans, advance statements, early warning signs, patient preference plans, aggression prevention plan, post-incident review, relapse plan, medication plan.",
+        "ENVIRONMENT: low-stimulus spaces, sensory rooms, natural light, quiet areas, safe outdoor access, less crowding, culturally safe spaces, dignity-preserving facilities.",
+        "CONSUMER/CARER INVOLVEMENT: co-design policy, consumer consultants, family/carer feedback, lived-experience workforce, review incidents with patient perspective, avoid tokenism.",
+      ],
+      commonTrap:
+        "Trying to reduce restrictive practice only by telling staff to 'do better' — structural, environmental and cultural change is required.",
+    },
+    {
+      id: "s22",
+      order: 22,
+      title: "Six Core Strategies",
+      colorTag: "green",
+      explanation:
+        "The Six Core Strategies are commonly referenced in seclusion and restraint reduction. They provide a compact, evidence-based framework for service-level MEQ answers.",
+      keyPoints: [
+        "1. LEADERSHIP TOWARDS ORGANISATIONAL CHANGE — senior clinicians model and mandate last-resort use.",
+        "2. USE OF DATA TO INFORM PRACTICE — measure rates, duration, triggers, disparities and debrief completion.",
+        "3. WORKFORCE DEVELOPMENT — de-escalation, trauma-informed care, cultural safety, safe restraint technique.",
+        "4. USE OF PREVENTION TOOLS — sensory plans, advance statements, individual prevention plans.",
+        "5. CONSUMER ROLES IN INPATIENT SETTINGS — consumer consultants, co-design, lived-experience workforce.",
+        "6. DEBRIEFING TECHNIQUES — structured post-incident patient and staff debrief linked to care-plan revision.",
+      ],
+      meqApplication:
+        "If asked how to reduce seclusion rates, mention all six: leadership, data, workforce training, prevention tools, consumer involvement and debrief — omitting any of the six is a mark-losing gap.",
+      commonTrap:
+        "Offering only staff education and missing leadership, data and consumer involvement.",
+    },
+    {
+      id: "s23",
+      order: 23,
+      title: "Safewards",
+      colorTag: "green",
+      explanation:
+        "Safewards is a practical ward-level model to reduce conflict and containment by modifying the social environment and staff responses to flashpoints. It is useful when asked how to reduce seclusion rates or change ward culture.",
+      keyPoints: [
+        "SAFEWARDS AIMS TO: reduce conflict, reduce containment, improve safety, increase mutual support between staff and patients, modify staff responses to flashpoints.",
+        "SAFEWARDS-STYLE INTERVENTIONS: clear mutual expectations, calm communication, talk-down/de-escalation, positive words, discharge messages, reassurance, soft words, bad-news mitigation, knowing each other, mutual help meetings.",
+        "Safewards works at the ward culture level — it changes what staff routinely do, not just what they do in crises.",
+        "Mentioning Safewards by name without explaining practical ward-level changes is a superficial answer — describe what it actually involves.",
+      ],
+      meqApplication:
+        "Safewards is useful when asked how to reduce seclusion rates or change ward culture — pair the name with specific examples of what changes.",
+      commonTrap:
+        "Mentioning Safewards by name without explaining practical ward-level changes.",
+    },
+    {
+      id: "s24",
+      order: 24,
+      title: "Reducing Seclusion Rates: Audit and QI Plan",
+      colorTag: "purple",
+      explanation:
+        "A consultant-level QI plan for seclusion reduction goes beyond staff training. It requires baseline data, standards review, stakeholder engagement, consumer input, incident review, environmental change and re-audit.",
+      keyPoints: [
+        "QI PLAN STEPS: (1) baseline data, (2) standards/policy review, (3) stakeholder engagement, (4) consumer/carer input, (5) incident review of recent episodes, (6) staff training, (7) de-escalation and trauma-informed care, (8) environmental changes, (9) individual prevention plans, (10) debrief process, (11) dashboard/governance reporting, (12) re-audit.",
+        "AUDIT MEASURES: number of seclusion events, duration, repeat consumers, time of day, diagnosis/age/cultural group, precipitating factors, alternatives tried, medical review time, debrief completion, injuries, complaints, staff injury or distress.",
+        "Reporting seclusion numbers only without looking at duration, repeat episodes, triggers and debrief completion is superficial governance.",
+        "Ethnicity and cultural group data must be collected — over-representation of First Nations and CALD patients in restrictive practice is a documented systemic issue.",
+      ],
+      commonTrap:
+        "Reporting seclusion numbers only, without looking at duration, repeat episodes, triggers and debrief completion.",
+    },
+    {
+      id: "s25",
+      order: 25,
+      title: "Responding to Restraint After Aggression",
+      colorTag: "red",
+      explanation:
+        "Restraint after aggression requires a multi-stream simultaneous response: the patient, the staff involved, other patients and governance review — not just management of the person who was restrained.",
+      keyPoints: [
+        "IMMEDIATE RESPONSE: ensure patient/staff/other patients are safe, treat injuries, assess mental state and physical state, consider delirium/intoxication/withdrawal/pain, reduce stimulation, end restraint as soon as safe, monitor vitals and airway, arrange medical review, document, notify consultant and NUM, complete incident report.",
+        "AFTER EPISODE: review whether restraint was necessary, review alternatives attempted, debrief patient and staff, update formulation and care plan, identify triggers and prevention strategies, consider trauma and cultural factors, support injured staff or patients, communicate with family where appropriate.",
+        "Governance review is required if there was injury, prolonged restraint, complaint or policy breach.",
+        "The other patients who witnessed the event are also affected — they need assessment and support.",
+      ],
+      commonTrap:
+        "Only managing the aggressive patient and forgetting staff injury, other patients and governance review.",
+    },
+    {
+      id: "s26",
+      order: 26,
+      title: "Seclusion Review",
+      colorTag: "purple",
+      explanation:
+        "When reviewing a seclusion episode, the clinical and governance questions are equally important. The key consultant question is: 'What needs to change so that this person is less likely to be secluded again?'",
+      keyPoints: [
+        "REVIEW ASKS: why was seclusion commenced, was there imminent risk, what alternatives were attempted, who authorised it, was legal/policy process followed, how long did it last, was the patient monitored physically and psychologically, was medical review completed, were dignity needs met, was the patient reviewed for release regularly, was family/nominated person informed, was debrief completed, what prevention plan now exists?",
+        "POSSIBLE CHANGES AFTER REVIEW: medication review, leave review, sensory plan, staff approach, cultural support, trauma formulation, ward environment, family input, transfer to safer setting.",
+        "The consultant should actively drive prevention planning — not simply sign off that the seclusion was documented correctly.",
+        "Reviewing whether seclusion was lawful but not asking how to prevent recurrence is incomplete governance.",
+      ],
+      commonTrap:
+        "Reviewing whether seclusion was lawful but not asking how to prevent recurrence.",
+    },
+    {
+      id: "s27",
+      order: 27,
+      title: "Post-Seclusion / Post-Restraint Debrief Template",
+      colorTag: "teal",
+      explanation:
+        "A structured debrief template ensures both patient and staff perspectives are captured and translated into governance output. Debriefing without a changed care plan is incomplete.",
+      keyPoints: [
+        "PATIENT DEBRIEF: 'Can you tell me what happened from your perspective?' / 'What were you feeling before it escalated?' / 'What did staff do that helped?' / 'What made things worse?' / 'Were you hurt or frightened?' / 'Was there anything humiliating?' / 'What would help next time?' / 'Can we write a plan together?'",
+        "STAFF DEBRIEF: 'What was the trigger?' / 'What alternatives were tried?' / 'What warning signs were missed?' / 'Was staffing/environment a factor?' / 'Was policy followed?' / 'Was monitoring adequate?' / 'Was anyone injured?' / 'What should we change?'",
+        "GOVERNANCE OUTPUT: updated care plan, individual prevention plan, staff learning, environmental changes, audit data, incident report, governance review if serious.",
+        "The debrief template is reusable for every episode — it standardises both the learning and the governance record.",
+      ],
+      commonTrap:
+        "Debriefing without translating it into a changed care plan and prevention strategy.",
+    },
+    {
+      id: "s28",
+      order: 28,
+      title: "MEQ-Ready Answer Structure",
+      colorTag: "blue",
+      explanation:
+        "When asked 'How would you manage seclusion/restraint/forced medication?' use this seven-domain structure. Forgetting the post-event debrief and prevention plan is the most common final-stem failure.",
+      keyPoints: [
+        "1. IMMEDIATE SAFETY: protect patient/staff/others, assess imminent risk, call trained staff/security only as needed, remove weapons or means, maintain safe environment.",
+        "2. DE-ESCALATION AND LEAST RESTRICTIVE ALTERNATIVES: verbal de-escalation, quiet space, reduce stimulation, offer choices, address medical causes, involve trusted person, offer oral medication.",
+        "3. LEGAL AND ETHICAL THRESHOLD: capacity, consent/refusal, legal status, Mental Health Act or policy authority, proportionality, last resort, shortest duration.",
+        "4. IF RESTRICTIVE PRACTICE UNAVOIDABLE: trained staff, approved protocol, safe environment, dignity and trauma-informed approach, monitoring, medical review, end as soon as safe.",
+        "5. DOCUMENTATION AND REPORTING: rationale, alternatives tried, legal authority, time/duration, monitoring, medication, injuries, medical review, register/incident report.",
+        "6. DEBRIEF AND CARE-PLAN REVISION: patient debrief, staff debrief, family/carer communication, update formulation and prevention plan.",
+        "7. GOVERNANCE AND REDUCTION: review episode, identify system factors, audit rates, staff training, consumer/carer involvement, environmental changes, re-audit.",
+      ],
+      meqApplication:
+        "Use these seven domains as answer headings. The examiner wants to see all seven — not just the clinical intervention.",
+      commonTrap:
+        "Forgetting the post-event debrief and prevention plan — these are the domains that separate competent from consultant-level answers.",
+    },
+    {
+      id: "s29",
+      order: 29,
+      title: "Examiner Phrases",
+      colorTag: "green",
+      explanation:
+        "These phrases signal consultant-level governance thinking. Use them to open or close sections of your MEQ answer.",
+      keyPoints: [
+        "'Restrictive practice is an emergency safety intervention, not a treatment plan.'",
+        "'I would use the least restrictive option likely to prevent immediate harm.'",
+        "'Seclusion/restraint should never be used as punishment, convenience or a substitute for staffing.'",
+        "'I would document alternatives attempted or why they were unsafe.'",
+        "'The manner of restraint must preserve dignity and minimise trauma.'",
+        "'Forced medication requires legal authority, clinical indication, monitoring and review.'",
+        "'Every episode should lead to debrief and an individual prevention plan.'",
+        "'Reducing seclusion requires leadership, data, workforce development, consumer involvement and governance review.'",
+      ],
+      commonTrap:
+        "Not using consultant-level governance language in final stems — clinical description without governance framing signals junior-doctor thinking.",
+    },
+    {
+      id: "s30",
+      order: 30,
+      title: "Common Traps",
+      colorTag: "amber",
+      explanation:
+        "Use this section as a checklist before submitting any MEQ answer on restrictive practice. Each item below represents a documented mark-losing gap.",
+      keyPoints: [
+        "Going straight to IM medication without mentioning de-escalation.",
+        "Omitting medical causes of agitation (delirium, intoxication, pain, withdrawal).",
+        "Failing to mention legal authority for restraint, seclusion or forced medication.",
+        "Failing to monitor airway and vitals after sedation.",
+        "Ignoring trauma-informed care and dignity.",
+        "Treating seclusion as routine ward management rather than last resort.",
+        "Justifying restraint because of staff shortage or ward busyness.",
+        "Using or tolerating restraint as a threat or negotiation tool.",
+        "Failing to debrief both patient and staff.",
+        "Failing to involve family/carers after serious incident.",
+        "Ignoring staff support needs after a significant episode.",
+        "Missing complaint/open disclosure pathway after harm.",
+        "Recommending education only without audit, governance change or structural intervention.",
+      ],
+      meqApplication:
+        "Use this section as a checklist before submitting an answer on restrictive practice — any item present in the stem that is absent from your answer is a lost mark.",
+    },
+    {
+      id: "s31",
+      order: 31,
+      title: "Consultant-Level Summary",
+      colorTag: "green",
+      explanation:
+        "This paragraph is reusable in MEQ final stems involving seclusion, restraint, forced medication, ED aggression, complaint after restraint or reducing restrictive practice rates.",
+      keyPoints: [
+        "IMMEDIATE: last-resort safety intervention, legal authority, least restrictive reasoning, trained staff, trauma-informed dignity.",
+        "DURING: close physical and mental-state monitoring, medical review, documentation and incident reporting.",
+        "AFTER: debrief patient and staff, communicate with family/carers where appropriate, update individual prevention plan, review episode through governance.",
+        "SERVICE LEVEL: leadership, data monitoring, staff training, consumer involvement, Safewards/Six Core Strategies, environmental changes, re-audit.",
+      ],
+      meqApplication:
+        "'I would approach restrictive practice as a last-resort safety intervention requiring legal authority, least restrictive reasoning, trained staff, trauma-informed dignity, close physical and mental-state monitoring, medical review, documentation and incident reporting. After the event I would debrief the patient and staff, communicate with family/carers where appropriate, update the individual prevention plan and review the episode through governance. At service level, I would reduce restrictive practice through leadership, data monitoring, staff training, consumer involvement, Safewards/Six Core Strategies, environmental changes and re-audit.'",
+    },
+  ],
+};
+
+export const ALL_NOTES: Note[] = [DISCHARGE_PLAN, CONFLICT_MANAGEMENT, COMPLAINT_PROCESS, INCIDENT_MANAGEMENT, CLINICAL_AUDIT, OPEN_DISCLOSURE, RESTRICTIVE_PRACTICES];
