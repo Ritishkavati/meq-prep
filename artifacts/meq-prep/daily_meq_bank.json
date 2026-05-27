@@ -1,5 +1,6 @@
 [
   {
+    "meqNumber": 1,
     "id": "meq_001",
     "title": "Adil — Consultation Liaison",
     "case": "Adil, 32",
@@ -220,6 +221,7 @@
     ]
   },
   {
+    "meqNumber": 2,
     "id": "meq_002",
     "title": "Danica — Perinatal Psychiatry",
     "case": "Danica, 34",
@@ -409,6 +411,7 @@
     ]
   },
   {
+    "meqNumber": 3,
     "id": "meq_003",
     "title": "Hypnotics Quality Improvement",
     "case": "Inpatient Unit QI",
@@ -623,6 +626,7 @@
     ]
   },
   {
+    "meqNumber": 4,
     "id": "meq_004",
     "title": "Aaliyah — Postpartum Psychosis, Cultural Safety and System Failure",
     "case": "Aaliyah, 24, Aboriginal woman, 10 days postpartum",
@@ -797,6 +801,7 @@
     ]
   },
   {
+    "meqNumber": 5,
     "id": "meq_005",
     "title": "Mason — Inpatient Near-Miss, Observation Failure and Governance",
     "case": "Mason, 31, voluntary inpatient, depression and alcohol use",
@@ -956,6 +961,7 @@
     ]
   },
   {
+    "meqNumber": 6,
     "id": "meq_006",
     "title": "Nina — Adolescent Trauma, Competing Duties and Post-Overdose Disposition",
     "case": "Nina, 15, Year 10 student, pending court evidence, self-harm and cannabis use",
@@ -1116,6 +1122,7 @@
     ]
   },
   {
+    "meqNumber": 7,
     "id": "meq_007",
     "title": "Hemi Thompson — Delirium, Parkinson's Polypharmacy and Adverse Medication Event",
     "case": "Hemi Thompson, 76, Māori man, Parkinson's disease, delirium, haloperidol adverse event",
@@ -1279,6 +1286,7 @@
     ]
   },
   {
+    "meqNumber": 8,
     "id": "meq_008",
     "title": "Mika — Aboriginal Adolescent, Psychosis Risk and Cultural Re-engagement",
     "case": "Mika, 15, Aboriginal boy, CAMHS and ED interface",
@@ -1414,6 +1422,7 @@
     ]
   },
   {
+    "meqNumber": 9,
     "id": "meq_009",
     "title": "Amara — Seclusion, Trauma-Informed Care and Governance",
     "case": "Amara, 29, involuntary admission, bipolar disorder manic with psychotic features, childhood sexual trauma",
@@ -1547,6 +1556,7 @@
     ]
   },
   {
+    "meqNumber": 10,
     "id": "meq_010",
     "title": "Dr Ethan K — Impaired Practitioner, Opioid Dependence and Professional Certification",
     "case": "Dr Ethan K, 45, emergency physician, depression and opioid dependence",
@@ -1676,6 +1686,7 @@
     ]
   },
   {
+    "meqNumber": 11,
     "id": "meq_011",
     "title": "Nadia — Syrian Refugee, CAMHS, Family Conflict and Online Exploitation",
     "case": "Nadia, 13, Syrian refugee girl, CAMHS, self-harm, online sexual exploitation",
@@ -1804,6 +1815,7 @@
     ]
   },
   {
+    "meqNumber": 12,
     "id": "meq_012",
     "title": "Jane — Postpartum Bipolar Psychosis, Treatment and Placement",
     "case": "Jane, 34, bipolar I disorder, 10 days postpartum, lithium cessation in pregnancy",
@@ -1934,6 +1946,7 @@
     ]
   },
   {
+    "meqNumber": 13,
     "id": "meq_013",
     "title": "Wiremu — Dialysis Refusal, Spiritual Belief and Capacitous Autonomy",
     "case": "Wiremu, 58, Māori man, end-stage renal disease, schizophrenia, dialysis refusal",
@@ -2096,6 +2109,7 @@
     ]
   },
   {
+    "meqNumber": 14,
     "id": "meq_014",
     "title": "Youth Mental Health Service — Aboriginal Regional Area, Partnership and Safety",
     "case": "Regional public mental health service, Aboriginal communities, fragmented youth care",
@@ -2265,6 +2279,7 @@
     ]
   },
   {
+    "meqNumber": 15,
     "id": "meq_015",
     "title": "Remote Youth Crisis — Telehealth, Workforce Risk and Pathway Failure",
     "case": "Remote town, nurse practitioner, visiting GP, telehealth psychiatry, no local inpatient unit",
@@ -2432,6 +2447,7 @@
     ]
   },
   {
+    "meqNumber": 16,
     "id": "meq_016",
     "title": "ECT Service Audit, Change Management and Consumer Complaint",
     "case": "Metropolitan public hospital ECT service, audit and quality improvement",
@@ -2597,6 +2613,7 @@
     ]
   },
   {
+    "meqNumber": 17,
     "id": "meq_017",
     "title": "Documentation, GP Liaison, Lithium Toxicity and Shared-Care Quality Assurance",
     "case": "Community mental health team, high caseloads, GP complaints, lithium toxicity adverse outcome",
@@ -2764,6 +2781,7 @@
     ]
   },
   {
+    "meqNumber": 18,
     "id": "meq_018",
     "title": "Alex — Gender-Diverse Patient, ED Stigma and Complaint",
     "case": "Alex, 22, transgender man, ED presentation, self-harm and family conflict",
@@ -2933,6 +2951,7 @@
     ]
   },
   {
+    "meqNumber": 19,
     "id": "meq_019",
     "title": "Donna — Acute Relapse, Discharge Barriers and Nurse–Social Worker Disagreement",
     "case": "Donna, 39, inpatient, alcohol relapse, family violence, homelessness",
@@ -3062,6 +3081,7 @@
     ]
   },
   {
+    "meqNumber": 20,
     "id": "meq_020",
     "title": "Sara — Community Care, NGO Collateral and Inter-Agency Conflict",
     "case": "Sara, 31, schizoaffective disorder, community team, NGO support",
@@ -3225,6 +3245,7 @@
     ]
   },
   {
+    "meqNumber": 21,
     "id": "meq_021",
     "title": "Mia — Peer Worker Boundaries, Recovery-Oriented Care and Safety",
     "case": "Mia, 19, community youth mental health, peer support worker, self-harm",

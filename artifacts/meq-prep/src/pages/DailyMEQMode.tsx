@@ -4303,9 +4303,10 @@ export default function DailyMEQMode() {
       "Formulation / Diagnostic Reasoning",
       "Assessment Maintenance",
     ];
-    const meqsWithStats = MEQ_BANK.map((meq) => ({
+    const meqsWithStats = MEQ_BANK.map((meq, idx) => ({
       meq,
       stats: getMEQStats(meq.id, allAttempts),
+      globalIndex: idx + 1,
     }));
     const filteredMEQs = meqsWithStats.filter(({ meq }) => {
       if (domainFilter !== "all" && meq.primaryDomain !== domainFilter) return false;
@@ -4346,80 +4347,29 @@ export default function DailyMEQMode() {
           </div>
         )}
 
-        <div className="space-y-3">
-          {filteredMEQs.map(({ meq, stats }) => {
-            const { status, inProgressAttempt, bestScore, bestPct, evaluated } = stats;
+        <div className="space-y-2">
+          {filteredMEQs.map(({ meq, stats, globalIndex }) => {
+            const { status, inProgressAttempt } = stats;
             return (
-              <div key={meq.id} className="bg-white border border-gray-200 rounded-2xl p-5 shadow-sm">
-                <div className="flex items-start justify-between gap-4">
-                  <div className="flex-1 min-w-0">
-                    <div className="flex flex-wrap items-center gap-2 mb-1">
-                      <h3 className="font-bold text-gray-900">{meq.title}</h3>
-                      <span className={`text-xs px-2 py-0.5 rounded-full font-semibold ${
-                        status === "completed"
-                          ? "bg-emerald-100 text-emerald-800"
-                          : status === "in_progress"
-                          ? "bg-amber-100 text-amber-800"
-                          : "bg-gray-100 text-gray-600"
-                      }`}>
-                        {status === "completed" ? "Completed" : status === "in_progress" ? "In Progress" : "Not Started"}
-                      </span>
-                    </div>
-                    <p className="text-xs text-gray-400 mb-2">{meq.primaryDomain}</p>
-                    <div className="flex flex-wrap gap-3 text-xs text-gray-500">
-                      <span><span className="font-semibold text-gray-700">{meq.stems.length}</span> stems</span>
-                      <span><span className="font-semibold text-gray-700">{meq.totalMarks}</span> marks</span>
-                      <span><span className="font-semibold text-gray-700">{meq.totalTimeMinutes}</span> min</span>
-                      {bestScore !== null && bestPct !== null && (
-                        <span>Best: <span className={`font-semibold ${scoreColor(bestPct)}`}>{bestScore}/{meq.totalMarks} ({bestPct}%)</span></span>
-                      )}
-                      {evaluated.length > 1 && (
-                        <span>{evaluated.length} attempts</span>
-                      )}
-                    </div>
-                    {status === "completed" && (
-                      <button
-                        onClick={() => showAttemptHistory(meq)}
-                        className="text-xs text-gray-400 hover:text-gray-700 underline mt-2 block"
-                      >
-                        View history
-                      </button>
-                    )}
-                  </div>
-
-                  <div className="flex flex-col gap-2 flex-shrink-0">
-                    {status === "in_progress" && inProgressAttempt ? (
-                      <button
-                        onClick={() => startMEQ(meq, inProgressAttempt)}
-                        className="px-4 py-2 bg-amber-600 text-white rounded-lg text-sm font-semibold hover:bg-amber-700 transition-colors whitespace-nowrap"
-                      >
-                        Continue MEQ →
-                      </button>
-                    ) : status === "completed" ? (
-                      <>
-                        <button
-                          onClick={() => startMEQ(meq)}
-                          className="px-4 py-2 bg-gray-900 text-white rounded-lg text-sm font-semibold hover:bg-gray-800 transition-colors whitespace-nowrap"
-                        >
-                          New Attempt
-                        </button>
-                        <button
-                          onClick={() => showAttemptHistory(meq)}
-                          className="px-4 py-2 border border-gray-300 text-gray-600 rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors whitespace-nowrap"
-                        >
-                          View History
-                        </button>
-                      </>
-                    ) : (
-                      <button
-                        onClick={() => startMEQ(meq)}
-                        className="px-4 py-2 bg-gray-900 text-white rounded-lg text-sm font-semibold hover:bg-gray-800 transition-colors whitespace-nowrap"
-                      >
-                        Start MEQ →
-                      </button>
-                    )}
-                  </div>
-                </div>
+              <div key={meq.id} className="bg-white border border-gray-200 rounded-xl px-5 py-3.5 shadow-sm flex items-center justify-between gap-4">
+                <span className="text-sm font-semibold text-gray-900 flex-1 min-w-0">
+                  {globalIndex}. {meq.title}
+                </span>
+                {status === "in_progress" && inProgressAttempt ? (
+                  <button
+                    onClick={() => startMEQ(meq, inProgressAttempt)}
+                    className="px-4 py-2 bg-amber-600 text-white rounded-lg text-sm font-semibold hover:bg-amber-700 transition-colors whitespace-nowrap flex-shrink-0"
+                  >
+                    Continue MEQ →
+                  </button>
+                ) : (
+                  <button
+                    onClick={() => startMEQ(meq)}
+                    className="px-4 py-2 bg-gray-900 text-white rounded-lg text-sm font-semibold hover:bg-gray-800 transition-colors whitespace-nowrap flex-shrink-0"
+                  >
+                    Start MEQ →
+                  </button>
+                )}
               </div>
             );
           })}
@@ -4436,6 +4386,7 @@ export default function DailyMEQMode() {
     const meqTimeRemaining = Math.max(0, selectedMEQ.totalTimeMinutes * 60 - timer);
     const isTimeUp = meqTimeRemaining === 0;
     const timerColor = meqTimeRemaining <= 120 ? "text-red-600" : "text-emerald-600";
+    const meqGlobalIndex = MEQ_BANK.findIndex((m) => m.id === selectedMEQ.id) + 1;
 
     return (
       <div className="max-w-3xl mx-auto px-4 py-4">
@@ -4489,13 +4440,13 @@ export default function DailyMEQMode() {
 
         {/* MEQ context line */}
         <div className="text-xs text-gray-400 font-medium uppercase tracking-wide mb-2">
-          {selectedMEQ.title} · {selectedMEQ.totalMarks} marks · Stem {stem.stemNumber} of {selectedMEQ.stems.length}
+          MEQ {meqGlobalIndex} — {selectedMEQ.title} · Stem {stem.stemNumber} of {selectedMEQ.stems.length}
         </div>
 
         {/* Vignette */}
         <div className="bg-gray-50 border border-gray-200 rounded-xl p-4 mb-3">
           <div className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">
-            Clinical Vignette — Stem {stem.stemNumber}
+            MEQ {meqGlobalIndex} · Stem {stem.stemNumber}
           </div>
           <p className="text-gray-800 text-sm leading-relaxed">{stem.vignette}</p>
         </div>
