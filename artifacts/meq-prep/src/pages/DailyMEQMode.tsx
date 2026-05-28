@@ -4325,6 +4325,1892 @@ const MEQ_BANK = [
         postExaminerNote: 'Candidates who replaced non-compliance language with adherence formulation, identified proactive steroid-risk identification, named all six system partners, developed renal-safe pharmacological guidance and built audit and education into the governance response scored well. Candidates who focused only on individual patient compliance, omitted cultural or pharmacy components, or provided no governance structure or audit did not achieve the standard.'
       }
     ]
+  },
+  {
+    id: "meq_027",
+    title: "Nadia — Inpatient Triage, ADHD/EUPD Overlap, Service Policy & Complex Discharge",
+    case: "Nadia, 27 years old",
+    examSource: "Generated — Governance / Systems / Leadership",
+    topic: "Inpatient triage of a 27-year-old single mother with diagnostic overlap of ADHD, EUPD, AUD and conduct history; public service policy tensions; parenting safety; family-driven ADHD pressure; MDT conflict; complex community discharge",
+    primaryDomain: "Governance / Systems / Leadership",
+    totalMarks: 32,
+    totalTimeMinutes: 32,
+    stems: [
+      {
+        stemNumber: "1.1",
+        vignette: "Nadia is a 27-year-old single mother of a 4-year-old daughter, Isla. She was brought to ED by police after her neighbour called emergency services when Nadia was heard screaming and throwing furniture during a phone argument with her ex-partner. Officers found Nadia intoxicated, with superficial scratches to her forearm. She told ED staff she had 'lost everything' but denied intent to harm herself or Isla. Isla was collected by Nadia's mother. Nadia was admitted overnight.\n\nNadia was referred the previous week by a neighbouring community mental health service after four presentations in six months. That service's referral letter describes 'possible ADHD, emotionally unstable personality traits, conduct disorder history, adjustment disorder and harmful alcohol use.' Nadia is unemployed after resigning from two jobs in one year following conflict with supervisors. She withdrew from a diploma course three months ago. Her parents have sent seven emails to your service insisting the real diagnosis is ADHD and asking for urgent stimulant assessment. Nadia says she has always 'felt different' and believes ADHD explains her difficulties with focus, impulsivity and relationships. She wants a clear diagnosis and a 'plan that actually helps' before discharge.",
+        question: "Outline — list and justify your formulation and immediate priorities during Nadia's short-stay admission.\nA list without case-specific justification will not be awarded marks.\n(10 marks | 10 minutes)",
+        commandWord: "outline_justify",
+        marks: 10,
+        timeMinutes: 10,
+        stemSignals: [
+          "ADHD cannot be confirmed from self-identification and family insistence alone — candidates must apply developmental ADHD criteria across settings and time",
+          "Alcohol use is clinically central to the presentation — candidates who ignore it because the referral focuses on ADHD will miss key formulation and risk marks",
+          "Isla's safety is an immediate clinical priority — candidates who do not assess parenting risk will lose marks on the safety component"
+        ],
+        domains: [
+          {
+            name: "Award up to 10 marks from the following scorable points",
+            marks: 10,
+            keyPoints: [
+              "Formulate diagnostically rather than accepting one label — because Nadia has overlapping ADHD symptoms, emotional dysregulation, harmful alcohol use, interpersonal stress, possible personality vulnerability and multiple concurrent stressors requiring a broad assessment",
+              "Assess ADHD using developmental criteria — because adult ADHD requires childhood onset, cross-setting impairment and persistence, and cannot be diagnosed from online self-identification or family advocacy alone",
+              "Formulate emotionally unstable personality traits non-pejoratively — because unstable relationships, impulsive anger, forearm scratches and crisis presentations may reflect dysregulation from multiple causes and should not be reductively labelled",
+              "Identify alcohol use as a central clinical issue — because intoxication was present during the incident and harmful alcohol use may worsen impulsivity, mood instability, parenting risk and therapeutic engagement",
+              "Screen for mood disorder and bipolar spectrum — because impulsivity, repeated job loss, anger outbursts and inconsistent functioning require exclusion of hypomania, depression or a mixed state",
+              "Assess suicide and self-harm risk beyond current denial — because 'lost everything,' police attendance, intoxication and forearm scratches indicate risk that requires formal post-intoxication assessment",
+              "Assess risk to Isla — because police were called for a domestic disturbance while Nadia was intoxicated and throwing furniture with a 4-year-old in the home",
+              "Assess family violence and ex-partner risk — because the acute trigger was a phone argument with her ex-partner and an intervention order is subsequently sought",
+              "Clarify Isla's immediate safety and care arrangements — because Isla's welfare is part of the immediate disposition decision, not a secondary concern",
+              "Obtain collateral from the neighbouring service — because the referring service's formulation, risk incidents and previous engagement history are essential to current assessment",
+              "Clarify family consent boundaries early — because seven emails from her parents indicate active advocacy that may generate confidentiality and boundary issues during the admission"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Diagnosing ADHD immediately to satisfy the family without completing a developmental assessment",
+          "Dismissing the presentation as 'personality' without formulation",
+          "Ignoring alcohol use because the referral focuses on ADHD",
+          "Ignoring Isla's safety as part of the immediate clinical assessment"
+        ],
+        postExaminerNote: "Candidates who produced a broad formulation naming ADHD as possible but unconfirmed, identified alcohol and parenting safety as immediate priorities, and did not promise diagnostic conclusions scored in the upper range. Candidates who accepted ADHD or 'personality disorder' as the answer without broader assessment, or who omitted Isla's safety, scored in the lower range."
+      },
+      {
+        stemNumber: "1.2",
+        vignette: "At the morning MDT meeting, the registrar says Nadia should be discharged immediately because 'this is emotional dysregulation and alcohol, not a psychiatric illness we can treat.' The psychologist says the service should offer a formulation assessment because repeated invalidation and diagnostic bouncing have worsened her engagement with every previous service. The triage coordinator says the public service policy restricts intake to psychosis, bipolar disorder and severe depression, and that ADHD-primary presentations must be referred to the private sector or specialist ADHD clinic. Nadia's parents email the clinical director during the meeting, stating the team is 'dismissing neurodivergence and blaming her for not fitting your criteria.'\n\nTwo people are waiting in ED for inpatient beds. Isla's grandmother has asked how long Nadia will be admitted.",
+        question: "Discuss — list and debate how you would decide Nadia's immediate care pathway. You must name the tensions explicitly and take a defensible consultant position.\n(8 marks | 8 minutes)",
+        commandWord: "debate",
+        marks: 8,
+        timeMinutes: 8,
+        stemSignals: [
+          "This is not ADHD-only triage — acute risk from police involvement, alcohol, self-harm and parenting concerns means the service-threshold argument alone cannot justify discharge",
+          "Bed pressure from ED cannot justify premature discharge without safety formulation and child-safety planning",
+          "The MDT must reach one shared formulation — inconsistent messages will worsen family invalidation and generate a complaint"
+        ],
+        domains: [
+          {
+            name: "Award up to 8 marks from the following scorable points",
+            marks: 8,
+            keyPoints: [
+              "There is tension between service thresholds and clinical duty — the policy may restrict ADHD-primary presentations, but Nadia's current presentation involves acute risk, alcohol, parenting safety and repeated service presentations that exceed an ADHD-only threshold",
+              "There is tension between bed pressure and safe discharge — two people waiting in ED does not justify discharge without a risk formulation completed while sober or without parenting safety clarity",
+              "There is tension between validating ADHD concerns and avoiding diagnostic capture — a defensible position acknowledges ADHD as possible without offering premature stimulant assessment during crisis",
+              "There is tension between dismissive language and therapeutic engagement — labelling this as 'not a psychiatric illness' repeats prior invalidation and may escalate risk and disengage Nadia from all future services",
+              "There is tension between family advocacy and clinical independence — family emails may provide collateral information but must not determine diagnosis, prescribing or admission decisions",
+              "A defensible position is a time-limited admission for sobriety reassessment, risk formulation and parenting safety planning — because these cannot be completed while intoxicated and cannot be deferred to outpatient without a safe plan",
+              "The MDT needs one agreed formulation and one consistent message — because three different positions (discharge, admit for formulation, policy exclusion) will entrench family complaints",
+              "The clinical director should be briefed on the rationale — because family emails and inter-service threshold disputes require senior awareness"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Discharge because the registrar says personality disorder",
+          "Admit indefinitely until ADHD is assessed",
+          "Prescribe stimulants to improve therapeutic engagement",
+          "Discharge driven by bed pressure without naming this as a clinical risk"
+        ],
+        postExaminerNote: "The examiner tests whether the candidate can hold a defensible position under multiple simultaneous pressures. Candidates who named specific tensions, took a time-limited-admission position with clear goals, and explained why bed pressure cannot override safety scored well."
+      },
+      {
+        stemNumber: "1.3",
+        vignette: "Nadia consents to limited contact with her parents but does not want them told about her alcohol use, the self-harm scratches or that police were called. In a family phone meeting, her mother says the previous service 'labelled her borderline and wrote her off' and her father says, 'If you refuse to assess her for ADHD today, we are going to the ombudsman.' Nadia becomes distressed when the registrar documents 'personality traits and AUD' and says, 'I knew you would do this. Every service does the same thing.'\n\nThe nurse-in-charge asks whether the team should limit family contact because the emails are affecting staff morale and the parents are 'unrealistic and abusive.'",
+        question: "Describe — list and explain your response to this situation.\nA list without explanation will not be awarded marks.\n(7 marks | 7 minutes)",
+        commandWord: "describe_explain",
+        marks: 7,
+        timeMinutes: 7,
+        stemSignals: [
+          "Nadia's consent does not include alcohol, self-harm or police details — sharing these with parents to appease them is a confidentiality breach",
+          "Diagnostic language is a clinical intervention here — 'personality traits' has already escalated Nadia and this must be addressed directly",
+          "An ombudsman threat should not force a diagnosis — clinical independence must be maintained transparently and without defensiveness"
+        ],
+        domains: [
+          {
+            name: "Award up to 7 marks from the following scorable points",
+            marks: 7,
+            keyPoints: [
+              "Clarify and maintain Nadia's consent boundaries — because she has agreed to limited family contact but explicitly excluded alcohol use, self-harm and police details, and breaching these to manage family pressure would undermine the therapeutic relationship",
+              "Engage her parents respectfully within the consented scope — because they may be distressed advocates and a potential practical support for Isla, and complete disengagement may remove childcare support",
+              "Set boundaries with the parents without defensiveness — because threats to complain to the ombudsman should not determine clinical decisions, but must be responded to transparently through the formal complaint pathway",
+              "Avoid pejorative diagnostic language — because 'personality traits and AUD' has already triggered a therapeutic rupture and repeats the invalidation that Nadia experienced from the previous service",
+              "Use formulation-based language — because describing difficulties with attention, emotion regulation, impulse control and relationships is clinically more accurate and less shaming than categorical personality labels at this stage",
+              "Address MDT inconsistency directly — because three different positions in the MDT will be communicated to the family and worsen complaints; one consistent message must be agreed",
+              "Do not stop family contact solely because it is difficult — because the parents' distress reflects fear for Nadia, they may have collateral information, and family contact restrictions may worsen her isolation",
+              "Document consent limits, communications, team formulation and complaint process — because this presentation has high complaint risk and contemporaneous documentation is essential"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Sharing excluded details with parents to stop the complaint",
+          "Refusing all family contact because the parents are difficult",
+          "Using borderline as shorthand in documentation or communication",
+          "Allowing the ombudsman threat to force an ADHD diagnosis"
+        ],
+        postExaminerNote: "The examiner expects the candidate to hold confidentiality, use formulation language, manage team inconsistency and respond to a complaint threat without either capitulating or becoming defensive."
+      },
+      {
+        stemNumber: "1.4",
+        vignette: "After 72 hours Nadia is calmer, sober and denies suicidal intent. Isla has remained safely with Nadia's mother. Nadia remains unemployed, her diploma enrolment has lapsed and her ex-partner has applied for an intervention order. The police have recorded the incident. The neighbouring community team advises she does not meet their threshold because she has no active psychosis or bipolar disorder. Your local ADHD assessment clinic has an 11-month waiting list. Nadia's parents say they will not provide further childcare unless the team commits to an ADHD diagnosis. Nadia says she will engage with follow-up only if it includes proper ADHD assessment and practical help with 'not exploding.'",
+        question: "Outline — list and justify your discharge plan for Nadia.\nA list without case-specific justification will not be awarded marks.\n(7 marks | 7 minutes)",
+        commandWord: "outline_justify",
+        marks: 7,
+        timeMinutes: 7,
+        stemSignals: [
+          "ADHD pathway referral is necessary to secure engagement but cannot be promised as an immediate confirmed diagnosis",
+          "Parenting safety and Isla's welfare must be explicitly addressed in the discharge plan — an adult-only discharge plan is insufficient",
+          "Service threshold refusal by the neighbouring team does not remove the consultant's duty to plan safe follow-up"
+        ],
+        domains: [
+          {
+            name: "Award up to 7 marks from the following scorable points",
+            marks: 7,
+            keyPoints: [
+              "Arrange rapid post-discharge follow-up — because the transition from short-stay admission is a high-risk period after police involvement, alcohol and self-harm",
+              "Create a suicide and self-harm safety plan — because current denial does not remove risk after acute crisis with police attendance",
+              "Include Isla's safety and parenting support — because childcare instability and parenting risk are central to discharge and cannot be deferred to a parenting service alone",
+              "Address family violence and legal risk — because the ex-partner conflict and intervention order may escalate after discharge",
+              "Plan an alcohol intervention — because harmful alcohol use contributed to the crisis and continued use creates ongoing risk",
+              "Refer to an ADHD assessment pathway — because acknowledging ADHD as a legitimate clinical question improves engagement and is clinically justified regardless of waitlist length",
+              "Offer interim emotion regulation intervention — because 'stop exploding' is Nadia's stated priority and DBT-informed skills can be provided before diagnostic certainty",
+              "Coordinate GP and community services — because the neighbouring service has refused threshold and a GP-led shared care plan prevents gap in coverage",
+              "Document service threshold reasoning and escalation options — because inter-service refusal and complaint risk are foreseeable and contemporaneous documentation protects both the service and Nadia"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Discharge to the 11-month ADHD waitlist with no other plan",
+          "Omitting parenting safety from the discharge plan",
+          "Promising stimulant treatment as an engagement strategy",
+          "No alcohol or functional recovery plan"
+        ],
+        postExaminerNote: "The discharge plan must bridge risk, diagnosis, parenting safety, family dynamics, service gaps and functional recovery. Candidates who addressed ADHD as a legitimate pathway without making it the only element, and who named Isla's safety explicitly, scored in the upper range."
+      }
+    ]
+  },
+  {
+    id: "meq_028",
+    title: "Jade — Intellectual Disability, Sexual Consent & Safeguarding",
+    case: "Jade, 23 years old",
+    examSource: "Generated — Ethics / Professionalism / Legal",
+    topic: "Capacity and sexual consent in a 23-year-old woman with mild intellectual disability and ASD; safeguarding versus rights; family and provider pressure; contraception; governance failures in supported accommodation",
+    primaryDomain: "Ethics / Professionalism / Legal",
+    totalMarks: 31,
+    totalTimeMinutes: 31,
+    stems: [
+      {
+        stemNumber: "2.1",
+        vignette: "Jade is a 23-year-old woman with mild intellectual disability, autism spectrum disorder and anxiety. She lives in supported accommodation with three other residents. Staff request an urgent psychiatric review because Jade had a pregnancy scare after a sexual relationship with Ben, a 25-year-old male co-resident who also has intellectual disability. The pregnancy test is negative.\n\nJade says Ben is her boyfriend and she wants staff to 'stop treating me like a child.' Staff say Jade often agrees with the last person who speaks to her and may not understand contraception, consent or sexually transmitted infections. Jade's mother asks you to 'declare her incapable of relationships.'",
+        question: "Outline — list and justify your assessment of Jade in relation to this request.\nA list without case-specific justification will not be awarded marks.\n(8 marks | 8 minutes)",
+        commandWord: "outline_justify",
+        marks: 8,
+        timeMinutes: 8,
+        stemSignals: [
+          "Mild intellectual disability does not mean global incapacity — every decision domain requires a separate assessment",
+          "Jade's own expressed wishes must be explored directly — the mother's request cannot substitute for a patient-centred assessment",
+          "Coercion and grooming must be actively assessed — Ben's described behaviour pattern is a clinical concern that cannot be normalised"
+        ],
+        domains: [
+          {
+            name: "Award up to 8 marks from the following scorable points",
+            marks: 8,
+            keyPoints: [
+              "Assess decision-specific capacity for sexual consent — because mild intellectual disability does not mean global incapacity, and each decision domain must be assessed separately",
+              "Assess understanding of sexual activity and its nature — because Jade must be able to describe what the relationship involves to meet the understanding criterion",
+              "Assess voluntariness and ability to withhold consent — because staff report she agrees with the last person who speaks to her, raising the question of whether refusal of sex is a realistic option for her",
+              "Assess understanding of contraception and pregnancy — because the pregnancy scare is the precipitating event and these are separate decision domains from consent to sex",
+              "Use accessible communication adapted to intellectual disability and autism — because plain language, visual supports and checking understanding are required to conduct a valid assessment",
+              "Assess for coercion or grooming by Ben — because his behaviour of waiting outside her room and becoming angry when she interacts with others is a potential risk indicator, not merely relationship behaviour",
+              "Explore Jade's own wishes and emotional experience directly — because she is an adult who has expressed a view, and the assessment must start with what she says rather than what her mother fears",
+              "Clarify the mother's legal authority — because being a parent of an adult does not automatically confer substitute decision-making power, and this must be established before any family-based decision is made",
+              "Assess Ben's capacity and risk separately — because he is also a resident with intellectual disability and his own rights and risk must be considered independently"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Declaring Jade incapable of all relationships because she has intellectual disability",
+          "Accepting the mother's request without patient-centred assessment",
+          "Ignoring the possibility of coercion because both parties have intellectual disability",
+          "Failing to use accessible communication in the assessment"
+        ],
+        postExaminerNote: "Candidates must demonstrate that capacity is assessed decision-specifically and that Jade's own voice is central. The mother's request is a pressure to be assessed, not a clinical instruction to be followed."
+      },
+      {
+        stemNumber: "2.2",
+        vignette: "Ben says the relationship is consensual. Jade says she likes Ben but becomes confused when asked what she would do if he wanted sex and she did not. Staff report that Ben sometimes waits outside Jade's bedroom and becomes angry if she spends time with other residents. Jade's mother demands that Jade be given long-acting contraception and moved immediately. The accommodation manager says moving Jade would be easier than managing conflict between families.",
+        question: "Discuss — list and debate how you would respond. You must name the tensions explicitly and take a defensible consultant position.\n(9 marks | 9 minutes)",
+        commandWord: "debate",
+        marks: 9,
+        timeMinutes: 9,
+        stemSignals: [
+          "Moving Jade for provider convenience is not a defensible response — it may punish her and breach equitable access principles",
+          "Imposing long-acting contraception without consent or lawful authority is not ethically or legally defensible",
+          "Ben's rights also matter — management must address both residents, not simply restrict Jade's life to remove the problem"
+        ],
+        domains: [
+          {
+            name: "Award up to 9 marks from the following scorable points",
+            marks: 9,
+            keyPoints: [
+              "There is tension between Jade's adult sexual autonomy and her need for safeguarding — she has expressed a preference for the relationship but may not be able to refuse sex, creating a genuine clinical and ethical dilemma",
+              "There is tension between family protective concerns and Jade's privacy and rights — the mother's fear is understandable but does not automatically authorise relocation, contraception or relationship prohibition",
+              "There is tension between Ben's rights and Jade's safety — Ben is also a vulnerable adult with rights, but his pattern of waiting outside her room and becoming angry constitutes behaviour that requires intervention regardless of his disability",
+              "There is tension between provider convenience and duty of care — moving Jade because it is easier than managing family conflict is not a clinically or ethically defensible reason and may constitute discriminatory restriction",
+              "A defensible position is supported decision-making combined with a safeguarding assessment — because both Jade's rights and her protection from potential coercion must be addressed simultaneously",
+              "Immediate relocation or contraception may be justified only if current coercion or imminent safety risk is identified — and this must follow formal assessment, not family or provider request",
+              "Staff should support Jade to understand consent, refusal and her right to change her mind — because capacity may improve with accessible education and she can learn scripts for refusal",
+              "Ben's behaviour requires a formal behaviour support or safeguarding response — because boundary-testing behaviour in a shared living environment is a provider duty regardless of diagnosis",
+              "Safeguarding referral should be made if coercion or abuse is confirmed — because the supported accommodation service has a mandatory duty and this cannot be managed through informal arrangements"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Banning the relationship entirely as the first response",
+          "Accepting coexistence without any safeguarding response",
+          "Imposing contraception on grounds of provider or family anxiety",
+          "Moving Jade for provider convenience without clinical or legal justification"
+        ],
+        postExaminerNote: "Both rights and safeguarding must be named and debated. Candidates who took a single-issue position — either pure autonomy or pure restriction — did not demonstrate the consultant-level balance this stem requires."
+      },
+      {
+        stemNumber: "2.3",
+        vignette: "The GP asks whether contraception can be prescribed if Jade does not fully understand pregnancy risk. The accommodation provider asks you for a letter saying Jade lacks capacity to consent to any sexual activity so staff can ban contact with Ben. Jade's mother posts online that the service is 'allowing abuse.' Jade says she does not want her private life discussed with her mother anymore.",
+        question: "Describe — list and explain your response to these requests.\nA list without explanation will not be awarded marks.\n(7 marks | 7 minutes)",
+        commandWord: "describe_explain",
+        marks: 7,
+        timeMinutes: 7,
+        stemSignals: [
+          "Writing a blanket incapacity letter for all sexual activity is the examiner trap — it is overbroad, rights-restricting and should be declined",
+          "Jade is an adult who has withdrawn consent for her private life to be shared with her mother — this must be respected",
+          "The provider is attempting to outsource governance to psychiatry — the psychiatrist must advise on capacity and return governance to the appropriate process"
+        ],
+        domains: [
+          {
+            name: "Award up to 7 marks from the following scorable points",
+            marks: 7,
+            keyPoints: [
+              "Decline to write a blanket letter declaring Jade lacks capacity for any sexual activity — because capacity is decision-specific and a global statement would be clinically inaccurate, legally unsupportable and rights-restricting",
+              "Respect Jade's adult confidentiality — because she has withdrawn consent for her private life to be shared with her mother, and a social media complaint does not change this entitlement",
+              "Assess capacity for contraception separately from sexual consent — because understanding pregnancy prevention involves different information and may require separate supported decision-making",
+              "Maximise supported decision-making before concluding incapacity for any domain — because accessible education may enable Jade to make an informed contraception decision",
+              "If Jade lacks capacity for contraception, advise the GP to follow guardianship or substitute decision-making pathways — because prescribing cannot rely on family request or provider convenience",
+              "Advise the provider to use its own safeguarding and incident-reporting processes — because psychiatric opinion informs the clinical picture but cannot replace the provider's governance obligations",
+              "Write a functional, decision-specific opinion — describing what Jade understands, what support she needs and what specific risks remain, rather than a global incapacity statement",
+              "Address the online complaint professionally without breaching Jade's privacy — because public criticism by a family member does not authorise disclosure of clinical or personal information"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Writing the blanket incapacity letter as requested",
+          "Discussing Jade's private life with the mother because of the online post",
+          "Treating contraception as a behavioural control measure rather than a medical decision",
+          "Accepting the provider's framing that psychiatry can authorise a contact ban"
+        ],
+        postExaminerNote: "The examiner is testing whether the candidate knows the limits of the psychiatric opinion role, can decline an inappropriate request constructively, and maintains Jade's confidentiality under public pressure."
+      },
+      {
+        stemNumber: "2.4",
+        vignette: "A later review shows the accommodation service has no sexuality and relationships policy, no staff training in supported decision-making, inconsistent incident reporting, and no clear pathway for referral to sexual health or advocacy services for residents with intellectual disability.",
+        question: "Outline — list and justify your recommendations after this review.\nA list without case-specific justification will not be awarded marks.\n(7 marks | 7 minutes)",
+        commandWord: "outline_justify",
+        marks: 7,
+        timeMinutes: 7,
+        stemSignals: [
+          "Four specific system failures are named — the recommendations must address each, not offer generic governance advice",
+          "Residents must have a voice in policy design — governance developed without lived experience input may protect staff rather than residents",
+          "Audit of restrictive practices is required — governance without measurement cannot demonstrate safe or rights-based outcomes"
+        ],
+        domains: [
+          {
+            name: "Award up to 7 marks from the following scorable points",
+            marks: 7,
+            keyPoints: [
+              "Develop a rights-based sexuality and relationships policy — because staff currently have no framework for responding to relationship situations and default to restriction",
+              "Create supported decision-making procedures — because incapacity should be concluded only after maximising support, and staff must know how to provide this",
+              "Train staff in consent, capacity, sexual rights and coercion recognition — because both overprotection and underprotection reflect knowledge deficits that individual judgment cannot correct",
+              "Establish consistent incident-reporting and safeguarding thresholds — because inconsistent reporting means the service cannot identify patterns or demonstrate duty of care",
+              "Create referral pathways to sexual health services and independent advocacy — because residents need access to contraception, STI advice and independent support that is not filtered through family or staff",
+              "Review the physical environment for privacy and safety — because bedroom access, supervision lines and communal area design affect both safety and resident autonomy",
+              "Audit restrictive practices including bans and relocations — because rights-restricting responses require documentation, justification and regular review",
+              "Include residents in policy development — because policies designed without Jade-like voices may address staff comfort rather than resident safety and rights"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Recommending a blanket ban on relationships in supported accommodation",
+          "Recommending staff training only without policy or audit",
+          "Omitting advocacy pathways or resident input from governance recommendations"
+        ],
+        postExaminerNote: "The examiner expects governance recommendations that balance rights and safety. Candidates who addressed only risk reduction without rights, or only rights without safeguarding, did not demonstrate the dual obligation this stem requires."
+      }
+    ]
+  },
+  {
+    id: "meq_029",
+    title: "Priya — Postpartum Intrusive Harm Thoughts & Perinatal Pathway",
+    case: "Priya, 31 years old",
+    examSource: "Generated — Communication / Collaboration",
+    topic: "Postpartum anxiety with intrusive harm thoughts distinguished from psychosis; infant safety without reflex removal; breastfeeding and SSRI discussion; confidentiality breach and perinatal pathway governance",
+    primaryDomain: "Communication / Collaboration",
+    totalMarks: 32,
+    totalTimeMinutes: 32,
+    stems: [
+      {
+        stemNumber: "3.1",
+        vignette: "Priya is a 31-year-old woman, three weeks postpartum after the birth of her first baby. The child health nurse refers her urgently after Priya disclosed repeated images of dropping the baby down the stairs or stabbing the baby while preparing food. Priya is distressed, avoids being alone with the baby near knives or stairs, and says, 'I would rather die than hurt her.' She is sleeping three hours per night, breastfeeding, and has a past history of anxiety. Her partner says she is 'a wonderful mother but terrified.' The child health nurse asks whether the baby should be removed.",
+        question: "Outline — list and justify your formulation and immediate priorities.\nA list without case-specific justification will not be awarded marks.\n(8 marks | 8 minutes)",
+        commandWord: "outline_justify",
+        marks: 8,
+        timeMinutes: 8,
+        stemSignals: [
+          "Ego-dystonic intrusive thoughts in a distressed avoidant mother are not the same as psychotic intent — the examiner expects this distinction to be made explicitly",
+          "Baby removal based only on intrusive thoughts without assessed intent is clinically and ethically unjustified",
+          "Maternal suicide risk is present — the statement 'I would rather die than hurt her' must be assessed as a self-harm statement, not dismissed as figurative"
+        ],
+        domains: [
+          {
+            name: "Award up to 8 marks from the following scorable points",
+            marks: 8,
+            keyPoints: [
+              "Differentiate intrusive ego-dystonic thoughts from psychotic intent — because Priya is horrified by the images, avoids triggers and takes active steps to keep the baby safe, which is characteristic of postpartum OCD or anxiety rather than psychotic commands",
+              "Consider postpartum OCD or anxiety as the leading formulation — because unwanted, distressing harm images with avoidance behaviour and preserved reality testing are the hallmark features",
+              "Assess for postpartum depression — because 'I would rather die than hurt her' combined with three hours of sleep and severe distress indicates significant mood symptoms",
+              "Screen for postpartum psychosis red flags — because the early postpartum period is high-risk and voices, delusional beliefs, confusion and rapid deterioration must be actively excluded",
+              "Assess maternal suicide risk — because the statement 'I would rather die than hurt her' must be explored as a possible indication of self-harm risk, not accepted as a figure of speech",
+              "Assess infant safety with intent, plan and control questions — because the formulation requires distinguishing unwanted intrusive images from purposeful harmful intent toward the baby",
+              "Assess sleep deprivation as both symptom and risk factor — because three hours of sleep per night worsens anxiety, depression and psychosis risk in the early postpartum period",
+              "Decline baby removal based only on intrusive thoughts — because ego-dystonic thoughts without intent, command hallucinations or demonstrated unsafe behaviour do not meet the threshold for removal",
+              "Provide psychoeducation about intrusive harm thoughts — because shame and fear of removal may suppress disclosure and worsen risk"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Equating intrusive thoughts with intent to harm the baby",
+          "Reassuring without completing a risk assessment",
+          "Recommending baby removal based on the thoughts alone",
+          "Ignoring the maternal suicide risk indicator"
+        ],
+        postExaminerNote: "The central examiner test is whether the candidate can distinguish ego-dystonic intrusive thoughts from psychotic harm intent. Candidates who recommended removal based on the thoughts alone, or who dismissed the 'I would rather die' statement, scored in the lower range."
+      },
+      {
+        stemNumber: "3.2",
+        vignette: "During assessment, Priya says she sometimes thinks the baby would be safer without her and has searched online for 'postpartum psychosis.' She denies hearing voices and says the intrusive images feel unwanted and horrifying. Her mother-in-law says Priya is unsafe and wants the baby to stay with grandparents. The mother-baby unit has no beds. Priya asks you not to tell her mother-in-law the details of her thoughts because she feels ashamed.",
+        question: "Discuss — list and debate how you would proceed. You must name the tensions explicitly and take a defensible consultant position.\n(9 marks | 9 minutes)",
+        commandWord: "debate",
+        marks: 9,
+        timeMinutes: 9,
+        stemSignals: [
+          "Shame-driven disengagement is a clinical risk — confidentiality decisions must weigh the very real possibility that over-disclosure will cause Priya to withdraw from care",
+          "Absence of a mother-baby bed does not justify unsafe discharge or reflexive infant removal — creative safety planning is required",
+          "The statement 'baby would be safer without her' adds a self-harm and suicide layer that must be assessed, not just noted"
+        ],
+        domains: [
+          {
+            name: "Award up to 9 marks from the following scorable points",
+            marks: 9,
+            keyPoints: [
+              "There is tension between Priya's confidentiality and infant safety — her request not to disclose details to her mother-in-law should be respected unless a specific imminent risk cannot be managed without disclosure",
+              "There is tension between maternal autonomy and family anxiety — the mother-in-law's concern is legitimate but does not automatically override Priya's right to control her own health information",
+              "There is tension between protecting the infant and preserving the mother-infant bond — unnecessary separation may worsen Priya's illness, increase shame and damage an attachment that is already protective",
+              "There is tension between least restrictive care and the absence of a mother-baby unit bed — the unavailability of optimal facilities does not remove the clinical duty to plan safely",
+              "A defensible position is supported care with clear escalation thresholds — because the thoughts remain ego-dystonic without intent, partner support is present and safety can be structured without admission or removal",
+              "Maternal suicide risk from the 'baby safer without her' statement requires equal attention — because self-harm risk may exceed infant harm risk in the immediate term",
+              "Partner involvement with Priya's consent is the first safety resource — because the partner can provide supervision, sleep support and escalation monitoring without the family dynamics of the mother-in-law",
+              "Admission must be considered if psychosis, intent, loss of control or severe insomnia develop — because the clinical picture can change rapidly in the early postpartum period",
+              "Confidentiality disclosure to the mother-in-law requires assessed necessity, not family anxiety — and if disclosure occurs it should be minimum necessary and explained to Priya"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Disclosing to the mother-in-law because family should know or to manage her anxiety",
+          "Removing the baby based only on intrusive thoughts",
+          "Treating absence of a mother-baby bed as justifying unsafe discharge with no plan",
+          "Ignoring the maternal suicide risk indicator"
+        ],
+        postExaminerNote: "High-scoring answers named at least three explicit tensions and took a defensible supported-care position with clear escalation criteria. Candidates who reached for the mother-in-law as default support despite Priya's explicit objection failed the confidentiality and autonomy test."
+      },
+      {
+        stemNumber: "3.3",
+        vignette: "The GP recommends an SSRI but Priya worries it will affect breastfeeding. The child health nurse wants daily visual checks of the baby. Priya's partner can take one week off work but not longer. Priya says she will accept help only if she is not treated like 'a dangerous mother.' The obstetric registrar asks whether she needs admission.",
+        question: "Describe — list and explain your treatment and safety plan.\nA list without explanation will not be awarded marks.\n(8 marks | 8 minutes)",
+        commandWord: "describe_explain",
+        marks: 8,
+        timeMinutes: 8,
+        stemSignals: [
+          "SSRIs in breastfeeding require a risk-benefit conversation, not automatic cessation of breastfeeding or automatic refusal to prescribe without discussion",
+          "Daily baby checks must be framed as supportive, not punitive surveillance — the framing will determine whether Priya engages or withdraws",
+          "Sleep restoration is an urgent and specific treatment target, not a generic recommendation"
+        ],
+        domains: [
+          {
+            name: "Award up to 8 marks from the following scorable points",
+            marks: 8,
+            keyPoints: [
+              "Provide psychoeducation about postpartum intrusive harm thoughts — because normalising these as a recognised anxious phenomenon reduces shame, improves disclosure and supports engagement with treatment",
+              "Offer CBT with exposure and response prevention principles — because avoidance of knives and stairs maintains anxiety and must be addressed through graded exposure, not indefinite avoidance",
+              "Discuss SSRI treatment with a breastfeeding-informed risk-benefit explanation — because untreated anxiety and depression also affect the baby and mother, and Priya deserves an informed choice rather than a default either way",
+              "Prioritise sleep restoration — because three hours of sleep per night is an active driver of anxiety, depression and psychosis risk, and the plan must include a specific strategy not just a recommendation",
+              "Use the partner's available week to build a structured supervision and sleep rotation — because this is a time-limited and concrete resource that must be deployed efficiently",
+              "Frame child health nurse visits as support, not surveillance — because Priya has made it clear that being treated as dangerous will cause her to disengage, and disengagement is itself a clinical risk",
+              "Create a specific trigger and crisis plan — because knives and stairs are named feared situations and the crisis plan must address what Priya does if thoughts escalate",
+              "Coordinate GP, child health nurse, obstetrics and perinatal service around a shared safety plan — because fragmented advice from multiple services increases fear and reduces coherence of care"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Prescribing an SSRI without breastfeeding discussion or stopping breastfeeding by default",
+          "Daily baby checks without any maternal treatment or support plan",
+          "No sleep restoration plan",
+          "Treating Priya as a dangerous mother when ego-dystonic thoughts are the presentation"
+        ],
+        postExaminerNote: "The examiner expects a treatment plan that takes Priya's stated terms for engagement seriously while still providing clinically adequate monitoring. Candidates who dismissed her framing concern or who produced only risk surveillance without treatment scored in the lower range."
+      },
+      {
+        stemNumber: "3.4",
+        vignette: "Two weeks later, Priya is improving but complains that the child health nurse told her mother-in-law 'the psychiatrist is worried about harm thoughts.' Priya says she almost disengaged from care. The perinatal service discovers there is no shared policy for communicating intrusive harm thoughts between maternity, child health, GP and mental health services.",
+        question: "Outline — list and justify your response to this situation.\nA list without case-specific justification will not be awarded marks.\n(7 marks | 7 minutes)",
+        commandWord: "outline_justify",
+        marks: 7,
+        timeMinutes: 7,
+        stemSignals: [
+          "The privacy breach that almost caused disengagement is a clinical safety event — it must be treated as a governance incident, not a communication misunderstanding",
+          "Shared language for intrusive harm thoughts is the central system failure — different clinicians in different services used different frameworks with inconsistent consequences",
+          "Training alone will not prevent recurrence — the stem names a policy absence requiring a structured pathway response"
+        ],
+        domains: [
+          {
+            name: "Award up to 7 marks from the following scorable points",
+            marks: 7,
+            keyPoints: [
+              "Acknowledge the harm to Priya and repair the therapeutic alliance — because she almost disengaged and the service's error must be owned before clinical progress can resume",
+              "Review whether a confidentiality breach occurred and initiate open disclosure if it did — because transparent response to a privacy breach is a governance obligation, not optional",
+              "Reconfirm Priya's consent preferences and communication boundaries — because the incident has demonstrated that assumed consent was not sufficient",
+              "Develop shared language for intrusive harm thoughts across the perinatal pathway — because 'harm thoughts' was interpreted as dangerous intent rather than ego-dystonic anxiety, and this misinterpretation created the breach",
+              "Define consent and disclosure rules explicitly between maternity, child health, GP and mental health — because the absence of a shared policy allowed the breach to occur",
+              "Specify risk thresholds under which disclosure without consent is justified — because the pathway must distinguish anxious intrusive thoughts from genuine infant safety risk that requires protective action",
+              "Train all perinatal services to distinguish intrusive thoughts from psychotic intent — because misclassification drives both over-disclosure and inappropriate responses across the pathway",
+              "Audit communication incidents and patient disengagement — because governance requires measurement to demonstrate whether the pathway change prevents recurrence"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Treating the breach as a minor communication issue without governance response",
+          "Proposing education only without a shared policy or pathway",
+          "Ignoring the near-disengagement as a clinical consequence of the breach"
+        ],
+        postExaminerNote: "The governance stem tests whether the candidate treats the near-disengagement as a patient safety event. Candidates who responded only at the interpersonal level, or who proposed training without policy, missed the systems leadership requirement."
+      }
+    ]
+  },
+  {
+    id: "meq_030",
+    title: "Uncle Graham — Alcohol Withdrawal, Wernicke & Cultural Safety",
+    case: "Uncle Graham, 58 years old",
+    examSource: "Generated — Management / Disposition",
+    topic: "Severe alcohol withdrawal with Wernicke risk and hepatic encephalopathy in a 58-year-old Aboriginal man; cirrhosis-adjusted medication safety; cultural safety; capacity and autonomy in discharge against advice; Aboriginal AOD governance",
+    primaryDomain: "Management / Disposition",
+    totalMarks: 32,
+    totalTimeMinutes: 32,
+    stems: [
+      {
+        stemNumber: "4.1",
+        vignette: "Uncle Graham is a 58-year-old Aboriginal man admitted with acute pancreatitis and alcohol withdrawal. He drinks heavily most days and has cirrhosis, peripheral neuropathy and unstable housing. On the ward he is tremulous, hypertensive, tachycardic, ataxic and intermittently confused. Nurses report he has been trying to leave to 'get a drink before I fit.' The medical registrar asks whether he can be discharged with diazepam because the ward is short-staffed and he is 'behavioural.'",
+        question: "Outline — list and justify your immediate concerns and priorities.\nA list without case-specific justification will not be awarded marks.\n(9 marks | 9 minutes)",
+        commandWord: "outline_justify",
+        marks: 9,
+        timeMinutes: 9,
+        stemSignals: [
+          "Discharge with take-home diazepam is the examiner trap — severe alcohol withdrawal with cirrhosis and unstable housing makes outpatient detoxification clinically unsafe",
+          "Behavioural labelling is the diagnostic failure — the presentation is acute medical and neuropsychiatric, not a conduct problem",
+          "Wernicke encephalopathy must be named explicitly — ataxia, confusion and alcohol dependence are the clinical red flags and parenteral thiamine is urgent"
+        ],
+        domains: [
+          {
+            name: "Award up to 9 marks from the following scorable points",
+            marks: 9,
+            keyPoints: [
+              "Identify severe alcohol withdrawal as the primary diagnosis — because tremor, hypertension, tachycardia and agitation indicate physiological withdrawal that requires structured medical management",
+              "Assess for withdrawal seizure and delirium tremens risk — because he is trying to leave to drink 'before I fit,' indicating he recognises his own seizure risk and withdrawal is already advanced",
+              "Identify Wernicke encephalopathy as a priority concern — because ataxia, intermittent confusion, alcohol dependence and likely malnutrition from unstable housing are the defining red flags requiring urgent parenteral thiamine",
+              "Consider hepatic encephalopathy as a contributor — because cirrhosis and confusion may reflect hepatic rather than solely withdrawal aetiology",
+              "Address pancreatitis-related pain — because untreated pain creates a specific driver for attempting to leave and will confound the clinical picture",
+              "Identify medication safety risk from cirrhosis — because hepatic dysfunction increases vulnerability to sedatives and dose calculations cannot follow standard protocols",
+              "Decline discharge with take-home diazepam — because severe withdrawal combined with cirrhosis, unstable housing and seizure risk makes outpatient detoxification clinically indefensible",
+              "Initiate structured withdrawal monitoring using an appropriate withdrawal scale — because severity should guide treatment escalation, not staff availability",
+              "Give parenteral thiamine before glucose or nutrition — because Wernicke risk is high and oral thiamine is poorly absorbed in alcohol dependence",
+              "Involve Aboriginal liaison officer from the outset — because early cultural engagement may reduce fear, prevent absconding and improve therapeutic alliance",
+              "Assess capacity to leave in the context of acute confusion — because intermittent confusion from withdrawal or encephalopathy may impair decision-making in the moment he tries to elope"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Accepting 'behavioural' as the diagnosis and endorsing discharge",
+          "Take-home diazepam for an acutely withdrawing patient with cirrhosis and unstable housing",
+          "Missing Wernicke encephalopathy despite classic red flags",
+          "Using antipsychotic sedation as the primary treatment for alcohol withdrawal"
+        ],
+        postExaminerNote: "Candidates who named Wernicke, cirrhosis-adjusted prescribing, Aboriginal liaison and declined discharge with diazepam demonstrated the clinical range expected. Candidates who framed the presentation as 'behavioural' and endorsed discharge scored in the lower range."
+      },
+      {
+        stemNumber: "4.2",
+        vignette: "Overnight Graham becomes agitated and pushes a nurse while trying to leave. His liver function deteriorates and his oxygen saturation falls after he is given repeated sedating medication. Nursing staff request security restraint and more antipsychotic medication. The Aboriginal liaison officer says Graham becomes more frightened when multiple uniformed staff enter the room.",
+        question: "Describe — list and explain your response to this situation.\nA list without explanation will not be awarded marks.\n(8 marks | 8 minutes)",
+        commandWord: "describe_explain",
+        marks: 8,
+        timeMinutes: 8,
+        stemSignals: [
+          "Oxygen desaturation after repeated sedation is a medication safety emergency — it must be addressed immediately, not managed with further sedation",
+          "Security-first response to an Aboriginal patient who is frightened of uniformed staff is culturally unsafe and likely to escalate the clinical situation",
+          "Under-treated alcohol withdrawal is the primary driver of agitation — treating the behaviour without treating the cause will worsen clinical outcomes"
+        ],
+        domains: [
+          {
+            name: "Award up to 8 marks from the following scorable points",
+            marks: 8,
+            keyPoints: [
+              "Reassess withdrawal severity and delirium — because agitation may reflect under-treated alcohol withdrawal or hepatic delirium, not wilful behaviour, and the treatment must address the cause",
+              "Review and reduce the sedative burden immediately — because oxygen desaturation after repeated sedative doses indicates over-sedation risk in a patient with compromised liver function and potential respiratory reserve",
+              "Escalate to senior medical review or HDU if oxygen saturations remain impaired — because respiratory compromise in a patient with cirrhosis receiving sedatives requires immediate physician-level assessment",
+              "Continue parenteral thiamine — because Wernicke risk persists while confusion, ataxia and alcohol dependence are present",
+              "Use benzodiazepines cautiously and with medical monitoring — because they are the appropriate treatment for alcohol withdrawal physiology but hepatic and respiratory compromise requires dose-adjusted cautious administration",
+              "Avoid antipsychotics as primary treatment for alcohol withdrawal — because they do not treat withdrawal physiology and may lower seizure threshold",
+              "Use the Aboriginal liaison officer in de-escalation — because culturally safe engagement by a trusted known person may resolve agitation without coercion",
+              "Reduce environmental threat — because multiple uniformed staff entering the room has already been identified as a fear trigger for Graham and this information must change the response",
+              "Reserve security and physical restraint for immediate safety needs only — because restraint in a man frightened of authority figures is likely to escalate trauma, worsen physiology and should be proportionate and time-limited",
+              "Develop a consistent ward management plan across all shifts — because inconsistent responses to escalation worsen unpredictability and patient fear"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Prescribing more antipsychotic for a withdrawal-driven agitation without addressing the cause",
+          "Security-first response without first attempting culturally safe de-escalation",
+          "Ignoring falling oxygen saturations and continuing sedation",
+          "Excluding the Aboriginal liaison officer from the management plan"
+        ],
+        postExaminerNote: "The oxygen desaturation and the liaison officer information are both clinical data that must change management. Candidates who did not act on either of these scored in the lower range."
+      },
+      {
+        stemNumber: "4.3",
+        vignette: "After several days Graham is medically improving. He refuses residential rehabilitation and says he wants to return to the park where he usually sleeps. His niece says he will die if discharged and asks you to 'section him until he agrees to rehab.' Graham understands that alcohol may kill him but says, 'That is my choice.' The medical team wants the bed.",
+        question: "Discuss — list and debate how you would approach discharge planning. You must name the tensions explicitly and take a defensible consultant position.\n(8 marks | 8 minutes)",
+        commandWord: "debate",
+        marks: 8,
+        timeMinutes: 8,
+        stemSignals: [
+          "The niece's request to 'section him until he agrees to rehab' is not a lawful use of the Mental Health Act — alcohol dependence alone does not meet involuntary psychiatric criteria",
+          "High risk is not the same as lack of capacity — candidates must make this distinction explicitly",
+          "Bed pressure from the medical team cannot determine the discharge decision — this is an ethical safeguard the consultant must name and uphold"
+        ],
+        domains: [
+          {
+            name: "Award up to 8 marks from the following scorable points",
+            marks: 8,
+            keyPoints: [
+              "There is tension between Graham's autonomy and foreseeable harm — he may make an unwise decision if he has capacity, and a capacitous decision to take a risk is legally and ethically protected",
+              "There is tension between family wishes and patient autonomy — the niece's distress is understandable and her fear may be accurate, but it does not authorise compulsory psychiatric detention",
+              "There is tension between homelessness and discharge safety — returning to the park involves foreseeable risk but does not in itself constitute lack of capacity or grounds for detention",
+              "There is tension between bed pressure and the standard of care — the medical team wanting the bed is not a clinical factor and must not influence discharge timing",
+              "Capacity must be assessed as decision-specific and current — withdrawal delirium must have resolved and the current capacity for the discharge decision must be formally assessed",
+              "Alcohol dependence alone does not justify involuntary psychiatric detention in most Australian jurisdictions — the legal criteria must be named and honestly assessed against the presentation",
+              "A defensible position is to respect a capacitous refusal of rehabilitation while maximising harm reduction — because forced rehabilitation is unlikely to be lawful or effective",
+              "Discharge planning should include culturally appropriate Aboriginal AOD supports — because engagement may improve with services that are not mainstream hospital-based",
+              "Social work and housing supports should be maximised within the discharge window — because homelessness is a modifiable discharge risk even if rehabilitation is refused",
+              "Document the capacity assessment, risks acknowledged, alternatives offered and reasoning — because the niece's opposition and potential complaint make contemporaneous records essential"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Recommending involuntary psychiatric detention to force rehabilitation",
+          "Discharging with no harm reduction or housing support because capacity is intact",
+          "Allowing bed pressure to determine discharge timing",
+          "Ignoring the niece's perspective entirely rather than managing it constructively"
+        ],
+        postExaminerNote: "High risk is not lack of capacity — this is the core principle. Candidates who endorsed detention for risk, or who discharged without harm reduction because capacity was intact, both failed the ethical reasoning test."
+      },
+      {
+        stemNumber: "4.4",
+        vignette: "A ward audit later finds delayed thiamine administration in several patients, inconsistent use of withdrawal scales, frequent use of security for intoxicated Aboriginal patients, and no clear referral pathway to Aboriginal alcohol and other drug services. The medical director asks for psychiatry recommendations.",
+        question: "Outline — list and justify your recommendations to the medical director.\nA list without case-specific justification will not be awarded marks.\n(7 marks | 7 minutes)",
+        commandWord: "outline_justify",
+        marks: 7,
+        timeMinutes: 7,
+        stemSignals: [
+          "Four specific audit findings are named — the recommendations must address each directly",
+          "The pattern of security use with Aboriginal patients is a potential equity and safety governance issue — it must be escalated for review, not normalised",
+          "Thiamine delay is a preventable harm — it requires a mandatory protocol with prompts, not educational nudges alone"
+        ],
+        domains: [
+          {
+            name: "Award up to 7 marks from the following scorable points",
+            marks: 7,
+            keyPoints: [
+              "Introduce a standard alcohol withdrawal protocol including mandatory withdrawal scaling — because inconsistent scoring means treatment is driven by observation rather than clinical criteria",
+              "Mandate early parenteral thiamine for all patients meeting at-risk criteria — because delayed thiamine is a preventable cause of Wernicke encephalopathy and this requires a protocol prompt, not clinician judgment",
+              "Create cirrhosis-adjusted prescribing guidance for sedatives in the withdrawal protocol — because standard benzodiazepine dosing is unsafe in hepatic impairment and over-sedation occurred in this case",
+              "Review security call frequency and rationale for Aboriginal patients — because a pattern of security use with a specific population requires equity review, and each call must have documented clinical justification",
+              "Embed Aboriginal liaison officer referral into the admission pathway for all withdrawal presentations — because early cultural engagement reduces fear, absconding and coercive responses",
+              "Train ward staff in trauma-informed and culturally safe de-escalation — because uniformed security response was identified as increasing fear in an Aboriginal patient and this requires a different approach",
+              "Create a clear referral pathway to Aboriginal alcohol and other drug services — because the audit found no existing pathway and this gap leaves patients without culturally appropriate post-discharge support",
+              "Audit thiamine timing, withdrawal scale completion, security incidents and AOD referrals prospectively — because governance requires measurement to determine whether the protocol change produces the intended outcomes"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Recommending education only without protocol or audit",
+          "Omitting Aboriginal liaison or cultural safety components",
+          "No medication safety recommendation despite the over-sedation event"
+        ],
+        postExaminerNote: "The examiner expects recommendations that directly address each audit finding. Generic quality improvement suggestions that do not name thiamine protocols, security review and Aboriginal AOD pathways specifically will not score in the upper range."
+      }
+    ]
+  },
+  {
+    id: "meq_031",
+    title: "Linh — International Student Psychosis & University Confidentiality",
+    case: "Linh, 20 years old",
+    examSource: "Generated — Management / Disposition",
+    topic: "First episode psychosis in a 20-year-old Vietnamese international student; visa and shame barriers to care; confidentiality under simultaneous family and university pressure; stockpiled tablets; culturally safe community discharge and shared care",
+    primaryDomain: "Management / Disposition",
+    totalMarks: 32,
+    totalTimeMinutes: 32,
+    stems: [
+      {
+        stemNumber: "5.1",
+        vignette: "Linh is a 20-year-old Vietnamese international student brought to the university clinic by a counsellor. Over the past month she has stopped attending classes, lost weight, slept very little and become convinced that lecturers are monitoring her through the online learning platform. She used cannabis edibles twice at parties. She is under investigation for academic misconduct after submitting an essay generated by artificial intelligence software. Linh says she cannot tell her parents because they sold land to pay her fees and 'shame would destroy them.' The university asks whether she is safe to remain enrolled.",
+        question: "Outline — list and justify your formulation and immediate priorities.\nA list without case-specific justification will not be awarded marks.\n(8 marks | 8 minutes)",
+        commandWord: "outline_justify",
+        marks: 8,
+        timeMinutes: 8,
+        stemSignals: [
+          "First episode psychosis is the leading clinical formulation — candidates who attribute everything to stress without acknowledging the persecutory beliefs will miss the primary domain",
+          "Cultural shame about family sacrifice is a central suicide risk factor — it must be named in the formulation, not only in the psychosocial section",
+          "Conversational English fluency does not mean complex medical information can be communicated without support — language access must be assessed"
+        ],
+        domains: [
+          {
+            name: "Award up to 8 marks from the following scorable points",
+            marks: 8,
+            keyPoints: [
+              "First episode psychosis is the leading diagnosis — because persecutory beliefs about lecture monitoring, functional decline, weight loss, severe sleep reduction and nocturnal wandering are consistent with an emerging psychotic illness",
+              "Mood disorder with psychotic features must be considered — because weight loss, sleep disturbance and shame-driven withdrawal may reflect a major depressive episode with psychosis rather than primary psychosis",
+              "Substance-induced psychosis must be considered — because cannabis edibles may have contributed, though the one-month duration and ongoing beliefs in the absence of recent use require broader assessment",
+              "Assess suicide risk as an immediate priority — because family financial sacrifice and shame are specific and potent risk factors for suicidal behaviour in young people from collectivist backgrounds",
+              "Assess capacity and willingness to accept treatment — because refusal of admission is likely and may be driven by paranoid beliefs or visa fears that require specific clinical response",
+              "Assess language access needs — because conversational fluency does not predict ability to understand complex psychiatric explanations and informed consent may be invalid without appropriate support",
+              "Assess housing and visa stability as clinical risk factors — because rent arrears, potential eviction and scholarship threat are acute stressors that will worsen psychosis and suicide risk",
+              "Address the university's question about enrolment functionally — because a clinical response to this request must be framed around functional capacity, not diagnosis, and must not breach Linh's confidentiality"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Attributing the presentation entirely to academic stress without assessing psychosis",
+          "Responding to the university's safety question with diagnostic information before consent",
+          "Ignoring suicide risk from family shame and sacrifice",
+          "Assuming conversational English means no language support is needed"
+        ],
+        postExaminerNote: "First episode psychosis must be the leading formulation. Candidates who framed the presentation as adjustment disorder or exam anxiety without assessing persecutory beliefs and functional decline scored in the lower range."
+      },
+      {
+        stemNumber: "5.2",
+        vignette: "Linh refuses hospital admission because she believes it will affect her visa and scholarship. She speaks fluent conversational English but struggles with complex medical explanations. Her rent is overdue and her landlord has asked her to leave. The counsellor says Linh has been seen walking around campus at night and talking to herself. Linh says she will accept help only if her parents and university are not told.",
+        question: "Describe — list and explain your response to Linh.\nA list without explanation will not be awarded marks.\n(8 marks | 8 minutes)",
+        commandWord: "describe_explain",
+        marks: 8,
+        timeMinutes: 8,
+        stemSignals: [
+          "Visa and scholarship fears may be partly realistic and partly psychotically distorted — the assessment must determine which, not dismiss them as irrational",
+          "Housing instability is a medical-level risk for someone with emerging psychosis — eviction may constitute an acute clinical deterioration trigger",
+          "Preserving confidentiality is central to therapeutic engagement — disclosure to parents or the university without consent may cause Linh to disengage completely"
+        ],
+        domains: [
+          {
+            name: "Award up to 8 marks from the following scorable points",
+            marks: 8,
+            keyPoints: [
+              "Assess capacity to refuse admission — because the refusal may be based on paranoid or inaccurate beliefs about visa consequences rather than a considered autonomous choice",
+              "Use accessible language or interpreter support for complex clinical explanations — because informed consent for psychiatric assessment or treatment may not be valid without linguistic access",
+              "Explore visa and scholarship fears respectfully without dismissing them — because they may contain realistic elements, and dismissal will damage engagement and worsen paranoid beliefs about medical staff",
+              "Provide accurate information about visa implications of psychiatric admission — because if the fears are based on misinformation, correcting this may remove a barrier to treatment",
+              "Respect her wish not to involve parents or university unless risk requires it — because confidentiality is essential to any therapeutic alliance with Linh",
+              "Address housing urgency as a medical-level clinical problem — because eviction may worsen psychosis, create vulnerability to harm and remove the stable environment needed for any outpatient plan to work",
+              "Assess campus wandering and vulnerability — because walking the campus at night while psychotic creates risk of exploitation, injury and police contact that is distinct from inpatient admission risk",
+              "Offer least restrictive care that adequately addresses the clinical risk — because a brief admission or crisis team contact may be acceptable if visa fears are addressed, and the decision should not be binary"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Contacting parents immediately because she is unwell",
+          "Ignoring housing instability as a social rather than clinical issue",
+          "Using visa fears as evidence of delusion without checking their factual basis",
+          "Accepting refusal of all help because she says she is fine"
+        ],
+        postExaminerNote: "The examiner tests whether the candidate can engage with Linh's stated concerns as real clinical material rather than dismissing them as psychotic or collapsing immediately into coercion. Housing must be named as a medical risk, not a social worker problem."
+      },
+      {
+        stemNumber: "5.3",
+        vignette: "Linh's father phones from Vietnam demanding details and saying he will fly to Australia to take her home. The university requests a written statement about whether Linh is fit to sit exams and whether she poses a risk on campus. Linh refuses consent for contact with her father or the university. Her roommate separately tells the clinic that Linh has stockpiled sleeping tablets and recently said, 'If I fail, there is no future.'",
+        question: "Discuss — list and debate how you would manage these requests and this new information. You must name the tensions explicitly and take a defensible consultant position.\n(8 marks | 8 minutes)",
+        commandWord: "debate",
+        marks: 8,
+        timeMinutes: 8,
+        stemSignals: [
+          "Tablet stockpiling with 'no future' statements is high-risk collateral requiring immediate clinical response — it cannot be deferred pending Linh's consent",
+          "The university's request for a written risk statement does not create a clinical or legal obligation to provide one without Linh's consent",
+          "Minimum necessary disclosure is the governing principle — broad family and university disclosure may worsen shame-driven suicide risk"
+        ],
+        domains: [
+          {
+            name: "Award up to 8 marks from the following scorable points",
+            marks: 8,
+            keyPoints: [
+              "There is tension between Linh's confidentiality and imminent suicide risk — tablet stockpiling and 'no future' statements represent a threshold at which safety action may need to override consent",
+              "There is tension between family support and cultural shame — her father may provide genuine support or may escalate shame and coercion, and this cannot be determined without careful assessment",
+              "There is tension between the university's duty of care and Linh's privacy — functional advice to the university may be possible with consent, but a diagnostic or risk disclosure without consent requires a specific safety threshold",
+              "There is tension between maintaining therapeutic alliance and acting on third-party collateral — the roommate's information must be assessed and acted on even without Linh's awareness",
+              "A defensible position is urgent reassessment of suicide risk using the new information — because tablet stockpiling is a change in the clinical situation that requires immediate response regardless of the other requests",
+              "Means restriction must be addressed urgently — because sleeping tablets are a specific accessible method and securing them is a priority clinical action",
+              "Explain confidentiality limits to Linh — because she needs to understand that safety actions may be necessary and this transparency supports the therapeutic relationship",
+              "Apply minimum necessary disclosure to both the father and the university — because broad disclosure of diagnosis or clinical details without consent may catastrophically worsen shame and suicidal hopelessness"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Providing the father with clinical details because he is family and paying fees",
+          "Ignoring the roommate's collateral about tablets and the 'no future' statement",
+          "Writing the university a risk statement with diagnostic details without Linh's consent",
+          "Maintaining confidentiality without any safety response to the tablet stockpiling"
+        ],
+        postExaminerNote: "The tablet stockpiling is a clinical emergency that overrides the administrative requests in urgency. Candidates who addressed the university letter before the tablets, or who ignored the collateral, did not demonstrate appropriate clinical prioritisation."
+      },
+      {
+        stemNumber: "5.4",
+        vignette: "Linh accepts a brief admission and improves with treatment. She remains anxious about academic exclusion, housing and family shame. She wants to return to study part-time but fears relapse if she loses her scholarship. The university disability officer, GP, community mental health team and international student office all request different information from psychiatry.",
+        question: "Outline — list and justify your discharge plan for Linh.\nA list without case-specific justification will not be awarded marks.\n(8 marks | 8 minutes)",
+        commandWord: "outline_justify",
+        marks: 8,
+        timeMinutes: 8,
+        stemSignals: [
+          "Information sharing with five requesting parties must be governed by consent and the minimum necessary principle — fragmented compliance will breach confidentiality and worsen shame",
+          "Graded return to study is not optional — full immediate academic load is a relapse precipitant that must be specifically addressed",
+          "Visa and scholarship instability remain active suicide risk factors after discharge — the plan must address these, not leave them to the university alone"
+        ],
+        domains: [
+          {
+            name: "Award up to 8 marks from the following scorable points",
+            marks: 8,
+            keyPoints: [
+              "Arrange early psychosis follow-up with rapid review capacity — because first episode psychosis has high relapse and disengagement risk in the post-discharge period",
+              "Develop a medication plan with side-effect discussion — because adherence may be affected by stigma, academic demands and the practical challenges of student life",
+              "Create a relapse and suicide safety plan — because sleep loss, academic pressure, family shame and scholarship loss are all identified relapse and risk triggers",
+              "Address cannabis use specifically — because cannabis may have contributed to the presentation and continued use is a relapse risk",
+              "Coordinate housing support urgently — because housing instability is a documented relapse and suicide risk that must be resolved, not left to the accommodation office",
+              "Provide consent-based communication with the university — because functional recommendations for study adjustments can be shared without diagnosis or clinical detail, and Linh must agree to each disclosure",
+              "Recommend graded return to study with specific academic load reduction — because immediate full academic return in a student with first episode psychosis and unresolved academic misconduct is a foreseeable relapse precipitant",
+              "Clarify information-sharing boundaries in a written shared care plan — because GP, community mental health, disability officer and international student office are all requesting different information and without clear governance this creates confidentiality risk",
+              "Include culturally safe support — because Vietnamese family values, shame and the meaning of education and sacrifice require a clinician who can engage with these themes, not just provide generic psychoeducation"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Discharging to GP only without community mental health or early psychosis follow-up",
+          "Providing all requesting services with all requested information without consent",
+          "Recommending immediate full return to study without academic adjustments",
+          "Ignoring housing and scholarship instability as ongoing risk factors"
+        ],
+        postExaminerNote: "The information governance stem requires the candidate to demonstrate that shared care does not mean open disclosure. Candidates who coordinated all parties without named consent processes, or who ignored housing and graded return to study, did not score in the upper range."
+      }
+    ]
+  },
+  {
+    id: "meq_032",
+    title: "Rosa Bellini — Elder Abuse, Financial Capacity & Testamentary Capacity",
+    case: "Mrs Rosa Bellini, 88 years old",
+    examSource: "Generated — Ethics / Professionalism / Legal",
+    topic: "Post-operative delirium, suspected financial abuse, testamentary capacity request under family conflict, elder abuse investigation and ward governance for legal documents in older inpatients",
+    primaryDomain: "Ethics / Professionalism / Legal",
+    totalMarks: 32,
+    totalTimeMinutes: 32,
+    stems: [
+      {
+        stemNumber: "1.1",
+        vignette: "Mrs Rosa Bellini is an 88-year-old Italian-speaking widow admitted after a fractured neck of femur. She developed fluctuating confusion post-operatively, worse at night. Her nephew Carlo brings property transfer documents to the ward and asks the nurse to witness Mrs Bellini's signature, saying, 'She agreed yesterday before she got confused.' Mrs Bellini says through Carlo, 'I don't know what I signed. I was in pain.' No professional interpreter has been used.\\n\\nThe nurse says Mrs Bellini's pension card is missing. Carlo says, 'In our family we handle these things privately.' The orthopaedic registrar asks whether psychiatry can 'just say she lacks capacity so we can stop this.'",
+        question: "Outline — list and justify your assessment priorities.\nA list without case-specific justification will not be awarded marks.\n(9 marks | 9 minutes)",
+        commandWord: "outline_justify",
+        marks: 9,
+        timeMinutes: 9,
+        stemSignals: [
+          "Using Carlo as interpreter for a capacity assessment about a document he benefits from is not clinically or legally acceptable — a professional interpreter is mandatory before any assessment begins",
+          "The registrar's request to 'just say she lacks capacity' misuses psychiatric opinion — the psychiatrist must conduct a genuine assessment, not produce a convenience conclusion",
+          "A missing pension card combined with family pressure and property documents at the bedside raises the threshold for elder abuse investigation, not just capacity assessment"
+        ],
+        domains: [
+          {
+            name: "Award up to 9 marks from the following scorable points",
+            marks: 9,
+            keyPoints: [
+              "Arrange a professional Italian interpreter before any assessment — because using Carlo as interpreter for a capacity assessment about a document he benefits from creates a conflict of interest that invalidates the assessment",
+              "Assess delirium as the primary diagnosis — because fluctuating confusion worse at night after hip surgery is consistent with post-operative delirium, which must be excluded or treated before a reliable capacity assessment",
+              "Clarify what document was presented and its consequences — because property transfer is a high-stakes decision requiring understanding of what she is signing, what she owns and what will happen after signing",
+              "Assess decision-specific financial and property transfer capacity — because capacity is specific to this decision and cannot be concluded from a brief impression during a surgical review",
+              "Assess for undue influence and possible coercion — because Carlo has brought documents to the bedside of a delirious, pain-affected, isolated older woman and interprets her statements in his own interest",
+              "Assess for elder abuse — because a missing pension card, family insistence on private financial management and property documents presented during delirium together constitute a pattern that requires formal investigation",
+              "Obtain collateral from Mrs Bellini's daughters, GP and social worker — because accounts differ and the clinical picture requires information from sources outside Carlo's control",
+              "Advise staff not to witness any legal or financial documents until capacity and voluntariness are formally assessed — because witnessing occurred without an adequate assessment and further documents must be paused",
+              "Clarify Carlo's legal authority — because being a nephew does not automatically confer substitute decision-making power, and this must be formally clarified before any financial or legal action can proceed"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Using Carlo as interpreter for the capacity assessment",
+          "Simply certifying she lacks capacity to satisfy the registrar without conducting a genuine assessment",
+          "Treating the situation as a routine capacity referral without naming elder abuse as a concern",
+          "Allowing document witnessing to continue while assessment is pending"
+        ],
+        postExaminerNote: "The interpreter and elder abuse components are both mandatory. Candidates who began assessing capacity through Carlo, or who ignored the missing pension card and property pressure as elder abuse indicators, did not demonstrate the clinical and ethical breadth this stem requires."
+      },
+      {
+        stemNumber: "1.2",
+        vignette: "Mrs Bellini's confusion improves over several days. She now says she wants Carlo to have her house because 'he visits me more than my daughters.' Her two daughters say Carlo has isolated her, changed the locks, and recently took her to a solicitor. Carlo says the daughters are only interested in inheritance. Mrs Bellini can describe that the house is valuable but cannot explain where she would live if it were transferred.",
+        question: "Discuss — list and debate how you would proceed. You must name the tensions explicitly and take a defensible consultant position.\n(9 marks | 9 minutes)",
+        commandWord: "debate",
+        marks: 9,
+        timeMinutes: 9,
+        stemSignals: [
+          "She cannot explain where she would live after the transfer — this failure of appreciation is a specific and critical capacity finding that must be named",
+          "Improvement from delirium does not automatically restore capacity — current cognition still requires formal assessment specific to this high-stakes decision",
+          "Taking sides between Carlo and the daughters is not the psychiatric role — the defensible position is capacity and undue influence assessment, not family arbitration"
+        ],
+        domains: [
+          {
+            name: "Award up to 9 marks from the following scorable points",
+            marks: 9,
+            keyPoints: [
+              "There is tension between respecting Mrs Bellini's expressed wish and protecting her from possible exploitation — the wish to benefit Carlo may be genuine but may also reflect dependency, fear of abandonment or cognitive distortion",
+              "There is tension between delirium resolution and restored capacity — clinical improvement does not mean full cognitive recovery, and this high-stakes decision requires formal decision-specific assessment",
+              "There is tension between the daughters' protective concern and Mrs Bellini's autonomy — the daughters may be correct about isolation or may be motivated by inheritance, and both possibilities must be held without prejudging",
+              "Her inability to describe where she would live after the transfer is a specific failure of appreciation — she must not only understand the house has value but also appreciate the personal consequences of its loss",
+              "Undue influence must be actively investigated — changed locks, recent solicitor visit and Carlo's control over her communication are specific indicators that must be formally assessed in a private interpreted interview",
+              "Private assessment without Carlo or daughters present is required — she must be interviewed alone with an interpreter to determine what she says when the pressure from competing family members is removed",
+              "Referral to social work, elder abuse services or legal advocacy is required — this situation exceeds the scope of a capacity opinion and requires specialist elder abuse investigation",
+              "The defensible position is to pause any property transaction, conduct formal assessment, investigate undue influence and avoid becoming an arbiter of the family inheritance dispute",
+              "The psychiatric opinion advises on capacity and mental state — it does not determine ownership or resolve family conflict, and the limits of the role must be clearly communicated to the referring team"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Accepting her expressed wish without investigating whether it reflects her free and informed decision",
+          "Taking the daughters' side without acknowledging that their concerns may be partly motivated by inheritance",
+          "Conducting the assessment with Carlo or daughters present",
+          "Treating delirium resolution as equivalent to restored financial decision-making capacity"
+        ],
+        postExaminerNote: "The inability to explain where she would live is the key capacity finding. Candidates who identified this and named undue influence investigation as a parallel necessity, without taking sides in the family dispute, demonstrated consultant-level reasoning."
+      },
+      {
+        stemNumber: "1.3",
+        vignette: "The daughters ask you to assess Mrs Bellini because she now wants to change her will. Carlo says any delay is discrimination against older people. The solicitor asks for a psychiatric letter urgently because 'family pressure is escalating.' Mrs Bellini becomes tearful and says, 'If I do not sign, no one will visit me.'",
+        question: "Describe — list and explain your response to this request.\nA list without explanation will not be awarded marks.\n(7 marks | 7 minutes)",
+        commandWord: "describe_explain",
+        marks: 7,
+        timeMinutes: 7,
+        stemSignals: [
+          "Mrs Bellini's statement 'if I do not sign, no one will visit me' is a coercion indicator that must be prominently documented and investigated before any opinion is provided",
+          "Family urgency and a solicitor's request are not clinical indications to rush an assessment — pressure should slow the process, not accelerate it",
+          "Testamentary capacity is a specific legal standard distinct from general medical capacity — the components must be assessed formally"
+        ],
+        domains: [
+          {
+            name: "Award up to 7 marks from the following scorable points",
+            marks: 7,
+            keyPoints: [
+              "Clarify the exact request — because testamentary capacity assessment is specific to will-making and is distinct from financial capacity, property transfer capacity or general cognitive assessment",
+              "Assess the four testamentary capacity components — understanding the nature and effect of a will, knowledge of the extent of assets, awareness of potential beneficiaries and their moral claims, and freedom from delusion or disorder that distorts the decision",
+              "Assess undue influence as a priority — because Mrs Bellini's statement that no one will visit if she does not sign describes direct coercive pressure that must be documented and investigated before any opinion is provided",
+              "Conduct the assessment privately using a professional interpreter — because neither Carlo nor the daughters should be present, and previous interpreter failures must not be repeated",
+              "Do not provide an urgent letter under family or solicitor pressure — because urgency from a solicitor is not a clinical indication, and poor assessment conditions require the process to be slowed, not expedited",
+              "Document the limitations of the assessment and recommend independent legal and medico-legal review — because the family conflict and coercion concerns make independent assessment preferable for legal purposes",
+              "Clarify the treating psychiatrist's role limitation — because providing a medico-legal opinion in a case where there is active family conflict and a potential abuse investigation creates a conflict of interest that must be acknowledged"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Writing a capacity letter under time pressure from the solicitor",
+          "Conducting the assessment with Carlo or daughters present",
+          "Treating the coercion statement as irrelevant to the capacity assessment",
+          "Ignoring the conflict between treating and medico-legal roles"
+        ],
+        postExaminerNote: "The coercion statement is the most important clinical datum in this stem. Candidates who did not name it as a priority concern, or who produced a letter under pressure, failed the ethical reasoning requirement."
+      },
+      {
+        stemNumber: "1.4",
+        vignette: "A later hospital review finds that ward staff are repeatedly asked to witness financial or legal documents for older inpatients whose cognition is uncertain. Staff describe feeling unsure what to do when family members pressure them, when interpreters are not available, or when an older patient appears frightened of losing family contact.",
+        question: "Outline — list and justify your recommendations after this review.\nA list without case-specific justification will not be awarded marks.\n(7 marks | 7 minutes)",
+        commandWord: "outline_justify",
+        marks: 7,
+        timeMinutes: 7,
+        stemSignals: [
+          "Ward staff should not be expected to make individual judgments about legal document witnessing — this requires a clear policy removing the burden from individual clinicians",
+          "The interpreter gap is a patient rights issue requiring a mandatory clinical policy, not an optional resource",
+          "Elder abuse referral pathways must be built into ward policy — ad hoc responses after the fact are insufficient governance"
+        ],
+        domains: [
+          {
+            name: "Award up to 7 marks from the following scorable points",
+            marks: 7,
+            keyPoints: [
+              "Develop a ward policy that staff must not witness legal or financial documents for any inpatient with uncertain cognition — because individual staff should not bear this judgment and a clear policy removes the pressure",
+              "Mandate professional interpreter access for all legal, financial and capacity discussions with non-English-speaking patients — because family interpretation in these circumstances is a patient rights failure, not a resource constraint",
+              "Create an escalation pathway for suspected financial abuse or undue influence — because staff currently have no structured route for raising concerns and must act in isolation",
+              "Provide a referral process to social work, elder abuse services and legal advocacy — because the range of required responses exceeds ward nursing and medical competency",
+              "Allow visitor restriction when coercion is suspected — because staff need authority to limit access in the context of a safeguarding concern without requiring individual clinical judgment each time",
+              "Train ward staff on decision-specific capacity, undue influence and elder abuse recognition — because the review found that uncertainty about these concepts was driving inappropriate compliance with family requests",
+              "Audit incidents of document signing and legal requests in older inpatients — because governance requires measurement to determine whether the policy change prevents recurrence"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Recommending only clinical training without policy or escalation pathway",
+          "Omitting interpreter policy as a governance requirement",
+          "No elder abuse referral pathway in the recommendations"
+        ],
+        postExaminerNote: "The governance stem tests whether the candidate can identify that staff are being placed in an impossible position without policy support. Recommendations that remove individual judgment burden through policy, pathway and audit demonstrate systems leadership."
+      }
+    ]
+  },
+  {
+    id: "meq_033",
+    title: "Harold Singh — Dementia, Wandering, Capacity & Accommodation",
+    case: "Mr Harold Singh, 83 years old",
+    examSource: "Generated — Governance / Systems / Leadership",
+    topic: "Probable Alzheimer disease with wandering and self-neglect; capacity for accommodation and home-care decisions; Mental Health Act versus guardianship pathways; failed home trial; repeat ED presentations and aged-care system governance",
+    primaryDomain: "Governance / Systems / Leadership",
+    totalMarks: 32,
+    totalTimeMinutes: 32,
+    stems: [
+      {
+        stemNumber: "2.1",
+        vignette: "Mr Harold Singh is an 83-year-old widower with probable Alzheimer disease. Council workers request urgent review because neighbours report he leaves the front door open overnight, has spoiled food in the fridge, and has twice been found walking barefoot to the shops at 2 am. His daughter lives interstate and says, 'Dad always said he would die before going to care.'\\n\\nMr Singh says, 'My wife handles the medicines,' although she died five years ago. He refuses entry to home-care workers and says, 'They only come to steal.' The GP asks whether he can be admitted under the Mental Health Act because 'he is unsafe at home.'",
+        question: "Outline — list and justify your assessment priorities.\nA list without case-specific justification will not be awarded marks.\n(9 marks | 9 minutes)",
+        commandWord: "outline_justify",
+        marks: 9,
+        timeMinutes: 9,
+        stemSignals: [
+          "The Mental Health Act is not the appropriate pathway for dementia with wandering and self-neglect — guardianship and aged-care legislation are more likely to be relevant",
+          "Believing his deceased wife still manages his medications is a specific finding that must be named as indicating lack of insight and impaired capacity",
+          "Capacity must be assessed domain by domain — accommodation, medication, home care and finances may each yield a different conclusion"
+        ],
+        domains: [
+          {
+            name: "Award up to 9 marks from the following scorable points",
+            marks: 9,
+            keyPoints: [
+              "Assess cognition and dementia severity — because the referral pattern suggests moderate-to-severe impairment but a formal assessment is required to characterise function, safety and specific capacity domains",
+              "Screen for delirium and reversible contributors — because acute worsening on a dementia background may have a medical cause that must be excluded before any long-term disposition is planned",
+              "Assess wandering risk specifically — because barefoot nocturnal walks to the shops in an 83-year-old with dementia represent serious and imminent physical risk from traffic, falls, hypothermia and vulnerability",
+              "Assess self-neglect comprehensively — because spoiled food, open front door, refused home care and inability to manage medications each represent a separate safety domain",
+              "Assess capacity domain by domain — because capacity for accommodation decisions, medication management, home-care acceptance and finances may differ and a global statement is clinically inadequate",
+              "Assess paranoid beliefs about home-care workers — because fixed beliefs that carers steal may represent dementia-related paranoia that requires its own assessment and intervention",
+              "Advise the GP that the Mental Health Act is not the appropriate primary pathway for dementia with self-neglect — because MHA criteria require a treatable mental illness and compulsory treatment focus, while guardianship and aged-care legislation are better suited",
+              "Seek collateral from the daughter, GP, neighbours and council workers — because the clinical picture requires information from multiple sources and the daughter's offshore involvement must be clarified legally",
+              "Clarify the daughter's legal role — because being an interstate child does not automatically confer substitute decision-making authority and the formal position must be established"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Endorsing the GP's request to admit under the Mental Health Act for dementia and self-neglect",
+          "Not naming the 'wife manages medicines' statement as a specific capacity and insight finding",
+          "Conducting a global capacity assessment rather than a domain-specific one",
+          "Ignoring the paranoid beliefs about carers as a clinical component requiring assessment"
+        ],
+        postExaminerNote: "The Mental Health Act misuse must be corrected. Candidates who named the correct legal framework (guardianship/aged care) and assessed capacity domain by domain, while identifying the delusional belief about the deceased wife, scored in the upper range."
+      },
+      {
+        stemNumber: "2.2",
+        vignette: "Mr Singh is brought to ED by police after being found on a highway in heavy rain. He insists on going home and cannot recall the incident. His daughter wants residential care arranged immediately. His son says, 'He has a right to make bad decisions.' Social work says a respite bed is available only today. ED is full and the bed manager asks whether Mr Singh can be held until longer-term arrangements are made.",
+        question: "Discuss — list and debate how you would proceed in ED. You must name the tensions explicitly and take a defensible consultant position.\n(9 marks | 9 minutes)",
+        commandWord: "debate",
+        marks: 9,
+        timeMinutes: 9,
+        stemSignals: [
+          "He cannot recall the highway incident — this specific finding indicates he cannot appreciate the risk he faced, which is directly relevant to capacity for the discharge decision",
+          "A respite bed available only today should not determine the disposition — lawful capacity assessment must precede placement, not follow logistical opportunity",
+          "ED bed pressure is not a justification for unlawful detention or unsafe discharge — the consultant must articulate the lawful framework for whatever decision is made"
+        ],
+        domains: [
+          {
+            name: "Award up to 9 marks from the following scorable points",
+            marks: 9,
+            keyPoints: [
+              "There is tension between Mr Singh's autonomy and foreseeable life-threatening harm — highway wandering in heavy rain without recall of the incident represents a risk that may exceed any right to make an unwise decision",
+              "There is tension between the daughter's wish for immediate placement and the son's emphasis on autonomy — both reflect genuine values but neither automatically determines the clinical or legal outcome",
+              "There is tension between ED bed pressure and the standard of safe assessment — being full is not a clinical factor that can accelerate discharge to an unsafe situation",
+              "His inability to recall the highway event is a specific capacity finding — it indicates he cannot appreciate the nature or severity of the risk he faced, which is relevant to whether his insistence on going home reflects a capacitous decision",
+              "The respite bed availability should not drive the disposition decision — it is a useful resource if assessment supports it but using it for logistical rather than clinical reasons reverses the required sequence",
+              "Short-term safety measures may be lawfully applied while formal assessment occurs — using relevant medical or legal authority for short-term observation is not the same as indefinite detention",
+              "Guardianship referral is likely appropriate if capacity for the accommodation decision is absent — and the urgent nature of the case supports an expedited application",
+              "Communicate clearly with both children about the legal framework and limits — because family disagreement must be managed but cannot substitute for formal assessment and legal process",
+              "A defensible position is to prevent immediate discharge, conduct decision-specific capacity assessment and use the respite bed if assessment confirms it is appropriate — rather than placing because a bed exists"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Holding Mr Singh in ED indefinitely without lawful authority",
+          "Discharging him home because the son invokes his right to make bad decisions",
+          "Accepting the respite bed because it is available today without completing capacity assessment",
+          "Allowing ED bed pressure to determine the clinical decision"
+        ],
+        postExaminerNote: "The inability to recall the highway incident is the key capacity datum in this stem. Candidates who named it explicitly and connected it to the appreciation criterion, while naming the lawful framework for short-term safety, scored in the upper range."
+      },
+      {
+        stemNumber: "2.3",
+        vignette: "A temporary discharge home with increased supports fails within a week. Mr Singh refuses meals-on-wheels, has missed insulin, and is found with the gas stove on. His daughter says she cannot travel but wants you to 'declare him incapable of managing everything.' Mr Singh says he wants to stay home because 'my wife will come back and be lost if I leave.'",
+        question: "Describe — list and explain your further management plan.\nA list without explanation will not be awarded marks.\n(7 marks | 7 minutes)",
+        commandWord: "describe_explain",
+        marks: 7,
+        timeMinutes: 7,
+        stemSignals: [
+          "A second failed home trial changes the risk threshold — what was reasonable as a first attempt cannot be repeated as the plan without escalation",
+          "The delusional belief that his wife will return is not simply grief — it is a fixed false belief that specifically affects his ability to appreciate why remaining at home is hazardous",
+          "Declaring him incapable of everything is not clinically accurate or legally valid — the opinion must be domain-specific"
+        ],
+        domains: [
+          {
+            name: "Award up to 7 marks from the following scorable points",
+            marks: 7,
+            keyPoints: [
+              "Reassess capacity after the failed home trial — because missed insulin, gas stove left on and refused meals represent new risk incidents that change the risk threshold and require formal documentation",
+              "Assess each capacity domain affected by the failed trial — because medication management, nutrition, gas safety and home-care acceptance each require a separate conclusion, not a global declaration",
+              "Evaluate the delusional belief about his wife returning — because this fixed false belief prevents him from appreciating why leaving home would not cause her harm, and may specifically distort his capacity for the accommodation decision",
+              "Decline to provide a blanket declaration of incapacity — because this is neither clinically accurate nor legally valid; the opinion must describe specific functional limitations",
+              "Convene an urgent family meeting with the daughter by teleconference — because the decision about accommodation escalation cannot proceed without involving the daughter, even remotely",
+              "Initiate guardianship or substitute decision-making referral if capacity for accommodation decisions is absent — because two failed home trials and life-threatening self-neglect reach the threshold for formal legal process",
+              "Implement risk mitigation while awaiting a legal decision — including gas disconnection, medication supervision, daily welfare checks and meals arrangement to prevent harm in the interim"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Repeating the same home-support package without escalation after a clear failure",
+          "Writing a blanket incapacity declaration as the daughter requests",
+          "Ignoring the delusional content about the wife as clinically relevant to capacity",
+          "Treating the daughter's unavailability as a reason to delay guardianship referral"
+        ],
+        postExaminerNote: "The delusional belief about the wife is a specific capacity impairment affecting the accommodation decision, not just a psychiatric symptom. Candidates who named it in this context, rather than as a separate psychiatric problem, demonstrated clinical precision."
+      },
+      {
+        stemNumber: "2.4",
+        vignette: "A service review finds repeated ED presentations of older people with dementia, wandering and self-neglect. Staff documentation is variable, families receive inconsistent advice, and multiple services become involved only after a crisis.",
+        question: "Outline — list and justify your recommendations after this review.\nA list without case-specific justification will not be awarded marks.\n(7 marks | 7 minutes)",
+        commandWord: "outline_justify",
+        marks: 7,
+        timeMinutes: 7,
+        stemSignals: [
+          "Repeat ED presentations for a predictable pattern is a system signal — the governance response must address pathways and thresholds, not only individual clinical decisions",
+          "Late multi-agency involvement is the root cause — the system must trigger earlier, not respond better to crises",
+          "Documentation variability is both a clinical safety and governance risk — a template or standard is required"
+        ],
+        domains: [
+          {
+            name: "Award up to 7 marks from the following scorable points",
+            marks: 7,
+            keyPoints: [
+              "Create a standard pathway for dementia presentations with wandering and self-neglect — because repeated crisis-only engagement indicates no agreed proactive route between community services, GP, aged care and mental health",
+              "Develop a domain-specific capacity documentation template — because variable documentation means clinicians are reaching different conclusions using different frameworks, creating inconsistent family advice and legal risk",
+              "Establish a clear ED-to-aged-care-assessment referral process — because multiple ED presentations should trigger a structured aged-care and guardianship assessment, not repeated crisis stabilisation",
+              "Create a guardianship escalation pathway with defined triggers — because services need to know when to escalate to substitute decision-making rather than attempting repeated failed home packages",
+              "Develop a family information resource explaining capacity, accommodation and legal processes — because families like the Singh family receive inconsistent advice because clinicians have no shared framework to offer",
+              "Implement a rapid case conference for repeat ED presenters — because each crisis being managed independently misses the system pattern and delays coordinated intervention",
+              "Audit repeat ED presentations and time to guardianship referral — because governance requires measurement to determine whether the pathway change is working"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Recommending only clinical training without a pathway or referral process",
+          "Omitting guardianship escalation as a governance tool",
+          "No audit or measurement component in the recommendations"
+        ],
+        postExaminerNote: "The examiner expects a pathway-level response to a pattern-level problem. Candidates who recommended individual education without system change, or who did not name guardianship escalation as a formal pathway, did not demonstrate governance leadership."
+      }
+    ]
+  },
+  {
+    id: "meq_034",
+    title: "Lionel Brooks — FTD, Sexual Disinhibition & RACF Governance",
+    case: "Mr Lionel Brooks, 74 years old",
+    examSource: "Generated — Governance / Systems / Leadership",
+    topic: "Frontotemporal dementia with nocturnal sexual disinhibition in RACF; misidentification not sexual intent; female resident safety; restrictive practices; antipsychotic risk; regional governance for sexualised behaviour in dementia",
+    primaryDomain: "Governance / Systems / Leadership",
+    totalMarks: 32,
+    totalTimeMinutes: 32,
+    stems: [
+      {
+        stemNumber: "3.1",
+        vignette: "Mr Lionel Brooks is a 74-year-old man with frontotemporal dementia living in residential aged care. Staff request urgent review because he has twice entered female residents' rooms at night. One resident says she is frightened to sleep. Mr Brooks says, 'I thought she was my wife.' His daughter says he would be horrified if he understood what had happened.\\n\\nThe facility manager says, 'Transfer him to psych before families sue.' The GP asks whether regular antipsychotic medication can be used 'to stop the behaviour.' Staff say they cannot provide one-to-one observation.",
+        question: "Outline — list and justify your assessment priorities.\\nA list without case-specific justification will not be awarded marks.\\n(8 marks | 8 minutes)",
+        commandWord: "outline_justify",
+        marks: 8,
+        timeMinutes: 8,
+        stemSignals: [
+          "Transferring Mr Brooks to acute psychiatry as the first response is the examiner trap — it will not treat FTD disinhibition and removes him from a familiar environment",
+          "Antipsychotic as first-line without assessment is clinically inappropriate — it carries significant mortality risk in older dementia patients and does not address the cause",
+          "Misidentification of the female resident as his wife is clinically significant — this is likely disinhibition with misidentification rather than sexually motivated behaviour, and the distinction drives management"
+        ],
+        domains: [
+          {
+            name: "Award up to 8 marks from the following scorable points",
+            marks: 8,
+            keyPoints: [
+              "Characterise the neurocognitive syndrome and FTD-related disinhibition — because FTD disinhibition with misidentification requires a different management approach than other causes of nocturnal wandering",
+              "Assess whether the behaviour is sexually motivated, misidentification, confusion or environmental cueing — because his statement 'I thought she was my wife' suggests misidentification, which informs both the formulation and the appropriate response",
+              "Assess risk to female residents — because one resident is already frightened to sleep, and her safety is a parallel clinical priority to Mr Brooks' assessment",
+              "Assess Mr Brooks' capacity and insight regarding entering other residents' rooms — because this determines whether he can participate in redirection strategies",
+              "Identify triggers — because time of day, noise level, boredom, loneliness, toileting needs and sleep disruption are all potential modifiable drivers of the behaviour",
+              "Review medications and physical contributors — because pain, constipation, urinary retention and sleep disruption may increase nocturnal agitation",
+              "Assess staffing arrangements and environmental safety — because staff saying they cannot provide one-to-one observation is a safety gap that must be documented and addressed",
+              "Decline the facility's request for immediate transfer to psychiatry — because acute psychiatric admission does not treat FTD disinhibition, removes him from a familiar environment and should not be used to manage legal risk",
+              "Decline the GP's request for empirical antipsychotic without assessment — because antipsychotic use in FTD carries significant mortality risk and must follow non-pharmacological assessment"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Endorsing transfer to acute psychiatry as the primary response to RACF management difficulty",
+          "Prescribing antipsychotic as first-line without formulation or behaviour assessment",
+          "Ignoring the female resident's safety and the impact on her as a parallel clinical priority",
+          "Treating 'I thought she was my wife' as evidence of sexual motivation rather than misidentification"
+        ],
+        postExaminerNote: "The examiner tests whether candidates can resist two simultaneous clinical traps: transfer for legal protection and antipsychotic for behavioural control. Candidates who named misidentification explicitly, declined both traps with justification, and named female resident safety as a parallel priority scored in the upper range."
+      },
+      {
+        stemNumber: "3.2",
+        vignette: "The female resident's family demand that Mr Brooks be removed immediately. Mr Brooks' daughter says discussing sexuality is shameful in their culture and asks that the incident not be documented in detail. Staff propose locking Mr Brooks in his room overnight. The facility has not completed a behaviour-support plan.",
+        question: "Discuss — list and debate how you would respond. You must name the tensions explicitly and take a defensible consultant position.\\n(9 marks | 9 minutes)",
+        commandWord: "debate",
+        marks: 9,
+        timeMinutes: 9,
+        stemSignals: [
+          "Locking Mr Brooks in his room overnight is a restrictive practice that may breach legal standards — it requires a formal behaviour support plan and substitute decision-making authority, not a staff proposal",
+          "The daughter's request not to document the incident cannot be accommodated — accurate documentation is required for safety, governance and legal protection of both residents",
+          "The female resident's right to feel safe in her own room must be given equal weight — both residents have rights the facility is obligated to protect"
+        ],
+        domains: [
+          {
+            name: "Award up to 9 marks from the following scorable points",
+            marks: 9,
+            keyPoints: [
+              "There is tension between the female resident's safety and Mr Brooks' dignity — both are genuine clinical priorities that cannot be resolved by simply prioritising one person",
+              "There is tension between the daughter's cultural distress and the requirement for accurate documentation — the incident must be documented accurately because safety records cannot be modified for cultural preferences, however respectfully handled",
+              "There is tension between least restrictive care and risk containment — locking Mr Brooks in his room overnight may be unlawful and unsafe without a behaviour support plan and legal authority",
+              "There is tension between family demand for immediate transfer and clinical evidence that it would not help — transfer removes Mr Brooks from a familiar environment without addressing the underlying FTD disinhibition",
+              "The facility has a legal obligation to protect all residents — the female resident's right to feel safe in her room and to sleep without fear is a right the facility cannot defer pending cultural negotiations",
+              "A behaviour-support plan must be completed before any transfer, room restriction or medication — its absence is the primary governance failure in this situation",
+              "Room locking as a default overnight measure requires explicit lawful authority, documentation and review — it is a restrictive practice and cannot proceed on staff proposal alone",
+              "The daughter's cultural concerns should be handled sensitively — her distress is genuine and the conversation about documentation must acknowledge this while explaining why accuracy is required",
+              "A defensible position is immediate safety planning, accurate documentation, family communication and a formal behaviour support plan before any escalation to transfer, restriction or medication"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Accepting the request to omit or modify incident documentation",
+          "Endorsing overnight room locking without behaviour support plan or legal authority",
+          "Immediate transfer to acute psychiatry because the family demands it",
+          "Ignoring the female resident's trauma and safety in the discussion"
+        ],
+        postExaminerNote: "Both residents' rights must be explicitly named and held. Candidates who took any single-party position — removing Mr Brooks immediately, or deferring the female resident's safety for cultural reasons — did not demonstrate the balanced consultant reasoning this stem requires."
+      },
+      {
+        stemNumber: "3.3",
+        vignette: "A review identifies that Mr Brooks becomes more unsettled when the evening lounge is noisy, misidentifies other women as his wife, and settles with a personalised evening routine. Staff still request medication because they feel unsafe. His daughter asks whether medication is ethical if he cannot consent.",
+        question: "Describe — list and explain your management plan.\\nA list without explanation will not be awarded marks.\\n(8 marks | 8 minutes)",
+        commandWord: "describe_explain",
+        marks: 8,
+        timeMinutes: 8,
+        stemSignals: [
+          "Personalised evening routine has already shown effectiveness — implementing this systematically is the highest clinical priority, above medication",
+          "Haloperidol is not appropriate in FTD or Lewy body disease — antipsychotic sensitivity and limited evidence make it a low-threshold harm",
+          "Medication without capacity assessment or substitute consent is not ethically or legally defensible — the daughter's question is clinically important and must be answered directly"
+        ],
+        domains: [
+          {
+            name: "Award up to 8 marks from the following scorable points",
+            marks: 8,
+            keyPoints: [
+              "Implement a personalised evening routine as the priority intervention — because the review identified that this already reduces the behaviour and it must be formalised across all evening shifts",
+              "Reduce evening overstimulation — because noise in the lounge is a specific identified trigger and environmental modification is a first-line non-pharmacological strategy",
+              "Use environmental cues to assist orientation — because room markers, photographs of his wife and personalised wayfinding may reduce misidentification-related wandering",
+              "Implement targeted supervision at high-risk times — because the pattern is nocturnal and shift-specific supervision is more proportionate than generalised restriction",
+              "Protect female residents' privacy and room access — because their safety must be maintained with physical measures while the behaviour plan is implemented",
+              "Review pain, infection and sleep disturbance as contributors — because physical contributors must be excluded or treated before medication is considered",
+              "Train staff in FTD and misidentification-driven disinhibition — because their feeling of being unsafe reflects knowledge deficits that education can address",
+              "Discuss medication only if the behaviour persists despite comprehensive non-drug strategies — because medication is not a first-line response to carer inconvenience",
+              "Conduct a formal capacity assessment and engage the substitute decision-maker if medication is indicated — because the daughter's ethical question about consent is correct and must be answered through proper process, not dismissed"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Prescribing medication without first implementing non-pharmacological strategies",
+          "Dismissing the daughter's consent concern without addressing it",
+          "No plan to protect the female residents while the behaviour plan is implemented",
+          "Evening routine as a suggestion rather than a formalised care-plan component"
+        ],
+        postExaminerNote: "The evening routine is the highest-yield treatment element because the assessment already identified it as effective. Candidates who led with medication, or who answered the daughter's consent question with reassurance rather than process, did not demonstrate the clinical precision this stem requires."
+      },
+      {
+        stemNumber: "3.4",
+        vignette: "A regional review finds that several facilities transfer residents with dementia to acute psychiatry after sexualised behaviour. Families complain that the responses feel either punitive or unsafe, and staff say they lack confidence managing these situations.",
+        question: "Outline — list and justify your recommendations after this review.\\nA list without case-specific justification will not be awarded marks.\\n(7 marks | 7 minutes)",
+        commandWord: "outline_justify",
+        marks: 7,
+        timeMinutes: 7,
+        stemSignals: [
+          "Acute psychiatry transfer for sexualised behaviour is a system failure, not an appropriate clinical response — the regional guidance must address this pattern directly",
+          "Behaviour support plans are mandatory before transfer or chemical restraint — their absence is the primary governance gap",
+          "Residents affected by the behaviour also require a safety and recovery response — the governance must address both parties"
+        ],
+        domains: [
+          {
+            name: "Award up to 7 marks from the following scorable points",
+            marks: 7,
+            keyPoints: [
+              "Develop regional guidance for managing sexualised behaviour in dementia — because staff currently have no consistent framework and default to transfer, which is rarely clinically appropriate",
+              "Require behaviour-support plans before any transfer, room restriction or antipsychotic prescription — because the absence of these plans is the primary governance failure identified across facilities",
+              "Provide staff training in FTD, dementia disinhibition and trauma-informed care — because staff reporting that they feel unsafe reflects a knowledge gap that drives escalation to acute transfer",
+              "Implement a restrictive practice consent and review process — because room locking and physical restriction require explicit legal authority and cannot proceed on informal staff decisions",
+              "Create a specialist outreach consultation pathway — because RACF staff need accessible clinical support that avoids unnecessary acute admission",
+              "Develop an incident review process that includes the impact on other residents — because governance currently focuses on the disinhibited resident while the affected resident's trauma and safety recovery are unaddressed",
+              "Audit transfers to acute psychiatry and antipsychotic use — because governance without measurement cannot demonstrate that the guidance is reducing inappropriate responses",
+              "Educate staff and families that lack of intent does not remove the duty to protect other residents — because intent may affect how we communicate with the family but does not reduce the facility's obligations to all residents in its care"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Recommending only staff training without policy, pathway or audit",
+          "No requirement for behaviour support plans before escalation",
+          "Omitting the affected residents' safety and recovery from governance recommendations"
+        ],
+        postExaminerNote: "The examiner expects governance recommendations that reduce acute transfer as a default response. Candidates who named behaviour-support plans as mandatory prerequisites and included audit demonstrating reduced transfers scored in the upper range."
+      }
+    ]
+  },
+  {
+    id: "meq_035",
+    title: "Patrick O'Brien — Psychotic Depression, ECT & Carer Burden",
+    case: "Mr Patrick O'Brien, 79 years old",
+    examSource: "Generated — Ethics / Professionalism / Legal",
+    topic: "Severe psychotic depression with food refusal and delusional guilt in a 79-year-old; capacity impaired by delusion; ECT indication; son's opposition; Nora's carer burden; lawful treatment pathway; frail-elder discharge planning with continuation ECT",
+    primaryDomain: "Ethics / Professionalism / Legal",
+    totalMarks: 31,
+    totalTimeMinutes: 31,
+    stems: [
+      {
+        stemNumber: "4.1",
+        vignette: "Mr Patrick O'Brien is a 79-year-old man admitted with severe psychotic depression. He believes he has bankrupted his family and deserves punishment. He has lost 12 kg and refuses most food and fluids. His wife Nora has been caring for him at home and says she is exhausted and frightened.\\n\\nThe registrar recommends ECT. Mr O'Brien says, 'Do whatever Nora says. I cannot think.' His son says ECT is barbaric and threatens media involvement. Nora says, 'I cannot sign his brain away.'",
+        question: "Outline — list and justify your assessment priorities.\\nA list without case-specific justification will not be awarded marks.\\n(8 marks | 8 minutes)",
+        commandWord: "outline_justify",
+        marks: 8,
+        timeMinutes: 8,
+        stemSignals: [
+          "The statement 'Do whatever Nora says; I cannot think' requires interpretation — it may reflect incapacity from delusional guilt, or depression-driven dependency, and cannot simply be accepted as consent authority",
+          "Food and fluid refusal with 12 kg weight loss creates an urgent medical risk that cannot wait for family consensus",
+          "ECT has a strong evidence base for psychotic depression — candidates must be able to state this clearly rather than defaulting to medication because the son objects"
+        ],
+        domains: [
+          {
+            name: "Award up to 8 marks from the following scorable points",
+            marks: 8,
+            keyPoints: [
+              "Assess severity of the depressive and psychotic syndrome — because weight loss of 12 kg, guilt delusions and food refusal indicate a life-threatening presentation that requires urgent clinical response",
+              "Assess capacity to consent to ECT — because 'Do whatever Nora says; I cannot think' may indicate incapacity from delusional guilt rather than an informed decision to defer",
+              "Assess whether delusional guilt distorts his ability to weigh information — because the belief that he deserves punishment may prevent him from appreciating that ECT might relieve his suffering",
+              "Assess medical risk from dehydration and malnutrition — because food and fluid refusal creates urgent physical risk independent of the psychiatric treatment decision",
+              "Assess suicide risk — because guilt delusions and self-starvation may reflect a wish for punishment or death that constitutes active suicide risk",
+              "Assess Nora's carer burden — because she is exhausted, frightened and being asked to authorise ECT, which is an unreasonable clinical and ethical burden without proper support and assessment",
+              "Clarify the legal framework if Mr O'Brien lacks capacity and refuses treatment — because the pathway differs between jurisdictions and must be clarified before treatment proceeds",
+              "Explain ECT as the evidence-based treatment for severe psychotic depression with food refusal — because the registrar's recommendation should be supported with clinical justification, not deferred because of family opposition"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Accepting 'Do whatever Nora says' as valid consent for ECT without capacity assessment",
+          "Deferring ECT indefinitely because the son threatens media involvement",
+          "Treating food refusal as a psychiatric non-compliance issue rather than a medical emergency",
+          "Ignoring Nora's carer burden as a separate clinical priority"
+        ],
+        postExaminerNote: "Candidates who named the delusional impairment of capacity as the specific clinical reason ECT may proceed without consent, and who identified Nora's carer burden as requiring separate assessment, demonstrated the clinical and ethical precision this stem requires."
+      },
+      {
+        stemNumber: "4.2",
+        vignette: "The next morning Mr O'Brien refuses ECT and says, 'Let me die; treatment would be cheating God.' He cannot explain the medical consequences of not eating and repeatedly returns to the belief that he must be punished. The team asks whether treatment can proceed.",
+        question: "Discuss — list and debate how you would proceed. You must name the tensions explicitly and take a defensible consultant position.\\n(9 marks | 9 minutes)",
+        commandWord: "debate",
+        marks: 9,
+        timeMinutes: 9,
+        stemSignals: [
+          "Psychotic guilt that prevents weighing information against the punishment belief is a delusional impairment of capacity — this is the specific legal and clinical basis for treatment without consent",
+          "The son's threat of media involvement should not change the clinical decision — lawful treatment of a life-threatening illness is defensible regardless of family opposition",
+          "Nora should not be pressured into a decision-making role — she is a carer under significant burden, not a substitute decision-maker unless formally appointed"
+        ],
+        domains: [
+          {
+            name: "Award up to 9 marks from the following scorable points",
+            marks: 9,
+            keyPoints: [
+              "There is tension between autonomy and life-saving treatment — Mr O'Brien's expressed wish must be respected if it reflects a capacitous decision, but it must not be accepted uncritically when a delusional belief may be driving it",
+              "His inability to explain the medical consequences of not eating confirms impaired capacity — because a capacitous refusal requires understanding and retention of information about consequences",
+              "The delusional belief 'I must be punished' prevents him from weighing information about ECT — because any benefit he acknowledges is immediately reframed as incompatible with deserved punishment",
+              "ECT is the evidence-based treatment for psychotic depression with food refusal — because severe malnutrition and delusional guilt create a life-threatening combination that responds to ECT faster than medication alone",
+              "Least restrictive care still applies — because the lawful pathway must be used rather than bypassed, and documentation of the reasoning is required",
+              "The son's opposition should be heard and responded to without defensiveness — because his concerns about memory and autonomy are legitimate even if they cannot determine the clinical decision",
+              "Nora should not be pressured to consent on Mr O'Brien's behalf — because she is already exhausted and her distress about signing may reflect appropriate hesitation about a significant medical procedure",
+              "The legal authority for treatment under incapacity must be followed — because treatment without valid consent requires a lawful basis in whichever jurisdiction applies",
+              "A defensible position is to proceed with ECT under lawful authority for incapacity — because untreated psychotic depression with food refusal is life-threatening and the treating team has a duty of care"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Accepting the refusal as capacitous without formal incapacity assessment",
+          "Deferring indefinitely because of family opposition",
+          "Pressuring Nora to sign as substitute consent without formal legal process",
+          "Treating the son's threat as a reason not to treat a life-threatening illness"
+        ],
+        postExaminerNote: "The clinical basis for impaired capacity — delusional guilt preventing weighing — must be explicitly named. Candidates who took the refusal at face value, or who deferred treatment because the son objected, failed the ethical reasoning test."
+      },
+      {
+        stemNumber: "4.3",
+        vignette: "Mr O'Brien improves after ECT. Nora says she feels guilty and has not slept properly for months. His son remains opposed and says Nora was coerced. Mr O'Brien asks whether ECT has damaged his memory and whether he will need it again. The registrar asks you to speak with the family before discharge.",
+        question: "Describe — list and explain how you would speak with Mr O'Brien and his family.\\nA list without explanation will not be awarded marks.\\n(7 marks | 7 minutes)",
+        commandWord: "describe_explain",
+        marks: 7,
+        timeMinutes: 7,
+        stemSignals: [
+          "Mr O'Brien's memory concerns are legitimate and must be answered honestly — minimising them to reassure him damages trust and does not serve his recovery",
+          "Nora's guilt and exhaustion are clinical concerns that require a carer assessment, not only acknowledgment",
+          "The son's continued opposition must be managed without defensiveness — explain the lawful process without escalating the conflict"
+        ],
+        domains: [
+          {
+            name: "Award up to 7 marks from the following scorable points",
+            marks: 7,
+            keyPoints: [
+              "Explain the illness model to Mr O'Brien — because understanding that delusional guilt was a symptom of treatable depression, not a moral reality, supports recovery and reduces shame",
+              "Address memory concerns honestly — because ECT-related memory effects are real and Mr O'Brien deserves accurate information including what typically resolves and what may persist",
+              "Explain the ECT recommendation and process clearly — because Mr O'Brien is now more able to understand and should be involved in decisions about continuation treatment",
+              "Validate Nora's guilt and exhaustion — because her distress is a clinical concern in its own right and acknowledgement is part of engaging her as a carer",
+              "Assess Nora's carer burden — because the admission revealed that she had been managing severe psychotic depression at home for months and she needs her own supports assessed",
+              "Respond to the son's concerns without defensiveness — because his opposition to ECT reflects a genuine fear about his father's autonomy that can be acknowledged without conceding that the decision was wrong",
+              "Clarify the legal process used for ECT — because the son's allegation that Nora was coerced requires a transparent, factual explanation of how and why the treatment was legally authorised"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Dismissing or minimising memory concerns to speed discharge",
+          "Leaving Nora's carer burden unaddressed after she described exhaustion and guilt",
+          "Becoming defensive in response to the son's allegations",
+          "No explanation of continuation ECT as a possibility"
+        ],
+        postExaminerNote: "This stem requires the candidate to manage three different people with three different clinical needs in one family meeting. Candidates who addressed only Mr O'Brien's questions and ignored Nora's carer state, or who became defensive about the legal process, did not score in the upper range."
+      },
+      {
+        stemNumber: "4.4",
+        vignette: "At discharge, Mr O'Brien is eating but frail. Nora wants him home immediately. OT recommends a graded home visit, falls plan and respite. The GP asks for clear instructions about antidepressant monitoring and continuation ECT. The son refuses to attend a family meeting and says psychiatry has 'taken over Dad's rights.'",
+        question: "Outline — list and justify your discharge plan.\\nA list without case-specific justification will not be awarded marks.\\n(7 marks | 7 minutes)",
+        commandWord: "outline_justify",
+        marks: 7,
+        timeMinutes: 7,
+        stemSignals: [
+          "Mood improvement is not the same as discharge readiness — frailty, nutrition, falls risk, carer capacity and continuation treatment must each be assessed",
+          "Nora's capacity to provide safe care must be assessed — her exhaustion and the care demands of a frail post-ECT patient may exceed what she can safely manage alone",
+          "Continuation ECT must be discussed at discharge — deferring this conversation until relapse misses the prevention opportunity"
+        ],
+        domains: [
+          {
+            name: "Award up to 7 marks from the following scorable points",
+            marks: 7,
+            keyPoints: [
+              "Conduct graded home visit before discharge — because OT has recommended this and frailty after 12 kg weight loss with 12+ weeks of depression requires functional assessment in the home environment",
+              "Create a falls and physical rehabilitation plan — because weight loss, deconditioning and age-related frailty create an independent falls risk that has not been assessed during the psychiatric admission",
+              "Conduct a formal carer assessment for Nora — because she has been exhausted and sleep-deprived for months and her capacity to manage Mr O'Brien's care at home safely must be assessed",
+              "Arrange a respite plan — because even if Nora can manage, regular respite reduces the carer exhaustion risk that contributed to the severity of Mr O'Brien's illness before admission",
+              "Provide a clear GP instruction for antidepressant monitoring — because the GP has requested specific guidance and this must be explicit, not general",
+              "Discuss continuation ECT as a clinical option — because Mr O'Brien's severe psychotic depression has a high relapse risk and he should be involved in making an informed decision about preventive treatment",
+              "Specify relapse warning signs — because appetite loss, social withdrawal, increased guilt and sleep disturbance are early indicators that Nora and the GP need to know and act on",
+              "Create a crisis plan — because if delusional guilt and food refusal return, Nora and the GP need a clear escalation pathway rather than a second unmanaged home deterioration"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Discharge because mood is improved without addressing frailty or carer capacity",
+          "No continuation ECT discussion",
+          "No carer assessment for Nora despite named exhaustion",
+          "Vague GP instructions without specific monitoring and escalation guidance"
+        ],
+        postExaminerNote: "Discharge from an old-age psychiatry admission for severe psychotic depression requires frailty, carer burden and relapse prevention to all be addressed. Candidates who produced a mood-only discharge plan without physical rehabilitation, Nora's assessment and continuation treatment scored in the lower range."
+      }
+    ]
+  },
+  {
+    id: "meq_036",
+    title: "Margaret Walsh — Lithium Toxicity, Old-Age Bipolar & Shared Care",
+    case: "Ms Margaret Walsh, 75 years old",
+    examSource: "Generated — Treatment / Medical Knowledge",
+    topic: "Lithium toxicity from ACE inhibitor and NSAID interaction in a 75-year-old with stable bipolar I disorder; capacity to refuse IV fluids; individualised lithium restart decision; rural monitoring barriers; sick-day rules and GP shared-care governance",
+    primaryDomain: "Treatment / Medical Knowledge",
+    totalMarks: 32,
+    totalTimeMinutes: 32,
+    stems: [
+      {
+        stemNumber: "5.1",
+        vignette: "Ms Margaret Walsh is a 75-year-old woman with bipolar I disorder, stable for eight years on lithium after previous severe mania involving financial ruin and police involvement. She is admitted after falls and new confusion. Her eGFR has declined, TSH is mildly elevated, and her GP recently started an ACE inhibitor. She has been taking ibuprofen for knee pain.\\n\\nHer daughter says, 'Stop the lithium; it is poisoning her.' Margaret says, 'Lithium saved my life. I would rather risk my kidneys than go manic again.' The medical registrar asks whether this is dementia, lithium toxicity, delirium or relapse.",
+        question: "Outline — list and justify your formulation and immediate priorities.\\nA list without case-specific justification will not be awarded marks.\\n(8 marks | 8 minutes)",
+        commandWord: "outline_justify",
+        marks: 8,
+        timeMinutes: 8,
+        stemSignals: [
+          "Lithium toxicity is the most likely diagnosis — ACE inhibitor, NSAID and declining renal function in combination are a well-documented cause of toxicity, and this interaction must be named explicitly",
+          "Stopping lithium permanently without clinical review is not necessarily the right first decision — Margaret's documented mania history and her own clear values require an individualised assessment",
+          "Dementia should not be assumed — acute confusion in a previously stable older adult requires reversible causes to be excluded before dementia is diagnosed"
+        ],
+        domains: [
+          {
+            name: "Award up to 8 marks from the following scorable points",
+            marks: 8,
+            keyPoints: [
+              "Formulate lithium toxicity as the most likely diagnosis — because the triad of ACE inhibitor, NSAID and declining eGFR causes elevated lithium levels through reduced renal clearance",
+              "Name the ACE inhibitor and NSAID interaction as the specific mechanism — because this drug interaction is well-documented and its identification drives immediate medication management",
+              "Assess delirium as a contributor — because acute confusion, falls and elevated lithium in an older adult represent a reversible neurological syndrome requiring urgent treatment",
+              "Exclude bipolar relapse — because confusion and behavioural change in a patient with bipolar disorder may occasionally represent a mood episode, and this requires assessment even if toxicity is more likely",
+              "Do not diagnose dementia without excluding reversible causes — because acute change superimposed on long-term stability is characteristic of toxicity or delirium, not primary dementia",
+              "Hold lithium pending blood results and specialist review — because continuing lithium while toxicity is suspected may worsen the clinical picture",
+              "Obtain urgent bloods: lithium level, renal function, electrolytes, thyroid and calcium — because all of these affect the formulation and treatment decisions",
+              "Liaise with the renal and medical team — because AKI management and decisions about dialysis must be made jointly, not by psychiatry alone",
+              "Acknowledge Margaret's documented relapse history and values — because her statement that lithium saved her life is clinically important and must be held alongside the safety concern"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Stopping lithium permanently at the daughter's request without clinical assessment",
+          "Diagnosing dementia from a single confused presentation without excluding reversible causes",
+          "Missing or not naming the ACE inhibitor and NSAID interaction as the specific cause",
+          "Ignoring Margaret's values and documented mania history in the initial formulation"
+        ],
+        postExaminerNote: "The ACE inhibitor and NSAID interaction is the central clinical finding. Candidates who named the mechanism, held lithium pending assessment and acknowledged Margaret's values without accepting the daughter's demand to stop it permanently scored in the upper range."
+      },
+      {
+        stemNumber: "5.2",
+        vignette: "Blood tests show an elevated lithium level, dehydration and acute kidney injury. Margaret is tremulous, ataxic and intermittently confused. She refuses IV fluids because she believes the drip will 'wash out the lithium and make me mad.' The renal physician says dialysis may be needed if she deteriorates.",
+        question: "Describe — list and explain your response to this situation.\\nA list without explanation will not be awarded marks.\\n(8 marks | 8 minutes)",
+        commandWord: "describe_explain",
+        marks: 8,
+        timeMinutes: 8,
+        stemSignals: [
+          "Her refusal of IV fluids is based on a belief about lithium being removed — this may reflect delusional misunderstanding or a partially accurate fear that requires accurate clinical assessment",
+          "Dialysis may be required if AKI worsens — the renal physician's involvement and the clinical threshold for dialysis must be part of the response",
+          "The medical and psychiatric teams must coordinate explicitly — parallel management without communication creates foreseeable harm"
+        ],
+        domains: [
+          {
+            name: "Award up to 8 marks from the following scorable points",
+            marks: 8,
+            keyPoints: [
+              "Stop lithium immediately — because elevated lithium with AKI, ataxia, tremor and confusion confirms toxicity requiring urgent cessation",
+              "Work with the medical team to treat dehydration and AKI — because IV fluids are the primary treatment for lithium toxicity through enhanced renal clearance",
+              "Assess capacity to refuse IV fluids — because her belief that fluids will make her mad may reflect delirium or a fixed misunderstanding that impairs the appreciation component of capacity",
+              "If she lacks capacity, use lawful authority to provide necessary fluids — because treating the underlying AKI is urgent and life-threatening medical treatment can proceed under incapacity provisions",
+              "Explain the reason for IV fluids accurately — because her fear about lithium being washed out is based on a misunderstanding, and accurate information may change her position if capacity is intact",
+              "Monitor lithium level and renal function serially — because the clinical trajectory determines both treatment intensity and the timeline for any restart discussion",
+              "Discuss dialysis threshold and criteria with the renal physician — because deciding when to refer for dialysis requires a joint medical-psychiatric assessment of the severity and trajectory",
+              "Manage agitation without nephrotoxic or respiratory-depressant medications — because antipsychotics and benzodiazepines may worsen the clinical picture in an older patient with AKI",
+              "Monitor for neurological complications — because severe lithium toxicity can cause seizures, permanent neurological damage and cardiac arrhythmia"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Accepting refusal of IV fluids without capacity assessment in the context of confusion",
+          "Restarting lithium during the toxic episode",
+          "Managing agitation with nephrotoxic or sedating medications without medical co-assessment",
+          "No mention of dialysis threshold or renal team involvement"
+        ],
+        postExaminerNote: "Capacity assessment for the IV fluid refusal is the central ethics element. Candidates who accepted refusal in a confused, ataxic patient without formal assessment, or who failed to coordinate with the renal team, did not score in the upper range."
+      },
+      {
+        stemNumber: "5.3",
+        vignette: "Margaret recovers and asks to restart lithium. Her daughter says restarting it would be negligent. The renal physician says lithium may be possible only with lower target levels, careful monitoring and avoidance of interacting medications. The GP says monitoring is difficult because Margaret lives rurally and misses blood tests when depressed.",
+        question: "Discuss — list and debate how you would advise the team. You must name the tensions explicitly and take a defensible consultant position.\\n(9 marks | 9 minutes)",
+        commandWord: "debate",
+        marks: 9,
+        timeMinutes: 9,
+        stemSignals: [
+          "Margaret's statement that lithium saved her life is clinically important — her values about the risk of mania versus renal decline must be incorporated into the defensible decision",
+          "The daughter's negligence concern is legitimate but not determinative — Margaret is a capacitous adult and her informed autonomous decision must be respected",
+          "Rural monitoring limitations are a real barrier — 'careful monitoring' without a specific, feasible monitoring plan is not adequate clinical governance"
+        ],
+        domains: [
+          {
+            name: "Award up to 9 marks from the following scorable points",
+            marks: 9,
+            keyPoints: [
+              "There is tension between relapse prevention and renal and toxicity risk — both are real clinical harms and the question is which risk is greater given Margaret's individual history",
+              "There is tension between Margaret's autonomous informed decision and the daughter's protective concern — Margaret has capacity, her values are clear and longstanding, and her right to accept risk is ethically protected",
+              "Lithium was previously highly effective after severe mania with documented serious consequences — this history is clinically important and must weigh against alternatives that may be less effective or carry their own risks",
+              "Older age and declining renal function increase the risk of toxicity — lower target levels, closer monitoring and strict avoidance of interacting medications may make continuation safer",
+              "Rural monitoring limitations are a genuine and addressable barrier — a specific, feasible monitoring plan is needed rather than a generic requirement for 'careful monitoring'",
+              "Alternative mood stabilisers have their own risks and may be less effective — the risks and benefits of each option must be compared, not assumed to be safer",
+              "Avoidance of ACE inhibitors, ARBs, NSAIDs and diuretics is required if lithium continues — the drug interaction that caused this admission must be formally addressed in the prescribing plan",
+              "Shared decision-making with Margaret, the renal team, GP and psychiatry is required — the decision cannot be made by any single clinician or by the family",
+              "A defensible position is a structured individualised restart plan — including lower target level, shared monitoring responsibility, drug interaction alerts and a clear sick-day rule"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Stopping lithium permanently because the daughter calls it negligent",
+          "Restarting lithium without a specific monitoring plan for the rural setting",
+          "Not naming the specific drug interactions that must be avoided if lithium continues",
+          "Ignoring Margaret's informed autonomous preference in the decision"
+        ],
+        postExaminerNote: "The defensible position is individualised shared decision-making — neither automatic restart nor automatic permanent cessation. Candidates who deferred to the daughter, or who approved restart without a specific rural monitoring plan, did not score in the upper range."
+      },
+      {
+        stemNumber: "5.4",
+        vignette: "A later review finds that several older patients on lithium have become unwell after intercurrent illness or new medications. Patients and families say they were not sure when to stop lithium temporarily or whom to contact. GPs report that communication from psychiatry is inconsistent.",
+        question: "Outline — list and justify your recommendations after this review.\\nA list without case-specific justification will not be awarded marks.\\n(7 marks | 7 minutes)",
+        commandWord: "outline_justify",
+        marks: 7,
+        timeMinutes: 7,
+        stemSignals: [
+          "Sick-day rules are a documented evidence-based safety intervention — patients not knowing when to withhold lithium temporarily is a preventable harm",
+          "GP communication inconsistency is a governance issue, not an individual prescriber problem — a template and clear responsibility agreement are required",
+          "Medication interaction alerts must be systemic — ACE inhibitors and NSAIDs interacting with lithium are common enough to require pharmacy-level and prescribing-level safeguards"
+        ],
+        domains: [
+          {
+            name: "Award up to 7 marks from the following scorable points",
+            marks: 7,
+            keyPoints: [
+              "Develop a shared lithium monitoring protocol for older adults — because inconsistent monitoring across the service means both under- and over-monitoring occur without a structured standard",
+              "Define a clear monitoring schedule for lithium level, renal function, thyroid and calcium — because different clinicians are monitoring different parameters at different intervals",
+              "Create medication interaction alerts for ACE inhibitors, ARBs, NSAIDs and diuretics — because the ACE inhibitor and NSAID combination that caused this admission is common and prescribing alerts would prevent recurrence",
+              "Provide written sick-day rules for patients and families — because not knowing when to withhold lithium during dehydration, infection or diarrhoea is the specific knowledge gap this review identified",
+              "Develop a GP communication template for lithium patients — because inconsistent psychiatry communications are a systemic governance failure, not individual clinician variation",
+              "Establish a pharmacy medication review process for lithium patients — because pharmacists reviewing the complete medication list can identify interactions before clinical toxicity occurs",
+              "Create a rapid contact pathway for GPs and patients when lithium levels or renal function are abnormal — because the current pathway leaves GPs unsure who to contact and how quickly"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Recommending only education without protocol, template or audit",
+          "No sick-day rules component in the recommendations",
+          "No GP communication or pharmacy review process"
+        ],
+        postExaminerNote: "The examiner expects governance recommendations that address the specific system failures: inconsistent monitoring, absent sick-day rules, interaction alerts and GP communication gaps. Generic quality improvement advice without naming these elements will not score in the upper range."
+      }
+    ]
+  },
+  {
+    id: "meq_037",
+    title: "Evelyn Chen — Palliative Refusal, Capacity & Testamentary Complexity",
+    case: "Mrs Evelyn Chen, 80 years old",
+    examSource: "Generated — Ethics / Professionalism / Legal",
+    topic: "Capacitous refusal of palliative surgery in an 80-year-old with mild cognitive impairment; son alleging foul play and inheritance dispute; retrospective testamentary capacity request; Buddhist spiritual decision-making; palliative care governance",
+    primaryDomain: "Ethics / Professionalism / Legal",
+    totalMarks: 32,
+    totalTimeMinutes: 32,
+    stems: [
+      {
+        stemNumber: "6.1",
+        vignette: "Mrs Evelyn Chen is an 80-year-old woman with metastatic ovarian cancer. Surgery may prolong life but is high risk and likely to require ICU. She says, 'More days in ICU is not living.' Her daughter says Mrs Chen has always said she does not want machines. Her son says she is depressed and asks the team to 'make her have surgery.'\\n\\nMrs Chen has mild cognitive impairment but is alert, consistent and asks to see her Buddhist monk before deciding. The surgeon asks psychiatry to assess her refusal of surgery.",
+        question: "Outline — list and justify your assessment priorities.\\nA list without case-specific justification will not be awarded marks.\\n(8 marks | 8 minutes)",
+        commandWord: "outline_justify",
+        marks: 8,
+        timeMinutes: 8,
+        stemSignals: [
+          "Mild cognitive impairment does not automatically mean incapacity — she is alert, consistent and articulate; the assessment must test the four capacity criteria, not assume the answer",
+          "The son's claim that refusal reflects depression requires clinical assessment — but it cannot be automatically accepted without evidence; depression must be assessed, not assumed",
+          "Buddhist spiritual decision-making is a valid component of her decision-making framework — it must be respectfully integrated, not treated as an obstacle"
+        ],
+        domains: [
+          {
+            name: "Award up to 8 marks from the following scorable points",
+            marks: 8,
+            keyPoints: [
+              "Assess decision-specific capacity to refuse surgery — because mild cognitive impairment alone does not determine incapacity, and this particular decision requires a formal four-component assessment",
+              "Assess understanding of surgery, ICU, benefits and burdens — because Mrs Chen must be able to describe what is being proposed and why it would or would not help her",
+              "Assess appreciation that refusal may shorten her life — because appreciating the personal consequences is a specific capacity component that must be tested",
+              "Assess her reasoning in relation to her values — because her statement 'More days in ICU is not living' reflects a value-based framework that must be explored for its coherence, not simply treated as evidence of depression",
+              "Assess depression without assuming that refusal equals depression — because the son's allegation requires clinical investigation, but a values-based refusal is not itself diagnostic of a depressive disorder",
+              "Assess cognitive impairment and whether it distorts weighing — because mild cognitive impairment may affect complex reasoning even when alertness and consistency are preserved",
+              "Explore her longstanding values about machines and ICU — because a consistent preference documented over time supports the validity of a current refusal",
+              "Respect the Buddhist monk consultation as part of her decision-making — because spiritual guidance is a legitimate component of informed decision-making for Mrs Chen, not an external interference to be removed"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Endorsing surgery because the son requests it and alleges depression",
+          "Assuming mild cognitive impairment means incapacity without formal assessment",
+          "Treating the Buddhist monk's involvement as a reason to reassess or delay",
+          "Accepting depression as the diagnosis without completing a clinical assessment"
+        ],
+        postExaminerNote: "Candidates must demonstrate that values-based refusal is not synonymous with depression, and that spiritual consultation is part of a valid decision-making process. Those who deferred to the son or bypassed the capacity assessment scored in the lower range."
+      },
+      {
+        stemNumber: "6.2",
+        vignette: "Mrs Chen confirms she refuses surgery after speaking with her monk. She understands she may die sooner. Her son says the daughter is influencing her because the estate will be divided unequally. He demands assessment of 'foul play' and says Mrs Chen recently changed her will. Mrs Chen asks that her son not be told details of her finances.",
+        question: "Discuss — list and debate how you would proceed. You must name the tensions explicitly and take a defensible consultant position.\\n(9 marks | 9 minutes)",
+        commandWord: "debate",
+        marks: 9,
+        timeMinutes: 9,
+        stemSignals: [
+          "An inheritance dispute between siblings does not give either sibling authority over their parent's medical decisions — these domains must be kept separate",
+          "Mrs Chen's financial confidentiality is a separate matter from treatment capacity — the psychiatrist cannot share financial details without consent or legal basis",
+          "Undue influence must be assessed with evidence, not assumed from a family allegation — the son's claim requires investigation, not immediate acceptance"
+        ],
+        domains: [
+          {
+            name: "Award up to 9 marks from the following scorable points",
+            marks: 9,
+            keyPoints: [
+              "There is tension between respecting a capacitous refusal and the son's demand to override it — if Mrs Chen has capacity and is free from undue influence, her refusal must be respected regardless of family conflict",
+              "There is tension between the son's confidentiality request regarding finances and Mrs Chen's right to privacy — she has explicitly asked that her son not be told financial details, and this must be respected",
+              "There is tension between investigating undue influence and accepting the son's allegations — undue influence requires assessed evidence, not family assertion, and the daughter may or may not have influenced the decision",
+              "Estate conflict should not derail the treatment-capacity assessment — whether Mrs Chen's estate is divided fairly is not a psychiatric concern and must be kept separate from the clinical question",
+              "Undue influence must be actively investigated — conduct a private interview to establish whether her refusal reflects her own free and considered preference",
+              "Her financial decisions are a separate matter — the psychiatrist assesses treatment capacity and mental state, not inheritance arrangements",
+              "A family meeting focused on medical decision-making, not inheritance, may help clarify roles — but it cannot be used as a vehicle for the son to receive financial information",
+              "A defensible position is to respect a confirmed capacitous refusal — while assessing for undue influence with evidence and separating the psychiatric opinion from the estate dispute",
+              "Involve social work, legal and ethics services if the foul-play concern is credible — because this situation may require specialist elder law or mediation support that exceeds the psychiatric consultation role"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Reopening the capacity assessment solely because the son demands it",
+          "Sharing financial information with the son because he has raised a foul-play concern",
+          "Treating the inheritance dispute as evidence that the daughter has created undue influence",
+          "Not investigating the undue influence allegation at all"
+        ],
+        postExaminerNote: "Both action and restraint are required: the undue influence allegation must be investigated, and the capacity conclusion must be protected from family pressure. Candidates who either dismissed the son entirely or who capitulated to his demands scored in the lower range."
+      },
+      {
+        stemNumber: "6.3",
+        vignette: "The son produces a new will and asks you to write that Mrs Chen had capacity when she signed it last month. The daughter says the son pressured Mrs Chen to sign while she was receiving opioids for pain. Mrs Chen says, 'I remember signing something, but I was very sleepy.' The solicitor asks whether a retrospective opinion can be provided.",
+        question: "Describe — list and explain your response to this request.\\nA list without explanation will not be awarded marks.\\n(8 marks | 8 minutes)",
+        commandWord: "describe_explain",
+        marks: 8,
+        timeMinutes: 8,
+        stemSignals: [
+          "A retrospective capacity opinion from the treating psychiatrist has inherent limitations and conflict-of-interest risks — these must be named explicitly",
+          "Opioid effects at the time of signing are a significant clinical variable — their impact on cognition and voluntariness must be assessed from contemporaneous records",
+          "Mrs Chen's statement that she was very sleepy is an important clinical datum — it cannot be dismissed or confirmed without review of contemporaneous notes"
+        ],
+        domains: [
+          {
+            name: "Award up to 8 marks from the following scorable points",
+            marks: 8,
+            keyPoints: [
+              "Clarify that a retrospective capacity opinion has inherent limitations — because the psychiatrist was not present at the time of signing and opinions based on current assessment may not accurately reflect the mental state at that moment",
+              "Review contemporaneous medical records from the time of signing — because nursing notes, medication charts, pain assessments and ward observations may indicate cognitive state, opioid dose and pain levels at the relevant time",
+              "Assess the effect of opioid analgesia on cognition and voluntariness at the time of signing — because opioid-induced confusion or drowsiness is a specific factor that may have affected decision-making capacity",
+              "Assess for undue influence from either child — because the daughter alleges the son pressured Mrs Chen, and this requires a fair bilateral assessment rather than accepting either child's account",
+              "Apply the legal test for testamentary capacity — because will-making capacity has specific legal components (nature and effect of a will, knowledge of assets, awareness of beneficiaries, absence of delusion) that are distinct from treatment capacity",
+              "Do not certify retrospective capacity under time pressure from the solicitor — because an opinion limited by poor assessment conditions requires more process, not less",
+              "Recommend independent medico-legal assessment if a formal opinion is required — because the treating psychiatrist's conflict of interest in an active estate dispute may compromise the reliability of the opinion",
+              "Separate the treatment capacity assessment from the will-making opinion — because they involve different legal tests, and conflating them creates confusion for the legal process"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Writing a capacity certificate based on current assessment without reviewing contemporaneous records",
+          "Certifying capacity under solicitor or family time pressure",
+          "Ignoring the opioid factor at the time of signing",
+          "Treating testamentary capacity as identical to treatment capacity"
+        ],
+        postExaminerNote: "The retrospective nature of the request and the treating-psychiatrist conflict of interest are both non-negotiable clinical-legal points. Candidates who provided the certificate without naming either limitation, or who applied treatment capacity criteria to a testamentary capacity request, scored in the lower range."
+      },
+      {
+        stemNumber: "6.4",
+        vignette: "The oncology service reviews several recent cases where older palliative patients refused treatment while families were in conflict about inheritance or spiritual decision-making. Staff say they are unsure when psychiatry, legal services, social work or spiritual care should be involved.",
+        question: "Outline — list and justify your recommendations after this review.\\nA list without case-specific justification will not be awarded marks.\\n(7 marks | 7 minutes)",
+        commandWord: "outline_justify",
+        marks: 7,
+        timeMinutes: 7,
+        stemSignals: [
+          "Spiritual care involvement in palliative decision-making is standard of care, not optional — the governance pathway must include it as a default referral",
+          "The intersection of capacity, inheritance conflict and palliative refusal requires multi-disciplinary governance, not only psychiatric consultation",
+          "Early identification of high-conflict cases allows proactive ethics and legal involvement — reactive referral after escalation is the pattern this review should change"
+        ],
+        domains: [
+          {
+            name: "Award up to 7 marks from the following scorable points",
+            marks: 7,
+            keyPoints: [
+              "Develop a palliative care capacity pathway that specifies which clinical situations trigger psychiatric, legal, social work, ethics and spiritual care referrals — because staff currently have no guidance and are making inconsistent decisions",
+              "Require early ethics and legal involvement in cases involving family conflict, inheritance dispute and treatment refusal — because the review found reactive rather than proactive referral as the pattern",
+              "Embed spiritual care access as a standard referral pathway for palliative patients who express spiritual decision-making frameworks — because spiritual consultation is a legitimate part of capacitous decision-making and must not be treated as an obstacle",
+              "Develop guidance on separating treatment capacity decisions from estate and inheritance disputes — because staff confusion about these roles is driving inappropriate requests for psychiatric involvement in financial matters",
+              "Create a documentation template for capacity assessment in palliative settings — because the review found inconsistent approaches that create legal risk for both clinicians and patients",
+              "Develop a family meeting framework for high-conflict cases — because unstructured family meetings allow inheritance arguments to contaminate clinical decision-making",
+              "Provide staff education on capacitous refusal — because refusal of treatment by a patient with mild cognitive impairment is lawful if capacity is confirmed, and staff must be able to hold this position under family pressure"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Recommending only psychiatric consultation without pathway or multi-disciplinary structure",
+          "Omitting spiritual care from governance recommendations",
+          "No guidance on separating treatment decisions from inheritance disputes"
+        ],
+        postExaminerNote: "The governance recommendations must address the specific combination identified in the review: capacity, spiritual decision-making, and family conflict around inheritance. Generic governance advice without naming these elements will not score in the upper range."
+      }
+    ]
+  },
+  {
+    id: "meq_038",
+    title: "Robert Evans — Bereavement, Diazepam Overdose & Delirium",
+    case: "Mr Robert Evans, 81 years old",
+    examSource: "Generated — Formulation / Diagnostic Reasoning",
+    topic: "Post-operative delirium from polypharmacy including diazepam overdose in an 81-year-old with mild vascular dementia and bereavement; self-harm hidden in surgical admission; 'rational suicide' claim versus treatable depression; benzodiazepine deprescribing; surgical ward governance",
+    primaryDomain: "Formulation / Diagnostic Reasoning",
+    totalMarks: 32,
+    totalTimeMinutes: 32,
+    stems: [
+      {
+        stemNumber: "7.1",
+        vignette: "Mr Robert Evans is an 81-year-old man with mild vascular dementia. His wife died six months ago. He was found at home after taking an overdose of diazepam prescribed by his GP for insomnia since his bereavement. He fell, fractured his hip and is now post-operative. He has developed fluctuating confusion worse at night, sees insects on the ceiling, pulls at his catheter and tries to climb over bedrails. He has pneumonia, urinary retention, constipation and pain, and is receiving oxycodone, temazepam and promethazine. His hearing aids and glasses are in the bedside drawer.\\n\\nThe orthopaedic registrar says, 'He has dementia; chart haloperidol so he can get to rehab.' His daughter says he was reading the newspaper and managing bills before the fall.",
+        question: "Outline — list and justify your formulation and immediate priorities.\\nA list without case-specific justification will not be awarded marks.\\n(8 marks | 8 minutes)",
+        commandWord: "outline_justify",
+        marks: 8,
+        timeMinutes: 8,
+        stemSignals: [
+          "Post-operative delirium is the most urgent and reversible diagnosis — dementia is a vulnerability factor, not the primary explanation for acute fluctuating confusion with visual hallucinations",
+          "The hearing aids and glasses in the bedside drawer are an immediately actionable delirium driver — sensory deprivation worsens confusion in older surgical patients",
+          "The diazepam overdose is a self-harm event embedded in a physical admission — it must be assessed as such, not obscured by the fracture"
+        ],
+        domains: [
+          {
+            name: "Award up to 8 marks from the following scorable points",
+            marks: 8,
+            keyPoints: [
+              "Formulate post-operative delirium as the primary diagnosis — because the acute onset, fluctuating course, visual hallucinations and nocturnal worsening are characteristic of delirium, not baseline dementia progression",
+              "Identify polypharmacy as a major contributor — because oxycodone, temazepam, promethazine and diazepam overdose represent a sedative and anticholinergic load that is driving or worsening delirium",
+              "Treat pain, urinary retention, constipation and pneumonia as delirium drivers — because each is a remediable contributor that must be addressed before or alongside psychiatric management",
+              "Correct the sensory impairment immediately — because glasses and hearing aids in the bedside drawer are a practical and immediately actionable driver of confusion that must be restored",
+              "Acknowledge mild vascular dementia as a vulnerability factor — because it increases delirium risk and affects recovery trajectory, but does not explain the acute change in isolation",
+              "Assess the diazepam overdose as a self-harm event — because an intentional overdose in the context of bereavement requires a suicide and depression assessment once delirium resolves",
+              "Assess bereavement, depression and hopelessness — because the context of the overdose is his wife's death six months ago and this must be incorporated into the clinical formulation",
+              "Decline empirical haloperidol as the first response — because treating delirium with antipsychotic without addressing causes first is poor clinical practice and may increase falls and sedation risk"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Accepting 'he has dementia' as the diagnosis and proceeding to haloperidol",
+          "Ignoring the overdose as a self-harm event because the physical injury is the focus of admission",
+          "Treating the hearing aids and glasses as irrelevant to the clinical picture",
+          "Adding sedating medication without reviewing and reducing the existing sedative burden"
+        ],
+        postExaminerNote: "The hearing aids and glasses are a signal for clinical precision — candidates who named this practical finding scored credibility points. The overdose as self-harm is the central clinical issue that must not be subordinated to the fracture. Candidates who ignored either scored in the lower range."
+      },
+      {
+        stemNumber: "7.2",
+        vignette: "Mr Evans' confusion resolves over one week. He is now alert and orientated. When asked about the overdose he says, 'It was a sensible decision. My life ended when Jean died. If the tablets had worked, I would not be here complaining.' He denies current suicidal intent but says he sees no reason to live. His daughter wants him admitted involuntarily 'for his own protection.' His son says, 'He has the right to make his own choices; you cannot lock up an old man for being sad.' The rehabilitation team asks whether he can be transferred to the rehabilitation ward.",
+        question: "Discuss — list and debate how you would proceed. You must name the tensions explicitly and take a defensible consultant position.\\n(9 marks | 9 minutes)",
+        commandWord: "debate",
+        marks: 9,
+        timeMinutes: 9,
+        stemSignals: [
+          "Accepting 'rational suicide' without assessing treatable depression would be a serious clinical error — bereavement after spousal loss is a major depression risk factor and the statement 'I see no reason to live' requires full psychiatric assessment",
+          "Denial of current intent does not resolve the risk — a recent intentional overdose with expressed rationale is a strong predictor of repeated self-harm",
+          "Rehabilitation readiness cannot be assessed without psychiatric safety — transfer to the rehabilitation ward before psychiatric safety assessment is a foreseeable clinical risk"
+        ],
+        domains: [
+          {
+            name: "Award up to 9 marks from the following scorable points",
+            marks: 9,
+            keyPoints: [
+              "There is tension between Mr Evans' framing of the overdose as rational and the clinical obligation to assess treatable depression — grief and hopelessness are modifiable, and the clinical obligation is to distinguish grief from major depression before accepting the rational suicide framing",
+              "There is tension between autonomy and duty to protect — he is an adult with the right to make his own choices, but that right depends on the absence of treatable psychiatric illness that is impairing his judgment",
+              "There is tension between the daughter's request for involuntary admission and the son's autonomy position — both have clinical relevance but neither determines the clinical decision",
+              "Denial of current intent does not remove risk — a recently completed intentional overdose with expressed regret that it failed is a strong predictor of future risk",
+              "The son's framing of being sad as a normal response does not resolve whether Mr Evans has a diagnosable and treatable major depressive episode — this requires clinical assessment",
+              "Involuntary admission requires legal criteria — family fear is not sufficient, but the presence of a recent attempt, hopelessness and denial of reasons to live must be evaluated against these criteria",
+              "Rehabilitation transfer requires both physical and psychiatric safety — transferring before a comprehensive psychiatric assessment creates foreseeable risk for the rehabilitation team and Mr Evans",
+              "A defensible position is complete psychiatric assessment — including depression diagnosis, suicide risk, capacity and legal criteria — before any decision about rehabilitation transfer or involuntary status",
+              "Treat depression and restrict access to sedatives — because both are modifiable clinical risks that can be addressed regardless of the admission or transfer decision"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Accepting the 'rational suicide' framing without full psychiatric assessment",
+          "Authorising involuntary admission on family request without meeting legal criteria",
+          "Transferring to rehabilitation without a comprehensive psychiatric safety assessment",
+          "Treating denial of current intent as sufficient to close the risk assessment"
+        ],
+        postExaminerNote: "The examiner is testing whether the candidate can hold a clinical position that requires both the daughter's concerns and the son's autonomy framing to be held without either controlling the outcome. The 'rational suicide' framing must be challenged clinically, not accepted as a social fact."
+      },
+      {
+        stemNumber: "7.3",
+        vignette: "Assessment confirms moderate depression superimposed on grief and mild vascular dementia. Mr Evans accepts an antidepressant trial and bereavement counselling referral. Rehabilitation proceeds. His wife's sister, aged 79, offers to have him stay, but she has arthritis and is frightened she cannot manage transfers, toileting and night wandering. His daughter says respite would 'break Dad's spirit.' Mr Evans says he wants to go home but cannot describe what supports he would need.",
+        question: "Describe — list and explain your discharge plan.\\nA list without explanation will not be awarded marks.\\n(8 marks | 8 minutes)",
+        commandWord: "describe_explain",
+        marks: 8,
+        timeMinutes: 8,
+        stemSignals: [
+          "The wife's sister is 79 with arthritis and is frightened she cannot manage — sending Mr Evans to her without a formal carer capability assessment creates a foreseeable care failure",
+          "Benzodiazepine deprescribing is a clinical priority — the diazepam that caused the overdose was GP-prescribed for grief insomnia and this prescribing risk must be formally addressed",
+          "Mr Evans wanting to go home but being unable to describe what supports he needs indicates a functional assessment gap — discharge cannot rely on his reported preferences alone"
+        ],
+        domains: [
+          {
+            name: "Award up to 8 marks from the following scorable points",
+            marks: 8,
+            keyPoints: [
+              "Create a suicide relapse prevention plan — because the completed overdose with expressed regret it failed and ongoing hopelessness indicate that relapse prevention is the highest psychiatric priority",
+              "Plan and monitor antidepressant treatment — because moderate depression in an 81-year-old requires evidence-based medication management and the response must be monitored",
+              "Refer for bereavement counselling — because grief is both a clinical driver of the depression and a therapeutic target that medication alone does not address",
+              "Review and deprescribe benzodiazepines and sedatives — because the GP-prescribed diazepam was the means of the overdose and continued prescribing of sedatives in this context is a foreseeable safety risk",
+              "Implement medication dispensing safeguards — because means restriction for a completed overdose requires practical measures, not only a verbal agreement",
+              "Assess the wife's sister's capacity to care safely — because she has arthritis, is frightened and has described specific care demands she may not be able to meet; her offer does not establish safe capacity",
+              "Consider respite or step-down care if home supports are insufficient — because the daughter's opinion about respite cannot override a safety assessment",
+              "Provide cognitive follow-up — because vascular dementia trajectory requires review after the delirium and medication changes of the admission",
+              "Create a crisis plan with specific warning signs — because hopelessness returning, isolation increasing or new bereavement triggers are early indicators that require a specific response pathway"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Discharging because he denies current suicidal intent without means restriction or crisis plan",
+          "Sending him to the wife's sister without assessing her capacity to care",
+          "No benzodiazepine deprescribing plan despite the means-of-overdose relevance",
+          "Respite excluded because the daughter is emotionally opposed"
+        ],
+        postExaminerNote: "The wife's sister is the examiner's placement trap — her offer does not establish safe care. Candidates who accepted the offer without formal assessment, or who omitted benzodiazepine deprescribing, scored in the lower range."
+      },
+      {
+        stemNumber: "7.4",
+        vignette: "A hospital review finds that several older patients have presented after overdoses of GP-prescribed sedatives, with the self-harm not clearly recognised during the surgical admission. Families describe receiving little explanation about confusion, medication changes or what to do after discharge. Surgical staff say these cases are difficult because the physical injury becomes the focus of admission.",
+        question: "Outline — list and justify your recommendations after this review.\\nA list without case-specific justification will not be awarded marks.\\n(7 marks | 7 minutes)",
+        commandWord: "outline_justify",
+        marks: 7,
+        timeMinutes: 7,
+        stemSignals: [
+          "The pattern of GP-prescribed sedatives causing overdose in bereaved older adults is a prescribing governance issue — individual education is insufficient without a systemic prescribing review",
+          "Self-harm disguised by an acute physical injury is a patient safety event requiring a screening protocol — reliance on spontaneous clinical identification has already failed",
+          "Surgical teams need structural support to identify psychiatric risk — governance must not rely on individual expertise that is absent from this specialty"
+        ],
+        domains: [
+          {
+            name: "Award up to 7 marks from the following scorable points",
+            marks: 7,
+            keyPoints: [
+              "Create a screening protocol for self-harm in older patients admitted after falls or overdose — because several cases were missed and clinical identification alone is insufficient",
+              "Review benzodiazepine and sedative prescribing in bereaved older adults — because the pattern of GP-prescribed sedatives causing overdose represents a prescribing governance failure requiring systemic review",
+              "Develop a delirium prevention and management pathway — because multiple cases presented with untreated delirium and reflex haloperidol prescribing that indicates absent standard practice",
+              "Create a medication review protocol to prevent sedative stacking — because oxycodone, temazepam, promethazine and diazepam overdose in combination is a preventable prescribing risk",
+              "Develop a family education resource for delirium and self-harm — because families described receiving no explanation about confusion, medication changes or safety concerns",
+              "Ensure sensory aids are used and documented in older inpatients — because glasses and hearing aids in the bedside drawer are a preventable delirium driver that requires a standard",
+              "Create a discharge template including cognitive status, self-harm assessment, medication changes and GP follow-up instructions — because inconsistent discharge communication is leaving GPs unable to continue safe care",
+              "Train surgical staff to identify and respond to self-harm in the context of a physical admission — because these cases are genuinely difficult for non-psychiatric teams and governance must provide structural support, not rely on individual initiative"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Recommending only psychiatric consultation without any surgical team or prescribing governance",
+          "No screening protocol for self-harm in surgical presentations",
+          "No benzodiazepine prescribing review component"
+        ],
+        postExaminerNote: "This is a surgical admission with a psychiatric cause. The governance must address the surgical ward context specifically. Candidates who made only psychiatric recommendations without surgical screening, GP prescribing review or family education failed the systems leadership test."
+      }
+    ]
   }
 ];
 
