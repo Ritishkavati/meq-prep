@@ -1,1 +1,2 @@
 - [Text highlight store](text-highlight-store.md) — meq_thl_v1_{cid} in localStorage, keyed by noteId; separate from star-highlight system.
+- [MEQ ID numbering rule](meq-id-rule.md) — always continue from last existing meq_NNN, ignore IDs in uploaded files
