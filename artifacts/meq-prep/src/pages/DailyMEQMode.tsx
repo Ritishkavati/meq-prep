@@ -3480,1616 +3480,852 @@ const MEQ_BANK = [
     ],
   },
   {
-    id: "meq_022",
-    title: "Leo — Early Childhood Crisis & Inter-Agency Governance",
-    case: "Leo, 4 years old",
-    examSource: "Generated — Governance / Systems / Leadership",
-    topic: "Preschool behavioural crisis, family violence and early-childhood inter-agency pathway",
-    primaryDomain: "Governance / Systems / Leadership",
+    id: 'meq_022',
+    title: 'Leo — Early Childhood Crisis and Inter-Agency Governance',
+    case: 'Leo, age 4',
+    examSource: 'Generated — Governance / Systems / Leadership',
+    topic: 'Preschool behavioural crisis in ED; developmental delay, family violence, homelessness and early-childhood inter-agency pathway failure',
+    primaryDomain: 'Governance / Systems / Leadership',
     totalMarks: 32,
     totalTimeMinutes: 32,
     stems: [
       {
-        stemNumber: "1.1",
-        vignette: "Leo is a 4-year-old boy brought to ED by police and ambulance after a childcare centre called emergency services. Staff report that Leo threw chairs, bit another child, and screamed for 45 minutes after being told his mother was late. His mother, Talia, is a 27-year-old single parent who says Leo has 'always been intense' since his father left. Leo has delayed speech, avoids eye contact with unfamiliar adults, becomes distressed with noise, and has recently been excluded from two childcare centres. Talia says she cannot keep leaving work and asks for 'medication to calm him down.' The ED registrar asks whether Leo should be sedated and discharged.",
-        question: "Outline — list and justify your immediate assessment and management priorities in ED.\\nA list without case-specific justification will not be awarded marks.\\n(8 marks | 8 minutes)",
-        commandWord: "outline_justify",
+        stemNumber: '1.1',
+        vignette: 'Leo is a 4-year-old boy brought to ED by police and ambulance after a childcare centre called emergency services. Staff report that Leo threw chairs, bit another child, and screamed for 45 minutes after being told his mother was late. His mother, Talia, is a 27-year-old single parent who says Leo has always been intense since his father left. Leo has delayed speech, avoids eye contact with unfamiliar adults, becomes distressed with noise, and has recently been excluded from two childcare centres. Talia says she cannot keep leaving work and asks for medication to calm him down. The ED registrar asks whether Leo should be sedated and discharged.',
+        question: 'Outline — list and justify your immediate assessment and management priorities in ED. A list without case-specific justification will not be awarded marks. (8 marks | 8 minutes)',
+        commandWord: 'outline_justify',
         marks: 8,
         timeMinutes: 8,
         stemSignals: [
-          "The ED registrar's suggestion to sedate and discharge is the examiner trap — candidates who endorse this score zero; the correct response is a developmental and trauma formulation before any intervention decision",
-          "Leo's profile (delayed speech, poor eye contact, sensory distress, two childcare exclusions) is a neurodevelopmental red flag that must be named explicitly, not assumed",
-          "Talia's request for medication signals her distress and limited support — the assessment must address parent capacity and family stressors, not only Leo's behaviour",
+          'Developmental formulation required — speech delay, sensory distress and two childcare exclusions point to possible ASD or developmental disorder, not primary behavioural aggression',
+          'The registrar suggestion to sedate and discharge is a direct examiner trap — reflexive sedation without assessment is clinically and ethically wrong in a 4-year-old',
+          'Talia requesting medication signals parental exhaustion, not grounds for prescribing'
         ],
         domains: [
           {
-            name: "Award up to 8 marks from the following scorable points",
-            marks: 8,
+            name: 'Safety, environment and developmental formulation (4 marks)',
+            marks: 4,
             keyPoints: [
-              "Reduce stimulation and use a child-friendly ED space — because Leo is 4 years old, distressed by noise and crowds, and standard ED crowding or security proximity will escalate rather than contain his dysregulation",
-              "Decline reflexive sedation as first-line management — because this presentation is consistent with developmental vulnerability and trauma-related hyperarousal, not acute psychosis or intoxication requiring chemical restraint",
-              "Assess immediate safety risk to Leo, Talia and others — because chair-throwing, biting and 45-minute sustained dysregulation create genuine injury risk and require proportionate environmental management",
-              "Use Talia as co-regulator and keep her with Leo — because she is his primary attachment figure and parent-mediated calming is safer and more effective than separation or restraint in a preschool child",
-              "Screen for neurodevelopmental disorder — because delayed speech, poor eye contact, sensory distress and exclusion from two childcare centres meet the threshold for autism spectrum disorder or developmental language disorder assessment",
-              "Assess trauma and attachment triggers — because the crisis was precipitated by Talia being late, indicating separation anxiety and attachment-dependent regulation in a child exposed to paternal departure and family instability",
-              "Assess physical contributors to dysregulation — because pain, sleep deprivation, hunger, infection or sensory overload in a 4-year-old may present clinically as aggression and must be excluded before behavioural or psychiatric formulation",
-              "Obtain collateral from childcare staff and Talia about cross-setting pattern — because triggers, duration, recovery and frequency across settings are essential to distinguish developmental dysregulation from episodic aggression or acute psychiatric disorder",
-              "Assess Talia's capacity and support needs for tonight — because her request for medication, missed work absences and apparent overwhelm raise questions about her coping threshold and safety if discharged without support",
-              "Screen for family violence and child protection concerns — because the father's departure, single-parent stress, recurrent childcare exclusion and housing instability represent cumulative developmental risk requiring structured assessment",
-              "Arrange follow-up with early childhood intervention, developmental paediatrics and CYMHS — because ED discharge without a care pathway for this profile will produce repeat crisis presentations without addressing the underlying need",
-            ],
+              'Reduce stimulation and move Leo to a child-friendly, low-noise space — because he is 4, distressed by noise and change, and ED crowding or security presence may escalate rather than contain him',
+              'Avoid reflexive sedation as first-line management — because this presentation is developmental, trauma and attachment-related rather than primary acute psychosis or intoxication, and sedating a 4-year-old without formulation is dangerous',
+              'Assess immediate risk to Leo and those around him — because biting, throwing chairs and prolonged dysregulation create safety risk to other children, staff and Talia',
+              'Use parent-mediated co-regulation — because Talia is Leo\'s primary attachment figure and supporting her to soothe him is safer and more effective than separating him or using physical restraint',
+              'Screen for neurodevelopmental disorder — because delayed speech, poor eye contact, sensory distress and two childcare exclusions raise concern for autism spectrum disorder, language disorder or global developmental delay',
+              'Assess for physical contributors — because pain, sleep deprivation, hunger, intercurrent illness or sensory overload can present as behavioural crisis in preschool children'
+            ]
           },
+          {
+            name: 'Family safety, system response and follow-up (4 marks)',
+            marks: 4,
+            keyPoints: [
+              'Obtain collateral from childcare staff and Talia — because the pattern across settings, triggers, duration and recovery are essential to distinguish developmental dysregulation from other aetiology',
+              'Assess Talia\'s capacity to safely care for Leo tonight — because she is asking for medication, is missing work and may be exhausted and overwhelmed',
+              'Screen for family violence and child safety concerns — because recurrent childcare exclusion, parental stress and the father leaving may be hiding safety issues',
+              'Arrange paediatric, early childhood intervention and CYMHS follow-up before discharge — because ED discharge without a pathway will predictably lead to repeat crisis presentation',
+              'Document clearly that no safe-for-childcare guarantee can be provided from an ED crisis assessment alone — because risk is contextual and requires assessment, supports and a plan, not certification'
+            ]
+          }
         ],
         zeroMarkTraps: [
-          "Endorsing sedation and discharge without developmental or safety formulation",
-          "Performing a generic adult mental state examination on a 4-year-old",
-          "Focusing only on risk to other children while ignoring Leo's developmental needs and family safety",
+          'Recommending sedation and discharge without formulation',
+          'Applying adult psychiatric risk assessment to a 4-year-old',
+          'Focusing only on risk to other children while ignoring developmental needs and family safety'
         ],
-        postExaminerNote: "Candidates who sedate and discharge score zero. The examiner is assessing whether candidates can distinguish a developmental and trauma presentation from an acute psychiatric emergency, and whether they recognise family safety as part of the immediate plan.",
+        postExaminerNote: 'Candidates who identified neurodevelopmental vulnerability, named the sedation-and-discharge framing as a trap, used parent-mediated calming, included child protection and family safety, and outlined a follow-up pathway scored well. Candidates who agreed to sedate, gave a generic list without case-specific justification, or failed to address the family safety context did not achieve the standard.'
       },
       {
-        stemNumber: "1.2",
-        vignette: "During assessment, Talia becomes tearful and says she has been sleeping in her car with Leo for three nights after leaving her partner because he 'shouts and punches walls.' Leo clings to her and becomes more distressed when male security staff stand near the cubicle. The paediatric registrar says the ED is overcrowded and asks you to 'clear the behaviour problem' so the family can be discharged.",
-        question: "Describe — list and explain the person, illness and system factors contributing to Leo's presentation and how these change your immediate plan.\\nA list without explanation will not be awarded marks.\\n(8 marks | 8 minutes)",
-        commandWord: "describe_explain",
+        stemNumber: '1.2',
+        vignette: 'During assessment, Talia becomes tearful and says she has been sleeping in her car with Leo for three nights after leaving her partner because he shouts and punches walls. Leo clings to her and becomes more distressed when male security staff stand near the cubicle. The paediatric registrar says the ED is overcrowded and asks you to clear the behaviour problem so the family can be discharged.',
+        question: 'Describe — list and explain the person, illness and system factors contributing to Leo\'s presentation and how these change your immediate plan. A list without explanation will not be awarded marks. (8 marks | 8 minutes)',
+        commandWord: 'describe_explain',
         marks: 8,
         timeMinutes: 8,
         stemSignals: [
-          "The homelessness and family violence disclosure is new critical information — candidates who do not explicitly reframe the plan in response to it will lose marks",
-          "The paediatric registrar's pressure to discharge is an ethical trap — candidates must resist flow-driven discharge into an unsafe situation",
-          "Male security staff proximity as a trauma trigger must be identified and acted on — this is a specific, actionable clinical detail the examiner expects candidates to name and address",
+          'Person-Illness-System structure is explicitly required — candidates who give only clinical or only social factors will miss marks',
+          'The disclosure of family violence and homelessness fundamentally changes the plan — discharge is no longer safe',
+          'Male security staff escalating Leo is a clinical observation requiring immediate action, not just a notation'
         ],
         domains: [
           {
-            name: "Award up to 8 marks from the following scorable points",
-            marks: 8,
+            name: 'Person and trauma factors (4 marks)',
+            marks: 4,
             keyPoints: [
-              "Leo's age and developmental stage limit his capacity for verbal distress regulation — explain that a 4-year-old cannot name fear or use adult coping strategies; the plan must rely on environmental modification and adult co-regulation rather than expecting Leo to self-manage",
-              "Possible neurodevelopmental disorder is central to the formulation — explain that delayed speech, sensory sensitivity and communication difficulties make ED transitions inherently more distressing for Leo, and any environment with noise and change will exceed his regulatory threshold",
-              "Attachment insecurity and separation anxiety are likely maintaining factors — explain that Leo's dysregulation was precipitated by Talia's lateness and he clings to her in ED; interventions that separate them will worsen rather than resolve the crisis",
-              "Male security proximity is a probable trauma trigger — explain that children exposed to domestic violence by male figures develop hyperarousal responses to unfamiliar men; removing or repositioning male security reduces Leo's physiological arousal without compromising safety",
-              "Three nights sleeping in the car have compounded Leo's regulatory threshold — explain that sleep deprivation, disruption of routine and environmental instability lower a preschool child's tolerance for frustration and novel settings, making this ED presentation more severe than it would otherwise be",
-              "Family violence exposure may be presenting as hyperarousal and survival response — explain that screaming, biting and prolonged dysregulation in preschool children can represent fear-based responses and learned vigilance rather than conduct disorder or primary psychiatric illness",
-              "A premature psychiatric diagnosis should not be assigned in this context — explain that assigning a behavioural diagnosis to a child in acute trauma and homelessness without multi-setting assessment is clinically inaccurate and risks stigma and loss of developmental supports",
-              "The immediate plan shifts from behaviour management to family safety — explain that the clinical priority is now securing safe overnight accommodation for Talia and Leo, not achieving behavioural compliance for discharge",
-              "Urgent social work and family violence service activation is required — explain that the absence of safe shelter tonight constitutes an immediate welfare risk that social work and family violence services must address before discharge is considered",
-              "Child protection consultation may be required — explain that Leo is exposed to domestic violence and homelessness; a safety-framed referral ensures his welfare is formally assessed and does not constitute blame toward Talia",
-              "Paediatric short-stay or admission may be the safest immediate option — explain that it provides a contained, safe environment while crisis accommodation, family violence response and safety planning are arranged, preventing discharge into foreseeable harm",
-            ],
+              'Leo\'s age and developmental stage increase his dysregulation risk — explain that a 4-year-old has limited capacity to verbalise fear or use cognitive coping strategies, making behavioural escalation the primary expression of distress',
+              'Possible neurodevelopmental vulnerability is a central contributor — explain that delayed speech, sensory sensitivity and communication difficulties make unpredictable ED transitions significantly harder to manage',
+              'Attachment insecurity and separation panic are likely — explain that the crisis was triggered by Talia being late and Leo clings to her in ED, consistent with heightened separation anxiety in the context of ongoing family instability',
+              'Male security staff may be a trauma trigger — explain that Leo\'s escalation when male staff approach is consistent with conditioned fear responses following exposure to a male partner who shouts and uses physical intimidation'
+            ]
           },
+          {
+            name: 'Illness, system factors and plan change (4 marks)',
+            marks: 4,
+            keyPoints: [
+              'Family violence exposure may present as hyperarousal and dysregulation — explain that screaming, biting and prolonged distress are survival responses shaped by ongoing threat exposure, not simply oppositional behaviour',
+              'Three nights of homelessness and sleep deprivation lower Leo\'s threshold for all stressors — explain that basic safety needs are unmet and any behavioural threshold is predictably reduced',
+              'ED flow pressure does not override child and family safety — explain that registrar pressure to discharge is understandable but discharge into homelessness is clinically and ethically unacceptable',
+              'Social work and family violence services become urgent parts of the plan — explain that the immediate clinical problem is Leo\'s safety in the context of homelessness and family violence, not only his behaviour',
+              'Child protection consultation is required — explain that Leo is exposed to family violence and is homeless; this threshold requires consultation regardless of whether the presentation is framed as support or safety concern',
+              'Short-stay or paediatric admission may be the safest option — explain that it provides a contained environment while accommodation, family violence response and child safety planning are arranged'
+            ]
+          }
         ],
         zeroMarkTraps: [
-          "Framing the presentation as bad parenting without addressing developmental or trauma contributors",
-          "Ignoring Talia's safety and focusing only on Leo's behaviour",
-          "Discharging because there is no psychiatric disorder, without addressing homelessness and family violence",
+          'Treating the presentation as bad parenting without developmental or trauma formulation',
+          'Ignoring Talia\'s immediate safety in the discharge plan',
+          'Agreeing to discharge because no formal psychiatric diagnosis can be made in ED'
         ],
-        postExaminerNote: "Candidates who do not reframe the plan in response to the homelessness and family violence disclosure will lose significant marks. The examiner expects explicit identification of how each new piece of information changes the management, not a generic list of factors.",
+        postExaminerNote: 'Candidates who integrated developmental vulnerability, trauma exposure, family violence, homelessness and ED system pressure into one coherent plan-change scored well. Candidates who noted the disclosure but still recommended discharge, or who treated the behaviour as a parenting failure without clinical formulation, did not achieve the standard.'
       },
       {
-        stemNumber: "1.3",
-        vignette: "The childcare director phones ED and says Leo cannot return unless you provide a written statement that he is 'safe around other children.' Talia begs you to write it because she will lose her job without childcare. The hospital social worker says crisis accommodation may not be available tonight. The paediatric team says Leo does not need medical admission.",
-        question: "Discuss — list and debate the competing duties to Leo, Talia, the childcare centre, and the hospital. You must name the tensions explicitly and take a defensible consultant position.\\n(8 marks | 8 minutes)",
-        commandWord: "debate",
+        stemNumber: '1.3',
+        vignette: 'The childcare director phones ED and says Leo cannot return unless you provide a written statement that he is safe around other children. Talia begs you to write it because she will lose her job without childcare. The hospital social worker says crisis accommodation may not be available tonight. The paediatric team says Leo does not need medical admission.',
+        question: 'Discuss — list and debate the competing duties to Leo, Talia, the childcare centre, and the hospital. You must name the tensions explicitly and take a defensible consultant position. (8 marks | 8 minutes)',
+        commandWord: 'debate',
         marks: 8,
         timeMinutes: 8,
         stemSignals: [
-          "Writing the safety letter is the examiner trap — doing so scores zero because it provides a guarantee that cannot be supported by an ED crisis assessment alone",
-          "The examiner wants explicit naming of each tension, not a generic ethics discussion — 'there is tension between X and Y' must appear in the answer",
-          "A defensible consultant position must be stated and justified — candidates who list tensions without taking a position will lose marks on this stem",
+          'The childcare safety certificate is a direct examiner trap — writing it is a clinical, ethical and medico-legal error',
+          'Discuss questions require named tensions and a stated defensible consultant position — a list of considerations without debate format will not score well',
+          'All four competing duties must be named: Leo, Talia, the childcare centre and the hospital'
         ],
         domains: [
           {
-            name: "Award up to 8 marks from the following scorable points",
+            name: 'Competing tensions, positions and defensible outcome (8 marks)',
             marks: 8,
             keyPoints: [
-              "There is tension between Talia's employment need and Leo's safety — a defensible position is to support childcare access through a functional risk plan rather than providing a false safety guarantee that cannot be backed by an ED assessment",
-              "There is tension between confidentiality and information-sharing with childcare — only relevant, consented and clinically necessary information should be shared with the childcare centre, not private family or psychiatric details",
-              "There is tension between Leo's right to inclusion and the childcare centre's duty to other children — the consultant should recommend a risk-support and supervision plan rather than exclusion or blanket reassurance",
-              "There is tension between hospital flow pressure and foreseeable harm if the family is discharged into homelessness and unresolved family violence — ED overcrowding does not justify discharge that creates predictable harm to a child",
-              "There is tension between supporting Talia as a survivor of family violence and scrutinising her parenting — any child protection or welfare referral must be framed as safety support, not as blame for her circumstances",
-              "The consultant must not write a statement certifying Leo as 'safe around other children' — because ED crisis assessment cannot predict contextual risk in childcare without a full developmental assessment and an implemented support plan",
-              "The consultant can provide a functional ED summary — including documented triggers, recommended calming strategies, transition supports, sensory considerations and urgency of developmental assessment, without making a contextual safety guarantee",
-              "The childcare centre may need inclusion support — because repeated exclusion worsens family instability, may breach equitable access principles and is not a sustainable response to developmental need",
-              "The immediate defensible position prioritises Leo's safety, Talia's safety and honest communication — because these are more defensible than providing a misleading clearance letter to preserve employment or manage flow",
-              "Recommending a multi-agency meeting with childcare, family violence services and early childhood intervention is the constructive consultant action — because collaborative safety planning is more sustainable than a certificate and addresses the underlying system gap",
-            ],
-          },
+              'There is tension between Talia\'s employment need and Leo\'s safety — the defensible position is to support childcare access through honest, consented communication and a risk-support plan, not a false safety guarantee',
+              'There is tension between confidentiality and information-sharing with the childcare centre — only relevant, consented and necessary information should be shared unless there is serious imminent safety concern',
+              'There is tension between the childcare centre\'s duty to other children and Leo\'s right to inclusion — a functional support plan rather than exclusion or blanket reassurance is the defensible recommendation',
+              'There is tension between ED flow pressure and foreseeable harm after discharge — bed pressure does not justify discharging a family into homelessness when child safety is unresolved',
+              'There is tension between supporting Talia and the need to involve child protection — referral should be framed as safety support, not blame, and Talia\'s cooperation should be sought',
+              'The consultant must not certify Leo as safe around children — because ED assessment alone cannot predict contextual risk without assessment, supports and a functional plan in place, and the certificate creates false assurance',
+              'The consultant can provide functional recommendations instead — including triggers, calming strategies, transition planning, supervision adjustments and urgent developmental referral',
+              'Childcare exclusion may breach equitable access principles — because repeated exclusion without support denies Leo educational access and worsens family instability for a child with suspected developmental disorder',
+              'The defensible consultant position is to prioritise Leo and Talia\'s safety, provide honest communication and offer an inter-agency support plan — rather than a misleading clearance letter written under pressure',
+              'Offer a written ED summary with limitations explicitly stated — because this supports childcare communication without constituting an unverifiable safety guarantee'
+            ]
+          }
         ],
         zeroMarkTraps: [
-          "Writing the requested safety letter without qualification",
-          "Refusing all communication with childcare when collaborative safety planning is both appropriate and needed",
-          "Prioritising bed pressure over child safety",
+          'Writing the requested safe-for-childcare certificate',
+          'Refusing all communication with childcare when collaborative safety planning is appropriate',
+          'Prioritising hospital bed pressure over Leo and Talia\'s safety'
         ],
-        postExaminerNote: "The examiner is testing whether candidates can hold an ethical position under pressure from multiple stakeholders. Candidates who write the letter, defer to Talia's request, or list tensions without a position will not demonstrate consultant-level reasoning.",
+        postExaminerNote: 'Candidates who refused to write the certificate, named at least three tensions explicitly, stated a defensible position and offered functional alternatives including a written summary, inter-agency meeting and family violence referral scored well. Candidates who wrote the letter, gave a list without naming tensions, or said no without constructive alternatives did not achieve the standard.'
       },
       {
-        stemNumber: "1.4",
-        vignette: "Two weeks later, the clinical director asks you to review why three preschool children with developmental delay, family violence exposure and childcare exclusion have presented repeatedly to ED in the last month. The local early childhood service has a six-month waitlist. There is no agreed pathway between ED, paediatrics, child protection, early childhood intervention, family violence services and CYMHS.",
-        question: "Describe — list and explain the governance and workforce actions you would recommend to build a safer early-childhood crisis pathway.\\nA list without explanation will not be awarded marks.\\n(8 marks | 8 minutes)",
-        commandWord: "describe_explain",
+        stemNumber: '1.4',
+        vignette: 'Two weeks later, the clinical director asks you to review why three preschool children with developmental delay, family violence exposure and childcare exclusion have presented repeatedly to ED in the last month. The local early childhood service has a six-month waitlist. There is no agreed pathway between ED, paediatrics, child protection, early childhood intervention, family violence services and CYMHS.',
+        question: 'Describe — list and explain the governance and workforce actions you would recommend to build a safer early-childhood crisis pathway. A list without explanation will not be awarded marks. (8 marks | 8 minutes)',
+        commandWord: 'describe_explain',
         marks: 8,
         timeMinutes: 8,
         stemSignals: [
-          "Three similar presentations in one month is a system signal, not individual clinical failure — the examiner expects system-level analysis, not case-by-case clinical advice",
-          "The six-month waitlist must be named as a governance failure and escalated — candidates who only recommend clinical actions without addressing service capacity will miss key marks",
-          "The absence of an agreed pathway between six agencies is the root cause — the answer must address coordination, not just training",
+          'Governance stem — individual case management is insufficient; the answer must address system-level redesign across all named agencies',
+          'All six named agencies must appear in the answer: ED, paediatrics, CYMHS, early childhood intervention, family violence services and child protection',
+          'Six-month waitlist requires executive escalation, not a clinical workaround'
         ],
         domains: [
           {
-            name: "Award up to 8 marks from the following scorable points",
-            marks: 8,
+            name: 'Pathway design and governance structure (4 marks)',
+            marks: 4,
             keyPoints: [
-              "Create a shared early-childhood crisis pathway with agreed roles across ED, paediatrics, CYMHS, early childhood intervention, child protection and family violence services — explain that repeated presentations show there is no agreed route for children with this profile and that unclear role ownership causes delayed discharge and repeat crises",
-              "Define criteria for paediatric admission, short-stay and community diversion for preschool behavioural crises — explain that without criteria, each presentation is managed ad hoc and decisions about safe discharge are made inconsistently by whoever is rostered",
-              "Introduce rapid multidisciplinary case review for repeat ED attenders in this age group — explain that three similar presentations in one month constitute a pattern requiring structured system review, not individual case management",
-              "Train ED staff in trauma-informed and neurodevelopmentally informed de-escalation for preschool children — explain that standard adult security responses and adult-oriented mental state examinations are clinically inappropriate and may worsen dysregulation in this age group",
-              "Embed family violence screening tools and scripts into the early-childhood ED pathway — explain that staff avoid asking unless structured screening is part of the workflow; safety inquiry must be systematic rather than clinician-dependent",
-              "Build consultation links with speech therapy, occupational therapy and developmental paediatrics as part of the pathway — explain that Leo-type presentations require more than psychiatric risk assessment and ED cannot safely manage developmental need without allied health partners",
-              "Nominate a clinical lead and escalation pathway for complex early-childhood presentations — explain that urgent decisions in cases involving developmental delay, family violence and housing instability need accountable senior oversight rather than on-call generalist management",
-              "Track and audit repeat ED presentations, childcare exclusions, accommodation outcomes and follow-up completion — explain that governance requires measurable indicators and audit closes the loop between pathway design and actual outcomes",
-              "Escalate the six-month waitlist for early childhood intervention to executive level — explain that a six-month wait for a child with Leo's profile creates foreseeable developmental harm and is a governance risk the service cannot manage at a clinical level alone",
-              "Include lived-experience and family feedback in pathway design — explain that pathways designed without input from families who have used ED for this purpose may address clinician convenience rather than family and child safety needs",
-            ],
+              'Create a shared early-childhood crisis pathway — explain that repeated presentations indicate the absence of any agreed route, with each agency acting in isolation and creating system gaps',
+              'Define roles and referral criteria across all six agencies named in the review — explain that unclear ownership of early-childhood crisis cases drives delayed discharge, duplicated work and unresolved safety',
+              'Develop criteria for paediatric admission, short-stay and community diversion — explain that preschool behavioural crises usually need coordinated containment and safety planning rather than psychiatric admission, and staff need decision support',
+              'Introduce rapid multidisciplinary case review for repeat ED attenders with this profile — explain that three similar presentations in a month indicate a system pattern requiring formal governance review, not only repeated individual management'
+            ]
           },
+          {
+            name: 'Workforce, monitoring and accountability (4 marks)',
+            marks: 4,
+            keyPoints: [
+              'Train ED and paediatric staff in trauma-informed and neurodevelopmentally informed de-escalation — explain that standard adult security responses worsen distress in preschool children and specific skills are needed',
+              'Embed structured family violence screening tools into the pathway — explain that staff avoid asking without supported, normalised assessment processes embedded in workflow',
+              'Build consultation links with speech pathology, occupational therapy and developmental paediatrics — explain that these presentations require multi-disciplinary developmental assessment, not psychiatric risk screening alone',
+              'Track repeat ED presentations, childcare exclusions and safe accommodation outcomes as safety indicators — explain that governance requires measurable data to demonstrate whether the pathway reduces harm',
+              'Audit discharge plans for family violence inquiry, safety planning and follow-up completion — explain that documentation gaps are where clinical risk is being missed',
+              'Escalate the six-month early childhood service waitlist to executive level — explain that this service gap creates predictable foreseeable harm and requires executive commissioning response, not only clinical workarounds'
+            ]
+          }
         ],
         zeroMarkTraps: [
-          "Recommending only 'hire more staff' without governance or pathway actions",
-          "Treating the problem as parenting education rather than system design failure",
-          "Providing no audit or accountability mechanism",
+          'Recommending only additional staffing without pathway or governance design',
+          'Treating the problem as a parenting education issue without addressing system failure',
+          'Providing no accountability, audit or escalation mechanism'
         ],
-        postExaminerNote: "This stem tests whether candidates can move from clinical to systems thinking. Candidates who only give clinical recommendations for individual children will not demonstrate the governance and leadership competency this stem requires.",
-      },
-    ],
+        postExaminerNote: 'Candidates who named all relevant agencies, described a coordinated pathway with defined roles, recommended governance structures, identified audit indicators and escalated the waitlist to executive level scored well. Candidates who listed clinical management strategies without system-level design or accountability mechanisms did not achieve the standard.'
+      }
+    ]
   },
   {
-    id: "meq_023",
-    title: "Frances Morton — Dialysis Withdrawal & Capacity",
-    case: "Frances Morton, 84 years old",
-    examSource: "Generated — Ethics / Professionalism / Legal",
-    topic: "Capacity to refuse dialysis, ethical tensions in palliative decision-making, family conflict and consultation protocol",
-    primaryDomain: "Ethics / Professionalism / Legal",
+    id: 'meq_023',
+    title: 'Frances Morton — Dialysis Withdrawal, Capacity and Family Conflict',
+    case: 'Frances Morton, age 84',
+    examSource: 'Generated — Ethics / Professionalism / Legal',
+    topic: 'Capacity assessment for dialysis withdrawal in an 84-year-old with depression, grief and family conflict; tests decision-specific capacity assessment, ethical weighing of autonomy versus beneficence, confidentiality management and protocol governance',
+    primaryDomain: 'Ethics / Professionalism / Legal',
     totalMarks: 30,
     totalTimeMinutes: 30,
     stems: [
       {
-        stemNumber: "2.1",
-        vignette: "Mrs Frances Morton is an 84-year-old retired nurse with end-stage kidney disease, chronic pain from osteoarthritis, and a past history of recurrent major depression. She has been receiving haemodialysis for 18 months. Over the last month she has missed two dialysis sessions and now says she wants to stop dialysis permanently because she is 'tired of living like a machine.' She is not psychotic, is calm, and says she understands she may die within weeks if dialysis stops. Her daughter insists this is 'just depression talking' and asks you to certify that Frances lacks capacity.",
-        question: "Outline — list and justify the key issues you would assess before giving an opinion about Frances's capacity to refuse dialysis.\\nA list without case-specific justification will not be awarded marks.\\n(8 marks | 8 minutes)",
-        commandWord: "outline_justify",
+        stemNumber: '2.1',
+        vignette: 'Mrs Frances Morton is an 84-year-old retired nurse with end-stage kidney disease, chronic pain from osteoarthritis, and a past history of recurrent major depression. She has been receiving haemodialysis for 18 months. Over the last month she has missed two dialysis sessions and now says she wants to stop dialysis permanently because she is tired of living like a machine. She is not psychotic, is calm, and says she understands she may die within weeks if dialysis stops. Her daughter insists this is just depression talking and asks you to certify that Frances lacks capacity.',
+        question: 'Outline — list and justify the key issues you would assess before giving an opinion about Frances\'s capacity to refuse dialysis. A list without case-specific justification will not be awarded marks. (8 marks | 8 minutes)',
+        commandWord: 'outline_justify',
         marks: 8,
         timeMinutes: 8,
         stemSignals: [
-          "The daughter's request to certify incapacity is the clinical and ethical pressure point — the examiner expects candidates to resist this and apply the four-ability capacity framework rigorously",
-          "Depression history does not equal incapacity — candidates must distinguish between assessing depression as a potential factor and using it as an automatic disqualifier",
-          "Capacity is decision-specific — candidates must assess capacity for this particular refusal, not general cognitive function or global capacity",
+          'Capacity is decision-specific — depression, age and frailty do not automatically remove capacity for dialysis refusal',
+          'The daughter requesting a capacity certificate is a framing trap — the task is rigorous assessment, not confirmation of a predetermined view',
+          'All four functional capacity elements must be assessed: understand, retain, weigh, communicate'
         ],
         domains: [
           {
-            name: "Award up to 8 marks from the following scorable points",
-            marks: 8,
+            name: 'Capacity assessment (5 marks)',
+            marks: 5,
             keyPoints: [
-              "Assess decision-specific capacity for dialysis refusal — because capacity is decision-specific; Frances may retain capacity for this high-stakes refusal even if she has depression, chronic pain or intermittent cognitive fluctuation",
-              "Assess understanding of dialysis and its function — because Frances must be able to explain what dialysis does and why stopping it is likely to cause death within weeks to meet the understanding criterion",
-              "Assess appreciation of personal consequences — because she must apply the risk of death to herself specifically, not just acknowledge it abstractly; lack of appreciation is distinct from lack of understanding",
-              "Assess reasoning and weighing of alternatives — because she should be able to compare ongoing dialysis, reduced-frequency dialysis, conservative renal management and palliative renal care, and explain why these do not accord with her values",
-              "Assess communication of a stable and consistent decision — because the decision should not be impulsive, fluctuating, delirium-driven or reversible under conditions of better symptom control",
-              "Assess depression severity, suicidality and its influence on decision-making — because treatable depression may distort values or drive self-destructive refusal; suicidal ideation must be distinguished from refusal of burdensome treatment",
-              "Assess grief and demoralisation as contributors — because the recent death of her partner may influence Frances's current valuation of life without automatically making her decision pathological",
-              "Screen for delirium, uraemic encephalopathy and cognitive impairment — because dialysis-related uraemia, medications, infection and medical illness can impair all four capacity domains and must be excluded or addressed before a final opinion",
-              "Assess pain and symptom burden as potentially remediable drivers — because untreated or inadequately managed osteoarthritis pain may be contributing to a desire to stop treatment that would change if pain were better controlled",
-              "Assess voluntariness and the possibility of coercion — because the daughter's insistence and emotional pressure may affect Frances's expressed choice; the psychiatrist must assess what Frances says when the daughter is not present",
-              "Review prior values, preferences and advance care planning — because consistency with longstanding values is supportive of capacity and helps contextualise the refusal within Frances's broader life narrative",
-            ],
+              'Assess decision-specific capacity for refusal of dialysis — because Frances may retain capacity for this decision even with depression and frailty, and capacity cannot be assumed to be absent from diagnosis or age alone',
+              'Assess understanding of dialysis and the likely consequences of stopping — because she must demonstrate understanding of what dialysis does and that death within weeks is the probable outcome if she stops',
+              'Assess appreciation of personal consequences — because she must apply the risk of death to herself specifically, not only know it abstractly',
+              'Assess reasoning and weighing of alternatives — because she should be able to articulate and compare ongoing dialysis, reduced-frequency dialysis, conservative renal care and palliative care in terms of her own values',
+              'Assess communication of a stable and consistent choice — because the decision should not be impulsive, fluctuating with mood or driven by delirium',
+              'Screen for delirium and cognitive impairment — because uraemia, medications and intercurrent illness in an 84-year-old can impair cognition and must be excluded before concluding the refusal is values-based'
+            ]
           },
+          {
+            name: 'Psychiatric, medical and contextual contributors (3 marks)',
+            marks: 3,
+            keyPoints: [
+              'Assess depression severity and suicidal ideation — because treatable depression may distort values, amplify hopelessness or drive self-destructive refusal in a way that could be reversed with treatment',
+              'Assess grief and demoralisation separately from major depression — because Frances recently lost her partner; grief may influence but does not automatically invalidate a considered values-based refusal',
+              'Assess pain severity and symptom burden — because undertreated pain may be a remediable contributor to refusal that deserves attention before a final capacity opinion is given',
+              'Clarify voluntariness and assess for family pressure or coercion — because her daughter is actively pressuring the team to certify incapacity, which may compromise Frances\'s voluntariness',
+              'Review prior values, advance care planning and prior statements about quality of life — because consistency of this refusal with longstanding values supports genuine autonomous decision-making'
+            ]
+          }
         ],
         zeroMarkTraps: [
-          "Treating depression as automatically removing capacity without assessment",
-          "Treating age or frailty as disqualifying capacity",
-          "Conducting only a suicide risk assessment without addressing the four capacity domains",
+          'Concluding that depression alone removes capacity for dialysis refusal',
+          'Concluding that age 84 is itself grounds for incapacity',
+          'Performing only a suicide risk assessment without formally assessing the four functional capacity elements'
         ],
-        postExaminerNote: "Candidates who conclude Frances lacks capacity solely because she is depressed or old will score zero on the clinical reasoning component. The examiner expects systematic application of the four capacity abilities with case-specific justification for each.",
+        postExaminerNote: 'Candidates who named all four capacity elements explicitly, assessed remediable contributors including depression, grief, pain and delirium, assessed voluntariness, and reviewed prior values scored well. Candidates who equated depression with incapacity, focused only on suicide risk, or certified incapacity to satisfy the family did not achieve the standard.'
       },
       {
-        stemNumber: "2.2",
-        vignette: "You find Frances has low mood, poor sleep, pain, and grief about the recent death of her partner, but she can describe the nature of dialysis, the likely consequences of stopping, alternatives such as reduced-frequency dialysis and palliative renal care, and why these options do not meet her values. She says, 'I am not trying to kill myself; I am choosing not to keep prolonging this.' The renal team is uncomfortable and asks whether depression invalidates her decision.",
-        question: "Discuss — list and debate how depression, grief, autonomy, beneficence and non-maleficence should be weighed in this situation. You must name the ethical tension and take a defensible consultant position.\\n(8 marks | 8 minutes)",
-        commandWord: "debate",
+        stemNumber: '2.2',
+        vignette: 'You find Frances has low mood, poor sleep, pain, and grief about the recent death of her partner, but she can describe the nature of dialysis, the likely consequences of stopping, alternatives such as reduced-frequency dialysis and palliative renal care, and why these options do not meet her values. She says: I am not trying to kill myself; I am choosing not to keep prolonging this. The renal team is uncomfortable and asks whether depression invalidates her decision.',
+        question: 'Discuss — list and debate how depression, grief, autonomy, beneficence and non-maleficence should be weighed in this situation. You must name the ethical tension and take a defensible consultant position. (8 marks | 8 minutes)',
+        commandWord: 'debate',
         marks: 8,
         timeMinutes: 8,
         stemSignals: [
-          "The renal team's discomfort is clinically significant — the examiner expects candidates to address moral distress in treating clinicians as part of the ethical response",
-          "Frances's statement distinguishes treatment refusal from suicidal intent — candidates who conflate these two will lose marks",
-          "A defensible consultant position must be stated — candidates who only list ethical principles without applying them to this case will not demonstrate consultant-level reasoning",
+          'The renal team asking whether depression invalidates her decision is a framing trap — depression does not automatically invalidate a capacitous reasoned refusal',
+          'Discuss questions require named ethical tensions and a stated defensible position — a list of considerations will not achieve the standard',
+          'Suicidality must be explicitly distinguished from treatment refusal — Frances has already done this herself in the vignette'
         ],
         domains: [
           {
-            name: "Award up to 8 marks from the following scorable points",
+            name: 'Ethical tensions, weighing and defensible consultant position (8 marks)',
             marks: 8,
             keyPoints: [
-              "There is tension between autonomy and preservation of life in this case — a capacitous patient has the legal and ethical right to refuse life-sustaining treatment even when death is the foreseeable consequence, and this right is not diminished by age, depression or clinician discomfort",
-              "There is tension between treating depression and respecting reasoned values — depression should be assessed and treatment offered, but a capacitous decision to stop dialysis after weighing alternatives cannot be overridden solely on the basis of a comorbid mood disorder",
-              "Grief can inform a decision without invalidating it — Frances's bereavement may shape her current values and priorities without making her choice pathological; grief is not a psychiatric contraindication to capacity",
-              "Beneficence supports offering symptom relief and exploring alternatives — reduced-frequency dialysis, palliative renal care, pain management and depression treatment should all be offered and their potential to change Frances's experience acknowledged",
-              "Non-maleficence includes avoiding burdensome and unwanted treatment — continuing dialysis against Frances's consistent and reasoned values may prolong suffering and constitute harm in itself, not only a benefit",
-              "Treatment refusal must be distinguished from suicidal ideation — Frances frames this as refusing a burdensome life-prolonging intervention rather than an active wish to die; this distinction is clinically and ethically significant",
-              "A defensible consultant position is to respect the refusal if capacity is intact — because autonomy and bodily integrity are foundational ethical duties and there is no legal authority to override a capacitous adult's treatment refusal",
-              "Respecting refusal does not mean abandoning Frances — because palliative renal care, pain management, depression treatment, family support and ongoing psychiatric contact remain ethically required after a decision to withdraw dialysis",
-              "Uncertainty about mood or cognition should prompt review rather than coercion — if Frances's mental state fluctuates, repeat assessment is appropriate; uncertainty alone does not authorise overriding a currently capacitous decision",
-              "Naming and addressing moral distress in the renal team is part of the consultant role — because clinician discomfort with anticipated death may drive pressure toward coercive treatment; the psychiatrist should facilitate team reflection without endorsing clinical override",
-            ],
-          },
+              'There is tension between autonomy and preservation of life — a capacitous patient may refuse life-sustaining treatment even if death follows, and this right is established in law and ethics',
+              'There is tension between treating depression and respecting values — depression should be assessed and treatment offered, but the presence of depression does not automatically override a reasoned and consistent refusal',
+              'Grief can inform a decision without invalidating it — bereavement may shape Frances\'s sense of what constitutes a worthwhile life, but this does not make her choice pathological',
+              'Beneficence supports offering symptom relief and alternatives — reduced dialysis, palliative renal care and pain management should be explored before accepting that all options are exhausted',
+              'Non-maleficence includes avoiding burdensome treatment that extends suffering — continuing dialysis against Frances\'s expressed values may prolong suffering rather than benefit her',
+              'Suicidality must be explicitly distinguished from treatment refusal — Frances is not choosing death to end her life; she is choosing not to prolong a life she regards as not worth extending on dialysis',
+              'A defensible consultant position is to respect her refusal if capacity is intact — because autonomy and bodily integrity are central ethical duties and Frances demonstrates the four functional capacity elements',
+              'Respecting refusal does not mean abandonment — ongoing psychiatric care, palliative support, pain management and family communication remain clinical obligations',
+              'Uncertainty should prompt review rather than coercion — if mood, cognition or uraemia fluctuate, repeat capacity assessment is appropriate',
+              'Document reasoning, alternatives offered and Frances\'s stated values — because this decision is ethically and legally high-stakes and the record must demonstrate a thorough process'
+            ]
+          }
         ],
         zeroMarkTraps: [
-          "Treating this as a standard suicide prevention case and recommending involuntary psychiatric treatment",
-          "Concluding dialysis must continue because Frances is depressed, without capacity assessment",
-          "Failing to mention palliative care as part of the ethically required response to treatment withdrawal",
+          'Treating this as a suicide prevention case and overriding refusal on that basis',
+          'Concluding that dialysis must continue because Frances is depressed without testing capacity',
+          'Failing to consider palliative renal care as part of the ethical response'
         ],
-        postExaminerNote: "Candidates who recommend involuntary admission or psychiatric override of a capacitous refusal will score poorly. The examiner is testing whether candidates can hold an ethical position that respects autonomy while still discharging the duty of care through palliative and psychiatric support.",
+        postExaminerNote: 'Candidates who named the core tension between autonomy and preservation of life, distinguished depression from incapacity, separated treatment refusal from suicidality, recommended palliative care and stated a defensible position clearly scored well. Candidates who treated depression as automatically invalidating refusal, or who failed to name any ethical tension explicitly, did not achieve the standard.'
       },
       {
-        stemNumber: "2.3",
-        vignette: "Frances's son arrives from interstate and demands dialysis continue. He says his sister is 'letting Mum die for convenience' and threatens to complain to the hospital executive. Frances asks you not to share details of the psychiatric assessment with him. The renal consultant asks you to attend a family meeting.",
-        question: "Describe — list and explain how you would manage confidentiality, family conflict and communication with the renal team.\\nA list without explanation will not be awarded marks.\\n(7 marks | 7 minutes)",
-        commandWord: "describe_explain",
+        stemNumber: '2.3',
+        vignette: 'Frances\'s son arrives from interstate and demands dialysis continue. He says his sister is letting Mum die for convenience and threatens to complain to the hospital executive. Frances asks you not to share details of the psychiatric assessment with him. The renal consultant asks you to attend a family meeting.',
+        question: 'Describe — list and explain how you would manage confidentiality, family conflict and communication with the renal team. A list without explanation will not be awarded marks. (7 marks | 7 minutes)',
+        commandWord: 'describe_explain',
         marks: 7,
         timeMinutes: 7,
         stemSignals: [
-          "Frances's explicit request for confidentiality must be respected — candidates who share psychiatric details with the son because 'he is family' will score zero on the confidentiality component",
-          "The threatened executive complaint signals legal and reputational risk — the examiner expects candidates to address documentation and governance, not only clinical communication",
-          "The family meeting requires defined roles and structure — candidates who attend without a plan will miss marks",
+          'Frances has explicitly requested confidentiality about the psychiatric assessment — this must be respected; the son is not entitled to clinical details',
+          'A threatened executive complaint requires clear documentation, not capitulation to family demands',
+          'The son\'s behaviour must be assessed for elder coercion, not only managed as grief'
         ],
         domains: [
           {
-            name: "Award up to 7 marks from the following scorable points",
+            name: 'Confidentiality, family conflict and team communication (7 marks)',
             marks: 7,
             keyPoints: [
-              "Respect Frances's explicit request not to share psychiatric assessment details with her son — explain that Frances retains the right to control her private health information and that confidentiality is not waived by family membership or severity of illness",
-              "Seek Frances's consent for limited communication within the family meeting — explain that general information about care planning, palliative options and the support available can be shared without disclosing the content of the private psychiatric assessment",
-              "Clarify to the son what can and cannot be shared — explain that he can receive information about the care process, palliative renal care options and the support plan without receiving confidential psychiatric details; transparency about limits reduces frustration and partial misinformation",
-              "Acknowledge the son's distress without colluding with demands to override Frances — explain that his anger likely reflects anticipatory grief and perceived powerlessness; validation of his experience does not require agreeing with his position",
-              "Assess the family meeting for coercion or undue influence on Frances — explain that the son's presence and emotional pressure must be assessed as a potential threat to Frances's ongoing voluntariness, not only as a communication challenge",
-              "Provide the renal team with a clear, practical capacity opinion and documented plan — explain that the team needs specific guidance about what the psychiatric assessment found, what it means for clinical decision-making and what the limits of psychiatric authority are in this case",
-              "Recommend a structured family meeting with defined roles for renal medicine, palliative care and psychiatry — explain that clear role separation reduces mixed messages, prevents the psychiatrist being asked to arbitrate family conflict and ensures Frances's wishes remain central",
-              "Document the meeting, the capacity opinion, confidentiality limits, agreements and any threats of complaint — explain that threatened executive complaints make clear contemporaneous records essential for legal protection and clinical governance",
-              "Offer ethics committee referral or staff support if the team's moral distress persists — explain that the renal team may experience significant difficulty with a death following treatment withdrawal; clinical ethics consultation or reflective practice support is appropriate",
-            ],
-          },
+              'Respect Frances\'s confidentiality — explain that she has explicitly asked that psychiatric assessment details not be shared with her son, and this request is binding unless there is an overriding safety justification',
+              'Seek Frances\'s consent for limited family communication — explain that family meetings can still address general care planning, process and support without disclosing confidential psychiatric content',
+              'Clarify to the son what can be shared — explain that he can be informed about the process and the general support plan without receiving confidential assessment details Frances has withheld',
+              'Acknowledge the son\'s distress without colluding with his demands — explain that his anger may reflect anticipatory grief and feelings of helplessness, and these deserve empathic engagement rather than dismissal',
+              'Assess for elder coercion or undue influence by the son — explain that his threatening behaviour and demands require consideration of whether this is adversely affecting Frances\'s voluntariness',
+              'Avoid triangulation between siblings — explain that the psychiatrist should not become an arbiter of family motives; the sibling conflict is secondary to Frances\'s clinical and legal position',
+              'Communicate the capacity opinion clearly and practically to the renal team — explain that clinicians need guidance about what the opinion means for clinical decision-making, not only a summary that she has capacity',
+              'Recommend a structured family meeting with defined roles for renal medicine, palliative care and psychiatry — explain that unified communication across disciplines reduces escalating conflict',
+              'Document the meeting, capacity opinion, confidentiality limits and agreed plan carefully — explain that a threatened executive complaint makes a complete contemporaneous record essential',
+              'Offer staff support through the process — explain that clinicians managing a death after treatment withdrawal may experience moral distress that requires acknowledgment and support'
+            ]
+          }
         ],
         zeroMarkTraps: [
-          "Sharing psychiatric assessment details with the son because he is family",
-          "Excluding family entirely from care planning when Frances may benefit from support",
-          "Telling the renal team only 'she has capacity' without a practical communication and management plan",
+          'Sharing psychiatric assessment details with the son because he is family',
+          'Excluding the family completely when Frances still needs supported communication',
+          'Telling the renal team only that Frances has capacity without a practical care plan'
         ],
-        postExaminerNote: "Candidates who breach Frances's confidentiality or fail to provide practical guidance to the renal team will lose marks on both domains. The examiner expects a structured, role-defined response to a complex family and team communication scenario.",
+        postExaminerNote: 'Candidates who separated what Frances controls from what family can be told, validated the son\'s distress without colluding, assessed for elder coercion, communicated a practical clinical opinion to the renal team and documented carefully scored well. Candidates who disclosed confidential assessment details, deferred to family demands under complaint pressure, or provided no guidance to the renal team did not achieve the standard.'
       },
       {
-        stemNumber: "2.4",
-        vignette: "After the family meeting, the renal unit asks you to help develop a protocol for psychiatric consultation when patients request withdrawal from dialysis. Recent cases show inconsistent capacity documentation, late palliative care referral, and family meetings occurring only after conflict escalates.",
-        question: "Outline — list and justify the key components of a local protocol for psychiatric consultation in dialysis withdrawal decisions.\\nA list without case-specific justification will not be awarded marks.\\n(7 marks | 7 minutes)",
-        commandWord: "outline_justify",
+        stemNumber: '2.4',
+        vignette: 'After the family meeting, the renal unit asks you to help develop a protocol for psychiatric consultation when patients request withdrawal from dialysis. Recent cases show inconsistent capacity documentation, late palliative care referral, and family meetings occurring only after conflict escalates.',
+        question: 'Outline — list and justify the key components of a local protocol for psychiatric consultation in dialysis withdrawal decisions. A list without case-specific justification will not be awarded marks. (7 marks | 7 minutes)',
+        commandWord: 'outline_justify',
         marks: 7,
         timeMinutes: 7,
         stemSignals: [
-          "Three documented system failures are named in the stem — each must be addressed in the protocol; generic psychiatric consultation guidance will miss marks",
-          "The protocol is a quality-and-safety document, not just a clinical checklist — governance, audit and role clarity are required components",
-          "Palliative care integration must be early and mandatory — late referral is named as the problem to be solved",
+          'The protocol must directly address all three identified failures: inconsistent documentation, late palliative care and reactive family meetings',
+          'Governance stem — the answer must describe a system-level quality and safety response, not only individual clinical assessment steps',
+          'Psychiatry\'s role must be clearly bounded: capacity and mental disorder; renal medicine retains decision authority for dialysis'
         ],
         domains: [
           {
-            name: "Award up to 7 marks from the following scorable points",
+            name: 'Protocol components and governance rationale (7 marks)',
             marks: 7,
             keyPoints: [
-              "Define referral triggers for psychiatric consultation — because psychiatry should be involved consistently when there is capacity uncertainty, a mood disorder, family conflict, fluctuating cognition or a request inconsistent with prior expressed values; referral must not depend on individual clinical judgment",
-              "Mandate a standardised capacity documentation template — because inconsistent documentation was identified as the primary safety problem; the template must record each of the four capacity domains with case-specific evidence, not just a conclusion",
-              "Require structured assessment of remediable psychiatric and medical contributors — because depression, suicidality, delirium, pain and coercion can all be treated or modified and must be systematically assessed before a final capacity opinion is recorded",
-              "Mandate early palliative care involvement as part of the protocol — because palliative renal care and symptom management are part of the ethical obligation to patients who request withdrawal; late referral was identified as a system failure and must be corrected by protocol",
-              "Require structured family meetings to occur proactively — because waiting until conflict escalates before convening a family meeting worsens complaints, distress and clinical outcomes; the protocol should specify timing and composition of family meetings",
-              "Clarify decision-making roles explicitly — because psychiatry advises on capacity and mental disorder while renal medicine retains authority over renal treatment options; role confusion contributes to coercive pressure and inconsistent decision-making",
-              "Create escalation routes to ethics committee or legal advice — because cases with genuine disputes about capacity or family conflict require senior governance input, not ad hoc clinical override",
-              "Include documentation of values, advance care planning and consistency of prior wishes — because a decision consistent with longstanding values is more defensible and must be captured systematically",
-              "Provide education to renal staff about capacitous treatment refusal and moral distress — because clinician discomfort with death and perceived abandonment can drive unlawful paternalism if not addressed",
-              "Audit protocol adherence, documentation quality, palliative care referral timing and outcomes annually — because governance requires measurable indicators and the protocol must be reviewed to determine whether it is producing safer and more consistent outcomes",
-            ],
-          },
+              'Define referral triggers — because psychiatry should be involved when there is capacity uncertainty, significant mood disorder, family conflict or fluctuating cognition, not routinely for every withdrawal request',
+              'Use a standard capacity documentation template — because the identified problem is inconsistent documentation across cases and a structured template ensures completeness and medico-legal defensibility',
+              'Require systematic assessment of depression, suicidality, delirium, pain and coercion as part of each referral — because these are remediable contributors to withdrawal requests that must be considered before a final opinion',
+              'Mandate early palliative care involvement at the point of first withdrawal discussion — because withdrawal is not purely a psychiatric matter and late palliative care referral was identified as a specific system failure',
+              'Include structured family meetings as a required step, not a crisis response — because the identified problem is family meetings occurring only after conflict escalates, which is preventable with earlier structured communication',
+              'Clarify decision-making roles explicitly — because psychiatry advises on capacity and mental disorder while renal medicine retains clinical responsibility for dialysis decisions, and role confusion creates governance gaps',
+              'Create escalation routes to ethics consultation and legal advice — because unresolved disputes require senior governance, not ad hoc clinical coercion',
+              'Include advance care planning documentation as a required component — because prior values and wishes support defensible decisions and their absence drives late conflict',
+              'Provide staff education on capacitous refusal and legal obligations — because discomfort with a patient\'s death can lead to unlawful paternalism if not addressed',
+              'Audit cases annually for timeliness, documentation quality and outcomes — because governance requires measurable monitoring of whether the protocol is improving care'
+            ]
+          }
         ],
         zeroMarkTraps: [
-          "Designing a protocol that requires psychiatric clearance for all dialysis withdrawal decisions regardless of capacity",
-          "Omitting palliative care from the protocol",
-          "Producing a clinical checklist without audit or governance requirements",
+          'Designing a protocol that requires psychiatric clearance for all dialysis withdrawal requests',
+          'Omitting palliative care from the protocol',
+          'Providing no audit or monitoring mechanism'
         ],
-        postExaminerNote: "Candidates who write a protocol that is purely clinical and does not address documentation standards, palliative integration, role clarity and audit will miss the governance register this stem requires. This is a quality-and-safety question, not a clinical management question.",
-      },
-    ],
+        postExaminerNote: 'Candidates who addressed all three identified failures, defined referral triggers, bounded psychiatry\'s role clearly, included palliative care, required structured family meetings and added governance audit scored well. Candidates who created a protocol requiring routine psychiatric clearance for all withdrawals, omitted palliative care, or provided only clinical assessment steps without governance accountability did not achieve the standard.'
+      }
+    ]
   },
   {
-    id: "meq_024",
-    title: "Grace — Deaf Patient, IPV & Service Reform",
-    case: "Grace, 32 years old",
-    examSource: "Generated — Communication / Collaboration",
-    topic: "Deaf patient communication access, family violence risk assessment, confidentiality and service reform in ED",
-    primaryDomain: "Communication / Collaboration",
+    id: 'meq_024',
+    title: 'Grace — Deaf Patient, IPV and ED Service Reform',
+    case: 'Grace, age 32',
+    examSource: 'Generated — Communication / Collaboration',
+    topic: 'Deaf patient self-harm in ED; Auslan interpreter access, coercive control by partner, family involvement risks and service reform for Deaf patients in emergency mental health settings',
+    primaryDomain: 'Communication / Collaboration',
     totalMarks: 26,
     totalTimeMinutes: 26,
     stems: [
       {
-        stemNumber: "3.1",
-        vignette: "Grace is a 32-year-old Deaf woman brought to ED by ambulance after superficial cutting to her forearm during an argument with her partner. She communicates using Auslan. Her mother, who is hearing, begins interpreting for her and says, 'She does this for attention; just ask me.' The ED is busy and the registrar says a professional interpreter may take two hours. Grace is crying, refuses to write answers, and repeatedly signs something the staff do not understand.",
-        question: "Outline — list and justify your immediate approach to communication, assessment validity and safety.\\nA list without case-specific justification will not be awarded marks.\\n(8 marks | 8 minutes)",
-        commandWord: "outline_justify",
+        stemNumber: '3.1',
+        vignette: 'Grace is a 32-year-old Deaf woman brought to ED by ambulance after superficial cutting to her forearm during an argument with her partner. She communicates using Auslan. Her mother, who is hearing, begins interpreting for her and says: She does this for attention; just ask me. The ED is busy and the registrar says a professional interpreter may take two hours. Grace is crying, refuses to write answers, and repeatedly signs something the staff do not understand.',
+        question: 'Outline — list and justify your immediate approach to communication, assessment validity and safety. A list without case-specific justification will not be awarded marks. (8 marks | 8 minutes)',
+        commandWord: 'outline_justify',
         marks: 8,
         timeMinutes: 8,
         stemSignals: [
-          "The mother's dismissal of Grace as attention-seeking and her insertion as interpreter is the first clinical danger — candidates must identify and refuse this immediately",
-          "Interpreter delay is a patient safety issue, not an inconvenience — candidates must escalate this as a clinical risk, not accept it as a workflow constraint",
-          "Grace's refusal to write is not refusal to engage — candidates who treat it as such will miss the communication access point",
+          'Using the mother as interpreter is a direct clinical and ethical error — she is not neutral, has already disclosed bias and may suppress disclosure in a domestic violence assessment',
+          'Assessment validity is impossible without accessible communication — this is the central clinical principle of the stem',
+          'Grace refusing to write is not refusal to engage — it may signal her preferred communication mode or awareness that written English is not her primary language'
         ],
         domains: [
           {
-            name: "Award up to 8 marks from the following scorable points",
-            marks: 8,
+            name: 'Communication access and assessment validity (5 marks)',
+            marks: 5,
             keyPoints: [
-              "Arrange a professional Auslan interpreter urgently via video remote interpreting if in-person is unavailable — because a two-hour delay for a mental health and risk assessment involving self-harm is a patient safety failure, not an acceptable scheduling outcome",
-              "Do not use Grace's mother as interpreter under any circumstances — because family interpretation in a mental health and risk assessment breaches privacy, may distort or censor content, and prevents honest disclosure of interpersonal or family violence",
-              "Face Grace directly, maintain her visual attention and communicate with her as the primary participant — because speaking about Grace to others in her presence reinforces exclusion and may further distress and disengage her",
-              "Use interim non-language-dependent communication for immediate safety and comfort needs while waiting for the interpreter — because basic needs, wound care consent and waiting information can be conveyed through gesture and visual information while the interpreter connects",
-              "Delay definitive psychiatric and risk assessment conclusions until the interpreter is available — because Grace's refusal to write is a communication access problem, not a refusal to engage; a risk assessment conducted without accessible communication is clinically invalid",
-              "Assess Grace's interpreter preference and modality — because some Deaf individuals prefer in-person interpreting and video remote interpreting may have lighting, camera positioning or connectivity limitations that affect communication quality",
-              "Document all communication barriers encountered and every step taken to address them — because the validity of any risk assessment depends on the communication conditions under which it was conducted, and this documentation protects both Grace and the service",
-              "Provide immediate wound care and proportionate safety observation in the interim — because Grace has self-harmed and requires physical care and observation that does not depend on full psychiatric assessment being completed",
-              "Assess whether the mother's presence is safe and wanted by Grace — because the mother's minimising comment suggests a potentially invalidating dynamic; Grace may disclose differently with the mother removed",
-              "Escalate the interpreter wait time as a clinical safety risk to the ED senior — because patient flow expectations do not override communication rights in a mental health assessment, and the delay must be formally flagged, not quietly accommodated",
-            ],
+              'Arrange a professional Auslan interpreter urgently — because family interpretation is inadequate for a mental health and risk assessment and Grace\'s mother is not a neutral party in this clinical encounter',
+              'Do not rely on Grace\'s mother as interpreter — because her mother has already expressed a dismissive opinion about Grace\'s self-harm, which may distort interpretation, suppress disclosure and breach confidentiality',
+              'Use interim communication supports while awaiting the interpreter — because basic safety needs, pain and immediate concerns still require some communication even before full assessment is possible',
+              'Face Grace directly and maintain her as the primary participant throughout — because speaking about her to others while she is present reinforces exclusion and invalidates the therapeutic encounter',
+              'Delay non-urgent definitive psychiatric conclusions until interpretation is available — because Grace refusing to write answers is not refusal to engage; it may reflect her preferred mode or awareness that writing is not her primary language',
+              'Document communication barriers and every step taken to address them — because the validity of the risk assessment depends entirely on accessible communication and legal standards require documentation'
+            ]
           },
+          {
+            name: 'Safety and immediate response (3 marks)',
+            marks: 3,
+            keyPoints: [
+              'Provide wound care and proportionate observation while awaiting the interpreter — because Grace has self-harmed and requires basic safety monitoring even before full psychiatric assessment is possible',
+              'Assess whether Grace\'s mother\'s presence is safe and wanted by Grace — because family dynamics may directly affect what Grace is willing to disclose in a domestic violence context',
+              'Escalate interpreter delay as a patient safety issue, not a patient flow issue — because communication access in a mental health assessment is a clinical safety requirement, not an optional courtesy that can be deferred for bed flow',
+              'Avoid assuming cognitive impairment from communication difference — because Deafness does not imply incapacity; Grace\'s signing and distress indicate engagement rather than confusion'
+            ]
+          }
         ],
         zeroMarkTraps: [
-          "Using written questions as the primary or only communication solution",
-          "Allowing the mother to answer on Grace's behalf",
-          "Completing or documenting a formal risk assessment before accessible communication is established",
+          'Relying on written questions as the sole communication solution for a Deaf patient',
+          'Allowing the mother to continue interpreting during the clinical assessment',
+          'Completing and documenting a risk assessment as valid without accessible communication'
         ],
-        postExaminerNote: "Without accessible communication the assessment is not valid — this is the core principle this stem tests. Candidates who proceed to risk assessment through the mother or written notes alone have failed the communication access requirement.",
+        postExaminerNote: 'Candidates who refused to use the mother as interpreter, arranged a professional Auslan interpreter, treated interpreter delay as a safety issue, maintained Grace as the primary participant and documented validity concerns scored well. Candidates who used written questions as the main solution, allowed mother to interpret, or completed a risk assessment without accessible communication did not achieve the standard.'
       },
       {
-        stemNumber: "3.2",
-        vignette: "When an Auslan interpreter joins by video, Grace says her partner has been controlling her phone, threatening to tell people she is 'crazy,' and preventing her from attending Deaf community events. She says she cut herself to 'make everything stop' but denies current intent to die. She does not want her mother told about the partner violence because her mother will confront him and 'make it worse.'",
-        question: "Discuss — list and debate the competing duties around confidentiality, family involvement, family violence risk and discharge planning. You must name the tensions explicitly and take a defensible consultant position.\\n(10 marks | 10 minutes)",
-        commandWord: "debate",
+        stemNumber: '3.2',
+        vignette: 'When an Auslan interpreter joins by video, Grace says her partner has been controlling her phone, threatening to tell people she is crazy, and preventing her from attending Deaf community events. She says she cut herself to make everything stop but denies current intent to die. She does not want her mother told about the partner violence because her mother will confront him and make it worse.',
+        question: 'Discuss — list and debate the competing duties around confidentiality, family involvement, family violence risk and discharge planning. You must name the tensions explicitly and take a defensible consultant position. (10 marks | 10 minutes)',
+        commandWord: 'debate',
         marks: 10,
         timeMinutes: 10,
         stemSignals: [
-          "Grace's phone is controlled by the abuser — standard crisis line discharge planning is unsafe and must be adapted; candidates who recommend generic crisis numbers without addressing phone control will miss a key mark",
-          "Denial of current suicidal intent does not resolve the risk — coercive control is an ongoing danger that requires a safety plan, not just a risk rating",
-          "Grace's explicit request not to tell her mother must be respected unless there is imminent serious risk — candidates who disclose to the mother 'for her safety' without applying the confidentiality test will lose marks",
+          'This is a 10-mark discuss question — at least three tensions must be named explicitly and a defensible position stated',
+          'Grace has made an informed request for confidentiality — this must be respected unless imminent serious risk justifies override',
+          'The partner\'s behaviour is coercive control — controlling phone access, isolation and stigma threats constitute family violence, not relationship conflict'
         ],
         domains: [
           {
-            name: "Award up to 10 marks from the following scorable points",
+            name: 'Competing tensions, risk analysis and defensible position (10 marks)',
             marks: 10,
             keyPoints: [
-              "There is tension between Grace's right to confidentiality and her mother's wish to be involved — Grace's explicit request not to disclose the partner violence to her mother must be respected unless there is imminent serious risk that cannot be managed by less intrusive means",
-              "There is tension between respecting Grace's autonomy and protecting her from ongoing harm — Grace should be supported to make her own safety plan; taking control away from her replicates the coercive dynamic she is trying to escape",
-              "There is tension between discharge and foreseeable ongoing risk — denial of current suicidal intent does not resolve the risk created by an ongoing coercive control relationship; discharge planning must address the safety context, not only the risk rating",
-              "The partner's behaviour constitutes coercive control — controlling her phone, threatening stigma, isolating her from the Deaf community and monitoring her movements are established patterns of family violence that carry risk of escalation",
-              "A defensible consultant position is to respect Grace's confidentiality and support her to develop a safety plan she controls — because autonomy-respecting safety planning is more effective than paternalistic disclosure in family violence situations",
-              "Standard crisis hotline referral is unsafe in this context — because Grace's phone is controlled by her partner; the safety plan must include alternative communication options accessible to Deaf people and not dependent on a phone she cannot use privately",
-              "Identify Deaf-accessible family violence services and provide information directly to Grace — because mainstream crisis services may not be accessible to Deaf individuals; Deaf-specific or Deaf-aware services must be identified as part of discharge planning",
-              "Assess Grace's housing safety before discharge — because returning to a home with an abusive partner who controls her communications and monitors her movements constitutes foreseeable harm that must be addressed in the discharge plan",
-              "Explore Grace's Deaf community supports as a safety resource — because her partner's isolation of her from the Deaf community is a coercive tactic; reconnecting with trusted Deaf community members or organisations may be part of her safety network",
-              "Plan a follow-up appointment with a service that can provide Auslan-accessible mental health support — because Grace's self-harm and family violence exposure require ongoing support, not only an ED discharge plan",
-            ],
-          },
+              'There is tension between family involvement and Grace\'s confidentiality — Grace has explicitly requested that her mother not be told about the partner violence, and this preference should be respected unless imminent serious harm justifies override',
+              'There is tension between autonomy and protection from foreseeable harm — Grace should be supported to make her own safety plan rather than having others take control, as coercive family intervention may increase rather than decrease risk',
+              'There is tension between discharge and foreseeable harm — denial of current suicidal intent does not mean discharge is safe when Grace is returning to an environment of coercive control',
+              'The partner\'s behaviour constitutes family violence — controlling her phone, isolating her from the Deaf community and threatening to stigmatise her mental health are coercive control, not relationship conflict',
+              'Accessible safety planning is essential — because phone control may make standard crisis lines, SMS reminders and appointment communications unsafe or inaccessible for Grace',
+              'Risk assessment must encompass self-harm, suicide, escalation of partner violence, stalking and lethality — because the cutting occurred in a relational crisis context with known coercive dynamics',
+              'Grace\'s mother should not become the default support person — because Grace has specifically identified that her mother\'s involvement would escalate the risk, and this clinical judgement must be respected',
+              'Specialist family violence referral should be offered with accessible communication channels — because psychiatric follow-up alone does not address coercive control and Grace needs specialist safety support',
+              'Deaf community connection is protective and should be actively supported — because isolation from Deaf peers is part of the abuse pattern and restoration of safe community access is a clinical and safety goal',
+              'Confidentiality limits should be explained clearly to Grace — because she needs to understand in what circumstances clinicians might disclose information, and she deserves informed transparency about this',
+              'A defensible consultant position is collaborative safety planning without forced family disclosure — because disclosure to her mother against Grace\'s wishes may directly increase risk',
+              'Discharge requires accessible follow-up and safe communication methods — because standard appointment reminders may be inaccessible given partner phone control',
+              'Consider admission or short-stay if a safe discharge plan cannot be established — because environmental risk may remain high despite Grace denying current intent to die'
+            ]
+          }
         ],
         zeroMarkTraps: [
-          "Disclosing the partner violence to Grace's mother because Grace is at risk",
-          "Providing a crisis hotline number without addressing that her phone is controlled",
-          "Discharging Grace without addressing the ongoing family violence and housing safety",
+          'Telling Grace\'s mother because family should know',
+          'Treating the self-harm as attention-seeking as the mother described',
+          'Discharging with a generic crisis hotline number Grace cannot safely use because of phone control'
         ],
-        postExaminerNote: "This is a 10-mark discuss stem — at least three named tensions with case-specific debate and a clearly stated defensible position are required. Candidates who reach for the mother as the default support despite Grace's explicit objection have failed the confidentiality and autonomy test.",
+        postExaminerNote: 'Candidates who named at least three tensions explicitly, recognised coercive control as family violence, respected confidentiality, provided accessible safety planning, offered specialist family violence referral and stated a defensible position scored well. Candidates who disclosed to the mother, used the mother\'s characterisation of attention-seeking, or discharged without an accessible safety plan did not achieve the standard.'
       },
       {
-        stemNumber: "3.3",
-        vignette: "The registrar later says, 'This took too long because of the interpreter issue.' Nursing staff say they often rely on family members for Deaf patients because interpreters delay patient flow. Grace makes a complaint that staff spoke about her as if she was not present and did not explain wound care or follow-up in an accessible way.",
-        question: "Describe — list and explain your consultant response to the complaint and the service changes needed to improve care for Deaf patients in ED.\\nA list without explanation will not be awarded marks.\\n(8 marks | 8 minutes)",
-        commandWord: "describe_explain",
+        stemNumber: '3.3',
+        vignette: 'The registrar later says: This took too long because of the interpreter issue. Nursing staff say they often rely on family members for Deaf patients because interpreters delay patient flow. Grace makes a complaint that staff spoke about her as if she was not present and did not explain wound care or follow-up in an accessible way.',
+        question: 'Describe — list and explain your consultant response to the complaint and the service changes needed to improve care for Deaf patients in ED. A list without explanation will not be awarded marks. (8 marks | 8 minutes)',
+        commandWord: 'describe_explain',
         marks: 8,
         timeMinutes: 8,
         stemSignals: [
-          "Grace's complaint is a clinical safety event, not a customer service complaint — the examiner expects governance language, not an apology alone",
-          "The registrar's framing of the interpreter as a flow problem reveals a training and culture issue — this must be named and addressed, not defended",
-          "Wound care and follow-up were not accessible — this is a consent and safety issue, not only a communication preference",
+          'The registrar framing interpreter access as a delay is the cultural and governance problem that must be directly corrected',
+          'Grace\'s complaint identifies three specific failures: being spoken about rather than to, wound care not explained, follow-up not accessible',
+          'Service reform must go beyond individual feedback to structural change — this is a governance stem'
         ],
         domains: [
           {
-            name: "Award up to 8 marks from the following scorable points",
-            marks: 8,
+            name: 'Complaint response (4 marks)',
+            marks: 4,
             keyPoints: [
-              "Acknowledge and apologise to Grace for the communication failures — explain that Grace experienced being spoken about rather than spoken to, and that this constitutes a failure of patient-centred care requiring genuine acknowledgment rather than procedural response",
-              "Review whether informed consent for wound care and discharge instructions was legally valid — explain that wound care performed without accessible explanation of risks, procedure and follow-up does not meet consent standards, and this must be assessed and documented",
-              "Offer Grace a follow-up explanation of wound care and follow-up instructions in Auslan — explain that remediation of the communication failure requires providing the missed information in an accessible format, not assuming she received adequate information through inadequate channels",
-              "Treat the complaint as a clinical safety event and initiate a formal incident review — explain that systemic reliance on family interpreters in mental health assessments constitutes a recurring patient safety risk requiring root cause analysis, not only individual feedback",
-              "Provide direct professional feedback to the registrar on communication rights and assessment validity — explain that the interpreter is not a delay to patient flow but a prerequisite for a valid assessment; the registrar's framing reflects a misconception that must be corrected formally",
-              "Develop an ED protocol for Deaf and hard-of-hearing patients mandating professional interpreters for mental health, consent and risk assessment — explain that ad hoc reliance on family members is unsafe and inequitable; a protocol removes the decision from individual clinical judgment",
-              "Train ED nursing and medical staff in Deaf cultural safety — explain that speaking about Grace in her presence, using family as interpreters and framing interpreter access as a flow problem reflect attitudinal and knowledge deficits that training must address",
-              "Create visual and Auslan-accessible discharge information resources — explain that written English discharge letters may not meet communication needs for Deaf patients whose primary language is Auslan; accessible resources must be developed and made routinely available",
-              "Audit interpreter access times and clinical outcomes for Deaf patients — explain that governance requires data; if delays are recurring, the service cannot demonstrate whether Deaf patients are receiving equitable and safe care",
-              "Include Deaf consumer input in the design of the ED Deaf-access pathway — explain that service redesign without the perspective of Deaf people who have used emergency services will produce solutions that address staff convenience rather than patient safety",
-            ],
+              'Acknowledge and apologise for the specific communication failures Grace experienced — explain that she was spoken about rather than included, which is a dignity and rights failure regardless of ED busyness',
+              'Review whether informed consent and wound care instructions were valid — explain that if Grace did not receive accessible information about wound care and follow-up, these obligations remain unfulfilled and need to be remedied',
+              'Offer Grace a follow-up explanation and care plan communicated via an Auslan interpreter — explain that remediation must occur in her accessible language, not in written English as a substitute',
+              'Document the complaint, review findings and improvement actions — explain that Grace\'s complaint is a clinical governance input, not only an interpersonal grievance, and documentation supports organisational learning'
+            ]
           },
+          {
+            name: 'Service improvement and governance (4 marks)',
+            marks: 4,
+            keyPoints: [
+              'Create an ED protocol requiring professional Auslan interpreters for mental health assessments, consent processes and risk assessments — explain that reliance on family interpreters is clinically and legally unsafe and must be removed from standard practice',
+              'Train ED and nursing staff in Deaf cultural safety — explain that the registrar and nursing staff framed interpreter access as a patient flow problem rather than a clinical safety requirement, reflecting a cultural safety deficit requiring education',
+              'Create visual and accessible information resources for wound care, rights and follow-up for Deaf patients — explain that standard written ED discharge instructions may not be accessible to all Deaf patients as a primary communication format',
+              'Audit interpreter access times and document outcomes where delays occurred — explain that governance requires the service to know whether delays are recurring and whether they correlate with adverse outcomes',
+              'Escalate interpreter delays to clinical leadership as a patient safety issue — explain that delays attributed to patient flow must be recategorised as clinical risk requiring resourcing and process solutions',
+              'Include Deaf consumer input in pathway redesign — explain that service redesign without lived experience from Deaf consumers will miss practical access barriers that are invisible to hearing clinicians',
+              'Provide structured feedback and supervision to the registrar — explain that the learning point is about professional obligation to valid assessment and communication rights, not about efficiency'
+            ]
+          }
         ],
         zeroMarkTraps: [
-          "Defending the service on the grounds that the ED was busy",
-          "Attributing the problem to the interpreter service rather than to the service's planning and culture",
-          "Providing no systemic action in response to a complaint that reflects a recurring pattern",
+          'Defending the service on the grounds that the ED was busy',
+          'Attributing the failures to interpreter availability rather than service policy',
+          'Taking no structural service action after the complaint'
         ],
-        postExaminerNote: "The complaint must be treated as a clinical governance event. Candidates who respond only at the interpersonal level without recommending protocol, training, audit and consumer input have not demonstrated the systems leadership this stem requires.",
-      },
-    ],
+        postExaminerNote: 'Candidates who acknowledged the specific failures, offered accessible remediation to Grace, corrected the patient-flow framing, created a structural interpreter protocol, trained staff and escalated interpreter access as a safety issue scored well. Candidates who defended the service, provided only individual feedback to the registrar without systemic change, or failed to address all three specific complaints did not achieve the standard.'
+      }
+    ]
   },
   {
-    id: "meq_025",
-    title: "Ethan — ARFID, Medical Risk & Team Fidelity",
-    case: "Ethan, 9 years old",
-    examSource: "Generated — Formulation / Diagnostic Reasoning",
-    topic: "ARFID versus anorexia nervosa, paediatric feeding refusal, parental conflict and ward treatment consistency",
-    primaryDomain: "Formulation / Diagnostic Reasoning",
+    id: 'meq_025',
+    title: 'Ethan — ARFID, Medical Risk and Paediatric Ward Fidelity',
+    case: 'Ethan, age 9',
+    examSource: 'Generated — Management / Disposition',
+    topic: 'ARFID following choking incident in a 9-year-old admitted with bradycardia and dehydration; tests diagnostic differentiation from anorexia nervosa, refeeding risk, parental disagreement and paediatric ward treatment fidelity',
+    primaryDomain: 'Management / Disposition',
     totalMarks: 32,
     totalTimeMinutes: 32,
     stems: [
       {
-        stemNumber: "4.1",
-        vignette: "Ethan is a 9-year-old boy admitted to the paediatric ward with weight loss, dehydration and bradycardia. Three months ago he choked on a piece of meat at a family barbecue. Since then he has progressively restricted food, first avoiding meat, then solids, then most fluids. He says food will 'get stuck and kill me.' His parents have been sleeping beside him and offering preferred drinks through the night. The paediatric team asks whether this is anorexia nervosa and whether an SSRI should be started.",
-        question: "Outline — list and justify your diagnostic formulation and immediate treatment priorities.\\nA list without case-specific justification will not be awarded marks.\\n(8 marks | 8 minutes)",
-        commandWord: "outline_justify",
+        stemNumber: '4.1',
+        vignette: 'Ethan is a 9-year-old boy admitted to the paediatric ward with weight loss, dehydration and bradycardia. Three months ago he choked on a piece of meat at a family barbecue. Since then he has progressively restricted food, first avoiding meat, then solids, then most fluids. He says food will get stuck and kill me. His parents have been sleeping beside him and offering preferred drinks through the night. The paediatric team asks whether this is anorexia nervosa and whether an SSRI should be started.',
+        question: 'Outline — list and justify your diagnostic formulation and immediate treatment priorities. A list without case-specific justification will not be awarded marks. (8 marks | 8 minutes)',
+        commandWord: 'outline_justify',
         marks: 8,
         timeMinutes: 8,
         stemSignals: [
-          "The paediatric team's question about anorexia nervosa is the diagnostic trap — the timeline, trigger and cognitive content are distinctly ARFID, and candidates who diagnose AN will lose the formulation marks",
-          "Bradycardia signals serious medical risk — candidates who begin with psychology before medical stabilisation have their priorities reversed",
-          "Parental accommodation through the night is a maintaining factor that must be named — candidates who formulate only the individual pathology without the family system will miss marks",
+          'ARFID versus anorexia nervosa is the direct diagnostic question — the presence of a traumatic triggering event and fear of aversive consequences rather than body image concerns distinguishes them',
+          'SSRI is not first-line acute treatment for ARFID — the team\'s suggestion is a direct examiner trap requiring correction',
+          'Bradycardia is a medical emergency requiring immediate response regardless of diagnostic formulation'
         ],
         domains: [
           {
-            name: "Award up to 8 marks from the following scorable points",
-            marks: 8,
+            name: 'Diagnostic formulation (4 marks)',
+            marks: 4,
             keyPoints: [
-              "ARFID (Avoidant Restrictive Food Intake Disorder) is the leading diagnosis — because restriction followed a specific choking incident, is driven by fear of aversive consequences rather than body weight or shape concerns, and the cognitive content 'food will get stuck and kill me' is characteristically ARFID rather than anorexic",
-              "Anorexia nervosa is unlikely at this stage — because there is no described overconcern with weight, shape or body image, and the restriction escalated in response to a traumatic food experience rather than through dietary control or weight-loss intent",
-              "Specific phobia of choking or food bolus obstruction should be included in the formulation — because the central fear is of a specific catastrophic consequence rather than a generalised food aversion or sensory sensitivity",
-              "Medical dysphagia must be excluded — because the choking narrative does not rule out structural oesophageal pathology, and a physical cause for swallowing difficulty must be investigated before the problem is fully attributed to psychology",
-              "Parental accommodation is maintaining symptom severity — because parents sleeping beside Ethan and offering preferred drinks through the night reduces his exposure to feared foods and reinforces avoidance, which is the central maintaining mechanism in ARFID",
-              "Medical stabilisation is the immediate priority — because bradycardia, weight loss and dehydration in a 9-year-old indicate physical danger that requires urgent paediatric management; psychological treatment cannot begin safely until medical risk is reduced",
-              "Assess refeeding risk and electrolytes before beginning nutritional rehabilitation — because malnourished children can develop dangerous electrolyte shifts during refeeding; this must be assessed and monitored by the paediatric team",
-              "An SSRI should not be initiated as the immediate treatment — because the first-line acute priority is medical stabilisation and exposure-based psychological intervention; there is no indication for SSRI in acute ARFID-related medical deterioration",
-              "Begin parent psychoeducation about accommodation and its role in maintaining restriction — because reducing parental accommodation is essential to recovery and parents cannot begin reducing it until they understand why it is harmful",
-              "Plan early child mental health involvement for exposure-based therapy — because ARFID requires a structured, evidence-based psychological approach involving graduated food exposure, fear hierarchy development and family involvement from early in the admission",
-            ],
+              'ARFID is the leading diagnosis — because food restriction followed a specific choking event and is driven by fear of aversive consequences rather than fear of weight gain or body shape concerns',
+              'Anorexia nervosa is not supported by the history as presented — because there is no weight or shape overvaluation described and the restriction has a clear traumatic trigger with identifiable fear content',
+              'Specific choking phobia or food-related PTSD should be considered — because the core belief is that food will get stuck and cause death, consistent with a conditioned fear response to the choking experience',
+              'Organic dysphagia must be excluded — because the choking narrative does not rule out structural oesophageal pathology, and physical causes of swallowing difficulty require active investigation',
+              'Parental accommodation is a maintaining factor — because parents offering preferred drinks overnight and sleeping beside Ethan reinforces avoidance rather than supporting graduated approach to feared foods'
+            ]
           },
+          {
+            name: 'Immediate treatment priorities (4 marks)',
+            marks: 4,
+            keyPoints: [
+              'Medical stabilisation is the immediate priority — because weight loss, dehydration and bradycardia indicate serious physical risk requiring urgent paediatric-led management',
+              'Assess refeeding risk and monitor electrolytes — because nutritional rehabilitation may cause dangerous electrolyte shifts and must be managed with medical oversight from the outset',
+              'Use a paediatric-led nutrition plan — because feeding must be medically safe, consistent and not left to parental negotiation until a structured evidence-based plan is in place',
+              'Explain that SSRI is not indicated as first-line acute treatment — because the immediate priority is medical stabilisation, nutrition and behavioural exposure; pharmacotherapy is not the primary intervention for ARFID',
+              'Begin psychoeducation for parents — because reducing accommodation and shifting from rescue to supported graded approach is essential to recovery from ARFID',
+              'Arrange early child mental health involvement — because exposure-based and family-supported treatment requires specialist coordination alongside medical care'
+            ]
+          }
         ],
         zeroMarkTraps: [
-          "Diagnosing anorexia nervosa solely because Ethan has lost weight without addressing the choking trigger and absent body image pathology",
-          "Starting an SSRI as the main or first intervention",
-          "Proceeding to psychological treatment before addressing bradycardia and medical risk",
+          'Diagnosing anorexia nervosa solely because Ethan has lost weight without considering the trauma trigger and fear content',
+          'Starting SSRI as the primary or most urgent intervention',
+          'Failing to address bradycardia as an immediate medical emergency'
         ],
-        postExaminerNote: "The distinction between ARFID and anorexia nervosa is the core diagnostic test in this stem. Candidates who diagnose anorexia without addressing the absence of body image pathology and the presence of a clear traumatic food trigger have not demonstrated diagnostic reasoning at consultant level.",
+        postExaminerNote: 'Candidates who distinguished ARFID from anorexia nervosa on the basis of trigger and fear content, refused the SSRI recommendation, prioritised medical stabilisation, named parental accommodation as a maintaining factor and outlined an exposure-based treatment approach scored well. Candidates who diagnosed anorexia nervosa, recommended SSRI as the priority intervention, or did not address the medical urgency of bradycardia did not achieve the standard.'
       },
       {
-        stemNumber: "4.2",
-        vignette: "Ethan becomes distressed when nasogastric feeding is discussed and hides under the bed. His father says forcing a tube will traumatise him and threatens to take him home. His mother says, 'We have tried being gentle and he is getting sicker.' The paediatric registrar says Ethan's electrolytes are borderline and feeding cannot wait for weeks of therapy.",
-        question: "Discuss — list and debate how you would balance medical risk, psychological trauma, parental disagreement and least restrictive care. You must name the tensions explicitly and take a defensible consultant position.\\n(9 marks | 9 minutes)",
-        commandWord: "debate",
+        stemNumber: '4.2',
+        vignette: 'Ethan becomes distressed when nasogastric feeding is discussed and hides under the bed. His father says forcing a tube will traumatise him and threatens to take him home. His mother says: We have tried being gentle and he is getting sicker. The paediatric registrar says Ethan\'s electrolytes are borderline and feeding cannot wait for weeks of therapy.',
+        question: 'Discuss — list and debate how you would balance medical risk, psychological trauma, parental disagreement and least restrictive care. You must name the tensions explicitly and take a defensible consultant position. (9 marks | 9 minutes)',
+        commandWord: 'debate',
         marks: 9,
         timeMinutes: 9,
         stemSignals: [
-          "The father's threat to take Ethan home is a legal and child safety issue — candidates must identify this as requiring assessment of parental authority limits in the context of serious medical risk",
-          "Both parents have a legitimate position — the examiner expects the tension to be genuinely debated, not one parent's view endorsed over the other",
-          "Least restrictive does not mean ineffective — this principle must appear or be demonstrated in the answer",
+          'Least restrictive does not mean medically ineffective — this is the central principle and must appear in the answer',
+          'Parental disagreement must be addressed through alignment, not by endorsing one parent\'s position',
+          'Legal authority for medically necessary treatment over parental objection must be considered if the father follows through on threatening to remove Ethan'
         ],
         domains: [
           {
-            name: "Award up to 9 marks from the following scorable points",
+            name: 'Competing tensions and defensible position (9 marks)',
             marks: 9,
             keyPoints: [
-              "There is tension between medical urgency and psychological trauma — borderline electrolytes and bradycardia may be life-threatening if untreated, but involuntary nasogastric feeding is a traumatic procedure that may worsen fear of invasive medical interventions and damage therapeutic trust",
-              "There is tension between least restrictive care and clinically adequate treatment — the least restrictive option must still be medically safe; choosing psychological comfort over medical necessity when the threshold for physical danger has been reached is not ethically defensible",
-              "There is tension between the parents' opposing positions — the father's priority of avoiding psychological harm and the mother's priority of preventing medical deterioration are both legitimate concerns that reflect genuine clinical uncertainty about the right balance",
-              "A defensible consultant position is to implement the least coercive medically adequate feeding plan — because medical risk cannot be ignored when it reaches the threshold of bradycardia and electrolyte instability, but coercive feeding should be planned, humane and time-limited rather than reactive",
-              "Explain the rationale to Ethan at a developmentally appropriate level — because predictability and a sense of control within the feeding plan reduce procedural trauma; a child who understands what is happening and why copes better than one who experiences sudden unexplained intervention",
-              "Offer Ethan graded choices within firm non-negotiable medical boundaries — because he can choose flavour, temperature, timing and coping supports without being offered a choice about whether medically necessary nutrition occurs",
-              "Use psychological and behavioural support around every feeding interaction — because nasogastric feeding implemented without formulation and psychological support is more traumatic and less effective than feeding embedded in a therapeutic plan",
-              "Engage both parents jointly in a unified plan to prevent parental splitting — because a child with ARFID whose parents give conflicting signals about treatment will use the split to maintain avoidance, and parental disagreement will worsen distress at mealtimes",
-              "Assess legal authority if parents refuse medically necessary care — because in Australian jurisdictions, parental refusal of necessary medical treatment for a child whose life is at risk can be overridden by the treating team or a court, and this pathway must be known and ready if necessary",
-              "Review the level of restriction daily and step it down as soon as medically safe — because any element of compulsory or restrictive feeding must be minimised in duration; ongoing restriction beyond clinical necessity is ethically indefensible",
-              "Document medical risk level, alternatives considered, clinical rationale and roles of each team member — because compulsory or invasive feeding decisions in children are ethically and legally high-stakes and require contemporaneous documentation",
-            ],
-          },
+              'There is tension between medical urgency and psychological trauma — nasogastric feeding may distress Ethan, but borderline electrolytes and bradycardia are life-threatening if unaddressed and cannot be deferred indefinitely',
+              'There is tension between least restrictive care and treatment adequacy — the least restrictive option must still provide medically safe nutrition; avoiding all restriction at the cost of medical safety is not defensible',
+              'There is tension between parental disagreement — the father prioritises trauma avoidance while the mother recognises that avoidance is worsening Ethan\'s medical state, and both parents need to be heard and aligned',
+              'A defensible position is to use the least coercive medically safe feeding plan available — because medical risk cannot be ignored but coercive feeding without formulation and preparation is more traumatic',
+              'Explain the clinical rationale to Ethan developmentally — because predictability and understanding reduce procedural trauma; he should know what will happen and why in language a 9-year-old can process',
+              'Offer graded choices within firm clinical boundaries — because Ethan can have some control over flavour, timing, coping support or who is present, but the requirement for adequate nutrition is not negotiable',
+              'Use psychological and behavioural support around feeding — because preparation, distraction and therapeutic presence reduce procedural trauma and build towards voluntary engagement',
+              'If NG feeding is necessary, plan it as a contained and humane procedure — because sudden restraint after prolonged negotiation is more traumatic than a planned, explained and prepared intervention',
+              'Engage both parents in a unified plan before any restrictive feeding — because parental splitting directly reinforces Ethan\'s avoidance and undermines any treatment approach',
+              'Assess legal authority if the father follows through on threatening to remove Ethan — because parental refusal of medically necessary treatment for a child with serious medical risk may require child protection intervention',
+              'Review daily and step down to less restrictive options as soon as medically safe — because ongoing compulsory feeding must be minimised and autonomy progressively restored',
+              'Document the risk, alternatives considered and clinical rationale — because decisions involving restricted or compulsory feeding of a child are ethically and legally high-stakes'
+            ]
+          }
         ],
         zeroMarkTraps: [
-          "Refusing nasogastric feeding under all circumstances because of trauma risk, without acknowledging the threshold of medical danger",
-          "Ordering immediate restraint and tube insertion without psychological preparation or parental engagement",
-          "Siding with one parent's position without a plan for parental alignment",
+          'Refusing all nasogastric feeding on the grounds of psychological trauma without acknowledging life-threatening medical risk',
+          'Proceeding immediately to restraint and tube insertion without exhausting less restrictive options',
+          'Endorsing one parent\'s position without a shared family plan'
         ],
-        postExaminerNote: "The principle 'least restrictive does not mean ineffective' should appear in or underlie the answer. Candidates who prioritise psychological comfort above life-threatening medical risk have failed to demonstrate the clinical hierarchy required.",
+        postExaminerNote: 'Candidates who named the medical-trauma tension explicitly, stated a defensible least-restrictive-but-medically-adequate position, offered parental alignment, used developmentally appropriate explanation, addressed legal authority and committed to daily review scored well. Candidates who refused all restrictive feeding regardless of medical risk, or who proceeded to restraint without less restrictive attempts, did not achieve the standard.'
       },
       {
-        stemNumber: "4.3",
-        vignette: "After medical stabilisation, Ethan accepts small amounts of yoghurt and soup but refuses school attendance because he fears classmates will watch him eat. His parents disagree: his father wants home schooling until he is 'fully better,' while his mother wants a rapid return to normal routines. The school asks for written advice about lunchtime supervision.",
-        question: "Describe — list and explain a medium-term treatment plan for Ethan, including family, school and psychological interventions.\\nA list without explanation will not be awarded marks.\\n(8 marks | 8 minutes)",
-        commandWord: "describe_explain",
+        stemNumber: '4.3',
+        vignette: 'After medical stabilisation, Ethan accepts small amounts of yoghurt and soup but refuses school attendance because he fears classmates will watch him eat. His parents disagree: his father wants home schooling until he is fully better, while his mother wants a rapid return to normal routines. The school asks for written advice about lunchtime supervision.',
+        question: 'Describe — list and explain a medium-term treatment plan for Ethan, including family, school and psychological interventions. A list without explanation will not be awarded marks. (8 marks | 8 minutes)',
+        commandWord: 'describe_explain',
         marks: 8,
         timeMinutes: 8,
         stemSignals: [
-          "School avoidance is a new extension of the same ARFID avoidance pattern — candidates who treat it as a separate problem rather than the same maintaining mechanism will miss the formulation link",
-          "The father's home-schooling preference will worsen avoidance — this must be named and countered clinically with the ARFID formulation",
-          "The school's request for written advice requires a practical functional response — generic mental health letters do not serve the school's operational need",
+          'School avoidance is an extension of the avoidance maintaining mechanism and must be treated as part of the ARFID plan, not as a separate problem',
+          'Home schooling until fully better reinforces avoidance and delays recovery — this must be addressed directly',
+          'School advice should be functional and consented, not a disclosure of private clinical content'
         ],
         domains: [
           {
-            name: "Award up to 8 marks from the following scorable points",
-            marks: 8,
+            name: 'Psychological treatment and nutritional monitoring (4 marks)',
+            marks: 4,
             keyPoints: [
-              "Use exposure-based therapy as the primary psychological intervention — explain that ARFID is maintained by avoidance of feared textures, foods and eating-related situations; graded exposure to feared foods in a supported hierarchy targets the maintaining mechanism directly",
-              "Apply family-based principles with both parents supporting the nutrition plan — explain that parental consistency in expecting and supporting food intake, rather than accommodating avoidance, is essential to recovery and must replace the current pattern of overnight preferred-drink offering and ad hoc negotiation",
-              "Establish a structured meal plan with consistent expectations — explain that predictable mealtimes, portion expectations and permitted choices reduce negotiation, decrease anticipatory anxiety and create the routine needed for exposure to be effective",
-              "Reduce overnight accommodation of preferred drinks — explain that parents offering preferred drinks through the night reinforces avoidance, disrupts sleep and prevents Ethan from experiencing manageable hunger, which is required for treatment progress",
-              "Align both parents around one plan to prevent splitting — explain that the father's avoidance instinct and the mother's urgency reflect understandable but opposing responses; the treatment team must help both parents understand why graduated exposure with support is safer than either extreme",
-              "Plan graded school reintegration rather than home schooling — explain that home schooling until Ethan is fully better will extend avoidance indefinitely, because school-based eating situations must be practised rather than circumvented for recovery to generalise",
-              "Develop a lunchtime support plan for the school with practical functional recommendations — explain that supervision should be structured to support Ethan's exposure without drawing attention to him in ways that increase self-consciousness; written advice should give specific strategies rather than generic mental health language",
-              "Communicate with the school using Ethan's consent and limited clinically relevant information — explain that the school needs functional guidance about triggers, supported eating strategies and escalation plans without receiving private psychiatric or family details",
-              "Monitor growth, vital signs and laboratory results throughout psychological recovery — explain that nutritional recovery must parallel psychological improvement; premature discharge from medical monitoring risks physical relapse during psychological treatment",
-              "Plan relapse prevention around high-risk triggers — explain that choking cues such as illness, new food textures, peer comments about eating and stressful social situations may re-trigger restriction; a relapse plan gives Ethan, parents and the school a clear response pathway",
-            ],
+              'Use exposure-based treatment targeting choking fear and avoided food textures — explain that graded exposure to feared foods directly addresses the maintaining mechanism and is the core psychological treatment for ARFID in this age group',
+              'Use family-based treatment principles — explain that parents must understand and consistently implement the approach at home, as parental accommodation of avoidance drives maintenance of the disorder',
+              'Set a structured meal plan with predictable expectations — explain that consistent expectations across contexts reduce negotiation cycles and help Ethan develop tolerance for eating without rescue',
+              'Reduce parental overnight accommodation of preferred drinks — explain that this reinforces the message that eating is dangerous and disrupts the progress made during day treatment',
+              'Monitor nutritional recovery through growth, vitals and bloods — explain that psychological treatment must be matched by objective medical monitoring to detect early relapse'
+            ]
           },
+          {
+            name: 'Family alignment and school reintegration (4 marks)',
+            marks: 4,
+            keyPoints: [
+              'Align both parents around one shared treatment plan — explain that the father\'s preference for home schooling and the mother\'s push for rapid return represent opposite ends of an avoidance-versus-exposure axis; both need to understand the shared recovery goal',
+              'Refuse home schooling as the primary plan — explain that avoiding school until fully recovered extends avoidance, delays normal development and removes the contextual exposure that supports generalisation',
+              'Plan graded school return beginning with partial days and low-demand eating contexts — explain that school avoidance is an extension of the eating fear and responds to the same graduated approach as food exposure',
+              'Develop a lunchtime support plan with the school — explain that supervision should reduce anxiety and provide a low-demand eating context, not surveillance or enforcement of meal completion by teachers',
+              'Communicate with the school using functional recommendations and consented limited clinical information — explain that the school needs practical guidance rather than private clinical details, and what is shared requires parental consent',
+              'Plan relapse prevention including identification of triggers — explain that future choking experiences, illness, peer comments or stressful events may trigger renewed restriction and families and school need an early warning and response plan'
+            ]
+          }
         ],
         zeroMarkTraps: [
-          "Recommending home schooling until Ethan is fully recovered",
-          "Providing psychological therapy without ongoing nutritional and medical monitoring",
-          "Writing a generic school letter with only 'watch him eat at lunch' as instruction",
+          'Supporting home schooling until Ethan is fully recovered',
+          'Providing psychological therapy without nutritional monitoring',
+          'Advising the school to watch Ethan eat without a structured support plan'
         ],
-        postExaminerNote: "Every intervention should be linked to the maintaining mechanism — fear, avoidance and accommodation. Candidates who recommend home schooling without recognising it as an extension of the avoidance pattern have failed to apply the ARFID formulation to the new context.",
+        postExaminerNote: 'Candidates who linked every intervention to the maintaining mechanism of fear and avoidance, refused home schooling as a recovery strategy, planned graded school reintegration, aligned both parents and included medical monitoring scored well. Candidates who supported home schooling, provided therapy without nutritional monitoring, or gave the school surveillance instructions without a plan did not achieve the standard.'
       },
       {
-        stemNumber: "4.4",
-        vignette: "At the ward case review, nurses report that different staff give different messages about whether Ethan must finish meals. Some staff allow parents to negotiate alternatives; others insist on strict completion. Ethan has begun asking for the 'nice nurse' and refusing meals with others.",
-        question: "Outline — list and justify how you would improve team consistency and treatment fidelity on the paediatric ward.\\nA list without case-specific justification will not be awarded marks.\\n(7 marks | 7 minutes)",
-        commandWord: "outline_justify",
+        stemNumber: '4.4',
+        vignette: 'At the ward case review, nurses report that different staff give different messages about whether Ethan must finish meals. Some staff allow parents to negotiate alternatives; others insist on strict completion. Ethan has begun asking for the nice nurse and refusing meals with others.',
+        question: 'Outline — list and justify how you would improve team consistency and treatment fidelity on the paediatric ward. A list without case-specific justification will not be awarded marks. (7 marks | 7 minutes)',
+        commandWord: 'outline_justify',
         marks: 7,
         timeMinutes: 7,
         stemSignals: [
-          "Ethan asking for the 'nice nurse' is a textbook description of splitting driven by inconsistency — candidates must name this as a clinical phenomenon produced by the ward's inconsistency, not a character trait",
-          "The problem is a systems failure, not a nursing failure — candidates who blame individual nurses without addressing the absence of a shared plan will miss marks",
-          "Treatment fidelity plus humane flexibility is the examiner's target formulation — rigid rules and laissez-faire are both wrong",
+          'Ethan asking for the nice nurse is staff splitting — a direct clinical consequence of treatment inconsistency that must be named explicitly',
+          'Governance response required — inconsistency is a treatment fidelity and patient safety issue, not only a staff communication problem',
+          'Flexibility within a framework is correct; ad hoc individual decision-making by each shift is the problem to be solved'
         ],
         domains: [
           {
-            name: "Award up to 7 marks from the following scorable points",
-            marks: 7,
+            name: 'Ward process and treatment fidelity (4 marks)',
+            marks: 4,
             keyPoints: [
-              "Create a single written meal-support plan agreed by the full multidisciplinary team — because inconsistent staff responses are directly reinforcing Ethan's avoidance, and a written plan removes dependence on individual staff memory or preference",
-              "Define explicitly what is negotiable and what is non-negotiable in each meal interaction — because Ethan needs predictable boundaries to reduce anticipatory anxiety; choices such as order, timing and flavour can be offered, but meal completion targets and the supported eating approach cannot vary by shift",
-              "Standardise the language and tone used by all staff during meal support — because mixed messages from different nurses increase anxiety and create opportunities for Ethan to test which staff will accommodate avoidance",
-              "Clarify parents' role during meals and set boundaries on in-meal negotiation — because parents may unintentionally undermine the plan by negotiating alternatives; their role in the meal plan must be specified and consistent with treatment goals",
-              "Convene a multidisciplinary case conference with paediatrics, nursing, dietetics and child psychiatry — because a shared formulation of ARFID and accommodation must be agreed before the written plan can be implemented with fidelity",
-              "Provide ward staff education on ARFID, accommodation and why offering alternatives maintains rather than reduces symptoms — because nurses who allow substitution out of compassion need to understand the clinical mechanism before they can change their approach",
-              "Review meal outcomes and distress levels daily using a simple tracking tool — because the plan must be adjusted based on objective data rather than staff preference, and daily review enables early identification of regression",
-              "Use structured debrief for difficult meal interactions — because staff anxiety during challenging meals drives inconsistency; a brief structured debrief restores team alignment and reduces avoidant behaviour in staff as well as patients",
-              "Nominate a lead clinician responsible for plan updates and communicating changes to all staff — because ad hoc plan modifications made by different clinicians undermine fidelity; a single accountable lead ensures changes are made through a defined process",
-            ],
+              'Create a written meal-support plan accessible at the bedside — because inconsistent staff responses to Ethan\'s avoidance directly undermine treatment by providing unpredictable responses to a fear-driven behaviour',
+              'Define what is non-negotiable and what choices Ethan has within the plan — because he needs predictable boundaries; staff ambiguity amplifies anxiety and enables splitting between staff members',
+              'Use consistent language and approach across all staff and all shifts — because mixed messages from different nurses teach Ethan that persistence and distress produce different outcomes, reinforcing avoidance behaviour',
+              'Clarify parent roles during meals and include this in the written plan — because parents may unintentionally negotiate or rescue during meals without understanding the treatment rationale'
+            ]
           },
+          {
+            name: 'Staff support, education and governance (3 marks)',
+            marks: 3,
+            keyPoints: [
+              'Convene an MDT case conference including paediatrics, nursing, dietetics and child mental health — because all disciplines need to agree on one formulation and one approach before the plan can be consistently implemented',
+              'Provide staff education on ARFID and the role of accommodation — because staff who believe they are being kind by allowing food alternatives do not understand that flexibility at the wrong decision point reinforces avoidance',
+              'Nominate a clinical lead responsible for plan updates and deviations — because ad hoc changes without a designated decision-maker undermine consistency and enable each shift to make independent decisions',
+              'Review Ethan\'s meal outcomes and distress indicators daily — because the plan must be adjusted based on clinical data and dietetic review, not individual staff preference or parental pressure',
+              'Document deviations from the plan and their rationale — because consistency does not mean rigidity, but unplanned deviations must be recorded to identify patterns and inform clinical review'
+            ]
+          }
         ],
         zeroMarkTraps: [
-          "Blaming individual nurses for inconsistency without addressing the absence of a shared plan",
-          "Allowing each shift to decide how to manage meals",
-          "Implementing rigid rules without daily review or any flexibility for individual clinical circumstances",
+          'Attributing the inconsistency to individual nursing attitudes without a governance response',
+          'Allowing each shift to continue making independent decisions about the meal plan',
+          'Imposing rigid meal completion rules without clinical review or formulation-based flexibility'
         ],
-        postExaminerNote: "The examiner is looking for treatment fidelity combined with humane flexibility. Candidates who recommend either rigid inflexible rules or ongoing negotiation have not demonstrated understanding of how ARFID is maintained and treated in an inpatient setting.",
-      },
-    ],
+        postExaminerNote: 'Candidates who named the splitting dynamic, produced a written plan with defined non-negotiables and allowable choices, convened an MDT, educated staff on ARFID accommodation, nominated a clinical lead and built in daily review scored well. Candidates who blamed nurses without systemic action, allowed continued shift-level decision-making, or imposed rigid rules without review or flexibility did not achieve the standard.'
+      }
+    ]
   },
   {
-    id: "meq_026",
-    title: "Sione — Bipolar, Steroid Mania & Renal Transplant",
-    case: "Sione, 38 years old",
-    examSource: "Generated — Management / Disposition",
-    topic: "Steroid-triggered bipolar relapse, cultural formulation, transplant adherence, compulsory treatment and shared care",
-    primaryDomain: "Management / Disposition",
+    id: 'meq_026',
+    title: 'Sione — Bipolar Disorder, Steroid Mania and Renal Transplant',
+    case: 'Sione, age 38',
+    examSource: 'Generated — Formulation / Diagnostic Reasoning',
+    topic: 'Steroid-triggered bipolar relapse in a 38-year-old Samoan man six months after renal transplant; tests cultural and biological formulation, capacity in mania, compulsory treatment ethics and transplant shared-care governance',
+    primaryDomain: 'Formulation / Diagnostic Reasoning',
     totalMarks: 32,
     totalTimeMinutes: 32,
     stems: [
       {
-        stemNumber: "5.1",
-        vignette: "Sione is a 38-year-old Samoan man admitted under renal medicine with deteriorating kidney function six months after a renal transplant. The renal team is concerned he has missed immunosuppressant doses. Sione says the tablets are 'weakening my spirit' and that prayer and traditional healing will restore the kidney. His wife says he has been sleeping poorly, spending large amounts of money on church donations, and saying God gave him a 'second kidney for a purpose.' He is taking high-dose prednisolone and tacrolimus. The renal consultant asks whether Sione is manic, psychotic, or simply non-adherent.",
-        question: "Outline — list and justify the key elements of your formulation of Sione's presentation.\\nA list without case-specific justification will not be awarded marks.\\n(8 marks | 8 minutes)",
-        commandWord: "outline_justify",
+        stemNumber: '5.1',
+        vignette: 'Sione is a 38-year-old Samoan man admitted under renal medicine with deteriorating kidney function six months after a renal transplant. The renal team is concerned he has missed immunosuppressant doses. Sione says the tablets are weakening my spirit and that prayer and traditional healing will restore the kidney. His wife says he has been sleeping poorly, spending large amounts of money on church donations, and saying God gave him a second kidney for a purpose. He is taking high-dose prednisolone and tacrolimus. The renal consultant asks whether Sione is manic, psychotic, or simply non-adherent.',
+        question: 'Outline — list and justify the key elements of your formulation of Sione\'s presentation. A list without case-specific justification will not be awarded marks. (8 marks | 8 minutes)',
+        commandWord: 'outline_justify',
         marks: 8,
         timeMinutes: 8,
         stemSignals: [
-          "Prednisolone is the most important clinical detail in the vignette — candidates who do not name steroid-induced or steroid-triggered mania early will lose the key formulation mark",
-          "The renal consultant's three options are all wrong as single explanations — the examiner expects a multifactorial formulation that integrates all three possibilities",
-          "Calling spiritual belief automatically psychotic is the cultural formulation trap — 'God gave me a purpose' must be contextualised before being pathologised",
+          'The renal team\'s three-way framing — manic, psychotic or non-compliant — is a false choice; all three may interact and cultural belief is a fourth dimension that must be assessed first',
+          'Prednisolone-triggered mania is the most clinically urgent biological hypothesis — it must be named explicitly',
+          'Non-adherence must be formulated as multifactorial, not dismissed as wilfulness'
         ],
         domains: [
           {
-            name: "Award up to 8 marks from the following scorable points",
-            marks: 8,
+            name: 'Cultural and biological formulation (5 marks)',
+            marks: 5,
             keyPoints: [
-              "Steroid-induced or steroid-triggered mania is the leading biological hypothesis — because high-dose prednisolone in a patient with reduced sleep, increased spending, grandiose religious purpose and possible bipolar history constitutes a well-recognised corticosteroid neuropsychiatric syndrome that must be investigated and treated",
-              "Bipolar disorder relapse should be included in the formulation — because poor sleep, grandiosity, increased spending, elevated energy and possibly pressured speech are cardinal features of mania; a personal or family history of bipolar disorder would significantly strengthen this hypothesis",
-              "Tacrolimus neuropsychiatric effects should be considered — because calcineurin inhibitors can cause neurotoxicity including mood change, confusion and psychosis; this is a less likely primary explanation but must not be excluded",
-              "The distinction between culturally normative spiritual belief and psychiatric grandiosity requires careful culturally informed assessment — because 'God gave me a purpose' may represent culturally contextualised religious expression, an overvalued idea or frank grandiose delusion; this cannot be determined from the vignette alone",
-              "Non-adherence to immunosuppressants should be formulated as multifactorial rather than volitional — because missed doses may reflect side effect intolerance, mania-driven poor judgment, health literacy gaps, spiritual beliefs about the medication, financial barriers or service access failures; 'non-compliance' is an inadequate explanation that closes off treatable causes",
-              "The risk of irreversible transplant rejection from missed immunosuppression is the acute medical stake — because the formulation must be understood in the context of the clinical urgency it creates; this is not a stable outpatient question",
-              "Cultural and spiritual formulation must be integrated alongside biological and psychological dimensions — because Sione's Samoan heritage, church affiliation and explanatory model for illness are central to the presentation and cannot be separated from the clinical formulation",
-              "Collateral from Sione's wife, GP and renal pharmacist should be sought — because insight may be impaired, medication adherence history is unclear and the wife's report of behavioural change provides corroborative evidence for the mania hypothesis that Sione alone cannot provide",
-              "Capacity assessment for renal biopsy and ongoing immunosuppression decisions must be planned — because if mania or psychosis is impairing Sione's reasoning, his refusal may not represent an autonomous capacitous decision",
-            ],
+              'Explore Sione\'s spiritual and cultural explanatory model before pathologising belief — because the belief that prayer and traditional healing will restore the kidney may be culturally normative for a Samoan man with strong church community, and cultural safety requires curiosity before clinical categorisation',
+              'Consider steroid-triggered or steroid-induced mania as the leading biological hypothesis — because high-dose prednisolone combined with reduced sleep, disinhibited spending and grandiose sense of divine purpose in a man with possible bipolar history is a strong clinical pattern',
+              'Consider bipolar relapse precipitated by corticosteroid exposure — because if Sione has a prior bipolar diagnosis or subthreshold episodes, corticosteroids are a recognised precipitant of manic relapse',
+              'Assess psychosis versus culturally framed grandiose belief — because God gave me a second kidney for a purpose may be a deeply held Samoan Christian belief, an overvalued idea or a psychotic symptom, and the management implications are fundamentally different',
+              'Consider neuropsychiatric effects of tacrolimus — because calcineurin inhibitors are associated with neuropsychiatric adverse effects including agitation, mood change and cognitive change that may contribute to the presentation',
+              'Formulate non-adherence as multifactorial — because missed immunosuppression may reflect spiritual beliefs, manic disinhibition, medication side effects, health literacy, stigma, cost or inadequate psychoeducation, not simply wilfulness',
+              'Assess Sione\'s prior experience with Australian healthcare and cultural barriers to adherence — because prior negative experiences or language and cultural barriers may contribute to non-adherence alongside the spiritual explanatory model'
+            ]
           },
+          {
+            name: 'System, urgency and assessment priorities (3 marks)',
+            marks: 3,
+            keyPoints: [
+              'Assess transplant risk urgently in parallel with psychiatric formulation — because missed immunosuppression may cause irreversible graft rejection and this is a time-critical medical issue running alongside the psychiatric assessment',
+              'Obtain collateral from wife, GP and renal pharmacist — because Sione\'s insight may be impaired by mania and the pattern of medication adherence requires external verification',
+              'Assess capacity for current clinical decisions — because if mania is driving Sione\'s refusal of biopsy and immunosuppression, his capacity for these specific decisions must be formally assessed',
+              'Review prior bipolar history and previous hospitalisations — because confirmation of a prior bipolar diagnosis with steroid-triggered mania changes the formulation from possible first-episode to known relapse risk with different treatment implications'
+            ]
+          }
         ],
         zeroMarkTraps: [
-          "Treating all spiritual beliefs as psychosis without cultural assessment",
-          "Framing missed immunosuppression as simple wilful non-compliance",
-          "Failing to name prednisolone as a major contributor to the presentation",
+          'Labelling all spiritual and religious beliefs as delusional without cultural assessment',
+          'Reducing the presentation to simple non-compliance without biological or cultural formulation',
+          'Ignoring prednisolone as a recognised psychiatric risk factor'
         ],
-        postExaminerNote: "The steroid contribution must be named. Candidates who produce a formulation without prednisolone, or who dismiss spiritual beliefs as automatically psychotic without cultural assessment, have not demonstrated sufficient clinical and cultural sophistication for this MEQ.",
+        postExaminerNote: 'Candidates who held cultural belief and biological mania as simultaneous hypotheses, named steroid-triggered mania, distinguished psychosis from cultural belief, formulated non-adherence as multifactorial and assessed transplant urgency scored well. Candidates who called all religious belief psychotic, labelled the presentation as non-compliance, or ignored prednisolone did not achieve the standard.'
       },
       {
-        stemNumber: "5.2",
-        vignette: "Sione refuses a renal biopsy and says he will leave hospital to attend a church healing service. His wife wants you to 'make him stay.' His pastor arrives and asks to pray with the family before any further medical discussion. The renal team says biopsy delay may risk irreversible graft loss.",
-        question: "Describe — list and explain your approach to capacity, engagement, cultural formulation and immediate risk management.\\nA list without explanation will not be awarded marks.\\n(8 marks | 8 minutes)",
-        commandWord: "describe_explain",
+        stemNumber: '5.2',
+        vignette: 'Sione refuses a renal biopsy and says he will leave hospital to attend a church healing service. His wife wants you to make him stay. His pastor arrives and asks to pray with the family before any further medical discussion. The renal team says biopsy delay may risk irreversible graft loss.',
+        question: 'Describe — list and explain your approach to capacity, engagement, cultural formulation and immediate risk management. A list without explanation will not be awarded marks. (8 marks | 8 minutes)',
+        commandWord: 'describe_explain',
         marks: 8,
         timeMinutes: 8,
         stemSignals: [
-          "The pastor's arrival is an opportunity, not an obstacle — candidates who exclude the pastor automatically will miss the cultural engagement mark",
-          "Capacity and engagement are separate questions — candidates must assess whether Sione's refusal is capacitous before deciding on management, not conflate refusal with incapacity",
-          "The renal team's urgency is real and must be quantified — candidates who are only culturally sensitive without addressing the graft loss risk will miss the clinical balance mark",
+          'Excluding the pastor is a cultural safety error — the pastor may actively support medical care if respectfully engaged',
+          'Capacity is decision-specific and must be formally assessed; mania may impair weighing without removing all elements of capacity',
+          'The wife wanting you to make him stay is not legal authority — substitute decision-making applies only after incapacity is formally established'
         ],
         domains: [
           {
-            name: "Award up to 8 marks from the following scorable points",
-            marks: 8,
+            name: 'Capacity assessment and cultural engagement (5 marks)',
+            marks: 5,
             keyPoints: [
-              "Assess capacity for the renal biopsy decision specifically — explain that capacity is decision-specific and Sione's refusal requires formal assessment of whether he can understand the need for biopsy, appreciate the risk of irreversible graft loss if delayed, weigh this against his preference for healing prayer, and communicate a stable decision",
-              "Assess whether mania is impairing capacity to weigh the medical risk — explain that grandiosity, reduced sleep and impaired judgment from a manic state may prevent Sione from realistically weighing the probability of graft loss, not merely from holding religious values that differ from clinical recommendations",
-              "Welcome the pastor's involvement with Sione's consent — explain that the pastor may be a trusted figure who can help bridge between spiritual values and medical treatment; excluding him reflexively is both culturally unsafe and likely to entrench Sione's refusal",
-              "Negotiate sequencing of prayer and medical discussion — explain that allowing prayer before the medical conversation acknowledges Sione's spiritual framework without delaying urgent care indefinitely; this approach is culturally respectful and practically feasible",
-              "Explore the meaning of the renal biopsy within Sione's cultural and spiritual framework — explain that reluctance may be linked to specific beliefs about bodily integrity or spiritual consequence that have not been asked about; understanding these enables a more effective and respectful negotiation",
-              "Ask the renal team to quantify the clinical urgency clearly — explain that psychiatric risk management depends on knowing whether biopsy delay means hours, days or weeks before irreversible harm; without this the psychiatric response cannot be calibrated",
-              "Involve Sione's wife and cultural support with his consent as part of the engagement plan — explain that family and community are central to Samoan decision-making and a plan that excludes them is less likely to succeed than one that mobilises cultural support toward engagement with medical care",
-              "Treat agitation and sleep disturbance acutely with renal-safe options — explain that symptom control of emerging mania may restore Sione's capacity to engage with medical decision-making; this is the least restrictive effective first step before considering compulsory measures",
-              "Document capacity assessment, cultural formulation, engagement steps and clinical urgency — explain that biopsy refusal in the context of possible transplant rejection is a high-stakes clinical and legal situation requiring contemporaneous documentation of every step taken",
-            ],
+              'Assess biopsy-specific capacity — explain that capacity is decision-specific and high-stakes; formal assessment of Sione\'s understanding of graft rejection risk and his reasoning for refusal is required before any other clinical or legal response',
+              'Assess whether grandiosity and reduced sleep are impairing his ability to weigh the consequences of refusal — explain that mania may undermine the reasoning and weighing elements of capacity even if Sione can articulate some understanding',
+              'Assess whether spiritual and cultural beliefs preclude realistic weighing of medical risk — explain that cultural belief does not preclude capacity, but if Sione cannot weigh medical consequences against his beliefs at all, this is relevant to the capacity determination',
+              'Use respectful curiosity about Sione\'s spiritual framework — explain that dismissing prayer and traditional healing will damage therapeutic alliance and is culturally unsafe; exploring what prayer means to him and whether it can coexist with medical care builds trust',
+              'Welcome the pastor with Sione\'s consent and involve him as a potential ally — explain that a pastor who understands the graft loss risk may support Sione\'s engagement with medical care; exclusion is both culturally unsafe and clinically counterproductive',
+              'Negotiate a sequenced approach where possible — explain that allowing prayer before further medical discussion may reduce conflict without delaying urgent care unacceptably, and demonstrates cultural respect'
+            ]
           },
+          {
+            name: 'Risk management and immediate plan (3 marks)',
+            marks: 3,
+            keyPoints: [
+              'Assess and quantify the medical urgency with the renal team — explain that psychiatric risk management must be calibrated to the clinical time frame; if biopsy can be deferred hours for respectful family engagement, this is different from an immediate life-threatening emergency',
+              'Treat sleep disturbance and agitation with renal-safe medications while engagement proceeds — explain that targeted symptom management may restore capacity and improve engagement without requiring immediate compulsion',
+              'Assess elopement risk and consequences of leaving hospital — explain that if Sione leaves and misses the biopsy window, irreversible graft loss may result, and this must be factored into the risk assessment and legal considerations',
+              'Document capacity assessment, cultural formulation, risks and agreed plan — explain that refusal of biopsy in this clinical context is ethically and legally complex and contemporaneous documentation is essential'
+            ]
+          }
         ],
         zeroMarkTraps: [
-          "Excluding the pastor and treating his arrival as interference",
-          "Treating biopsy refusal as evidence of incapacity without formal capacity assessment",
-          "Being culturally sensitive at the expense of addressing the time-critical risk of graft loss",
+          'Excluding the pastor automatically as a barrier to medical care',
+          'Assuming Sione lacks capacity because he chooses prayer over biopsy',
+          'Treating the wife\'s request to make him stay as sufficient legal authority without a capacity assessment'
         ],
-        postExaminerNote: "The examiner expects cultural respect and clinical rigour simultaneously. Candidates who default to coercion without attempting engagement, or who defer indefinitely to spiritual preference without assessing capacity, have not demonstrated the clinical balance required.",
+        postExaminerNote: 'Candidates who assessed biopsy-specific capacity formally, engaged the pastor respectfully as a potential ally, explored cultural belief without pathologising it, managed the medical urgency in parallel and documented carefully scored well. Candidates who excluded the pastor, assumed incapacity from religious belief or deferred to the wife without formal capacity assessment did not achieve the standard.'
       },
       {
-        stemNumber: "5.3",
-        vignette: "Collateral from Sione's wife and GP suggests he has a history of bipolar disorder with previous steroid-triggered mania. He has stopped lithium because he feared kidney harm. He is now irritable, grandiose, pressured and has limited insight. The renal team asks whether they can treat him involuntarily to protect the transplant.",
-        question: "Discuss — list and debate the competing clinical, legal and ethical duties in deciding whether compulsory psychiatric treatment or detention is justified. You must name the tensions explicitly and take a defensible consultant position.\\n(8 marks | 8 minutes)",
-        commandWord: "debate",
+        stemNumber: '5.3',
+        vignette: 'Collateral from Sione\'s wife and GP suggests he has a history of bipolar disorder with previous steroid-triggered mania. He has stopped lithium because he feared kidney harm. He is now irritable, grandiose, pressured and has limited insight. The renal team asks whether they can treat him involuntarily to protect the transplant.',
+        question: 'Discuss — list and debate the competing clinical, legal and ethical duties in deciding whether compulsory psychiatric treatment or detention is justified. You must name the tensions explicitly and take a defensible consultant position. (8 marks | 8 minutes)',
+        commandWord: 'debate',
         marks: 8,
         timeMinutes: 8,
         stemSignals: [
-          "The renal team's question conflates psychiatric detention with authority to perform renal procedures — candidates must separate these two legal questions explicitly",
-          "Lithium was stopped for renal safety — this is clinically important context demonstrating the history was not simple non-adherence; the treatment plan must address this gap",
-          "A defensible position is required — candidates who list competing considerations without concluding will not demonstrate consultant-level reasoning",
+          'The renal team asking whether involuntary treatment can protect the transplant is a legal misunderstanding — psychiatric detention does not authorise renal procedures',
+          'Mania causing impaired insight and capacity may justify compulsory psychiatric treatment; this is legally and ethically separate from authorising immunosuppression',
+          'Least restrictive alternatives must be exhausted and documented before any compulsory treatment'
         ],
         domains: [
           {
-            name: "Award up to 8 marks from the following scorable points",
+            name: 'Competing tensions, legal analysis and defensible position (8 marks)',
             marks: 8,
             keyPoints: [
-              "There is tension between Sione's autonomy and foreseeable medical harm — if mania is impairing his capacity, his current refusal of medical treatment may not represent an autonomous choice; but compulsion must be based on legal criteria, not clinical preference or transplant urgency alone",
-              "There is tension between cultural respect and psychiatric pathologising — compulsory treatment must be based on evidence of mental disorder impairing decision-making, not on disagreement with Sione's spiritual values or treatment priorities",
-              "There is tension between least restrictive care and the urgency of graft preservation — losing the transplant is a serious irreversible harm, but the legal threshold for psychiatric detention is not met simply because medical risk is high; proportionality must be maintained",
-              "Compulsory psychiatric treatment may be justified if mania causes impaired capacity and serious risk of harm — because irritability, grandiosity, pressured speech, limited insight and collateral-confirmed mania in a patient who has stopped mood stabilisation constitute a treatable mental illness causing serious risk, meeting threshold for mental health legislation consideration in most Australian jurisdictions",
-              "Mental health legislation authorises compulsory psychiatric assessment and treatment — but does not automatically authorise renal biopsy or forced immunosuppressant administration; these require separate legal authority through guardianship, substitute decision-making or court order",
-              "Least restrictive voluntary alternatives must be attempted first if clinically safe — because engagement through wife, pastor, cultural support, explanation and oral medication offers may reduce or resolve the need for compulsion; these steps must be documented before a legal order is sought",
-              "A defensible consultant position is that compulsory psychiatric assessment may be justified given mania with impaired capacity — but the renal team cannot use this authority to compel renal procedures; separate consent or substitute decision-making authority is required for each medical intervention",
-              "If Sione is imminently leaving and this creates serious psychiatric and medical risk, short-term detention for assessment and treatment is defensible — because it allows treatment of the mania that is compromising capacity, after which Sione may make a more autonomous decision about renal care",
-              "Review and step down compulsion as soon as risk and incapacity resolve — because psychiatric detention must not be sustained beyond the clinical and legal threshold that justified it; restoration of autonomy must be planned from the outset",
-              "Senior psychiatry, renal medicine, legal and ethics consultation should be involved — because this case crosses psychiatric, renal and legal authority in ways that no single clinician should navigate without peer input and governance support",
-            ],
-          },
+              'There is tension between autonomy and foreseeable medical harm — Sione\'s refusal may not be autonomous if mania is impairing his insight and decision-making capacity, but this must be established through formal assessment',
+              'There is tension between cultural respect and clinical pathologising — compulsory psychiatric treatment must be based on impaired capacity from mental disorder, not on disagreement with his use of prayer or traditional healing',
+              'There is tension between least restrictive care and graft preservation — losing the transplant is a serious medical consequence, but compulsion must meet legal criteria and be proportionate to that specific risk',
+              'Compulsory psychiatric treatment may be justified if mania causes seriously impaired insight and risk — because irritability, grandiosity, pressured speech, limited insight and confirmed steroid-triggered relapse indicate a treatable mental illness impairing capacity',
+              'Mental health legislation does not automatically authorise renal biopsy or immunosuppression — explain that a psychiatric detention order covers psychiatric treatment; it does not extend to authorising renal procedures without separate consent or legal authority',
+              'Separate legal pathways apply to renal treatment if Sione lacks capacity — explain that biopsy and immunosuppression may require guardianship, substitute decision-making or emergency treatment authority depending on jurisdiction, and this must be pursued in parallel',
+              'Voluntary engagement should be fully attempted before compulsion — explain that wife, pastor, cultural support, sleep medication and MDT meeting may achieve a voluntary agreement and must be documented as attempted',
+              'If voluntary engagement fails and Sione is about to leave with impaired capacity, short-term psychiatric detention may be defensible — because this allows assessment and treatment of mania while preventing serious deterioration',
+              'Least restrictive principle must be applied and documented — because the least restrictive effective option must be tried and clearly documented before any escalation to compulsory measures',
+              'Legal and ethics consultation should be sought — because this case crosses psychiatric and medical treatment authority and involves transplant-specific ethical complexity requiring senior input',
+              'Review and restoration of autonomy must be planned from the outset — because compulsory treatment should be time-limited to the acute manic episode with autonomy restored as soon as safely possible'
+            ]
+          }
         ],
         zeroMarkTraps: [
-          "Recommending use of the Mental Health Act to authorise renal biopsy without acknowledging the separate legal authority required",
-          "Concluding Sione is psychotic because he holds religious beliefs without evidence of formal thought disorder",
-          "Failing to name least restrictive alternatives before recommending compulsion",
+          'Using the Mental Health Act to authorise renal biopsy or immunosuppression without legal analysis',
+          'Concluding Sione is psychotic because he holds religious beliefs without formal mental state assessment',
+          'Proceeding to compulsory treatment without documenting exhausted least restrictive alternatives'
         ],
-        postExaminerNote: "The legal distinction between psychiatric detention and authority to perform renal procedures is the key examiner test. Candidates who collapse these into a single authority — or who refuse all compulsory treatment without acknowledging the threshold that mania and impaired capacity may meet — will lose marks.",
+        postExaminerNote: 'Candidates who named the autonomy-harm tension and the cultural respect-pathologising tension explicitly, distinguished compulsory psychiatric treatment from authorising renal procedures, applied least restrictive principle, identified the separate legal pathway for renal consent and stated a defensible position scored well. Candidates who used the Mental Health Act to force the biopsy, labelled religious belief as psychosis without assessment, or ignored least restrictive alternatives did not achieve the standard.'
       },
       {
-        stemNumber: "5.4",
-        vignette: "Sione improves after treatment and agrees to continue immunosuppression, but the renal pharmacist says there is no shared protocol for psychiatric relapse prevention in transplant patients receiving high-dose steroids. Renal staff have been documenting 'non-compliance' without recording cultural, medication or mental-state contributors. The transplant unit asks you to recommend a safer shared-care process.",
-        question: "Describe — list and explain the shared-care, documentation and governance changes you would recommend between renal medicine, psychiatry, pharmacy, GP, family and cultural supports.\\nA list without explanation will not be awarded marks.\\n(8 marks | 8 minutes)",
-        commandWord: "describe_explain",
+        stemNumber: '5.4',
+        vignette: 'Sione improves after treatment and agrees to continue immunosuppression, but the renal pharmacist says there is no shared protocol for psychiatric relapse prevention in transplant patients receiving high-dose steroids. Renal staff have been documenting non-compliance without recording cultural, medication or mental-state contributors. The transplant unit asks you to recommend a safer shared-care process.',
+        question: 'Describe — list and explain the shared-care, documentation and governance changes you would recommend between renal medicine, psychiatry, pharmacy, GP, family and cultural supports. A list without explanation will not be awarded marks. (8 marks | 8 minutes)',
+        commandWord: 'describe_explain',
         marks: 8,
         timeMinutes: 8,
         stemSignals: [
-          "Two specific system failures are named in the stem — absent relapse prevention protocol and reductive documentation; both must be directly addressed",
-          "The word 'non-compliance' in documentation is itself identified as a system problem — the answer must replace this with an adherence formulation and explain why the distinction matters clinically",
-          "Shared care means six named stakeholders — candidates who address only the psychiatry-renal dyad will miss marks",
+          'Non-compliance documentation must be replaced by descriptive adherence formulation — this is the governance change explicitly identified in the stem',
+          'Steroid-triggered mania is a predictable and preventable complication — the protocol must identify patients at risk before steroids are escalated, not after crisis',
+          'All six named groups must appear in the answer: renal medicine, psychiatry, pharmacy, GP, family and cultural supports'
         ],
         domains: [
           {
-            name: "Award up to 8 marks from the following scorable points",
-            marks: 8,
+            name: 'Shared-care pathway and relapse prevention (4 marks)',
+            marks: 4,
             keyPoints: [
-              "Develop a transplant-psychiatry relapse prevention protocol for patients receiving high-dose steroids — explain that steroid-triggered mania is a predictable and preventable complication; Sione had a documented history of steroid-triggered mania and should have had a proactive psychiatric monitoring plan before prednisolone was escalated",
-              "Identify patients at high psychiatric risk before steroid escalation — explain that prior bipolar disorder, prior steroid-triggered episodes and lithium-free status constitute a risk profile that should trigger pre-emptive psychiatric review and monitoring, not reactive referral after relapse",
-              "Define and agree monitoring roles across renal medicine, psychiatry, pharmacy, GP and family — explain that adherence to immunosuppressants and mood stability cross multiple service boundaries; a shared care plan with named responsibilities prevents each service assuming another is monitoring the identified risks",
-              "Include family and cultural supports with Sione's consent as formal components of the shared care plan — explain that Sione's wife identified behavioural changes before any clinical contact; incorporating family observation and cultural health worker involvement into the early warning system formalises an existing protective resource",
-              "Develop renal-safe mood stabilisation guidance in collaboration with renal medicine and pharmacy — explain that lithium was appropriately stopped due to renal concerns, but this created a gap in relapse prevention; the protocol must identify renal-safe alternatives and a monitoring plan for whichever agent is chosen",
-              "Create a medication interaction review process between psychiatry and transplant pharmacy — explain that tacrolimus, prednisolone and psychotropic medications have clinically relevant pharmacokinetic interactions requiring collaborative management, not sequential independent prescribing",
-              "Embed early warning signs into Sione's transplant care plan — explain that poor sleep, church donation spending, grandiose spiritual framing and missed immunosuppressant doses were all present before the current crisis; the plan must document these early warning signs and assign monitoring and escalation responsibilities",
-              "Replace 'non-compliance' with a descriptive adherence formulation in all documentation — explain that 'non-compliance' is a pejorative label that closes off clinical inquiry; it obscures cultural factors, medication side effects, psychiatric symptoms, financial barriers and service access failures that may all be remediable contributors to missed doses",
-              "Conduct renal staff education on steroid psychiatric effects and the limitations of adherence framing — explain that renal nurses and doctors who document non-compliance without investigating contributors will continue to miss treatable causes of graft loss; education shifts the culture from blame to prevention",
-              "Audit cases of missed immunosuppression for psychiatric, cultural and medication contributors retrospectively and prospectively — explain that multiple cases of reductive documentation suggest a system pattern; audit closes the loop between protocol design and actual clinical practice",
-            ],
+              'Create a transplant psychiatry relapse-prevention protocol for patients receiving high-dose corticosteroids — explain that steroid-triggered mania is a predictable complication in patients with bipolar disorder and proactive identification prevents the crisis Sione experienced',
+              'Identify high-risk patients before steroid escalation — explain that a prior bipolar diagnosis, previous steroid-triggered mania and lithium discontinuation should trigger an automatic psychiatry review at the point of prescribing, not after relapse',
+              'Define monitoring roles across renal medicine, psychiatry, pharmacy, GP, family and cultural supports — explain that relapse detection and adherence support cross multiple service boundaries and requires role clarity to prevent gaps',
+              'Develop renal-safe mood stabilisation guidance with transplant pharmacy — explain that the lithium-renal interaction is a known barrier to standard bipolar prophylaxis and requires specialist pharmacological guidance unique to transplant patients',
+              'Include family and cultural supports with Sione\'s consent — explain that his wife and Samoan community supports may provide early warning of relapse signs before clinical contact and their inclusion in the care plan is clinically protective'
+            ]
           },
+          {
+            name: 'Documentation, governance and audit (4 marks)',
+            marks: 4,
+            keyPoints: [
+              'Replace the term non-compliance with descriptive adherence formulation — explain that pejorative documentation labels obscure cultural beliefs, medication side effects, manic disinhibition and service barriers, and adversely affect clinical decision-making',
+              'Require explicit documentation of cultural formulation and medication contributors for each adherence concern — explain that Sione\'s case shows that missed immunosuppression attributed to non-compliance masked treatable mania and cultural safety concerns',
+              'Build early warning signs into the transplant plan and shared record — explain that Sione\'s relapse signs included poor sleep, increased spending and religious grandiosity; these should be named in the shared plan so any team member can act early',
+              'Create rapid-access psychiatric review pathways during steroid pulse courses — explain that waiting for crisis after steroid escalation risks graft loss and requires same-week psychiatric availability built into the protocol',
+              'Audit missed immunosuppression cases retrospectively for mental health contributors — explain that the documentation review will identify how many cases attributed to non-compliance had unrecognised psychiatric or cultural contributors',
+              'Provide renal and transplant staff education on steroid psychiatric effects — explain that early recognition of mood and behaviour change after prednisolone escalation can trigger earlier intervention and prevent graft-threatening crises'
+            ]
+          }
         ],
         zeroMarkTraps: [
-          "Addressing only Sione individually without recommending system-level changes",
-          "Failing to involve pharmacy in the shared care plan",
-          "Producing a relapse prevention plan that does not address the absent protocol for steroid dose escalation",
+          'Recommending only counselling Sione about medication compliance without system change',
+          'Omitting pharmacy from the shared-care plan',
+          'Providing no relapse prevention or monitoring plan despite confirmed steroid-triggered mania history'
         ],
-        postExaminerNote: "The word 'non-compliance' should not appear in the answer except as something to be critiqued. Candidates who replicate the reductive documentation language they have been asked to replace have not demonstrated the clinical leadership register this stem requires.",
-      },
-    ],
+        postExaminerNote: 'Candidates who replaced non-compliance language with adherence formulation, identified proactive steroid-risk identification, named all six system partners, developed renal-safe pharmacological guidance and built audit and education into the governance response scored well. Candidates who focused only on individual patient compliance, omitted cultural or pharmacy components, or provided no governance structure or audit did not achieve the standard.'
+      }
+    ]
   }
-,
-{
-  id: 'meq_027',
-  title: 'Leo — Early Childhood Crisis and Inter-Agency Governance',
-  case: 'Leo, age 4',
-  examSource: 'Generated — Governance / Systems / Leadership',
-  topic: 'Preschool behavioural crisis in ED; developmental delay, family violence, homelessness and early-childhood inter-agency pathway failure',
-  primaryDomain: 'Governance / Systems / Leadership',
-  totalMarks: 32,
-  totalTimeMinutes: 32,
-  stems: [
-    {
-      stemNumber: '1.1',
-      vignette: 'Leo is a 4-year-old boy brought to ED by police and ambulance after a childcare centre called emergency services. Staff report that Leo threw chairs, bit another child, and screamed for 45 minutes after being told his mother was late. His mother, Talia, is a 27-year-old single parent who says Leo has always been intense since his father left. Leo has delayed speech, avoids eye contact with unfamiliar adults, becomes distressed with noise, and has recently been excluded from two childcare centres. Talia says she cannot keep leaving work and asks for medication to calm him down. The ED registrar asks whether Leo should be sedated and discharged.',
-      question: 'Outline — list and justify your immediate assessment and management priorities in ED. A list without case-specific justification will not be awarded marks. (8 marks | 8 minutes)',
-      commandWord: 'outline_justify',
-      marks: 8,
-      timeMinutes: 8,
-      stemSignals: [
-        'Developmental formulation required — speech delay, sensory distress and two childcare exclusions point to possible ASD or developmental disorder, not primary behavioural aggression',
-        'The registrar suggestion to sedate and discharge is a direct examiner trap — reflexive sedation without assessment is clinically and ethically wrong in a 4-year-old',
-        'Talia requesting medication signals parental exhaustion, not grounds for prescribing'
-      ],
-      domains: [
-        {
-          name: 'Safety, environment and developmental formulation (4 marks)',
-          marks: 4,
-          keyPoints: [
-            'Reduce stimulation and move Leo to a child-friendly, low-noise space — because he is 4, distressed by noise and change, and ED crowding or security presence may escalate rather than contain him',
-            'Avoid reflexive sedation as first-line management — because this presentation is developmental, trauma and attachment-related rather than primary acute psychosis or intoxication, and sedating a 4-year-old without formulation is dangerous',
-            'Assess immediate risk to Leo and those around him — because biting, throwing chairs and prolonged dysregulation create safety risk to other children, staff and Talia',
-            'Use parent-mediated co-regulation — because Talia is Leo\'s primary attachment figure and supporting her to soothe him is safer and more effective than separating him or using physical restraint',
-            'Screen for neurodevelopmental disorder — because delayed speech, poor eye contact, sensory distress and two childcare exclusions raise concern for autism spectrum disorder, language disorder or global developmental delay',
-            'Assess for physical contributors — because pain, sleep deprivation, hunger, intercurrent illness or sensory overload can present as behavioural crisis in preschool children'
-          ]
-        },
-        {
-          name: 'Family safety, system response and follow-up (4 marks)',
-          marks: 4,
-          keyPoints: [
-            'Obtain collateral from childcare staff and Talia — because the pattern across settings, triggers, duration and recovery are essential to distinguish developmental dysregulation from other aetiology',
-            'Assess Talia\'s capacity to safely care for Leo tonight — because she is asking for medication, is missing work and may be exhausted and overwhelmed',
-            'Screen for family violence and child safety concerns — because recurrent childcare exclusion, parental stress and the father leaving may be hiding safety issues',
-            'Arrange paediatric, early childhood intervention and CYMHS follow-up before discharge — because ED discharge without a pathway will predictably lead to repeat crisis presentation',
-            'Document clearly that no safe-for-childcare guarantee can be provided from an ED crisis assessment alone — because risk is contextual and requires assessment, supports and a plan, not certification'
-          ]
-        }
-      ],
-      zeroMarkTraps: [
-        'Recommending sedation and discharge without formulation',
-        'Applying adult psychiatric risk assessment to a 4-year-old',
-        'Focusing only on risk to other children while ignoring developmental needs and family safety'
-      ],
-      postExaminerNote: 'Candidates who identified neurodevelopmental vulnerability, named the sedation-and-discharge framing as a trap, used parent-mediated calming, included child protection and family safety, and outlined a follow-up pathway scored well. Candidates who agreed to sedate, gave a generic list without case-specific justification, or failed to address the family safety context did not achieve the standard.'
-    },
-    {
-      stemNumber: '1.2',
-      vignette: 'During assessment, Talia becomes tearful and says she has been sleeping in her car with Leo for three nights after leaving her partner because he shouts and punches walls. Leo clings to her and becomes more distressed when male security staff stand near the cubicle. The paediatric registrar says the ED is overcrowded and asks you to clear the behaviour problem so the family can be discharged.',
-      question: 'Describe — list and explain the person, illness and system factors contributing to Leo\'s presentation and how these change your immediate plan. A list without explanation will not be awarded marks. (8 marks | 8 minutes)',
-      commandWord: 'describe_explain',
-      marks: 8,
-      timeMinutes: 8,
-      stemSignals: [
-        'Person-Illness-System structure is explicitly required — candidates who give only clinical or only social factors will miss marks',
-        'The disclosure of family violence and homelessness fundamentally changes the plan — discharge is no longer safe',
-        'Male security staff escalating Leo is a clinical observation requiring immediate action, not just a notation'
-      ],
-      domains: [
-        {
-          name: 'Person and trauma factors (4 marks)',
-          marks: 4,
-          keyPoints: [
-            'Leo\'s age and developmental stage increase his dysregulation risk — explain that a 4-year-old has limited capacity to verbalise fear or use cognitive coping strategies, making behavioural escalation the primary expression of distress',
-            'Possible neurodevelopmental vulnerability is a central contributor — explain that delayed speech, sensory sensitivity and communication difficulties make unpredictable ED transitions significantly harder to manage',
-            'Attachment insecurity and separation panic are likely — explain that the crisis was triggered by Talia being late and Leo clings to her in ED, consistent with heightened separation anxiety in the context of ongoing family instability',
-            'Male security staff may be a trauma trigger — explain that Leo\'s escalation when male staff approach is consistent with conditioned fear responses following exposure to a male partner who shouts and uses physical intimidation'
-          ]
-        },
-        {
-          name: 'Illness, system factors and plan change (4 marks)',
-          marks: 4,
-          keyPoints: [
-            'Family violence exposure may present as hyperarousal and dysregulation — explain that screaming, biting and prolonged distress are survival responses shaped by ongoing threat exposure, not simply oppositional behaviour',
-            'Three nights of homelessness and sleep deprivation lower Leo\'s threshold for all stressors — explain that basic safety needs are unmet and any behavioural threshold is predictably reduced',
-            'ED flow pressure does not override child and family safety — explain that registrar pressure to discharge is understandable but discharge into homelessness is clinically and ethically unacceptable',
-            'Social work and family violence services become urgent parts of the plan — explain that the immediate clinical problem is Leo\'s safety in the context of homelessness and family violence, not only his behaviour',
-            'Child protection consultation is required — explain that Leo is exposed to family violence and is homeless; this threshold requires consultation regardless of whether the presentation is framed as support or safety concern',
-            'Short-stay or paediatric admission may be the safest option — explain that it provides a contained environment while accommodation, family violence response and child safety planning are arranged'
-          ]
-        }
-      ],
-      zeroMarkTraps: [
-        'Treating the presentation as bad parenting without developmental or trauma formulation',
-        'Ignoring Talia\'s immediate safety in the discharge plan',
-        'Agreeing to discharge because no formal psychiatric diagnosis can be made in ED'
-      ],
-      postExaminerNote: 'Candidates who integrated developmental vulnerability, trauma exposure, family violence, homelessness and ED system pressure into one coherent plan-change scored well. Candidates who noted the disclosure but still recommended discharge, or who treated the behaviour as a parenting failure without clinical formulation, did not achieve the standard.'
-    },
-    {
-      stemNumber: '1.3',
-      vignette: 'The childcare director phones ED and says Leo cannot return unless you provide a written statement that he is safe around other children. Talia begs you to write it because she will lose her job without childcare. The hospital social worker says crisis accommodation may not be available tonight. The paediatric team says Leo does not need medical admission.',
-      question: 'Discuss — list and debate the competing duties to Leo, Talia, the childcare centre, and the hospital. You must name the tensions explicitly and take a defensible consultant position. (8 marks | 8 minutes)',
-      commandWord: 'debate',
-      marks: 8,
-      timeMinutes: 8,
-      stemSignals: [
-        'The childcare safety certificate is a direct examiner trap — writing it is a clinical, ethical and medico-legal error',
-        'Discuss questions require named tensions and a stated defensible consultant position — a list of considerations without debate format will not score well',
-        'All four competing duties must be named: Leo, Talia, the childcare centre and the hospital'
-      ],
-      domains: [
-        {
-          name: 'Competing tensions, positions and defensible outcome (8 marks)',
-          marks: 8,
-          keyPoints: [
-            'There is tension between Talia\'s employment need and Leo\'s safety — the defensible position is to support childcare access through honest, consented communication and a risk-support plan, not a false safety guarantee',
-            'There is tension between confidentiality and information-sharing with the childcare centre — only relevant, consented and necessary information should be shared unless there is serious imminent safety concern',
-            'There is tension between the childcare centre\'s duty to other children and Leo\'s right to inclusion — a functional support plan rather than exclusion or blanket reassurance is the defensible recommendation',
-            'There is tension between ED flow pressure and foreseeable harm after discharge — bed pressure does not justify discharging a family into homelessness when child safety is unresolved',
-            'There is tension between supporting Talia and the need to involve child protection — referral should be framed as safety support, not blame, and Talia\'s cooperation should be sought',
-            'The consultant must not certify Leo as safe around children — because ED assessment alone cannot predict contextual risk without assessment, supports and a functional plan in place, and the certificate creates false assurance',
-            'The consultant can provide functional recommendations instead — including triggers, calming strategies, transition planning, supervision adjustments and urgent developmental referral',
-            'Childcare exclusion may breach equitable access principles — because repeated exclusion without support denies Leo educational access and worsens family instability for a child with suspected developmental disorder',
-            'The defensible consultant position is to prioritise Leo and Talia\'s safety, provide honest communication and offer an inter-agency support plan — rather than a misleading clearance letter written under pressure',
-            'Offer a written ED summary with limitations explicitly stated — because this supports childcare communication without constituting an unverifiable safety guarantee'
-          ]
-        }
-      ],
-      zeroMarkTraps: [
-        'Writing the requested safe-for-childcare certificate',
-        'Refusing all communication with childcare when collaborative safety planning is appropriate',
-        'Prioritising hospital bed pressure over Leo and Talia\'s safety'
-      ],
-      postExaminerNote: 'Candidates who refused to write the certificate, named at least three tensions explicitly, stated a defensible position and offered functional alternatives including a written summary, inter-agency meeting and family violence referral scored well. Candidates who wrote the letter, gave a list without naming tensions, or said no without constructive alternatives did not achieve the standard.'
-    },
-    {
-      stemNumber: '1.4',
-      vignette: 'Two weeks later, the clinical director asks you to review why three preschool children with developmental delay, family violence exposure and childcare exclusion have presented repeatedly to ED in the last month. The local early childhood service has a six-month waitlist. There is no agreed pathway between ED, paediatrics, child protection, early childhood intervention, family violence services and CYMHS.',
-      question: 'Describe — list and explain the governance and workforce actions you would recommend to build a safer early-childhood crisis pathway. A list without explanation will not be awarded marks. (8 marks | 8 minutes)',
-      commandWord: 'describe_explain',
-      marks: 8,
-      timeMinutes: 8,
-      stemSignals: [
-        'Governance stem — individual case management is insufficient; the answer must address system-level redesign across all named agencies',
-        'All six named agencies must appear in the answer: ED, paediatrics, CYMHS, early childhood intervention, family violence services and child protection',
-        'Six-month waitlist requires executive escalation, not a clinical workaround'
-      ],
-      domains: [
-        {
-          name: 'Pathway design and governance structure (4 marks)',
-          marks: 4,
-          keyPoints: [
-            'Create a shared early-childhood crisis pathway — explain that repeated presentations indicate the absence of any agreed route, with each agency acting in isolation and creating system gaps',
-            'Define roles and referral criteria across all six agencies named in the review — explain that unclear ownership of early-childhood crisis cases drives delayed discharge, duplicated work and unresolved safety',
-            'Develop criteria for paediatric admission, short-stay and community diversion — explain that preschool behavioural crises usually need coordinated containment and safety planning rather than psychiatric admission, and staff need decision support',
-            'Introduce rapid multidisciplinary case review for repeat ED attenders with this profile — explain that three similar presentations in a month indicate a system pattern requiring formal governance review, not only repeated individual management'
-          ]
-        },
-        {
-          name: 'Workforce, monitoring and accountability (4 marks)',
-          marks: 4,
-          keyPoints: [
-            'Train ED and paediatric staff in trauma-informed and neurodevelopmentally informed de-escalation — explain that standard adult security responses worsen distress in preschool children and specific skills are needed',
-            'Embed structured family violence screening tools into the pathway — explain that staff avoid asking without supported, normalised assessment processes embedded in workflow',
-            'Build consultation links with speech pathology, occupational therapy and developmental paediatrics — explain that these presentations require multi-disciplinary developmental assessment, not psychiatric risk screening alone',
-            'Track repeat ED presentations, childcare exclusions and safe accommodation outcomes as safety indicators — explain that governance requires measurable data to demonstrate whether the pathway reduces harm',
-            'Audit discharge plans for family violence inquiry, safety planning and follow-up completion — explain that documentation gaps are where clinical risk is being missed',
-            'Escalate the six-month early childhood service waitlist to executive level — explain that this service gap creates predictable foreseeable harm and requires executive commissioning response, not only clinical workarounds'
-          ]
-        }
-      ],
-      zeroMarkTraps: [
-        'Recommending only additional staffing without pathway or governance design',
-        'Treating the problem as a parenting education issue without addressing system failure',
-        'Providing no accountability, audit or escalation mechanism'
-      ],
-      postExaminerNote: 'Candidates who named all relevant agencies, described a coordinated pathway with defined roles, recommended governance structures, identified audit indicators and escalated the waitlist to executive level scored well. Candidates who listed clinical management strategies without system-level design or accountability mechanisms did not achieve the standard.'
-    }
-  ]
-},
-{
-  id: 'meq_028',
-  title: 'Frances Morton — Dialysis Withdrawal, Capacity and Family Conflict',
-  case: 'Frances Morton, age 84',
-  examSource: 'Generated — Ethics / Professionalism / Legal',
-  topic: 'Capacity assessment for dialysis withdrawal in an 84-year-old with depression, grief and family conflict; tests decision-specific capacity assessment, ethical weighing of autonomy versus beneficence, confidentiality management and protocol governance',
-  primaryDomain: 'Ethics / Professionalism / Legal',
-  totalMarks: 30,
-  totalTimeMinutes: 30,
-  stems: [
-    {
-      stemNumber: '2.1',
-      vignette: 'Mrs Frances Morton is an 84-year-old retired nurse with end-stage kidney disease, chronic pain from osteoarthritis, and a past history of recurrent major depression. She has been receiving haemodialysis for 18 months. Over the last month she has missed two dialysis sessions and now says she wants to stop dialysis permanently because she is tired of living like a machine. She is not psychotic, is calm, and says she understands she may die within weeks if dialysis stops. Her daughter insists this is just depression talking and asks you to certify that Frances lacks capacity.',
-      question: 'Outline — list and justify the key issues you would assess before giving an opinion about Frances\'s capacity to refuse dialysis. A list without case-specific justification will not be awarded marks. (8 marks | 8 minutes)',
-      commandWord: 'outline_justify',
-      marks: 8,
-      timeMinutes: 8,
-      stemSignals: [
-        'Capacity is decision-specific — depression, age and frailty do not automatically remove capacity for dialysis refusal',
-        'The daughter requesting a capacity certificate is a framing trap — the task is rigorous assessment, not confirmation of a predetermined view',
-        'All four functional capacity elements must be assessed: understand, retain, weigh, communicate'
-      ],
-      domains: [
-        {
-          name: 'Capacity assessment (5 marks)',
-          marks: 5,
-          keyPoints: [
-            'Assess decision-specific capacity for refusal of dialysis — because Frances may retain capacity for this decision even with depression and frailty, and capacity cannot be assumed to be absent from diagnosis or age alone',
-            'Assess understanding of dialysis and the likely consequences of stopping — because she must demonstrate understanding of what dialysis does and that death within weeks is the probable outcome if she stops',
-            'Assess appreciation of personal consequences — because she must apply the risk of death to herself specifically, not only know it abstractly',
-            'Assess reasoning and weighing of alternatives — because she should be able to articulate and compare ongoing dialysis, reduced-frequency dialysis, conservative renal care and palliative care in terms of her own values',
-            'Assess communication of a stable and consistent choice — because the decision should not be impulsive, fluctuating with mood or driven by delirium',
-            'Screen for delirium and cognitive impairment — because uraemia, medications and intercurrent illness in an 84-year-old can impair cognition and must be excluded before concluding the refusal is values-based'
-          ]
-        },
-        {
-          name: 'Psychiatric, medical and contextual contributors (3 marks)',
-          marks: 3,
-          keyPoints: [
-            'Assess depression severity and suicidal ideation — because treatable depression may distort values, amplify hopelessness or drive self-destructive refusal in a way that could be reversed with treatment',
-            'Assess grief and demoralisation separately from major depression — because Frances recently lost her partner; grief may influence but does not automatically invalidate a considered values-based refusal',
-            'Assess pain severity and symptom burden — because undertreated pain may be a remediable contributor to refusal that deserves attention before a final capacity opinion is given',
-            'Clarify voluntariness and assess for family pressure or coercion — because her daughter is actively pressuring the team to certify incapacity, which may compromise Frances\'s voluntariness',
-            'Review prior values, advance care planning and prior statements about quality of life — because consistency of this refusal with longstanding values supports genuine autonomous decision-making'
-          ]
-        }
-      ],
-      zeroMarkTraps: [
-        'Concluding that depression alone removes capacity for dialysis refusal',
-        'Concluding that age 84 is itself grounds for incapacity',
-        'Performing only a suicide risk assessment without formally assessing the four functional capacity elements'
-      ],
-      postExaminerNote: 'Candidates who named all four capacity elements explicitly, assessed remediable contributors including depression, grief, pain and delirium, assessed voluntariness, and reviewed prior values scored well. Candidates who equated depression with incapacity, focused only on suicide risk, or certified incapacity to satisfy the family did not achieve the standard.'
-    },
-    {
-      stemNumber: '2.2',
-      vignette: 'You find Frances has low mood, poor sleep, pain, and grief about the recent death of her partner, but she can describe the nature of dialysis, the likely consequences of stopping, alternatives such as reduced-frequency dialysis and palliative renal care, and why these options do not meet her values. She says: I am not trying to kill myself; I am choosing not to keep prolonging this. The renal team is uncomfortable and asks whether depression invalidates her decision.',
-      question: 'Discuss — list and debate how depression, grief, autonomy, beneficence and non-maleficence should be weighed in this situation. You must name the ethical tension and take a defensible consultant position. (8 marks | 8 minutes)',
-      commandWord: 'debate',
-      marks: 8,
-      timeMinutes: 8,
-      stemSignals: [
-        'The renal team asking whether depression invalidates her decision is a framing trap — depression does not automatically invalidate a capacitous reasoned refusal',
-        'Discuss questions require named ethical tensions and a stated defensible position — a list of considerations will not achieve the standard',
-        'Suicidality must be explicitly distinguished from treatment refusal — Frances has already done this herself in the vignette'
-      ],
-      domains: [
-        {
-          name: 'Ethical tensions, weighing and defensible consultant position (8 marks)',
-          marks: 8,
-          keyPoints: [
-            'There is tension between autonomy and preservation of life — a capacitous patient may refuse life-sustaining treatment even if death follows, and this right is established in law and ethics',
-            'There is tension between treating depression and respecting values — depression should be assessed and treatment offered, but the presence of depression does not automatically override a reasoned and consistent refusal',
-            'Grief can inform a decision without invalidating it — bereavement may shape Frances\'s sense of what constitutes a worthwhile life, but this does not make her choice pathological',
-            'Beneficence supports offering symptom relief and alternatives — reduced dialysis, palliative renal care and pain management should be explored before accepting that all options are exhausted',
-            'Non-maleficence includes avoiding burdensome treatment that extends suffering — continuing dialysis against Frances\'s expressed values may prolong suffering rather than benefit her',
-            'Suicidality must be explicitly distinguished from treatment refusal — Frances is not choosing death to end her life; she is choosing not to prolong a life she regards as not worth extending on dialysis',
-            'A defensible consultant position is to respect her refusal if capacity is intact — because autonomy and bodily integrity are central ethical duties and Frances demonstrates the four functional capacity elements',
-            'Respecting refusal does not mean abandonment — ongoing psychiatric care, palliative support, pain management and family communication remain clinical obligations',
-            'Uncertainty should prompt review rather than coercion — if mood, cognition or uraemia fluctuate, repeat capacity assessment is appropriate',
-            'Document reasoning, alternatives offered and Frances\'s stated values — because this decision is ethically and legally high-stakes and the record must demonstrate a thorough process'
-          ]
-        }
-      ],
-      zeroMarkTraps: [
-        'Treating this as a suicide prevention case and overriding refusal on that basis',
-        'Concluding that dialysis must continue because Frances is depressed without testing capacity',
-        'Failing to consider palliative renal care as part of the ethical response'
-      ],
-      postExaminerNote: 'Candidates who named the core tension between autonomy and preservation of life, distinguished depression from incapacity, separated treatment refusal from suicidality, recommended palliative care and stated a defensible position clearly scored well. Candidates who treated depression as automatically invalidating refusal, or who failed to name any ethical tension explicitly, did not achieve the standard.'
-    },
-    {
-      stemNumber: '2.3',
-      vignette: 'Frances\'s son arrives from interstate and demands dialysis continue. He says his sister is letting Mum die for convenience and threatens to complain to the hospital executive. Frances asks you not to share details of the psychiatric assessment with him. The renal consultant asks you to attend a family meeting.',
-      question: 'Describe — list and explain how you would manage confidentiality, family conflict and communication with the renal team. A list without explanation will not be awarded marks. (7 marks | 7 minutes)',
-      commandWord: 'describe_explain',
-      marks: 7,
-      timeMinutes: 7,
-      stemSignals: [
-        'Frances has explicitly requested confidentiality about the psychiatric assessment — this must be respected; the son is not entitled to clinical details',
-        'A threatened executive complaint requires clear documentation, not capitulation to family demands',
-        'The son\'s behaviour must be assessed for elder coercion, not only managed as grief'
-      ],
-      domains: [
-        {
-          name: 'Confidentiality, family conflict and team communication (7 marks)',
-          marks: 7,
-          keyPoints: [
-            'Respect Frances\'s confidentiality — explain that she has explicitly asked that psychiatric assessment details not be shared with her son, and this request is binding unless there is an overriding safety justification',
-            'Seek Frances\'s consent for limited family communication — explain that family meetings can still address general care planning, process and support without disclosing confidential psychiatric content',
-            'Clarify to the son what can be shared — explain that he can be informed about the process and the general support plan without receiving confidential assessment details Frances has withheld',
-            'Acknowledge the son\'s distress without colluding with his demands — explain that his anger may reflect anticipatory grief and feelings of helplessness, and these deserve empathic engagement rather than dismissal',
-            'Assess for elder coercion or undue influence by the son — explain that his threatening behaviour and demands require consideration of whether this is adversely affecting Frances\'s voluntariness',
-            'Avoid triangulation between siblings — explain that the psychiatrist should not become an arbiter of family motives; the sibling conflict is secondary to Frances\'s clinical and legal position',
-            'Communicate the capacity opinion clearly and practically to the renal team — explain that clinicians need guidance about what the opinion means for clinical decision-making, not only a summary that she has capacity',
-            'Recommend a structured family meeting with defined roles for renal medicine, palliative care and psychiatry — explain that unified communication across disciplines reduces escalating conflict',
-            'Document the meeting, capacity opinion, confidentiality limits and agreed plan carefully — explain that a threatened executive complaint makes a complete contemporaneous record essential',
-            'Offer staff support through the process — explain that clinicians managing a death after treatment withdrawal may experience moral distress that requires acknowledgment and support'
-          ]
-        }
-      ],
-      zeroMarkTraps: [
-        'Sharing psychiatric assessment details with the son because he is family',
-        'Excluding the family completely when Frances still needs supported communication',
-        'Telling the renal team only that Frances has capacity without a practical care plan'
-      ],
-      postExaminerNote: 'Candidates who separated what Frances controls from what family can be told, validated the son\'s distress without colluding, assessed for elder coercion, communicated a practical clinical opinion to the renal team and documented carefully scored well. Candidates who disclosed confidential assessment details, deferred to family demands under complaint pressure, or provided no guidance to the renal team did not achieve the standard.'
-    },
-    {
-      stemNumber: '2.4',
-      vignette: 'After the family meeting, the renal unit asks you to help develop a protocol for psychiatric consultation when patients request withdrawal from dialysis. Recent cases show inconsistent capacity documentation, late palliative care referral, and family meetings occurring only after conflict escalates.',
-      question: 'Outline — list and justify the key components of a local protocol for psychiatric consultation in dialysis withdrawal decisions. A list without case-specific justification will not be awarded marks. (7 marks | 7 minutes)',
-      commandWord: 'outline_justify',
-      marks: 7,
-      timeMinutes: 7,
-      stemSignals: [
-        'The protocol must directly address all three identified failures: inconsistent documentation, late palliative care and reactive family meetings',
-        'Governance stem — the answer must describe a system-level quality and safety response, not only individual clinical assessment steps',
-        'Psychiatry\'s role must be clearly bounded: capacity and mental disorder; renal medicine retains decision authority for dialysis'
-      ],
-      domains: [
-        {
-          name: 'Protocol components and governance rationale (7 marks)',
-          marks: 7,
-          keyPoints: [
-            'Define referral triggers — because psychiatry should be involved when there is capacity uncertainty, significant mood disorder, family conflict or fluctuating cognition, not routinely for every withdrawal request',
-            'Use a standard capacity documentation template — because the identified problem is inconsistent documentation across cases and a structured template ensures completeness and medico-legal defensibility',
-            'Require systematic assessment of depression, suicidality, delirium, pain and coercion as part of each referral — because these are remediable contributors to withdrawal requests that must be considered before a final opinion',
-            'Mandate early palliative care involvement at the point of first withdrawal discussion — because withdrawal is not purely a psychiatric matter and late palliative care referral was identified as a specific system failure',
-            'Include structured family meetings as a required step, not a crisis response — because the identified problem is family meetings occurring only after conflict escalates, which is preventable with earlier structured communication',
-            'Clarify decision-making roles explicitly — because psychiatry advises on capacity and mental disorder while renal medicine retains clinical responsibility for dialysis decisions, and role confusion creates governance gaps',
-            'Create escalation routes to ethics consultation and legal advice — because unresolved disputes require senior governance, not ad hoc clinical coercion',
-            'Include advance care planning documentation as a required component — because prior values and wishes support defensible decisions and their absence drives late conflict',
-            'Provide staff education on capacitous refusal and legal obligations — because discomfort with a patient\'s death can lead to unlawful paternalism if not addressed',
-            'Audit cases annually for timeliness, documentation quality and outcomes — because governance requires measurable monitoring of whether the protocol is improving care'
-          ]
-        }
-      ],
-      zeroMarkTraps: [
-        'Designing a protocol that requires psychiatric clearance for all dialysis withdrawal requests',
-        'Omitting palliative care from the protocol',
-        'Providing no audit or monitoring mechanism'
-      ],
-      postExaminerNote: 'Candidates who addressed all three identified failures, defined referral triggers, bounded psychiatry\'s role clearly, included palliative care, required structured family meetings and added governance audit scored well. Candidates who created a protocol requiring routine psychiatric clearance for all withdrawals, omitted palliative care, or provided only clinical assessment steps without governance accountability did not achieve the standard.'
-    }
-  ]
-},
-{
-  id: 'meq_029',
-  title: 'Grace — Deaf Patient, IPV and ED Service Reform',
-  case: 'Grace, age 32',
-  examSource: 'Generated — Communication / Collaboration',
-  topic: 'Deaf patient self-harm in ED; Auslan interpreter access, coercive control by partner, family involvement risks and service reform for Deaf patients in emergency mental health settings',
-  primaryDomain: 'Communication / Collaboration',
-  totalMarks: 26,
-  totalTimeMinutes: 26,
-  stems: [
-    {
-      stemNumber: '3.1',
-      vignette: 'Grace is a 32-year-old Deaf woman brought to ED by ambulance after superficial cutting to her forearm during an argument with her partner. She communicates using Auslan. Her mother, who is hearing, begins interpreting for her and says: She does this for attention; just ask me. The ED is busy and the registrar says a professional interpreter may take two hours. Grace is crying, refuses to write answers, and repeatedly signs something the staff do not understand.',
-      question: 'Outline — list and justify your immediate approach to communication, assessment validity and safety. A list without case-specific justification will not be awarded marks. (8 marks | 8 minutes)',
-      commandWord: 'outline_justify',
-      marks: 8,
-      timeMinutes: 8,
-      stemSignals: [
-        'Using the mother as interpreter is a direct clinical and ethical error — she is not neutral, has already disclosed bias and may suppress disclosure in a domestic violence assessment',
-        'Assessment validity is impossible without accessible communication — this is the central clinical principle of the stem',
-        'Grace refusing to write is not refusal to engage — it may signal her preferred communication mode or awareness that written English is not her primary language'
-      ],
-      domains: [
-        {
-          name: 'Communication access and assessment validity (5 marks)',
-          marks: 5,
-          keyPoints: [
-            'Arrange a professional Auslan interpreter urgently — because family interpretation is inadequate for a mental health and risk assessment and Grace\'s mother is not a neutral party in this clinical encounter',
-            'Do not rely on Grace\'s mother as interpreter — because her mother has already expressed a dismissive opinion about Grace\'s self-harm, which may distort interpretation, suppress disclosure and breach confidentiality',
-            'Use interim communication supports while awaiting the interpreter — because basic safety needs, pain and immediate concerns still require some communication even before full assessment is possible',
-            'Face Grace directly and maintain her as the primary participant throughout — because speaking about her to others while she is present reinforces exclusion and invalidates the therapeutic encounter',
-            'Delay non-urgent definitive psychiatric conclusions until interpretation is available — because Grace refusing to write answers is not refusal to engage; it may reflect her preferred mode or awareness that writing is not her primary language',
-            'Document communication barriers and every step taken to address them — because the validity of the risk assessment depends entirely on accessible communication and legal standards require documentation'
-          ]
-        },
-        {
-          name: 'Safety and immediate response (3 marks)',
-          marks: 3,
-          keyPoints: [
-            'Provide wound care and proportionate observation while awaiting the interpreter — because Grace has self-harmed and requires basic safety monitoring even before full psychiatric assessment is possible',
-            'Assess whether Grace\'s mother\'s presence is safe and wanted by Grace — because family dynamics may directly affect what Grace is willing to disclose in a domestic violence context',
-            'Escalate interpreter delay as a patient safety issue, not a patient flow issue — because communication access in a mental health assessment is a clinical safety requirement, not an optional courtesy that can be deferred for bed flow',
-            'Avoid assuming cognitive impairment from communication difference — because Deafness does not imply incapacity; Grace\'s signing and distress indicate engagement rather than confusion'
-          ]
-        }
-      ],
-      zeroMarkTraps: [
-        'Relying on written questions as the sole communication solution for a Deaf patient',
-        'Allowing the mother to continue interpreting during the clinical assessment',
-        'Completing and documenting a risk assessment as valid without accessible communication'
-      ],
-      postExaminerNote: 'Candidates who refused to use the mother as interpreter, arranged a professional Auslan interpreter, treated interpreter delay as a safety issue, maintained Grace as the primary participant and documented validity concerns scored well. Candidates who used written questions as the main solution, allowed mother to interpret, or completed a risk assessment without accessible communication did not achieve the standard.'
-    },
-    {
-      stemNumber: '3.2',
-      vignette: 'When an Auslan interpreter joins by video, Grace says her partner has been controlling her phone, threatening to tell people she is crazy, and preventing her from attending Deaf community events. She says she cut herself to make everything stop but denies current intent to die. She does not want her mother told about the partner violence because her mother will confront him and make it worse.',
-      question: 'Discuss — list and debate the competing duties around confidentiality, family involvement, family violence risk and discharge planning. You must name the tensions explicitly and take a defensible consultant position. (10 marks | 10 minutes)',
-      commandWord: 'debate',
-      marks: 10,
-      timeMinutes: 10,
-      stemSignals: [
-        'This is a 10-mark discuss question — at least three tensions must be named explicitly and a defensible position stated',
-        'Grace has made an informed request for confidentiality — this must be respected unless imminent serious risk justifies override',
-        'The partner\'s behaviour is coercive control — controlling phone access, isolation and stigma threats constitute family violence, not relationship conflict'
-      ],
-      domains: [
-        {
-          name: 'Competing tensions, risk analysis and defensible position (10 marks)',
-          marks: 10,
-          keyPoints: [
-            'There is tension between family involvement and Grace\'s confidentiality — Grace has explicitly requested that her mother not be told about the partner violence, and this preference should be respected unless imminent serious harm justifies override',
-            'There is tension between autonomy and protection from foreseeable harm — Grace should be supported to make her own safety plan rather than having others take control, as coercive family intervention may increase rather than decrease risk',
-            'There is tension between discharge and foreseeable harm — denial of current suicidal intent does not mean discharge is safe when Grace is returning to an environment of coercive control',
-            'The partner\'s behaviour constitutes family violence — controlling her phone, isolating her from the Deaf community and threatening to stigmatise her mental health are coercive control, not relationship conflict',
-            'Accessible safety planning is essential — because phone control may make standard crisis lines, SMS reminders and appointment communications unsafe or inaccessible for Grace',
-            'Risk assessment must encompass self-harm, suicide, escalation of partner violence, stalking and lethality — because the cutting occurred in a relational crisis context with known coercive dynamics',
-            'Grace\'s mother should not become the default support person — because Grace has specifically identified that her mother\'s involvement would escalate the risk, and this clinical judgement must be respected',
-            'Specialist family violence referral should be offered with accessible communication channels — because psychiatric follow-up alone does not address coercive control and Grace needs specialist safety support',
-            'Deaf community connection is protective and should be actively supported — because isolation from Deaf peers is part of the abuse pattern and restoration of safe community access is a clinical and safety goal',
-            'Confidentiality limits should be explained clearly to Grace — because she needs to understand in what circumstances clinicians might disclose information, and she deserves informed transparency about this',
-            'A defensible consultant position is collaborative safety planning without forced family disclosure — because disclosure to her mother against Grace\'s wishes may directly increase risk',
-            'Discharge requires accessible follow-up and safe communication methods — because standard appointment reminders may be inaccessible given partner phone control',
-            'Consider admission or short-stay if a safe discharge plan cannot be established — because environmental risk may remain high despite Grace denying current intent to die'
-          ]
-        }
-      ],
-      zeroMarkTraps: [
-        'Telling Grace\'s mother because family should know',
-        'Treating the self-harm as attention-seeking as the mother described',
-        'Discharging with a generic crisis hotline number Grace cannot safely use because of phone control'
-      ],
-      postExaminerNote: 'Candidates who named at least three tensions explicitly, recognised coercive control as family violence, respected confidentiality, provided accessible safety planning, offered specialist family violence referral and stated a defensible position scored well. Candidates who disclosed to the mother, used the mother\'s characterisation of attention-seeking, or discharged without an accessible safety plan did not achieve the standard.'
-    },
-    {
-      stemNumber: '3.3',
-      vignette: 'The registrar later says: This took too long because of the interpreter issue. Nursing staff say they often rely on family members for Deaf patients because interpreters delay patient flow. Grace makes a complaint that staff spoke about her as if she was not present and did not explain wound care or follow-up in an accessible way.',
-      question: 'Describe — list and explain your consultant response to the complaint and the service changes needed to improve care for Deaf patients in ED. A list without explanation will not be awarded marks. (8 marks | 8 minutes)',
-      commandWord: 'describe_explain',
-      marks: 8,
-      timeMinutes: 8,
-      stemSignals: [
-        'The registrar framing interpreter access as a delay is the cultural and governance problem that must be directly corrected',
-        'Grace\'s complaint identifies three specific failures: being spoken about rather than to, wound care not explained, follow-up not accessible',
-        'Service reform must go beyond individual feedback to structural change — this is a governance stem'
-      ],
-      domains: [
-        {
-          name: 'Complaint response (4 marks)',
-          marks: 4,
-          keyPoints: [
-            'Acknowledge and apologise for the specific communication failures Grace experienced — explain that she was spoken about rather than included, which is a dignity and rights failure regardless of ED busyness',
-            'Review whether informed consent and wound care instructions were valid — explain that if Grace did not receive accessible information about wound care and follow-up, these obligations remain unfulfilled and need to be remedied',
-            'Offer Grace a follow-up explanation and care plan communicated via an Auslan interpreter — explain that remediation must occur in her accessible language, not in written English as a substitute',
-            'Document the complaint, review findings and improvement actions — explain that Grace\'s complaint is a clinical governance input, not only an interpersonal grievance, and documentation supports organisational learning'
-          ]
-        },
-        {
-          name: 'Service improvement and governance (4 marks)',
-          marks: 4,
-          keyPoints: [
-            'Create an ED protocol requiring professional Auslan interpreters for mental health assessments, consent processes and risk assessments — explain that reliance on family interpreters is clinically and legally unsafe and must be removed from standard practice',
-            'Train ED and nursing staff in Deaf cultural safety — explain that the registrar and nursing staff framed interpreter access as a patient flow problem rather than a clinical safety requirement, reflecting a cultural safety deficit requiring education',
-            'Create visual and accessible information resources for wound care, rights and follow-up for Deaf patients — explain that standard written ED discharge instructions may not be accessible to all Deaf patients as a primary communication format',
-            'Audit interpreter access times and document outcomes where delays occurred — explain that governance requires the service to know whether delays are recurring and whether they correlate with adverse outcomes',
-            'Escalate interpreter delays to clinical leadership as a patient safety issue — explain that delays attributed to patient flow must be recategorised as clinical risk requiring resourcing and process solutions',
-            'Include Deaf consumer input in pathway redesign — explain that service redesign without lived experience from Deaf consumers will miss practical access barriers that are invisible to hearing clinicians',
-            'Provide structured feedback and supervision to the registrar — explain that the learning point is about professional obligation to valid assessment and communication rights, not about efficiency'
-          ]
-        }
-      ],
-      zeroMarkTraps: [
-        'Defending the service on the grounds that the ED was busy',
-        'Attributing the failures to interpreter availability rather than service policy',
-        'Taking no structural service action after the complaint'
-      ],
-      postExaminerNote: 'Candidates who acknowledged the specific failures, offered accessible remediation to Grace, corrected the patient-flow framing, created a structural interpreter protocol, trained staff and escalated interpreter access as a safety issue scored well. Candidates who defended the service, provided only individual feedback to the registrar without systemic change, or failed to address all three specific complaints did not achieve the standard.'
-    }
-  ]
-},
-{
-  id: 'meq_030',
-  title: 'Ethan — ARFID, Medical Risk and Paediatric Ward Fidelity',
-  case: 'Ethan, age 9',
-  examSource: 'Generated — Management / Disposition',
-  topic: 'ARFID following choking incident in a 9-year-old admitted with bradycardia and dehydration; tests diagnostic differentiation from anorexia nervosa, refeeding risk, parental disagreement and paediatric ward treatment fidelity',
-  primaryDomain: 'Management / Disposition',
-  totalMarks: 32,
-  totalTimeMinutes: 32,
-  stems: [
-    {
-      stemNumber: '4.1',
-      vignette: 'Ethan is a 9-year-old boy admitted to the paediatric ward with weight loss, dehydration and bradycardia. Three months ago he choked on a piece of meat at a family barbecue. Since then he has progressively restricted food, first avoiding meat, then solids, then most fluids. He says food will get stuck and kill me. His parents have been sleeping beside him and offering preferred drinks through the night. The paediatric team asks whether this is anorexia nervosa and whether an SSRI should be started.',
-      question: 'Outline — list and justify your diagnostic formulation and immediate treatment priorities. A list without case-specific justification will not be awarded marks. (8 marks | 8 minutes)',
-      commandWord: 'outline_justify',
-      marks: 8,
-      timeMinutes: 8,
-      stemSignals: [
-        'ARFID versus anorexia nervosa is the direct diagnostic question — the presence of a traumatic triggering event and fear of aversive consequences rather than body image concerns distinguishes them',
-        'SSRI is not first-line acute treatment for ARFID — the team\'s suggestion is a direct examiner trap requiring correction',
-        'Bradycardia is a medical emergency requiring immediate response regardless of diagnostic formulation'
-      ],
-      domains: [
-        {
-          name: 'Diagnostic formulation (4 marks)',
-          marks: 4,
-          keyPoints: [
-            'ARFID is the leading diagnosis — because food restriction followed a specific choking event and is driven by fear of aversive consequences rather than fear of weight gain or body shape concerns',
-            'Anorexia nervosa is not supported by the history as presented — because there is no weight or shape overvaluation described and the restriction has a clear traumatic trigger with identifiable fear content',
-            'Specific choking phobia or food-related PTSD should be considered — because the core belief is that food will get stuck and cause death, consistent with a conditioned fear response to the choking experience',
-            'Organic dysphagia must be excluded — because the choking narrative does not rule out structural oesophageal pathology, and physical causes of swallowing difficulty require active investigation',
-            'Parental accommodation is a maintaining factor — because parents offering preferred drinks overnight and sleeping beside Ethan reinforces avoidance rather than supporting graduated approach to feared foods'
-          ]
-        },
-        {
-          name: 'Immediate treatment priorities (4 marks)',
-          marks: 4,
-          keyPoints: [
-            'Medical stabilisation is the immediate priority — because weight loss, dehydration and bradycardia indicate serious physical risk requiring urgent paediatric-led management',
-            'Assess refeeding risk and monitor electrolytes — because nutritional rehabilitation may cause dangerous electrolyte shifts and must be managed with medical oversight from the outset',
-            'Use a paediatric-led nutrition plan — because feeding must be medically safe, consistent and not left to parental negotiation until a structured evidence-based plan is in place',
-            'Explain that SSRI is not indicated as first-line acute treatment — because the immediate priority is medical stabilisation, nutrition and behavioural exposure; pharmacotherapy is not the primary intervention for ARFID',
-            'Begin psychoeducation for parents — because reducing accommodation and shifting from rescue to supported graded approach is essential to recovery from ARFID',
-            'Arrange early child mental health involvement — because exposure-based and family-supported treatment requires specialist coordination alongside medical care'
-          ]
-        }
-      ],
-      zeroMarkTraps: [
-        'Diagnosing anorexia nervosa solely because Ethan has lost weight without considering the trauma trigger and fear content',
-        'Starting SSRI as the primary or most urgent intervention',
-        'Failing to address bradycardia as an immediate medical emergency'
-      ],
-      postExaminerNote: 'Candidates who distinguished ARFID from anorexia nervosa on the basis of trigger and fear content, refused the SSRI recommendation, prioritised medical stabilisation, named parental accommodation as a maintaining factor and outlined an exposure-based treatment approach scored well. Candidates who diagnosed anorexia nervosa, recommended SSRI as the priority intervention, or did not address the medical urgency of bradycardia did not achieve the standard.'
-    },
-    {
-      stemNumber: '4.2',
-      vignette: 'Ethan becomes distressed when nasogastric feeding is discussed and hides under the bed. His father says forcing a tube will traumatise him and threatens to take him home. His mother says: We have tried being gentle and he is getting sicker. The paediatric registrar says Ethan\'s electrolytes are borderline and feeding cannot wait for weeks of therapy.',
-      question: 'Discuss — list and debate how you would balance medical risk, psychological trauma, parental disagreement and least restrictive care. You must name the tensions explicitly and take a defensible consultant position. (9 marks | 9 minutes)',
-      commandWord: 'debate',
-      marks: 9,
-      timeMinutes: 9,
-      stemSignals: [
-        'Least restrictive does not mean medically ineffective — this is the central principle and must appear in the answer',
-        'Parental disagreement must be addressed through alignment, not by endorsing one parent\'s position',
-        'Legal authority for medically necessary treatment over parental objection must be considered if the father follows through on threatening to remove Ethan'
-      ],
-      domains: [
-        {
-          name: 'Competing tensions and defensible position (9 marks)',
-          marks: 9,
-          keyPoints: [
-            'There is tension between medical urgency and psychological trauma — nasogastric feeding may distress Ethan, but borderline electrolytes and bradycardia are life-threatening if unaddressed and cannot be deferred indefinitely',
-            'There is tension between least restrictive care and treatment adequacy — the least restrictive option must still provide medically safe nutrition; avoiding all restriction at the cost of medical safety is not defensible',
-            'There is tension between parental disagreement — the father prioritises trauma avoidance while the mother recognises that avoidance is worsening Ethan\'s medical state, and both parents need to be heard and aligned',
-            'A defensible position is to use the least coercive medically safe feeding plan available — because medical risk cannot be ignored but coercive feeding without formulation and preparation is more traumatic',
-            'Explain the clinical rationale to Ethan developmentally — because predictability and understanding reduce procedural trauma; he should know what will happen and why in language a 9-year-old can process',
-            'Offer graded choices within firm clinical boundaries — because Ethan can have some control over flavour, timing, coping support or who is present, but the requirement for adequate nutrition is not negotiable',
-            'Use psychological and behavioural support around feeding — because preparation, distraction and therapeutic presence reduce procedural trauma and build towards voluntary engagement',
-            'If NG feeding is necessary, plan it as a contained and humane procedure — because sudden restraint after prolonged negotiation is more traumatic than a planned, explained and prepared intervention',
-            'Engage both parents in a unified plan before any restrictive feeding — because parental splitting directly reinforces Ethan\'s avoidance and undermines any treatment approach',
-            'Assess legal authority if the father follows through on threatening to remove Ethan — because parental refusal of medically necessary treatment for a child with serious medical risk may require child protection intervention',
-            'Review daily and step down to less restrictive options as soon as medically safe — because ongoing compulsory feeding must be minimised and autonomy progressively restored',
-            'Document the risk, alternatives considered and clinical rationale — because decisions involving restricted or compulsory feeding of a child are ethically and legally high-stakes'
-          ]
-        }
-      ],
-      zeroMarkTraps: [
-        'Refusing all nasogastric feeding on the grounds of psychological trauma without acknowledging life-threatening medical risk',
-        'Proceeding immediately to restraint and tube insertion without exhausting less restrictive options',
-        'Endorsing one parent\'s position without a shared family plan'
-      ],
-      postExaminerNote: 'Candidates who named the medical-trauma tension explicitly, stated a defensible least-restrictive-but-medically-adequate position, offered parental alignment, used developmentally appropriate explanation, addressed legal authority and committed to daily review scored well. Candidates who refused all restrictive feeding regardless of medical risk, or who proceeded to restraint without less restrictive attempts, did not achieve the standard.'
-    },
-    {
-      stemNumber: '4.3',
-      vignette: 'After medical stabilisation, Ethan accepts small amounts of yoghurt and soup but refuses school attendance because he fears classmates will watch him eat. His parents disagree: his father wants home schooling until he is fully better, while his mother wants a rapid return to normal routines. The school asks for written advice about lunchtime supervision.',
-      question: 'Describe — list and explain a medium-term treatment plan for Ethan, including family, school and psychological interventions. A list without explanation will not be awarded marks. (8 marks | 8 minutes)',
-      commandWord: 'describe_explain',
-      marks: 8,
-      timeMinutes: 8,
-      stemSignals: [
-        'School avoidance is an extension of the avoidance maintaining mechanism and must be treated as part of the ARFID plan, not as a separate problem',
-        'Home schooling until fully better reinforces avoidance and delays recovery — this must be addressed directly',
-        'School advice should be functional and consented, not a disclosure of private clinical content'
-      ],
-      domains: [
-        {
-          name: 'Psychological treatment and nutritional monitoring (4 marks)',
-          marks: 4,
-          keyPoints: [
-            'Use exposure-based treatment targeting choking fear and avoided food textures — explain that graded exposure to feared foods directly addresses the maintaining mechanism and is the core psychological treatment for ARFID in this age group',
-            'Use family-based treatment principles — explain that parents must understand and consistently implement the approach at home, as parental accommodation of avoidance drives maintenance of the disorder',
-            'Set a structured meal plan with predictable expectations — explain that consistent expectations across contexts reduce negotiation cycles and help Ethan develop tolerance for eating without rescue',
-            'Reduce parental overnight accommodation of preferred drinks — explain that this reinforces the message that eating is dangerous and disrupts the progress made during day treatment',
-            'Monitor nutritional recovery through growth, vitals and bloods — explain that psychological treatment must be matched by objective medical monitoring to detect early relapse'
-          ]
-        },
-        {
-          name: 'Family alignment and school reintegration (4 marks)',
-          marks: 4,
-          keyPoints: [
-            'Align both parents around one shared treatment plan — explain that the father\'s preference for home schooling and the mother\'s push for rapid return represent opposite ends of an avoidance-versus-exposure axis; both need to understand the shared recovery goal',
-            'Refuse home schooling as the primary plan — explain that avoiding school until fully recovered extends avoidance, delays normal development and removes the contextual exposure that supports generalisation',
-            'Plan graded school return beginning with partial days and low-demand eating contexts — explain that school avoidance is an extension of the eating fear and responds to the same graduated approach as food exposure',
-            'Develop a lunchtime support plan with the school — explain that supervision should reduce anxiety and provide a low-demand eating context, not surveillance or enforcement of meal completion by teachers',
-            'Communicate with the school using functional recommendations and consented limited clinical information — explain that the school needs practical guidance rather than private clinical details, and what is shared requires parental consent',
-            'Plan relapse prevention including identification of triggers — explain that future choking experiences, illness, peer comments or stressful events may trigger renewed restriction and families and school need an early warning and response plan'
-          ]
-        }
-      ],
-      zeroMarkTraps: [
-        'Supporting home schooling until Ethan is fully recovered',
-        'Providing psychological therapy without nutritional monitoring',
-        'Advising the school to watch Ethan eat without a structured support plan'
-      ],
-      postExaminerNote: 'Candidates who linked every intervention to the maintaining mechanism of fear and avoidance, refused home schooling as a recovery strategy, planned graded school reintegration, aligned both parents and included medical monitoring scored well. Candidates who supported home schooling, provided therapy without nutritional monitoring, or gave the school surveillance instructions without a plan did not achieve the standard.'
-    },
-    {
-      stemNumber: '4.4',
-      vignette: 'At the ward case review, nurses report that different staff give different messages about whether Ethan must finish meals. Some staff allow parents to negotiate alternatives; others insist on strict completion. Ethan has begun asking for the nice nurse and refusing meals with others.',
-      question: 'Outline — list and justify how you would improve team consistency and treatment fidelity on the paediatric ward. A list without case-specific justification will not be awarded marks. (7 marks | 7 minutes)',
-      commandWord: 'outline_justify',
-      marks: 7,
-      timeMinutes: 7,
-      stemSignals: [
-        'Ethan asking for the nice nurse is staff splitting — a direct clinical consequence of treatment inconsistency that must be named explicitly',
-        'Governance response required — inconsistency is a treatment fidelity and patient safety issue, not only a staff communication problem',
-        'Flexibility within a framework is correct; ad hoc individual decision-making by each shift is the problem to be solved'
-      ],
-      domains: [
-        {
-          name: 'Ward process and treatment fidelity (4 marks)',
-          marks: 4,
-          keyPoints: [
-            'Create a written meal-support plan accessible at the bedside — because inconsistent staff responses to Ethan\'s avoidance directly undermine treatment by providing unpredictable responses to a fear-driven behaviour',
-            'Define what is non-negotiable and what choices Ethan has within the plan — because he needs predictable boundaries; staff ambiguity amplifies anxiety and enables splitting between staff members',
-            'Use consistent language and approach across all staff and all shifts — because mixed messages from different nurses teach Ethan that persistence and distress produce different outcomes, reinforcing avoidance behaviour',
-            'Clarify parent roles during meals and include this in the written plan — because parents may unintentionally negotiate or rescue during meals without understanding the treatment rationale'
-          ]
-        },
-        {
-          name: 'Staff support, education and governance (3 marks)',
-          marks: 3,
-          keyPoints: [
-            'Convene an MDT case conference including paediatrics, nursing, dietetics and child mental health — because all disciplines need to agree on one formulation and one approach before the plan can be consistently implemented',
-            'Provide staff education on ARFID and the role of accommodation — because staff who believe they are being kind by allowing food alternatives do not understand that flexibility at the wrong decision point reinforces avoidance',
-            'Nominate a clinical lead responsible for plan updates and deviations — because ad hoc changes without a designated decision-maker undermine consistency and enable each shift to make independent decisions',
-            'Review Ethan\'s meal outcomes and distress indicators daily — because the plan must be adjusted based on clinical data and dietetic review, not individual staff preference or parental pressure',
-            'Document deviations from the plan and their rationale — because consistency does not mean rigidity, but unplanned deviations must be recorded to identify patterns and inform clinical review'
-          ]
-        }
-      ],
-      zeroMarkTraps: [
-        'Attributing the inconsistency to individual nursing attitudes without a governance response',
-        'Allowing each shift to continue making independent decisions about the meal plan',
-        'Imposing rigid meal completion rules without clinical review or formulation-based flexibility'
-      ],
-      postExaminerNote: 'Candidates who named the splitting dynamic, produced a written plan with defined non-negotiables and allowable choices, convened an MDT, educated staff on ARFID accommodation, nominated a clinical lead and built in daily review scored well. Candidates who blamed nurses without systemic action, allowed continued shift-level decision-making, or imposed rigid rules without review or flexibility did not achieve the standard.'
-    }
-  ]
-},
-{
-  id: 'meq_031',
-  title: 'Sione — Bipolar Disorder, Steroid Mania and Renal Transplant',
-  case: 'Sione, age 38',
-  examSource: 'Generated — Formulation / Diagnostic Reasoning',
-  topic: 'Steroid-triggered bipolar relapse in a 38-year-old Samoan man six months after renal transplant; tests cultural and biological formulation, capacity in mania, compulsory treatment ethics and transplant shared-care governance',
-  primaryDomain: 'Formulation / Diagnostic Reasoning',
-  totalMarks: 32,
-  totalTimeMinutes: 32,
-  stems: [
-    {
-      stemNumber: '5.1',
-      vignette: 'Sione is a 38-year-old Samoan man admitted under renal medicine with deteriorating kidney function six months after a renal transplant. The renal team is concerned he has missed immunosuppressant doses. Sione says the tablets are weakening my spirit and that prayer and traditional healing will restore the kidney. His wife says he has been sleeping poorly, spending large amounts of money on church donations, and saying God gave him a second kidney for a purpose. He is taking high-dose prednisolone and tacrolimus. The renal consultant asks whether Sione is manic, psychotic, or simply non-adherent.',
-      question: 'Outline — list and justify the key elements of your formulation of Sione\'s presentation. A list without case-specific justification will not be awarded marks. (8 marks | 8 minutes)',
-      commandWord: 'outline_justify',
-      marks: 8,
-      timeMinutes: 8,
-      stemSignals: [
-        'The renal team\'s three-way framing — manic, psychotic or non-compliant — is a false choice; all three may interact and cultural belief is a fourth dimension that must be assessed first',
-        'Prednisolone-triggered mania is the most clinically urgent biological hypothesis — it must be named explicitly',
-        'Non-adherence must be formulated as multifactorial, not dismissed as wilfulness'
-      ],
-      domains: [
-        {
-          name: 'Cultural and biological formulation (5 marks)',
-          marks: 5,
-          keyPoints: [
-            'Explore Sione\'s spiritual and cultural explanatory model before pathologising belief — because the belief that prayer and traditional healing will restore the kidney may be culturally normative for a Samoan man with strong church community, and cultural safety requires curiosity before clinical categorisation',
-            'Consider steroid-triggered or steroid-induced mania as the leading biological hypothesis — because high-dose prednisolone combined with reduced sleep, disinhibited spending and grandiose sense of divine purpose in a man with possible bipolar history is a strong clinical pattern',
-            'Consider bipolar relapse precipitated by corticosteroid exposure — because if Sione has a prior bipolar diagnosis or subthreshold episodes, corticosteroids are a recognised precipitant of manic relapse',
-            'Assess psychosis versus culturally framed grandiose belief — because God gave me a second kidney for a purpose may be a deeply held Samoan Christian belief, an overvalued idea or a psychotic symptom, and the management implications are fundamentally different',
-            'Consider neuropsychiatric effects of tacrolimus — because calcineurin inhibitors are associated with neuropsychiatric adverse effects including agitation, mood change and cognitive change that may contribute to the presentation',
-            'Formulate non-adherence as multifactorial — because missed immunosuppression may reflect spiritual beliefs, manic disinhibition, medication side effects, health literacy, stigma, cost or inadequate psychoeducation, not simply wilfulness',
-            'Assess Sione\'s prior experience with Australian healthcare and cultural barriers to adherence — because prior negative experiences or language and cultural barriers may contribute to non-adherence alongside the spiritual explanatory model'
-          ]
-        },
-        {
-          name: 'System, urgency and assessment priorities (3 marks)',
-          marks: 3,
-          keyPoints: [
-            'Assess transplant risk urgently in parallel with psychiatric formulation — because missed immunosuppression may cause irreversible graft rejection and this is a time-critical medical issue running alongside the psychiatric assessment',
-            'Obtain collateral from wife, GP and renal pharmacist — because Sione\'s insight may be impaired by mania and the pattern of medication adherence requires external verification',
-            'Assess capacity for current clinical decisions — because if mania is driving Sione\'s refusal of biopsy and immunosuppression, his capacity for these specific decisions must be formally assessed',
-            'Review prior bipolar history and previous hospitalisations — because confirmation of a prior bipolar diagnosis with steroid-triggered mania changes the formulation from possible first-episode to known relapse risk with different treatment implications'
-          ]
-        }
-      ],
-      zeroMarkTraps: [
-        'Labelling all spiritual and religious beliefs as delusional without cultural assessment',
-        'Reducing the presentation to simple non-compliance without biological or cultural formulation',
-        'Ignoring prednisolone as a recognised psychiatric risk factor'
-      ],
-      postExaminerNote: 'Candidates who held cultural belief and biological mania as simultaneous hypotheses, named steroid-triggered mania, distinguished psychosis from cultural belief, formulated non-adherence as multifactorial and assessed transplant urgency scored well. Candidates who called all religious belief psychotic, labelled the presentation as non-compliance, or ignored prednisolone did not achieve the standard.'
-    },
-    {
-      stemNumber: '5.2',
-      vignette: 'Sione refuses a renal biopsy and says he will leave hospital to attend a church healing service. His wife wants you to make him stay. His pastor arrives and asks to pray with the family before any further medical discussion. The renal team says biopsy delay may risk irreversible graft loss.',
-      question: 'Describe — list and explain your approach to capacity, engagement, cultural formulation and immediate risk management. A list without explanation will not be awarded marks. (8 marks | 8 minutes)',
-      commandWord: 'describe_explain',
-      marks: 8,
-      timeMinutes: 8,
-      stemSignals: [
-        'Excluding the pastor is a cultural safety error — the pastor may actively support medical care if respectfully engaged',
-        'Capacity is decision-specific and must be formally assessed; mania may impair weighing without removing all elements of capacity',
-        'The wife wanting you to make him stay is not legal authority — substitute decision-making applies only after incapacity is formally established'
-      ],
-      domains: [
-        {
-          name: 'Capacity assessment and cultural engagement (5 marks)',
-          marks: 5,
-          keyPoints: [
-            'Assess biopsy-specific capacity — explain that capacity is decision-specific and high-stakes; formal assessment of Sione\'s understanding of graft rejection risk and his reasoning for refusal is required before any other clinical or legal response',
-            'Assess whether grandiosity and reduced sleep are impairing his ability to weigh the consequences of refusal — explain that mania may undermine the reasoning and weighing elements of capacity even if Sione can articulate some understanding',
-            'Assess whether spiritual and cultural beliefs preclude realistic weighing of medical risk — explain that cultural belief does not preclude capacity, but if Sione cannot weigh medical consequences against his beliefs at all, this is relevant to the capacity determination',
-            'Use respectful curiosity about Sione\'s spiritual framework — explain that dismissing prayer and traditional healing will damage therapeutic alliance and is culturally unsafe; exploring what prayer means to him and whether it can coexist with medical care builds trust',
-            'Welcome the pastor with Sione\'s consent and involve him as a potential ally — explain that a pastor who understands the graft loss risk may support Sione\'s engagement with medical care; exclusion is both culturally unsafe and clinically counterproductive',
-            'Negotiate a sequenced approach where possible — explain that allowing prayer before further medical discussion may reduce conflict without delaying urgent care unacceptably, and demonstrates cultural respect'
-          ]
-        },
-        {
-          name: 'Risk management and immediate plan (3 marks)',
-          marks: 3,
-          keyPoints: [
-            'Assess and quantify the medical urgency with the renal team — explain that psychiatric risk management must be calibrated to the clinical time frame; if biopsy can be deferred hours for respectful family engagement, this is different from an immediate life-threatening emergency',
-            'Treat sleep disturbance and agitation with renal-safe medications while engagement proceeds — explain that targeted symptom management may restore capacity and improve engagement without requiring immediate compulsion',
-            'Assess elopement risk and consequences of leaving hospital — explain that if Sione leaves and misses the biopsy window, irreversible graft loss may result, and this must be factored into the risk assessment and legal considerations',
-            'Document capacity assessment, cultural formulation, risks and agreed plan — explain that refusal of biopsy in this clinical context is ethically and legally complex and contemporaneous documentation is essential'
-          ]
-        }
-      ],
-      zeroMarkTraps: [
-        'Excluding the pastor automatically as a barrier to medical care',
-        'Assuming Sione lacks capacity because he chooses prayer over biopsy',
-        'Treating the wife\'s request to make him stay as sufficient legal authority without a capacity assessment'
-      ],
-      postExaminerNote: 'Candidates who assessed biopsy-specific capacity formally, engaged the pastor respectfully as a potential ally, explored cultural belief without pathologising it, managed the medical urgency in parallel and documented carefully scored well. Candidates who excluded the pastor, assumed incapacity from religious belief or deferred to the wife without formal capacity assessment did not achieve the standard.'
-    },
-    {
-      stemNumber: '5.3',
-      vignette: 'Collateral from Sione\'s wife and GP suggests he has a history of bipolar disorder with previous steroid-triggered mania. He has stopped lithium because he feared kidney harm. He is now irritable, grandiose, pressured and has limited insight. The renal team asks whether they can treat him involuntarily to protect the transplant.',
-      question: 'Discuss — list and debate the competing clinical, legal and ethical duties in deciding whether compulsory psychiatric treatment or detention is justified. You must name the tensions explicitly and take a defensible consultant position. (8 marks | 8 minutes)',
-      commandWord: 'debate',
-      marks: 8,
-      timeMinutes: 8,
-      stemSignals: [
-        'The renal team asking whether involuntary treatment can protect the transplant is a legal misunderstanding — psychiatric detention does not authorise renal procedures',
-        'Mania causing impaired insight and capacity may justify compulsory psychiatric treatment; this is legally and ethically separate from authorising immunosuppression',
-        'Least restrictive alternatives must be exhausted and documented before any compulsory treatment'
-      ],
-      domains: [
-        {
-          name: 'Competing tensions, legal analysis and defensible position (8 marks)',
-          marks: 8,
-          keyPoints: [
-            'There is tension between autonomy and foreseeable medical harm — Sione\'s refusal may not be autonomous if mania is impairing his insight and decision-making capacity, but this must be established through formal assessment',
-            'There is tension between cultural respect and clinical pathologising — compulsory psychiatric treatment must be based on impaired capacity from mental disorder, not on disagreement with his use of prayer or traditional healing',
-            'There is tension between least restrictive care and graft preservation — losing the transplant is a serious medical consequence, but compulsion must meet legal criteria and be proportionate to that specific risk',
-            'Compulsory psychiatric treatment may be justified if mania causes seriously impaired insight and risk — because irritability, grandiosity, pressured speech, limited insight and confirmed steroid-triggered relapse indicate a treatable mental illness impairing capacity',
-            'Mental health legislation does not automatically authorise renal biopsy or immunosuppression — explain that a psychiatric detention order covers psychiatric treatment; it does not extend to authorising renal procedures without separate consent or legal authority',
-            'Separate legal pathways apply to renal treatment if Sione lacks capacity — explain that biopsy and immunosuppression may require guardianship, substitute decision-making or emergency treatment authority depending on jurisdiction, and this must be pursued in parallel',
-            'Voluntary engagement should be fully attempted before compulsion — explain that wife, pastor, cultural support, sleep medication and MDT meeting may achieve a voluntary agreement and must be documented as attempted',
-            'If voluntary engagement fails and Sione is about to leave with impaired capacity, short-term psychiatric detention may be defensible — because this allows assessment and treatment of mania while preventing serious deterioration',
-            'Least restrictive principle must be applied and documented — because the least restrictive effective option must be tried and clearly documented before any escalation to compulsory measures',
-            'Legal and ethics consultation should be sought — because this case crosses psychiatric and medical treatment authority and involves transplant-specific ethical complexity requiring senior input',
-            'Review and restoration of autonomy must be planned from the outset — because compulsory treatment should be time-limited to the acute manic episode with autonomy restored as soon as safely possible'
-          ]
-        }
-      ],
-      zeroMarkTraps: [
-        'Using the Mental Health Act to authorise renal biopsy or immunosuppression without legal analysis',
-        'Concluding Sione is psychotic because he holds religious beliefs without formal mental state assessment',
-        'Proceeding to compulsory treatment without documenting exhausted least restrictive alternatives'
-      ],
-      postExaminerNote: 'Candidates who named the autonomy-harm tension and the cultural respect-pathologising tension explicitly, distinguished compulsory psychiatric treatment from authorising renal procedures, applied least restrictive principle, identified the separate legal pathway for renal consent and stated a defensible position scored well. Candidates who used the Mental Health Act to force the biopsy, labelled religious belief as psychosis without assessment, or ignored least restrictive alternatives did not achieve the standard.'
-    },
-    {
-      stemNumber: '5.4',
-      vignette: 'Sione improves after treatment and agrees to continue immunosuppression, but the renal pharmacist says there is no shared protocol for psychiatric relapse prevention in transplant patients receiving high-dose steroids. Renal staff have been documenting non-compliance without recording cultural, medication or mental-state contributors. The transplant unit asks you to recommend a safer shared-care process.',
-      question: 'Describe — list and explain the shared-care, documentation and governance changes you would recommend between renal medicine, psychiatry, pharmacy, GP, family and cultural supports. A list without explanation will not be awarded marks. (8 marks | 8 minutes)',
-      commandWord: 'describe_explain',
-      marks: 8,
-      timeMinutes: 8,
-      stemSignals: [
-        'Non-compliance documentation must be replaced by descriptive adherence formulation — this is the governance change explicitly identified in the stem',
-        'Steroid-triggered mania is a predictable and preventable complication — the protocol must identify patients at risk before steroids are escalated, not after crisis',
-        'All six named groups must appear in the answer: renal medicine, psychiatry, pharmacy, GP, family and cultural supports'
-      ],
-      domains: [
-        {
-          name: 'Shared-care pathway and relapse prevention (4 marks)',
-          marks: 4,
-          keyPoints: [
-            'Create a transplant psychiatry relapse-prevention protocol for patients receiving high-dose corticosteroids — explain that steroid-triggered mania is a predictable complication in patients with bipolar disorder and proactive identification prevents the crisis Sione experienced',
-            'Identify high-risk patients before steroid escalation — explain that a prior bipolar diagnosis, previous steroid-triggered mania and lithium discontinuation should trigger an automatic psychiatry review at the point of prescribing, not after relapse',
-            'Define monitoring roles across renal medicine, psychiatry, pharmacy, GP, family and cultural supports — explain that relapse detection and adherence support cross multiple service boundaries and requires role clarity to prevent gaps',
-            'Develop renal-safe mood stabilisation guidance with transplant pharmacy — explain that the lithium-renal interaction is a known barrier to standard bipolar prophylaxis and requires specialist pharmacological guidance unique to transplant patients',
-            'Include family and cultural supports with Sione\'s consent — explain that his wife and Samoan community supports may provide early warning of relapse signs before clinical contact and their inclusion in the care plan is clinically protective'
-          ]
-        },
-        {
-          name: 'Documentation, governance and audit (4 marks)',
-          marks: 4,
-          keyPoints: [
-            'Replace the term non-compliance with descriptive adherence formulation — explain that pejorative documentation labels obscure cultural beliefs, medication side effects, manic disinhibition and service barriers, and adversely affect clinical decision-making',
-            'Require explicit documentation of cultural formulation and medication contributors for each adherence concern — explain that Sione\'s case shows that missed immunosuppression attributed to non-compliance masked treatable mania and cultural safety concerns',
-            'Build early warning signs into the transplant plan and shared record — explain that Sione\'s relapse signs included poor sleep, increased spending and religious grandiosity; these should be named in the shared plan so any team member can act early',
-            'Create rapid-access psychiatric review pathways during steroid pulse courses — explain that waiting for crisis after steroid escalation risks graft loss and requires same-week psychiatric availability built into the protocol',
-            'Audit missed immunosuppression cases retrospectively for mental health contributors — explain that the documentation review will identify how many cases attributed to non-compliance had unrecognised psychiatric or cultural contributors',
-            'Provide renal and transplant staff education on steroid psychiatric effects — explain that early recognition of mood and behaviour change after prednisolone escalation can trigger earlier intervention and prevent graft-threatening crises'
-          ]
-        }
-      ],
-      zeroMarkTraps: [
-        'Recommending only counselling Sione about medication compliance without system change',
-        'Omitting pharmacy from the shared-care plan',
-        'Providing no relapse prevention or monitoring plan despite confirmed steroid-triggered mania history'
-      ],
-      postExaminerNote: 'Candidates who replaced non-compliance language with adherence formulation, identified proactive steroid-risk identification, named all six system partners, developed renal-safe pharmacological guidance and built audit and education into the governance response scored well. Candidates who focused only on individual patient compliance, omitted cultural or pharmacy components, or provided no governance structure or audit did not achieve the standard.'
-    }
-  ]
-}
 ];
 
 // ============================================================

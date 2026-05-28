@@ -1,7 +1,7 @@
 {
   "version": "1.0",
   "lastUpdated": "2026-05-28",
-  "totalQuestions": 31,
+  "totalQuestions": 26,
   "questions": [
     {
       "id": "meq_001",
@@ -320,81 +320,6 @@
     },
     {
       "id": "meq_022",
-      "title": "Leo \u2014 Early Childhood Crisis & Inter-Agency Governance",
-      "usedIn": "daily_meq",
-      "primaryDomain": "Governance / Systems / Leadership",
-      "ageGroup": "0-5",
-      "setting": "ED",
-      "clinicalTheme": "Preschool behavioural crisis in a child with suspected neurodevelopmental disorder, family violence exposure and homelessness. Inter-agency pathway failure across ED, CYMHS, early childhood intervention and child protection.",
-      "culturalTag": "none",
-      "pressureSequence": "ED sedation request escalates to family violence and homelessness disclosure, then childcare safety certification demand, then clinical director system review",
-      "finalDilemma": "Governance and workforce actions required to build a safe early-childhood crisis pathway across six agencies with a six-month waitlist",
-      "patientName": "Leo",
-      "createdAt": "2026-05-28",
-      "status": "active"
-    },
-    {
-      "id": "meq_023",
-      "title": "Frances Morton \u2014 Dialysis Withdrawal & Capacity",
-      "usedIn": "daily_meq",
-      "primaryDomain": "Ethics / Professionalism / Legal",
-      "ageGroup": "80+",
-      "setting": "CL",
-      "clinicalTheme": "Capacity to refuse life-sustaining dialysis in an 84-year-old with depression, grief and chronic pain. Ethical tensions between autonomy, beneficence and family conflict in end-of-life decision-making.",
-      "culturalTag": "none",
-      "pressureSequence": "Daughter requests incapacity certification, escalates to interstate sibling conflict and executive complaint threat, then protocol development for psychiatric consultation in dialysis withdrawal",
-      "finalDilemma": "Designing a local protocol that addresses inconsistent capacity documentation, late palliative care referral and family conflict escalation in dialysis withdrawal decisions",
-      "patientName": "Frances",
-      "createdAt": "2026-05-28",
-      "status": "active"
-    },
-    {
-      "id": "meq_024",
-      "title": "Grace \u2014 Deaf Patient, IPV & Service Reform",
-      "usedIn": "daily_meq",
-      "primaryDomain": "Communication / Collaboration",
-      "ageGroup": "26-64",
-      "setting": "ED",
-      "clinicalTheme": "Self-harm assessment in a Deaf Auslan-speaking woman with coercive control by intimate partner. Communication access failure, confidentiality and accessible safety planning in emergency psychiatry.",
-      "culturalTag": "Deaf community",
-      "pressureSequence": "Mother attempts to interpret and minimise, escalates to coercive control disclosure and confidentiality conflict with family, then systemic complaint about Deaf patient care",
-      "finalDilemma": "Service-level changes required to provide equitable, accessible and safe emergency mental health care for Deaf patients",
-      "patientName": "Grace",
-      "createdAt": "2026-05-28",
-      "status": "active"
-    },
-    {
-      "id": "meq_025",
-      "title": "Ethan \u2014 ARFID, Medical Risk & Team Fidelity",
-      "usedIn": "daily_meq",
-      "primaryDomain": "Formulation / Diagnostic Reasoning",
-      "ageGroup": "6-12",
-      "setting": "inpatient",
-      "clinicalTheme": "ARFID following traumatic choking incident with medical deterioration, parental conflict and ward treatment inconsistency. Differential from anorexia nervosa and least restrictive feeding approach.",
-      "culturalTag": "none",
-      "pressureSequence": "Anorexia versus ARFID diagnostic pressure escalates to nasogastric feeding conflict with parental splitting, then school avoidance, then ward team splitting and treatment fidelity failure",
-      "finalDilemma": "Restoring treatment fidelity on a paediatric ward where inconsistent staff responses are maintaining avoidance through splitting",
-      "patientName": "Ethan",
-      "createdAt": "2026-05-28",
-      "status": "active"
-    },
-    {
-      "id": "meq_026",
-      "title": "Sione \u2014 Bipolar, Steroid Mania & Renal Transplant",
-      "usedIn": "daily_meq",
-      "primaryDomain": "Management / Disposition",
-      "ageGroup": "26-64",
-      "setting": "CL",
-      "clinicalTheme": "Steroid-triggered bipolar relapse in a Samoan man post-renal transplant with missed immunosuppression and spiritual explanatory model. Cultural formulation, capacity, compulsory treatment and transplant shared care.",
-      "culturalTag": "Samoan / Pacific Islander",
-      "pressureSequence": "Non-adherence framed as cultural or spiritual escalates to imminent elopement and biopsy refusal, then confirmed mania and compulsory treatment question, then shared-care protocol development",
-      "finalDilemma": "Shared-care, documentation and governance changes to prevent steroid-triggered psychiatric relapse and reductive non-compliance documentation in renal transplant patients",
-      "patientName": "Sione",
-      "createdAt": "2026-05-28",
-      "status": "active"
-    },
-    {
-      "id": "meq_027",
       "title": "Leo \u2014 Early Childhood Crisis and Inter-Agency Governance",
       "usedIn": "daily_meq",
       "primaryDomain": "Governance / Systems / Leadership",
@@ -409,7 +334,7 @@
       "status": "active"
     },
     {
-      "id": "meq_028",
+      "id": "meq_023",
       "title": "Frances Morton \u2014 Dialysis Withdrawal, Capacity and Family Conflict",
       "usedIn": "daily_meq",
       "primaryDomain": "Ethics / Professionalism / Legal",
@@ -424,7 +349,7 @@
       "status": "active"
     },
     {
-      "id": "meq_029",
+      "id": "meq_024",
       "title": "Grace \u2014 Deaf Patient, IPV and ED Service Reform",
       "usedIn": "daily_meq",
       "primaryDomain": "Communication / Collaboration",
@@ -439,7 +364,7 @@
       "status": "active"
     },
     {
-      "id": "meq_030",
+      "id": "meq_025",
       "title": "Ethan \u2014 ARFID, Medical Risk and Paediatric Ward Fidelity",
       "usedIn": "daily_meq",
       "primaryDomain": "Management / Disposition",
@@ -454,7 +379,7 @@
       "status": "active"
     },
     {
-      "id": "meq_031",
+      "id": "meq_026",
       "title": "Sione \u2014 Bipolar Disorder, Steroid Mania and Renal Transplant",
       "usedIn": "daily_meq",
       "primaryDomain": "Formulation / Diagnostic Reasoning",
