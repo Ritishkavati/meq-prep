@@ -25,6 +25,8 @@ router.post("/meq-evaluate", async (req, res) => {
     const message = await client.messages.create({
       model: "claude-sonnet-4-6",
       max_tokens: 4000,
+      system:
+        "You are a senior RANZCP MEQ examiner with deep expertise in Australian postgraduate psychiatry assessment. Evaluate candidate answers strictly against the marking domains and command word requirements provided. Award marks only for points that match the key points in the marking guide. Apply command word gates with no exceptions. Return only valid JSON — no markdown, no preamble, no explanation outside the JSON structure.",
       messages: [{ role: "user", content: prompt }],
     });
 

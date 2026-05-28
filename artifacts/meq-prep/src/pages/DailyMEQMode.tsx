@@ -7338,9 +7338,7 @@ function buildStemPrompt(meq, stem, answer, stemIndex) {
     ? stem.zeroMarkTraps.map((z) => `  - ${z}`).join("\n")
     : "  None";
 
-  return `You are an RANZCP MEQ examiner. Evaluate this single stem answer strictly.
-
-MEQ: ${meq.title} | STEM ${stem.stemNumber} of ${meq.stems.length}
+  return `MEQ: ${meq.title} | STEM ${stem.stemNumber} of ${meq.stems.length}
 MARKS: ${stem.marks} | TIME: ${stem.timeMinutes} minutes | ${timeNote}
 
 VIGNETTE:

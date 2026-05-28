@@ -95,8 +95,12 @@ router.post("/ai-feedback", async (req, res) => {
           .join("\n")
       : "none";
 
-  const userMessage = `STEM: ${stem}
+  const answerSection = candidateAnswer
+    ? `\nCANDIDATE'S WRITTEN ANSWER:\n${candidateAnswer.trim()}\n`
+    : "";
 
+  const userMessage = `STEM: ${stem}
+${answerSection}
 SIGNALS THE CANDIDATE IDENTIFIED: ${identifiedList}
 
 SIGNALS THE CANDIDATE MISSED:
@@ -104,11 +108,13 @@ ${missedList}
 
 Give feedback in this format only:
 
-IDENTIFIED: Brief acknowledgment of what they spotted correctly. One sentence.
+IDENTIFIED: What they got right — use their exact words from the answer above. Be specific.
 
-MISSED: For each missed signal — one sentence naming the signal, the clue they should have seen, and why it matters clinically.
+MISSED: For each missed signal — the stem clue they should have seen, the clinical threshold or obligation, and one example sentence showing consultant-level response.
 
-Do not rewrite their answer. Do not give generic advice.`;
+TEACHING POINT: One paragraph. The most important clinical reasoning gap between this answer and consultant-level thinking.
+
+Do not give generic advice. Quote the stem and the candidate's words directly.`;
 
   try {
     const message = await client.messages.create({
