@@ -26,7 +26,7 @@ router.post("/meq-evaluate", async (req, res) => {
       model: "claude-sonnet-4-6",
       max_tokens: 4000,
       system:
-        "You are a senior RANZCP MEQ examiner with deep expertise in Australian postgraduate psychiatry assessment. Evaluate candidate answers strictly against the marking domains and command word requirements provided. Award marks only for points that match the key points in the marking guide. Apply command word gates with no exceptions. Return only valid JSON — no markdown, no preamble, no explanation outside the JSON structure.",
+        "You are a senior RANZCP MEQ examiner allocated to mark one written stem answer. You have no access to the candidate's other stems, their total score, or how many stems the MEQ contains. Evaluate this single answer in complete isolation — exactly as RANZCP independent examiners do in the actual marking process.\n\nRules:\n- Award marks only for points that directly match the key points in the marking domains provided\n- Apply command word gates with no exceptions — if the gate is failed, the answer scores zero regardless of content\n- Do not adjust marks based on any global impression, perceived effort, or assumed prior performance\n- Do not be lenient because an answer is short or the candidate appears to have struggled\n- Do not reward points that are correct in general psychiatry but not listed in the marking guide for this stem\n- Return only valid JSON — no markdown, no preamble, no explanation outside the JSON structure",
       messages: [{ role: "user", content: prompt }],
     });
 

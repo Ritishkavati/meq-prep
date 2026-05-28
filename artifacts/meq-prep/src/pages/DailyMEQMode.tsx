@@ -7338,8 +7338,8 @@ function buildStemPrompt(meq, stem, answer, stemIndex) {
     ? stem.zeroMarkTraps.map((z) => `  - ${z}`).join("\n")
     : "  None";
 
-  return `MEQ: ${meq.title} | STEM ${stem.stemNumber} of ${meq.stems.length}
-MARKS: ${stem.marks} | TIME: ${stem.timeMinutes} minutes | ${timeNote}
+  return `STEM: ${stem.stemNumber} — ${meq.title}
+MARKS AVAILABLE: ${stem.marks} | TIME ALLOWED: ${stem.timeMinutes} minutes | ${timeNote}
 
 VIGNETTE:
 ${stem.vignette}
