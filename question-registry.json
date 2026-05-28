@@ -1,7 +1,7 @@
 {
   "version": "1.0",
   "lastUpdated": "2026-05-28",
-  "totalQuestions": 38,
+  "totalQuestions": 43,
   "questions": [
     {
       "id": "meq_001",
@@ -570,6 +570,51 @@
       "pressureSequence": "Physical injury obscures overdose as self-harm, delirium complicates assessment, then rational-suicide claim triggers family conflict, then family carer offer without capacity assessment, then hospital review finding pattern of missed self-harm in older surgical patients",
       "finalDilemma": "Surgical ward governance: self-harm screening protocol for older patients, benzodiazepine prescribing review, delirium pathway, family education and discharge template for GP continuity",
       "patientName": "Robert",
+      "createdAt": "2026-05-28",
+      "status": "active"
+    },
+    {
+      "id": "meq_039",
+      "title": "Ravi \u2014 Forensic Role Clarity and Fitness to Stand Trial",
+      "usedIn": "daily_meq",
+      "primaryDomain": "Ethics / Professionalism / Legal",
+      "totalMarks": 30,
+      "createdAt": "2026-05-28",
+      "status": "active"
+    },
+    {
+      "id": "meq_040",
+      "title": "Tane \u2014 Prison Mental Health Assessment and Containment",
+      "usedIn": "daily_meq",
+      "primaryDomain": "Management / Disposition",
+      "totalMarks": 30,
+      "createdAt": "2026-05-28",
+      "status": "active"
+    },
+    {
+      "id": "meq_041",
+      "title": "Omar \u2014 Forensic Tribunal Review and Conditional Discharge",
+      "usedIn": "daily_meq",
+      "primaryDomain": "Ethics / Professionalism / Legal",
+      "totalMarks": 30,
+      "createdAt": "2026-05-28",
+      "status": "active"
+    },
+    {
+      "id": "meq_042",
+      "title": "Melissa \u2014 Erotomania, Stalking and Duty to Protect",
+      "usedIn": "daily_meq",
+      "primaryDomain": "Ethics / Professionalism / Legal",
+      "totalMarks": 30,
+      "createdAt": "2026-05-28",
+      "status": "active"
+    },
+    {
+      "id": "meq_043",
+      "title": "Leah \u2014 Domestic Violence, Child Safety and Capacity",
+      "usedIn": "daily_meq",
+      "primaryDomain": "Management / Disposition",
+      "totalMarks": 30,
       "createdAt": "2026-05-28",
       "status": "active"
     }

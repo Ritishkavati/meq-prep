@@ -6159,5 +6159,912 @@
       }
     ],
     "meqNumber": 38
+  },
+  {
+    "id": "meq_039",
+    "title": "Ravi — Forensic Role Clarity and Fitness to Stand Trial",
+    "case": "Ravi, 34, schizophrenia, assault occasioning bodily harm, community mental health / court interface",
+    "examSource": "Generated — Ethics / Professionalism / Legal",
+    "topic": "Forensic role clarity, fitness to stand trial, dual-role conflict and confidentiality; tests ability to distinguish treating and forensic expert roles under solicitor pressure, apply fitness criteria to a psychotic patient who can state the charge but cannot instruct counsel, and manage dual-role, confidentiality and public-safety conflicts when family and solicitor each request selective or misleading reports",
+    "primaryDomain": "Ethics / Professionalism / Legal",
+    "totalMarks": 30,
+    "totalTimeMinutes": 30,
+    "stems": [
+      {
+        "stemNumber": "1.1",
+        "vignette": "Ravi is a 34-year-old man with schizophrenia followed by your community team for two years. He is charged with assault occasioning bodily harm after allegedly striking a neighbour with a metal pole during a dispute. Ravi says the neighbour was 'broadcasting insults through the ceiling' and 'working with police.' Ravi's solicitor emails asking for 'a short medical report saying Ravi was psychotic, is a good person, and should not be punished,' within 48 hours of the next court mention. Ravi tells his case manager he wants you to help because 'you know me and you're on my side.'",
+        "question": "Outline — list and justify how you would respond to the solicitor's request.\nA list without because-clauses specific to this case will not be awarded any marks.\n(10 marks | 10 minutes)",
+        "commandWord": "outline_justify",
+        "marks": 10,
+        "timeMinutes": 10,
+        "stemSignals": [
+          "Treating psychiatrist vs forensic expert — the solicitor's request conflates these two roles; the candidate must separate them without abandoning Ravi",
+          "Advocacy framing — 'is a good person and should not be punished' is not a clinical opinion; agreeing to it is the zero-mark trap",
+          "48-hour urgency — urgency from the solicitor does not override clinical and ethical standards; managing this pressure is part of the answer",
+          "Ravi believes you are 'on his side' — maintaining the therapeutic relationship while explaining limits is a consultant-register skill"
+        ],
+        "domains": [
+          {
+            "name": "Role Clarity and Declining Advocacy (3 marks)",
+            "marks": 3,
+            "keyPoints": [
+              "Decline to write an advocacy letter — because the solicitor's request asks for a report stating Ravi 'should not be punished,' which is a legal conclusion outside my clinical expertise and inconsistent with my treating role",
+              "Clarify treating psychiatrist role to the solicitor — because I am Ravi's clinician, not an independent forensic expert, and conflating these roles risks compromising both the treatment relationship and the legal process",
+              "Explain to Ravi honestly why an advocacy letter is not in his interest — because a one-sided report that omits material clinical information, including past threats and cannabis use, could be challenged in court and damage his position more than a balanced factual account"
+            ]
+          },
+          {
+            "name": "Consent and Report Purpose (2 marks)",
+            "marks": 2,
+            "keyPoints": [
+              "Obtain explicit informed consent from Ravi before providing any communication to the court — because Ravi must understand what information will be shared, who will receive it, and how it may be used in his proceedings",
+              "Clarify the precise legal question the report is intended to address — because 'short medical report for a court mention' requires a defined forensic purpose; I cannot write a document without understanding what the magistrate or solicitor actually needs from a clinical perspective"
+            ]
+          },
+          {
+            "name": "Scope of a Factual Clinical Report (3 marks)",
+            "marks": 3,
+            "keyPoints": [
+              "Limit report content to factual clinical information — because a treating clinician's appropriate contribution is diagnosis, treatment history, current mental state, medication adherence, and observed function; extending to conclusions about guilt, punishment, or character is outside my role",
+              "Decline to exclude clinically material information on request — because the solicitor's instruction to write only favourable material and the request from Ravi to omit prior threats and cannabis use would make any report misleading and professionally dishonest",
+              "Identify the need for an independent forensic assessment for fitness and criminal responsibility questions — because questions about fitness to stand trial and mental state at the time of the alleged offence require formal forensic expertise and a neutral expert relationship, neither of which I hold as treating clinician"
+            ]
+          },
+          {
+            "name": "Managing Urgency and Process (2 marks)",
+            "marks": 2,
+            "keyPoints": [
+              "Manage the 48-hour deadline without compromising report quality — because a rushed advocacy letter is not a defensible clinical document; I would offer an interim factual summary if genuinely needed and a reasonable timeline for a proper report",
+              "Communicate clearly and professionally to the solicitor about what I can and cannot provide — because the solicitor's request may reflect a misunderstanding of the treating clinician's role rather than deliberate pressure; a clear, respectful response prevents further boundary erosion"
+            ]
+          },
+          {
+            "name": "Documentation and Governance (2 marks)",
+            "marks": 2,
+            "keyPoints": [
+              "Document the solicitor's request, my response, consent discussions, and any risk disclosures — because a clear contemporaneous record protects Ravi, the service, and me if my response is later challenged",
+              "Seek supervision or medicolegal advice — because the pressure from the solicitor and from Ravi creates a dual-role risk that warrants senior clinical and legal input before any communication is provided"
+            ]
+          }
+        ],
+        "zeroMarkTraps": [
+          "Writing a supportive letter while simply omitting cannabis use and prior threats on the grounds that Ravi asked you to",
+          "Agreeing to 'just write as his treating psychiatrist and avoid anything damaging' as if this were clinically and ethically neutral",
+          "Treating 'you're on my side' as a clinical justification for an advocacy report rather than a therapeutic opportunity to explain professional limits"
+        ],
+        "postExaminerNote": "Candidates who named the treating-versus-forensic role conflict specifically, declined the advocacy framing, and explained what a treating clinician can legitimately provide scored in the upper range. Candidates who agreed to write a selective report because Ravi wanted them to, or who treated urgency as justifying a lower standard, did not achieve the standard. The key examiner phrase is: I would not provide an advocacy letter. I would clarify my treating role, obtain informed consent, provide factual clinical information only, and recommend independent forensic assessment for fitness and criminal responsibility questions."
+      },
+      {
+        "stemNumber": "1.2",
+        "vignette": "The solicitor asks you to comment on whether Ravi is fit to stand trial. Ravi tells you, 'The magistrate is part of the transmission system. My lawyer has been replaced by an actor.' He can state the charge but says he will not speak to his lawyer because 'that would give them more data.' Collateral obtained: on the day of the alleged assault, Ravi accused the neighbour of 'sending poison waves,' shouted he needed to 'stop the attack,' then struck the neighbour. Police found the metal pole hidden behind Ravi's shed. Ravi had told his brother not to speak to police because 'they will twist everything.'",
+        "question": "Describe — list and explain how you would assess Ravi's fitness to stand trial, referring to the relevant legal criteria, and how you would distinguish this from an opinion about his mental state at the time of the alleged offence.\nA list without explanation will not be awarded any marks.\n(10 marks | 10 minutes)",
+        "commandWord": "describe_explain",
+        "marks": 10,
+        "timeMinutes": 10,
+        "stemSignals": [
+          "Fitness is a present-tense question — Ravi's current ability to instruct counsel is the legal issue, not whether he was psychotic at the time of the offence",
+          "He can state the charge — this is a partial pass; the failure is specifically on the counsel-instruction criterion, which is directly demonstrated in the vignette",
+          "Mental state at offence is a separate retrospective question — conflating the two is the most common examiner-visible error in forensic stems",
+          "Collateral from the day of the offence is the raw material for a criminal responsibility opinion — hidden pole, accusation of poison waves, shouting to stop the attack are all relevant"
+        ],
+        "domains": [
+          {
+            "name": "Fitness as a Current Functional Capacity Question (3 marks)",
+            "marks": 3,
+            "keyPoints": [
+              "Fitness to stand trial is a present-tense functional legal capacity question — explain that it concerns Ravi's current ability to participate in proceedings, not whether he was unwell at the time of the offence; the two questions are entirely distinct",
+              "Apply the legal fitness criteria functionally in this case — explain that I assess whether Ravi can currently: understand the charge (he can state it), enter a plea, follow the course of proceedings, understand the roles of court personnel, instruct his lawyer, and make a defence; the failure point in Ravi's case is his belief that the magistrate is part of a transmission system and his lawyer has been replaced by an actor, which directly impairs the counsel-instruction and understanding-of-court-personnel criteria",
+              "Identify the specific functional deficit impairing fitness — explain that Ravi's refusal to speak to his lawyer because 'that would give them more data' is not a strategic choice but a psychotically driven behaviour that prevents him from exercising the most fundamental aspect of fitness: the ability to instruct his own defence"
+            ]
+          },
+          {
+            "name": "Applying Clinical Evidence to the Fitness Assessment (3 marks)",
+            "marks": 3,
+            "keyPoints": [
+              "Distinguish genuine fitness deficits from malingering or strategic behaviour — explain that Ravi's delusional misidentification of court personnel is internally consistent with his broader persecutory belief system involving the neighbour, police, and his brother; this is consistent with genuine psychosis rather than feigned incompetence",
+              "Assess insight into illness and proceedings separately — explain that Ravi having some awareness of the charge does not mean he understands the proceedings; insight into having schizophrenia is distinct from the functional legal criterion of understanding the proceedings",
+              "Assess whether treatment could restore fitness — explain that if Ravi is found unfit, the relevant question becomes whether antipsychotic treatment could restore his functional capacity to participate; this must be addressed explicitly in any fitness report"
+            ]
+          },
+          {
+            "name": "Mental State at the Time of the Alleged Offence (2 marks)",
+            "marks": 2,
+            "keyPoints": [
+              "Mental state at offence is a retrospective criminal responsibility question requiring separate analysis — explain that this reconstruction requires reviewing the symptoms present on the day, Ravi's stated beliefs about the neighbour sending poison waves, the nature of the conduct, whether he appreciated that striking the neighbour was wrong, and whether his actions were driven by psychosis rather than deliberate violence",
+              "Use the available collateral for the criminal responsibility analysis — explain that police facts, the hidden metal pole, the accusation of poison waves, the shout to stop the attack, and the instruction to his brother not to speak to police are all material to whether Ravi's conduct was psychotically driven and whether he appreciated the wrongfulness of his actions at the time"
+            ]
+          },
+          {
+            "name": "Procedural and Documentation Standards (2 marks)",
+            "marks": 2,
+            "keyPoints": [
+              "Obtain all relevant collateral before forming any fitness or criminal responsibility opinion — explain that police facts, witness statements, the brother's account, treatment records, and objective mental state findings are required before any defensible forensic opinion can be offered",
+              "Avoid the error of equating schizophrenia diagnosis with automatic unfitness or lack of criminal responsibility — explain that the diagnosis does not determine the legal conclusion; only a functional assessment against the relevant criteria applied to this patient's current presentation and the specific facts of the alleged offence can support a defensible opinion"
+            ]
+          }
+        ],
+        "zeroMarkTraps": [
+          "Treating Ravi's schizophrenia diagnosis as automatically conferring unfitness without applying the functional criteria",
+          "Merging the fitness assessment and the criminal responsibility analysis into a single answer without distinguishing them",
+          "Describing the fitness criteria in the abstract without applying them to Ravi's specific presentation, particularly the counsel-instruction deficit"
+        ],
+        "postExaminerNote": "Candidates who named fitness as a present-tense functional question, applied the criteria to the specific deficits demonstrated in the vignette (counsel instruction, court personnel understanding), and explicitly separated this from the retrospective criminal responsibility analysis scored in the upper range. Candidates who merged fitness with mental state at offence, or who listed criteria without applying them to Ravi, did not achieve the standard. The key examiner phrase is: Fitness is a present-tense functional legal capacity question; mental state at offence is a retrospective criminal responsibility question."
+      },
+      {
+        "stemNumber": "1.3",
+        "vignette": "Ravi's mother asks you to write directly to the magistrate saying Ravi 'would never hurt anyone if the neighbour had not provoked him.' Ravi says he does not want you to mention his past threats to the same neighbour or his recent cannabis use. The solicitor says: 'Just write as his treating psychiatrist, not as a forensic expert, and avoid anything damaging.'",
+        "question": "Discuss — list and debate the dual-role, confidentiality, and public-safety issues raised by this request.\nA list without debate structure will not be awarded any marks.\n(10 marks | 10 minutes)",
+        "commandWord": "debate",
+        "marks": 10,
+        "timeMinutes": 10,
+        "stemSignals": [
+          "Three simultaneous pressure vectors — mother, Ravi, and solicitor are all asking for selective reporting; the candidate must address each",
+          "Solicitor's framing is the hidden trap — 'just write as treating psychiatrist' sounds reasonable but is being used to justify omitting clinically material risk information",
+          "Past threats to the same neighbour and cannabis use are not embarrassing details — they are dynamic risk factors material to sentencing, victim safety, and public protection",
+          "Writing directly to the magistrate at the mother's request bypasses the legal process entirely — this must be named"
+        ],
+        "domains": [
+          {
+            "name": "Dual-Role Conflict (3 marks)",
+            "marks": 3,
+            "keyPoints": [
+              "Argument that the treating psychiatrist should not write a court report acting as forensic advocate — because the treating role prioritises Ravi's therapeutic interests and requires maintaining a confidential, alliance-based relationship; a court report written in an advocacy framing fundamentally compromises both the treatment relationship and the integrity of the legal process",
+              "Argument that a factual treating clinician report is sometimes appropriate and legitimate — because courts do hear from treating clinicians about diagnosis, treatment history, and current mental state; this is not itself a problem as long as the report is scoped, accurate, and not advocacy",
+              "A defensible consultant position is that I can provide a scoped factual treating report to the court through proper legal channels, while clearly declining the advocacy framing and recommending independent forensic assessment for any legal opinion — because this maintains my integrity as a clinician, serves Ravi's genuine legal interests better than a biased letter would, and meets the minimum standard of professional honesty"
+            ]
+          },
+          {
+            "name": "Confidentiality and Selective Disclosure (3 marks)",
+            "marks": 3,
+            "keyPoints": [
+              "Argument that Ravi has some right to determine what personal information is shared — because patient autonomy includes a degree of control over health information disclosed to third parties, and respect for this right is foundational to the therapeutic relationship",
+              "Argument that selective disclosure of only favourable material is not permissible once a report is provided to the court — because omitting Ravi's prior threats to the same neighbour and his recent cannabis use would make the report materially misleading; the court, not the patient, is the ultimate recipient and must receive accurate information",
+              "A defensible position is that if Ravi insists on excluding material clinical risk information, I must decline to write a report at all rather than produce a misleading document — because a clinician who provides a selectively edited court report is not protected by the treating relationship and has produced a document that may endanger the victim, mislead the court, and expose me to professional sanction"
+            ]
+          },
+          {
+            "name": "Public Safety and Prior Threats (2 marks)",
+            "marks": 2,
+            "keyPoints": [
+              "Past threats to the same neighbour and cannabis use are dynamic risk factors that cannot be concealed in a clinical court document — because they are directly relevant to the current offending, to victim safety, and to any sentencing or forensic disposition decision; omitting them in a document presented to the court is a public safety failure",
+              "The mother's request to write directly to the magistrate must be declined — because this bypasses consent, legal privilege, proper forensic pathways, and the legal representative's role; I have no authority to write to the magistrate independently at a family member's request"
+            ]
+          },
+          {
+            "name": "Ongoing Treatment Relationship and Documentation (2 marks)",
+            "marks": 2,
+            "keyPoints": [
+              "Separate the treatment relationship from the court advocacy request — because declining to write an advocacy letter does not end my role as Ravi's treating psychiatrist; I continue his treatment, manage his risk, and support his recovery regardless of what is or is not provided to the court",
+              "Document all requests, my response, the rationale, and any risk disclosures — because a contemporaneous record of the solicitor's request, Ravi's instructions, the mother's request, and my professional response is essential protection for all parties and for the therapeutic relationship"
+            ]
+          }
+        ],
+        "zeroMarkTraps": [
+          "Writing a supportive letter omitting cannabis and prior threats on the grounds that 'he has capacity to choose what to disclose' — capacity to consent does not extend to directing a clinician to produce a misleading court document",
+          "Treating the solicitor's framing 'just write as treating psychiatrist' as ethically neutral — it is being used specifically to justify omitting clinically material risk information",
+          "Conflating Ravi's confidentiality right with an entitlement to have only selected information presented to a court in a report written by his treating clinician"
+        ],
+        "postExaminerNote": "Candidates who named all three pressure vectors, articulated the treating-versus-advocacy distinction clearly, explained why selective omission is not permissible once a court report is written, and identified the public-safety function of prior threats and cannabis use scored in the upper range. Candidates who agreed to omit material at Ravi's request, or who wrote a supportive letter while simply dropping the problematic content, did not achieve the standard."
+      }
+    ],
+    "meqNumber": 39
+  },
+  {
+    "id": "meq_040",
+    "title": "Tane — Prison Mental Health Assessment and Containment",
+    "case": "Tane, 28, Māori man on remand, acute psychosis, prison mental health unit",
+    "examSource": "Generated — Management / Disposition",
+    "topic": "Prison mental health assessment of a Māori man on remand with acute psychosis, medication cessation, improvised weapon, and cellmate misidentification; tests risk formulation beyond denial of intent, management of confidentiality limits in a custodial setting, cultural safety in liaison with whānau, and risk containment when the mental health unit is full",
+    "primaryDomain": "Management / Disposition",
+    "totalMarks": 30,
+    "totalTimeMinutes": 30,
+    "stems": [
+      {
+        "stemNumber": "2.1",
+        "vignette": "Tane is a 28-year-old Māori man on remand for aggravated burglary. He was referred after telling nursing staff that the man in the next cell is 'a demon guard in disguise.' He has been awake most of the night, chanting, pacing, and refusing food because he believes it has been contaminated. He says he does not need help and denies any intention to harm anyone. A prison officer says Tane is 'just trying to get moved to a single cell.' The officer also says Tane was found with a sharpened plastic utensil yesterday but 'he handed it over, so it's fine.'",
+        "question": "Outline — list and justify your immediate assessment priorities.\nA list without because-clauses specific to this case will not be awarded any marks.\n(10 marks | 10 minutes)",
+        "commandWord": "outline_justify",
+        "marks": 10,
+        "timeMinutes": 10,
+        "stemSignals": [
+          "The prison officer's dismissal is the clinical trap — 'just trying to get a single cell' and 'he handed it over, so it's fine' are not clinical assessments; accepting them is a zero-mark action",
+          "Sharpened utensil plus persecutory misidentification of cellmate — this is an active violence-risk scenario, not merely a request for cell reassignment",
+          "Denial of intent in the context of persecutory delusional misidentification — denial does not rule out contingent threat when the trigger is psychotically driven",
+          "Kaupapa Māori — a Māori health worker is a clinical requirement, not optional; the timing of this is a senior consultant decision"
+        ],
+        "domains": [
+          {
+            "name": "Immediate Safety and Violence Risk Assessment (4 marks)",
+            "marks": 4,
+            "keyPoints": [
+              "Assess immediate violence risk to the cellmate and to Tane before entering the cell — because Tane has identified the cellmate as a specific persecutory target ('demon guard in disguise'), has previously possessed an improvised weapon, and has been awake and agitated; this is an active risk scenario requiring safe interview conditions before clinical assessment proceeds",
+              "Do not accept denial of intent as ruling out risk in this presentation — because Tane's persecutory belief creates a contingent threat that is driven by psychotic misidentification rather than voluntary intent; the risk is not controlled by Tane's stated wishes",
+              "Assess for command hallucinations specifically — because persecutory beliefs about the cellmate being a demon guard may be accompanied by command hallucinations instructing Tane to defend himself; this must be directly assessed as a high-priority risk marker",
+              "Assess self-neglect and physical deterioration as acute clinical risks — because Tane has refused food, is sleep-deprived, and is pacing; dehydration, hypoglycaemia, and physical exhaustion are independent acute risks that compound psychotic vulnerability"
+            ]
+          },
+          {
+            "name": "Acute Mental State and Diagnostic Assessment (3 marks)",
+            "marks": 3,
+            "keyPoints": [
+              "Conduct a full mental state examination — because the clinical presentation is consistent with acute psychosis but mania, drug-induced psychosis, withdrawal, and delirium must each be assessed and distinguished before a diagnosis and treatment plan can be formed",
+              "Clarify the antipsychotic medication cessation history — because Tane stopped medication three weeks ago after arrest; this is the most likely precipitant for the current relapse and determines the urgency and nature of treatment",
+              "Arrange urgent physical health assessment — because food refusal, sleep deprivation, and medication cessation create a medical emergency independent of psychiatric diagnosis; vital signs, hydration status, blood glucose, and infection screening are required immediately"
+            ]
+          },
+          {
+            "name": "Collateral and Cultural Safety (3 marks)",
+            "marks": 3,
+            "keyPoints": [
+              "Obtain collateral from prison nursing observations and custody records independently of the prison officer's account — because the prison officer's framing as 'just trying to get moved' is a dismissive interpretation that bypasses clinical assessment; nursing observations, incident reports, and the pattern of behaviour since admission provide a more reliable clinical picture",
+              "Attempt to contact whānau for collateral as soon as possible — because whānau have previously confirmed a prior assault during a paranoid relapse; this significantly changes the risk formulation from unknown baseline to documented pattern",
+              "Engage Kaupapa Māori health supports at the earliest available opportunity — because Tane is Māori and the possibility that spiritual and cultural beliefs are informing the presentation requires culturally informed assessment; dismissing this as attention-seeking risks both clinical error and institutional racism"
+            ]
+          }
+        ],
+        "zeroMarkTraps": [
+          "Accepting the prison officer's assessment that this is attention-seeking behaviour and not conducting an independent clinical assessment",
+          "Treating 'I have no intention to harm anyone' as sufficient reassurance when persecutory misidentification of the cellmate is present",
+          "Deferring all clinical action until the Kaupapa Māori worker is available the following day"
+        ],
+        "postExaminerNote": "Candidates who identified the sharpened utensil and delusional misidentification of the cellmate as creating an active violence-risk scenario, rejected the prison officer's dismissal, and initiated immediate mental state and physical health assessment regardless of Kaupapa Māori worker availability scored in the upper range. Candidates who accepted denial of intent as reassuring, or who deferred assessment until the Māori worker arrived, did not achieve the standard."
+      },
+      {
+        "stemNumber": "2.2",
+        "vignette": "During your interview Tane says, 'I will defend myself if the demon comes through the door, but I'm not violent.' He refuses medication because 'it is prison poison.' His whānau say he stopped antipsychotic medication three weeks ago after being arrested, and that he previously assaulted a cousin during a paranoid relapse. He wants his uncle contacted but does not want prison staff told anything.",
+        "question": "Discuss — list and debate your approach to violence risk, confidentiality, and liaison with prison staff and whānau.\nA list without debate structure will not be awarded any marks.\n(10 marks | 10 minutes)",
+        "commandWord": "debate",
+        "marks": 10,
+        "timeMinutes": 10,
+        "stemSignals": [
+          "'I will defend myself if the demon comes through the door' — this is a conditional threat driven by psychotic trigger; it is not reassuring that it is conditional",
+          "Prior assault during identical relapse — this changes the risk category from theoretical to documented",
+          "Tane wants his uncle contacted — this is a consent to one specific contact; it is the clinical starting point for whānau liaison",
+          "Does not want prison staff told anything — confidentiality limits in a custodial setting when third parties are at foreseeable risk must be explicitly debated"
+        ],
+        "domains": [
+          {
+            "name": "Violence Risk Formulation (3 marks)",
+            "marks": 3,
+            "keyPoints": [
+              "Argument that Tane's stated conditional non-violence is insufficient to lower the risk rating — because his readiness to 'defend himself if the demon comes through the door' is a contingent threat triggered by psychotic misidentification of the cellmate, which is beyond his voluntary control; the threat is real regardless of stated intent",
+              "Argument that the combination of dynamic risk factors in this case constitutes a high-risk constellation — because medication cessation three weeks ago, prior assault during an identical paranoid relapse, active delusional misidentification of a specific target, improvised weapon possession, sleep deprivation, and food refusal together represent a convergence of dynamic risk factors that demands active management rather than observation",
+              "A defensible consultant position is to treat this as a high-risk scenario requiring immediate active containment — because the foreseeable harm to the cellmate from Tane's delusional belief system is a risk I have a duty to prevent; watchful waiting in this context is not clinically or professionally defensible"
+            ]
+          },
+          {
+            "name": "Confidentiality Limits in a Custodial Setting (3 marks)",
+            "marks": 3,
+            "keyPoints": [
+              "Argument that Tane's preference for confidentiality from prison staff should be respected where possible — because disclosure without consent damages the therapeutic relationship and may cause Tane to refuse all further clinical engagement, reducing the chance of medication consent and recovery",
+              "Argument that confidentiality must yield to imminent safety when others are at foreseeable serious risk in a custodial setting — because sharing minimum necessary clinical safety information with prison staff is both legally and ethically required when a person with psychotic misidentification of a specific target is housed with that person; the custodial setting amplifies this duty",
+              "A defensible position is to share minimum necessary safety information with prison staff explicitly and transparently with Tane — because explaining to Tane why safety information must be shared, what will be shared and what will not, preserves therapeutic integrity while meeting the duty of care to the cellmate and to the institution"
+            ]
+          },
+          {
+            "name": "Whānau Liaison and Cultural Safety (2 marks)",
+            "marks": 2,
+            "keyPoints": [
+              "Contact Tane's uncle as he has requested — because Tane has specifically consented to this contact; it is the starting point for whānau engagement, provides essential collateral about prior relapse pattern, and respects Tane's stated preference as a beginning of therapeutic alliance",
+              "Explain the limits of whānau confidentiality before contact proceeds — because if the uncle or whānau provide information that changes the risk formulation, I may need to act on it; Tane should understand this before I make contact, and this conversation itself is part of a culturally safe clinical engagement"
+            ]
+          },
+          {
+            "name": "Treatment Planning Under Refusal (2 marks)",
+            "marks": 2,
+            "keyPoints": [
+              "Offer oral medication in a culturally safe and non-coercive way as the first clinical step — because Tane's refusal is based on the belief that medication is 'prison poison'; this is a psychotic interpretation that may be addressable through clear explanation, involvement of his uncle, and a culturally informed approach before involuntary treatment becomes necessary",
+              "Assess capacity and involuntary treatment criteria explicitly and document the assessment — because if Tane lacks capacity or meets criteria under the relevant state Mental Health Act, the pathway to involuntary treatment must be initiated and documented; the prison context does not reduce his rights to involuntary treatment when criteria are met"
+            ]
+          }
+        ],
+        "zeroMarkTraps": [
+          "Accepting 'I have no plan to hurt anyone' as sufficient reassurance given the documented conditional threat and prior assault during identical relapse",
+          "Treating confidentiality as an absolute bar to sharing any safety information with prison staff when there is foreseeable serious harm to an identified third party",
+          "Deferring medication and treatment decisions until the Kaupapa Māori worker arrives the following day without any interim clinical action"
+        ],
+        "postExaminerNote": "Candidates who named the conditional threat as psychotically driven and therefore not reassuring, articulated a clear position on confidentiality limits in a custodial setting with third-party risk, and engaged with the uncle as a first step that Tane had consented to scored in the upper range. Candidates who over-valued denial of intent or used confidentiality to justify withholding safety information from prison staff did not achieve the standard."
+      },
+      {
+        "stemNumber": "2.3",
+        "vignette": "The prison operations manager says the mental health unit is full and asks whether Tane can remain in the mainstream wing with 'extra checks.' The Kaupapa Māori health worker is unavailable until tomorrow. The cellmate has asked to be moved because he is frightened. Tane remains adamant he has no plan to hurt anyone.",
+        "question": "Describe — list and explain your risk containment plan for Tane in custody.\nA list without explanation will not be awarded any marks.\n(10 marks | 10 minutes)",
+        "commandWord": "describe_explain",
+        "marks": 10,
+        "timeMinutes": 10,
+        "stemSignals": [
+          "'Extra checks' in mainstream is the clinical decision point — the candidate must reject this and escalate; this is the consultant-register stem",
+          "Bed unavailability is a governance risk, not a clinical justification for an inadequate safety plan — it must be documented and escalated",
+          "Cellmate has asked to be moved — the specific target of Tane's delusion has requested separation; this is a safety imperative",
+          "Kaupapa Māori worker unavailable until tomorrow — plan must address the interim period while arranging this as a priority"
+        ],
+        "domains": [
+          {
+            "name": "Immediate Physical Separation and Observation (3 marks)",
+            "marks": 3,
+            "keyPoints": [
+              "Arrange immediate separation of Tane from the cellmate — explain that Tane has identified the cellmate as a persecutory target; the cellmate has independently requested relocation; leaving them together when active delusional misidentification persists is a foreseeable harm that must be prevented regardless of bed availability",
+              "Implement enhanced clinical observation — explain that enhanced observation must include regular welfare checks at defined intervals, monitoring of food and fluid intake, sleep observation, removal of any remaining improvised implements, and clear nursing documentation; this is a clinical observation plan, not a punitive measure",
+              "Reject mainstream placement with extra checks as clinically inadequate — explain that extra checks alone do not address the mechanism of risk, which is psychotic misidentification of a specific person; they provide surveillance rather than management and are not equivalent to a clinical risk containment plan"
+            ]
+          },
+          {
+            "name": "Escalation Pathway for Bed Access (2 marks)",
+            "marks": 2,
+            "keyPoints": [
+              "Escalate to the senior prison health authority and forensic bed manager — explain that bed unavailability in the prison mental health unit activates the formal escalation pathway: I contact the district forensic mental health bed coordinator, document the clinical indication for transfer, and request emergency bed allocation; I do not default to mainstream placement because no bed is immediately available",
+              "Document the bed unavailability and mainstream placement risk formally and escalate to the prison health director — explain that placing a person with acute psychosis and a delusional target in mainstream custody when clinical assessment indicates transfer is both a clinical and a governance risk that must be escalated in writing to the responsible medical officer and the prison health executive"
+            ]
+          },
+          {
+            "name": "Acute Treatment Plan (2 marks)",
+            "marks": 2,
+            "keyPoints": [
+              "Offer oral medication in a culturally informed way with the uncle present as first choice — explain that involuntary treatment requires meeting criteria under the relevant state legislation; every reasonable attempt to obtain consent must precede it, and involving Tane's uncle as a trusted person may make oral medication consent achievable",
+              "Pre-identify the criteria and pathway for involuntary treatment and document this — explain that if Tane deteriorates, loses capacity, or meets involuntary treatment criteria under the Mental Health Act, the clinical and legal pathway must be identified in advance and not improvised at the point of emergency; this pre-identification is itself a risk mitigation"
+            ]
+          },
+          {
+            "name": "Cultural and Whānau Support Plan (2 marks)",
+            "marks": 2,
+            "keyPoints": [
+              "Arrange Kaupapa Māori worker consultation as the first available appointment and treat this as a clinical priority — explain that cultural support is not optional or a supplement to clinical care; it changes the formulation, may assist in achieving medication consent, and reduces the risk of cultural misinterpretation driving clinical decisions",
+              "Brief Tane's uncle and establish a communication plan for the interim period — explain that whānau contact as requested by Tane should proceed promptly; the uncle can provide de-escalation support, cultural safety, and a bridge to medication consent while the Kaupapa Māori worker is unavailable"
+            ]
+          },
+          {
+            "name": "Prison Staff Communication (1 mark)",
+            "marks": 1,
+            "keyPoints": [
+              "Brief prison staff with specific, minimum necessary clinical guidance — explain that staff need practical de-escalation instructions, specific trigger avoidance strategies (do not discuss the cellmate, do not confront the delusional belief), the observation requirement, and a clear emergency response protocol; sharing clinical rationale without disclosing diagnosis in full is the appropriate minimum standard"
+            ]
+          }
+        ],
+        "zeroMarkTraps": [
+          "Accepting the operations manager's suggestion of extra checks in the mainstream wing as a clinically adequate risk containment plan",
+          "Failing to document the bed unavailability as a formal governance and clinical risk requiring escalation to senior management",
+          "Deferring all clinical action, treatment decisions, and staff briefing until the Kaupapa Māori worker arrives the following day"
+        ],
+        "postExaminerNote": "Candidates who explicitly rejected mainstream placement with extra checks as inadequate, escalated through the formal bed pathway, documented bed unavailability as a governance risk, and arranged separation of Tane from the cellmate as an immediate action scored in the upper range. Candidates who accepted the operations manager's framing or who deferred decisions until cultural support was available without interim action did not achieve the standard."
+      }
+    ],
+    "meqNumber": 40
+  },
+  {
+    "id": "meq_041",
+    "title": "Omar — Forensic Tribunal Review and Conditional Discharge",
+    "case": "Omar, 41, schizoaffective disorder, conditional discharge, forensic tribunal review, victim proximity breach",
+    "examSource": "Generated — Ethics / Professionalism / Legal",
+    "topic": "Forensic tribunal review of a conditionally discharged man with schizoaffective disorder following missed depot, missed drug screens, victim-proximity breach, and grievance language; tests information gathering before tribunal advice, clinical and ethical reasoning about recall versus tightened conditions, and designing a community risk containment plan including victim notification",
+    "primaryDomain": "Ethics / Professionalism / Legal",
+    "totalMarks": 30,
+    "totalTimeMinutes": 30,
+    "stems": [
+      {
+        "stemNumber": "3.1",
+        "vignette": "Omar is a 41-year-old man with schizoaffective disorder, conditionally discharged for 18 months after a serious assault on his former employer during a psychotic relapse. His conditions include depot medication, urine drug screening, exclusion from the victim's suburb, and weekly contact with the community forensic team. Over the past month Omar has missed two drug screens and one depot appointment. Police report he was seen at a shopping centre two streets from the victim's workplace. Omar says, 'I am not a prisoner anymore. I just wanted coffee.'",
+        "question": "Outline — list and justify the information you need before advising the tribunal.\nA list without because-clauses specific to this case will not be awarded any marks.\n(8 marks | 8 minutes)",
+        "commandWord": "outline_justify",
+        "marks": 8,
+        "timeMinutes": 8,
+        "stemSignals": [
+          "Three concurrent breaches — each breach must be assessed individually before they are synthesised into a risk formulation; pattern matters more than any single event",
+          "'I just wanted coffee' — this explanation requires direct assessment of insight into the significance of the conditions, not acceptance at face value",
+          "Advising the tribunal before completing this assessment is the clinical and professional error to avoid",
+          "Victim is elderly with cardiac illness and active fear — this is not background; it is a direct safety obligation"
+        ],
+        "domains": [
+          {
+            "name": "Breach Assessment and Documentation (3 marks)",
+            "marks": 3,
+            "keyPoints": [
+              "Clarify the circumstances of each breach individually — because two missed drug screens, one missed depot, and a proximity breach each have different clinical implications and require individual explanation; a pattern of deliberate minimisation is clinically different from logistical barriers",
+              "Obtain depot clinic and drug-screen provider records directly — because Omar's account alone is insufficient; documented records of missed appointments, any communication from Omar, any explanations provided at the time, and any pattern of partial compliance are essential before the tribunal receives clinical advice",
+              "Assess Omar's explanation for the proximity breach in clinical detail — because 'I just wanted coffee' may represent genuine impulsivity, active minimisation of deliberate intent, or emerging grandiosity indicating relapse; the quality of insight into the significance of his conditions is a central risk variable"
+            ]
+          },
+          {
+            "name": "Current Mental State and Relapse Indicators (3 marks)",
+            "marks": 3,
+            "keyPoints": [
+              "Conduct a thorough current mental state examination before advising the tribunal — because irritability, preoccupation with the victim, 'I am not a prisoner anymore,' and 'settling unfinished business' language are potential early relapse indicators that must be assessed directly and not inferred from third-party reports",
+              "Assess substance use directly and obtain collateral — because missed drug screens in the context of schizoaffective disorder and a prior serious assault during relapse may indicate resumption of use; substance use is a known relapse precipitant that changes the risk formulation materially",
+              "Assess the 'unfinished business' comment as a specific grievance-based cognition — because this language in a man who assaulted his former employer during a psychotic relapse, and who has been seen near that employer's area, is a high-yield forensic risk marker requiring direct clinical exploration rather than support worker interpretation"
+            ]
+          },
+          {
+            "name": "Legal Framework and Victim Obligations (2 marks)",
+            "marks": 2,
+            "keyPoints": [
+              "Review the tribunal's powers, the applicable recall threshold, and available alternative conditions — because advising the tribunal requires knowing not only the clinical picture but the legal options available; a clinical opinion without a legal framework is incomplete advice",
+              "Clarify victim liaison status and the victim's current circumstances — because the victim is elderly with cardiac illness and has expressed active fear; his safety and wellbeing are relevant to the tribunal's decision and cannot be treated as background context"
+            ]
+          }
+        ],
+        "zeroMarkTraps": [
+          "Advising the tribunal for recall or continuation based on the available information before completing a mental state examination and breach assessment",
+          "Treating the sister's offer of supervision as a protective factor equivalent to forensic risk management without assessing what this supervision would actually involve",
+          "Accepting 'I just wanted coffee' as a sufficient explanation for the proximity breach without direct clinical exploration of insight and intent"
+        ],
+        "postExaminerNote": "Candidates who identified all three breach types, recognised that each requires individual explanation, prioritised mental state assessment before tribunal advice, and named 'unfinished business' as a specific grievance-based risk marker scored in the upper range. Candidates who advised the tribunal without completing the mental state assessment, or who treated the sister's supervision offer as equivalent to forensic risk management, did not achieve the standard."
+      },
+      {
+        "stemNumber": "3.2",
+        "vignette": "Omar's sister says recall would 'destroy his recovery' and that the family can supervise him. The victim is now 67 and has developed cardiac problems since the assault. The victim's daughter has contacted the service saying her father is frightened to leave home. Omar's support worker says he has seemed 'a bit intense' and has started talking about 'settling unfinished business,' but denies any intent.",
+        "question": "Discuss — list and debate what you would recommend to the tribunal, including the clinical and ethical basis for recall, tightened conditions, or continued conditional discharge.\nA list without debate structure will not be awarded any marks.\n(12 marks | 12 minutes)",
+        "commandWord": "debate",
+        "marks": 12,
+        "timeMinutes": 12,
+        "stemSignals": [
+          "The sister's argument is the sympathetic counter-pressure — 'destroy his recovery' must be weighed against the victim's documented fear and physical vulnerability",
+          "'Unfinished business' is not a casual phrase in this clinical and forensic context — it is a grievance cognition in a man with a history of serious assault on this specific victim",
+          "Recall vs tightened conditions is the core debate — both options require explicit clinical and ethical justification",
+          "A clear recommendation is required — listing options only is inadequate at this level"
+        ],
+        "domains": [
+          {
+            "name": "Clinical Risk Formulation (4 marks)",
+            "marks": 4,
+            "keyPoints": [
+              "Argument that this is a pattern of non-adherence, not a collection of isolated technical breaches — because missed depot, missed drug screens, proximity breach, and 'unfinished business' language each map to a distinct foreseeable harm pathway; the pattern constitutes rising dynamic risk in a man with a documented prior serious assault on this exact victim",
+              "Argument that recall may be premature — because Omar remains engaged with his support worker, has family support and stable housing, and formal recall would disrupt these protective factors; a less restrictive intervention may achieve equivalent safety",
+              "A defensible consultant position is that the current conditions are no longer sufficient to manage the risk without tightening — because the pattern of non-adherence and the victim-proximity behaviour together demonstrate that the current conditions are not being followed; standing conditions that are not followed are not managing risk",
+              "Name the specific dynamic risk factors that make this a consultant-level decision — because missed depot creates a medication risk, missed screens create a substance use risk, victim proximity creates an intent or impulsivity risk, and 'unfinished business' creates a grievance-cognition risk; each maps to a distinct harm pathway and all four are present simultaneously"
+            ]
+          },
+          {
+            "name": "Recall Ethics and Least Restrictive Principle (4 marks)",
+            "marks": 4,
+            "keyPoints": [
+              "Argument that recall is justified when risk cannot be safely managed in the community — because the victim is a specific, identified, elderly, physically vulnerable person who is actively frightened; Omar's conditional discharge is not a right but a risk-managed privilege contingent on adherence",
+              "Argument that tightened conditions may achieve equivalent safety without recall — because GPS monitoring, increased contact frequency, supervised depot administration, and police proximity alerts represent a meaningful escalation that may contain the identified risks without full recall",
+              "Argument that the least restrictive principle does not justify inaction on a clear adherence and proximity breach pattern — because least restrictive care requires genuine consideration of whether community management remains safe; it is not a principle that permits ignoring a pattern of non-adherence when foreseeable serious harm to a specific victim is the alternative",
+              "A defensible ethical position is that victim safety takes clinical and ethical precedence in this constellation — because this victim is known, identified, elderly, physically compromised, and actively frightened as a direct consequence of Omar's prior offending; the duty to protect outweighs the preference for least restrictive care when risk cannot be adequately managed at the current level of restriction"
+            ]
+          },
+          {
+            "name": "Family Supervision and Recovery Narrative (2 marks)",
+            "marks": 2,
+            "keyPoints": [
+              "Evaluate family supervision as a genuine but insufficient protective factor — because the sister's intention to help is clinically real and should be incorporated into any plan; however, family supervision cannot substitute for depot administration, urine drug screening, or clinical risk management at a forensic level",
+              "Engage the recovery narrative without allowing it to displace forensic risk assessment — because Omar's recovery trajectory is a legitimate clinical value; it does not however override the escalating risk pattern or the victim's right to safety"
+            ]
+          },
+          {
+            "name": "Clear Tribunal Recommendation (2 marks)",
+            "marks": 2,
+            "keyPoints": [
+              "Make a clear defensible recommendation rather than listing options — because the tribunal requires a clinical opinion, not a menu; a consultant who presents options without a recommendation has not fulfilled the forensic clinical function",
+              "State the recommendation, its clinical basis, and its ethical basis — because a defensible tribunal recommendation names the risk evidence, the option selected, the legal threshold met, and the clinical reasoning; this is what distinguishes a consultant-level report from a registrar-level summary"
+            ]
+          }
+        ],
+        "zeroMarkTraps": [
+          "Treating the sister's supervision offer as a forensic risk management plan equivalent to tightened conditions or recall",
+          "Using 'least restrictive principle' to justify not recommending any action on a clear pattern of non-adherence and victim-proximity behaviour",
+          "Listing recall, tightened conditions, and continued discharge as three equal options without making a defensible recommendation"
+        ],
+        "postExaminerNote": "Candidates who named the adherence pattern as rising dynamic risk, identified 'unfinished business' as a grievance cognition requiring specific attention, explicitly weighed victim safety against the least restrictive principle and came down clearly on the side of victim safety in this constellation, and gave a named recommendation to the tribunal scored in the upper range. Candidates who deferred to family supervision, misapplied the least restrictive principle, or failed to give a recommendation did not achieve the standard."
+      },
+      {
+        "stemNumber": "3.3",
+        "vignette": "The tribunal asks what community plan would be required if Omar is not recalled. Omar agrees to more frequent reviews but refuses to move accommodation because it is close to his sister and mosque. The police liaison officer asks whether the victim should be formally notified of Omar's movements.",
+        "question": "Describe — list and explain a risk containment and community reintegration plan.\nA list without explanation will not be awarded any marks.\n(10 marks | 10 minutes)",
+        "commandWord": "describe_explain",
+        "marks": 10,
+        "timeMinutes": 10,
+        "stemSignals": [
+          "Omar refusing to move accommodation — this creates a real geographic constraint that must be explicitly addressed, not ignored",
+          "Victim notification question — this is a legal and ethical process question, not a clinical discretion question",
+          "The plan must be specific enough to be operational — 'increased monitoring' without named responsibilities is not a plan",
+          "Recall contingency must be stated in advance — the plan must specify what events will trigger an immediate return to the tribunal"
+        ],
+        "domains": [
+          {
+            "name": "Medication Adherence Plan (2 marks)",
+            "marks": 2,
+            "keyPoints": [
+              "Re-administer depot immediately under supervised conditions and increase monitoring frequency — explain that a missed depot creates a measurable medication gap with a foreseeable relapse risk; the first action is re-administration and the plan must increase depot monitoring frequency with named clinical responsibility for follow-up",
+              "Assign named clinical responsibility for depot follow-up with a defined response to a missed appointment — explain that ambiguity about who follows up a missed depot appointment is a system failure in a forensic context; a named clinician with a specific action plan for a missed appointment is a minimum standard"
+            ]
+          },
+          {
+            "name": "Substance Use Monitoring (2 marks)",
+            "marks": 2,
+            "keyPoints": [
+              "Reinstate drug screens immediately with increased frequency and a named consequence for missed screens — explain that two missed screens in the context of schizoaffective disorder and a prior serious assault require immediate reinstatement; the plan must specify the minimum screen frequency, the named responsible party, and the clinical and legal consequence of a further missed or positive screen",
+              "Link substance use findings to a pre-agreed clinical and tribunal escalation pathway — explain that the plan must state in advance what action will follow a positive drug screen or further missed screen; pre-specifying consequences prevents improvised decision-making at the point of breach and makes the conditions enforceable"
+            ]
+          },
+          {
+            "name": "Geographic Exclusion and Police Liaison (2 marks)",
+            "marks": 2,
+            "keyPoints": [
+              "Reconfirm and operationalise the geographic exclusion with practical mapping — explain that the current exclusion order did not prevent the shopping centre proximity event; the plan must include specific street-level boundaries, Omar's written acknowledgement of those boundaries, and police liaison confirmation of the updated parameters",
+              "Brief the police liaison officer on the updated risk picture and agree a notification threshold — explain that the police liaison officer must receive specific exclusion boundary information, be informed of the recent proximity breach, and have a clear referral threshold for tribunal escalation; this is a coordination requirement, not a discretionary briefing"
+            ]
+          },
+          {
+            "name": "Increased Forensic Contact and Community Support Integration (2 marks)",
+            "marks": 2,
+            "keyPoints": [
+              "Increase forensic team contact to a minimum of weekly with a named clinical coordinator — explain that monthly contact is insufficient to detect the rate of change evident in this case; weekly contact with a consistent named coordinator allows real-time risk monitoring and early breach intervention before escalation reaches tribunal level",
+              "Integrate sister and mosque supports within a defined communication structure — explain that these are genuine protective factors but they must function within a defined protocol; the sister must know who her clinical contact is, what she should report, and how quickly; the mosque connection can be acknowledged as a stabilising routine without involving it in clinical risk management"
+            ]
+          },
+          {
+            "name": "Victim Notification and Recall Contingency (2 marks)",
+            "marks": 2,
+            "keyPoints": [
+              "Conduct victim notification through the formal victim liaison pathway — explain that the police liaison officer's question about notifying the victim must be answered through the official victim notification process; this is a legally defined pathway that protects both the victim's right to information and the service's confidentiality obligations; it does not involve ad hoc clinical disclosure",
+              "Define specific recall triggers in writing as part of the tribunal plan — explain that the plan must state which clinical events, breach types, or risk behaviours will prompt immediate recall application; named triggers such as missed depot, missed drug screen, positive screen, or any proximity breach must be specified in the tribunal documentation to make the plan enforceable and clinically defensible"
+            ]
+          }
+        ],
+        "zeroMarkTraps": [
+          "Writing 'increased monitoring' as a plan item without specifying who is responsible, what monitoring consists of, and what happens when it fails",
+          "Treating victim notification as a clinical discretion matter rather than a formal legally defined process",
+          "Failing to state specific recall triggers in the plan documentation"
+        ],
+        "postExaminerNote": "Candidates who provided a specific, operationally described plan with named responsibilities, specified recall triggers, and addressed victim notification through the formal pathway scored in the upper range. Candidates who wrote generic monitoring plans without named responsibilities, or who treated victim notification as optional or ad hoc, did not achieve the standard."
+      }
+    ],
+    "meqNumber": 41
+  },
+  {
+    "id": "meq_042",
+    "title": "Melissa — Erotomania, Stalking and Duty to Protect",
+    "case": "Melissa, 38, bipolar disorder with erotomanic delusions, stalking of public figure, identifiable secondary target",
+    "examSource": "Generated — Ethics / Professionalism / Legal",
+    "topic": "Erotomania and stalking in bipolar disorder targeting a named public figure; tests risk assessment beyond denial of intent in delusional fixation, confidentiality limits and duty to protect when an identifiable secondary target emerges, and consultant-level involuntary disposition under bed pressure",
+    "primaryDomain": "Ethics / Professionalism / Legal",
+    "totalMarks": 30,
+    "totalTimeMinutes": 30,
+    "stems": [
+      {
+        "stemNumber": "4.1",
+        "vignette": "Melissa is a 38-year-old woman with bipolar disorder and a history of erotomanic delusions. She has presented to ED three times in two weeks saying that a local television presenter, Daniel Price, is 'sending coded messages' to her. She has sent him multiple emails and gifts. She denies any wish to harm him and says, 'I just need him to stop pretending he doesn't know me.' The ED registrar asks whether she can be discharged because she is calm, denies suicidal or homicidal intent, and has accommodation.",
+        "question": "Outline — list and justify the key risk and assessment issues.\nA list without because-clauses specific to this case will not be awarded any marks.\n(10 marks | 10 minutes)",
+        "commandWord": "outline_justify",
+        "marks": 10,
+        "timeMinutes": 10,
+        "stemSignals": [
+          "Three ED presentations in two weeks — escalation trajectory is a risk marker independent of mental state at any single presentation",
+          "Calm presentation and denial of intent is the ED registrar's discharge justification — this is the examiner trap; it is insufficient in an erotomanic fixation",
+          "Daniel Price is a named individual — this changes the risk category from generalised to identified target",
+          "Bipolar disorder — mania as the driver of erotomania changes the treatment approach"
+        ],
+        "domains": [
+          {
+            "name": "Erotomania and Stalking Risk Assessment (3 marks)",
+            "marks": 3,
+            "keyPoints": [
+              "Identify this as an erotomanic stalking presentation with an escalating behavioural trajectory — because Melissa has made repeated contacts, gifted the target, attended ED three times in two weeks, and is pursuing a named public figure; this meets the clinical pattern for erotomania with behavioural escalation that predicts continued and increasing proximity-seeking regardless of stated intent",
+              "Reject discharge on the basis of calm presentation and denial of homicidal intent — because in erotomanic fixation, risk to the target and to perceived obstacles arises from delusional conviction rather than conscious violent intent; calm presentation and denial do not reduce erotomanic risk and should not be used as sole discharge criteria",
+              "Assess the escalation trajectory specifically as a risk marker — because three ED presentations in two weeks, combined with emails, gifts, and increasing proximity-seeking, indicate a behavioural pattern of boundary erosion that predicts further escalation regardless of the content of any single presentation"
+            ]
+          },
+          {
+            "name": "Third-Party Risk Assessment (3 marks)",
+            "marks": 3,
+            "keyPoints": [
+              "Assess risk to Daniel Price specifically as a named and identifiable target — because Daniel is a real, named individual at a specific workplace; proximity-seeking toward a specific identified person elevates risk from abstract to concrete and changes the clinical and ethical obligations of the treating team",
+              "Assess risk to Daniel's partner or spouse as a potential secondary target — because erotomanic fixation characteristically identifies persons who impede the imagined relationship as threats; a perceived rival or obstacle may become a target; this secondary target risk must be explicitly assessed",
+              "Assess access to means — because Melissa has been physically attending Daniel's workplace, is mobile, and appears motivated; access to means of harm and willingness to cross physical boundaries must be assessed directly, not assumed absent"
+            ]
+          },
+          {
+            "name": "Psychiatric Diagnosis and Mental State (2 marks)",
+            "marks": 2,
+            "keyPoints": [
+              "Assess whether this presentation represents a manic or hypomanic relapse of bipolar disorder — because erotomania in bipolar disorder is often driven by an underlying manic or hypomanic state that is amenable to pharmacological treatment; identifying this changes both the treatment approach and the prognosis",
+              "Assess insight and the fixity of the delusional conviction — because Melissa's statement that Daniel is 'sending coded messages' and simply 'pretending he doesn't know her' is consistent with fixed delusional conviction rather than hypomanic grandiosity that might respond rapidly to treatment; insight level and conviction fixity predict treatment response and risk trajectory"
+            ]
+          },
+          {
+            "name": "Disposition and Legal Framework (2 marks)",
+            "marks": 2,
+            "keyPoints": [
+              "Assess involuntary admission criteria rather than discharging on the basis of calm presentation — because the criteria for involuntary assessment include risk to others and impaired reality testing; calm affect and denial of intent do not negate these criteria when delusional fixation on a named identifiable individual is the underlying driver",
+              "Document the risk formulation specifically, including escalation markers, targets identified, and the basis for any discharge or admission decision — because if Melissa is discharged, the documented reasoning must specify the clinical rationale and the conditions under which re-presentation would change the disposition decision"
+            ]
+          }
+        ],
+        "zeroMarkTraps": [
+          "Discharging Melissa on the basis of calm presentation, denial of intent, and adequate accommodation without assessing erotomanic risk trajectory",
+          "Failing to identify Daniel's partner as a potential secondary target",
+          "Treating the absence of stated homicidal intent as the primary risk determinant in a delusional fixation presentation"
+        ],
+        "postExaminerNote": "Candidates who identified this as an erotomanic stalking presentation with an escalating behavioural trajectory, rejected discharge based on calm presentation and denial of intent as insufficient in this clinical context, named the secondary target explicitly, and assessed the bipolar disorder manic driver scored in the upper range. Candidates who agreed with the registrar's discharge reasoning, or who did not name Daniel's partner as a potential target, did not achieve the standard."
+      },
+      {
+        "stemNumber": "4.2",
+        "vignette": "Police contact the team. Melissa was found outside Daniel's workplace with flowers and a kitchen knife in her handbag. She says the knife was 'for protection from his jealous partner.' She becomes distressed when told Daniel is married and says, 'Then she is the barrier. I know what I must do.' Daniel is a public figure with workplace security staff and a media management team. Melissa begs you not to tell police or Daniel's security because 'that would ruin our future.'",
+        "question": "Discuss — list and debate confidentiality, duty to warn and protect, and police liaison in this situation.\nA list without debate structure will not be awarded any marks.\n(12 marks | 12 minutes)",
+        "commandWord": "debate",
+        "marks": 12,
+        "timeMinutes": 12,
+        "stemSignals": [
+          "'She is the barrier. I know what I must do.' — this is a direct statement identifying a secondary target; it changes the clinical and ethical category of the presentation",
+          "Police are already involved — this changes the confidentiality calculus; the team's failure to share relevant risk information when police are actively managing the same presentation creates foreseeable harm",
+          "Duty to protect is broader than duty to warn — warning Daniel is one component; keeping Melissa contained is another",
+          "Melissa's request not to tell anyone is the pressure point — Melissa's confidentiality preference does not override the identified and imminent risk to named third parties"
+        ],
+        "domains": [
+          {
+            "name": "Imminence and Identifiability of Harm (4 marks)",
+            "marks": 4,
+            "keyPoints": [
+              "Argument that this situation meets the threshold for imminent and identifiable harm — because Melissa was at Daniel's workplace with a weapon, has now explicitly named his wife as 'the barrier,' has stated 'I know what I must do,' and has a delusional conviction that has been escalating across multiple presentations; this is not a theoretical risk but a concrete, imminent, identified risk to named individuals",
+              "Argument that standard confidentiality obligations continue to apply unless a genuine threshold is crossed — because confidentiality is foundational to psychiatric practice; disclosure without a specific and genuine threshold being met undermines therapeutic trust for every patient and clinician in the system",
+              "A defensible position is that the threshold for overriding confidentiality has clearly been crossed in this case — because the specific combination of weapon at the workplace, identified secondary target, and explicit statement of intent places this case unambiguously within the duty-to-protect threshold under Australian ethical guidelines and common law principles",
+              "The duty is to protect, not merely to warn — because warning Daniel or his security is one component; the primary obligation is to take active clinical and collaborative steps to prevent harm, of which warning is a necessary but not sufficient element"
+            ]
+          },
+          {
+            "name": "Police Liaison (3 marks)",
+            "marks": 3,
+            "keyPoints": [
+              "Argument that police liaison is clinically and ethically required in this case — because police are already actively involved in this case; the clinical team's failure to share relevant risk information with police who are managing the same person and the same risk creates a foreseeable coordination failure",
+              "Share minimum necessary information with police — because the disclosure to police should be limited to the risk information directly relevant to managing the imminent threat: the weapon, the workplace attendance, the statements made about the wife, and the clinical plan; it is not an invitation to share the full clinical record",
+              "Coordinate with police on the containment plan — because police, workplace security, and the clinical team each have different roles in the immediate safety response; they must share a common operational understanding of what Melissa is doing, what she has said, and what each party is doing to prevent harm"
+            ]
+          },
+          {
+            "name": "Duty to Warn Daniel and His Wife (3 marks)",
+            "marks": 3,
+            "keyPoints": [
+              "Consider notifying Daniel's workplace security team — because Daniel's employer and security staff need to know that a person with a weapon and a delusional fixation on Daniel was found at their premises the previous day; this is protection, not clinical gossip, and is justified by the foreseeable harm",
+              "Consider notifying Daniel's wife given her explicit identification as a target — because 'she is the barrier, I know what I must do' is a direct statement naming Daniel's wife as a target; her right to be aware of the risk and the service's duty to protect her are both engaged by this statement",
+              "Apply the minimum necessary disclosure principle in all communications — because the purpose of disclosure is protection; I share only what each party needs to know to act safely, and nothing beyond that; clinical details, diagnosis, and treatment information are not disclosed"
+            ]
+          },
+          {
+            "name": "Clinical Containment and Therapeutic Stance (2 marks)",
+            "marks": 2,
+            "keyPoints": [
+              "Pursue immediate psychiatric assessment and involuntary admission criteria assessment — because the combination of delusional conviction, weapon possession, workplace attendance, and explicit identification of a secondary target makes voluntary community management unsafe at this point",
+              "Explain to Melissa why safety overrides confidentiality in this specific situation — because a therapeutic stance means engaging Melissa directly and honestly about the clinical and ethical basis for these decisions, not simply invoking authority; this preserves the opportunity for future therapeutic engagement while being clinically clear"
+            ]
+          }
+        ],
+        "zeroMarkTraps": [
+          "Deferring to Melissa's request not to tell police despite police already being involved and a named secondary target having been identified",
+          "Treating the duty to protect as equivalent to the duty to warn Daniel only, without naming the wife as a specific and independent target requiring separate protection action",
+          "Failing to document the information shared, the recipients, the legal basis, and the clinical rationale in the medical record"
+        ],
+        "postExaminerNote": "Candidates who named both Daniel and his wife as separate identifiable targets requiring separate protection actions, articulated the distinction between duty to warn and duty to protect, and justified police liaison on the basis of existing police involvement scored in the upper range. Candidates who treated confidentiality as the dominant value, or who failed to name the wife as an independent secondary target, did not achieve the standard. The key examiner phrase is: The duty is not simply to keep confidence; it is to use proportionate disclosure to prevent serious harm to identifiable people."
+      },
+      {
+        "stemNumber": "4.3",
+        "vignette": "Melissa is admitted voluntarily overnight but asks to leave the next morning. She remains convinced Daniel loves her, denies intent to harm his wife, and says she will 'wait outside until he admits the truth.' The treating registrar says there are no acute beds and asks if a safety plan with follow-up tomorrow is enough.",
+        "question": "Describe — list and explain your immediate containment and disposition plan.\nA list without explanation will not be awarded any marks.\n(8 marks | 8 minutes)",
+        "commandWord": "describe_explain",
+        "marks": 8,
+        "timeMinutes": 8,
+        "stemSignals": [
+          "No acute beds is the bed-pressure trap — bed unavailability does not change the clinical indication; it changes the escalation pathway",
+          "She will 'wait outside until he admits the truth' — this is a stated plan, not a vague threat; it is clinically different from general distress",
+          "Safety plan with follow-up tomorrow — the registrar's proposal must be evaluated on its clinical merits, not its convenience",
+          "Involuntary admission criteria — calm presentation and denial of specific intent are insufficient to rule out involuntary criteria when delusional fixation is the driver"
+        ],
+        "domains": [
+          {
+            "name": "Rejecting the Safety Plan as Inadequate (2 marks)",
+            "marks": 2,
+            "keyPoints": [
+              "Reject the safety plan and next-day follow-up as clinically inadequate — explain that Melissa has an active delusional conviction unchanged by overnight admission, has stated a specific plan to wait outside Daniel's venue, and had a kitchen knife the previous day; none of these risk factors have resolved and a safety plan does not address any of them",
+              "The absence of acute beds does not change the clinical indication for containment — explain that bed unavailability requires escalation through bed management and forensic bed pathways, not substitution of a safety plan for indicated clinical management; the registrar's framing of this as a clinical decision is itself a governance risk that requires consultant correction"
+            ]
+          },
+          {
+            "name": "Mental Health Act Assessment (2 marks)",
+            "marks": 2,
+            "keyPoints": [
+              "Formally assess criteria for involuntary detention under the relevant state Mental Health Act — explain that Melissa's clinical picture includes delusional conviction resistant to reality testing, a stated plan to wait outside Daniel's workplace or home, prior weapon possession, and the explicit identification of Daniel's wife as a target; these are grounds for involuntary assessment even in the absence of a declared intent to kill",
+              "Document the legal basis for the disposition decision clearly — explain that whether the decision is voluntary extended admission or involuntary detention, the clinical and legal reasoning must be documented and signed by a responsible clinician; this protects the patient, the treating team, and the identifiable third parties"
+            ]
+          },
+          {
+            "name": "Medication and Absconding Prevention (2 marks)",
+            "marks": 2,
+            "keyPoints": [
+              "Initiate antipsychotic treatment and consider mood stabilisation — explain that the erotomanic delusional fixation in bipolar disorder is most likely to respond to treatment of the underlying manic or psychotic state; treatment reduces the risk of escalation and is the most direct clinical intervention available",
+              "Implement absconding precautions immediately — explain that Melissa has stated she intends to leave the ward to wait outside Daniel's venue; absconding precautions must be in place, documented, and communicated to all nursing staff before any unsupervised access to exits is available"
+            ]
+          },
+          {
+            "name": "Police and Security Coordination (2 marks)",
+            "marks": 2,
+            "keyPoints": [
+              "Notify police of the current clinical plan and the ongoing risk — explain that police already have contact with this case; they need to know Melissa is being held for assessment and that the risk has not resolved so they can coordinate ongoing protective action at Daniel's workplace and home",
+              "Brief Daniel's workplace security on the outcome of the overnight assessment — explain that workplace security needs to know that the person found at their premises is under psychiatric assessment and that the identified risk is ongoing; they require this information to maintain protective measures until clinical management has reduced the risk"
+            ]
+          }
+        ],
+        "zeroMarkTraps": [
+          "Accepting the safety plan with next-day follow-up because bed pressure is real and Melissa appears calm",
+          "Failing to implement absconding precautions given Melissa's stated plan to leave the ward",
+          "Not notifying police and security that the risk is ongoing during clinical admission"
+        ],
+        "postExaminerNote": "Candidates who explicitly rejected the safety plan on clinical grounds, assessed involuntary criteria, implemented absconding precautions given the stated plan to wait outside Daniel's venue, and maintained coordination with police and security during admission scored in the upper range. Candidates who accepted the safety plan because bed pressure was cited as a constraint, or who failed to address absconding risk, did not achieve the standard."
+      }
+    ],
+    "meqNumber": 42
+  },
+  {
+    "id": "meq_043",
+    "title": "Leah — Domestic Violence, Child Safety and Decision-Making Capacity",
+    "case": "Leah, 31, domestic violence, strangulation, coercive control, self-harm, two children at home, ED assessment",
+    "examSource": "Generated — Management / Disposition",
+    "topic": "ED assessment of a woman with coercive control, strangulation history, self-harm and two young children at home; tests private assessment under coercive conditions, decision-specific capacity assessment versus voluntariness under coercive control, child safety assessment independent of parental consent, and discharge planning when capacity and child protection obligations are in tension",
+    "primaryDomain": "Management / Disposition",
+    "totalMarks": 30,
+    "totalTimeMinutes": 30,
+    "stems": [
+      {
+        "stemNumber": "5.1",
+        "vignette": "Leah is a 31-year-old woman brought to ED by ambulance after a panic episode and superficial self-inflicted cuts to her forearm. She has depression, harmful alcohol use, and a history of trauma. Her partner insists on staying in the cubicle and answers most questions for her. Leah says she wants to go home because 'the kids need me.' There are two children aged 4 and 7 at home. Nursing staff notice Leah becomes silent whenever her partner enters the room.",
+        "question": "Outline — list and justify your immediate assessment priorities.\nA list without because-clauses specific to this case will not be awarded any marks.\n(10 marks | 10 minutes)",
+        "commandWord": "outline_justify",
+        "marks": 10,
+        "timeMinutes": 10,
+        "stemSignals": [
+          "Partner answering for Leah and Leah becoming silent when he enters — these are coercive control indicators; assessment cannot proceed safely with the partner present",
+          "'The kids need me' — this sounds like a capacity statement but it is also a coercive control response to a dangerous home environment; it must not be taken at face value",
+          "Two children aged 4 and 7 at home — their immediate physical safety is an acute clinical priority, not a secondary discharge planning consideration",
+          "Strangulation is not mentioned yet — it will emerge in the private assessment; the clinical framework must be set up to elicit it"
+        ],
+        "domains": [
+          {
+            "name": "Private Assessment as the First Clinical Priority (3 marks)",
+            "marks": 3,
+            "keyPoints": [
+              "Arrange immediate private assessment away from the partner before any clinical or discharge decision is made — because the partner is answering questions for Leah and she becomes silent in his presence; these are recognised coercive control behaviours that make it clinically impossible to obtain a valid assessment, meaningful consent, or disclosure of domestic violence while he is present",
+              "Use a female clinician or offer this as a choice — because disclosure of intimate partner violence and sexual trauma is significantly affected by perceived safety and the clinician's gender; Leah's silence and the coercive partner behaviour indicate that environmental and relational safety must be established before clinical assessment can proceed",
+              "Do not challenge or confront the partner in the ED — because confronting or removing a coercive partner from the ED in a visible way increases the risk of retaliatory violence after discharge; the clinical priority is creating private assessment conditions without alerting the partner to the nature of the clinical concern"
+            ]
+          },
+          {
+            "name": "Self-Harm and Acute Medical Assessment (2 marks)",
+            "marks": 2,
+            "keyPoints": [
+              "Assess wounds, alcohol intoxication level, and immediate medical safety — because the self-inflicted cuts require wound assessment, and alcohol use at the time of presentation affects both the quality of the mental state assessment and the validity of any capacity assessment conducted while intoxicated",
+              "Assess suicidal ideation and plan in a structured way in private — because self-harm in the context of coercive control, trauma, and alcohol use carries significant suicide risk; 'I want to go home for the kids' does not exclude suicidal ideation and cannot be accepted as a safety indicator while the partner is present and controlling the interaction"
+            ]
+          },
+          {
+            "name": "Domestic Violence and Coercive Control Risk Assessment (3 marks)",
+            "marks": 3,
+            "keyPoints": [
+              "Conduct a structured domestic violence risk assessment once private — because partner proximate behaviours in the ED, combined with the clinical presentation, indicate intimate partner violence; a validated risk assessment approach covering coercive control, physical violence, strangulation, threats about the children, weapons, and escalation pattern is required",
+              "Assess strangulation as a specific and high-lethality indicator — because non-fatal strangulation is among the most reliable clinical predictors of subsequent intimate partner homicide; if strangulation history emerges, this must be documented specifically and escalated immediately as a high-lethality indicator",
+              "Assess the children's current location and immediate safety — because two children aged 4 and 7 are at home, it is unknown who is supervising them, and their mother is in ED following a self-harm presentation; their immediate physical safety is an acute clinical concern that cannot be deferred to discharge planning"
+            ]
+          },
+          {
+            "name": "Voluntariness and Capacity (2 marks)",
+            "marks": 2,
+            "keyPoints": [
+              "Assess voluntariness separately from clinical capacity — because Leah's stated wish to go home may be driven by fear of what happens if she does not return, by coercive instructions from the partner, or by genuine autonomous preference; voluntariness and legal capacity are distinct clinical concepts and both must be assessed",
+              "Do not accept 'the kids need me' as a capacity statement or a safety indicator while the partner is present — because this statement was made in the partner's presence and likely reflects the coercive dynamic; it cannot be used as a clinical basis for discharge decision-making at this stage"
+            ]
+          }
+        ],
+        "zeroMarkTraps": [
+          "Beginning capacity assessment while the partner is still present in or near the assessment area",
+          "Accepting 'I want to go home for the kids' as a capacity indicator or safety marker without private assessment",
+          "Treating the children's safety as a discharge planning issue rather than an acute clinical priority from the moment of presentation"
+        ],
+        "postExaminerNote": "Candidates who named private assessment away from the partner as the first clinical action, identified partner-proximate behaviours as coercive control indicators requiring specific management, and treated the children's safety as an acute priority from the start scored in the upper range. Candidates who proceeded with assessment in the partner's presence, or who treated 'she wants to go home' as a valid starting point, did not achieve the standard."
+      },
+      {
+        "stemNumber": "5.2",
+        "vignette": "When seen alone with a female nurse present, Leah discloses that her partner has strangled her twice, monitors her phone, and has threatened to take the children if she tells anyone. She says he has never directly hit the children but they have seen him smash furniture. She says, 'I know it sounds bad, but I choose to go home. I have capacity.'",
+        "question": "Describe — list and explain how you would assess Leah's decision-specific capacity and, separately, the safety needs of the children.\nA list without explanation will not be awarded any marks.\n(10 marks | 10 minutes)",
+        "commandWord": "describe_explain",
+        "marks": 10,
+        "timeMinutes": 10,
+        "stemSignals": [
+          "'I have capacity' is self-reported — capacity must be clinically assessed against the four limbs, not accepted as a self-declaration",
+          "Strangulation twice — this is a high-lethality indicator; it changes the clinical category from domestic violence to intimate partner homicide risk",
+          "Children have seen him smash furniture — this is exposure to domestic violence; it meets mandatory reporting thresholds in all Australian states regardless of parental consent",
+          "Capacity and child safety are separate legal and clinical obligations — even a fully capacitous parent cannot override the service's child protection duty"
+        ],
+        "domains": [
+          {
+            "name": "Decision-Specific Capacity Assessment (4 marks)",
+            "marks": 4,
+            "keyPoints": [
+              "Apply the four-limb capacity framework to the specific decision to return home — explain that Leah's capacity assessment is for the specific decision to refuse additional support and return to an environment where strangulation has occurred twice; she must demonstrate that she understands the nature and likely consequences of that decision, can retain and process this information, can weigh the risks against her stated reasons, and can communicate her decision consistently",
+              "Assess the effect of acute trauma activation, alcohol intoxication, and coercive fear on the quality of decision-making — explain that all three of these factors may impair the weighing and appreciation limbs of the capacity assessment; a capacity assessment under these conditions may not reflect Leah's true baseline and should be revisited when acute factors have reduced",
+              "Assess realistic appreciation of consequences — explain that the clinical assessment must determine whether Leah appreciates that non-fatal strangulation is a homicide risk predictor, that her children are sustaining emotional harm from witnessing violence, and that her partner's threats to take the children are credible and constitute a real barrier to leaving; self-reporting capacity does not satisfy this requirement",
+              "Distinguish a legally capacitous decision from a genuinely voluntary and autonomous choice — explain that coercive control characteristically produces outwardly capacitous decisions that are internally coerced by fear; voluntariness and legal capacity are separate assessments and both must be completed before any discharge decision is made"
+            ]
+          },
+          {
+            "name": "Child Safety Assessment (4 marks)",
+            "marks": 4,
+            "keyPoints": [
+              "Assess child safety as a legal and clinical obligation independent of Leah's capacity or consent — explain that even if Leah has full decision-making capacity, the clinical team's obligations to assess and report child safety concerns are not discharged by her capacitous wish to return home; the children's interests are legally independent",
+              "Identify the mandatory reporting threshold for each child — explain that children aged 4 and 7 who have witnessed physical violence and property destruction, who live with a parent who has experienced repeated strangulation, and who are exposed to ongoing coercive control are at significant risk of emotional harm and possible physical harm; this meets mandatory reporting thresholds under child protection legislation in all Australian jurisdictions regardless of parental consent",
+              "Document the specific exposures and their clinical significance — explain that witnessing domestic violence, including property destruction and parental trauma presentations, constitutes emotional abuse under child protection legislation; this must be documented in sufficient clinical detail to support a formal report to the relevant child protection service",
+              "Initiate child protection consultation during this ED presentation — explain that child protection consultation must not wait until discharge planning; a formal consultation with the hospital child protection team or direct notification to the relevant state child protection service must occur during this presentation while Leah and the clinical information are available"
+            ]
+          },
+          {
+            "name": "Documentation and Multidisciplinary Input (2 marks)",
+            "marks": 2,
+            "keyPoints": [
+              "Document the capacity assessment in full, including each limb and the factors affecting it — explain that a capacity assessment is a clinical and legal record; it must name the specific decision, document each limb, identify factors impairing quality of decision-making, and state the clinical conclusion with the clinician's reasoning",
+              "Obtain social work and senior clinical input — explain that domestic violence risk assessment, decision-specific capacity assessment, and child protection consultation together represent a complexity beyond any single clinician in an ED setting; multidisciplinary input is a clinical standard, not optional"
+            ]
+          }
+        ],
+        "zeroMarkTraps": [
+          "Accepting 'I have capacity' as a self-declaration that replaces clinical assessment",
+          "Treating child safety assessment and reporting as contingent on Leah's consent or her capacitous decision to go home",
+          "Failing to identify non-fatal strangulation twice as a specific high-lethality indicator that changes the clinical category"
+        ],
+        "postExaminerNote": "Candidates who applied all four capacity limbs to the specific decision, identified that coercive fear and acute alcohol use affect capacity quality and require reassessment, named child safety as a legally independent obligation not contingent on Leah's capacity, and initiated child protection consultation during the ED presentation scored in the upper range. Candidates who accepted the self-reported capacity, or who treated child protection notification as contingent on Leah's consent, did not achieve the standard. The key examiner phrase is: Capacity to refuse help does not remove the service's responsibility to assess and act on child-safety risk."
+      },
+      {
+        "stemNumber": "5.3",
+        "vignette": "Leah's partner becomes angry in the waiting room and demands information. Leah now says she does not want police or child protection involved because 'that will make him worse.' Her mother phones and says Leah and the children can stay with her, but Leah says her mother 'doesn't understand our culture' and refuses. The treating registrar is asking about discharge.",
+        "question": "Discuss — list and debate your management of domestic violence risk, confidentiality, child protection, and discharge planning.\nA list without debate structure will not be awarded any marks.\n(10 marks | 10 minutes)",
+        "commandWord": "debate",
+        "marks": 10,
+        "timeMinutes": 10,
+        "stemSignals": [
+          "Partner demanding information in the waiting room — this is a live safety event in the ED, not just background; it requires an active clinical response",
+          "'That will make him worse' — this is a clinically valid fear in DV contexts; it must be acknowledged and assessed, not dismissed",
+          "Refusing her mother's home for cultural reasons — this is not obstruction; it is a legitimate safety and dignity concern that requires culturally competent alternatives",
+          "No discharge until immediate safety of Leah and the children is established — this is the non-negotiable position"
+        ],
+        "domains": [
+          {
+            "name": "Managing the Partner in the ED (2 marks)",
+            "marks": 2,
+            "keyPoints": [
+              "Argument that the partner must not receive any clinical information — because sharing any information with a person who has strangled his partner twice and threatened to take the children if she discloses increases the immediate danger to Leah; his presence and demands in the waiting room are themselves a coercive behaviour requiring active clinical and security management",
+              "Involve security and physically separate the partner from the assessment area — because a perpetrator escalating in the waiting room is an acute clinical safety event for Leah, for other patients, and for staff; this must be managed as a safety incident before any discharge discussion can proceed"
+            ]
+          },
+          {
+            "name": "Confidentiality and Child Protection Reporting (3 marks)",
+            "marks": 3,
+            "keyPoints": [
+              "Argument for maximising Leah's confidentiality and involving her in all decisions where possible — because confidentiality supports trust, which is essential for ongoing engagement with services; punitive or non-consensual reporting without attempting to involve Leah may cause her to disengage from services and increase long-term risk",
+              "Argument that child protection notification proceeds regardless of Leah's objection when the mandatory reporting threshold is met — because children aged 4 and 7 who have witnessed repeated domestic violence, including property destruction, and who live in a home where strangulation has occurred twice, meet the mandatory reporting threshold in all Australian states; this reporting obligation does not require the parent's consent and is not overridden by the parent's fear of consequences",
+              "A defensible position is to proceed with child protection notification while explaining the reasons honestly and supportively to Leah — because a collaborative approach that includes Leah in understanding the reporting obligation, explaining that the goal is safety and not punishment, and maintaining her trust wherever possible reduces the risk that the notification is experienced as punitive and that she disengages from support"
+            ]
+          },
+          {
+            "name": "Domestic Violence Safety Planning (3 marks)",
+            "marks": 3,
+            "keyPoints": [
+              "Develop a practical safety plan with Leah regardless of her discharge decision — because even if Leah chooses to return home, a safety plan covering emergency contacts, code words with trusted persons, a charged hidden phone, key documents location, DV service numbers, and a plan for the children materially improves safety and survival probability",
+              "Address police involvement carefully given Leah's documented fear of escalation — because Leah's concern that police involvement will make things worse is a clinically valid concern in some DV contexts and should be explored rather than dismissed; serious safety concerns may justify proceeding without consent but this decision must be deliberate and documented",
+              "Offer and explore culturally appropriate alternatives to her mother's home — because Leah's refusal of her mother's home on cultural grounds is a legitimate safety and dignity concern, not obstruction; culturally specific DV services, community housing options, and culturally competent refugee accommodation should be actively explored before accepting that no alternative exists"
+            ]
+          },
+          {
+            "name": "Discharge Decision (2 marks)",
+            "marks": 2,
+            "keyPoints": [
+              "There is no safe discharge until the immediate safety of Leah and the children is established — because the combination of two strangulations, active coercive control, children at home, partner in the waiting room, and Leah's stated refusal of available safety options constitutes an unsafe discharge situation; the registrar's request for discharge is not clinically supportable until a safety plan, child protection notification, and follow-up plan are in place",
+              "Document the discharge reasoning in full if Leah leaves against advice — because if Leah does leave, the clinical record must contain the full capacity assessment, the DV risk formulation, the child protection notification and its basis, the safety planning provided, the cultural considerations addressed, and the follow-up plan; this documentation protects both Leah and the clinical team"
+            ]
+          }
+        ],
+        "zeroMarkTraps": [
+          "Discharging Leah on the basis of capacity alone without child protection notification, safety planning, and partner management",
+          "Treating child protection notification as optional because Leah has objected to it",
+          "Allowing the partner to receive any clinical information while he is demanding it in the waiting room"
+        ],
+        "postExaminerNote": "Candidates who managed the partner as an active safety event requiring security involvement, proceeded with child protection notification despite Leah's objection on the basis of the mandatory reporting threshold, developed a practical safety plan, and stated clearly that discharge is not safe until these elements are in place scored in the upper range. Candidates who accepted discharge on the basis of capacity, treated child protection notification as contingent on Leah's consent, or shared information with the partner did not achieve the standard."
+      }
+    ],
+    "meqNumber": 43
   }
 ]
