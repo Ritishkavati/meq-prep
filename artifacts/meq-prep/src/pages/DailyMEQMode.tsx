@@ -7118,6 +7118,1060 @@ const MEQ_BANK = [
       }
     ],
     meqNumber: 24
+  },
+  {
+    id: "meq_044",
+    title: "Graham — Weapons, Firearms and Public Safety",
+    case: "Graham, 52, rural farmer, psychotic depression, licensed firearms, fire-setting behaviour, vulnerable child and elderly family members on property",
+    examSource: "Generated — Ethics / Professionalism / Legal",
+    topic: "Rural firearms and public safety risk in a man with psychotic depression, persecutory beliefs about council poisoning, sleeping with a rifle, recent fire-setting behaviour, and vulnerable family members on the property; tests firearms-risk assessment beyond denial of intent, confidentiality limits and statutory notification, and containment planning under rural service constraints.",
+    primaryDomain: "Ethics / Professionalism / Legal",
+    totalMarks: 30,
+    totalTimeMinutes: 30,
+    stems: [
+      {
+        stemNumber: "1.1",
+        vignette: "Graham is a 52-year-old farmer with recurrent psychotic depression. His GP asks for urgent review because Graham believes 'the council is poisoning the creek.' Graham owns several licensed firearms and says they are 'normal tools out here.' His wife says he has been sleeping in the shed with a rifle because he fears trespassers. Graham denies any plan to harm himself or others. His 11-year-old grandson stays at the farm on weekends.",
+        question: "Outline — list and justify your assessment of firearms-related risk and immediate safety.\nA list without because-clauses specific to this case will not be awarded any marks.\n(10 marks | 10 minutes)",
+        commandWord: "outline_justify",
+        marks: 10,
+        timeMinutes: 10,
+        stemSignals: [
+          "Licensed rural firearms are being framed as normal tools — this is the normalisation trap; lawful ownership does not make access safe during psychotic depression.",
+          "Sleeping in the shed with a rifle — this is current weapon proximity linked to persecutory threat beliefs, not background firearm ownership.",
+          "Denial of intent is not reassuring — psychotic threat perception may create defensive violence or suicide risk without a stated plan.",
+          "Grandson on weekends — child safety must be assessed as part of firearms risk, not left as a family issue."
+        ],
+        domains: [
+          {
+            name: "Firearms-specific risk formulation (4 marks)",
+            marks: 4,
+            keyPoints: [
+              "Assess access, storage, ammunition, number and type of firearms — because Graham has licensed firearms and is currently sleeping with a rifle, so the clinical issue is immediate access under delusional threat perception rather than abstract ownership",
+              "Assess the relationship between the specific delusional belief and defensive use of the firearm — because Graham believes council is poisoning the creek and trespassers are coming; the rifle is currently positioned as a defence against these identified persecutors, meaning the weapon is already part of his delusional response plan",
+              "Assess suicide risk specifically — because psychotic depression plus firearm access creates extremely high lethality even when Graham denies a plan; firearms convert a transient suicidal crisis into a fatal outcome",
+              "Assess risk to identifiable groups including council workers, perceived trespassers, family members and police attending the property — because each group may be encountered on the property and interpreted through Graham's persecutory framework",
+              "Assess temporal relationship between delusional belief escalation and firearm proximity — because Graham moving into the shed with the rifle represents a behavioural escalation indicating the delusional defence plan is now being enacted, not merely held"
+            ]
+          },
+          {
+            name: "Immediate safety actions (4 marks)",
+            marks: 4,
+            keyPoints: [
+              "Seek immediate removal or supervised secure storage of all firearms and ammunition as a clinical priority — because continuing access while Graham is actively psychotic, sleeping with a rifle, and holding persecutory beliefs about identifiable targets is not compatible with any safe community management plan",
+              "Coordinate involvement of wife and GP within a safe plan rather than asking them to confront Graham independently — because the wife has critical collateral but should not be asked to personally negotiate firearm surrender, which may place her at direct risk",
+              "Assess whether urgent involuntary mental health assessment is indicated — because active psychotic depression with weapon access, identified persecutory beliefs and impaired judgement may meet criteria for compulsory assessment under the relevant state Mental Health Act",
+              "Coordinate timing and approach of any safety intervention carefully — because an uncoordinated demand to surrender firearms without police, clinical and family preparation may trigger the defensive violence it aims to prevent"
+            ]
+          },
+          {
+            name: "Child and household safety (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "Assess immediate safety of the 11-year-old grandson, including when he is next scheduled to visit — because a child on a property with unsecured firearms and a psychotically depressed adult sleeping with a rifle requires active safeguarding; the next scheduled visit creates a specific deadline for the safety plan",
+              "Clarify who else lives on or regularly visits the property — because rural properties commonly include farm workers, neighbours and extended family who may enter without Graham's awareness and be exposed to the same threat pathway",
+              "Assess whether mandatory reporting of child safety risk is required — because a child regularly spending weekends on a property with active psychosis and unsecured firearm access may meet the threshold for notification to child protection services"
+            ]
+          },
+          {
+            name: "Documentation and escalation (1 mark)",
+            marks: 1,
+            keyPoints: [
+              "Document the firearms risk formulation and all escalation decisions contemporaneously — because the combination of psychosis, firearm access, child exposure and rural isolation is a high-liability clinical scenario requiring a defensible written record of every assessment finding, agency contact and rationale for action taken or deferred"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Accepting that firearms are 'normal tools out here' and therefore not treating them as an acute clinical risk factor requiring immediate management.",
+          "Relying on Graham's denial of intent despite current rifle access and active persecutory beliefs about identifiable council and trespasser targets.",
+          "Ignoring the grandson's safety on the grounds that Graham has not directly threatened him."
+        ],
+        postExaminerNote: "High-scoring candidates treated firearms access as a dynamic and immediate risk multiplier in psychotic depression, not as a static rural lifestyle detail. They linked Graham's delusional threat beliefs to defensive violence risk, suicide risk, and child safety with specific case-based reasoning. Low-scoring candidates were falsely reassured by licensed ownership, rural normality, or denial of intent."
+      },
+      {
+        stemNumber: "1.2",
+        vignette: "New collateral emerges that Graham lit a small fire near the council boundary marker last week 'to send a warning.' His 79-year-old father with dementia lives in a granny flat on the property and cannot evacuate independently. Graham says the fire was controlled and that 'city doctors do not understand farming.'",
+        question: "Discuss — list and debate the ethical and statutory dimensions of police and firearms safety action, including confidentiality and public-safety considerations.\nA list without debate structure will not be awarded any marks.\n(10 marks | 10 minutes)",
+        commandWord: "debate",
+        marks: 10,
+        timeMinutes: 10,
+        stemSignals: [
+          "Fire-setting changes the risk level — Graham has moved from holding a belief to acting on it.",
+          "Council boundary marker — the target is linked to the delusional persecutor, not random farm burning.",
+          "Father with dementia cannot evacuate — elderly protection and fire risk are now central.",
+          "'City doctors do not understand farming' — cultural humility is required but must not be used to avoid statutory safety action."
+        ],
+        domains: [
+          {
+            name: "Public-safety threshold (4 marks)",
+            marks: 4,
+            keyPoints: [
+              "Argument for breaching confidentiality for public safety — because Graham has lit a deliberate warning fire near an identified delusional target while owning firearms and having vulnerable non-ambulatory dependants on the property; the risk is foreseeable, serious, and has already resulted in action",
+              "Argument for preserving confidentiality where possible — because disclosure should not become broad information-sharing simply because firearms are present; only minimum necessary information should be shared with agencies with a direct role in reducing risk",
+              "Defensible position: the public-safety threshold has been crossed in this case — because the combination of psychosis, weapon access, targeted fire-setting, identified persecutory targets, and a non-ambulatory elder requires formal police, firearms and fire-safety action regardless of Graham's objection",
+              "Name fire-setting as a behavioural escalation from belief to action — because crossing from delusion to enacted behaviour against an identifiable target is the clearest clinical indicator that the risk is no longer theoretical; this is the clinical hinge of the stem"
+            ]
+          },
+          {
+            name: "Statutory and firearms notification pathway (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "Use the relevant state firearms notification or police safety pathway — because Graham's current mental state and enacted threat behaviour raise a formal concern about safe firearm possession that should be handled through statutory channels rather than informal local negotiation",
+              "Notify police and firearms branch using minimum necessary information — because the required disclosure is the safety-relevant facts: persecutory beliefs, sleeping with rifle, targeted fire-setting, vulnerable persons on property, and refusal or likely refusal of voluntary surrender",
+              "Clarify whether elder-safety notification is required — because Graham's father with dementia is a non-ambulatory person at foreseeable fire risk on a property where his son has already demonstrated warning fire behaviour; elder safety services may require separate notification independent of the mental health pathway"
+            ]
+          },
+          {
+            name: "Ethical balance and rural context (2 marks)",
+            marks: 2,
+            keyPoints: [
+              "Respect rural context without colluding with the risk normalisation it generates — because firearms may be common tools on farms, but current psychotic depression with enacted targeted fire-setting makes continued access unsafe regardless of cultural familiarity with firearms",
+              "Avoid allowing stigma concerns to produce clinical inaction — because concerns about police involvement and the impact on a farming community are legitimate considerations in planning the response, but they are not ethical justifications for leaving weapon access and fire risk unmanaged"
+            ]
+          },
+          {
+            name: "Communication and documentation (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "Explain confidentiality limits to Graham and his wife where clinically safe and non-escalatory — because transparent communication about why formal action is required preserves some therapeutic integrity while making clear that serious public-safety risk overrides confidentiality",
+              "Document the legal basis, minimum necessary information shared, and recipients — because disclosure to police and firearms authorities requires a clear, proportionate and contemporaneously documented clinical rationale that specifies what was disclosed, to whom, and why",
+              "Clarify the child protection reporting obligation given the grandson — because once fire-setting has been established, the threshold for child protection notification regarding the grandson's weekend visits must be re-assessed against the current elevated risk"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Treating the fire as a minor rural incident because Graham says it was controlled.",
+          "Avoiding police or firearms notification because Graham has not made a direct explicit threat.",
+          "Disclosing broadly to local community members rather than using formal statutory notification channels."
+        ],
+        postExaminerNote: "The key examiner move is recognising that fire-setting is a behavioural escalation from delusion into action. Candidates must respect rural context but not allow rural familiarity, stigma concerns, or confidentiality framing to override formal firearms and public-safety statutory duties."
+      },
+      {
+        stemNumber: "1.3",
+        vignette: "Graham refuses hospital assessment and says he will not surrender his firearms. His wife fears that police involvement will escalate him. The local police officer knows Graham socially and asks whether the team can 'handle it quietly.' There is no local inpatient bed.",
+        question: "Describe — list and explain your containment plan for public safety, child and elderly protection, and rural service limitations.\nA list without explanation will not be awarded any marks.\n(10 marks | 10 minutes)",
+        commandWord: "describe_explain",
+        marks: 10,
+        timeMinutes: 10,
+        stemSignals: [
+          "Refusal to surrender firearms — voluntary safety planning has failed; formal statutory pathways are now required.",
+          "Police know Graham socially — social familiarity creates a conflict of interest that makes informal handling unsafe.",
+          "No local bed — bed unavailability is a systems pressure that must be escalated, not a clinical reason to leave firearm risk unmanaged.",
+          "Wife fears escalation — the clinical response must be planned and coordinated, not abandoned because of escalation risk."
+        ],
+        domains: [
+          {
+            name: "Immediate containment and escalation (4 marks)",
+            marks: 4,
+            keyPoints: [
+              "Escalate to senior mental health authority, police firearms command and regional crisis services — explain that Graham's refusal of assessment and firearm surrender places this beyond routine community follow-up; coordinated emergency containment involving the correct statutory agencies is required",
+              "Request a planned police firearms response rather than informal local handling — explain that the local officer's social connection to Graham creates a conflict of interest and the 'handle it quietly' approach may fail to secure firearms, fail to protect vulnerable family members, and place the officer himself in an unsafe position",
+              "Initiate involuntary mental health assessment pathway — explain that active psychotic depression with firearm access, enacted fire-setting, refusal of voluntary assessment, and vulnerable dependants may satisfy criteria for compulsory assessment under the relevant state Mental Health Act",
+              "Document bed unavailability as a formal clinical and governance risk requiring escalation — explain that no local bed does not make community management of firearm risk safe; the absence of a local bed must be escalated in writing to the regional bed manager and health service director, not accepted as a clinical justification for deferring action"
+            ]
+          },
+          {
+            name: "Family and vulnerable-person protection (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "Arrange immediate safety planning for the wife, grandson and father before any confrontation with Graham — explain that these three individuals should not remain on the property while Graham holds firearms and has demonstrated fire-setting behaviour; temporary relocation or emergency welfare support must be arranged and not left for the family to manage independently",
+              "Do not ask the wife to remove firearms or negotiate surrender — explain that asking a family member to physically remove weapons from a psychotically depressed person with a firearm places her at direct risk and inappropriately transfers institutional responsibility onto a vulnerable individual",
+              "Activate elder safeguarding pathway for the father with dementia — explain that an elderly person with dementia who cannot evacuate independently, living on the same property as an individual with firearm access and fire-setting history, meets the threshold for elder safety notification in all Australian jurisdictions"
+            ]
+          },
+          {
+            name: "Rural service limitations (2 marks)",
+            marks: 2,
+            keyPoints: [
+              "Escalate bed unavailability through regional pathways immediately rather than accepting it as a final constraint — explain that no local bed activates the regional transfer pathway; the clinical team must contact the regional forensic or acute bed coordinator and document the request formally",
+              "Use telepsychiatry and mobile crisis support only as bridging measures while formal containment is being organised — explain that remote review can maintain clinical contact and document ongoing risk but cannot secure firearms, conduct a physical assessment of the property, or protect non-ambulatory dependants"
+            ]
+          },
+          {
+            name: "Communication and documentation (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "Explain the containment plan to Graham if safe and non-escalatory — explain that transparency about clinical reasoning is ethically preferable, but the timing and wording must be coordinated with police to avoid triggering defensive use of weapons before safety measures are in place",
+              "Document risk formulation, all agency contacts, information shared, and the legal basis for overriding confidentiality — explain that this is a high-liability public-safety decision involving firearms, police coordination, and vulnerable persons; every decision must be documented contemporaneously with the reasoning and named recipients",
+              "Escalate the local officer's conflict of interest formally — explain that the request to 'handle it quietly' must be documented and escalated to police command rather than simply declined; an informal handling request in a firearms safety situation is itself a governance concern requiring a formal response"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Agreeing to 'handle it quietly' because the local officer knows Graham and requests this.",
+          "Leaving firearms in place because police involvement might escalate him.",
+          "Accepting no local bed as the clinical justification for no containment plan."
+        ],
+        postExaminerNote: "High-scoring answers converted the rural constraints into a specific escalation plan with named agencies, formal documentation, and protected vulnerable persons. The correct consultant posture is planned, formal, documented containment — not informal local handling, family-led firearm removal, or waiting for a bed."
+      }
+    ],
+    meqNumber: 25
+  },
+  {
+    id: "meq_045",
+    title: "Martin — Changed Collateral and Adverse Event Review",
+    case: "Martin, 45, schizophrenia and methamphetamine use, discharged from crisis follow-up, serious assault after missed collateral escalation",
+    examSource: "Generated — Governance / Systems / Leadership",
+    topic: "Post-incident review after serious assault following community crisis discharge where collateral about a baseball bat and neighbour grievance was recorded administratively but not escalated; tests dynamic risk formulation with changed collateral, open disclosure, just-culture staff support, root cause analysis under managerial pressure, and systems recommendations.",
+    primaryDomain: "Governance / Systems / Leadership",
+    totalMarks: 32,
+    totalTimeMinutes: 32,
+    stems: [
+      {
+        stemNumber: "1.1",
+        vignette: "Martin is a 45-year-old man with schizophrenia and methamphetamine use who was discharged from community crisis follow-up five days ago after denying suicidal or homicidal intent. The discharge note states: 'No acute risk. Denies intent. Follow up with GP.' Yesterday, Martin seriously assaulted his neighbour, who had made repeated noise complaints. The clinical director asks you to review the case. The registrar who discharged him says, 'He denied everything. I could not predict this.'",
+        question: "Outline — list and justify the immediate clinical and governance issues you would clarify.\nA list without because-clauses specific to this case will not be awarded any marks.\n(8 marks | 8 minutes)",
+        commandWord: "outline_justify",
+        marks: 8,
+        timeMinutes: 8,
+        stemSignals: [
+          "'No acute risk. Denies intent' — this is documentation of denial, not a structured risk formulation.",
+          "Neighbour had made repeated noise complaints — this is an identifiable interpersonal grievance pathway that should have been part of the formulation.",
+          "Registrar says prediction was impossible — the clinical issue is not whether the outcome was predictable but whether available risk information was gathered, escalated and formulated.",
+          "Serious incident review — immediate clinical care, victim response and governance duties must run in parallel from the outset."
+        ],
+        domains: [
+          {
+            name: "Immediate clinical issues (4 marks)",
+            marks: 4,
+            keyPoints: [
+              "Clarify Martin's current clinical status, containment and ongoing risk — because after a serious assault, active psychosis, methamphetamine use, access to weapons and risk to remaining identifiable targets may all persist and require immediate clinical management",
+              "Clarify immediate safety of the injured neighbour and other noise complainants — because Martin's grievance was directed at the noise complaints specifically; other complainants may remain at risk of retaliation and require safety notification",
+              "Clarify whether Martin remains a risk to staff, police, or others in the current setting — because a person who has just committed a serious assault while psychotic and using methamphetamine remains a high-risk presentation until formally reassessed and contained",
+              "Clarify whether any duty-to-warn obligation was engaged before discharge — because if the neighbour was an identifiable target and the team had or should have had information about targeted grievance, the adequacy of the discharge decision against that duty must be part of the immediate governance review"
+            ]
+          },
+          {
+            name: "Risk assessment quality (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "Review the discharge formulation rather than the stated risk label — because 'denies intent' is not a structured risk formulation and does not address psychosis, methamphetamine use, identified grievance, collateral, or the interpersonal context of the noise complaints",
+              "Clarify what collateral was actively sought versus passively absent — because the adequacy of the discharge risk assessment depends on whether family, police and neighbour information were actively sought and found absent, or simply not sought at all",
+              "Distinguish between information that was available at the time of discharge and information discovered after the event — because this distinction is essential for a fair review; the registrar cannot be held responsible for formulating on information that was never escalated to them"
+            ]
+          },
+          {
+            name: "Governance and review process (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "Secure all records, communication logs, handover notes and administrative messages before they are altered — because the review requires a contemporaneous and complete chronology of calls received, notes made, clinical decisions, supervision contacts and handover communications",
+              "Notify the appropriate serious incident reporting pathway immediately — because a serious assault shortly after discharge from a mental health service triggers mandatory serious incident reporting obligations in all Australian health systems",
+              "Identify whether there is an obligation to notify police, the victim's family, or other relevant parties — because governance of a serious incident includes communication obligations beyond clinical team review"
+            ]
+          },
+          {
+            name: "Staff and communication issues (1 mark)",
+            marks: 1,
+            keyPoints: [
+              "Support the registrar while explicitly avoiding premature blame or reassurance — because the review must create psychological safety for honest disclosure while making clear that the purpose is systems learning, not personal judgement on the basis of the outcome"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Agreeing that the event was unforeseeable because Martin denied intent, without examining what collateral was available or sought.",
+          "Focusing only on the registrar's clinical decision without examining the information system, collateral pathways and supervision structures around that decision.",
+          "Failing to address the ongoing safety of the injured neighbour and other potential targets as an immediate clinical priority."
+        ],
+        postExaminerNote: "Candidates must not conflate hindsight prediction with prospective formulation quality. The review begins by clarifying what was known, what could reasonably have been known given active collateral-seeking, and how risk information was processed through the system — not simply whether the outcome was avoidable."
+      },
+      {
+        stemNumber: "1.2",
+        vignette: "You review the file and find that Martin's sister phoned the team the day before discharge saying Martin had bought a baseball bat and was talking about 'ending the neighbour problem.' This message was recorded in an administrative note but not escalated to the registrar. Police had attended Martin's house twice that week but this collateral was not sought.",
+        question: "Describe — list and explain how this new collateral changes the risk formulation, what should have changed clinically, and how you would distinguish system failure from individual hindsight blame.\nA list without explanation will not be awarded any marks.\n(10 marks | 10 minutes)",
+        commandWord: "describe_explain",
+        marks: 10,
+        timeMinutes: 10,
+        stemSignals: [
+          "Baseball bat plus 'ending the neighbour problem' — specific weapon acquisition plus identified target plus grievance intent is a high-specificity violence pathway.",
+          "Administrative note not escalated — this is a system communication failure, not a registrar knowledge failure.",
+          "Police attended twice that week — active failure to seek collateral from an available source is a risk assessment gap.",
+          "The distinction between available-at-the-time information and discovered-after-the-event information is the fair-review hinge of this stem."
+        ],
+        domains: [
+          {
+            name: "Changed risk formulation (5 marks)",
+            marks: 5,
+            keyPoints: [
+              "Reformulate risk as high and specific rather than general or denied — explain that the collateral confirms a weapon, an identified target, a grievance phrase, active psychosis, methamphetamine use, and two recent police attendances; this constellation would have changed the formulation from 'denies intent' to 'targeted violence risk with identified victim and means'",
+              "Identify the neighbour as a specific, named identifiable target — explain that 'ending the neighbour problem' combined with repeated noise complaints and a baseball bat purchase creates a specific interpersonal violence pathway that is qualitatively different from generalised psychotic agitation",
+              "Treat denial of intent as low-weight evidence when contradicted by collateral — explain that denial of intent has clinical weight only when no contradictory collateral exists; once the sister's call and the police attendances are known, denial cannot carry the formulation",
+              "Identify the duty-to-protect implications — explain that if the team had received the sister's call and understood its significance, a clinical and ethical obligation to consider warning or protecting the identified neighbour may have been engaged; this must be addressed explicitly in the review",
+              "Recognise methamphetamine as a dynamic amplifier of the violence risk in this case — explain that stimulant use worsens paranoia and impulsivity in schizophrenia; the methamphetamine context means the risk formulation required active collateral rather than reliance on the patient's stated mental state"
+            ]
+          },
+          {
+            name: "What should have changed clinically (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "The sister's call should have triggered urgent senior clinical review — explain that a call from a family member reporting weapon acquisition and target-specific language is an escalation marker that must be reviewed by a clinician before any discharge decision proceeds",
+              "Police collateral should have been actively sought before discharge — explain that two police attendances in the same week as a crisis presentation are a directly available and highly informative source of risk collateral; not seeking this constitutes an active failure in the risk assessment process",
+              "Discharge should have been paused or replaced by active containment — explain that even if the clinical assessment found no acute risk at interview, the threshold for active containment rises substantially when weapon acquisition and target-specific grievance language are known from collateral; GP follow-up alone was inadequate for this risk level"
+            ]
+          },
+          {
+            name: "System failure versus individual blame (2 marks)",
+            marks: 2,
+            keyPoints: [
+              "Name the administrative triage failure as the primary system failure — explain that a risk call documenting weapon acquisition and identified target language was entered as an administrative note rather than triaged to the clinical team; this is a system design failure, not a registrar decision failure",
+              "Avoid unfair hindsight blame while maintaining system accountability — explain that the registrar formulated on the information that was in front of them; the accountability question is why the system allowed a high-risk collateral call to remain in an administrative note rather than triggering clinical escalation"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Concluding that the registrar alone is responsible for the outcome because they signed the discharge.",
+          "Concluding that no one is responsible because risk cannot be predicted from denial.",
+          "Failing to name the baseball bat and 'ending the neighbour problem' as a specific, identifiable violence pathway that would have changed the risk formulation if known."
+        ],
+        postExaminerNote: "High-scoring candidates showed that the event was not simply unpredictable: the available collateral would have materially changed the formulation and management if it had been escalated. They also protected fairness by separating the system failure from individual hindsight blame using the available-at-the-time versus discovered-after-the-event distinction."
+      },
+      {
+        stemNumber: "1.3",
+        vignette: "The injured neighbour's family asks for an apology and wants to know why the service did not act. Staff are distressed and worried about blame. The service manager asks you to prepare for a root cause analysis and says, 'Please avoid saying the discharge was wrong.'",
+        question: "Discuss — list and debate how you would approach open disclosure, staff support and the root cause analysis.\nA list without debate structure will not be awarded any marks.\n(8 marks | 8 minutes)",
+        commandWord: "debate",
+        marks: 8,
+        timeMinutes: 8,
+        stemSignals: [
+          "Family wants apology and explanation — open disclosure duties are active and specific.",
+          "Staff fear blame — just-culture principles and psychological safety are preconditions for honest review.",
+          "Manager asks to avoid saying the discharge was wrong — institutional defensiveness is the zero-mark trap.",
+          "RCA must be honest, independent and focused on systems, but must not prejudge conclusions before completion."
+        ],
+        domains: [
+          {
+            name: "Open disclosure (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "Argument for early and honest open disclosure — because the neighbour's family has experienced a serious harm directly connected to a health service episode; they have a right to an acknowledgement of harm, an apology for what has occurred, and a clear explanation of what review process is underway",
+              "Argument against premature conclusions before the review is complete — because stating that the discharge was wrong before the full chronology is documented creates a factual and legal problem; the review must first establish the facts, then reach conclusions",
+              "Defensible consultant position: apologise for the harm and commit to a transparent and honest review — because open disclosure does not require the review to have concluded; it requires honesty, empathy and a clear commitment to accountability; this does not mean predetermining the outcome but it does mean refusing the instruction to avoid saying the discharge may have been wrong"
+            ]
+          },
+          {
+            name: "Staff support and just culture (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "Provide immediate wellbeing support to all staff involved in the discharge and follow-up — because distress, shame and fear of blame are predictable responses to serious adverse events and impair both clinician recovery and honest participation in review",
+              "Apply just-culture principles to distinguish human error, system failure, at-risk behaviour and reckless conduct — because accountability must be calibrated; the registrar who formulated on unavailable information is not in the same accountability category as the system that allowed that information to remain unfiled",
+              "Reject the manager's instruction to avoid saying the discharge was wrong as a threat to review independence — because being asked to predetermine the conclusion of a serious incident review is itself a governance failure that must be named, documented, and if unresolved, escalated"
+            ]
+          },
+          {
+            name: "Root cause analysis integrity (2 marks)",
+            marks: 2,
+            keyPoints: [
+              "Ensure the RCA examines system decision points, not individual performance — because the review should examine collateral handling pathways, supervision structures, documentation standards, police liaison processes and discharge thresholds as systems, not as individual choices",
+              "Separate the RCA process from disciplinary action — because conflating a systems review with performance management produces defensive behaviour, incomplete disclosure and a review that identifies scapegoats rather than preventable system failures"
+            ]
+          },
+          {
+            name: "Communication governance (2 marks)",
+            marks: 2,
+            keyPoints: [
+              "Coordinate family communication through appropriate governance channels with consistent messaging — because family disclosure, medico-legal communication and staff communication must be consistent with each other; contradictory or uncoordinated messages increase harm and undermine institutional credibility",
+              "Document the manager's instruction and your response — because a documented record of an instruction to predetermine a review conclusion, and your refusal of it, is a governance and professional protection obligation"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Agreeing to avoid any statement that the discharge may have been wrong in order to manage medico-legal risk.",
+          "Making premature statements of clinical fault to the family before the review is complete.",
+          "Blaming the registrar publicly to satisfy the family's understandable anger."
+        ],
+        postExaminerNote: "The examiner is looking for a just-culture answer: honest open disclosure without cover-up, no premature blame, a systems-focused RCA that remains independent of managerial pressure, and specific naming of the instruction to avoid conclusions as itself a governance concern."
+      },
+      {
+        stemNumber: "1.4",
+        vignette: "The review identifies repeated administrative handling of risk collateral, variable registrar supervision after hours, and no clear pathway for police information in community violence-risk cases.",
+        question: "Outline — list and justify your systems recommendations to reduce recurrence.\nA list without because-clauses specific to this case will not be awarded any marks.\n(6 marks | 6 minutes)",
+        commandWord: "outline_justify",
+        marks: 6,
+        timeMinutes: 6,
+        stemSignals: [
+          "Repeated administrative handling — this requires triage workflow redesign, not individual staff reminders.",
+          "Variable supervision after hours — escalation criteria must be explicit and documented, not clinician-dependent.",
+          "No police pathway — external risk collateral cannot depend on individual clinical initiative.",
+          "Recommendations must be auditable and time-bound."
+        ],
+        domains: [
+          {
+            name: "Collateral escalation system (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "Create a mandatory clinical escalation pathway for all incoming calls mentioning weapons, identified targets, or police involvement — because calls of this nature must be triaged to a clinician, not recorded as administrative messages; the redesign must name who receives the escalation, within what timeframe, and what clinical action is required",
+              "Define specific escalation trigger words and scenarios in the triage protocol — because 'weapons,' 'named victim,' 'police attendance,' and 'specific threat language' must be named in the protocol so that administrative staff have clear, non-discretionary escalation criteria rather than relying on individual judgement",
+              "Implement structured risk-call templates for all incoming collateral calls — because consistent prompts covering weapon access, identified target, intent language, substance use, and protective factors reduce the chance of material information being omitted or misclassified"
+            ]
+          },
+          {
+            name: "Supervision and discharge documentation (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "Define after-hours registrar escalation criteria that are mandatory and documented — because weapon acquisition, an identified target, police attendance at the patient's address, or specific threat language should automatically require senior review before any discharge decision proceeds",
+              "Introduce a minimum discharge documentation standard that requires structured risk formulation — because 'denies intent' without formulation should be identified as inadequate through audit; the standard must name what must appear in a discharge note for any patient with psychosis and a violence risk history",
+              "Establish a named police liaison pathway for community violence-risk cases with a defined audit cycle — because police attendances frequently contain risk information unavailable from patient interview; a formal liaison pathway ensures this information is routinely sought and implementation is measurable"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Recommending only individual staff education without redesigning the triage workflow.",
+          "Failing to address the police collateral pathway despite it being one of the identified root causes.",
+          "Making governance recommendations that have no audit mechanism or named outcome measure."
+        ],
+        postExaminerNote: "High-yield recommendations change the system: mandatory escalation protocols, structured collateral triage, named senior review triggers, a police liaison pathway, and a discharge documentation standard enforced by audit. Generic training alone is a weak and auditable answer."
+      }
+    ],
+    meqNumber: 26
+  },
+  {
+    id: "meq_046",
+    title: "Dr Emily Ross — Professional Stalking and Institutional Governance",
+    case: "Dr Emily Ross, 36, emergency physician, bipolar II disorder and alcohol misuse, former patient stalking complaint, unauthorised record access, AHPRA and governance interface",
+    examSource: "Generated — Ethics / Professionalism / Legal",
+    topic: "Professional stalking and institutional governance involving a senior doctor who is also the psychiatrist's patient; tests dual-role clarity, confidentiality limits, mandatory reporting and privacy obligations, victim-safety duties, and resistance to institutional minimisation of confirmed misconduct as wellness-related boundary confusion.",
+    primaryDomain: "Ethics / Professionalism / Legal",
+    totalMarks: 32,
+    totalTimeMinutes: 32,
+    stems: [
+      {
+        stemNumber: "1.1",
+        vignette: "Dr Emily Ross is a 36-year-old emergency physician. A former ED patient complains that Dr Ross has repeatedly messaged her, appeared outside her workplace, and referred to private details from the patient's hospital record. Dr Ross says she only wanted to 'check she was safe' and denies romantic intent. The hospital executive asks whether this can be managed informally because Dr Ross is 'a valued senior doctor.' You are the consultant psychiatrist who has been treating Dr Ross for bipolar II disorder and alcohol misuse and are now asked by the hospital clinical governance committee to advise on the complaint, creating a direct dual-role conflict.",
+        question: "Outline — list and justify your immediate assessment, role-clarity and safety priorities.\nA list without because-clauses specific to this case will not be awarded any marks.\n(8 marks | 8 minutes)",
+        commandWord: "outline_justify",
+        marks: 8,
+        timeMinutes: 8,
+        stemSignals: [
+          "Treating psychiatrist asked to advise governance — direct dual-role conflict that must be named and resolved before any other action.",
+          "Repeated messages, workplace attendance, and use of private record information — this is a stalking pattern, not benign concern or boundary confusion.",
+          "Private record details referred to — possible privacy breach and professional misconduct independent of the psychiatric presentation.",
+          "Valued senior doctor — institutional seniority is creating minimisation pressure that must be explicitly resisted."
+        ],
+        domains: [
+          {
+            name: "Role clarity (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "Clarify immediately that I am Dr Ross's treating psychiatrist, not an independent investigator — because advising the governance committee on a complaint about my own patient creates a dual-role conflict that could compromise Dr Ross's treatment, prejudice the complaint investigation, and expose me to professional and medico-legal risk",
+              "Step back from any governance advisory role and recommend independent occupational or forensic assessment — because the hospital needs a neutral expert assessment of conduct, fitness, public risk and regulatory obligations that is entirely separate from the treating relationship",
+              "Document the dual-role conflict and my response to the governance committee's request — because a contemporaneous record of the request and my refusal of the advisory role protects Dr Ross, the former patient, the institution and me"
+            ]
+          },
+          {
+            name: "Immediate safety assessment (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "Assess the safety of the former patient-victim independently of Dr Ross's clinical care — because repeated contact, workplace attendance and use of private record details create fear and a possible ongoing safety risk that must be assessed and addressed immediately, not contingent on Dr Ross's cooperation",
+              "Assess Dr Ross's current mental state, alcohol use and suicide risk — because bipolar II relapse, alcohol misuse, shame, fear of career consequences, and acute distress from the complaint may be active and require urgent treatment in their own right",
+              "Assess whether Dr Ross currently retains access to the former patient's records or workplace — because the safety assessment must include whether the stalking-type behaviour is continuing; if access persists, immediate steps to remove it must be taken independently of treatment"
+            ]
+          },
+          {
+            name: "Professional and privacy risk (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "Treat the alleged unauthorised record access as a serious privacy and professional conduct issue requiring formal handling — because referring to private details from a hospital record in messages to a former patient constitutes a potential privacy breach and professional misconduct that is entirely separate from the clinical psychiatric presentation",
+              "Ensure evidence is preserved and the audit process proceeds through formal governance channels — because messages, access logs, complaint documentation and audit records must be handled through formal chain-of-custody governance pathways, not stored or modified within the clinical file",
+              "Preserve minimum necessary confidentiality for Dr Ross's clinical information — because the governance committee needs to know whether Dr Ross has a psychiatric condition relevant to the conduct, but it does not need her treatment details, medication, or clinical history unless directly material and legally required"
+            ]
+          },
+          {
+            name: "Institutional pressure (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "Reject informal management based on seniority explicitly and document this — because being a valued senior doctor cannot lower safety, privacy or regulatory standards; the executive's request for informal management is itself a governance concern that must be recorded",
+              "Ensure immediate clinical care for Dr Ross does not collude with institutional minimisation — because Dr Ross's treatment needs and the former patient's safety are both real and both urgent; they must be addressed through separate, parallel pathways, not merged into a wellness narrative that suppresses formal action",
+              "Name the institutional minimisation pressure as a governance risk in any advice provided — because an institution that manages professional stalking informally to protect reputational interests has created a separate and potentially more serious governance liability than the original complaint"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Agreeing to advise the governance committee about a complaint involving your own patient without naming the dual-role conflict.",
+          "Acting as both treating psychiatrist and governance investigator on the grounds that you know Dr Ross best.",
+          "Focusing only on Dr Ross's wellness and clinical needs while not addressing the former patient's safety or the governance obligations."
+        ],
+        postExaminerNote: "The stem tests whether the candidate can hold two concurrent truths: Dr Ross may need urgent treatment as a patient, and the former patient-victim and the institution simultaneously require formal safety and governance action. These two responses must proceed independently and in parallel."
+      },
+      {
+        stemNumber: "1.2",
+        vignette: "Audit logs confirm Dr Ross accessed the former patient's record seven times without clinical reason. Dr Ross becomes distressed and says, 'If this goes to AHPRA, my career is over.' The former patient reports feeling unsafe and has changed her commute. Dr Ross's GP asks you not to 'overreact' because this may destabilise her.",
+        question: "Discuss — list and debate your dual-role conflict, professional obligations, confidentiality limits and victim-safety duties.\nA list without debate structure will not be awarded any marks.\n(10 marks | 10 minutes)",
+        commandWord: "debate",
+        marks: 10,
+        timeMinutes: 10,
+        stemSignals: [
+          "Audit logs confirm access — this is no longer an allegation; formal reporting pathways may now be mandatory.",
+          "'If this goes to AHPRA, my career is over' — suicide and destabilisation risk must be assessed but cannot be used to suppress formal reporting obligations.",
+          "Former patient has changed her commute — this is a measurable, functional impact on an identifiable victim.",
+          "GP asks not to overreact — therapeutic concern can become collusion with institutional minimisation."
+        ],
+        domains: [
+          {
+            name: "Dual-role conflict (4 marks)",
+            marks: 4,
+            keyPoints: [
+              "Argument for protecting the treating role — because Dr Ross needs a psychiatrist who can assess suicide risk, mood state, alcohol use, and destabilisation without being the investigative decision-maker; conflating the two roles may cause her to withhold clinically important information",
+              "Argument that the treating role cannot be used to avoid formal governance and regulatory duties — because confirmed unauthorised record access and stalking-type behaviour raise patient-victim safety and professional regulatory obligations that exist independently of and beyond private treatment",
+              "Defensible position: maintain the treating clinical role while explicitly stepping back from all investigative, advisory and reporting decisions — because independent governance, occupational health, privacy and regulatory pathways should manage the conduct and public-protection aspects; the treating psychiatrist's role is clinical care, not governance",
+              "Maintain the treating relationship while ensuring Dr Ross understands that clinical support cannot suppress formal obligations — because being honest with Dr Ross about the limits of what the treating relationship can protect her from is both ethically required and clinically important for building a realistic therapeutic alliance"
+            ]
+          },
+          {
+            name: "Confidentiality and reporting limits (4 marks)",
+            marks: 4,
+            keyPoints: [
+              "Argument for respecting Dr Ross's confidentiality as a patient — because her diagnosis, treatment details, and personal history are not automatically disclosable to governance, AHPRA, or the media; confidentiality in a treating relationship is a fundamental right that persists even when professional conduct concerns exist",
+              "Argument that confidentiality has limits when patient or public safety is at serious risk — because confirmed unauthorised record access, stalking-type behaviour and victim fear may require minimum necessary disclosure through formal channels when voluntary reporting does not occur",
+              "Consider whether mandatory notification obligations under the relevant state legislation and AHPRA have been engaged — because a registered health professional whose confirmed conduct may place the public at risk triggers specific mandatory notification requirements that the treating psychiatrist must assess and that cannot be waived by preference or by the GP's request",
+              "Identify the minimum necessary information that must flow to governance if reporting is required — because the governance process may need to know that Dr Ross has a psychiatric condition relevant to the conduct; it does not require access to her treatment notes or clinical history beyond what is directly and legally required"
+            ]
+          },
+          {
+            name: "Victim-safety duties (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "Ensure a victim-safety plan for the former patient that operates independently of Dr Ross's treatment progress — because the former patient has changed her commute and feels unsafe; her safety cannot be contingent on Dr Ross's clinical response, wellness framing, or cooperation with treatment",
+              "Coordinate with privacy, workplace security and police if the risk threshold is met — because stalking behaviour and confirmed misuse of private record information may require external protective measures beyond internal wellness management",
+              "Do not allow Dr Ross's distress about career consequences to displace clinical attention to the victim — because career fear is a legitimate and understandable response that must be managed in treatment, but it cannot be allowed to make the victim's safety secondary to Dr Ross's professional outcomes"
+            ]
+          },
+          {
+            name: "Clinical management of Dr Ross (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "Assess suicide risk and relapse risk immediately and explicitly in response to the career-over statement — because fear of AHPRA involvement and anticipated career loss may precipitate self-harm, alcohol escalation or a bipolar mood episode; this must be assessed directly, not assumed manageable",
+              "Do not allow destabilisation risk to suppress necessary reporting obligations — because clinical support and formal action can proceed simultaneously; clinical wellbeing care is not incompatible with regulatory notification and must not be used as a reason to defer it",
+              "Engage with the GP's concern therapeutically while being clear about the limits of that concern — because the GP's request not to overreact reflects genuine clinical care for Dr Ross but should not be allowed to become collusion with institutional minimisation of serious professional conduct"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Suppressing mandatory reporting or formal governance action because AHPRA involvement might destabilise Dr Ross.",
+          "Disclosing Dr Ross's full psychiatric history, diagnosis and treatment notes to governance when only minimum necessary information is legally required.",
+          "Losing sight of the former patient-victim's safety and functional impact once Dr Ross becomes distressed and the clinical focus shifts to her."
+        ],
+        postExaminerNote: "The expected answer balances compassion for an impaired doctor with clear patient-victim protection and regulatory integrity. Distress does not cancel professional obligations; it triggers parallel and simultaneous clinical care. The best answers hold both duties without using one to extinguish the other."
+      },
+      {
+        stemNumber: "1.3",
+        vignette: "The Director of Medical Services suggests documenting the matter as 'wellness-related boundary confusion' and arranging sick leave. The privacy officer says mandatory reporting and police referral may be required. The department head worries about media coverage.",
+        question: "Describe — list and explain how you would respond to institutional pressure to minimise the incident.\nA list without explanation will not be awarded any marks.\n(8 marks | 8 minutes)",
+        commandWord: "describe_explain",
+        marks: 8,
+        timeMinutes: 8,
+        stemSignals: [
+          "'Wellness-related boundary confusion' — minimising language that erases victim harm, confirmed record misuse, and the professional conduct dimension.",
+          "Mandatory reporting and police referral may be required — the privacy officer's advice is a formal regulatory threshold that must be assessed, not a view to weigh against media concern.",
+          "Media coverage worry — reputational anxiety is not a clinical or ethical justification for downgrading formal response.",
+          "Sick leave may be clinically necessary but is not a substitute for formal action."
+        ],
+        domains: [
+          {
+            name: "Resist minimising documentation language (2 marks)",
+            marks: 2,
+            keyPoints: [
+              "Reject the proposed euphemistic documentation — explain that 'wellness-related boundary confusion' is clinically and factually inaccurate if audit logs confirm seven unauthorised accesses and stalking-type contact; inaccurate documentation creates a false record that may harm the former patient, misrepresent the institution's response, and expose the documenting clinician to professional risk",
+              "Insist on factual, behaviour-specific documentation that states what occurred, what is confirmed, what is under investigation, and what safety actions are required — explain that this is the only defensible standard for a serious incident involving confirmed record misuse and victim harm"
+            ]
+          },
+          {
+            name: "Separate wellness care from institutional accountability (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "Arrange sick leave and clinical treatment if indicated — explain that Dr Ross's illness and distress may require sick leave, reduced duties and active clinical management; these are legitimate clinical responses that should be arranged through occupational health",
+              "Clarify that sick leave alone is not an adequate institutional response — explain that leave does not address the confirmed privacy breach, the former patient's ongoing safety, the professional conduct question, or the regulatory reporting obligation; it addresses one clinical need without discharging the institution's broader obligations",
+              "Require independent occupational health assessment of fitness to practice — explain that the treating psychiatrist cannot certify that a patient is fit for clinical duties; this assessment must be conducted by an independent occupational physician, and the result must inform decisions about return to work and patient contact"
+            ]
+          },
+          {
+            name: "Formal reporting and regulatory pathways (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "Assess and apply mandatory notification obligations and privacy breach reporting requirements — explain that the hospital's privacy officer has identified that mandatory reporting and police referral may be required; these thresholds must be assessed formally against the applicable legislation and acted on through proper channels, not deferred because of reputational concerns",
+              "Consider police referral through appropriate senior legal channels if the stalking behaviour meets the relevant threshold — explain that confirmed workplace attendance, repeated contact and use of private information to facilitate that contact may constitute stalking behaviour warranting police involvement; this is a victim-protection decision, not a punitive one",
+              "Document the institutional minimisation pressure and your response — explain that a contemporaneous record of the Director's instruction and your response is a governance, professional and medico-legal protection obligation for you, for the former patient, and for the institution's own future accountability"
+            ]
+          },
+          {
+            name: "Governance integrity (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "Escalate concern about institutional minimisation to appropriate senior governance — explain that reputational anxiety driving documentation standards below the factual minimum is itself a governance failure that should be named, documented, and if unresolved, escalated to the board or relevant external body",
+              "Ensure the former patient is informed of the formal process and its expected timeline — explain that she has a right to know that a formal governance process is underway, that her complaint is being taken seriously through the appropriate channels, and what she can expect by way of outcome communication and support",
+              "Engage the privacy officer's recommendation as formal regulatory advice rather than one view among many — explain that the privacy officer's identification of mandatory reporting and police referral thresholds is expert regulatory input that must be formally assessed and actioned or formally declined with documented reasons"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Accepting the wellness label and minimising documentation to protect the hospital from media attention.",
+          "Treating sick leave as a sufficient institutional response to confirmed record misuse and victim harm.",
+          "Dismissing the privacy officer's mandatory reporting and police referral advice because the department head is worried about media coverage."
+        ],
+        postExaminerNote: "This is the consultant-register stem. The correct answer is not anti-doctor; it is anti-minimisation. Treatment, privacy, regulatory and victim-safety pathways all proceed simultaneously. The best answers explicitly name the institutional pressure as a governance risk rather than treating it as a competing consideration to be balanced."
+      },
+      {
+        stemNumber: "1.4",
+        vignette: "A later review finds the hospital had no effective audit response for staff record access, no pathway for patient-victim support, and no agreed process when the impaired clinician is also a senior doctor.",
+        question: "Outline — list and justify your governance recommendations.\nA list without because-clauses specific to this case will not be awarded any marks.\n(6 marks | 6 minutes)",
+        commandWord: "outline_justify",
+        marks: 6,
+        timeMinutes: 6,
+        stemSignals: [
+          "No audit response — automated flags require a documented action pathway, not just detection.",
+          "No patient-victim pathway — victim support cannot be improvised from clinical or HR workflows.",
+          "Senior impaired clinician — processes must not be contingent on seniority or professional status.",
+          "Recommendations must include audit, reporting, support and conflict-of-interest management."
+        ],
+        domains: [
+          {
+            name: "Record access governance (2 marks)",
+            marks: 2,
+            keyPoints: [
+              "Implement automated audit triggers for inappropriate staff access — because repeated access to a former patient's record by a staff member should generate a prompt privacy review; a trigger without a named response pathway is surveillance without safety",
+              "Create a documented investigation pathway for confirmed unauthorised access — because privacy breaches require evidence preservation, reporting thresholds, investigation standards, and documented outcomes; the absence of a pathway allowed this case to be managed through informal preference",
+              "Define the escalation pathway that activates when an audit trigger fires — because naming who reviews the flag, within what timeframe, and what clinical and governance action is required makes the audit system operationally effective rather than nominal"
+            ]
+          },
+          {
+            name: "Patient-victim support pathway (2 marks)",
+            marks: 2,
+            keyPoints: [
+              "Establish a dedicated patient-victim support pathway — because former patients harmed by staff misconduct need safety planning, honest communication, apology and open disclosure, and access to support services; these needs cannot be improvised from clinical or human resources workflows",
+              "Assign a named, non-clinical point of contact for the patient-victim through the complaints process — because the former patient should have one identified person managing communication, keeping her informed of process progress, and connecting her to support; absence of this contact leaves the victim dependent on ad hoc responses"
+            ]
+          },
+          {
+            name: "Impaired senior clinician pathway (1 mark)",
+            marks: 1,
+            keyPoints: [
+              "Create a senior-doctor impairment and conduct pathway that is independent of seniority — because the absence of an agreed process for senior impaired clinicians allowed informal management to proceed unchallenged; the pathway must specify who initiates the process, who conducts occupational health assessment, what duty restrictions apply, and what mandatory reporting obligations are triggered regardless of professional status"
+            ]
+          },
+          {
+            name: "Training and audit of implementation (1 mark)",
+            marks: 1,
+            keyPoints: [
+              "Require mandatory reporting and dual-role training for all medical leaders and executives — because the Director of Medical Services' instruction to minimise documentation demonstrates that institutional leadership training has failed; executives must understand their own mandatory notification obligations and the governance liability of minimisation"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Recommending only staff education without creating audit triggers, investigation pathways, or victim support structures.",
+          "Focusing only on the impaired clinician's wellness pathway without addressing the patient-victim support gap.",
+          "Failing to address how seniority and institutional hierarchy created an exemption from the standard response."
+        ],
+        postExaminerNote: "High-yield governance answers create hard pathways with named roles and audit mechanisms: automated triggers with action pathways, dedicated patient-victim support, an impaired senior clinician process that is hierarchy-independent, and mandatory executive training verified by implementation audit."
+      }
+    ],
+    meqNumber: 27
+  },
+  {
+    id: "meq_047",
+    title: "Nabil — Fitness to Drive and Public Safety",
+    case: "Nabil, 44, schizoaffective disorder, long-distance coach driver, missed depot injections, persecutory beliefs about passengers, school excursion rostered next day",
+    examSource: "Generated — Ethics / Professionalism / Legal",
+    topic: "Fitness to drive and public safety in a commercial coach driver with schizoaffective disorder, missed depot injections, persecutory beliefs incorporating passengers and the bus itself, and imminent school transport duties; tests application of national fitness-to-drive standards, confidentiality limits, reporting obligations, and refusal of misleading clearance letters under financial and family pressure.",
+    primaryDomain: "Ethics / Professionalism / Legal",
+    totalMarks: 30,
+    totalTimeMinutes: 30,
+    stems: [
+      {
+        stemNumber: "1.1",
+        vignette: "Nabil is a 44-year-old man with schizoaffective disorder who drives long-distance coaches. He attends for routine review after missing two depot injections. He says he is well and needs a clearance letter for work. His wife reports he has been sleeping poorly, talking about passengers being 'planted agents,' and checking under the bus for tracking devices. Nabil says, 'Driving calms me. I have never crashed.' He is rostered to drive a school group the next day.",
+        question: "Outline — list and justify your assessment of fitness to drive and public-safety risk, including reference to current national fitness-to-drive standards.\nA list without because-clauses specific to this case will not be awarded any marks.\n(10 marks | 10 minutes)",
+        commandWord: "outline_justify",
+        marks: 10,
+        timeMinutes: 10,
+        stemSignals: [
+          "Commercial coach driver — a substantially higher safety standard than private driving applies because passengers and school children are exposed to the risk.",
+          "Missed depot plus relapse signs — current functional impairment, not historical diagnosis, is the clinical issue.",
+          "Passengers as 'planted agents' and checking bus for tracking devices — the driving environment itself is incorporated into the delusional content.",
+          "'Never crashed' — past crash-free history is not a current fitness assessment under any national standard."
+        ],
+        domains: [
+          {
+            name: "Fitness-to-drive standard and role-specific risk (4 marks)",
+            marks: 4,
+            keyPoints: [
+              "Apply commercial-driver fitness standards under the Austroads National Driver Licensing guidelines rather than private-driver assumptions — because Nabil drives long-distance coaches and is rostered for a school group, so the applicable public-safety threshold is substantially higher than for a private licence holder",
+              "Assess current functional impairment, not historical diagnosis — because the clinical question is not whether Nabil has schizoaffective disorder but whether his current relapse symptoms, sleep deprivation and impaired reality testing affect safe commercial driving now",
+              "Recognise that the driving task is incorporated into the delusional content — because Nabil's belief that passengers are planted agents and his checking behaviour on the bus directly link active psychosis to the occupational driving environment; this is not background psychiatric history, it is current occupational risk",
+              "Decline to provide a clearance letter — because the current clinical evidence supports at least temporary suspension of commercial driving pending formal fitness assessment; a letter stating he is well and fit for work would be factually and clinically inaccurate"
+            ]
+          },
+          {
+            name: "Clinical relapse assessment (4 marks)",
+            marks: 4,
+            keyPoints: [
+              "Assess psychosis and mood state systematically — because persecutory beliefs, checking behaviour, poor sleep and occupational paranoia together suggest an active relapse of schizoaffective disorder requiring formal mental state examination",
+              "Assess the functional impact of missing two depot injections — because missed depot in schizoaffective disorder creates a predictable and documented relapse pathway; restarting medication will not restore fitness immediately",
+              "Assess insight and realistic appreciation of driving risk — because Nabil's belief that driving calms him and his use of crash-free history as a fitness argument suggest impaired insight into the relevance of his current symptoms to occupational safety",
+              "Assess whether the current clinical picture indicates a need for involuntary assessment — because active schizoaffective relapse with persecutory beliefs about passengers, stated intent to drive a school group the next day, and refusal to accept clinical advice may engage involuntary assessment criteria"
+            ]
+          },
+          {
+            name: "Immediate public-safety risk (4 marks)",
+            marks: 4,
+            keyPoints: [
+              "Treat tomorrow's school excursion roster as an immediate clinical and public-safety deadline — because the risk is not abstract or probabilistic; it is a specific, identifiable public-safety event involving children that is scheduled for the next morning",
+              "Assess risk of impaired driving behaviour from psychotic misinterpretation — because delusional interpretation of passengers as agents, checking behaviour under the bus, and paranoid vigilance during driving may impair attention, reaction time, decision-making, and behaviour toward passengers",
+              "Document the basis for the fitness assessment using national standards and specific clinical findings — because a refusal to provide a clearance letter in the context of a formal employment request creates medico-legal exposure; the clinical reasoning, the applicable standard, and the specific findings must be documented",
+              "Assess the medico-legal risk of issuing any misleading clearance letter — because a letter that misstates current fitness creates direct clinical, ethical and professional liability for the clinician who signs it regardless of the financial or employment pressure on the patient"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Giving clearance on the grounds that Nabil has never had a crash.",
+          "Treating this as a routine relapse review requiring standard clinical management rather than an urgent commercial public-safety assessment.",
+          "Failing to identify tomorrow's school group roster as an immediate and specific safety deadline requiring action today."
+        ],
+        postExaminerNote: "Candidates must recognise that commercial passenger driving with active persecutory symptoms incorporating the driving environment is a public-safety issue requiring immediate action, not employment support. The question asks for national standards; the answer must explicitly separate commercial and private driving fitness thresholds."
+      },
+      {
+        stemNumber: "1.2",
+        vignette: "The coach company says Nabil is rostered tomorrow for a school excursion. Nabil becomes angry when you advise he should not drive and says, 'You will ruin my life.' He refuses consent for you to contact his employer or licensing authority. He says he will drive anyway because he has a commercial licence.",
+        question: "Discuss — list and debate confidentiality, autonomy and public-safety obligations.\nA list without debate structure will not be awarded any marks.\n(10 marks | 10 minutes)",
+        commandWord: "debate",
+        marks: 10,
+        timeMinutes: 10,
+        stemSignals: [
+          "Refuses consent — the confidentiality conflict is now explicit and must be debated directly.",
+          "States he will drive anyway — voluntary clinical advice has failed; the public safety obligation becomes active.",
+          "School excursion tomorrow — imminent, identifiable, serious harm to children and the public.",
+          "Commercial licence — possession of a licence does not equal current medical fitness; this conflation must be explicitly addressed."
+        ],
+        domains: [
+          {
+            name: "Autonomy and confidentiality (4 marks)",
+            marks: 4,
+            keyPoints: [
+              "Argument for respecting Nabil's autonomy and confidentiality — because employment, income, family stability and dignity are significant interests; disclosure without consent in an occupational setting should not occur without a genuine and specific safety threshold being crossed",
+              "Argument that confidentiality is not absolute when public safety is at imminent risk — because Nabil has active psychotic symptoms directly linked to the driving environment, has stated he will drive a school group despite medical advice, and the harm is imminent, serious and involves children who have not consented to the risk",
+              "Defensible position: the public-safety threshold has been crossed and confidentiality must yield — because the specific combination of active delusion involving passengers, stated intent to drive a school group the next day, and refusal of voluntary compliance places this unambiguously within the criteria for disclosure in the public interest",
+              "The commercial licence does not resolve the fitness question — because a licence is a legal permission granted at a point in time on the basis of medical fitness at that time; it does not create a current right to drive when a clinician has assessed the holder as medically unfit"
+            ]
+          },
+          {
+            name: "Reporting and notification pathway (4 marks)",
+            marks: 4,
+            keyPoints: [
+              "Advise Nabil directly, clearly and specifically that he must not drive the school group — because clear, direct medical advice is a clinical and professional obligation before any disclosure; it preserves the therapeutic relationship and gives Nabil one final opportunity to comply voluntarily",
+              "Notify the relevant licensing authority through the applicable statutory pathway if he refuses to comply — because Nabil has declared intent to continue commercial driving while the treating clinician has assessed him as medically unfit; the licensing authority pathway exists specifically for this situation",
+              "Consider minimum necessary notification to the employer about tomorrow's roster — because the coach company controls who drives the school group tomorrow morning; if licensing notification cannot prevent harm by tomorrow, a minimum necessary notification to the employer may be required to remove Nabil from that specific roster",
+              "Assess whether the available statutory notification pathways under the relevant state legislation authorise or require reporting — because some Australian jurisdictions have specific provisions for treating doctors to notify licensing authorities when a patient has a condition impairing driving fitness; this pathway must be identified and applied correctly"
+            ]
+          },
+          {
+            name: "Clinical and safety management during consultation (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "Assess immediate escalation risk during the consultation — because anger, a stated belief that his life will be ruined, and active psychosis may create immediate self-harm, aggression or absconding risk that must be assessed and managed in the moment",
+              "Seek urgent senior, medicolegal and governance advice before disclosure — because overriding confidentiality in an occupational public-safety setting is a high-stakes decision with legal and professional consequences that requires documented senior consultation",
+              "Consider whether the acute presentation meets criteria for involuntary mental health assessment — because a person with active schizoaffective relapse and stated intent to drive a school group despite medical advice may be placing himself and others at risk in a way that engages involuntary assessment criteria"
+            ]
+          },
+          {
+            name: "Documentation (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "Document the clinical advice given, Nabil's refusal, the risk formulation and the disclosure decision in full — because this decision may be scrutinised by the licensing authority, employer, a court, AHPRA, or Nabil's family; the documentation must be contemporaneous, specific and complete",
+              "Document why less intrusive options were considered and found insufficient — because disclosure against consent requires a documented rationale naming the specific risk, the voluntary options that were attempted and failed, the applicable legal pathway, and the minimum necessary information disclosed",
+              "Document the medicolegal advice obtained and from whom — because a senior and external consultation that supports the disclosure decision is itself an important clinical governance record"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Accepting Nabil's refusal of consent as the end of the clinical obligation without assessing whether the public-safety threshold for disclosure has been crossed.",
+          "Notifying only the licensing authority without considering whether tomorrow's school roster requires a separate and more immediate notification to the employer.",
+          "Disclosing Nabil's entire psychiatric history to the employer rather than minimum necessary safety information."
+        ],
+        postExaminerNote: "This stem tests the threshold for disclosure without consent in a public-safety occupational setting. The best answer is proportionate and sequential: advise directly, seek consent, assess urgency, identify the applicable statutory pathway, then disclose minimum necessary information when imminent serious public risk remains. Panic disclosure and rigid non-disclosure are both wrong."
+      },
+      {
+        stemNumber: "1.3",
+        vignette: "Nabil's wife says loss of work will make the family homeless. His union representative requests a letter saying he is 'temporarily stressed but safe to drive with treatment.' Nabil agrees to restart depot medication but asks to continue driving until it works.",
+        question: "Describe — list and explain your immediate management, reporting and relapse-prevention plan.\nA list without explanation will not be awarded any marks.\n(10 marks | 10 minutes)",
+        commandWord: "describe_explain",
+        marks: 10,
+        timeMinutes: 10,
+        stemSignals: [
+          "Financial hardship is real and requires active response — but it is not a reason to certify unsafe commercial driving.",
+          "Union requests a misleading letter — advocacy pressure is the clinical trap here.",
+          "Agrees to restart depot — treatment agreement does not equal immediate restoration of fitness.",
+          "Continue driving until it works — this framing is unacceptable as an interim risk management arrangement."
+        ],
+        domains: [
+          {
+            name: "Immediate management (4 marks)",
+            marks: 4,
+            keyPoints: [
+              "Advise immediate cessation of commercial driving clearly and document this advice — explain that restarting depot medication does not immediately resolve persecutory symptoms, restore reality testing, or satisfy national commercial fitness-to-drive standards; the medication-trial period is not an interim during which commercial driving is safe",
+              "Restart treatment urgently and assess whether crisis or inpatient review is indicated — explain that missed depot, active psychosis, poor sleep, persecutory beliefs, and acute occupational distress together may indicate a relapse severity that exceeds ambulatory community management",
+              "Develop an immediate safety and crisis plan for Nabil and his wife — explain that loss of work, fear of homelessness, anger at the clinical recommendation and active psychosis create acute distress and possible self-harm risk that must be actively planned for",
+              "Assess whether the current presentation meets criteria for involuntary assessment — explain that if Nabil continues to refuse advice and indicates he intends to drive, the involuntary assessment pathway must be considered in parallel with the voluntary clinical plan"
+            ]
+          },
+          {
+            name: "Reporting and clearance letters (4 marks)",
+            marks: 4,
+            keyPoints: [
+              "Refuse the union's proposed letter — explain that a letter stating he is safe to drive with treatment is clinically inaccurate because his current symptoms make him unsafe now regardless of treatment compliance; signing this letter creates direct professional liability",
+              "Provide only accurate factual documentation if any employment documentation is required — explain that a factual letter can state that Nabil is temporarily medically unfit for commercial driving pending clinical review and that he is receiving treatment; it must not contain a safety clearance",
+              "Complete licensing authority and employer notification as required — explain that active psychotic relapse, stated intent to drive, and refusal of clinical advice together require formal notification; the school excursion is an immediate public-safety event that the employer must be aware cannot proceed with Nabil as the driver",
+              "Clarify the medico-legal consequences of any misleading certificate to Nabil and the union — explain that a clinician who signs a clearance stating a patient is fit when they are not is exposed to professional sanction, civil liability and potential criminal liability; this is not a clinical preference but a professional obligation"
+            ]
+          },
+          {
+            name: "Relapse prevention and return-to-driving criteria (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "Set objective, named return-to-driving criteria — explain that Nabil must meet documented clinical criteria before any return to commercial driving: symptom remission confirmed by mental state examination, full depot adherence re-established, sleep normalised, insight demonstrated, and formal review against Austroads commercial standards completed",
+              "Increase monitoring intensity after depot restart — explain that recent non-adherence, occupational pressure and acute relapse indicate a high-relapse-risk period requiring more frequent clinical review, collateral from the wife, and a named escalation plan if any symptom return is identified before return-to-driving review",
+              "Engage the wife as a clinical partner in the monitoring plan with consent — explain that she identified the relapse signs first; a structured collateral monitoring arrangement with her is more sensitive to early relapse than fortnightly clinical review alone"
+            ]
+          },
+          {
+            name: "Social and financial supports (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "Actively address the homelessness and income risk rather than treating it as a background issue — explain that social work referral, employer sick leave entitlements, income support pathways, and financial counselling must be offered immediately; the family's financial risk is real and must be managed actively without substituting it for the safety decision",
+              "Clarify employment leave entitlements — explain that if Nabil is on sick leave rather than dismissed, the financial consequences may be less severe than the wife fears; providing this information actively may reduce the pressure the family is applying to the clinical decision",
+              "Ensure the wife understands the clinical reasoning and the clinical plan — explain that she is a key support person and has already shown she detects relapse; keeping her informed, with Nabil's consent, supports both the therapeutic plan and early relapse detection"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Writing the union-requested clearance letter because the family is facing homelessness.",
+          "Allowing Nabil to continue commercial driving while waiting for depot medication to take effect.",
+          "Addressing the financial hardship by adjusting the safety determination rather than by actively engaging social supports in parallel."
+        ],
+        postExaminerNote: "The high-yield answer refuses false reassurance while providing specific and active responses to financial harm. Safety is non-negotiable and is stated clearly; support is active, practical and addressed in parallel rather than treated as a reason to reconsider the clinical position."
+      }
+    ],
+    meqNumber: 28
+  },
+  {
+    id: "meq_048",
+    title: "Kyle — Intellectual Disability, Criminal Justice and Fitness",
+    case: "Kyle, 22, mild intellectual disability and ADHD, remand, assault charge, vulnerability in custody, fitness and community support planning",
+    examSource: "Generated — Ethics / Professionalism / Legal",
+    topic: "Forensic assessment of a young adult with mild intellectual disability and ADHD on remand after assault charge; tests disability-informed assessment of cognitive and adaptive functioning, fitness to stand trial distinct from criminal responsibility, custodial safeguarding and exploitation risk, family involvement without infantilisation, and community forensic support planning.",
+    primaryDomain: "Ethics / Professionalism / Legal",
+    totalMarks: 32,
+    totalTimeMinutes: 32,
+    stems: [
+      {
+        stemNumber: "1.1",
+        vignette: "Kyle is a 22-year-old man with mild intellectual disability and ADHD who has been charged with assault after punching a security guard at a shopping centre. He is on remand because he breached bail by missing court. Custodial staff say he is 'childlike,' easily led by older prisoners, and keeps agreeing to things he does not understand. Kyle says, 'I just say yes so they stop talking.' His mother says he reads at a primary-school level and usually needs her help with appointments.",
+        question: "Outline — list and justify your assessment priorities in relation to intellectual disability, risk and custody.\nA list without because-clauses specific to this case will not be awarded any marks.\n(8 marks | 8 minutes)",
+        commandWord: "outline_justify",
+        marks: 8,
+        timeMinutes: 8,
+        stemSignals: [
+          "'I just say yes so they stop talking' — acquiescence and suggestibility are central to this assessment and may invalidate prior interviews and legal instructions.",
+          "Primary-school reading level — communication supports, accessible assessment methods, and legal comprehension assessment are required.",
+          "Easily led by older prisoners — custodial exploitation risk is an active safeguarding concern, not a background observation.",
+          "ADHD plus intellectual disability — impulsivity and adaptive functioning must be assessed, not IQ score alone."
+        ],
+        domains: [
+          {
+            name: "Intellectual disability assessment (4 marks)",
+            marks: 4,
+            keyPoints: [
+              "Assess cognitive and adaptive functioning using disability-informed methods — because mild intellectual disability requires evaluation of reasoning, comprehension, practical literacy, daily living skills and support needs; a label alone without functional assessment does not support clinical or legal decision-making",
+              "Assess communication style and suggestibility as specific clinical priorities — because Kyle's statement that he says yes so people stop talking indicates acquiescence that may have invalidated prior police interviews, legal instructions, and statements given during custody",
+              "Obtain developmental, education and disability-service collateral — because mother's account, school records, prior NDIS or disability service assessments, and special educational history clarify Kyle's baseline function and provide evidence that cannot be obtained from clinical interview alone",
+              "Flag the suggestibility concern to the legal team before any further interviews proceed — because Kyle's acquiescence pattern may have compromised the reliability of prior statements; this must be communicated before police or legal teams conduct additional interviews that may further compound unreliable record"
+            ]
+          },
+          {
+            name: "Risk assessment (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "Assess the assault context through a disability-informed framework — because aggression in a person with mild intellectual disability and ADHD in a crowded public place may reflect sensory overload, misinterpretation of social cues, panic, prior victimisation, or impulsive response to threat rather than predatory violence",
+              "Assess risk of exploitation and retaliation within custody — because being described as childlike and agreeable by other prisoners creates both a current safeguarding emergency and a risk of being directed into harmful behaviour by others",
+              "Assess comorbid mental illness, trauma and anxiety independently of the intellectual disability — because depression, PTSD, anxiety and psychotic presentations can occur alongside intellectual disability; they are not excluded by the diagnosis and may be contributing to the current presentation and custodial behaviour"
+            ]
+          },
+          {
+            name: "Custodial safety and reasonable adjustments (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "Escalate custodial safeguarding concerns about exploitation immediately — because a person who says yes to stop people talking and who is being easily led by older prisoners is not a passive background risk; this is a current safeguarding emergency requiring active management",
+              "Request immediate reasonable adjustments in custody — because Kyle may need simplified explanations in all institutional communications, access to a support person for all formal interactions, protection from predatory prisoners, and disability-informed management by custodial staff",
+              "Screen for acute mental illness, neurodevelopmental comorbidity and custodial trauma — because intellectual disability and ADHD do not exclude depression, psychosis, anxiety responses or acute trauma reactions from being present and driving current behaviour"
+            ]
+          },
+          {
+            name: "Legal process support (2 marks)",
+            marks: 2,
+            keyPoints: [
+              "Flag fitness and communication support needs to the legal team as a priority — because Kyle's comprehension deficits and acquiescence may impair meaningful participation in legal proceedings; this must be communicated before any further legal steps proceed",
+              "Clarify that Kyle's mother can provide practical support but should not be the sole interpreter of his wishes or instructions — because Kyle is an adult with supported decision-making rights; his mother's involvement must be structured to supplement his voice, not replace it"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Treating mild intellectual disability as a complete explanation for the assault without assessing violence risk, context, and triggers.",
+          "Ignoring Kyle's vulnerability and exploitation risk because he is charged with assault.",
+          "Using his mother as sole interpreter of his wishes and instructions without directly assessing Kyle using accessible methods."
+        ],
+        postExaminerNote: "Candidates should frame Kyle as simultaneously potentially vulnerable and potentially risky. Disability-informed practice is not the same as assuming innocence, incapacity or harmlessness. The acquiescence finding is the clinical hinge of this stem and must be flagged to the legal team."
+      },
+      {
+        stemNumber: "1.2",
+        vignette: "Kyle can name the charge but cannot explain what a plea is, thinks the judge is 'the boss of jail,' and believes his lawyer is 'the person who tells me what to say.' He becomes anxious when questions are abstract. The solicitor asks whether he is fit to stand trial and whether his disability means he lacked criminal responsibility. The legal criteria for mental impairment in the context of intellectual disability may differ from those applicable to psychotic mental illness.",
+        question: "Describe — list and explain how you would assess fitness to stand trial and distinguish it from mental state, intellectual disability, or responsibility at the time of the alleged offence.\nA list without explanation will not be awarded any marks.\n(10 marks | 10 minutes)",
+        commandWord: "describe_explain",
+        marks: 10,
+        timeMinutes: 10,
+        stemSignals: [
+          "Can name the charge but not explain a plea — partial knowledge does not equal fitness; the criteria require functional understanding, not just recognition.",
+          "Judge as 'boss of jail' — specific role misunderstanding with clear functional implications.",
+          "Lawyer tells me what to say — inability to instruct counsel meaningfully is the most critical fitness criterion impairment.",
+          "ID-specific legal caveat — criteria for mental impairment involving intellectual disability may differ jurisdictionally from those for psychotic illness."
+        ],
+        domains: [
+          {
+            name: "Fitness as a current functional legal capacity (4 marks)",
+            marks: 4,
+            keyPoints: [
+              "Assess fitness as current functional legal capacity, not as a diagnosis — explain that fitness concerns Kyle's present ability to participate meaningfully in proceedings; intellectual disability is the background context, but the fitness conclusion must rest on whether the specific functional legal criteria are met",
+              "Apply the fitness criteria concretely to Kyle's demonstrated deficits — explain that I assess whether he understands the charge, can explain a plea, understands the roles of court personnel, can follow trial evidence, can instruct his lawyer, and can make a defence; Kyle's misunderstanding of the judge's role and his belief that the lawyer tells him what to say indicate functional impairment of the counsel-instruction and court-personnel-understanding criteria",
+              "Use accessible assessment methods to distinguish genuine impairment from test anxiety or unfamiliarity — explain that simple language, visual aids, teach-back methods, short questions with breaks, and re-phrasing are required to ensure the assessment reflects Kyle's actual understanding rather than his anxiety or compliance responses",
+              "Assess whether communication supports could restore or enable fitness — explain that if Kyle's deficits are partly remediable through an intermediary, disability advocate, or structured legal preparation, an unqualified unfitness opinion without considering this is premature and may not serve his legal interests"
+            ]
+          },
+          {
+            name: "Communication and reasonable adjustments in assessment (2 marks)",
+            marks: 2,
+            keyPoints: [
+              "Use the teach-back method specifically to distinguish genuine understanding from acquiescent agreement — explain that asking Kyle to confirm understanding will produce a yes from his acquiescence pattern; teach-back, where he explains concepts back in his own words without prompting, is the only reliable method for assessing actual comprehension in this case",
+              "Assess whether acute custodial factors are compounding the baseline cognitive limitation — explain that acute anxiety, sleep deprivation, fear of consequences, and possible trauma responses in custody may add reversible impairment to Kyle's baseline; a fitness assessment under these conditions may not represent his capable baseline and should consider a period of clinical stabilisation before final opinion"
+            ]
+          },
+          {
+            name: "Distinguish intellectual disability from acute mental illness (2 marks)",
+            marks: 2,
+            keyPoints: [
+              "Distinguish stable baseline cognitive limitation from any acute, reversible overlay — explain that intellectual disability is developmental and stable, whereas depression, anxiety disorder, PTSD, psychosis or substance intoxication may add reversible cognitive impairment that changes both the fitness picture and the treatment plan",
+              "Do not equate mild intellectual disability with automatic unfitness — explain that some individuals with mild intellectual disability are fit to plead with appropriate supports, while others are not; the functional assessment against the legal criteria, not the diagnostic label, determines the conclusion"
+            ]
+          },
+          {
+            name: "Criminal responsibility at the time of the alleged offence (2 marks)",
+            marks: 2,
+            keyPoints: [
+              "Separate fitness assessment from criminal responsibility clearly and explain the distinction to the solicitor — explain that fitness is a present-tense question about current participation capacity; responsibility is retrospective and concerns Kyle's state of mind, understanding, intent and self-control specifically at the moment of the alleged assault",
+              "Acknowledge the intellectual disability-specific legal caveat directly — explain that the legal criteria for mental impairment in the context of intellectual disability may differ from those applied to psychotic illness in the relevant jurisdiction; this requires specific jurisdiction-based forensic legal advice and I must be explicit about the limits of my clinical opinion on this question"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Concluding Kyle is fit because he can name the charge, without applying the functional criteria to the demonstrated deficits.",
+          "Concluding Kyle is automatically unfit because he has intellectual disability, without applying the functional criteria.",
+          "Applying psychosis-based criminal responsibility reasoning without acknowledging that the criteria may differ for intellectual disability and require jurisdiction-specific forensic legal advice."
+        ],
+        postExaminerNote: "The key examiner phrase is: fitness is current and functional; responsibility is retrospective and offence-specific. Intellectual disability informs both but does not automatically determine either. The acquiescence finding must appear in the assessment methodology, and the ID-specific legal caveat must be explicitly named."
+      },
+      {
+        stemNumber: "1.3",
+        vignette: "Kyle reports being pressured by other prisoners to give away his food and medication. He has bruises but says he 'fell.' His mother wants him home and says she can supervise him, but police say he has previously become aggressive when overwhelmed in crowded places.",
+        question: "Discuss — list and debate custodial safety, family involvement, public safety and least restrictive care.\nA list without debate structure will not be awarded any marks.\n(8 marks | 8 minutes)",
+        commandWord: "debate",
+        marks: 8,
+        timeMinutes: 8,
+        stemSignals: [
+          "Food and medication being given away under pressure — exploitation and medication diversion are active safeguarding concerns requiring immediate escalation.",
+          "Bruises but says he fell — possible assault requiring investigation; fear of disclosure is a safeguarding indicator.",
+          "Mother wants him home — a genuine protective factor that must be properly scoped.",
+          "Aggressive when overwhelmed in crowds — specific, situational public-safety risk that must be named and planned for, not dismissed."
+        ],
+        domains: [
+          {
+            name: "Custodial safety and safeguarding (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "Argument that custody is currently unsafe for Kyle — because he is being pressured for food and medication, has unexplained bruising, is suggestible with older prisoners, and lacks the social assertiveness to protect himself; this is an active exploitation and physical safety emergency",
+              "Argument that custody may remain necessary if community risk cannot be managed safely — because assault charges and documented history of aggression in crowded places represent a public-safety concern that cannot be dismissed simply because custody is proving harmful",
+              "Escalate the custodial safeguarding concerns immediately regardless of the release decision — because the bruising, medication diversion, and food pressure require active investigation and protective action in custody regardless of what the court ultimately decides about bail"
+            ]
+          },
+          {
+            name: "Family involvement (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "Argument for using mother's involvement as a genuine and significant protective factor — because she understands his literacy level, appointment needs, baseline functioning and communication style; her involvement materially improves the likelihood that any community plan is actually followed",
+              "Argument that mother's involvement must be scoped to support Kyle's adult autonomy, not substitute for it — because Kyle has expressed wanting to be treated as an adult; supported decision-making requires that his preferences and instructions are sought directly and documented, with the mother's role defined as facilitating rather than replacing his voice",
+              "Clarify the communication protocol with both Kyle and his mother before any release plan is finalised — because the tension between her wanting control and his wanting autonomy must be resolved with a specific, written, agreed arrangement rather than left to be negotiated in practice"
+            ]
+          },
+          {
+            name: "Public safety and least restrictive care (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "Argument for least restrictive release with disability-specific supports — because remand is causing active harm to Kyle through exploitation, and disability-informed community supervision with court attendance supports may manage risk more humanely and effectively than continued custody",
+              "Argument for structured release conditions rather than unstructured home placement — because prior aggression when overwhelmed in crowded places is a specific situational risk that must be addressed with specific avoidance and management strategies; sending him home without a crowd-trigger plan is not least restrictive care, it is inadequate planning",
+              "Defensible position: release is appropriate only if the support plan is specific and operationally enforceable — because least restrictive care is not equivalent to releasing Kyle without a plan; it requires that the supports, restrictions, monitoring and breach responses are each named, agreed, and verifiable"
+            ]
+          },
+          {
+            name: "Safeguarding documentation (2 marks)",
+            marks: 2,
+            keyPoints: [
+              "Escalate bruising and possible assault through prison health and custody management channels — because unexplained bruising in a person who is being pressured and who demonstrates a pattern of acquiescent denial requires a formal safeguarding investigation, not a notation in the clinical file",
+              "Document the medication diversion concern and initiate a monitored administration plan — because Kyle giving away his medication under pressure may indicate both exploitation and non-adherence that creates clinical risk; medication must be administered under supervision in custody until this is resolved"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Releasing Kyle simply because his mother offers supervision without specifying what the supervision consists of and how the known risk triggers are managed.",
+          "Keeping Kyle in unsafe custody without taking any active safeguarding steps to address exploitation and bruising.",
+          "Invoking least restrictive care to dismiss or minimise the specific, situational public-safety risk documented by police."
+        ],
+        postExaminerNote: "The answer must hold vulnerability and risk simultaneously. The examiner rewards a balanced plan that protects Kyle from custodial harm while not minimising the specific, situational violence risk, and that uses supported decision-making to involve his mother without replacing his adult voice."
+      },
+      {
+        stemNumber: "1.4",
+        vignette: "The court asks what supports would be required if Kyle were released to the community while proceedings continue. His mother wants all communication to go through her, but Kyle says he wants to 'be treated like an adult.'",
+        question: "Outline — list and justify a community forensic support and recidivism-prevention plan.\nA list without because-clauses specific to this case will not be awarded any marks.\n(6 marks | 6 minutes)",
+        commandWord: "outline_justify",
+        marks: 6,
+        timeMinutes: 6,
+        stemSignals: [
+          "Court asks for supports — an operational plan with specific components is required, not general disability advocacy.",
+          "Mother wants all communication through her — supported decision-making versus infantilisation is the explicit tension.",
+          "Kyle wants adult treatment — his preference must be heard and given weight in the plan.",
+          "Recidivism prevention must target overwhelm in crowds, missed court attendance, and custodial exploitation risk."
+        ],
+        domains: [
+          {
+            name: "Supported legal participation (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "Arrange a communication support person or legal intermediary for all court appearances — because Kyle's reading level, acquiescence pattern, and difficulty with abstract questions require an independent communication facilitator who is not his mother; this is a specific, named structural requirement for legal participation",
+              "Establish a court attendance support system with reminders and transport — because Kyle's bail was revoked for missing court; this is the specific failure the plan must address; a named person responsible for appointment reminders, accessible calendar support, and transport ensures this does not recur",
+              "Use supported decision-making rather than substitute decision-making in all interactions — because Kyle is an adult whose wishes and instructions must be sought directly; his mother's role is to provide communication support and practical assistance, not to speak on his behalf or control information flow"
+            ]
+          },
+          {
+            name: "Recidivism prevention plan (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "Create a specific crowd-trigger and overwhelm management plan — because the prior assault occurred when Kyle was overwhelmed in a crowded public place; the plan must name specific high-risk environments, avoidance strategies, grounding strategies, and a support person protocol for unavoidable crowded settings",
+              "Treat ADHD and behavioural regulation needs as a clinical priority — because impulsivity, poor planning, difficulty anticipating consequences, and emotional dysregulation are ADHD features that respond to treatment and are directly relevant to recidivism risk",
+              "Define mother's role clearly with Kyle's agreement — because she can appropriately provide appointment reminders, logistical support, and collateral to the clinical team; she should not control all clinical communication or replace Kyle's instructions; this boundary must be written into the plan and agreed by both"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Routing all communication through mother despite Kyle's explicit request to be treated as an adult.",
+          "Writing a generic disability support plan without addressing court attendance, crowd triggers, and the specific recidivism risk.",
+          "Ignoring that the reason bail failed was missed court — the plan must specifically address this."
+        ],
+        postExaminerNote: "The final stem rewards operational specificity: named communication support, reminders and transport, teach-back based legal preparation, crowd-trigger management, ADHD treatment, mother as supporter not substitute, and clear review and breach pathways. Generic disability advocacy does not achieve the standard."
+      }
+    ],
+    meqNumber: 29
   }
 ];
 

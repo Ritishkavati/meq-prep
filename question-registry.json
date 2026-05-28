@@ -1,7 +1,7 @@
 {
   "version": "1.0",
   "lastUpdated": "2026-05-28",
-  "totalQuestions": 43,
+  "totalQuestions": 48,
   "questions": [
     {
       "id": "meq_001",
@@ -615,6 +615,51 @@
       "usedIn": "daily_meq",
       "primaryDomain": "Management / Disposition",
       "totalMarks": 30,
+      "createdAt": "2026-05-28",
+      "status": "active"
+    },
+    {
+      "id": "meq_044",
+      "title": "Graham \u2014 Weapons, Firearms and Public Safety",
+      "usedIn": "daily_meq",
+      "primaryDomain": "Ethics / Professionalism / Legal",
+      "totalMarks": 30,
+      "createdAt": "2026-05-28",
+      "status": "active"
+    },
+    {
+      "id": "meq_045",
+      "title": "Martin \u2014 Changed Collateral and Adverse Event Review",
+      "usedIn": "daily_meq",
+      "primaryDomain": "Governance / Systems / Leadership",
+      "totalMarks": 32,
+      "createdAt": "2026-05-28",
+      "status": "active"
+    },
+    {
+      "id": "meq_046",
+      "title": "Dr Emily Ross \u2014 Professional Stalking and Institutional Governance",
+      "usedIn": "daily_meq",
+      "primaryDomain": "Ethics / Professionalism / Legal",
+      "totalMarks": 32,
+      "createdAt": "2026-05-28",
+      "status": "active"
+    },
+    {
+      "id": "meq_047",
+      "title": "Nabil \u2014 Fitness to Drive and Public Safety",
+      "usedIn": "daily_meq",
+      "primaryDomain": "Ethics / Professionalism / Legal",
+      "totalMarks": 30,
+      "createdAt": "2026-05-28",
+      "status": "active"
+    },
+    {
+      "id": "meq_048",
+      "title": "Kyle \u2014 Intellectual Disability, Criminal Justice and Fitness",
+      "usedIn": "daily_meq",
+      "primaryDomain": "Ethics / Professionalism / Legal",
+      "totalMarks": 32,
       "createdAt": "2026-05-28",
       "status": "active"
     }
