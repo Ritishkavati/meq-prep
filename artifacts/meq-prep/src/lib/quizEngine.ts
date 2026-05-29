@@ -206,8 +206,10 @@ function generateExaminerSummary(matches: SignalMatch[]): string {
 
 // ─── Assess candidate answer against signal map ───────────────────────────────
 export async function assessAnswer(stem: QuizStem, candidateAnswer: string, timeUsed: number): Promise<QuizResult> {
-  // ── AI signal detection ──
-  let identifiedIds: string[] = [];
+  // ── AI signal detection with keyword fallback ──
+  const normalized = candidateAnswer.toLowerCase();
+  let matches: SignalMatch[];
+
   try {
     const response = await fetch("/api/detect-signals", {
       method: "POST",
@@ -217,26 +219,33 @@ export async function assessAnswer(stem: QuizStem, candidateAnswer: string, time
         candidateAnswer,
       }),
     });
-    if (response.ok) {
-      const data = await response.json();
-      if (Array.isArray(data.identifiedIds)) {
-        identifiedIds = data.identifiedIds;
-      }
-    }
-  } catch {
-    // fall through — identifiedIds stays empty, all signals treated as missed
-  }
+    if (!response.ok) throw new Error(`detect-signals ${response.status}`);
+    const data = await response.json();
+    const identifiedIds: string[] = Array.isArray(data.identifiedIds) ? data.identifiedIds : [];
 
-  // ── Match signals and annotate with PS reasoning ──
-  const matches: SignalMatch[] = stem.signals.map((signal) => {
-    const psNote = generatePSReason(signal);
-    return {
-      signal,
-      identified: identifiedIds.includes(signal.id),
-      psLevelReason: psNote?.reason,
-      psStatement: psNote?.statement,
-    };
-  });
+    matches = stem.signals.map((signal) => {
+      const psNote = generatePSReason(signal);
+      return {
+        signal,
+        identified: identifiedIds.includes(signal.id),
+        psLevelReason: psNote?.reason,
+        psStatement: psNote?.statement,
+      };
+    });
+  } catch (e) {
+    console.error("AI signal detection failed, falling back to keywords:", e);
+    matches = stem.signals.map((signal) => {
+      const matchedKeyword = signal.keywords.find((kw) => normalized.includes(kw.toLowerCase()));
+      const psNote = generatePSReason(signal);
+      return {
+        signal,
+        identified: !!matchedKeyword,
+        matchedKeyword,
+        psLevelReason: psNote?.reason,
+        psStatement: psNote?.statement,
+      };
+    });
+  }
 
   // ── Score ──
   let earned = 0;
@@ -285,7 +294,6 @@ export async function assessAnswer(stem: QuizStem, candidateAnswer: string, time
   const examinerSummary = generateExaminerSummary(matches);
 
   // ── Overcalled ──
-  const normalized = candidateAnswer.toLowerCase();
   const overcalled = detectOvercalled(normalized, matches);
 
   return {

@@ -42,8 +42,13 @@ router.post("/detect-signals", async (req, res) => {
     const text = block.type === "text" ? block.text.trim() : "[]";
     let identifiedIds: string[] = [];
     try {
-      identifiedIds = JSON.parse(text);
-    } catch {
+      const cleaned = text.replace(/```json|```/g, "").trim();
+      const match = cleaned.match(/\[[\s\S]*?\]/);
+      if (match) {
+        identifiedIds = JSON.parse(match[0]);
+      }
+    } catch (e) {
+      req.log?.warn({ rawText: text, err: e }, "Signal detection parse error");
       identifiedIds = [];
     }
     res.json({ identifiedIds });
