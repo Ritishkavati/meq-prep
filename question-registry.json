@@ -1,7 +1,7 @@
 {
   "version": "1.0",
   "lastUpdated": "2026-05-29",
-  "totalQuestions": 57,
+  "totalQuestions": 60,
   "questions": [
     {
       "id": "meq_001",
@@ -765,6 +765,51 @@
       "pressureSequence": "Monitoring gap prevents dispensing after discharge, escalating to ED re-presentation with relapse risk, then disposition debate under bed pressure with re-titration requirement, then open disclosure to family, then governance review with registrar near-miss minimisation.",
       "finalDilemma": "How to respond to a registrar who minimises a serious clozapine near-miss while simultaneously meeting governance reporting obligations and designing system changes that prevent recurrence.",
       "patientName": "Robert",
+      "createdAt": "2026-05-29",
+      "status": "active"
+    },
+    {
+      "id": "meq_058",
+      "title": "William \u2014 CTO Renewal, Predictive Risk and Side Effects",
+      "usedIn": "daily_meq",
+      "primaryDomain": "Ethics / Professionalism / Legal",
+      "ageGroup": "26-64",
+      "setting": "community",
+      "clinicalTheme": "Third cycle of apparent stability in a patient with a documented predictive relapse pattern; CTO renewal debate at Tribunal with side effects, capacity and least restrictive alternatives as competing pressures.",
+      "culturalTag": "none",
+      "pressureSequence": "Cross-sectional stability and articulate side-effect complaints escalate through longitudinal three-cycle pattern evidence, then Tribunal alternative plan request, then formal complaint and paternalistic case manager response.",
+      "finalDilemma": "Whether to respond to a formal complaint that risk was exaggerated and side effects ignored while simultaneously correcting paternalistic clinical culture and re-centring the plan on recovery-oriented side-effect management.",
+      "patientName": "William",
+      "createdAt": "2026-05-29",
+      "status": "active"
+    },
+    {
+      "id": "meq_059",
+      "title": "Nathan \u2014 Akathisia, Depot Refusal and Dynamic Risk Under CTO",
+      "usedIn": "daily_meq",
+      "primaryDomain": "Ethics / Professionalism / Legal",
+      "ageGroup": "18-25",
+      "setting": "community",
+      "clinicalTheme": "CTO patient refuses depot following dose increase producing likely akathisia; father warns this matches relapse pattern; registrar recommends forced injection; three days later prodromal signs are active but patient attends and denies intent.",
+      "culturalTag": "none",
+      "pressureSequence": "Depot refusal escalates through registrar pressure to force injection, to management plan with patient-named relapse signature, then to active prodromal signs with continued attendance and denial of intent requiring dynamic risk formulation.",
+      "finalDilemma": "Whether to pursue compulsory administration when prodromal signs match the known relapse signature but the patient attends, denies intent and says he will keep coming; requires holding denial of intent against predictive pattern evidence.",
+      "patientName": "Nathan",
+      "createdAt": "2026-05-29",
+      "status": "active"
+    },
+    {
+      "id": "meq_060",
+      "title": "Jack \u2014 Rural CTO Transfer Failure and Predictive Risk",
+      "usedIn": "daily_meq",
+      "primaryDomain": "Governance / Systems / Leadership",
+      "ageGroup": "26-64",
+      "setting": "community",
+      "clinicalTheme": "CTO patient moves 600km to rural area without confirmed depot supply, legal transfer, prescribing authority or relapse plan; prodromal relapse follows despite repeated denial of intent; barricade incident results from documented transfer of care failures.",
+      "culturalTag": "none",
+      "pressureSequence": "Missed documentation escalates through practical rural barriers to active prodromal signs with denial of intent, then to barricade incident and governance review exposing five transfer failures and a clinical education gap about predictive risk in prodromal patients who deny intent.",
+      "finalDilemma": "How to respond to a preventable serious incident caused by documented transfer of care failures including legal CTO gap, while providing education to clinicians who accepted denial of intent as reassurance in a patient with a documented dangerous-impulsive-behaviour pattern when prodromal.",
+      "patientName": "Jack",
       "createdAt": "2026-05-29",
       "status": "active"
     }

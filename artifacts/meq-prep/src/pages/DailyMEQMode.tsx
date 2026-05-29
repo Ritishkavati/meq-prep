@@ -9789,6 +9789,615 @@ const MEQ_BANK = [
       }
     ]
   }
+,
+  {
+    id: "meq_058",
+    title: "William — CTO Renewal, Predictive Risk and Side Effects",
+    case: "William, 42, schizophrenia, 18 months on CTO, third cycle of apparent stability, side effects, Tribunal review",
+    examSource: "Generated — Ethics / Professionalism / Legal",
+    topic: "CTO renewal in a patient with a documented three-cycle predictive relapse pattern who presents as stable, capacitous and articulate about side effects; tests using longitudinal behaviour as the primary clinical anchor against cross-sectional stability, debating renewal criteria against least restrictive alternatives, designing a community plan that integrates side-effect management with a credible relapse signature, and responding to a complaint that frames risk communication as coercive control",
+    primaryDomain: "Ethics / Professionalism / Legal",
+    totalMarks: 32,
+    totalTimeMinutes: 32,
+    stems: [
+      {
+        stemNumber: "1.1",
+        vignette: "William is a 42-year-old man with schizophrenia who has been on a community treatment order for 18 months. He receives a monthly depot antipsychotic. He has had no admissions, police contacts or overt psychotic symptoms for the past year. He now lives independently and volunteers at a charity shop. William says: 'I am well now. The order is humiliating and the injection has ruined my body.' He reports weight gain, erectile dysfunction, breast tenderness and emotional blunting. His mother says this is the third time he has appeared well and asked to stop treatment. On two previous occasions, he initially remained polite and rational, then missed appointments, became sleepless, complained that neighbours were watching him, and eventually became threatening. Before the current order, he threatened a neighbour with a metal pole after three weeks without medication. William says: 'That was years ago. I would never do that now.'",
+        question: "Outline — list and justify the key information you would obtain before forming a recommendation about the community treatment order.\nYour answer must include information from the case manager before seeing William, assessment of the predictive relapse pattern, and evaluation of side effects. A list without because-clauses specific to this case will not be awarded any marks.\n(8 marks | 8 minutes)",
+        commandWord: "outline_justify",
+        marks: 8,
+        timeMinutes: 8,
+        stemSignals: [
+          "This is the third time — not the first; the pattern of apparent stability followed by predictable deterioration is the most clinically important information in this case and must be the primary focus of the assessment",
+          "William's side effects are real and clinically significant — erectile dysfunction, breast tenderness and weight gain are not minor complaints; they require clinical investigation including prolactin, not dismissal as non-adherence",
+          "The case manager pre-consultation is a named expected step from the old resource — information from the person who has monitored William regularly must precede the direct clinical interview"
+        ],
+        domains: [
+          {
+            name: "Case Manager Pre-Consultation (2 marks)",
+            marks: 2,
+            keyPoints: [
+              "Ask the case manager for the longitudinal relapse pattern before seeing William — because the most predictive clinical information in this case is the sequence of events during previous apparent-stability periods, and the case manager's direct observation of early warning signs may reveal details William will not volunteer",
+              "Ask the case manager specifically what William's earliest warning signs have been on previous occasions — because the mother's account names sleep change and privacy about medication as early signs; the case manager may have documented other subtle signals such as missed depot, disengagement, or suspiciousness that precede overt relapse by weeks"
+            ]
+          },
+          {
+            name: "Predictive Relapse Pattern Assessment (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "Establish the precise timeline of each previous relapse cycle — because William's minimisation that the metal-pole incident was years ago must be tested against documented records; the clinical question is not whether it happened but whether the same prodromal sequence is already beginning",
+              "Clarify the speed of deterioration after medication cessation in previous cycles — because his mother reports he threatened a neighbour within three weeks of stopping medication; this rate of deterioration changes the risk formulation and the credibility of any voluntary plan",
+              "Assess whether William's current presentation matches any phase of the known relapse signature — because the cross-sectional appearance of wellness is not sufficient when a predictable three-cycle pattern exists; early signs may already be present and William may have limited awareness of them"
+            ]
+          },
+          {
+            name: "Side-Effect and Capacity Assessment (2 marks)",
+            marks: 2,
+            keyPoints: [
+              "Assess the side effects as legitimate clinical concerns requiring investigation — because weight gain, erectile dysfunction and breast tenderness are consistent with hyperprolactinaemia from the depot antipsychotic; prolactin level, metabolic parameters and the specific medication history are required before dismissing these as non-clinical complaints",
+              "Assess William's decision-making capacity for the specific question of CTO renewal — because apparent rationality and articulate argument do not constitute a capacity assessment; capacity is decision-specific and requires systematic assessment of understanding, retention, weighing and communication for the question of whether the order should continue"
+            ]
+          },
+          {
+            name: "Collateral and Context (1 mark)",
+            marks: 1,
+            keyPoints: [
+              "Review pharmacy records, past risk assessments, admission notes and police contact history to corroborate the relapse pattern — because William's account and his mother's account may diverge from documented records; the clinical recommendation to the Tribunal must be based on verified evidence, not solely on family report or patient minimisation"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Accepting William's cross-sectional presentation of stability as the primary basis for the recommendation without anchoring it in the longitudinal relapse pattern",
+          "Dismissing the side effects as medication non-compliance without investigating prolactin and metabolic parameters",
+          "Proceeding directly to the clinical interview without first consulting the case manager"
+        ],
+        postExaminerNote: "Candidates who named the three-cycle relapse pattern as the primary clinical anchor, required case manager pre-consultation as a distinct step, treated prolactin investigation as a clinical obligation rather than a patient preference, and used documented records rather than current verbal presentation to form the recommendation scored in the upper range. Candidates who accepted William's stability and capacity as sufficient for revocation, or who dismissed side effects without investigation, did not achieve the standard."
+      },
+      {
+        stemNumber: "1.2",
+        vignette: "At review, William is calm, coherent and appears to understand the advantages and disadvantages of medication. He says: 'If I have capacity, why does my past get to control my future?' He acknowledges relapse occurred before but says the team and his mother are using one bad episode forever. The case manager says William's earliest relapse sign has usually been a subtle change in sleep and increasing privacy about medication, not obvious psychosis. William says he would continue appointments voluntarily but refuses to have his mother involved.",
+        question: "Discuss — list and debate your position regarding renewal of the community treatment order.\nYour answer must name the specific predictive relapse evidence from this case, address the legal criteria for renewal, and produce a defensible consultant position. A list without debate specific to this case will not be awarded any marks.\n(10 marks | 10 minutes)",
+        commandWord: "debate",
+        marks: 10,
+        timeMinutes: 10,
+        stemSignals: [
+          "Capacity does not resolve the CTO question — William may have capacity and still meet the criteria for renewal if the foreseeable risk from cessation is serious and less restrictive options have not yet been tested",
+          "The earliest warning signs are subtle — sleep change and medication privacy are not observable by a GP or a voluntary review; this changes the credibility of any voluntary plan that does not include someone who can detect these early signs",
+          "One bad episode is William's framing — the clinical reality is three cycles; this is a pattern, not an isolated event"
+        ],
+        domains: [
+          {
+            name: "Named Clinical Tensions (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "There is tension between William's right to make a capacitous decision about his treatment and the foreseeable serious risk to others if the predictive relapse pattern recurs — because capacity does not mean the service must ignore documented evidence that cessation of medication has led to threatening behaviour in two previous identical cycles",
+              "There is tension between continuing an order that causes significant side-effect burden and revoking an order that has prevented three hospitalisations and community violence — because the side effects are clinically real and the order is legitimately humiliating; both must be weighed, not used to cancel each other",
+              "There is tension between using William's past behaviour as a predictive clinical tool and treating him as a person capable of change — because the clinical use of past behaviour is not punishment; it is the only reliable data about what happens in this specific person when medication is stopped, and the Tribunal requires this evidence to be presented explicitly"
+            ]
+          },
+          {
+            name: "Arguments Supporting Renewal (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "The three-cycle predictive relapse pattern provides strong clinical evidence that cessation of medication leads to serious risk within weeks — because William has not remained well voluntarily in any previous period; his current stability reflects the order working, not independent recovery",
+              "William's earliest warning signs are subtle and require close monitoring that a voluntary plan without family or case manager involvement cannot reliably provide — because sleep change and medication privacy as the first signs mean that by the time overt psychosis is observable, the relapse trajectory is already established",
+              "The speed of previous deterioration — threatening behaviour within three weeks of stopping medication — makes a voluntary trial without intensive monitoring a foreseeable high-risk plan — because three weeks is an insufficient window for a GP-supported voluntary arrangement to detect and respond to relapse before serious harm occurs"
+            ]
+          },
+          {
+            name: "Arguments Against Unchanged Renewal and Defensible Position (4 marks)",
+            marks: 4,
+            keyPoints: [
+              "The CTO cannot continue unchanged — because the side effects of weight gain, erectile dysfunction and breast tenderness are clinically significant and the least restrictive principle requires the order to include active side-effect management as a condition, not just medication compliance",
+              "Continuing the same depot without addressing the prolactin-related side effects is not defensible clinical practice — because the side effects may be the reason William wants to stop, and addressing them is both a rights obligation and a practical adherence strategy",
+              "A defensible position for this Tribunal is time-limited renewal with mandatory medication review — because this acknowledges the predictive relapse evidence while requiring the service to actively address the side-effect burden that William has raised, and sets a clear review date at which a voluntary plan can be reconsidered if monitoring is established",
+              "A defensible alternative is revocation only if a robust voluntary plan exists — because this plan would require a specific written relapse signature, named responsible clinician, monitoring frequency adequate to detect sleep and medication-privacy changes, and a clear threshold for re-application to the Tribunal; if these elements cannot be guaranteed, revocation is not the least restrictive option but the highest risk one"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Treating capacity as the determining factor for revocation without addressing the predictive relapse evidence",
+          "Recommending unchanged CTO continuation without requiring medication review as a condition",
+          "Framing the debate as patient autonomy versus family anxiety rather than as predictive clinical evidence versus current cross-sectional presentation"
+        ],
+        postExaminerNote: "Candidates who named all three tensions explicitly, used the three-cycle pattern as the primary predictive evidence, addressed the legal criteria for renewal and the least restrictive principle together, required medication review as a condition of any renewal, and produced a specific defensible position for the Tribunal scored in the upper range. Candidates who accepted capacity as the determining factor, or who recommended unchanged continuation without addressing side effects, did not achieve the standard."
+      },
+      {
+        stemNumber: "1.3",
+        vignette: "The Tribunal asks what would be a realistic alternative if the order were not renewed. William says he would consider oral medication if sexual side effects improve, but he will not accept the same depot. He agrees the GP can be involved and agrees his mother may be contacted only if he misses reviews or stops collecting medication. His GP is willing to help but has limited experience with psychosis relapse plans.",
+        question: "Describe — list and explain the community plan you would propose.\nA list without explanation will not be awarded any marks.\n(9 marks | 9 minutes)",
+        commandWord: "describe_explain",
+        marks: 9,
+        timeMinutes: 9,
+        stemSignals: [
+          "William has given limited consent to family involvement — only if he misses reviews or stops medication; any plan must work within this boundary while building in enough clinical contact to detect the subtle early warning signs",
+          "The GP has limited psychosis experience — involving them as a partner requires specific education about William's relapse signature and clear escalation criteria, not just a letter saying he is under specialist review",
+          "The side effects are the leverage — William is offering to continue oral medication if sexual side effects improve; this is the therapeutic opportunity the plan must use"
+        ],
+        domains: [
+          {
+            name: "Medication and Side-Effect Review (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "Investigate prolactin level, metabolic parameters and cardiovascular risk before any medication change — because breast tenderness, erectile dysfunction and weight gain are consistent with hyperprolactinaemia; the specific prolactin level determines whether switching depot, switching to oral medication, reducing dose or adding aripiprazole adjunct is clinically appropriate",
+              "Explore switching to an oral antipsychotic with a lower prolactin profile — because William has expressed willingness to take oral medication if sexual side effects improve; this is the therapeutic offer that makes a voluntary plan credible, and the antipsychotic choice must address his specific side-effect complaints",
+              "Address metabolic risk as part of the medication plan — because weight gain, glucose and lipid parameters require GP monitoring and lifestyle intervention; these are not secondary concerns but part of the side-effect burden that drove the cessation request"
+            ]
+          },
+          {
+            name: "Relapse Signature and Monitoring Plan (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "Create a written relapse signature plan based on William's specific documented early warning signs — because the plan must name sleep change and increased medication privacy as the triggers for escalation, not just overt psychosis; the GP, case manager and William himself must all have a copy",
+              "Set monitoring frequency adequate to detect subtle early signs — because the relapse signature involves sleep and privacy changes that are not visible in monthly clinic reviews; fortnightly contact during the early voluntary period is the minimum that gives the service a realistic chance of detecting the prodrome",
+              "Define the specific threshold that triggers urgent review or re-application to the Tribunal — because a voluntary plan without named escalation criteria is not a safety plan; the threshold must be written into the plan as a specific observable event, not a clinical impression"
+            ]
+          },
+          {
+            name: "GP Education and Communication (2 marks)",
+            marks: 2,
+            keyPoints: [
+              "Provide the GP with written education about William's specific relapse sequence — because limited psychosis experience means the GP may not recognise sleep disruption and medication privacy as early warning signs without explicit instruction; the written plan must name these signs and tell the GP what to do when they occur",
+              "Establish a single point of contact and a clear escalation pathway for the GP — because the GP needs to know who to call, how quickly they will receive a response, and what will happen when they raise a concern; ambiguity about escalation creates the same failure mode as the previous transfer-of-care gaps in this case"
+            ]
+          },
+          {
+            name: "Recovery Goals and Alliance (1 mark)",
+            marks: 1,
+            keyPoints: [
+              "Frame the plan around William's recovery goals — because volunteering, independent living, sexual health, relationships and physical wellbeing are the reasons William wants treatment to change; a plan that addresses these goals is more likely to maintain engagement than one that presents only risk management"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Proposing a GP-only voluntary plan without equipping the GP with William's specific relapse signature and escalation criteria",
+          "Deferring the medication review without addressing prolactin as the likely cause of the reported side effects",
+          "Designing a plan that effectively requires mother involvement despite William's stated consent limit"
+        ],
+        postExaminerNote: "Candidates who investigated prolactin before recommending a medication switch, built the relapse signature plan around William's specific documented early warning signs rather than generic psychosis indicators, equipped the GP with named early warning signs and escalation criteria, and anchored the plan in William's stated recovery goals scored in the upper range. Candidates who proposed monthly GP review as adequate monitoring, or who proposed medication change without investigating the side-effect cause, did not achieve the standard."
+      },
+      {
+        stemNumber: "1.4",
+        vignette: "After the hearing, William writes a complaint saying the team exaggerated his risk and ignored his side effects to keep control of him. He continues to attend appointments. The case manager says: 'He should be grateful he has not been in hospital.'",
+        question: "Outline — list and justify how you would respond as the consultant psychiatrist.\nYour response must address William's complaint, the case manager's comment, and any changes to the clinical plan.\n(5 marks | 5 minutes)",
+        commandWord: "outline_justify",
+        marks: 5,
+        timeMinutes: 5,
+        stemSignals: [
+          "The case manager's comment is the hidden examiner trap — it is paternalistic, stigmatising language from a treating clinician that requires a direct consultant response",
+          "William continues to attend despite writing a complaint — this is clinically significant; it suggests the therapeutic relationship is damaged but not broken, and a response that validates his concern may preserve it",
+          "The complaint has two parts — that risk was exaggerated and that side effects were ignored; both deserve separate responses"
+        ],
+        domains: [
+          {
+            name: "Responding to the Complaint (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "Acknowledge William's complaint respectfully and arrange a meeting to hear his concerns directly — because a formal complaint from a person who is still attending appointments is an opportunity to repair the alliance, not a threat to manage",
+              "Review whether the Tribunal report accurately and proportionately described both the predictive relapse evidence and the side-effect burden — because William's claim that side effects were ignored deserves factual review; if the report minimised the side effects, this must be acknowledged and corrected",
+              "Explain to William the difference between using past behavioural patterns to formulate predictive risk and treating him as permanently defined by a past incident — because his sense that the team exaggerated risk to maintain control requires an honest clinical explanation of how the three-cycle pattern was used and why it was clinically relevant"
+            ]
+          },
+          {
+            name: "Addressing the Case Manager's Comment (2 marks)",
+            marks: 2,
+            keyPoints: [
+              "Address the case manager's comment directly as a supervision and governance issue — because the statement he should be grateful he has not been in hospital reflects paternalism inconsistent with recovery-oriented practice and directly contradicts William's right to have side effects taken seriously; this must be named with the case manager, not ignored",
+              "Re-centre the team plan on side-effect management, recovery goals and least restrictive care — because the complaint and the case manager's comment together signal that the team's clinical culture around this patient requires correction; the consultant must model and require a different standard"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Dismissing William's complaint as illness-driven or as a reaction to the Tribunal outcome",
+          "Treating the case manager's comment as a minor interpersonal matter rather than a paternalism and governance issue",
+          "Responding to the complaint without reviewing whether side effects were adequately documented and addressed in the Tribunal report"
+        ],
+        postExaminerNote: "Candidates who treated the case manager's comment as a named clinical governance and supervision issue, acknowledged both parts of William's complaint separately, and proposed specific changes to the clinical plan and team culture scored in the upper range. Candidates who dismissed the complaint as illness-related, or who did not name the case manager's comment as requiring direct consultant response, did not achieve the standard."
+      }
+    ]
+  },
+  {
+    id: "meq_059",
+    title: "Nathan — Akathisia, Depot Refusal and Dynamic Risk Under CTO",
+    case: "Nathan, 27, schizophrenia, early psychosis team, depot refusal, likely akathisia, CTO, father's warning",
+    examSource: "Generated — Ethics / Professionalism / Legal",
+    topic: "Depot refusal in a CTO patient with likely akathisia following a dose increase; tests systematic characterisation of movement disorder versus relapse, debating the registrar's suggestion to force the injection, building a management plan when the patient has capacity but early deterioration is present, and holding denial of intent against a known predictive relapse signature when the case manager requests compulsory administration",
+    primaryDomain: "Ethics / Professionalism / Legal",
+    totalMarks: 32,
+    totalTimeMinutes: 32,
+    stems: [
+      {
+        stemNumber: "1.1",
+        vignette: "Nathan is a 27-year-old man with schizophrenia prescribed a fortnightly depot antipsychotic under a community treatment order. He attends clinic on the day his injection is due and refuses it. He says: 'That injection makes me crawl out of my skin. I pace all night and I cannot sit through dinner with my girlfriend.' He has missed work twice this month because he cannot tolerate meetings. The depot dose was increased two months ago after Nathan became suspicious of his neighbours and sent threatening messages to his building manager. His father says that in past relapses Nathan first complained about medication, then stopped attending appointments, then became increasingly watchful and accusatory. Nathan says: 'This time is different. I am not unwell. I just cannot tolerate the injection.'",
+        question: "Outline — list and justify how you would assess Nathan's refusal today.\nYour assessment must include systematic characterisation of the movement disorder and evaluation of the predictive relapse pattern. A list without because-clauses specific to this case will not be awarded any marks.\n(8 marks | 8 minutes)",
+        commandWord: "outline_justify",
+        marks: 8,
+        timeMinutes: 8,
+        stemSignals: [
+          "Crawl out of my skin, pace all night, cannot sit through meetings — this is the clinical description of akathisia; the assessment must characterise it systematically, not simply accept it as a side effect complaint or dismiss it as avoidance",
+          "The dose was increased two months ago — the temporal relationship between dose increase and onset of restlessness is a required clinical finding; akathisia that followed a dose increase is different in management implication from pre-existing restlessness",
+          "The father's pattern — medication complaint, then missed appointments, then suspiciousness — is the predictive relapse sequence; the assessment must determine which phase Nathan is in now, not just whether akathisia is present"
+        ],
+        domains: [
+          {
+            name: "Systematic Movement Disorder Characterisation (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "Characterise the restlessness systematically — onset, subjective inner agitation, relationship to dose increase, degree of pacing, ability to remain seated, worsening at rest versus with movement, and impact on work and relationships — because this clinical profile distinguishes akathisia from anxiety, agitation due to relapse, or other EPSE",
+              "Assess for other EPSE systematically — parkinsonian features including tremor, bradykinesia and rigidity, and any dystonic or tardive movements — because akathisia may coexist with other movement disorders and a complete EPSE assessment establishes the full picture before any medication decision is made",
+              "Clarify the temporal relationship between the dose increase two months ago and the onset of symptoms — because akathisia following a dose increase has a different management implication from symptoms present before the increase; the timeline either supports or weakens the pharmacological explanation for the refusal"
+            ]
+          },
+          {
+            name: "Predictive Relapse Pattern Assessment (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "Map Nathan's current presentation against the known relapse sequence — medication complaint, then missed appointments, then suspiciousness and threat — because the father's account establishes a predictive sequence and the clinical question is whether the current medication complaint is step one of that sequence or an independent pharmacological problem",
+              "Assess whether early relapse signs are currently present alongside the akathisia — because both can coexist; a patient can have genuine akathisia and also be in the early prodromal phase of a relapse; the assessment must evaluate sleep, suspiciousness, relationship functioning and any recent threatening behaviour as concurrent findings",
+              "Obtain collateral from the girlfriend and case manager to test Nathan's account — because Nathan says this time is different; that statement may be accurate or may represent the early minimisation that characterises the relapse sequence his father has described; external accounts provide the corrective lens"
+            ]
+          },
+          {
+            name: "Capacity and Refusal Assessment (2 marks)",
+            marks: 2,
+            keyPoints: [
+              "Assess Nathan's capacity to refuse this specific depot today — because the CTO does not remove his right to a capacity assessment; a person with capacity has a right to refuse even under a CTO, and this must be determined before any compulsory administration is considered",
+              "Clarify whether Nathan is refusing this depot and dose or all antipsychotic treatment — because refusing one formulation at one dose after a dose increase is clinically different from refusing all treatment; the answer changes the management options available"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Accepting Nathan's description of crawling out of his skin as a confirmed akathisia diagnosis without systematic clinical characterisation",
+          "Treating the father's account as the primary evidence for relapse without assessing Nathan's current mental state directly",
+          "Proceeding to a compulsory administration decision before completing the assessment"
+        ],
+        postExaminerNote: "Candidates who characterised the movement disorder systematically with temporal relationship to dose increase, mapped the current presentation against the known predictive relapse sequence using collateral, assessed for concurrent EPSE and completed a capacity assessment before reaching any management decision scored in the upper range. Candidates who labelled akathisia from the description alone, or who treated the father's warning as sufficient justification for immediate compulsory administration, did not achieve the standard."
+      },
+      {
+        stemNumber: "1.2",
+        vignette: "On review, Nathan is visibly restless, repeatedly stands up, rubs his legs and says: 'I cannot live like this.' He denies hallucinations and is not thought disordered. His girlfriend says he has become irritable and ashamed since the dose increase but has not been threatening. The registrar says: 'He is on an order, and his father says he becomes dangerous when he stops. We should give the injection now and deal with side effects later.'",
+        question: "Discuss — list and debate how you would respond to the registrar's suggestion.\nYour answer must name the clinical and ethical tensions, address what the CTO does and does not authorise, and produce a defensible consultant position. A list without debate specific to this case will not be awarded any marks.\n(9 marks | 9 minutes)",
+        commandWord: "debate",
+        marks: 9,
+        timeMinutes: 9,
+        stemSignals: [
+          "I cannot live like this — akathisia severe enough to produce this statement carries a recognised association with self-harm and aggression; this is not a minor side effect complaint to be deferred",
+          "Deal with side effects later is the examiner trap — it represents the clinical and ethical failure the question is testing; side effects are not secondary to compliance in a person who has capacity",
+          "The CTO authorises compulsory treatment but does not remove the clinical obligation to assess and address serious adverse effects first"
+        ],
+        domains: [
+          {
+            name: "Named Tensions (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "There is tension between preventing relapse given Nathan's history and not imposing a medication that appears to be causing serious pharmacological harm — because the registrar is right to hold relapse risk in mind, but forcing a depot that is producing disabling akathisia is not safe treatment; it is a rights violation and a clinical error that increases the risk of disengagement and self-harm",
+              "There is tension between the CTO's legal authority and the clinical obligation to address serious adverse effects — because a CTO authorises compulsory treatment when criteria are met, but it does not authorise forcing a medication dose that the clinician has not assessed for tolerability; the CTO and good clinical practice are not in conflict here, but the registrar is treating the CTO as a substitute for clinical judgment",
+              "There is tension between the father's legitimate longitudinal warning and Nathan's current clinical presentation — because the father's account is predictively important but it is not a substitute for the clinical assessment that has now been completed; Nathan is restless and distressed from akathisia but is not currently thought-disordered, threatening or showing the intermediate relapse steps his father described"
+            ]
+          },
+          {
+            name: "Arguments Against Immediate Compulsory Administration (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "Akathisia severe enough for Nathan to say he cannot live like this is a safety risk in its own right — because akathisia is associated with self-harm, aggression and suicidality; treating it as a minor complaint to be deferred creates a foreseeable harm that the registrar's plan does not acknowledge",
+              "Forcing the same dose without addressing the likely akathisia will predictably worsen the side effect, increase distress, and undermine the therapeutic relationship that is the primary mechanism for detecting early relapse in a patient on an outpatient CTO — because compliance under coercion is not the same as engagement; a patient who has been forced to receive a medication causing him severe distress is less likely to attend the next appointment, not more",
+              "The clinical assessment has not yet been completed — because capacity has not been formally assessed for today's refusal; proceeding with compulsory administration before completing the capacity assessment is a governance and legal error regardless of the CTO status"
+            ]
+          },
+          {
+            name: "Defensible Position and Management (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "The defensible consultant position is to pause the injection long enough to complete the side-effect assessment and capacity determination, then make a medication decision that addresses both the akathisia and the relapse risk — because this is the clinical standard; it is not an indefinite delay but a defined clinical assessment that takes hours, not weeks",
+              "Consider urgent medication modification — dose reduction, change of formulation, switch to oral antipsychotic, or pharmacological management of akathisia — because the therapeutic goal is maintaining antipsychotic coverage while resolving the side effect that is driving the refusal; these options exist and must be presented to Nathan before compulsory administration is considered",
+              "Supervise the registrar by explicitly modelling that a CTO is not a shortcut around clinical assessment, capacity evaluation and least restrictive practice — because the registrar needs to understand that the obligation to assess and address serious adverse effects exists independently of the legal authority to compel treatment"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Agreeing with the registrar's suggestion to give the injection and address side effects later",
+          "Treating the CTO as removing Nathan's right to a capacity assessment and an adverse effect review",
+          "Framing the debate as safety versus rights without naming the clinical obligation to address akathisia as itself a safety issue"
+        ],
+        postExaminerNote: "Candidates who named all three tensions explicitly, identified akathisia as a safety risk in its own right rather than a compliance problem, took a clear position that the injection should be paused for assessment rather than given immediately, addressed the registrar's clinical misunderstanding of what a CTO authorises, and proposed urgent medication modification scored in the upper range. Candidates who agreed with the registrar, or who treated the father's warning as sufficient to override the clinical assessment, did not achieve the standard."
+      },
+      {
+        stemNumber: "1.3",
+        vignette: "Nathan is assessed as having capacity to refuse the current depot. He says he is not refusing all treatment and would consider medication if the restlessness improves. He agrees that when he relapses he usually sleeps less, becomes suspicious of neighbours and stops answering calls from the team. He refuses his father's attendance at appointments but agrees his girlfriend can help monitor early warning signs. His father phones again and says: 'He sounds reasonable now, but this is exactly how it starts.'",
+        question: "Describe — list and explain your management plan.\nA list without explanation will not be awarded any marks.\n(9 marks | 9 minutes)",
+        commandWord: "describe_explain",
+        marks: 9,
+        timeMinutes: 9,
+        stemSignals: [
+          "Nathan has capacity and is offering to take medication — this is the therapeutic opening; the plan must use it rather than reverting to compulsion",
+          "He sounds reasonable now but this is exactly how it starts — the father's statement is not dismissed; it is held as the clinical context that shapes how tightly the management plan must be structured",
+          "Nathan himself has named his relapse signature — sleep reduction, neighbour suspiciousness, stopping calls; a relapse plan built on his own account is more clinically defensible and more likely to maintain engagement than one imposed on him"
+        ],
+        domains: [
+          {
+            name: "Akathisia Treatment and Medication Review (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "Treat akathisia promptly with an appropriate pharmacological option — explain that dose reduction, beta-blocker, short-term benzodiazepine or anticholinergic are potential options depending on clinical presentation; the specific choice must be explained to Nathan and its rationale documented",
+              "Review the antipsychotic regimen as an urgent clinical task — explain that the dose increase two months ago is likely the precipitant; options include reverting toward the previous dose, switching formulation, switching to oral antipsychotic, or changing agent while maintaining adequate coverage during the transition",
+              "Offer Nathan a role in choosing between antipsychotic options — explain that shared decision-making about medication formulation and dose when he has capacity and is expressing willingness to continue treatment is the clinical standard; it also increases the likelihood of sustained adherence when the akathisia resolves"
+            ]
+          },
+          {
+            name: "Relapse Signature Plan and Monitoring (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "Build the relapse plan explicitly around Nathan's own stated early warning signs — explain that using his account of sleep reduction, neighbour suspiciousness and stopping team calls creates a plan that is clinically specific to this patient and therapeutically honest; a generic relapse plan is less actionable and less credible to Nathan",
+              "Set monitoring frequency to match the risk — explain that fortnightly contact is the minimum given the father's account of rapid deterioration; daily or every-two-day contact during the medication transition period allows early detection of the relapse signs Nathan himself has named",
+              "Define the specific threshold that triggers urgent review or escalation of the CTO — explain that the plan must state which observable events — missed call, report from girlfriend of sleep change, missed appointment — will trigger immediate senior review; this converts the relapse signature into an operational clinical protocol"
+            ]
+          },
+          {
+            name: "Collateral Management and Father's Concern (2 marks)",
+            marks: 2,
+            keyPoints: [
+              "Engage the girlfriend as the agreed monitoring contact with Nathan's consent — explain that the girlfriend has consented to monitoring early warning signs and must be given the specific signs to watch for: sleep change, suspiciousness about neighbours and reduced contact with the team; a general request to call if worried is not sufficient",
+              "Acknowledge the father's concern clinically while maintaining Nathan's confidentiality limits — explain that the father's longitudinal warning is clinically valid and must be held in the formulation; the response to his call is not dismissal but an explanation that the team is monitoring actively and has a defined escalation plan"
+            ]
+          },
+          {
+            name: "CTO and Documentation (1 mark)",
+            marks: 1,
+            keyPoints: [
+              "Document the capacity assessment, the medication decision rationale, Nathan's stated relapse signature, the monitoring plan and the escalation threshold — because if Nathan deteriorates and compulsory treatment becomes necessary, this documentation provides the clinical and legal basis for escalation; without it the team cannot demonstrate that a less restrictive approach was adequately tried"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Treating the capacity to refuse as the end of the clinical management problem",
+          "Building a relapse plan on generic psychosis indicators rather than Nathan's specific stated early warning signs",
+          "Dismissing the father's concern without holding it as a clinical context that shapes the monitoring intensity"
+        ],
+        postExaminerNote: "Candidates who treated the akathisia as the urgent clinical priority, built the relapse plan on Nathan's own stated early warning signs, defined specific escalation thresholds rather than general monitoring, and held the father's longitudinal warning as a shaping clinical context without overriding Nathan's confidentiality limits scored in the upper range. Candidates whose plan focused primarily on maintaining CTO compliance without addressing the medication causing the refusal, or who dismissed the father's warning, did not achieve the standard."
+      },
+      {
+        stemNumber: "1.4",
+        vignette: "Three days later, Nathan has not received the depot. He attends review and remains willing to talk. He is sleeping four hours a night, has sent suspicious messages to his girlfriend about neighbours setting him up, and has missed one work shift. He denies any intent to harm anyone and says: 'I promised I would keep coming, so you do not need to force anything.'",
+        question: "Discuss — list and debate your next steps.\nYour answer must address why denial of intent does not resolve the risk formulation in this case, and produce a defensible consultant position on the question of compulsory administration. A list without debate specific to this case will not be awarded any marks.\n(6 marks | 6 minutes)",
+        commandWord: "debate",
+        marks: 6,
+        timeMinutes: 6,
+        stemSignals: [
+          "Four hours sleep, suspicious messages, missed work — these are the exact early warning signs Nathan himself named three days ago; the relapse signature is active",
+          "I promised I would keep coming so you do not need to force anything — this statement cannot be accepted as reassurance when the relapse signs are present; it may represent Nathan's genuine wish to maintain control, or it may reflect early cognitive narrowing that is part of the relapse process",
+          "Denial of intent does not equal low risk — this is the core clinical principle this stem tests; the predictive value of stated intent in a patient with three days of prodromal signs and a known rapid-deterioration pattern is very limited"
+        ],
+        domains: [
+          {
+            name: "Dynamic Risk Assessment (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "The current presentation matches Nathan's named relapse signature — four hours sleep and suspicious messages about neighbours are the specific early warning signs he identified three days ago; the relapse plan is already triggered and the clinical response must follow the agreed escalation threshold",
+              "Denial of intent has limited predictive validity when prodromal signs are active — because Nathan's previous relapses involved escalating suspiciousness that preceded threatening behaviour; at this phase of the relapse cycle his ability to accurately assess his own risk may already be compromised even while he appears rational and cooperative",
+              "The fact that Nathan is still attending is clinically important but insufficient to defer escalation — because attendance at this stage of the relapse signature is consistent with the period before his previous episodes became overtly dangerous; his attendance is protective but does not change the formulation that he is in early relapse"
+            ]
+          },
+          {
+            name: "Debate: Compulsory vs Voluntary Escalation and Defensible Position (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "There is tension between respecting Nathan's continued engagement and the foreseeable risk from untreated early relapse — the defensible position is that the clinical response must be urgent and active, but premature compulsory administration before a tolerable oral alternative has been offered is not the least restrictive option",
+              "The urgent clinical priority is offering an effective antipsychotic today — because Nathan has not had the depot for three days and has been in early relapse; the question is not only whether to compel the original depot but whether there is a tolerable alternative that Nathan will accept voluntarily and that can be administered today",
+              "Compulsory administration becomes defensible if Nathan refuses all effective antipsychotic options and risk continues to escalate — because at that point voluntary engagement has failed, early warning signs are active, the historical pattern predicts rapid deterioration, and legal criteria for compulsory treatment are met; the documentation of the voluntary options offered is the clinical and legal basis for escalation"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Accepting denial of intent as reassurance that compulsory administration is not yet needed",
+          "Treating Nathan's continued attendance as evidence that the relapse signature is not active",
+          "Recommending compulsory administration of the original depot without first offering a tolerable oral alternative"
+        ],
+        postExaminerNote: "Candidates who named the active relapse signature explicitly, explained why denial of intent has limited predictive validity at this stage of Nathan's known deterioration pattern, offered an effective oral alternative before escalating to compulsory administration, and defined the specific threshold for compulsion scored in the upper range. Candidates who accepted denial of intent as reassurance, or who moved directly to compulsory depot administration without considering oral alternatives, did not achieve the standard."
+      }
+    ]
+  },
+  {
+    id: "meq_060",
+    title: "Jack — Rural CTO Transfer Failure and Predictive Risk",
+    case: "Jack, 36, schizoaffective disorder, rural transfer, CTO, depot due, no documentation, no stock, no nurse",
+    examSource: "Generated — Governance / Systems / Leadership",
+    topic: "CTO patient transfers to a rural community 600km away without confirmed depot supply, prescribing authority, legal transfer or relapse plan; tests identifying immediate transfer of care failures including CTO portability, managing the tension between rural resource constraints and standard of care, responding to active prodromal signs when the patient denies intent, and governance response after barricade incident attributed to the transfer failure",
+    primaryDomain: "Governance / Systems / Leadership",
+    totalMarks: 34,
+    totalTimeMinutes: 34,
+    stems: [
+      {
+        stemNumber: "1.1",
+        vignette: "Jack is a 36-year-old man with schizoaffective disorder who has recently moved from a metropolitan area to a remote farming community 600 kilometres away. He is on a community treatment order and receives a monthly depot antipsychotic. He has been stable for nine months, working casually on a cattle property and living with his older sister. His depot is due tomorrow. The local clinic reports it has not received the transfer documents, the community pharmacy does not have the depot in stock, and the only mental health nurse covering the district is on leave. His sister says that during previous relapses Jack first became sleepless and suspicious but continued to deny any intent to harm himself or others. On one previous occasion he denied risk the day before driving hundreds of kilometres because he believed he was being followed.",
+        question: "Outline — list and justify the immediate issues you would identify in this transfer of care.\nYour answer must address the legal status of the CTO in the new location and the clinical risk created by the predictive relapse pattern. A list without because-clauses specific to this case will not be awarded any marks.\n(8 marks | 8 minutes)",
+        commandWord: "outline_justify",
+        marks: 8,
+        timeMinutes: 8,
+        stemSignals: [
+          "The depot is due tomorrow — this is not a planning conversation; it is an urgent clinical problem with a 24-hour window before a person with a known rapid relapse pattern after missed medication has his treatment interrupted",
+          "The CTO has crossed a distance of 600km — whether the order is valid and enforceable in the new location is a legal question that must be answered before any clinical plan can be implemented",
+          "The sister's account of previous denial of intent followed by dangerous impulsive behaviour is the predictive risk information — it must shape how the urgency of the depot is assessed, not be treated as reassuring collateral"
+        ],
+        domains: [
+          {
+            name: "Legal Transfer and CTO Continuity (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "Confirm whether the CTO is valid and legally enforceable in the new jurisdiction or region — because mental health legislation varies across Australian states and territories, and a CTO issued in one jurisdiction does not automatically carry legal authority in another; prescribing authority, administration rights and enforcement powers must be confirmed before the clinical plan can proceed",
+              "Confirm who currently has legal responsibility for Jack's CTO — because the metropolitan team's discharge does not automatically transfer CTO responsibility; without documented handover of prescribing authority and CTO administration to a named responsible clinician in the new area, there is a legal and clinical governance gap",
+              "Determine whether urgent legal action is needed to establish a new or transferred CTO in the receiving area — because if the existing order has no legal force in the new location, Jack cannot be compelled to receive the depot, and the clinical plan must account for this before the dose is due tomorrow"
+            ]
+          },
+          {
+            name: "Clinical Urgency and Depot Continuity (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "Identify that missing tomorrow's depot creates an urgent relapse risk based on Jack's documented pattern — because his sister reports that missed medication leads to sleeplessness and suspiciousness within a week; the depot is not due for administrative reasons but because an interval has passed after which, in this specific patient, relapse begins",
+              "Identify all immediate practical barriers simultaneously — no transfer documents, no pharmacy stock, no trained nurse — because each barrier requires a different response and all must be resolved before tomorrow; addressing them sequentially risks running out of time",
+              "Identify that Jack's previous risk behaviour — driving hundreds of kilometres while acutely psychotic after denying intent — changes the urgency classification — because this is not a routine missed-dose problem; it is a high-risk scenario in a rural area where a person who denied risk before committing dangerous impulsive behaviour is about to miss medication that prevents that pattern from recurring"
+            ]
+          },
+          {
+            name: "Responsibility and Escalation (2 marks)",
+            marks: 2,
+            keyPoints: [
+              "Escalate the transfer failure to senior service leadership today — because the combination of absent documentation, absent pharmacy stock, absent nurse and uncertain legal status represents a foreseeable patient safety risk that requires immediate escalation beyond clinical problem-solving",
+              "Do not accept the metropolitan team's position that Jack is now your patient without a formal handover of clinical and legal responsibility — because a verbal statement that he has been discharged is not a safe transfer of care for a CTO patient; the metropolitan team retains responsibility until a formal handover with named responsible clinician, legal confirmation and clinical documentation is completed"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Treating the CTO as automatically valid and enforceable in the new rural location without legal confirmation",
+          "Accepting the metropolitan team's discharge as a completed transfer of care without addressing the documentation and legal gaps",
+          "Not naming Jack's previous denial-of-intent episode before dangerous driving as a predictive risk factor that changes the urgency assessment"
+        ],
+        postExaminerNote: "Candidates who named CTO legal portability as the first required legal question, identified all three practical barriers as requiring simultaneous same-day responses, used Jack's previous denial-of-intent episode to establish the urgency classification, and escalated to senior leadership rather than attempting to solve the problem clinically scored in the upper range. Candidates who assumed CTO validity across jurisdictions, accepted the metropolitan team's discharge as complete, or treated this as a routine late depot problem did not achieve the standard."
+      },
+      {
+        stemNumber: "1.2",
+        vignette: "Jack says he cannot travel to the regional hospital for the depot because he would lose his job and has no car. He says: 'I moved here to get away from being treated like a patient.' The metropolitan team says they discharged him because he is now your patient. The local GP is willing to help but has never administered this depot before.",
+        question: "Discuss — list and debate how you would respond to this situation.\nYour answer must address the tension between Jack's legitimate request to live locally and the service failures that have created this risk, and produce a defensible consultant position on how the depot is delivered today. A list without debate specific to this case will not be awarded any marks.\n(9 marks | 9 minutes)",
+        commandWord: "debate",
+        marks: 9,
+        timeMinutes: 9,
+        stemSignals: [
+          "Jack is not asking to stop medication — he is asking not to travel and lose his job; these are legitimate concerns that a service failure has forced him to choose between",
+          "The metropolitan team cannot transfer responsibility with a verbal dismissal — this is a governance and legal failure, not a clinical handover",
+          "The GP is willing but untrained — willingness plus written support is a workable clinical solution; willingness without support is a foreseeable harm"
+        ],
+        domains: [
+          {
+            name: "Named Tensions (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "There is tension between Jack's legitimate right to work and live locally without being defined by his illness and the service's obligation to prevent a foreseeable relapse caused by its own failure to plan his transfer — because Jack did not create this problem; the service did, and the solution must accommodate his legitimate needs rather than penalising him for the service failure",
+              "There is tension between rural resource constraints — no nurse, no stock, untrained GP — and the standard of care that a person on a CTO with a high-risk relapse pattern deserves — because resource limitations do not lower the clinical standard; they create an escalation obligation and a duty to find a practical solution that meets the standard, not a reason to defer",
+              "There is tension between the metropolitan team's position that handover is complete and the regional service's recognition that it has received a CTO patient without the legal, clinical or practical infrastructure to manage him — because this is not a difference of opinion about transition timing; it is a foreseeable safety gap that both services have a duty to address"
+            ]
+          },
+          {
+            name: "Arguments for Local Solution (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "A local depot administration solution must be created today — because Jack's relapse risk is time-critical and requiring him to travel 600km tomorrow would cause job loss, which is itself a stressor that increases relapse risk; the clinical solution must serve his recovery goals, not create a new threat to them",
+              "The local GP can administer the depot safely with written clinical support — because the GP is willing and the barrier is a lack of training, not a lack of capacity; a brief direct consultation with the prescribing psychiatrist, written administration instructions, emergency contact details and a clear post-injection monitoring protocol converts willing into competent for this specific task",
+              "Urgent pharmacy sourcing through regional supply or emergency courier must be pursued today — because pharmacy stock absence is a solvable problem with sufficient urgency and senior service support; this is not a reason to defer the dose but a logistics problem requiring escalation to service management"
+            ]
+          },
+          {
+            name: "Defensible Position and Metropolitan Team Response (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "The defensible consultant position is that local administration with supported GP is achievable today and must be pursued — because this solution serves Jack's clinical needs, respects his autonomy and work, and does not require him to absorb the consequences of a service failure",
+              "Formally reject the metropolitan team's position that handover is complete — because a CTO patient with a missed-dose safety profile cannot be handed over with a verbal statement; the metropolitan team must be contacted by the consultant today with a formal request for transfer documentation, prescribing authority confirmation and legal CTO status before the regional service accepts full responsibility",
+              "Escalate the rural resource gap to service management with a written record — because no trained nurse, no pharmacy stock and an untrained GP on a CTO patient represents a foreseeable safety risk that the clinical team cannot resolve alone; this is a governance escalation, not only a clinical problem"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Requiring Jack to travel to the regional hospital and accepting job loss as an unavoidable consequence",
+          "Accepting the metropolitan team's verbal handover as a completed transfer of care",
+          "Concluding that the GP cannot administer the depot without exploring what written and telephone support could enable them to do so safely"
+        ],
+        postExaminerNote: "Candidates who named all three tensions explicitly, created a local administration pathway with GP support as the defensible solution, formally rejected the metropolitan team's incomplete handover, and escalated the resource gap through governance channels scored in the upper range. Candidates who required Jack to travel, accepted the verbal handover, or concluded that the untrained GP made local administration impossible did not achieve the standard."
+      },
+      {
+        stemNumber: "1.3",
+        vignette: "Five days later, Jack has still not received the depot. He is sleeping three hours per night, has begun saying neighbours are watching the property, and has refused a telehealth appointment because the internet connection failed twice. He remains polite, denies intent to harm anyone, and says he will accept treatment if someone brings it locally. The regional bed manager says there are no inpatient beds and asks whether Jack can be left until he is clearly unwell.",
+        question: "Describe — list and explain your management plan.\nA list without explanation will not be awarded any marks.\n(9 marks | 9 minutes)",
+        commandWord: "describe_explain",
+        marks: 9,
+        timeMinutes: 9,
+        stemSignals: [
+          "Three hours sleep, neighbours watching the property — these are Jack's sister's named early warning signs from five days ago; the relapse is active; this is not a monitoring question, it is an intervention question",
+          "Denial of intent after previous denial-before-dangerous-driving — Jack's previous episode specifically involved denying risk shortly before impulsive dangerous behaviour; his denial today must be interpreted through that clinical lens",
+          "No inpatient beds is not a clinical management plan — the bed manager's question is the examiner trap; leaving him until clearly unwell is leaving him until he is unsafe"
+        ],
+        domains: [
+          {
+            name: "Recognising Active Relapse Despite Denial (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "Recognise that Jack's current presentation meets his documented relapse signature — explain that three hours sleep and persecutory beliefs about neighbours were specifically named by his sister as the early warning signs preceding previous serious relapses; the relapse plan is triggered and intervention is required now, not when overt psychosis is visible",
+              "Explain why denial of intent does not resolve the risk formulation in this case — explain that Jack's previous relapse included denial of intent the day before driving hundreds of kilometres in response to persecutory beliefs; his current polite presentation and denial must be interpreted against this documented pattern, not accepted as reassurance",
+              "Do not wait for Jack to meet a threshold of clear unwellness — explain that the purpose of a CTO and a relapse plan is early intervention before the patient becomes seriously unwell; waiting for clear unwellness in a person who has a documented rapid-deterioration pattern and has already been five days without depot is waiting for a foreseeable crisis"
+            ]
+          },
+          {
+            name: "Urgent Depot Administration Plan (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "Pursue urgent local depot administration as the immediate clinical priority — explain that Jack has said he will accept treatment if someone brings it locally; this is a therapeutic opening that must be used today by arranging outreach nurse, GP or emergency clinician visit with depot supply to administer at his location",
+              "If local administration of the depot is not immediately achievable, consider an urgent bridge with oral antipsychotic — explain that five days without medication in a person now showing prodromal signs creates a risk that cannot wait for logistics; a short-term oral antipsychotic bridge while the depot supply is arranged is safer than continuing without any antipsychotic cover",
+              "Resolve the telehealth failure with an alternative — explain that twice-failed internet is not a reason to accept no clinical contact; phone assessment, in-person outreach or sister-mediated welfare check with direct phone access to the psychiatrist are all options that must be pursued in preference to a third failed connection attempt"
+            ]
+          },
+          {
+            name: "Escalation and Safety Planning (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "Explicitly decline the bed manager's suggestion to leave Jack until clearly unwell — explain that waiting for clear unwellness is a foreseeable harm plan, not a risk management plan; the consultant must document this refusal and the clinical rationale, and escalate the resource barrier to service leadership",
+              "Assess specific rural safety risks — explain that Jack is on a cattle property with potential access to farm equipment, firearms and a vehicle; his previous dangerous driving episode makes transport risk a named priority; the sister must be briefed about not leaving him unsupervised with access to keys or weapons",
+              "Establish a contingency plan for compulsory assessment or emergency transport if Jack deteriorates or refuses the offered treatment — explain that the plan must include a named contact at the local police or emergency services, the legal framework for compulsory assessment in the relevant jurisdiction, and transport options that do not depend on Jack's cooperation"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Accepting Jack's denial of intent as reassurance that active intervention is not yet required",
+          "Agreeing with the bed manager's suggestion to wait until Jack is clearly unwell",
+          "Treating telehealth failure as an endpoint rather than as a logistics problem requiring an alternative contact method"
+        ],
+        postExaminerNote: "Candidates who explicitly recognised the active relapse signature, explained why denial of intent had limited validity against Jack's previous pattern, pursued local depot administration or an oral bridge as the urgent clinical priority, declined the bed manager's suggestion with a documented clinical rationale, and named rural-specific safety risks including driving and farm access scored in the upper range. Candidates who accepted denial of intent as reassurance, or who agreed that waiting for clear unwellness was appropriate, did not achieve the standard."
+      },
+      {
+        stemNumber: "1.4",
+        vignette: "A week later, Jack requires emergency transfer after becoming frightened and barricading himself in a shed. He is not physically harmed. His sister says: 'Everyone kept saying he denied risk, but this is what happens every time.' Review shows the depot order, pharmacy supply plan, receiving-team responsibilities, relapse plan and legal transfer arrangements were not confirmed before he left the city. The regional clinical director asks you to review what happened.",
+        question: "Discuss — list and debate the response required after this event.\nYour answer must address open disclosure, the governance failures identified in the review, and the specific education required for clinicians who relied on denial of intent as reassurance in a prodromal patient. A list without debate specific to this case will not be awarded any marks.\n(8 marks | 8 minutes)",
+        commandWord: "debate",
+        marks: 8,
+        timeMinutes: 8,
+        stemSignals: [
+          "Everyone kept saying he denied risk but this is what happens every time — the sister has named the clinical failure precisely; the governance response must include explicit education about denial of intent in prodromal relapse, not only systems redesign",
+          "Five documented failures — depot order, pharmacy plan, receiving team, relapse plan, legal transfer — this is a systems failure, not an individual error; the review must identify each gap and assign corrective actions",
+          "Jack is not physically harmed but has been through a frightening episode that was preventable — open disclosure to Jack and his sister is required"
+        ],
+        domains: [
+          {
+            name: "Immediate Safety and Open Disclosure (2 marks)",
+            marks: 2,
+            keyPoints: [
+              "Ensure Jack's immediate clinical care, psychological distress and physical health are addressed before the governance review — because the review cannot be the first response; Jack has been through a frightening episode that was caused by a service failure and his clinical needs come first",
+              "Offer open disclosure to Jack and his sister — explain what happened, acknowledge that the transfer of care was inadequately planned, apologise for the distress caused by a preventable system failure, and commit to a review with findings communicated back to them"
+            ]
+          },
+          {
+            name: "Governance Response (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "Report the event as a serious patient safety incident — explain that a foreseeable relapse caused by documented transfer of care failures in a CTO patient meets the threshold for formal incident reporting; this is not optional and must be completed before the review is concluded",
+              "Review each of the five named failures with a just-culture approach — explain that the depot order, pharmacy supply plan, receiving team responsibilities, relapse plan and legal transfer arrangements must each be reviewed to determine whether the failure was systemic or individual, what the preventable element was, and what specific change will prevent recurrence",
+              "Develop a mandatory CTO transfer checklist with named sign-off requirements — explain that each element of the five failures must become a named mandatory item on a transfer checklist that requires sign-off from both the sending and receiving teams; the checklist must be tested and monitored, not filed and forgotten"
+            ]
+          },
+          {
+            name: "Clinical Education and Denial of Intent (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "Provide specific education to clinicians involved in the prodromal management about the limited predictive validity of denial of intent in a patient with a documented dangerous-impulsive-behaviour pattern — explain that this is not a generic teaching point but a case-specific correction; the clinicians who accepted Jack's denial of intent as reassurance need to understand what that denial meant in the context of his specific previous episode",
+              "Address the sister's statement as a named governance finding — explain that a family member repeatedly stating this is what happens every time represents a failure of collateral integration in the risk assessment; the review must examine why longitudinal pattern information from an experienced carer was not used to override cross-sectional denial-based reassurance",
+              "Establish a rural CTO transfer protocol that includes denial-of-intent guidance as a named component — explain that rural and remote settings where face-to-face assessment is limited and telehealth is unreliable create specific conditions where cross-sectional denial can substitute for longitudinal risk assessment; the protocol must name this risk explicitly and require pattern-based formulation before accepting denial as reassurance in high-risk transfers"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Beginning with the governance review before addressing Jack's immediate clinical care and open disclosure",
+          "Treating the event as an unavoidable rural resource failure without identifying the preventable system gaps",
+          "Providing generic safety culture education without addressing the specific clinical error of accepting denial of intent as reassurance in a prodromal patient with a documented dangerous-behaviour pattern"
+        ],
+        postExaminerNote: "Candidates who addressed Jack's immediate needs and open disclosure first, named all five transfer failures and proposed a mandatory checklist with named sign-off, reported the event as a serious patient safety incident, and provided case-specific education about denial of intent in prodromal relapse rather than generic safety culture messaging scored in the upper range. Candidates who began with governance before Jack, treated the event as an unavoidable rural outcome, or provided only generic incident review recommendations did not achieve the standard."
+      }
+    ]
+  }
 ];
 
 // ============================================================

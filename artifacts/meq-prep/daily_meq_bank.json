@@ -9092,5 +9092,98 @@
         "commandWord": "debate"
       }
     ]
+  },
+  {
+    "id": "meq_058",
+    "title": "William \u2014 CTO Renewal, Predictive Risk and Side Effects",
+    "case": "William, 42, schizophrenia, 18 months on CTO, third cycle of apparent stability, side effects, Tribunal review",
+    "examSource": "Generated \u2014 Ethics / Professionalism / Legal",
+    "primaryDomain": "Ethics / Professionalism / Legal",
+    "totalMarks": 32,
+    "totalTimeMinutes": 32,
+    "stems": [
+      {
+        "stemNumber": "1.1",
+        "marks": 8,
+        "commandWord": "outline_justify"
+      },
+      {
+        "stemNumber": "1.2",
+        "marks": 10,
+        "commandWord": "debate"
+      },
+      {
+        "stemNumber": "1.3",
+        "marks": 9,
+        "commandWord": "describe_explain"
+      },
+      {
+        "stemNumber": "1.4",
+        "marks": 5,
+        "commandWord": "outline_justify"
+      }
+    ]
+  },
+  {
+    "id": "meq_059",
+    "title": "Nathan \u2014 Akathisia, Depot Refusal and Dynamic Risk Under CTO",
+    "case": "Nathan, 27, schizophrenia, early psychosis team, depot refusal, likely akathisia, CTO, father's warning",
+    "examSource": "Generated \u2014 Ethics / Professionalism / Legal",
+    "primaryDomain": "Ethics / Professionalism / Legal",
+    "totalMarks": 32,
+    "totalTimeMinutes": 32,
+    "stems": [
+      {
+        "stemNumber": "1.1",
+        "marks": 8,
+        "commandWord": "outline_justify"
+      },
+      {
+        "stemNumber": "1.2",
+        "marks": 9,
+        "commandWord": "debate"
+      },
+      {
+        "stemNumber": "1.3",
+        "marks": 9,
+        "commandWord": "describe_explain"
+      },
+      {
+        "stemNumber": "1.4",
+        "marks": 6,
+        "commandWord": "debate"
+      }
+    ]
+  },
+  {
+    "id": "meq_060",
+    "title": "Jack \u2014 Rural CTO Transfer Failure and Predictive Risk",
+    "case": "Jack, 36, schizoaffective disorder, rural transfer, CTO, depot due, no documentation, no stock, no nurse",
+    "examSource": "Generated \u2014 Governance / Systems / Leadership",
+    "primaryDomain": "Governance / Systems / Leadership",
+    "totalMarks": 34,
+    "totalTimeMinutes": 34,
+    "stems": [
+      {
+        "stemNumber": "1.1",
+        "marks": 8,
+        "commandWord": "outline_justify"
+      },
+      {
+        "stemNumber": "1.2",
+        "marks": 9,
+        "commandWord": "debate"
+      },
+      {
+        "stemNumber": "1.3",
+        "marks": 9,
+        "commandWord": "describe_explain"
+      },
+      {
+        "stemNumber": "1.4",
+        "marks": 8,
+        "commandWord": "debate"
+      }
+    ]
   }
 ]
