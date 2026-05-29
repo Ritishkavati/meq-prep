@@ -3,6 +3,7 @@ import type { QuizStem } from "../quizData";
 export const FOR_STEMS: QuizStem[] = [
   {
     id: "FOR-001",
+    questionNumber: "MEQ-065",
     topic: "forensic",
     difficulty: "consultant",
     title: "Stalking and erotomania in community care",
@@ -95,6 +96,7 @@ My final advice would be that the team should not simply rely on police warnings
   },
   {
     id: "FOR-002",
+    questionNumber: "MEQ-066",
     topic: "forensic",
     difficulty: "consultant",
     title: "NGMI report and fitness to stand trial",
@@ -187,6 +189,7 @@ My report would therefore address current diagnosis, current fitness, mental sta
   },
   {
     id: "FOR-003",
+    questionNumber: "MEQ-067",
     topic: "forensic",
     difficulty: "consultant",
     title: "Conditional discharge of forensic patient",

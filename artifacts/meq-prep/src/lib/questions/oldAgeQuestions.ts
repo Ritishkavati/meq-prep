@@ -3,6 +3,7 @@ import { QuizStem } from "../quizData";
 export const OA_STEMS: QuizStem[] = [
   {
     id: "OA-001",
+    questionNumber: "MEQ-100",
     topic: "old_age",
     difficulty: "consultant",
     title: "Dementia, driving, EPOA conflict and elder financial abuse",
@@ -93,6 +94,7 @@ The ethical tension is between protecting Mrs Chen from harm and preserving auto
   },
   {
     id: "OA-002",
+    questionNumber: "MEQ-101",
     topic: "old_age",
     difficulty: "consultant",
     title: "Delirium missed as dementia and anticholinergic burden",
@@ -183,6 +185,7 @@ The registrar's request for risperidone "to settle him" should be reframed. Anti
   },
   {
     id: "OA-003",
+    questionNumber: "MEQ-102",
     topic: "old_age",
     difficulty: "consultant",
     title: "CALD resident with BPSD, restraint and cultural safety",
@@ -273,6 +276,7 @@ The facility manager's statement that staffing levels are low creates system pre
   },
   {
     id: "OA-004",
+    questionNumber: "MEQ-103",
     topic: "old_age",
     difficulty: "consultant",
     title: "Late-life depression, ECT consent and carer burnout",
@@ -363,6 +367,7 @@ His question about whether ECT is "punishment" must be explored culturally and s
   },
   {
     id: "OA-005",
+    questionNumber: "MEQ-104",
     topic: "old_age",
     difficulty: "consultant",
     title: "End-of-life refusal, family conflict and capacity",

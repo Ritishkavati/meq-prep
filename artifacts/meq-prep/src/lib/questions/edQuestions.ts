@@ -3,6 +3,7 @@ import { QuizStem } from "../quizData";
 export const ED_STEMS: QuizStem[] = [
   {
     id: "ED-001",
+    questionNumber: "MEQ-028",
     topic: "ed",
     difficulty: "consultant",
     title: "Methamphetamine Psychosis vs First-Episode Schizophrenia",
@@ -90,6 +91,7 @@ I will complete the MSE once Marcus is sufficiently alert after sedation, obtain
 
   {
     id: "ED-002",
+    questionNumber: "MEQ-029",
     topic: "ed",
     difficulty: "consultant",
     title: "Anorexia Nervosa Refusing NG Feeding — Capacity and Involuntary Treatment",
@@ -176,6 +178,7 @@ If I conclude she lacks capacity for this decision, I will initiate the relevant
 
   {
     id: "ED-003",
+    questionNumber: "MEQ-030",
     topic: "ed",
     difficulty: "consultant",
     title: "Acute Confusional State in an Older Woman — Delirium Missed as Dementia",
@@ -264,6 +267,7 @@ The pattern of repeated presentations labelled as dementia is a systems concern.
 
   {
     id: "ED-004",
+    questionNumber: "MEQ-031",
     topic: "ed",
     difficulty: "consultant",
     title: "Acute Behavioural Disturbance in ED — Restraint Demand Before Assessment",
@@ -361,6 +365,7 @@ I will speak directly with Jake's mother, acknowledge the past two days, and ass
 
   {
     id: "ED-005",
+    questionNumber: "MEQ-032",
     topic: "ed",
     difficulty: "consultant",
     title: "Adolescent NSSI in ED — Safe Discharge, Parental Conflict, Child Protection",

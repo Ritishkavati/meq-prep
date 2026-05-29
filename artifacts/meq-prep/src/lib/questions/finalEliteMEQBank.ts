@@ -18,6 +18,7 @@ import type { QuizStem } from "../quizData";
 export const FINAL_ELITE_MEQ_BANK: QuizStem[] = [
   {
     "id": "FINAL-001",
+    "questionNumber": "MEQ-120",
     "topic": "risk",
     "difficulty": "consultant",
     "title": "Denied suicidality with concealed lethal preparation",
@@ -165,6 +166,7 @@ I would document that the decision was not based on denial alone. The note shoul
   },
   {
     "id": "FINAL-002",
+    "questionNumber": "MEQ-121",
     "topic": "capacity_mha",
     "difficulty": "consultant",
     "title": "Psychotic refusal of dialysis with immediate medical risk",
@@ -312,6 +314,7 @@ My consultant actions would be to attend or supervise urgently, assess capacity 
   },
   {
     "id": "FINAL-003",
+    "questionNumber": "MEQ-122",
     "topic": "risk",
     "difficulty": "consultant",
     "title": "Domestic violence perpetrator with suicidal coercion",
@@ -459,6 +462,7 @@ I would document the exact threat "If I cannot have the kids, no one will," the 
   },
   {
     "id": "FINAL-004",
+    "questionNumber": "MEQ-123",
     "topic": "capacity_mha",
     "difficulty": "consultant",
     "title": "Adolescent overdose, articulate refusal and boarding-school pressure",
@@ -606,6 +610,7 @@ I would document the uncertain ingestion, the treatment urgency, the capacity as
   },
   {
     "id": "FINAL-005",
+    "questionNumber": "MEQ-124",
     "topic": "risk",
     "difficulty": "consultant",
     "title": "First episode psychosis with weapon and family unable to supervise",
@@ -753,6 +758,7 @@ The ED flow coordinator's statement, "There are no mental health beds and he is 
   },
   {
     "id": "FINAL-006",
+    "questionNumber": "MEQ-125",
     "topic": "capacity_mha",
     "difficulty": "consultant",
     "title": "Mania in pregnancy refusing foetal monitoring and admission",
@@ -900,6 +906,7 @@ Maya refuses to speak with non-Aboriginal staff and her mother says, "You are pu
   },
   {
     "id": "FINAL-007",
+    "questionNumber": "MEQ-126",
     "topic": "risk",
     "difficulty": "consultant",
     "title": "Personality disorder label after venlafaxine overdose and bed pressure",
@@ -1047,6 +1054,7 @@ Nursing staff say, "She refuses every plan we offer," which may reflect rigidity
   },
   {
     "id": "FINAL-008",
+    "questionNumber": "MEQ-127",
     "topic": "capacity_mha",
     "difficulty": "consultant",
     "title": "Dementia patient refusing residential care from ED after wandering",
@@ -1194,6 +1202,7 @@ My documentation would state the exact accommodation-capacity assessment, the hi
   },
   {
     "id": "FINAL-009",
+    "questionNumber": "MEQ-128",
     "topic": "risk",
     "difficulty": "consultant",
     "title": "Alcohol withdrawal, head injury and threats in remote cells",
@@ -1341,6 +1350,7 @@ I would document the shovel threat, head injury, intoxication, medical clearance
   },
   {
     "id": "FINAL-010",
+    "questionNumber": "MEQ-129",
     "topic": "capacity_mha",
     "difficulty": "consultant",
     "title": "Refusal of antipsychotic on inpatient ward with escalating intimidation",
@@ -1488,6 +1498,7 @@ I would document the delusional basis of refusal, capacity findings, risk to vul
   },
   {
     "id": "FINAL-011",
+    "questionNumber": "MEQ-130",
     "topic": "perinatal",
     "difficulty": "consultant",
     "title": "Postpartum psychosis with no mother-baby bed",
@@ -1635,6 +1646,7 @@ I would document the absence of a mother-baby bed, the infant-safety quote, slee
   },
   {
     "id": "FINAL-012",
+    "questionNumber": "MEQ-131",
     "topic": "perinatal",
     "difficulty": "consultant",
     "title": "Antenatal depression with family violence and medication refusal",
@@ -1782,6 +1794,7 @@ My documentation would include her suicidal phrase, the medication misinformatio
   },
   {
     "id": "FINAL-013",
+    "questionNumber": "MEQ-132",
     "topic": "perinatal",
     "difficulty": "consultant",
     "title": "OCD intrusive infant harm thoughts misread as child protection",
@@ -1929,6 +1942,7 @@ I would document the exact nature of the thoughts, her distress and rejection of
   },
   {
     "id": "FINAL-014",
+    "questionNumber": "MEQ-133",
     "topic": "perinatal",
     "difficulty": "consultant",
     "title": "Bipolar pregnancy stopping lithium and forensic relapse history",
@@ -2076,6 +2090,7 @@ I would document lithium cessation timing, the misinformation quote, partner col
   },
   {
     "id": "FINAL-015",
+    "questionNumber": "MEQ-134",
     "topic": "perinatal",
     "difficulty": "consultant",
     "title": "Methadone pregnancy, child protection fear and NAS planning",
@@ -2223,6 +2238,7 @@ I would document the rationale for maintaining methadone, benzodiazepine and can
   },
   {
     "id": "FINAL-016",
+    "questionNumber": "MEQ-135",
     "topic": "perinatal",
     "difficulty": "consultant",
     "title": "Postnatal depression with intrusive suicidality and partner coercion",
@@ -2370,6 +2386,7 @@ I would document the infant-care concerns, Aisha's exact statement, mental state
   },
   {
     "id": "FINAL-017",
+    "questionNumber": "MEQ-136",
     "topic": "perinatal",
     "difficulty": "consultant",
     "title": "Mother with psychosis refusing baby examination",
@@ -2517,6 +2534,7 @@ I would document the baby's eight-hour no-feed risk, Jenna's contamination belie
   },
   {
     "id": "FINAL-018",
+    "questionNumber": "MEQ-137",
     "topic": "perinatal",
     "difficulty": "consultant",
     "title": "Severe hyperemesis, depression and termination request",
@@ -2664,6 +2682,7 @@ I would document the capacity assessment, symptom burden, suicide risk, treatmen
   },
   {
     "id": "FINAL-019",
+    "questionNumber": "MEQ-138",
     "topic": "perinatal",
     "difficulty": "consultant",
     "title": "Perinatal relapse after child removal threat",
@@ -2811,6 +2830,7 @@ I would document Louise's fear of removal, past history, current mental state, A
   },
   {
     "id": "FINAL-020",
+    "questionNumber": "MEQ-139",
     "topic": "perinatal",
     "difficulty": "consultant",
     "title": "Postpartum mania and driving with infant",
@@ -2958,6 +2978,7 @@ I would document the manic symptoms, the quote about sleep and being chosen, the
   },
   {
     "id": "FINAL-021",
+    "questionNumber": "MEQ-140",
     "topic": "child_adolescent",
     "difficulty": "consultant",
     "title": "Refugee school refusal and interpreter/consent failure",
@@ -3105,6 +3126,7 @@ My consultant action would be to stop the binary fit/unfit demand and replace it
   },
   {
     "id": "FINAL-022",
+    "questionNumber": "MEQ-141",
     "topic": "child_adolescent",
     "difficulty": "consultant",
     "title": "Aboriginal boy ADHD dispute and polypharmacy",
@@ -3252,6 +3274,7 @@ My consultant plan would be to convene school, paediatrics, grandmother, Aborigi
   },
   {
     "id": "FINAL-023",
+    "questionNumber": "MEQ-142",
     "topic": "child_adolescent",
     "difficulty": "consultant",
     "title": "Anorexia medical instability and family conflict",
@@ -3399,6 +3422,7 @@ I would act by aligning paediatrics, CAMHS, nursing and family around one plan: 
   },
   {
     "id": "FINAL-024",
+    "questionNumber": "MEQ-143",
     "topic": "child_adolescent",
     "difficulty": "consultant",
     "title": "Gender diverse youth, parental rejection and MHA",
@@ -3546,6 +3570,7 @@ My consultant plan would be to assess depression, suicidality, self-harm, family
   },
   {
     "id": "FINAL-025",
+    "questionNumber": "MEQ-144",
     "topic": "child_adolescent",
     "difficulty": "consultant",
     "title": "Autistic adolescent meltdown mistaken for violence",
@@ -3693,6 +3718,7 @@ His parents are migrants and say autism is shameful in their community, so engag
   },
   {
     "id": "FINAL-026",
+    "questionNumber": "MEQ-145",
     "topic": "child_adolescent",
     "difficulty": "consultant",
     "title": "Adolescent psychosis, cannabis and family stigma",
@@ -3840,6 +3866,7 @@ I would document the laptop delusion, cannabis use, three-month decline, knife a
   },
   {
     "id": "FINAL-027",
+    "questionNumber": "MEQ-146",
     "topic": "child_adolescent",
     "difficulty": "consultant",
     "title": "Complex trauma, NSSI and placement breakdown",
@@ -3987,6 +4014,7 @@ I would document the function of self-harm, the placement notice, absence or pre
   },
   {
     "id": "FINAL-028",
+    "questionNumber": "MEQ-147",
     "topic": "child_adolescent",
     "difficulty": "consultant",
     "title": "Eating disorder in transgender adolescent and parental conflict",
@@ -4134,6 +4162,7 @@ I would document Sam's medical instability, dysphoria quote, pronouns and privac
   },
   {
     "id": "FINAL-029",
+    "questionNumber": "MEQ-148",
     "topic": "child_adolescent",
     "difficulty": "consultant",
     "title": "Indigenous youth justice, suicidality and custody",
@@ -4281,6 +4310,7 @@ I would document the hanging behaviour, the isolation trigger, the uncle's death
   },
   {
     "id": "FINAL-030",
+    "questionNumber": "MEQ-149",
     "topic": "child_adolescent",
     "difficulty": "consultant",
     "title": "16yo medical refusal with chronic illness and parental coercion",
@@ -4428,6 +4458,7 @@ I would document insulin omission and DKA risk, the diabulimia formulation, capa
   },
   {
     "id": "FINAL-031",
+    "questionNumber": "MEQ-150",
     "topic": "old_age",
     "difficulty": "consultant",
     "title": "Dementia driving and financial abuse",
@@ -4575,6 +4606,7 @@ I would document the driving incidents, licensing advice, interpreter requiremen
   },
   {
     "id": "FINAL-032",
+    "questionNumber": "MEQ-151",
     "topic": "old_age",
     "difficulty": "consultant",
     "title": "Delirium misdiagnosed as dementia with anticholinergic burden",
@@ -4722,6 +4754,7 @@ I would document the acute baseline change, delirium formulation, communication 
   },
   {
     "id": "FINAL-033",
+    "questionNumber": "MEQ-152",
     "topic": "old_age",
     "difficulty": "consultant",
     "title": "Residential care BPSD and chemical restraint",
@@ -4869,6 +4902,7 @@ I would require a behaviour and safeguarding plan before medication: Vietnamese 
   },
   {
     "id": "FINAL-034",
+    "questionNumber": "MEQ-153",
     "topic": "old_age",
     "difficulty": "consultant",
     "title": "ECT capacity and family media threat",
@@ -5016,6 +5050,7 @@ I would document severity of illness, nutritional risk, psychotic guilt, capacit
   },
   {
     "id": "FINAL-035",
+    "questionNumber": "MEQ-154",
     "topic": "old_age",
     "difficulty": "consultant",
     "title": "End-of-life refusal and family disagreement",
@@ -5163,6 +5198,7 @@ I would document the capacity assessment, the ICU quote, depression/delirium scr
   },
   {
     "id": "FINAL-036",
+    "questionNumber": "MEQ-155",
     "topic": "old_age",
     "difficulty": "consultant",
     "title": "Self-neglect, diabetes and refusal of help",
@@ -5310,6 +5346,7 @@ I would document the home conditions, insulin risk, open-door vulnerability, the
   },
   {
     "id": "FINAL-037",
+    "questionNumber": "MEQ-156",
     "topic": "old_age",
     "difficulty": "consultant",
     "title": "Late-onset psychosis or elder abuse",
@@ -5457,6 +5494,7 @@ I would document the poisoning belief, bruises, lock change, carer request for s
   },
   {
     "id": "FINAL-038",
+    "questionNumber": "MEQ-157",
     "topic": "old_age",
     "difficulty": "consultant",
     "title": "Migrant elder refusing residential care after wandering",
@@ -5604,6 +5642,7 @@ I would document the train-station incident, stove risk, the exact home quote, i
   },
   {
     "id": "FINAL-039",
+    "questionNumber": "MEQ-158",
     "topic": "old_age",
     "difficulty": "consultant",
     "title": "Older man with firearms, depression and rural culture",
@@ -5751,6 +5790,7 @@ I would document the denial, drought depression context, firearm identity quote,
   },
   {
     "id": "FINAL-040",
+    "questionNumber": "MEQ-159",
     "topic": "old_age",
     "difficulty": "consultant",
     "title": "Capacity for financial decision with fluctuating delirium",
@@ -5898,6 +5938,7 @@ I would document the delirium, pain, language barrier, exact statement about not
   },
   {
     "id": "FINAL-041",
+    "questionNumber": "MEQ-160",
     "topic": "cl_psychiatry",
     "difficulty": "consultant",
     "title": "Cancer refusal with depressive guilt",
@@ -6045,6 +6086,7 @@ I would document the oncology urgency, the exact guilt-laden refusal, the husban
   },
   {
     "id": "FINAL-042",
+    "questionNumber": "MEQ-161",
     "topic": "cl_psychiatry",
     "difficulty": "consultant",
     "title": "ICU fluctuating capacity and family demanding everything",
@@ -6192,6 +6234,7 @@ I would document the interpreter use, fluctuations in consciousness, delirium as
   },
   {
     "id": "FINAL-043",
+    "questionNumber": "MEQ-162",
     "topic": "cl_psychiatry",
     "difficulty": "consultant",
     "title": "Chronic pain opioid dependence and staff splitting",
@@ -6339,6 +6382,7 @@ I would document the validation of pain, the opioid risk formulation, the reason
   },
   {
     "id": "FINAL-044",
+    "questionNumber": "MEQ-163",
     "topic": "cl_psychiatry",
     "difficulty": "consultant",
     "title": "Transplant listing and alcohol relapse",
@@ -6486,6 +6530,7 @@ I would document relapse details, suicide assessment, addiction formulation, fam
   },
   {
     "id": "FINAL-045",
+    "questionNumber": "MEQ-164",
     "topic": "cl_psychiatry",
     "difficulty": "consultant",
     "title": "Functional seizures and unsafe discharge conflict",
@@ -6633,6 +6678,7 @@ I would document the positive FND formulation, the validation statement, the agr
   },
   {
     "id": "FINAL-046",
+    "questionNumber": "MEQ-165",
     "topic": "cl_psychiatry",
     "difficulty": "consultant",
     "title": "Eating disorder on medical ward resisting refeeding",
@@ -6780,6 +6826,7 @@ I would document her phosphate level and medical risk, the exact "clean" stateme
   },
   {
     "id": "FINAL-047",
+    "questionNumber": "MEQ-166",
     "topic": "cl_psychiatry",
     "difficulty": "consultant",
     "title": "Delirium, restraint and family complaint",
@@ -6927,6 +6974,7 @@ I would document the delirium formulation, causative factors, medication review,
   },
   {
     "id": "FINAL-048",
+    "questionNumber": "MEQ-167",
     "topic": "cl_psychiatry",
     "difficulty": "consultant",
     "title": "Capacity after stroke and aphasia",
@@ -7074,6 +7122,7 @@ I would document the communication supports used, interpreter and speech patholo
   },
   {
     "id": "FINAL-049",
+    "questionNumber": "MEQ-168",
     "topic": "cl_psychiatry",
     "difficulty": "consultant",
     "title": "Cardiac device deactivation request",
@@ -7221,6 +7270,7 @@ I would document capacity findings, depression assessment, cardiology explanatio
   },
   {
     "id": "FINAL-050",
+    "questionNumber": "MEQ-169",
     "topic": "cl_psychiatry",
     "difficulty": "consultant",
     "title": "HIV treatment refusal and psychosis",
@@ -7368,6 +7418,7 @@ I would document the psychotic content, capacity findings for antiretrovirals, t
   },
   {
     "id": "FINAL-051",
+    "questionNumber": "MEQ-170",
     "topic": "forensic",
     "difficulty": "consultant",
     "title": "Erotomanic stalking with identified victim",
@@ -7515,6 +7566,7 @@ I would document the erotomanic belief, approach behaviour, perceived rival thre
   },
   {
     "id": "FINAL-052",
+    "questionNumber": "MEQ-171",
     "topic": "forensic",
     "difficulty": "consultant",
     "title": "NGMI and fitness confused by solicitor",
@@ -7662,6 +7714,7 @@ I would document sources, interpreter use, limitations, diagnosis, current fitne
   },
   {
     "id": "FINAL-053",
+    "questionNumber": "MEQ-172",
     "topic": "forensic",
     "difficulty": "consultant",
     "title": "Conditional discharge breach and victim proximity",
@@ -7809,6 +7862,7 @@ I would document the exact breaches, drug-screen history, police report that "He
   },
   {
     "id": "FINAL-054",
+    "questionNumber": "MEQ-173",
     "topic": "forensic",
     "difficulty": "consultant",
     "title": "Family violence, psychosis and firearms licence",
@@ -7956,6 +8010,7 @@ I would document the delusional content, firearm access, children's statements, 
   },
   {
     "id": "FINAL-055",
+    "questionNumber": "MEQ-174",
     "topic": "forensic",
     "difficulty": "consultant",
     "title": "Stalking by health professional patient",
@@ -8103,6 +8158,7 @@ I would document the stalking behaviour, roster misuse, delusional interpretatio
   },
   {
     "id": "FINAL-056",
+    "questionNumber": "MEQ-175",
     "topic": "forensic",
     "difficulty": "consultant",
     "title": "Arson risk in psychosis and housing pressure",
@@ -8250,6 +8306,7 @@ I would document the psychotic fire belief, actual smoke exposure to children, h
   },
   {
     "id": "FINAL-057",
+    "questionNumber": "MEQ-176",
     "topic": "forensic",
     "difficulty": "consultant",
     "title": "Sexual disinhibition in dementia and resident safety",
@@ -8397,6 +8454,7 @@ I would document incidents, capacity and consent issues, resident-safety measure
   },
   {
     "id": "FINAL-058",
+    "questionNumber": "MEQ-177",
     "topic": "forensic",
     "difficulty": "consultant",
     "title": "Threat to politician from manic patient",
@@ -8544,6 +8602,7 @@ I would document the threats, manifesto, office attendance, manic formulation, p
   },
   {
     "id": "FINAL-059",
+    "questionNumber": "MEQ-178",
     "topic": "forensic",
     "difficulty": "consultant",
     "title": "Prisoner self-harm and custodial minimisation",
@@ -8691,6 +8750,7 @@ I would document the repeated ligatures, brother's custody death, psychotic/trau
   },
   {
     "id": "FINAL-060",
+    "questionNumber": "MEQ-179",
     "topic": "forensic",
     "difficulty": "consultant",
     "title": "Fitness to drive in psychosis with professional driver",
@@ -8838,6 +8898,7 @@ I would document the near-crash, delusional driving explanation, passenger/child
   },
   {
     "id": "FINAL-061",
+    "questionNumber": "MEQ-180",
     "topic": "rural",
     "difficulty": "consultant",
     "title": "Remote psychosis RFDS no meds",
@@ -8985,6 +9046,7 @@ I would document the highway behaviour, the "trucks are demons" belief, possible
   },
   {
     "id": "FINAL-062",
+    "questionNumber": "MEQ-181",
     "topic": "rural",
     "difficulty": "consultant",
     "title": "Rural ED overdose no bed telehealth",
@@ -9132,6 +9194,7 @@ I would document the overdose amount, medical treatment, her minimising statemen
   },
   {
     "id": "FINAL-063",
+    "questionNumber": "MEQ-182",
     "topic": "rural",
     "difficulty": "consultant",
     "title": "Regional involuntary transfer 300km",
@@ -9279,6 +9342,7 @@ I would document the dangerous driving, the quote about God and road rules, why 
   },
   {
     "id": "FINAL-064",
+    "questionNumber": "MEQ-183",
     "topic": "rural",
     "difficulty": "consultant",
     "title": "Remote alcohol violence and community pressure",
@@ -9426,6 +9490,7 @@ I would document the shovel threat, intoxication, Noah's minimising statement, p
   },
   {
     "id": "FINAL-065",
+    "questionNumber": "MEQ-184",
     "topic": "rural",
     "difficulty": "consultant",
     "title": "Rural complex PTSD no safe telehealth",
@@ -9573,6 +9638,7 @@ I would document why generic telehealth was unsafe, the benzodiazepine governanc
   },
   {
     "id": "FINAL-066",
+    "questionNumber": "MEQ-185",
     "topic": "rural",
     "difficulty": "consultant",
     "title": "Remote perinatal psychosis and weathered-in transfer",
@@ -9720,6 +9786,7 @@ I would document the postpartum timing, the "sea wants him back" belief, baby's 
   },
   {
     "id": "FINAL-067",
+    "questionNumber": "MEQ-186",
     "topic": "rural",
     "difficulty": "consultant",
     "title": "Farmer firearms suicide risk and stigma",
@@ -9867,6 +9934,7 @@ I would document the open gun safe, depression and alcohol risk, the "rifle" ide
   },
   {
     "id": "FINAL-068",
+    "questionNumber": "MEQ-187",
     "topic": "rural",
     "difficulty": "consultant",
     "title": "Rural Aboriginal elder delirium not dementia",
@@ -10014,6 +10082,7 @@ I would document the acute baseline change, infection, cultural dislocation phra
   },
   {
     "id": "FINAL-069",
+    "questionNumber": "MEQ-188",
     "topic": "rural",
     "difficulty": "consultant",
     "title": "Rural child abuse disclosure with no paediatric bed",
@@ -10161,6 +10230,7 @@ I would document Ella's exact disclosure, who heard it, what questions were and 
   },
   {
     "id": "FINAL-070",
+    "questionNumber": "MEQ-189",
     "topic": "rural",
     "difficulty": "consultant",
     "title": "Remote CTO breach and cultural return-to-country",
@@ -10308,6 +10378,7 @@ I would document missed depot, sorry business, mental state, grandmother's colla
   },
   {
     "id": "FINAL-071",
+    "questionNumber": "MEQ-190",
     "topic": "governance",
     "difficulty": "consultant",
     "title": "Impaired colleague intoxicated on shift",
@@ -10455,6 +10526,7 @@ I would document the allegation, immediate patient review, restriction of Dr K's
   },
   {
     "id": "FINAL-072",
+    "questionNumber": "MEQ-191",
     "topic": "governance",
     "difficulty": "consultant",
     "title": "Medication error clozapine open disclosure",
@@ -10602,6 +10674,7 @@ I would document the event, clinical harm, open disclosure conversation, apology
   },
   {
     "id": "FINAL-073",
+    "questionNumber": "MEQ-192",
     "topic": "governance",
     "difficulty": "consultant",
     "title": "Executive pressure unsafe discharge",
@@ -10749,6 +10822,7 @@ I would document the exact threat, the active family violence order, denial-of-i
   },
   {
     "id": "FINAL-074",
+    "questionNumber": "MEQ-193",
     "topic": "governance",
     "difficulty": "consultant",
     "title": "Registrar beyond competence and false consultant aware",
@@ -10896,6 +10970,7 @@ I would document patient review, duty restrictions, record correction, open disc
   },
   {
     "id": "FINAL-075",
+    "questionNumber": "MEQ-194",
     "topic": "governance",
     "difficulty": "consultant",
     "title": "Social media privacy breach by registrar",
@@ -11043,6 +11118,7 @@ I would document the post content, identifiability, screenshot preservation, pat
   },
   {
     "id": "FINAL-076",
+    "questionNumber": "MEQ-195",
     "topic": "governance",
     "difficulty": "consultant",
     "title": "Boundary violation in psychotherapy",
@@ -11190,6 +11266,7 @@ I would document the boundary concerns, undocumented sessions, immediate cessati
   },
   {
     "id": "FINAL-077",
+    "questionNumber": "MEQ-196",
     "topic": "governance",
     "difficulty": "consultant",
     "title": "Coronial review after discharge suicide",
@@ -11337,6 +11414,7 @@ I would document the incident response, family contact, record preservation, cor
   },
   {
     "id": "FINAL-078",
+    "questionNumber": "MEQ-197",
     "topic": "governance",
     "difficulty": "consultant",
     "title": "Complaint after culturally unsafe police transfer",
@@ -11484,6 +11562,7 @@ I would document family contact, open disclosure, cultural review process, Abori
   },
   {
     "id": "FINAL-079",
+    "questionNumber": "MEQ-198",
     "topic": "governance",
     "difficulty": "consultant",
     "title": "Policy conflict: seclusion target versus ward violence",
@@ -11631,6 +11710,7 @@ I would document the assault, victim impact, seclusion rationale, policy complia
   },
   {
     "id": "FINAL-080",
+    "questionNumber": "MEQ-199",
     "topic": "governance",
     "difficulty": "consultant",
     "title": "Mandatory reporting for sexual boundary concerns",
@@ -11778,6 +11858,7 @@ I would document the allegation, messages/evidence preservation, patient safety 
   },
   {
     "id": "FINAL-081",
+    "questionNumber": "MEQ-200",
     "topic": "psychotherapy",
     "difficulty": "consultant",
     "title": "BPD inpatient splitting bed pressure",
@@ -11925,6 +12006,7 @@ I would document the acute-on-chronic formulation, the leave refusal trigger, th
   },
   {
     "id": "FINAL-082",
+    "questionNumber": "MEQ-201",
     "topic": "psychotherapy",
     "difficulty": "consultant",
     "title": "Community BPD dependency and unsafe emails",
@@ -12072,6 +12154,7 @@ I would document the dependency formulation, personal-phone boundary issue, part
   },
   {
     "id": "FINAL-083",
+    "questionNumber": "MEQ-202",
     "topic": "psychotherapy",
     "difficulty": "consultant",
     "title": "Chronic NSSI ED therapeutic nihilism",
@@ -12219,6 +12302,7 @@ I would document the function of cutting, what "something worse" meant, partner 
   },
   {
     "id": "FINAL-084",
+    "questionNumber": "MEQ-203",
     "topic": "psychotherapy",
     "difficulty": "consultant",
     "title": "Eating disorder and personality dynamics on medical ward",
@@ -12366,6 +12450,7 @@ I would document the medical risk, capacity assessment, legal authority for NG f
   },
   {
     "id": "FINAL-085",
+    "questionNumber": "MEQ-204",
     "topic": "psychotherapy",
     "difficulty": "consultant",
     "title": "Complex PTSD admission request as safety behaviour",
@@ -12513,6 +12598,7 @@ I would document the contamination formulation, complaint pressure, self-harm ri
   },
   {
     "id": "FINAL-086",
+    "questionNumber": "MEQ-205",
     "topic": "psychotherapy",
     "difficulty": "consultant",
     "title": "Countertransference after patient complaint",
@@ -12660,6 +12746,7 @@ I would document the complaint, the rupture, exact threatening and suicidal phra
   },
   {
     "id": "FINAL-087",
+    "questionNumber": "MEQ-206",
     "topic": "psychotherapy",
     "difficulty": "consultant",
     "title": "Dependent personality and medically unexplained symptoms",
@@ -12807,6 +12894,7 @@ I would document the positive formulation of somatic anxiety, the medical safety
   },
   {
     "id": "FINAL-088",
+    "questionNumber": "MEQ-207",
     "topic": "psychotherapy",
     "difficulty": "consultant",
     "title": "Hoarding risk and autonomy",
@@ -12954,6 +13042,7 @@ I would document the hoarding formulation, capacity findings, suicide risk, neig
   },
   {
     "id": "FINAL-089",
+    "questionNumber": "MEQ-208",
     "topic": "psychotherapy",
     "difficulty": "consultant",
     "title": "Therapy boundary request from suicidal patient",
@@ -13101,6 +13190,7 @@ I would document the boundary request, risk assessment, dependency formulation, 
   },
   {
     "id": "FINAL-090",
+    "questionNumber": "MEQ-209",
     "topic": "psychotherapy",
     "difficulty": "consultant",
     "title": "Personality disorder and violence threat in staff split",
@@ -13248,6 +13338,7 @@ I would document the assault, staff fear, trauma/cultural formulation, MHA reaso
   },
   {
     "id": "FINAL-091",
+    "questionNumber": "MEQ-210",
     "topic": "substance_use",
     "difficulty": "consultant",
     "title": "Alcohol cirrhosis capacity refusal",
@@ -13395,6 +13486,7 @@ I would document capacity findings, encephalopathy features, state-dependent col
   },
   {
     "id": "FINAL-092",
+    "questionNumber": "MEQ-211",
     "topic": "substance_use",
     "difficulty": "consultant",
     "title": "Meth psychosis versus primary psychosis violence",
@@ -13542,6 +13634,7 @@ I would document the six-month decline, smoke-alarm delusion, readiness quote, p
   },
   {
     "id": "FINAL-093",
+    "questionNumber": "MEQ-212",
     "topic": "substance_use",
     "difficulty": "consultant",
     "title": "Opioid dependence pregnancy with partner violence",
@@ -13689,6 +13782,7 @@ I would document the rationale for maintaining methadone, NAS education, benzodi
   },
   {
     "id": "FINAL-094",
+    "questionNumber": "MEQ-213",
     "topic": "substance_use",
     "difficulty": "consultant",
     "title": "Benzodiazepine dependence in elderly faller",
@@ -13836,6 +13930,7 @@ I would document benzodiazepine dependence, grief formulation, falls/child-safet
   },
   {
     "id": "FINAL-095",
+    "questionNumber": "MEQ-214",
     "topic": "substance_use",
     "difficulty": "consultant",
     "title": "GHB dependence and ICU admissions",
@@ -13983,6 +14078,7 @@ I would document overdose history, partner collateral, capacity/withdrawal asses
   },
   {
     "id": "FINAL-096",
+    "questionNumber": "MEQ-215",
     "topic": "substance_use",
     "difficulty": "consultant",
     "title": "Cannabis medicinal request in psychosis",
@@ -14130,6 +14226,7 @@ I would document cannabis risk, family-threat collateral, GP liaison and consent
   },
   {
     "id": "FINAL-097",
+    "questionNumber": "MEQ-216",
     "topic": "substance_use",
     "difficulty": "consultant",
     "title": "Stimulant prescribing in ADHD with substance diversion",
@@ -14277,6 +14374,7 @@ I would document misuse indicators, workplace risk, prescribing rationale, GP co
   },
   {
     "id": "FINAL-098",
+    "questionNumber": "MEQ-217",
     "topic": "substance_use",
     "difficulty": "consultant",
     "title": "Alcohol withdrawal in pregnant woman",
@@ -14424,6 +14522,7 @@ I would document withdrawal severity, benzodiazepine risk-benefit reasoning, cap
   },
   {
     "id": "FINAL-099",
+    "questionNumber": "MEQ-218",
     "topic": "substance_use",
     "difficulty": "consultant",
     "title": "Clozapine patient smoking cessation toxicity",
@@ -14571,6 +14670,7 @@ I would document clozapine toxicity formulation, smoking cessation mechanism, le
   },
   {
     "id": "FINAL-100",
+    "questionNumber": "MEQ-219",
     "topic": "substance_use",
     "difficulty": "consultant",
     "title": "Dual diagnosis homelessness and depot refusal",
@@ -14718,6 +14818,7 @@ I would document the homelessness-survival formulation, track risk, opioid use, 
   },
   {
     "id": "FINAL-101",
+    "questionNumber": "MEQ-220",
     "topic": "mdt_systems",
     "difficulty": "consultant",
     "title": "Treatment-resistant schizophrenia NDIS vocational rehab",
@@ -14865,6 +14966,7 @@ I would document the TRS formulation, negative symptoms, clozapine plan, NDIS fu
   },
   {
     "id": "FINAL-102",
+    "questionNumber": "MEQ-221",
     "topic": "mdt_systems",
     "difficulty": "consultant",
     "title": "Bipolar repeated admissions carer burnout adherence",
@@ -15012,6 +15114,7 @@ I would document her identity-based medication concern, relapse history, husband
   },
   {
     "id": "FINAL-103",
+    "questionNumber": "MEQ-222",
     "topic": "mdt_systems",
     "difficulty": "consultant",
     "title": "Autistic adult in community mislabelled non-compliant",
@@ -15159,6 +15262,7 @@ I would document the sensory formulation, reasonable adjustments offered, pronou
   },
   {
     "id": "FINAL-104",
+    "questionNumber": "MEQ-223",
     "topic": "mdt_systems",
     "difficulty": "consultant",
     "title": "Clozapine refusal after myocarditis scare",
@@ -15306,6 +15410,7 @@ I would document the adverse-effect scare, Daniel's fear, cardiology advice, cap
   },
   {
     "id": "FINAL-105",
+    "questionNumber": "MEQ-224",
     "topic": "mdt_systems",
     "difficulty": "consultant",
     "title": "Long-stay inpatient rehabilitation and institutionalisation",
@@ -15453,6 +15558,7 @@ I would document stability, functional assessment, institutionalisation, cannabi
   },
   {
     "id": "FINAL-106",
+    "questionNumber": "MEQ-225",
     "topic": "mdt_systems",
     "difficulty": "consultant",
     "title": "Personality disorder community exclusion after complaints",
@@ -15600,6 +15706,7 @@ I would document the complaint pattern, overdose-after-response collateral, inst
   },
   {
     "id": "FINAL-107",
+    "questionNumber": "MEQ-226",
     "topic": "mdt_systems",
     "difficulty": "consultant",
     "title": "Forensic community reintegration and victim notification",
@@ -15747,6 +15854,7 @@ I would document the recovery rationale, risk formulation, victim notification c
   },
   {
     "id": "FINAL-108",
+    "questionNumber": "MEQ-227",
     "topic": "mdt_systems",
     "difficulty": "consultant",
     "title": "Eating disorder transition CAMHS to adult service",
@@ -15894,6 +16002,7 @@ I would document the transition risks, medical instability, autism accommodation
   },
   {
     "id": "FINAL-109",
+    "questionNumber": "MEQ-228",
     "topic": "mdt_systems",
     "difficulty": "consultant",
     "title": "Older adult depression and social prescribing limits",
@@ -16041,6 +16150,7 @@ I would document suicide collateral, capacity/self-neglect assessment, alcohol a
   },
   {
     "id": "FINAL-110",
+    "questionNumber": "MEQ-229",
     "topic": "mdt_systems",
     "difficulty": "consultant",
     "title": "Neurocognitive disorder and NDIS dispute in young adult",

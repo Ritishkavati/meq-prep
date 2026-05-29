@@ -3,6 +3,7 @@ import type { QuizStem } from "../quizData";
 export const PSY_STEMS: QuizStem[] = [
   {
     id: "PSY-001",
+    questionNumber: "MEQ-076",
     topic: "psychotherapy",
     difficulty: "consultant",
     title: "Splitting and chronic suicidality on an inpatient unit",
@@ -101,6 +102,7 @@ Document: acute and chronic risk formulation, MDT consensus, rationale for obser
   },
   {
     id: "PSY-002",
+    questionNumber: "MEQ-077",
     topic: "psychotherapy",
     difficulty: "consultant",
     title: "Dependency and failed engagement in community BPD care",
@@ -199,6 +201,7 @@ Do not discharge abruptly for non-attendance — this repeats abandonment and in
   },
   {
     id: "PSY-003",
+    questionNumber: "MEQ-078",
     topic: "psychotherapy",
     difficulty: "consultant",
     title: "Chronic NSSI, ED access block and therapeutic nihilism",

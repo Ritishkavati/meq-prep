@@ -3,6 +3,7 @@ import type { QuizStem } from "../quizData";
 export const CS_STEMS: QuizStem[] = [
   {
     id: "CS-001",
+    questionNumber: "MEQ-079",
     topic: "cultural_safety",
     difficulty: "consultant",
     title: "Aboriginal woman refusing ED mental health assessment",
@@ -95,6 +96,7 @@ Disposition should not be based only on the fact that she is calmer now or that 
   },
   {
     id: "CS-002",
+    questionNumber: "MEQ-080",
     topic: "cultural_safety",
     difficulty: "consultant",
     title: "Māori man admitted involuntarily with cultural formulation needs",
@@ -187,6 +189,7 @@ My plan would be to review Wiremu with Māori health support, whānau and a cult
   },
   {
     id: "CS-003",
+    questionNumber: "MEQ-081",
     topic: "cultural_safety",
     difficulty: "consultant",
     title: "Afghan refugee refusing medical treatment in CL psychiatry",

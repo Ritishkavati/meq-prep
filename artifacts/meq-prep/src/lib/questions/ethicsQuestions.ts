@@ -3,6 +3,7 @@ import { QuizStem } from "../quizData";
 export const ETH_STEMS: QuizStem[] = [
   {
     id: "ETH-001",
+    questionNumber: "MEQ-110",
     topic: "ethics",
     difficulty: "consultant",
     title: "Capacitous refusal of life-saving treatment and family pressure",
@@ -93,6 +94,7 @@ His identity as a retired pastor and his statement that he has "made peace with 
   },
   {
     id: "ETH-002",
+    questionNumber: "MEQ-111",
     topic: "ethics",
     difficulty: "consultant",
     title: "Confidentiality versus duty to warn an identified victim",
@@ -183,6 +185,7 @@ Clinically, I would assess mental state, insight, medication adherence, alcohol 
   },
   {
     id: "ETH-003",
+    questionNumber: "MEQ-112",
     topic: "ethics",
     difficulty: "consultant",
     title: "Impaired colleague, mandatory reporting and patient safety",
@@ -273,6 +276,7 @@ The nurses who raised concerns must be supported and protected. A speaking-up cu
   },
   {
     id: "ETH-004",
+    questionNumber: "MEQ-113",
     topic: "ethics",
     difficulty: "consultant",
     title: "Registrar boundary violation and undocumented sessions",
@@ -363,6 +367,7 @@ The service manager's suggestion of "transferring the patient quietly" because t
   },
   {
     id: "ETH-005",
+    questionNumber: "MEQ-114",
     topic: "ethics",
     difficulty: "consultant",
     title: "Social media privacy breach by registrar",

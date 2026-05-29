@@ -3,6 +3,7 @@ import { QuizStem } from "../quizData";
 export const DIS_STEMS: QuizStem[] = [
   {
     id: "DIS-001",
+    questionNumber: "MEQ-085",
     topic: "discharge_review",
     difficulty: "consultant",
     title: "Forensic Discharge Summary — Do Not Co-Sign",
@@ -80,6 +81,7 @@ Teaching: I will supervise Dr Tan in rewriting this — explaining why forensic 
 
   {
     id: "DIS-002",
+    questionNumber: "MEQ-086",
     topic: "discharge_review",
     difficulty: "consultant",
     title: "Perinatal Discharge Summary — Missing Infant Safety and Relapse Planning",
@@ -167,6 +169,7 @@ Follow-up: Four weeks is clinically unsafe. Community perinatal team contact wit
 
   {
     id: "DIS-003",
+    questionNumber: "MEQ-087",
     topic: "discharge_review",
     difficulty: "consultant",
     title: "Registrar Discharging High-Risk Patient Without Safety Plan",

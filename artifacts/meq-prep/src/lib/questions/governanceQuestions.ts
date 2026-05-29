@@ -3,6 +3,7 @@ import type { QuizStem } from "../quizData";
 export const GOV_STEMS: QuizStem[] = [
   {
     id: "GOV-001",
+    questionNumber: "MEQ-068",
     topic: "governance",
     difficulty: "consultant",
     title: "Impaired colleague and mandatory reporting",
@@ -97,6 +98,7 @@ My documentation would be factual: who reported what, what patient reviews were 
   },
   {
     id: "GOV-002",
+    questionNumber: "MEQ-069",
     topic: "governance",
     difficulty: "consultant",
     title: "Serious medication error and open disclosure",
@@ -189,6 +191,7 @@ I would document the clinical event, open disclosure conversation, family questi
   },
   {
     id: "GOV-003",
+    questionNumber: "MEQ-070",
     topic: "governance",
     difficulty: "consultant",
     title: "Executive pressure to discharge unsafe patient",
@@ -283,6 +286,7 @@ My documentation would record the exact threat, the active family violence order
   },
   {
     id: "GOV-004",
+    questionNumber: "MEQ-071",
     topic: "governance",
     difficulty: "consultant",
     title: "Registrar working beyond competence",
@@ -377,6 +381,7 @@ At the same time, the director of training is right that the registrar requires 
   },
   {
     id: "GOV-005",
+    questionNumber: "MEQ-072",
     topic: "governance",
     difficulty: "consultant",
     title: "Coronial inquiry and defensible documentation",

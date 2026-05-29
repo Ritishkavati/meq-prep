@@ -3,6 +3,7 @@ import { QuizStem } from "../quizData";
 export const CL_STEMS: QuizStem[] = [
   {
     id: "CL-001",
+    questionNumber: "MEQ-115",
     topic: "cl_psychiatry",
     difficulty: "consultant",
     title: "Afghan refugee refusing cardiac surgery",
@@ -93,6 +94,7 @@ My consultant actions would include interpreter-assisted assessment, trauma-info
   },
   {
     id: "CL-002",
+    questionNumber: "MEQ-116",
     topic: "cl_psychiatry",
     difficulty: "consultant",
     title: "Delirium missed as dementia on medical ward",
@@ -183,6 +185,7 @@ The daughter's question about why psychiatry is involved when "this is just old 
   },
   {
     id: "CL-003",
+    questionNumber: "MEQ-117",
     topic: "cl_psychiatry",
     difficulty: "consultant",
     title: "Chronic pain, opioid dependence and staff conflict",
@@ -273,6 +276,7 @@ The partner's warning that she will "buy tablets on the street" if discharged wi
   },
   {
     id: "CL-004",
+    questionNumber: "MEQ-118",
     topic: "cl_psychiatry",
     difficulty: "consultant",
     title: "ICU fluctuating capacity and family demanding treatment",
@@ -363,6 +367,7 @@ If disagreement persists and prognosis is poor, ICU ethics consultation may be n
   },
   {
     id: "CL-005",
+    questionNumber: "MEQ-119",
     topic: "cl_psychiatry",
     difficulty: "consultant",
     title: "Cancer patient refusing chemotherapy and depression-related incapacity",

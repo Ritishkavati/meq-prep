@@ -3,6 +3,7 @@ import { QuizStem } from "../quizData";
 export const DOC_STEMS: QuizStem[] = [
   {
     id: "DOC-001",
+    questionNumber: "MEQ-082",
     topic: "documentation",
     difficulty: "consultant",
     title: "Inadequate Discharge Summary — First Episode Psychosis",
@@ -86,6 +87,7 @@ Adherence: Today's urgent review must address non-adherence — depot antipsycho
 
   {
     id: "DOC-002",
+    questionNumber: "MEQ-083",
     topic: "documentation",
     difficulty: "consultant",
     title: "Capacity Assessment Documentation — Life-Sustaining Treatment Refusal",
@@ -171,6 +173,7 @@ Teaching: I will meet with Dr Wu to provide specific feedback — capacity docum
 
   {
     id: "DOC-003",
+    questionNumber: "MEQ-084",
     topic: "documentation",
     difficulty: "consultant",
     title: "Mental Health Act Documentation — Inadequate Legal Justification",

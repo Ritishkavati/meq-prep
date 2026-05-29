@@ -3,6 +3,7 @@ import type { QuizStem } from "../quizData";
 export const SUP_STEMS: QuizStem[] = [
   {
     id: "SUP-001",
+    questionNumber: "MEQ-043",
     topic: "supervision",
     difficulty: "consultant",
     title: "Stage 1 Registrar Wants to Discharge a High-Risk ED Patient",
@@ -91,6 +92,7 @@ I would instruct the registrar to pause discharge, obtain collateral from the mo
   },
   {
     id: "SUP-002",
+    questionNumber: "MEQ-044",
     topic: "supervision",
     difficulty: "consultant",
     title: "Registrar Misses Capacity Issue in CL Psychiatry",
@@ -179,6 +181,7 @@ I would supervise the registrar to redo the assessment: define the exact decisio
   },
   {
     id: "SUP-003",
+    questionNumber: "MEQ-045",
     topic: "supervision",
     difficulty: "consultant",
     title: "Registrar Writes Poor Mental Health Act Documentation",
@@ -269,6 +272,7 @@ I would supervise the registrar to rewrite the form before relying on it. Sofia'
   },
   {
     id: "SUP-004",
+    questionNumber: "MEQ-046",
     topic: "supervision",
     difficulty: "consultant",
     title: "Registrar Distressed After Patient Suicide",
@@ -357,6 +361,7 @@ The clinical review must identify documentation and process issues: no partner c
   },
   {
     id: "SUP-005",
+    questionNumber: "MEQ-047",
     topic: "supervision",
     difficulty: "consultant",
     title: "Registrar Uses Culturally Unsafe Language in Family Meeting",
@@ -446,6 +451,7 @@ I would repair the rupture with Wiremu and whānau: acknowledge harm, apologise,
   },
   {
     id: "SUP-006",
+    questionNumber: "MEQ-048",
     topic: "supervision",
     difficulty: "consultant",
     title: "Registrar Overconfident About Seclusion Decision",
@@ -534,6 +540,7 @@ I would supervise the registrar to move beyond "psychotic and dangerous." The is
   },
   {
     id: "SUP-007",
+    questionNumber: "MEQ-049",
     topic: "supervision",
     difficulty: "consultant",
     title: "Registrar Boundary Problem in Psychotherapy Case",
@@ -621,6 +628,7 @@ I would advise him not to provide personal email, to stop ad hoc late-night cont
   },
   {
     id: "SUP-008",
+    questionNumber: "MEQ-050",
     topic: "supervision",
     difficulty: "consultant",
     title: "Bullying Allegation Against Senior Registrar",
@@ -707,6 +715,7 @@ I would support Priyanka, maintain confidentiality as far as possible, assess im
   },
   {
     id: "SUP-009",
+    questionNumber: "MEQ-051",
     topic: "supervision",
     difficulty: "consultant",
     title: "Remote Supervision in Rural ED",
@@ -796,6 +805,7 @@ Remote supervision must be active. I would direct the registrar to escalate medi
   },
   {
     id: "SUP-010",
+    questionNumber: "MEQ-052",
     topic: "supervision",
     difficulty: "consultant",
     title: "Registrar Provides Poor Feedback to Intern",

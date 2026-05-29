@@ -269,6 +269,7 @@ function QuizScreen({
 
       {/* stem */}
       <div className="bg-white rounded-2xl border border-card-border shadow-sm p-6 md:p-8">
+        <p className="text-xs font-mono text-muted-foreground mb-1">{stem.questionNumber}</p>
         <h3 className="text-base font-serif font-bold text-primary mb-1">{stem.title}</h3>
         <p className="text-xs text-muted-foreground mb-4">
           Setting: {stem.setting} &nbsp;·&nbsp; Role: {stem.candidateRole}
@@ -458,7 +459,9 @@ function SelfMarkScreen({
       <div className="flex flex-col lg:flex-row gap-5 items-start">
         {/* ── Left panel: candidate answer ──────────────────────────────────── */}
         <div className="lg:w-2/5 bg-white rounded-2xl border border-card-border shadow-sm p-5 space-y-3 lg:sticky lg:top-4">
-          <h3 className="font-serif font-bold text-primary text-base">Your Answer</h3>
+          <p className="text-xs font-mono text-muted-foreground">{stem.questionNumber}</p>
+          <h3 className="font-serif font-bold text-primary text-base">{stem.title}</h3>
+          <p className="text-xs text-muted-foreground -mt-1">Your written answer</p>
           <div className="bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-primary leading-relaxed whitespace-pre-wrap min-h-[200px] max-h-[60vh] overflow-y-auto">
             {candidateAnswer.trim() || <span className="text-muted-foreground italic">No response submitted.</span>}
           </div>

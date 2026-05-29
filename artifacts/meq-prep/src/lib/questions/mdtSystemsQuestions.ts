@@ -7,6 +7,7 @@ import { QuizStem } from "../quizData";
 export const MDT_STEMS: QuizStem[] = [
   {
     id: "SYS-001",
+    questionNumber: "MEQ-088",
     topic: "mdt_systems",
     difficulty: "consultant",
     title: "Treatment-Resistant Schizophrenia — NDIS, Carer Burnout and Recovery Goals",
@@ -102,6 +103,7 @@ Teaching: Use the registrar's question as a supervision opportunity — rehabili
 
   {
     id: "SYS-002",
+    questionNumber: "MEQ-089",
     topic: "mdt_systems",
     difficulty: "consultant",
     title: "ED Physician Demands Discharge of High-Risk Patient — 2am Conflict",
@@ -197,6 +199,7 @@ Documentation: I will document my decision and the basis for it, including the r
 
   {
     id: "SYS-003",
+    questionNumber: "MEQ-090",
     topic: "mdt_systems",
     difficulty: "consultant",
     title: "Inpatient Bed Pressure — Three Unsafe Discharges Requested by NUM",

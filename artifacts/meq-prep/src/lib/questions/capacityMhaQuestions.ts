@@ -3,6 +3,7 @@ import type { QuizStem } from "../quizData";
 export const CAP_STEMS: QuizStem[] = [
   {
     id: "CAP-001",
+    questionNumber: "MEQ-038",
     topic: "capacity_mha",
     difficulty: "consultant",
     title: "Elderly patient refusing dialysis",
@@ -95,6 +96,7 @@ My role as consultant is to make the reasoning explicit and defensible under pre
   },
   {
     id: "CAP-002",
+    questionNumber: "MEQ-039",
     topic: "capacity_mha",
     difficulty: "consultant",
     title: "Adolescent refusing admission after overdose",
@@ -187,6 +189,7 @@ I would not discharge Leila simply because she can repeat medical risks or promi
   },
   {
     id: "CAP-003",
+    questionNumber: "MEQ-040",
     topic: "capacity_mha",
     difficulty: "consultant",
     title: "CTO renewal and least restrictive care",
@@ -279,6 +282,7 @@ My tribunal position would depend on this updated assessment. If the statutory c
   },
   {
     id: "CAP-004",
+    questionNumber: "MEQ-041",
     topic: "capacity_mha",
     difficulty: "consultant",
     title: "Psychotic patient refusing antipsychotic treatment",
@@ -373,6 +377,7 @@ The phrase "The unit is full" is relevant to operational stress but must not dri
   },
   {
     id: "CAP-005",
+    questionNumber: "MEQ-042",
     topic: "capacity_mha",
     difficulty: "consultant",
     title: "Dementia patient refusing residential care",

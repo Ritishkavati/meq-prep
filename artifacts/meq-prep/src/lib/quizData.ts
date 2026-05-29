@@ -38,6 +38,7 @@ export interface ExpectedSignal {
 
 export interface QuizStem {
   id: string;
+  questionNumber: string;
   topic: TopicKey;
   difficulty: DifficultyKey;
   title: string;
@@ -131,6 +132,7 @@ export const ORIGINAL_STEMS: QuizStem[] = [
   // ─── 1. CULTURAL SAFETY / CL ─────────────────────────────────────────────
   {
     id: "q1",
+    questionNumber: "MEQ-001",
     topic: "cultural_safety",
     difficulty: "consultant",
     title: "Sudanese Refugee — Medical Ward Refusal",
@@ -304,6 +306,7 @@ Systems failures requiring urgent action: Social work has not been involved — 
   // ─── 2. ED / RISK ─────────────────────────────────────────────────────────
   {
     id: "q2",
+    questionNumber: "MEQ-002",
     topic: "ed",
     difficulty: "difficult",
     title: "Young Man — High-Lethality Overdose in ED",
@@ -489,6 +492,7 @@ Collateral: The flatmate is the primary source of history given Daniel's refusal
   // ─── 3. PERINATAL ────────────────────────────────────────────────────────
   {
     id: "q3",
+    questionNumber: "MEQ-003",
     topic: "perinatal",
     difficulty: "consultant",
     title: "Postpartum — Psychosis or Severe Depression with Psychotic Features",
@@ -650,6 +654,7 @@ Sleep: Pharmacological sleep induction is an immediate treatment priority.`,
   // ─── 4. GOVERNANCE ───────────────────────────────────────────────────────
   {
     id: "q4",
+    questionNumber: "MEQ-004",
     topic: "governance",
     difficulty: "standard",
     title: "Impaired Registrar — Supervisor Concern",
@@ -788,6 +793,7 @@ Documentation: Every observed incident must be documented contemporaneously with
   // ─── 5. OLD AGE ──────────────────────────────────────────────────────────
   {
     id: "q5",
+    questionNumber: "MEQ-005",
     topic: "old_age",
     difficulty: "difficult",
     title: "Dementia — Elder Abuse and Capacity",
@@ -939,6 +945,7 @@ Two mandatory reporting obligations: Adult safeguarding for suspected financial 
   // ─── 6. FORENSIC / RISK ──────────────────────────────────────────────────
   {
     id: "q6",
+    questionNumber: "MEQ-006",
     topic: "forensic",
     difficulty: "consultant",
     title: "Forensic — Violence Risk, Stalking and Mental Illness",
@@ -1089,6 +1096,7 @@ Structured risk assessment: A formal risk assessment tool (e.g. HCR-20) should b
   // ─── 7. CHILD & ADOLESCENT ───────────────────────────────────────────────
   {
     id: "q7",
+    questionNumber: "MEQ-007",
     topic: "child_adolescent",
     difficulty: "consultant",
     title: "Aboriginal Adolescent — Complex Trauma and Polypharmacy",
@@ -1232,6 +1240,7 @@ Consent: As Tyler is in state care, the statutory guardian must provide consent 
   // ─── 8. CAPACITY / MHA — CTO ─────────────────────────────────────────────
   {
     id: "q8",
+    questionNumber: "MEQ-008",
     topic: "capacity_mha",
     difficulty: "difficult",
     title: "CTO Review — First Episode Psychosis, Recovery and Rights",
@@ -1361,6 +1370,7 @@ Advance care plan: Before the CTO lapses, a documented advance care plan — agr
   // ─── 9. CL PSYCHIATRY ────────────────────────────────────────────────────
   {
     id: "q9",
+    questionNumber: "MEQ-009",
     topic: "cl_psychiatry",
     difficulty: "difficult",
     title: "Medical Ward — Refusal to Accept Treatment and Diagnostic Uncertainty",
@@ -1492,6 +1502,7 @@ Husband: He is both a key collateral informant and a distressed carer requiring 
   // ─── 10. SUBSTANCE USE ───────────────────────────────────────────────────
   {
     id: "q10",
+    questionNumber: "MEQ-010",
     topic: "substance_use",
     difficulty: "difficult",
     title: "Opioid Substitution Therapy — Pregnancy and Child Protection",
@@ -1633,6 +1644,7 @@ MDT: A perinatal case conference with obstetrics, perinatal drug and alcohol, so
   // ─── 11. RISK ASSESSMENT ────────────────────────────────────────────────────
   {
     id: "q11",
+    questionNumber: "MEQ-011",
     topic: "risk",
     difficulty: "consultant",
     title: "Denied Suicidal Ideation — Contextual High-Risk Presentation",
@@ -1736,6 +1748,7 @@ Assessment: Full mental state examination, collateral from wife and/or neighbour
   // ─── 12. QUALITY & SAFETY REVIEW ─────────────────────────────────────────
   {
     id: "q12",
+    questionNumber: "MEQ-012",
     topic: "quality_assurance",
     difficulty: "consultant",
     title: "Post-Discharge Suicide — Adverse Event Response",
@@ -1836,6 +1849,7 @@ Root cause analysis: A formal RCA is required to address systemic failures: afte
   // ─── 13. QUALITY & SAFETY ────────────────────────────────────────────────
   {
     id: "q13",
+    questionNumber: "MEQ-013",
     topic: "quality_assurance",
     difficulty: "consultant",
     title: "Seclusion Documentation Failure and Governance Breach",
@@ -1938,6 +1952,7 @@ Formal review: A mandatory critical incident report must be submitted. A formal 
   // ─── 14. SUPERVISION & FEEDBACK ─────────────────────────────────────────
   {
     id: "q14",
+    questionNumber: "MEQ-014",
     topic: "supervision",
     difficulty: "consultant",
     title: "Registrar Requesting Discharge of Unsafe Patient",
@@ -2031,6 +2046,7 @@ Documentation: My decision to not discharge must be documented, with clinical re
   // ─── 15. SUPERVISION ───────────────────────────────────────────────────────
   {
     id: "q15",
+    questionNumber: "MEQ-015",
     topic: "supervision",
     difficulty: "consultant",
     title: "Registrar Using Culturally Unsafe Language in Case Presentation",
@@ -2126,6 +2142,7 @@ Team reflection: At the next team meeting, I will raise the issue of team norms 
   // ─── 16. DOCUMENTATION & COMMUNICATION ─────────────────────────────────
   {
     id: "q16",
+    questionNumber: "MEQ-016",
     topic: "documentation",
     difficulty: "consultant",
     title: "Inadequate Capacity Assessment Documentation — Medication Refusal",
@@ -2220,6 +2237,7 @@ Teaching: I will meet with Dr Wu to review the standard for capacity documentati
   // ─── 17. DOCUMENTATION ───────────────────────────────────────────────────
   {
     id: "q17",
+    questionNumber: "MEQ-017",
     topic: "documentation",
     difficulty: "consultant",
     title: "GP Calls About Inadequate Discharge Summary",
@@ -2312,6 +2330,7 @@ Medication adherence: The wife's concern about medication must be urgently addre
   // ─── 18. DISCHARGE / REPORT REVIEW ───────────────────────────────────────
   {
     id: "q18",
+    questionNumber: "MEQ-018",
     topic: "discharge_review",
     difficulty: "consultant",
     title: "Reviewing a Registrar's Discharge Summary — Forensic Risk Omissions",
@@ -2396,6 +2415,7 @@ Systems: After this review, I will discuss with the registrar group the minimum 
   // ─── 19. DISCHARGE / REPORT REVIEW ────────────────────────────────────────
   {
     id: "q19",
+    questionNumber: "MEQ-019",
     topic: "discharge_review",
     difficulty: "consultant",
     title: "Reviewing a Perinatal Discharge Summary — Missing Child Safety Elements",
@@ -2483,6 +2503,7 @@ Follow-up: I will change the follow-up to 48-72 hours with the community perinat
   // ─── 20. MDT CONFLICT & SYSTEMS PRESSURE ─────────────────────────────────
   {
     id: "q20",
+    questionNumber: "MEQ-020",
     topic: "mdt_systems",
     difficulty: "consultant",
     title: "ED Physician Wants Psychiatric Patient Discharged — Consultant Disagrees",
@@ -2568,6 +2589,7 @@ Documentation: I will document my decision and the basis for it, including the r
   // ─── 21. MDT CONFLICT ─────────────────────────────────────────────────────
   {
     id: "q21",
+    questionNumber: "MEQ-021",
     topic: "mdt_systems",
     difficulty: "consultant",
     title: "Nursing Unit Manager Pressuring Premature Discharge",
@@ -2659,6 +2681,7 @@ Collaboration: I will work with the team to expedite safe discharges for any pat
   // ─── 22. RURAL & RESOURCE-LIMITED ────────────────────────────────────────
   {
     id: "q22",
+    questionNumber: "MEQ-022",
     topic: "rural",
     difficulty: "consultant",
     title: "Videoconference Consultation — Rural Patient, No Inpatient Beds Within 200 km",
@@ -2756,6 +2779,7 @@ ED registrar: I will give her clear, directive guidance and remain available. Sh
   // ─── 23. RURAL ─────────────────────────────────────────────────────────────
   {
     id: "q23",
+    questionNumber: "MEQ-023",
     topic: "rural",
     difficulty: "consultant",
     title: "Rural Acute Psychosis — No Beds, No Medication, Cultural Complexity",
@@ -2854,6 +2878,7 @@ Advocacy: After this episode, I will raise the absence of antipsychotic medicati
   // ─── 24. PSYCHOTHERAPY & BOUNDARIES ──────────────────────────────────────
   {
     id: "q24",
+    questionNumber: "MEQ-024",
     topic: "psychotherapy",
     difficulty: "consultant",
     title: "Registrar's Patient Develops Erotic Transference — Registrar Has Disclosed Personal Information",
@@ -2952,6 +2977,7 @@ Documentation: I will document this supervision session in detail.`,
   // ─── 25. PSYCHOTHERAPY ────────────────────────────────────────────────────
   {
     id: "q25",
+    questionNumber: "MEQ-025",
     topic: "psychotherapy",
     difficulty: "consultant",
     title: "Patient Discloses Ongoing Childhood Abuse — Mid-Therapy",
@@ -3035,6 +3061,7 @@ Session end: Jade must not leave without a safety plan and a confirmed next appo
   // ─── 26. ETHICS & PROFESSIONALISM ────────────────────────────────────────
   {
     id: "q26",
+    questionNumber: "MEQ-026",
     topic: "ethics",
     difficulty: "consultant",
     title: "Capacitous Refusal of Life-Saving Treatment — Ethical Dilemma",
@@ -3130,6 +3157,7 @@ Team: I will communicate capacity findings clearly in writing, including an expl
   // ─── 27. ETHICS ─────────────────────────────────────────────────────────────
   {
     id: "q27",
+    questionNumber: "MEQ-027",
     topic: "ethics",
     difficulty: "consultant",
     title: "Confidentiality vs Public Safety — Threat to Third Party",

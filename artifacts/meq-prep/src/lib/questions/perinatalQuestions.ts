@@ -7,6 +7,7 @@ import { QuizStem } from "../quizData";
 export const PER_STEMS: QuizStem[] = [
   {
     id: "PER-001",
+    questionNumber: "MEQ-091",
     topic: "perinatal",
     difficulty: "consultant",
     title: "Postpartum Psychosis — Discharge Summary Missing Child Safety",
@@ -104,6 +105,7 @@ Teaching: I will supervise the registrar in rewriting this summary before any co
 
   {
     id: "PER-002",
+    questionNumber: "MEQ-092",
     topic: "perinatal",
     difficulty: "consultant",
     title: "Antenatal Depression — Medication, Foetal Risk and Domestic Violence",
@@ -209,6 +211,7 @@ MDT: Perinatal social work, obstetrics, domestic violence service, and the GP mu
 
   {
     id: "PER-003",
+    questionNumber: "MEQ-093",
     topic: "perinatal",
     difficulty: "consultant",
     title: "Perinatal OCD — Intrusive Thoughts About Harming Infant",
@@ -306,6 +309,7 @@ Follow-up: Weekly review until symptoms are under control, then monitor through 
 
   {
     id: "PER-004",
+    questionNumber: "MEQ-094",
     topic: "perinatal",
     difficulty: "consultant",
     title: "Bipolar Disorder in Pregnancy — Medication Dilemma and Consent",

@@ -3,6 +3,7 @@ import type { QuizStem } from "../quizData";
 export const RISK_STEMS: QuizStem[] = [
   {
     id: "RISK-001",
+    questionNumber: "MEQ-033",
     topic: "risk",
     difficulty: "consultant",
     title: "Contextual suicide risk despite denial",
@@ -93,6 +94,7 @@ Disposition would depend on whether risk can be reduced and a safe plan can be e
   },
   {
     id: "RISK-002",
+    questionNumber: "MEQ-034",
     topic: "risk",
     difficulty: "consultant",
     title: "Domestic violence risk with psychiatric comorbidity",
@@ -185,6 +187,7 @@ My disposition advice would be that he is not simply "safe to return home" becau
   },
   {
     id: "RISK-003",
+    questionNumber: "MEQ-035",
     topic: "risk",
     difficulty: "consultant",
     title: "Post-discharge suicide review",
@@ -277,6 +280,7 @@ The governance lessons should be concrete. The service needs a standard that col
   },
   {
     id: "RISK-004",
+    questionNumber: "MEQ-036",
     topic: "risk",
     difficulty: "consultant",
     title: "Older woman with self-neglect and capacity concerns",
@@ -367,6 +371,7 @@ If Mrs Singh lacks capacity to refuse assessment or supports and there is seriou
   },
   {
     id: "RISK-005",
+    questionNumber: "MEQ-037",
     topic: "risk",
     difficulty: "consultant",
     title: "First episode psychosis and violence risk",

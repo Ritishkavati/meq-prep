@@ -3,6 +3,7 @@ import { QuizStem } from "../quizData";
 export const CA_STEMS: QuizStem[] = [
   {
     id: "CA-001",
+    questionNumber: "MEQ-095",
     topic: "child_adolescent",
     difficulty: "consultant",
     title: "Aboriginal adolescent self-harm, family violence and child protection",
@@ -95,6 +96,7 @@ The disposition decision cannot be delegated to a crisis number. If family viole
   },
   {
     id: "CA-002",
+    questionNumber: "MEQ-096",
     topic: "child_adolescent",
     difficulty: "consultant",
     title: "Refugee adolescent school refusal, trauma and consent",
@@ -187,6 +189,7 @@ The GP's diazepam prescription also needs review. Long-term or repeated benzodia
   },
   {
     id: "CA-003",
+    questionNumber: "MEQ-097",
     topic: "child_adolescent",
     difficulty: "consultant",
     title: "Aboriginal boy, disputed ADHD and polypharmacy",
@@ -279,6 +282,7 @@ The family violence history means safeguarding must be clarified. I would ask ab
   },
   {
     id: "CA-004",
+    questionNumber: "MEQ-098",
     topic: "child_adolescent",
     difficulty: "consultant",
     title: "Adolescent anorexia, medical risk and involuntary treatment",
@@ -369,6 +373,7 @@ The family's fear that "everyone will know she is mentally ill" should be handle
   },
   {
     id: "CA-005",
+    questionNumber: "MEQ-099",
     topic: "child_adolescent",
     difficulty: "consultant",
     title: "Gender-diverse youth, depression, parental rejection and MHA",

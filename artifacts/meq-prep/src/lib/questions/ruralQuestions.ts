@@ -3,6 +3,7 @@ import { QuizStem } from "../quizData";
 export const RU_STEMS: QuizStem[] = [
   {
     id: "RU-001",
+    questionNumber: "MEQ-105",
     topic: "rural",
     difficulty: "consultant",
     title: "Remote Aboriginal community, acute psychosis and RFDS activation",
@@ -93,6 +94,7 @@ Legal authority needs clarification. If Jarran refuses assessment or transport a
   },
   {
     id: "RU-002",
+    questionNumber: "MEQ-106",
     topic: "rural",
     difficulty: "consultant",
     title: "Rural ED overdose, no beds and telehealth supervision",
@@ -183,6 +185,7 @@ The discharge question must be answered after medical clearance, risk formulatio
   },
   {
     id: "RU-003",
+    questionNumber: "MEQ-107",
     topic: "rural",
     difficulty: "consultant",
     title: "Rural complex PTSD and telehealth limitations",
@@ -273,6 +276,7 @@ The service manager's statement, "we don't provide long-term therapy here," is t
   },
   {
     id: "RU-004",
+    questionNumber: "MEQ-108",
     topic: "rural",
     difficulty: "consultant",
     title: "Involuntary admission with nearest bed 300 km away",
@@ -363,6 +367,7 @@ My role is to coordinate ED, ambulance, receiving unit, police and family rather
   },
   {
     id: "RU-005",
+    questionNumber: "MEQ-109",
     topic: "rural",
     difficulty: "consultant",
     title: "Remote alcohol-related violence and family safety",

@@ -3,6 +3,7 @@ import type { QuizStem } from "../quizData";
 export const QA_STEMS: QuizStem[] = [
   {
     id: "QA-001",
+    questionNumber: "MEQ-053",
     topic: "quality_assurance",
     difficulty: "consultant",
     title: "Lithium Toxicity Missed After Dose Increase",
@@ -95,6 +96,7 @@ I would ensure Priya's current medical care is safe, notify senior service leade
   },
   {
     id: "QA-002",
+    questionNumber: "MEQ-054",
     topic: "quality_assurance",
     difficulty: "consultant",
     title: "Clozapine Neutropenia Alert Not Acted On",
@@ -186,6 +188,7 @@ This is not a pharmacy error alone. The unsafe chain includes the covering nurse
   },
   {
     id: "QA-003",
+    questionNumber: "MEQ-055",
     topic: "quality_assurance",
     difficulty: "consultant",
     title: "Seclusion Injury and Incomplete Documentation",
@@ -274,6 +277,7 @@ The review must examine whether seclusion was necessary, proportionate and least
   },
   {
     id: "QA-004",
+    questionNumber: "MEQ-056",
     topic: "quality_assurance",
     difficulty: "consultant",
     title: "Absconding From ED After Delayed Psychiatric Review",
@@ -364,6 +368,7 @@ I would ensure Omar's immediate medical care, notify senior ED and mental health
   },
   {
     id: "QA-005",
+    questionNumber: "MEQ-057",
     topic: "quality_assurance",
     difficulty: "consultant",
     title: "Wrong Patient Long-Acting Injection",
@@ -453,6 +458,7 @@ The error was not simply individual nurse failure. Safety barriers failed: the t
   },
   {
     id: "QA-006",
+    questionNumber: "MEQ-058",
     topic: "quality_assurance",
     difficulty: "consultant",
     title: "Interpreter Failure and Cultural Safety Complaint",
@@ -544,6 +550,7 @@ I would review Mrs Tran's current safety, meet the family with a professional in
   },
   {
     id: "QA-007",
+    questionNumber: "MEQ-059",
     topic: "quality_assurance",
     difficulty: "consultant",
     title: "Unsafe Weekend Discharge Under Bed Pressure",
@@ -633,6 +640,7 @@ I would review Nikhil's current risk, communicate with his partner, complete inc
   },
   {
     id: "QA-008",
+    questionNumber: "MEQ-060",
     topic: "quality_assurance",
     difficulty: "consultant",
     title: "Child Protection Signal Missed in Perinatal Admission",
@@ -722,6 +730,7 @@ I would ensure Alana and the baby are currently safe, notify perinatal psychiatr
   },
   {
     id: "QA-009",
+    questionNumber: "MEQ-061",
     topic: "quality_assurance",
     difficulty: "consultant",
     title: "ECT Consent and Wrong-Site Governance Failure",
@@ -809,6 +818,7 @@ I would ensure Mei's immediate recovery and cognitive monitoring, notify the tre
   },
   {
     id: "QA-010",
+    questionNumber: "MEQ-062",
     topic: "quality_assurance",
     difficulty: "consultant",
     title: "Registrar Working Beyond Competence After Hours",
@@ -899,6 +909,7 @@ The registrar's distress and belief that calling at 4 am would show they could n
   },
   {
     id: "SYS-002",
+    questionNumber: "MEQ-063",
     topic: "quality_assurance",
     difficulty: "consultant",
     title: "Repeated bipolar admissions and carer burnout",
@@ -995,6 +1006,7 @@ Supervise registrar: assertive follow-up for a patient with seven admissions and
   },
   {
     id: "SYS-003",
+    questionNumber: "MEQ-064",
     topic: "old_age",
     difficulty: "consultant",
     title: "Dementia, driving and enduring power of attorney conflict",

@@ -3,6 +3,7 @@ import type { QuizStem } from "../quizData";
 export const SU_STEMS: QuizStem[] = [
   {
     id: "SU-001",
+    questionNumber: "MEQ-073",
     topic: "substance_use",
     difficulty: "consultant",
     title: "Alcohol dependence with decompensated liver disease",
@@ -93,6 +94,7 @@ My actions would be to assess and document capacity for each refused interventio
   },
   {
     id: "SU-002",
+    questionNumber: "MEQ-074",
     topic: "substance_use",
     difficulty: "consultant",
     title: "Methamphetamine psychosis versus primary psychosis",
@@ -183,6 +185,7 @@ The disposition decision should be based on persistence of psychosis, violence r
   },
   {
     id: "SU-003",
+    questionNumber: "MEQ-075",
     topic: "substance_use",
     difficulty: "consultant",
     title: "Pregnancy, methadone and neonatal planning",
