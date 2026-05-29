@@ -18,13 +18,13 @@ import {
   getNextStem, getTopicStats, TopicStats,
 } from "@/lib/quizSessionStore";
 import {
-  ArrowLeft, Play, Square, RotateCcw, Send, CheckCircle2,
-  XCircle, AlertTriangle, ChevronDown, ChevronUp, Clock,
-  RotateCw, ListChecks, ArrowRight, BookMarked, Loader2,
+  ArrowLeft, RotateCcw, Send, CheckCircle2,
+  XCircle, AlertTriangle, ChevronDown, ChevronUp,
+  RotateCw, ListChecks, ArrowRight, BookMarked,
   FileText, Bookmark, BookmarkCheck, Trash2, PenLine,
 } from "lucide-react";
 
-type Phase = "setup" | "quiz" | "results";
+type Phase = "setup" | "quiz" | "selfmark" | "results";
 
 // ─── helpers ──────────────────────────────────────────────────────────────────
 function fmtTime(s: number) {
@@ -343,103 +343,6 @@ function QuizScreen({
   );
 }
 
-// ─── Feedback display ─────────────────────────────────────────────────────────
-function renderInline(text: string): React.ReactNode[] {
-  const parts = text.split(/(\*\*[^*]+\*\*)/g);
-  return parts.map((part, i) => {
-    if (part.startsWith("**") && part.endsWith("**")) {
-      return <strong key={i}>{part.slice(2, -2)}</strong>;
-    }
-    return <React.Fragment key={i}>{part}</React.Fragment>;
-  });
-}
-
-function FeedbackDisplay({ text }: { text: string }) {
-  type Section = { key: string; label: string; content: string };
-
-  const sectionDefs = [
-    { key: "IDENTIFIED", label: "Identified" },
-    { key: "MISSED",     label: "Missed" },
-    { key: "TEACHING POINT", label: "Teaching Point" },
-  ];
-
-  // Split text into named sections
-  const sections: Section[] = [];
-  let remaining = text.trim();
-
-  for (let i = 0; i < sectionDefs.length; i++) {
-    const { key, label } = sectionDefs[i];
-    const header = new RegExp(`${key}:\\s*`, "i");
-    const idx = remaining.search(header);
-    if (idx === -1) continue;
-
-    // content from after this header until the next recognised header
-    const afterHeader = remaining.slice(idx).replace(header, "");
-    let end = afterHeader.length;
-    for (let j = i + 1; j < sectionDefs.length; j++) {
-      const nextHeader = new RegExp(sectionDefs[j].key + ":\\s*", "i");
-      const nextIdx = afterHeader.search(nextHeader);
-      if (nextIdx !== -1 && nextIdx < end) end = nextIdx;
-    }
-    sections.push({ key, label, content: afterHeader.slice(0, end).trim() });
-    remaining = remaining.slice(idx + (afterHeader.length - end));
-  }
-
-  // If parsing found nothing, fall back to plain text
-  if (sections.length === 0) {
-    return (
-      <p className="text-sm text-primary leading-relaxed whitespace-pre-line">
-        {text}
-      </p>
-    );
-  }
-
-  return (
-    <div className="space-y-4">
-      {sections.map(({ key, label, content }) => {
-        if (key === "IDENTIFIED") {
-          return (
-            <div key={key} className="border-l-4 border-emerald-500 bg-emerald-50 pl-4 pr-3 py-3 rounded-r-lg">
-              <p className="text-xs font-bold uppercase tracking-wider text-emerald-700 mb-2">{label}</p>
-              <div className="text-sm text-emerald-900 leading-relaxed space-y-1">
-                {content.split("\n").filter(Boolean).map((line, i) => (
-                  <p key={i}>{renderInline(line)}</p>
-                ))}
-              </div>
-            </div>
-          );
-        }
-        if (key === "MISSED") {
-          const lines = content.split("\n").filter(Boolean);
-          return (
-            <div key={key} className="space-y-2.5">
-              <p className="text-xs font-bold uppercase tracking-wider text-amber-700">{label}</p>
-              {lines.map((line, i) => (
-                <div key={i} className="border-l-4 border-amber-400 bg-white pl-4 pr-3 py-2.5 rounded-r-lg shadow-sm">
-                  <p className="text-sm text-slate-800 leading-relaxed">{renderInline(line)}</p>
-                </div>
-              ))}
-            </div>
-          );
-        }
-        if (key === "TEACHING POINT") {
-          return (
-            <div key={key} className="border-l-4 border-primary bg-slate-50 pl-4 pr-3 py-3 rounded-r-lg">
-              <p className="text-xs font-bold uppercase tracking-wider text-primary mb-2">{label}</p>
-              <div className="text-sm text-slate-700 leading-relaxed space-y-1">
-                {content.split("\n").filter(Boolean).map((line, i) => (
-                  <p key={i}>{renderInline(line)}</p>
-                ))}
-              </div>
-            </div>
-          );
-        }
-        return null;
-      })}
-    </div>
-  );
-}
-
 // ─── Identified signal card ────────────────────────────────────────────────────
 function IdentifiedCard({ signal }: { signal: ExpectedSignal }) {
   return (
@@ -496,6 +399,174 @@ function MissedCard({ signal }: { signal: ExpectedSignal }) {
       <div className="bg-white rounded-lg px-3 py-2.5 border border-slate-200">
         <p className="text-xs font-semibold text-slate-600 mb-0.5 uppercase tracking-wider">What a consultant would say</p>
         <p className="text-xs text-slate-800 italic leading-relaxed">{signal.modelWording}</p>
+      </div>
+    </div>
+  );
+}
+
+// ─── Self-Marking Screen ───────────────────────────────────────────────────────
+const SEVERITY_ORDER = { critical: 0, important: 1, optional: 2 };
+
+function SelfMarkScreen({
+  stem,
+  candidateAnswer,
+  timeUsed,
+  onComplete,
+}: {
+  stem: QuizStem;
+  candidateAnswer: string;
+  timeUsed: number;
+  onComplete: (identifiedIds: string[]) => void;
+}) {
+  const [marks, setMarks] = useState<Record<string, boolean | null>>(() => {
+    const init: Record<string, boolean | null> = {};
+    for (const s of stem.signals) init[s.id] = null;
+    return init;
+  });
+
+  const sortedSignals = [...stem.signals].sort(
+    (a, b) => SEVERITY_ORDER[a.severity] - SEVERITY_ORDER[b.severity]
+  );
+
+  const markedCount = Object.values(marks).filter((v) => v !== null).length;
+  const total = stem.signals.length;
+  const allMarked = markedCount === total;
+
+  function setMark(id: string, val: boolean) {
+    setMarks((prev) => ({ ...prev, [id]: prev[id] === val ? null : val }));
+  }
+
+  function handleSubmit() {
+    const identifiedIds = Object.entries(marks)
+      .filter(([, v]) => v === true)
+      .map(([id]) => id);
+    onComplete(identifiedIds);
+  }
+
+  return (
+    <div className="max-w-6xl mx-auto space-y-4">
+      <div className="flex items-center gap-3 mb-2">
+        <div className="w-10 h-10 rounded-xl bg-violet-100 flex items-center justify-center">
+          <ListChecks className="w-5 h-5 text-violet-600" />
+        </div>
+        <div>
+          <h2 className="text-xl font-serif font-bold text-primary">Self-Marking</h2>
+          <p className="text-sm text-muted-foreground">Go through the marking key and mark each signal honestly</p>
+        </div>
+      </div>
+
+      <div className="flex flex-col lg:flex-row gap-5 items-start">
+        {/* ── Left panel: candidate answer ──────────────────────────────────── */}
+        <div className="lg:w-2/5 bg-white rounded-2xl border border-card-border shadow-sm p-5 space-y-3 lg:sticky lg:top-4">
+          <h3 className="font-serif font-bold text-primary text-base">Your Answer</h3>
+          <div className="bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-primary leading-relaxed whitespace-pre-wrap min-h-[200px] max-h-[60vh] overflow-y-auto">
+            {candidateAnswer.trim() || <span className="text-muted-foreground italic">No response submitted.</span>}
+          </div>
+          <p className="text-xs text-muted-foreground">Time taken: <span className="font-semibold text-primary">{fmtTime(timeUsed)}</span></p>
+        </div>
+
+        {/* ── Right panel: marking key ───────────────────────────────────────── */}
+        <div className="lg:w-3/5 space-y-4">
+          <div className="flex items-center justify-between">
+            <h3 className="font-serif font-bold text-primary text-base">Marking Key — Did you identify this?</h3>
+            <span className="text-xs font-semibold text-muted-foreground bg-slate-100 border border-slate-200 px-2.5 py-1 rounded-full">
+              {markedCount} of {total} marked
+            </span>
+          </div>
+
+          {sortedSignals.map((signal) => {
+            const mark = marks[signal.id];
+            return (
+              <div
+                key={signal.id}
+                className={`rounded-xl border p-4 space-y-3 transition-all ${
+                  mark === true
+                    ? "border-emerald-300 bg-emerald-50"
+                    : mark === false
+                    ? "border-red-200 bg-red-50"
+                    : "border-card-border bg-white"
+                }`}
+              >
+                {/* Signal header */}
+                <div className="flex flex-wrap items-center gap-2">
+                  <span className="text-sm font-bold text-primary">{signal.name}</span>
+                  <span
+                    className={`ml-auto text-xs font-semibold border px-2 py-0.5 rounded-full ${SEVERITY_COLOURS[signal.severity]}`}
+                  >
+                    {SEVERITY_LABELS[signal.severity]}
+                  </span>
+                </div>
+
+                {/* Clue in stem */}
+                <div className="bg-white/70 rounded-lg px-3 py-2 border border-slate-200">
+                  <p className="text-xs font-semibold text-slate-500 mb-0.5 uppercase tracking-wider">Clue in stem</p>
+                  <p className="text-xs text-primary italic">"{signal.clueInStem}"</p>
+                </div>
+
+                {/* Why it matters */}
+                <div>
+                  <p className="text-xs font-semibold text-slate-500 mb-0.5 uppercase tracking-wider">Why it matters</p>
+                  <p className="text-xs text-slate-700 leading-relaxed">{signal.whyItMatters}</p>
+                </div>
+
+                {/* Consultant wording */}
+                <div className="bg-slate-50 rounded-lg px-3 py-2 border border-slate-200">
+                  <p className="text-xs font-semibold text-slate-500 mb-0.5 uppercase tracking-wider">Consultant would say</p>
+                  <p className="text-xs text-slate-800 italic leading-relaxed">{signal.modelWording}</p>
+                </div>
+
+                {/* ✓ / ✗ buttons */}
+                <div className="flex gap-2 pt-1">
+                  <button
+                    onClick={() => setMark(signal.id, true)}
+                    className={`flex-1 flex items-center justify-center gap-1.5 py-2 rounded-lg text-sm font-semibold border-2 transition-all ${
+                      mark === true
+                        ? "bg-emerald-600 border-emerald-600 text-white"
+                        : "border-emerald-300 text-emerald-700 hover:bg-emerald-50"
+                    }`}
+                  >
+                    <CheckCircle2 className="w-4 h-4" /> I identified this
+                  </button>
+                  <button
+                    onClick={() => setMark(signal.id, false)}
+                    className={`flex-1 flex items-center justify-center gap-1.5 py-2 rounded-lg text-sm font-semibold border-2 transition-all ${
+                      mark === false
+                        ? "bg-red-600 border-red-600 text-white"
+                        : "border-red-300 text-red-700 hover:bg-red-50"
+                    }`}
+                  >
+                    <XCircle className="w-4 h-4" /> I missed this
+                  </button>
+                </div>
+              </div>
+            );
+          })}
+
+          {/* Submit */}
+          <div className="bg-white rounded-2xl border border-card-border shadow-sm p-5 space-y-3">
+            <div className="flex items-center justify-between text-sm">
+              <span className="text-muted-foreground">
+                Mark every signal before submitting
+              </span>
+              <span className={`font-semibold ${allMarked ? "text-emerald-700" : "text-muted-foreground"}`}>
+                {markedCount} / {total} marked
+              </span>
+            </div>
+            <div className="h-2 w-full bg-slate-100 rounded-full overflow-hidden">
+              <div
+                className="h-full bg-accent rounded-full transition-all"
+                style={{ width: `${total > 0 ? (markedCount / total) * 100 : 0}%` }}
+              />
+            </div>
+            <button
+              onClick={handleSubmit}
+              disabled={!allMarked}
+              className="w-full flex items-center justify-center gap-2 bg-primary text-white py-3 rounded-xl font-bold hover:bg-primary/90 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+            >
+              <Send className="w-4 h-4" /> Submit Self-Assessment
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );
@@ -743,65 +814,6 @@ function ResultsScreen({
   const [showModel, setShowModel] = useState(false);
   const [showIdentified, setShowIdentified] = useState(false);
   const [showMissed, setShowMissed] = useState(false);
-  const [aiFeedback, setAiFeedback] = useState<string | null>(null);
-  const [aiFeedbackLoading, setAiFeedbackLoading] = useState(true);
-  const [aiFeedbackError, setAiFeedbackError] = useState(false);
-
-  const fetchAiFeedback = useCallback(async () => {
-    setAiFeedbackLoading(true);
-    setAiFeedbackError(false);
-    try {
-      const identifiedSignalNames = result.matches
-        .filter((m) => m.identified)
-        .map((m) => m.signal.name);
-      const missedSignalDetails = result.matches
-        .filter((m) => !m.identified)
-        .map((m) => ({
-          name: m.signal.name,
-          clueInStem: m.signal.clueInStem,
-          whyItMatters: m.signal.whyItMatters,
-        }));
-      const identifiedSignalIds = result.matches
-        .filter((m) => m.identified)
-        .map((m) => m.signal.id);
-      const missedSignalIds = result.matches
-        .filter((m) => !m.identified)
-        .map((m) => m.signal.id);
-      const WEIGHTS: Record<string, number> = { critical: 2, important: 1, optional: 0.5 };
-      const totalWeighted = result.matches.reduce((s, m) => s + (WEIGHTS[m.signal.severity] ?? 1), 0);
-      const earnedWeighted = result.matches.filter((m) => m.identified).reduce((s, m) => s + (WEIGHTS[m.signal.severity] ?? 1), 0);
-      const estimatedMarks = totalWeighted > 0
-        ? Math.round((earnedWeighted / totalWeighted) * stem.totalMarks)
-        : 0;
-
-      const response = await fetch("/api/ai-feedback", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          stem: stem.stem,
-          identifiedSignalNames,
-          missedSignalDetails,
-          questionId: stem.id,
-          identifiedSignalIds,
-          missedSignalIds,
-          candidateAnswer,
-          totalMarks: stem.totalMarks,
-          estimatedMarks,
-        }),
-      });
-      if (!response.ok) throw new Error("Request failed");
-      const data = await response.json() as { feedback?: string };
-      setAiFeedback(data.feedback ?? "Feedback unavailable");
-    } catch {
-      setAiFeedbackError(true);
-    } finally {
-      setAiFeedbackLoading(false);
-    }
-  }, [stem.stem, result.matches]);
-
-  useEffect(() => {
-    fetchAiFeedback();
-  }, [fetchAiFeedback]);
 
   const identified = result.matches.filter((m) => m.identified);
   const missed = result.matches.filter((m) => !m.identified);
@@ -1034,38 +1046,6 @@ function ResultsScreen({
         </div>
       </div>
 
-      {/* ── E) EXAMINER FEEDBACK ─────────────────────────────────────────────── */}
-      <div className="bg-white rounded-2xl border border-card-border shadow-sm p-6 space-y-4">
-        <div className="flex items-center justify-between gap-2">
-          <h3 className="font-serif font-bold text-primary">Examiner Feedback</h3>
-          {aiFeedbackError && (
-            <button
-              onClick={fetchAiFeedback}
-              className="text-xs text-muted-foreground hover:text-primary border border-slate-200 hover:border-primary px-2.5 py-1 rounded-lg transition-colors"
-            >
-              Retry
-            </button>
-          )}
-        </div>
-
-        {aiFeedbackLoading && (
-          <div className="flex items-center gap-3 py-4 text-muted-foreground">
-            <Loader2 className="w-4 h-4 animate-spin text-accent flex-shrink-0" />
-            <span className="text-sm">Generating examiner feedback…</span>
-          </div>
-        )}
-
-        {aiFeedbackError && !aiFeedbackLoading && (
-          <p className="text-sm text-muted-foreground italic">
-            Feedback unavailable — tap Retry to try again.
-          </p>
-        )}
-
-        {aiFeedback && !aiFeedbackLoading && (
-          <FeedbackDisplay text={aiFeedback} />
-        )}
-      </div>
-
       {/* Course progress */}
       <div className="bg-white rounded-2xl border border-card-border shadow-sm p-5 space-y-3">
         <div className="flex items-center justify-between">
@@ -1158,6 +1138,8 @@ export default function QuizMode() {
   const [sessionProgress, setSessionProgress] = useState({ attempted: 0, available: 0 });
   const [stemAlreadyAttempted, setStemAlreadyAttempted] = useState(false);
   const [prefilledAnswer, setPrefilledAnswer] = useState<string | undefined>(undefined);
+  const [pendingAnswer, setPendingAnswer] = useState("");
+  const [pendingTimeUsed, setPendingTimeUsed] = useState(0);
 
   function refreshProgress(topic: TopicKey) {
     const stats = getTopicStats(topic);
@@ -1174,12 +1156,19 @@ export default function QuizMode() {
     setPhase("quiz");
   }
 
-  async function handleSubmit(answer: string, timeUsed: number) {
+  function handleSubmit(answer: string, timeUsed: number) {
     if (!currentStem) return;
-    const r = await assessAnswer(currentStem, answer, timeUsed);
+    setPendingAnswer(answer);
+    setPendingTimeUsed(timeUsed);
+    setPhase("selfmark");
+  }
+
+  function handleSelfMarkComplete(identifiedIds: string[]) {
+    if (!currentStem) return;
+    const r = assessAnswer(currentStem, identifiedIds, pendingTimeUsed);
     setResult(r);
-    setLastCandidateAnswer(answer);
-    const attempt = createAttempt(fullName, candidateNumber, currentStem, answer, r);
+    setLastCandidateAnswer(pendingAnswer);
+    const attempt = createAttempt(fullName, candidateNumber, currentStem, pendingAnswer, r);
     saveAttempt(attempt);
     refreshProgress(currentTopic);
     setPhase("results");
@@ -1259,6 +1248,15 @@ export default function QuizMode() {
           initialAnswer={prefilledAnswer}
         />
       )}
+      {phase === "selfmark" && currentStem && (
+        <SelfMarkScreen
+          stem={currentStem}
+          candidateAnswer={pendingAnswer}
+          timeUsed={pendingTimeUsed}
+          onComplete={handleSelfMarkComplete}
+        />
+      )}
+
       {phase === "results" && currentStem && result && (
         <ResultsScreen
           stem={currentStem}

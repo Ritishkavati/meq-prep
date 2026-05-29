@@ -3,7 +3,6 @@ import { QuizStem, ExpectedSignal, SignalCategory, TopicKey, TOPIC_LABELS } from
 export interface SignalMatch {
   signal: ExpectedSignal;
   identified: boolean;
-  matchedKeyword?: string;
   psLevelReason?: string;
   psStatement?: string;
 }
@@ -204,51 +203,18 @@ function generateExaminerSummary(matches: SignalMatch[]): string {
   return "This stem does not have explicit RANZCP position-statement-level signals beyond standard clinical marking.";
 }
 
-// ─── Assess candidate answer against signal map ───────────────────────────────
-export async function assessAnswer(stem: QuizStem, candidateAnswer: string, timeUsed: number): Promise<QuizResult> {
-  // ── AI signal detection with keyword fallback ──
-  const normalized = candidateAnswer.toLowerCase();
-  let matches: SignalMatch[];
-
-  try {
-    const response = await fetch("/api/detect-signals", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        signals: stem.signals.map((s) => ({ id: s.id, name: s.name, clueInStem: s.clueInStem })),
-        candidateAnswer,
-      }),
-    });
-    if (!response.ok) throw new Error(`detect-signals ${response.status}`);
-    const data = await response.json();
-    console.log("AI signal detection raw response:", data.rawText);
-    const identifiedIds: string[] = Array.isArray(data.identifiedIds) ? data.identifiedIds : [];
-    console.log("Identified IDs:", identifiedIds);
-    if (identifiedIds.length === 0) throw new Error("AI returned empty identifiedIds — falling back to keywords");
-
-    matches = stem.signals.map((signal) => {
-      const psNote = generatePSReason(signal);
-      return {
-        signal,
-        identified: identifiedIds.includes(signal.id),
-        psLevelReason: psNote?.reason,
-        psStatement: psNote?.statement,
-      };
-    });
-  } catch (e) {
-    console.error("AI signal detection failed, falling back to keywords:", e);
-    matches = stem.signals.map((signal) => {
-      const matchedKeyword = signal.keywords.find((kw) => normalized.includes(kw.toLowerCase()));
-      const psNote = generatePSReason(signal);
-      return {
-        signal,
-        identified: !!matchedKeyword,
-        matchedKeyword,
-        psLevelReason: psNote?.reason,
-        psStatement: psNote?.statement,
-      };
-    });
-  }
+// ─── Assess candidate answer against self-marked signal IDs ──────────────────
+export function assessAnswer(stem: QuizStem, identifiedIds: string[], timeUsed: number): QuizResult {
+  // Build matches from self-marked identifiedIds
+  const matches: SignalMatch[] = stem.signals.map((signal) => {
+    const psNote = generatePSReason(signal);
+    return {
+      signal,
+      identified: identifiedIds.includes(signal.id),
+      psLevelReason: psNote?.reason,
+      psStatement: psNote?.statement,
+    };
+  });
 
   // ── Score ──
   let earned = 0;
@@ -259,7 +225,6 @@ export async function assessAnswer(stem: QuizStem, candidateAnswer: string, time
     if (m.identified) earned += w;
   }
 
-  // Scale to marks
   const maxScore = stem.totalMarks;
   const rawPct = possible > 0 ? earned / possible : 0;
   const score = Math.round(rawPct * maxScore);
@@ -296,16 +261,13 @@ export async function assessAnswer(stem: QuizStem, candidateAnswer: string, time
   const hasPSLevel = matches.some((m) => !!m.psLevelReason);
   const examinerSummary = generateExaminerSummary(matches);
 
-  // ── Overcalled ──
-  const overcalled = detectOvercalled(normalized, matches);
-
   return {
     score,
     maxScore,
     percentage,
     judgement,
     matches,
-    overcalled,
+    overcalled: [],
     criticalMissed,
     importantMissed,
     timeUsed,
@@ -314,124 +276,6 @@ export async function assessAnswer(stem: QuizStem, candidateAnswer: string, time
     examinerSummary,
     hasPSLevel,
   };
-}
-
-// ─── Vague and overcalled term detection ─────────────────────────────────────
-function detectOvercalled(normalized: string, matches: SignalMatch[]): OvercalledItem[] {
-  const overcalled: OvercalledItem[] = [];
-
-  // Standard generic penalties
-  const genericPenalties: OvercalledItem[] = [
-    {
-      text: "everything",
-      reason:
-        "Vague and non-specific. 'Consider everything' is not a clinical signal and attracts no marks.",
-    },
-    {
-      text: "all risks",
-      reason:
-        "Too generic. Specific risks must be named, linked to the stem, and explained clinically.",
-    },
-    {
-      text: "psychotherapy",
-      reason:
-        "Not a signal — psychotherapy is a treatment option, not an issue to identify from the stem.",
-    },
-    {
-      text: "medication review",
-      reason:
-        "Medication review is a management step, not a signal, unless directly triggered by a specific stem clue.",
-    },
-  ];
-
-  // PS-level vague term penalties — examiner will not award marks for these without depth
-  const psPenalties: OvercalledItem[] = [
-    {
-      text: "consider cultural factors",
-      reason:
-        "This is a registrar-level phrase that will not be awarded PS-level marks. The stem provides specific cultural details. Name the exact cultural safety issue, its clinical implications, and how it affects engagement, coercion, risk, and family involvement. 'Consider cultural factors' without this analysis demonstrates surface-level awareness only.",
-      isPSLevel: true,
-    },
-    {
-      text: "cultural factors",
-      reason:
-        "Vague. Does not demonstrate consultant-level awareness. RANZCP position statements require cultural safety to be named as a clinical domain — not a background consideration. Name the specific issue, the clinical consequence, and the required response.",
-      isPSLevel: true,
-    },
-    {
-      text: "culturally sensitive",
-      reason:
-        "Generic personal-attitude language. Cultural safety is a systems and clinical obligation — not a personal disposition. The examiner will not award PS-level marks for this phrase. Explain what cultural unsafety means clinically in this context.",
-      isPSLevel: true,
-    },
-    {
-      text: "culturally appropriate",
-      reason:
-        "Too vague for consultant level. Name what culturally appropriate care specifically requires in this stem — interpreter, Aboriginal health worker, community liaison, family inclusion, specific communication approach.",
-      isPSLevel: true,
-    },
-    {
-      text: "explore trauma",
-      reason:
-        "Insufficient for RANZCP-level marking. Trauma-informed practice requires: identifying re-traumatisation risk in the current clinical setting, applying the 5 trauma-informed principles, and distinguishing complex trauma from single-event PTSD. 'Explore trauma' is a registrar-level phrase.",
-      isPSLevel: true,
-    },
-    {
-      text: "trauma history",
-      reason:
-        "Noting trauma history is not the same as trauma-informed practice. RANZCP standards require identifying re-traumatisation risk in the clinical encounter itself — not just the past history. Name what creates that risk here, and what the clinical response is.",
-      isPSLevel: true,
-    },
-    {
-      text: "involve family",
-      reason:
-        "Vague. RANZCP family/carer standards require: active engagement, psychoeducation, confidentiality navigation, and carer burden assessment. 'Involve the family' without this structure will not attract PS-level marks.",
-      isPSLevel: true,
-    },
-    {
-      text: "inform family",
-      reason:
-        "Below consultant level. Informing the family is a minimum — RANZCP standards require partnership, psychoeducation, carer burden assessment, and explicit confidentiality navigation. Name what you will share, what you cannot share without consent, and why.",
-      isPSLevel: true,
-    },
-    {
-      text: "consult the team",
-      reason:
-        "The consultant psychiatrist holds non-delegable accountability. 'Consult the team' without stating your own clinical position and accountability demonstrates sub-consultant-level reasoning. Name your clinical stance and how you will lead the team.",
-      isPSLevel: true,
-    },
-    {
-      text: "refer to appropriate services",
-      reason:
-        "Non-specific and will not attract marks. Name the specific service, the referral pathway, why it is indicated, and what you expect from it.",
-      isPSLevel: true,
-    },
-    {
-      text: "safety plan",
-      reason:
-        "RANZCP standard is collaborative safety planning — not a safety plan as a document. Name the elements: patient-agreed coping strategies, means restriction, crisis contacts, family role, and follow-up. A generic 'safety plan' without these elements is insufficient.",
-      isPSLevel: true,
-    },
-    {
-      text: "monitor closely",
-      reason:
-        "Not a clinical signal or plan. 'Monitor closely' gives the examiner no information about what you are monitoring, how, how often, or what triggers would change your management.",
-      isPSLevel: false,
-    },
-  ];
-
-  for (const penalty of [...genericPenalties, ...psPenalties]) {
-    if (normalized.includes(penalty.text)) {
-      const alreadyCovered = matches.some(
-        (m) => m.identified && m.matchedKeyword?.includes(penalty.text)
-      );
-      if (!alreadyCovered) {
-        overcalled.push(penalty);
-      }
-    }
-  }
-
-  return overcalled;
 }
 
 // ─── Category label mapping ───────────────────────────────────────────────────
