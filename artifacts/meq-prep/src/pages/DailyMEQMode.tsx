@@ -8992,6 +8992,803 @@ const MEQ_BANK = [
       }
     ]
   }
+,
+  {
+    id: "meq_054",
+    title: "James — Clozapine Initiation, Monitoring and Governance",
+    case: "James, 24, treatment-resistant schizophrenia, involuntary admission, clozapine initiation",
+    examSource: "Generated — Treatment / Scholarship",
+    topic: "Clozapine initiation in treatment-resistant schizophrenia; tests CPMS registration and baseline requirements before first dose, risk-benefit communication with a capacitous patient and anxious mother addressing non-haematological side effects, safe titration under bed pressure during the myocarditis window, and consultant response to a formal complaint with monitoring failure",
+    primaryDomain: "Treatment / Scholarship",
+    totalMarks: 32,
+    totalTimeMinutes: 32,
+    stems: [
+      {
+        stemNumber: "1.1",
+        vignette: "James is a 24-year-old man admitted involuntarily with persistent persecutory delusions, auditory hallucinations and aggression towards neighbours. He has had schizophrenia since age 19. He has previously received oral risperidone and long-acting injectable paliperidone at adequate doses and durations, with documented adherence. He remains highly distressed, isolated and intermittently threatening. The registrar suggests clozapine. The clozapine coordinator notes that James is not yet registered with the monitoring program and that baseline investigations have not been completed.",
+        question: "Outline — list and justify the issues you would address before James receives his first dose of clozapine.\nYour answer must include registration and baseline requirements as well as clinical indication. A list without because-clauses specific to this case will not be awarded any marks.\n(8 marks | 8 minutes)",
+        commandWord: "outline_justify",
+        marks: 8,
+        timeMinutes: 8,
+        stemSignals: [
+          "The clozapine coordinator has flagged two specific gaps — registration and baseline investigations — these are not administrative details; they are required safety steps before the first dose and must be named",
+          "Confirming treatment resistance requires more than listing two prior agents — adherence must be documented and non-resistance explanations must be excluded",
+          "James is involuntary but has not been assessed for capacity — involuntary status does not remove the consent-capacity assessment obligation"
+        ],
+        domains: [
+          {
+            name: "Registration and Baseline Requirements (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "James must be registered with the local clozapine monitoring program before the first dose — because dispensing is contingent on registration and a current blood result authorising supply; prescribing without registration creates a governance and safety failure independent of clinical indication",
+              "Baseline blood monitoring must be completed and results reviewed before commencing — because the monitoring program requires an authorising result; clinical indication alone does not substitute for this requirement",
+              "Baseline physical assessment must be completed — because clozapine initiation requires documented weight, BMI, BP, pulse, metabolic profile, ECG and cardiac history before the first dose to establish a reference point for detecting early adverse effects"
+            ]
+          },
+          {
+            name: "Confirming Clinical Indication (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "Confirm treatment resistance by verifying that two prior antipsychotics were given at adequate dose and duration with documented adherence — because LAI records, pharmacy records and inpatient observation charts may confirm or challenge the registrar's assumption; assumed adherence is not sufficient",
+              "Exclude non-resistance explanations for persistent symptoms — because substance use, trauma, affective illness and environmental stressors may contribute to ongoing symptoms even when medication adherence is confirmed",
+              "Assess James's capacity and attitude to treatment — because James is involuntary but capacity is decision-specific; he may have capacity to consent to or refuse clozapine, and his goals for treatment are clinically and ethically relevant regardless of his legal status"
+            ]
+          },
+          {
+            name: "Risk and Safety Assessment (2 marks)",
+            marks: 2,
+            keyPoints: [
+              "Assess smoking, caffeine and interacting medications before starting — because both smoking and caffeine affect clozapine levels through CYP1A2 and must be documented to interpret future levels; any changes during admission will require dose review",
+              "Assess practical monitoring capacity for the post-discharge period — because clozapine requires ongoing blood monitoring, community pharmacy access and GP or community team involvement; initiating without a discharge monitoring plan creates foreseeable post-discharge risk"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Listing clozapine indications without addressing the CPMS registration and baseline gaps identified by the coordinator",
+          "Treating involuntary status as equivalent to consent without a capacity assessment",
+          "Omitting smoking, caffeine and medication interactions from the pre-commencement assessment"
+        ],
+        postExaminerNote: "Candidates who addressed the registration and baseline gaps as named safety requirements before clinical indication, assessed capacity independently of legal status, and included CYP1A2 interaction screening as a pre-commencement step scored in the upper range. Candidates who listed treatment-resistance criteria without addressing the coordinator's specific concerns, or who treated involuntary admission as equivalent to consent, did not achieve the standard."
+      },
+      {
+        stemNumber: "1.2",
+        vignette: "James is assessed as having capacity to make treatment decisions. He says he might consider clozapine if it gives him a chance of leaving hospital and returning to study, but he is frightened by being watched all the time. His mother says: 'I know about the blood tests, but I have also read it can damage the heart, bowels and brain. Are you experimenting on him?' James asks for a meeting with you and his mother before deciding.",
+        question: "Describe — list and explain how you would approach this meeting, including your communication with James as the decision-maker, your response to his mother's specific concerns about cardiac, bowel and cognitive effects, and what the monitoring program will involve.\nA list without explanation will not be awarded any marks.\n(9 marks | 9 minutes)",
+        commandWord: "describe_explain",
+        marks: 9,
+        timeMinutes: 9,
+        stemSignals: [
+          "James has capacity — he is the decision-maker; his mother's role is as a consented support person, not a co-decision-maker; the meeting must keep this structure visible",
+          "The mother has named three specific concerns — cardiac damage, bowel damage and brain damage; each requires a specific honest response, not generic reassurance",
+          "James's goal of leaving hospital and returning to study is the therapeutic lever — connecting clozapine monitoring to recovery possibility is more likely to produce genuine informed consent than fear-reduction alone"
+        ],
+        domains: [
+          {
+            name: "James as Decision-Maker (2 marks)",
+            marks: 2,
+            keyPoints: [
+              "Open the meeting with James as the primary person and his mother as an invited support — because James has capacity and must experience the meeting as his decision, not one being managed around his mother's objections",
+              "Connect clozapine to James's specific goals of discharge and study — because informed consent is more durable when the patient understands the personal benefit rather than only the risk; his goals are the clinical rationale made personally meaningful"
+            ]
+          },
+          {
+            name: "Responding to Cardiac, Bowel and Cognitive Concerns (4 marks)",
+            marks: 4,
+            keyPoints: [
+              "Address cardiac risk honestly and specifically — because myocarditis and cardiomyopathy are real risks, occurring in the first weeks to months; monitoring with ECG, temperature, pulse and CRP/troponin according to local protocol is the safety mechanism, and this must be explained as active surveillance rather than passive reassurance",
+              "Address constipation as a serious risk that will be actively managed — because clozapine-induced constipation can progress to ileus and is not a minor side effect; bowel charts, laxatives, hydration and early reporting are part of the treatment plan, and the mother's concern about this is clinically well-founded",
+              "Address sedation and cognitive effects honestly — because sedation and cognitive dulling are common, particularly early in titration; dose timing, titration pace and monitoring can minimise these, but James and his mother deserve an accurate account rather than minimisation",
+              "Explain what the monitoring program involves in practice — because James's fear of being watched all the time is partly about the monitoring burden; explaining the frequency, purpose and what happens if results are abnormal converts a source of anxiety into a safety structure"
+            ]
+          },
+          {
+            name: "Consent Process and Documentation (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "Check James's understanding after providing information — because consent requires comprehension, not just information delivery; asking James to explain the key points in his own words confirms capacity and understanding",
+              "Acknowledge the mother's concerns are legitimate without allowing them to override James's capacitous decision — because validating her fear while keeping James as the decision-maker is the correct ethical and therapeutic position",
+              "Document the capacity assessment, the information provided, the mother's involvement with James's consent, and James's decision — because this documentation protects James, the team and the service if the decision is later questioned"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Allowing the mother's objections to function as a veto without maintaining James as the decision-maker",
+          "Providing generic clozapine side-effect information without specifically addressing the three concerns the mother has named",
+          "Describing the monitoring program only in terms of blood tests without addressing James's specific concern about being watched"
+        ],
+        postExaminerNote: "Candidates who kept James as the explicit decision-maker throughout, addressed cardiac, bowel and cognitive concerns with specific clinical content rather than generic reassurance, and connected the monitoring program to James's recovery goals scored in the upper range. Candidates who allowed the mother's objections to dominate the meeting structure or who gave generic risk-benefit information without engaging with the specific concerns named scored lower."
+      },
+      {
+        stemNumber: "1.3",
+        vignette: "James agrees to commence clozapine. On day five of titration, he reports dizziness on standing, constipation and heavy morning sedation. Nursing staff record tachycardia and note that he is spending most of the day in bed. The bed manager says James is less aggressive already and asks whether he can be titrated faster so that discharge planning can begin.",
+        question: "Discuss — list and debate how you would respond to the clinical findings and the bed manager's request, naming the specific clinical reason why titration pace cannot be determined by bed pressure during this phase of treatment.\n(8 marks | 8 minutes)",
+        commandWord: "debate",
+        marks: 8,
+        timeMinutes: 8,
+        stemSignals: [
+          "Tachycardia on day five is not a minor vital sign finding — it must be assessed as a possible early myocarditis signal; the first six to eight weeks are the highest-risk period and this is the hidden clinical trap",
+          "The bed manager's request frames reduced aggression as evidence of sufficient response — this conflates behavioural change with safe titration completion",
+          "Constipation on day five requires active management from this point — not reassurance; progression to ileus is the foreseeable harm"
+        ],
+        domains: [
+          {
+            name: "Clinical Assessment of Day-Five Findings (4 marks)",
+            marks: 4,
+            keyPoints: [
+              "Assess tachycardia as a possible myocarditis signal — because the first six to eight weeks of clozapine treatment carry the highest risk of myocarditis and cardiomyopathy; tachycardia at day five must trigger clinical review including temperature, CRP, troponin, BP and respiratory assessment according to local protocol, not reassignment to benign orthostatic cause without investigation",
+              "Manage orthostatic hypotension with lying and standing BP, hydration, dose timing and falls assessment — because dizziness on standing combined with tachycardia in a sedated patient creates a falls risk that requires practical intervention, not observation alone",
+              "Treat constipation actively from day five — because clozapine-induced constipation progresses without intervention; bowel chart, laxatives, hydration, diet and escalation criteria for abdominal pain or obstruction should be initiated now, not when symptoms worsen",
+              "Review dose escalation pace and consider holding or slowing titration — because tolerability and monitoring, not the bed manager's timeline, govern clozapine titration; sedation, orthostasis and tachycardia are signals to slow, not accelerate"
+            ]
+          },
+          {
+            name: "Responding to Bed Pressure (4 marks)",
+            marks: 4,
+            keyPoints: [
+              "There is tension between the bed manager's legitimate service pressure and James's clinical safety during the highest-risk phase of clozapine initiation — the defensible position is that titration pace is a clinical decision governed by monitoring, tolerability and myocarditis risk, not bed availability",
+              "Reduced aggression does not indicate completed titration — because behavioural improvement in the first week may reflect sedation, not therapeutic response; this is not a basis for discharge planning",
+              "Explain the myocarditis window explicitly to the bed manager — because the bed manager needs a specific clinical reason, not a general appeal to safety; stating that the first six to eight weeks carry the highest Australian myocarditis risk and that tachycardia requires active monitoring provides an accountable clinical rationale",
+              "Propose a discharge planning timeline based on monitoring milestones rather than a fixed date — because this gives the bed manager a working plan without compromising James's safety, and documents that the clinical decision was made on clinical grounds"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Accelerating titration because James is less aggressive and bed pressure is real",
+          "Treating day-five tachycardia as benign orthostatic change without myocarditis assessment",
+          "Deferring constipation management because it is mild on day five"
+        ],
+        postExaminerNote: "Candidates who named the myocarditis window as the specific clinical reason why titration cannot be accelerated, assessed tachycardia as a potential early myocarditis signal rather than dismissing it, treated constipation as requiring active management from day five, and gave the bed manager a monitoring-milestone timeline rather than a blank refusal scored in the upper range. Candidates who accelerated titration in response to bed pressure or who did not connect tachycardia to myocarditis risk did not achieve the standard."
+      },
+      {
+        stemNumber: "1.4",
+        vignette: "Two weeks later, James's mother makes a formal complaint that she was not properly warned about clozapine risks. Review of the chart shows bowel charts were inconsistently completed, several daily observations were missed, and the registrar's documentation of the consent discussion is brief and generic.",
+        question: "Outline — list and justify your response as the consultant psychiatrist to the complaint and the monitoring failures found on chart review.\nYour response must address James's current clinical safety, open disclosure, registrar supervision and ward protocol as separate obligations.\n(7 marks | 7 minutes)",
+        commandWord: "outline_justify",
+        marks: 7,
+        timeMinutes: 7,
+        stemSignals: [
+          "James's current clinical safety comes first — the complaint is urgent but the chart review findings mean James may have undetected adverse effects right now",
+          "Open disclosure has a specific threshold — if the chart review confirms communication or monitoring failures that affected James's care, open disclosure is not optional",
+          "The registrar's brief and generic consent documentation is a supervision issue as well as a governance issue — these are separate obligations"
+        ],
+        domains: [
+          {
+            name: "James's Immediate Clinical Safety (2 marks)",
+            marks: 2,
+            keyPoints: [
+              "Review James's current bowel status, vital signs, myocarditis monitoring and clozapine dose before responding to the complaint — because inconsistent bowel charts and missed observations mean adverse effects may have been undetected; the clinical review precedes and informs the complaint response",
+              "Implement immediate corrective monitoring — because the gaps found on chart review must be closed now, not after the complaint is resolved; bowel chart reinstatement, daily observation prompts and clozapine coordinator review are immediate safety actions"
+            ]
+          },
+          {
+            name: "Open Disclosure (2 marks)",
+            marks: 2,
+            keyPoints: [
+              "Offer open disclosure to James and his mother — because if the chart review confirms that monitoring failures occurred and information about non-haematological risks was not adequately communicated, open disclosure requires an honest explanation of what occurred, an apology for any verified failure, and a statement about what will change",
+              "Open disclosure must wait for the chart review to establish what actually happened — because premature disclosure before facts are confirmed may be inaccurate; the process is: review, confirm, disclose, not disclose first and review later"
+            ]
+          },
+          {
+            name: "Registrar Supervision (2 marks)",
+            marks: 2,
+            keyPoints: [
+              "Review the consent documentation with the registrar as a learning and supervision task — because brief and generic consent documentation is a skills gap requiring direct feedback and education, not a disciplinary matter at this stage",
+              "Clarify with the registrar what was actually discussed with James and his mother — because the documentation gap may not reflect a communication failure; the registrar may have had an adequate discussion that was poorly documented, which is a different and correctable problem"
+            ]
+          },
+          {
+            name: "Ward Protocol (1 mark)",
+            marks: 1,
+            keyPoints: [
+              "Escalate inconsistent bowel and observation monitoring as a ward-level protocol issue — because individual chart completion failures in a clozapine initiation context indicate that the ward protocol is not being followed consistently; this requires education, checklist reinforcement and clozapine coordinator involvement, not individual blame"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Responding to the complaint without first reviewing James's current clinical safety",
+          "Offering open disclosure before establishing what the chart review confirms",
+          "Treating the registrar's documentation failure as a disciplinary rather than a supervision and education issue"
+        ],
+        postExaminerNote: "Candidates who established James's clinical safety before addressing the complaint, named open disclosure as conditional on chart review findings rather than immediate, addressed the registrar's documentation gap as a supervision task rather than a disciplinary matter, and escalated monitoring failure as a ward protocol issue scored in the upper range. Candidates who began with the complaint response before clinical review, or who conflated open disclosure with a formal complaint response, did not achieve the standard."
+      }
+    ]
+  },
+  {
+    id: "meq_055",
+    title: "Sarah — Clozapine Side-Effect Burden, Autonomy and Recovery",
+    case: "Sarah, 38, treatment-resistant schizophrenia, stable on clozapine, request to stop, community clinic",
+    examSource: "Generated — Ethics / Professionalism / Legal",
+    topic: "Clozapine side-effect burden in a stable community patient who requests cessation; tests assessment before responding to the request, ethical and legal response to a capacitous patient asking about her right to stop including compulsory treatment limitations, identification of the drug interaction and lifestyle factors driving elevated clozapine levels, and integration of clozapine treatment with vocational recovery goals",
+    primaryDomain: "Ethics / Professionalism / Legal",
+    totalMarks: 33,
+    totalTimeMinutes: 33,
+    stems: [
+      {
+        stemNumber: "1.1",
+        vignette: "Sarah is a 38-year-old woman with treatment-resistant schizophrenia who has been stable on clozapine for four years. She has had no psychiatric admissions during that period and now works part-time in a childcare centre. She says: 'I want to stop clozapine. I have put on weight, I drool at night, I am exhausted every morning, and I have not had a proper bowel motion for a week.' Her partner says: 'Before clozapine she was terrified and hearing voices all night. If she stops it, our family will fall apart.'",
+        question: "Outline — list and justify the key clinical information you would obtain before responding to Sarah's request.\nA list without because-clauses specific to this case will not be awarded any marks.\n(8 marks | 8 minutes)",
+        commandWord: "outline_justify",
+        marks: 8,
+        timeMinutes: 8,
+        stemSignals: [
+          "Sarah has not had a bowel motion for a week — this is not a chronic side-effect complaint; it requires urgent assessment for constipation severity and obstruction risk before anything else",
+          "Her partner's statement is not collateral to be accepted uncritically — it describes catastrophising language that may represent real relapse history or may reflect the partner's anxiety; both are clinically relevant",
+          "Sarah works in a childcare centre — sedation, cognitive effects and bowel management have occupational safety and professional registration dimensions that must be assessed"
+        ],
+        domains: [
+          {
+            name: "Urgent Assessment (2 marks)",
+            marks: 2,
+            keyPoints: [
+              "Assess constipation urgently — because one week without a bowel motion on clozapine requires clinical evaluation for severity, abdominal pain, distension, vomiting and bowel obstruction symptoms before any other aspect of the request is addressed",
+              "Assess sedation in the context of her childcare work — because heavy morning sedation in a person responsible for the care of children has occupational safety implications that require immediate clarification"
+            ]
+          },
+          {
+            name: "Clarifying the Request and Its Context (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "Clarify what Sarah specifically wants — because stop clozapine may mean immediate cessation, dose reduction, side-effect management, a different treatment option or more control over her treatment; these have different clinical implications and responding before clarifying is premature",
+              "Review Sarah's relapse history before clozapine, using her own account and clinical records — because her partner's catastrophic framing may accurately reflect documented serious relapse including admissions, harm and functional collapse, or it may overstate risk; the clinical record is the reference point, not the partner's summary",
+              "Assess Sarah's current mental state, insight and early warning signs — because the request to stop may coincide with early prodromal change or may represent a capacitous and considered decision made in full insight"
+            ]
+          },
+          {
+            name: "Medication and Physical Review (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "Review clozapine dose, duration, adherence and recent levels — because the clinical response to the request depends on whether levels are therapeutic, high or low, and whether adherence is consistent",
+              "Assess the full side-effect burden clinically — because sedation, weight gain, hypersalivation, constipation and metabolic changes require objective measurement rather than symptomatic self-report alone; this informs whether active side-effect management can address Sarah's concerns",
+              "Review recent changes in smoking, caffeine and medications — because these factors affect clozapine levels through CYP1A2 and may explain a worsening side-effect burden independent of the prescribed dose"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Beginning with a relapse prevention discussion before assessing the urgency of Sarah's constipation",
+          "Treating the partner's account of relapse history as the primary clinical reference without reviewing Sarah's own account and clinical records",
+          "Responding to the stop request without first clarifying what Sarah actually wants"
+        ],
+        postExaminerNote: "Candidates who identified constipation urgency as the first clinical priority, clarified the request before responding, used clinical records rather than the partner's summary as the relapse history reference, and reviewed medication and lifestyle factors driving side effects scored in the upper range. Candidates who opened with relapse prevention or who accepted the partner's framing without clinical verification did not achieve the standard."
+      },
+      {
+        stemNumber: "1.2",
+        vignette: "Sarah is tearful and says the side effects make her feel disgusting and trapped. She says sedation affects her parenting and her work. Her partner insists she must remain on the same dose because relapse would be catastrophic. Sarah asks: 'Do I actually have the right to stop this, or can you put me on an order and make me take it?'",
+        question: "Discuss — list and debate how you would respond to Sarah's question, including her right to make a capacitous decision, the realistic limits of compulsory treatment for ongoing oral medication, the relapse risk and what less drastic options exist.\nA list without debate specific to this case will not be awarded any marks.\n(9 marks | 9 minutes)",
+        commandWord: "debate",
+        marks: 9,
+        timeMinutes: 9,
+        stemSignals: [
+          "Sarah is asking a legal question that deserves an honest legal answer — 'can you put me on an order' requires the consultant to address what compulsory community treatment can and cannot actually achieve for ongoing oral clozapine compliance",
+          "The partner's insistence that she must remain on the same dose does not override Sarah's capacitous choice — partner concern is clinically relevant but not determinative",
+          "The shame language — disgusting and trapped — signals that the therapeutic relationship is under pressure; a response focused only on relapse risk will lose her"
+        ],
+        domains: [
+          {
+            name: "Sarah's Right to Decide (2 marks)",
+            marks: 2,
+            keyPoints: [
+              "Confirm Sarah's decision-making capacity for this specific decision — because capacity is decision-specific and time-specific; if Sarah has capacity she has the right to make informed decisions about her treatment including refusal",
+              "Acknowledge her right directly and without qualification — because Sarah's question deserves an honest answer; she has the right to make a capacitous decision, and the team's role is to support informed choice, not to override it"
+            ]
+          },
+          {
+            name: "The Limits of Compulsory Treatment (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "There is tension between Sarah's autonomy and the foreseeable relapse risk — the defensible position is that a compulsory treatment order does not resolve this tension, because enforcing ongoing oral clozapine compliance in the community is practically and ethically limited",
+              "A community treatment order in most jurisdictions can require treatment engagement and monitoring, but enforcing oral medication adherence at home for a person who refuses is not reliably achievable through legal compulsion alone — because clozapine cannot be given by injection to maintain compliance; the legal framework does not provide a practical mechanism for the partner's demand",
+              "Involuntary inpatient treatment could be used if Sarah deteriorated and met criteria, but applying compulsion now to prevent a future relapse in a capacitous person who has not yet deteriorated requires a very high clinical and legal threshold — because anticipatory compulsion is not the same as treating a current acute presentation, and the least restrictive principle applies"
+            ]
+          },
+          {
+            name: "Less Drastic Options and Relapse Planning (4 marks)",
+            marks: 4,
+            keyPoints: [
+              "Explore side-effect management before cessation — because active treatment of constipation, sedation, hypersalivation and metabolic burden may resolve the reasons Sarah wants to stop without the relapse risk of cessation",
+              "Explore dose reduction guided by clozapine level and symptom review — because the lowest effective dose that maintains response may produce less side-effect burden without full cessation",
+              "If Sarah chooses to stop, plan a gradual taper with close monitoring and a relapse signature plan — because abrupt cessation increases rebound psychosis risk; a structured taper with early warning sign identification and rapid review access is safer than abrupt stop",
+              "Maintain therapeutic alliance regardless of Sarah's decision — because a woman who feels disgusting and trapped needs to experience the clinical relationship as supportive, not coercive; alliance is the mechanism through which monitoring and early intervention remain possible"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Telling Sarah that a community order can enforce oral clozapine compliance at home",
+          "Allowing the partner's insistence to override Sarah's capacitous right to decide",
+          "Responding to the relapse risk without addressing Sarah's shame and the therapeutic relationship damage it signals"
+        ],
+        postExaminerNote: "Candidates who gave Sarah an honest answer about the limits of compulsory community treatment for oral medication, named the practical and ethical constraints on enforcing clozapine compliance, explored side-effect management and dose reduction as less drastic alternatives, and maintained therapeutic alliance as a clinical priority scored in the upper range. Candidates who stated that a community order could force her to take clozapine, or who allowed the partner's position to dominate the response, did not achieve the standard."
+      },
+      {
+        stemNumber: "1.3",
+        vignette: "Further review shows severe constipation, hypersalivation, daytime sedation, weight gain, raised fasting glucose and reduced exercise tolerance. Her clozapine level is higher than expected for her dose. She recently stopped smoking after a respiratory illness. Her GP started fluvoxamine for anxiety two months ago. Sarah has also been drinking several strong coffees daily to manage sedation.",
+        question: "Describe — list and explain your management plan, including your identification of what is driving the elevated clozapine level and how each contributing factor should be addressed.\nA list without explanation will not be awarded any marks.\n(10 marks | 10 minutes)",
+        commandWord: "describe_explain",
+        marks: 10,
+        timeMinutes: 10,
+        stemSignals: [
+          "Three factors are contributing to the elevated level — smoking cessation, fluvoxamine and caffeine; all three must be named with their mechanism; identifying only smoking cessation is an incomplete answer",
+          "Fluvoxamine is the most significant pharmacological driver — it is a potent CYP1A2 inhibitor that substantially raises clozapine levels; its introduction two months ago corresponds to the worsening side-effect burden",
+          "Constipation requires urgent management — it is already severe; this is not a chronic monitoring issue"
+        ],
+        domains: [
+          {
+            name: "Identifying Drivers of Elevated Clozapine Level (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "Identify fluvoxamine as the primary pharmacological driver — because fluvoxamine is a potent CYP1A2 inhibitor; its introduction two months ago substantially raises clozapine plasma levels and directly explains the timing of worsening side effects; this interaction is the most important correctable cause",
+              "Identify smoking cessation as a contributing factor — because smoking induces CYP1A2 and cessation reduces induction, raising clozapine levels; the respiratory illness coinciding with smoking cessation explains a further level increase independent of fluvoxamine",
+              "Identify caffeine as a contributing factor — because caffeine is a CYP1A2 substrate that competes for metabolism; high caffeine intake can further affect clozapine levels and independently worsens anxiety, insomnia and cardiovascular monitoring parameters"
+            ]
+          },
+          {
+            name: "Urgent Side-Effect Management (4 marks)",
+            marks: 4,
+            keyPoints: [
+              "Treat constipation urgently with an active bowel regimen — because severe constipation on clozapine can progress to ileus and perforation; laxatives, hydration, diet review and clear escalation criteria for abdominal pain or obstruction are required now",
+              "Review clozapine dose guided by level and clinical symptoms — because the elevated level is driving toxicity; a level-guided dose reduction may resolve sedation, hypersalivation and constipation burden without requiring full cessation",
+              "Address anxiety treatment urgently — because fluvoxamine must be reviewed as a treatment choice in a person already on clozapine; alternative anxiety management strategies or a medication with a lower CYP1A2 interaction profile should be discussed with Sarah and the GP",
+              "Manage sedation through dose timing review, removal of other sedating contributors and assessment for sleep apnoea — because daytime sedation has occupational safety implications for Sarah's childcare work that require active management, not observation"
+            ]
+          },
+          {
+            name: "Metabolic and Monitoring Review (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "Address metabolic risk actively — because raised fasting glucose and reduced exercise tolerance require dietitian input, GP monitoring for diabetes, lipid review and discussion of lifestyle or pharmacological metabolic management",
+              "Repeat clozapine levels after fluvoxamine is reviewed and smoking status stabilises — because levels will change with each intervention; monitoring must track the level through each change rather than assuming a new steady state",
+              "Create a shared relapse signature plan with Sarah — because any dose reduction or medication change creates a period of altered clozapine exposure; named early warning signs, monitoring frequency and rapid review access provide a safety net during this period"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Identifying only smoking cessation without naming fluvoxamine as the primary pharmacological driver",
+          "Treating constipation as a chronic monitoring issue rather than an urgent clinical problem requiring immediate management",
+          "Recommending dose reduction without a plan to repeat levels after the contributing factors are addressed"
+        ],
+        postExaminerNote: "Candidates who named all three contributors to the elevated level with their specific mechanisms, identified fluvoxamine as the primary pharmacological cause and the most correctable, treated constipation as an urgent clinical priority, and built level monitoring into the management plan at each intervention point scored in the upper range. Candidates who identified only smoking cessation, or who provided a generic side-effect management plan without identifying the drug interaction, did not achieve the standard."
+      },
+      {
+        stemNumber: "1.4",
+        vignette: "Sarah agrees to continue clozapine if her side effects are actively managed. Three months later, she remains stable and says her main goal is returning to full-time work. The case manager is concerned that longer hours may disrupt sleep, increase stress and interfere with blood-test attendance.",
+        question: "Outline — list and justify how you would support Sarah's recovery goal while maintaining the monitoring and relapse-prevention requirements that clozapine treatment involves.\n(6 marks | 6 minutes)",
+        commandWord: "outline_justify",
+        marks: 6,
+        timeMinutes: 6,
+        stemSignals: [
+          "Start from Sarah's goal, not from the case manager's anxiety — the case manager's concerns are legitimate clinical risks but they must be addressed as problems to solve, not reasons to discourage recovery",
+          "Blood-test attendance is not a bureaucratic inconvenience — it is a dispensing requirement; if Sarah cannot attend at current times, the service must adapt monitoring logistics around her working hours",
+          "The childcare centre context creates a specific professional functioning consideration — not a contraindication, but a named dimension of return-to-work planning"
+        ],
+        domains: [
+          {
+            name: "Supporting the Recovery Goal (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "Start from Sarah's goal of full-time work as the clinical frame — because recovery-oriented practice requires that the team's anxiety about relapse does not function as a barrier to vocational recovery when the clinical evidence supports a graduated increase",
+              "Plan a graded increase in working hours with monitoring of sleep, stress and mental state — because the case manager's concerns about sleep disruption and stress are legitimate clinical risks that should be managed through a structured plan, not used as reasons to defer recovery goals indefinitely",
+              "Involve vocational rehabilitation or employment support services with Sarah's consent — because supported return to full-time work in a person with treatment-resistant schizophrenia may benefit from specialist vocational support beyond what the mental health team provides"
+            ]
+          },
+          {
+            name: "Monitoring Continuity and Relapse Planning (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "Adapt blood-monitoring logistics to accommodate Sarah's working hours — because clozapine dispensing is contingent on current monitoring results; if the monitoring schedule cannot be attended due to work commitments, the service must offer early morning, evening or Saturday monitoring rather than making compliance with work hours incompatible with clozapine continuation",
+              "Develop a relapse signature plan that includes work-specific early warning signs — because sleep disruption and increased stress are known relapse triggers for Sarah; named early warning signs, a named contact for rapid review, and a plan for what happens if she misses a blood test give Sarah and the service a safety net during the transition",
+              "Address the childcare-centre professional context in a non-stigmatising role-relevant way — because Sarah's work involves responsibility for children; monitoring for professional functioning and reporting any concerns about role safety is appropriate, but this must be managed collaboratively with Sarah rather than as a surveillance concern imposed on her"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Deferring return to full-time work because of the case manager's concerns without a structured plan to address them",
+          "Failing to adapt blood-monitoring logistics around working hours and treating attendance difficulty as Sarah's problem to solve",
+          "Framing the childcare context as a contraindication to recovery goals rather than a named dimension of return-to-work planning"
+        ],
+        postExaminerNote: "Candidates who centred Sarah's recovery goal as the clinical frame, proposed graded increase with structured monitoring of relapse triggers, adapted monitoring logistics to her working hours rather than treating attendance as the patient's responsibility, and addressed the childcare context collaboratively rather than as a surveillance concern scored in the upper range. Candidates whose plan was primarily organised around preventing the case manager's feared outcomes rather than supporting Sarah's stated goal did not achieve the standard."
+      }
+    ]
+  },
+  {
+    id: "meq_056",
+    title: "Andrew — Clozapine Toxicity, Medical Ward and Discharge Governance",
+    case: "Andrew, 46, schizophrenia on clozapine 8 years, respiratory admission, toxicity from smoking cessation and polypharmacy",
+    examSource: "Generated — Management / Disposition",
+    topic: "Clozapine toxicity on a medical ward driven by smoking cessation, fluvoxamine interaction and sedating polypharmacy; tests differential formulation prioritising smoking cessation as the primary driver, clinical advice to the respiratory team on managing clozapine during acute infection, safe management of agitation without adding high-dose antipsychotics to an elevated clozapine level, and discharge governance for a patient who will resume smoking",
+    primaryDomain: "Management / Disposition",
+    totalMarks: 32,
+    totalTimeMinutes: 32,
+    stems: [
+      {
+        stemNumber: "1.1",
+        vignette: "Andrew is a 46-year-old man with schizophrenia treated with clozapine for eight years. He is admitted under the respiratory team with fever, productive cough and shortness of breath. He is drowsy, mildly confused and tachycardic. The medical registrar asks whether his psychosis is relapsing and whether he should be transferred to the psychiatric ward. His medication chart includes clozapine, fluvoxamine, diazepam as needed and regular codeine. His wife says he has not smoked for five days because he has been too unwell.",
+        question: "Outline — list and justify your formulation of Andrew's drowsiness, confusion and behavioural change.\nYour formulation must identify smoking cessation as a named priority and explain why psychosis relapse should not be the working assumption.\n(8 marks | 8 minutes)",
+        commandWord: "outline_justify",
+        marks: 8,
+        timeMinutes: 8,
+        stemSignals: [
+          "Smoking cessation five days ago is the most immediately actionable finding in this vignette — CYP1A2 induction is lost; clozapine levels are rising and this must be the first named explanation",
+          "The registrar has assumed psychosis relapse — this framing will drive premature psychiatric transfer; the consultant's task is to reframe this as medical toxicity until proven otherwise",
+          "The polypharmacy is not incidental — clozapine plus fluvoxamine plus diazepam plus codeine is an additive sedation cluster that must be named in the formulation"
+        ],
+        domains: [
+          {
+            name: "Clozapine Toxicity as the Primary Working Formulation (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "Smoking cessation five days ago is the most likely primary driver of clozapine toxicity — because smoking induces CYP1A2 and cessation removes this induction, substantially raising clozapine plasma levels within days; this mechanism is well established and directly explains the timing of drowsiness, confusion and tachycardia",
+              "Fluvoxamine co-prescription is a significant contributing factor — because fluvoxamine is a potent CYP1A2 inhibitor that further raises clozapine levels; its presence alongside smoking cessation creates a compounded level elevation",
+              "Additive sedation from diazepam and codeine on top of elevated clozapine levels — because each agent contributes to CNS and respiratory depression; the combination may produce clinical toxicity at clozapine levels that would otherwise be tolerated"
+            ]
+          },
+          {
+            name: "Medical Differentials (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "Delirium secondary to pneumonia or sepsis — because fever, productive cough and tachycardia with confusion is a classic delirium presentation from an infective source; this may coexist with clozapine toxicity and requires workup",
+              "Aspiration pneumonia related to hypersalivation, sedation or impaired swallowing — because clozapine-associated hypersalivation combined with sedation increases aspiration risk; the respiratory admission may be a consequence rather than a coincidence",
+              "Constipation or ileus contributing to systemic illness — because clozapine-induced bowel dysfunction can cause bacterial translocation, pain and systemic effects that worsen delirium; bowel assessment is part of the formulation"
+            ]
+          },
+          {
+            name: "Why Psychiatric Transfer is Premature (2 marks)",
+            marks: 2,
+            keyPoints: [
+              "Psychosis relapse should not be the working assumption when a clear medical and toxic explanation is present — because treating delirium and toxicity as psychosis relapse will lead to additional antipsychotic prescribing that worsens the very toxicity causing the behavioural change",
+              "Andrew requires medical stabilisation before any psychiatric assessment — because capacity, mental state and behavioural change cannot be meaningfully assessed until acute toxicity, infection and delirium are treated; premature psychiatric transfer removes him from appropriate medical care"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Accepting the registrar's framing of psychosis relapse without providing a counter-formulation",
+          "Omitting smoking cessation as a named driver of elevated clozapine levels",
+          "Not naming fluvoxamine and the polypharmacy cluster as contributors to the formulation"
+        ],
+        postExaminerNote: "Candidates who named smoking cessation as the first and most actionable explanation, provided a toxicity-first formulation that explicitly countered the psychosis relapse assumption, and named the full polypharmacy cluster as additive contributors scored in the upper range. Candidates who accepted the psychiatric transfer request or who formulated primarily around delirium without identifying the clozapine toxicity mechanism did not achieve the standard."
+      },
+      {
+        stemNumber: "1.2",
+        vignette: "Blood results show raised inflammatory markers. A clozapine level taken on admission is markedly higher than his usual level. Nursing staff report hypersalivation, worsening constipation and an episode of nocturnal choking. The respiratory team wants all psychiatric medication continued unchanged because they fear relapse.",
+        question: "Discuss — list and debate how you would advise the respiratory team, including your position on continuing clozapine unchanged, the management of aspiration risk, and the clinical reasoning for reviewing interacting medications.\nA list without debate specific to this case will not be awarded any marks.\n(10 marks | 10 minutes)",
+        commandWord: "debate",
+        marks: 10,
+        timeMinutes: 10,
+        stemSignals: [
+          "The respiratory team's position is understandable but clinically incorrect — continuing clozapine unchanged with a markedly elevated level and nocturnal choking is the greater risk; this is the debate the question is testing",
+          "Nocturnal choking is an aspiration risk requiring immediate practical management — not a monitoring note",
+          "The debate must produce a defensible consultant position, not a balanced list of considerations"
+        ],
+        domains: [
+          {
+            name: "Position on Continuing Clozapine Unchanged (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "There is tension between the respiratory team's fear of relapse from dose reduction and the clinical risk of continuing an elevated clozapine dose during infection and polypharmacy — the defensible position is that continuing unchanged is the greater risk because toxicity from an elevated level is causing the very behaviours the team is attributing to relapse",
+              "A temporary dose reduction or withholding decision must be guided by the level, clinical severity and respiratory status — because this is a dynamic medical situation requiring daily reassessment; a single prescribing decision that covers the whole admission is not appropriate",
+              "Relapse risk from temporary dose reduction in a person who has been stable for eight years on established clozapine is lower than the risk of worsening toxicity, falls, respiratory depression and aspiration — because the relapse window for a brief level-guided reduction is clinically manageable with monitoring; the toxicity risk is immediate and concrete"
+            ]
+          },
+          {
+            name: "Aspiration Risk Management (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "Address nocturnal choking as an immediate aspiration risk — because this is not a nursing observation to note; it requires aspiration precautions, positioning, swallowing assessment and respiratory team awareness today",
+              "Review hypersalivation management — because hypersalivation in a sedated patient with impaired swallowing creates aspiration risk; practical measures and pharmacological options that do not worsen constipation should be implemented",
+              "Assess bowel function urgently — because worsening constipation during acute illness on clozapine may progress to ileus and represents both a direct risk and a contributor to systemic deterioration"
+            ]
+          },
+          {
+            name: "Reviewing Interacting Medications (2 marks)",
+            marks: 2,
+            keyPoints: [
+              "Review fluvoxamine urgently — because fluvoxamine is a potent CYP1A2 inhibitor that is substantially raising Andrew's clozapine level; continuing it during acute infection and smoking cessation compounds the toxicity and must be discussed with the prescribing doctor",
+              "Review diazepam and codeine — because both contribute to sedation and respiratory depression on top of elevated clozapine; neither should continue at the same dose without review of the indication and the additive sedation risk"
+            ]
+          },
+          {
+            name: "Shared Medical-Psychiatric Responsibility (2 marks)",
+            marks: 2,
+            keyPoints: [
+              "This is shared medical and psychiatric risk — because Andrew's clozapine management during medical admission requires active psychiatry input, not hand-off to the respiratory team with unchanged prescribing",
+              "Document the clinical advice, the reasoning and the agreed plan clearly for after-hours staff — because level-guided dose decisions in a medically unwell patient change daily and must be communicated to everyone who may be prescribing"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Agreeing to continue clozapine unchanged because the respiratory team fears relapse",
+          "Treating nocturnal choking as a monitoring note rather than an immediate aspiration risk",
+          "Not naming fluvoxamine as a modifiable contributor to the elevated level"
+        ],
+        postExaminerNote: "Candidates who took a clear position against continuing clozapine unchanged with a specific clinical rationale, addressed nocturnal choking as an immediate aspiration risk, named fluvoxamine as a modifiable pharmacological contributor, and framed this as shared medical-psychiatric responsibility scored in the upper range. Candidates who deferred to the respiratory team's position on continuing unchanged or who did not address aspiration risk did not achieve the standard."
+      },
+      {
+        stemNumber: "1.3",
+        vignette: "Andrew becomes more agitated overnight and tries to leave the ward, saying staff are poisoning him. The medical team asks for high-dose additional antipsychotic sedation. His wife says: 'When he was last over-sedated, he fell and fractured his wrist.' Andrew is intermittently confused and cannot consistently explain the risks of leaving hospital.",
+        question: "Describe — list and explain your immediate management plan, including your response to the request for high-dose additional antipsychotic sedation, your approach to capacity and the legal framework for keeping Andrew in hospital.\nA list without explanation will not be awarded any marks.\n(9 marks | 9 minutes)",
+        commandWord: "describe_explain",
+        marks: 9,
+        timeMinutes: 9,
+        stemSignals: [
+          "The wife's statement about prior oversedation and fracture is the hidden examiner trap — adding high-dose antipsychotics to an elevated clozapine level in a patient with a documented falls history from oversedation is the response the question is testing against",
+          "Intermittent confusion means capacity fluctuates — this requires a capacity assessment at the time of each decision, not a single conclusion",
+          "The delusional belief that staff are poisoning him may be a clozapine toxicity symptom or a psychotic relapse — the management differs depending on the cause"
+        ],
+        domains: [
+          {
+            name: "Response to High-Dose Sedation Request (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "Decline high-dose additional antipsychotic sedation — because Andrew already has a markedly elevated clozapine level; adding high-dose antipsychotics increases sedation, falls risk, QTc prolongation, respiratory depression and cardiac risk in a patient whose prior oversedation caused a fractured wrist",
+              "Explain the specific risk to the medical team using the wife's account — because the prior fracture from oversedation is not a general concern; it is a named clinical history that makes the requested intervention particularly dangerous for this patient",
+              "If medication is clinically necessary, use the lowest possible dose of the safest agent with direct medical monitoring — because the principle is minimum effective dose with active monitoring, not withholding all medication; the decision requires senior review and documented rationale"
+            ]
+          },
+          {
+            name: "Capacity Assessment (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "Assess capacity at the time of each decision — because intermittent confusion means capacity fluctuates; the assessment must be conducted now, for the specific decision about remaining in hospital, not assumed from prior or subsequent assessments",
+              "Optimise capacity before concluding incapacity — because reorientation, involvement of the wife, plain language and a calm environment may improve Andrew's ability to understand and weigh the decision",
+              "Distinguish paranoid ideation about poisoning from inability to weigh the decision — because the belief that staff are poisoning him affects his motivation to stay but may not prevent him from understanding the medical risks of leaving; these are different assessments with different implications"
+            ]
+          },
+          {
+            name: "Legal Framework and Safety (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "If Andrew lacks capacity and the medical risk of leaving is serious, detention under the appropriate legal framework can be considered — because a person without capacity to refuse medical treatment for a serious and treatable condition may be detained under common law duty of care or relevant guardianship or mental health legislation, depending on jurisdiction",
+              "Use least restrictive measures first — because calm environment, reorientation, wife presence and explanation of what the team is doing may reduce agitation without requiring formal legal action or sedation",
+              "Collaborate with the respiratory team as a shared medical-psychiatric responsibility — because the legal and clinical decisions about capacity, detention and sedation must be made jointly with the medical team who have treating responsibility"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Agreeing to high-dose antipsychotic sedation without addressing the elevated clozapine level and falls history",
+          "Concluding incapacity from the presence of paranoid ideation without conducting a capacity assessment for this specific decision",
+          "Treating the agitation as a psychiatric emergency requiring transfer rather than a shared medical-psychiatric responsibility"
+        ],
+        postExaminerNote: "Candidates who declined high-dose sedation with the specific clinical rationale of elevated clozapine level and prior fracture history, conducted a capacity assessment for the specific decision about remaining in hospital, used the wife's account clinically rather than only as collateral, and maintained shared responsibility with the medical team scored in the upper range. Candidates who agreed to additional antipsychotic sedation, or who transferred Andrew to psychiatry to manage the agitation, did not achieve the standard."
+      },
+      {
+        stemNumber: "1.4",
+        vignette: "Andrew improves medically. His infection is resolving, antibiotics will finish in three days, and he says he will probably resume smoking once home. His clozapine dose was reduced during admission. His wife is worried he will relapse if the dose is not returned quickly to the previous level.",
+        question: "Outline — list and justify your follow-up plan after discharge from the medical ward, addressing the clozapine dose, the impact of smoking resumption, and who is responsible for monitoring levels after discharge.\n(5 marks | 5 minutes)",
+        commandWord: "outline_justify",
+        marks: 5,
+        timeMinutes: 5,
+        stemSignals: [
+          "Smoking resumption after discharge will lower clozapine levels — this is the reverse of the admission dynamic; it must be anticipated in the discharge plan",
+          "Who owns the monitoring after discharge is the governance question — the ward, the clozapine clinic, the GP and the community psychiatry team each have a role; leaving this undefined recreates the risk that caused the admission presentation",
+          "The wife's concern about rapid dose return is legitimate but cannot override level-guided prescribing"
+        ],
+        domains: [
+          {
+            name: "Clozapine Dose and Smoking Resumption (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "Do not return to the pre-admission clozapine dose until Andrew has resumed smoking and levels have restabilised — because the pre-admission dose was calibrated to his smoking status; returning to it while he remains non-smoking may recreate the toxicity that caused the admission",
+              "Warn Andrew and his wife that resuming smoking will lower clozapine levels and may increase relapse risk if the dose is not adjusted upward — because the wife needs to understand that smoking cessation changes the pharmacokinetics and that dose management after resumption requires clinical review, not simply returning to the previous dose",
+              "Arrange a clozapine level within one to two weeks of discharge and after smoking status has stabilised — because levels change dynamically with smoking and require objective measurement to guide dose decisions; clinical judgment alone is insufficient without a level"
+            ]
+          },
+          {
+            name: "Named Monitoring Responsibility After Discharge (2 marks)",
+            marks: 2,
+            keyPoints: [
+              "Name who is responsible for post-discharge clozapine monitoring and dose adjustment in the discharge summary — because the admission presentation was partly caused by unclear ownership of monitoring after a prior discharge; the discharge summary must specify which service will review the level, who will adjust the dose and what the contingency is if levels are abnormal",
+              "Ensure the clozapine clinic, community psychiatrist and GP all receive the discharge summary with the current dose, level at discharge and the smoking-resumption dose plan — because all three parties may encounter Andrew in the post-discharge period and each needs the same information to respond safely"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Returning to the pre-admission dose immediately because the wife is concerned about relapse",
+          "Failing to name who is responsible for monitoring levels after discharge",
+          "Not addressing the pharmacokinetic impact of smoking resumption on clozapine levels in the discharge plan"
+        ],
+        postExaminerNote: "Candidates who delayed return to the pre-admission dose pending level restabilisation after smoking resumption, warned both Andrew and his wife about the bidirectional impact of smoking on clozapine levels, and named specific post-discharge monitoring responsibility in the discharge summary scored in the upper range. Candidates who returned to the pre-admission dose immediately or who did not address smoking resumption as a discharge planning issue did not achieve the standard."
+      }
+    ]
+  },
+  {
+    id: "meq_057",
+    title: "Robert — Missed Clozapine Doses and Transfer-of-Care Failure",
+    case: "Robert, 52, schizophrenia stable on clozapine 12 years, missed doses after discharge, ED re-presentation, system failure",
+    examSource: "Generated — Governance / Systems / Leadership",
+    topic: "Clozapine missed doses after discharge due to monitoring system failure; tests immediate clinical risk assessment before prescribing, disposition decision under bed pressure when re-titration is required, open disclosure to an angry family member, and governance response to a serious medication safety near-miss including registrar supervision and systems redesign",
+    primaryDomain: "Governance / Systems / Leadership",
+    totalMarks: 33,
+    totalTimeMinutes: 33,
+    stems: [
+      {
+        stemNumber: "1.1",
+        vignette: "Robert is a 52-year-old man with schizophrenia who has been stable on clozapine for 12 years. He was discharged from the psychiatric ward four days ago after a short admission for depression. He returns to the emergency department with insomnia, anxiety, worsening voices and nausea. The community pharmacy reports it has not dispensed clozapine since discharge because his latest blood result was not visible on the monitoring system.",
+        question: "Outline — list and justify the immediate issues you would clarify before deciding whether clozapine can be prescribed tonight.\nA list without because-clauses specific to this case will not be awarded any marks.\n(8 marks | 8 minutes)",
+        commandWord: "outline_justify",
+        marks: 8,
+        timeMinutes: 8,
+        stemSignals: [
+          "The monitoring system not showing a result is not an administrative problem — it is a dispensing barrier that must be resolved before any clozapine can legally be supplied; the clinical urgency does not override this",
+          "Robert's symptoms are consistent with both clozapine withdrawal and early relapse — the distinction matters for management but both require urgent assessment",
+          "The number of days missed determines the re-titration requirement — this is the clinical question that determines whether full-dose restart is safe or requires a protocol restart"
+        ],
+        domains: [
+          {
+            name: "Confirming Missed Doses and Re-titration Threshold (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "Confirm the exact date of the last clozapine dose and the number of consecutive days missed — because local clozapine monitoring programs specify a threshold beyond which re-titration is required rather than continuation at the usual dose; the number of days determines the prescribing pathway",
+              "Contact the ward, clozapine clinic and pharmacy to reconstruct what happened to the blood monitoring result — because prescribing tonight requires knowing whether the monitoring gap is a system error that can be resolved or whether a new blood result is required before dispensing can be authorised",
+              "Clarify whether Robert received any clozapine after discharge from the ward — because if the pharmacy has not dispensed since discharge, Robert may have missed more doses than the four days since discharge; tablets left over from the admission or from prior supply must be accounted for"
+            ]
+          },
+          {
+            name: "Clinical Assessment (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "Assess relapse symptoms — because worsening voices, insomnia and anxiety may represent early psychotic relapse, clozapine withdrawal, or both; the clinical urgency of each differs and the assessment must distinguish them",
+              "Assess physical state including BP, pulse, temperature, hydration and sedation — because re-starting clozapine requires a baseline physical assessment and Robert's current physical condition affects the safety of any re-titration",
+              "Assess nausea as a possible clozapine withdrawal symptom — because nausea after missed doses is a recognised withdrawal feature that supports the timeline of missed doses and helps distinguish withdrawal from intercurrent illness"
+            ]
+          },
+          {
+            name: "Prescribing Safety Before Restart (2 marks)",
+            marks: 2,
+            keyPoints: [
+              "Do not prescribe Robert's usual full dose tonight before clarifying the number of missed days — because if more than the local threshold of missed days has passed, restarting at the usual dose risks severe hypotension, sedation, seizures or collapse; the threshold determines whether re-titration is required",
+              "Consider need for admission or observation — because Robert is at risk from both relapse and potentially unsafe clozapine re-initiation; disposition cannot be determined until the missed-dose timeline and re-titration pathway are confirmed"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Prescribing Robert's usual full dose because he says he knows it and wants it tonight",
+          "Treating the monitoring system gap as an administrative problem to be resolved tomorrow",
+          "Assessing clinical urgency without first clarifying the number of missed days"
+        ],
+        postExaminerNote: "Candidates who identified the number of missed days as the primary clinical question determining the prescribing pathway, named the monitoring system gap as a dispensing barrier requiring resolution before prescribing, and assessed both relapse symptoms and physical state before making any prescribing decision scored in the upper range. Candidates who prescribed the usual full dose because of clinical urgency without addressing the re-titration threshold did not achieve the standard."
+      },
+      {
+        stemNumber: "1.2",
+        vignette: "You confirm Robert has missed more than two days of clozapine. He is frightened of relapse and says: 'I know my usual dose. Just give it to me.' His brother says Robert became severely psychotic within a week during a previous clozapine interruption. The ED is crowded and the bed manager asks whether Robert can be discharged with tablets and reviewed tomorrow.",
+        question: "Discuss — list and debate your decision about Robert's immediate management and disposition, naming the tension between his request, the re-titration requirement, his brother's account of prior rapid relapse and the bed manager's request.\nA list without debate specific to this case will not be awarded any marks.\n(10 marks | 10 minutes)",
+        commandWord: "debate",
+        marks: 10,
+        timeMinutes: 10,
+        stemSignals: [
+          "Robert's knowledge of his usual dose does not override the re-titration safety requirement — this is the debate the question is testing",
+          "His brother's account of rapid relapse within a week during a prior interruption is clinically significant collateral — it changes the risk assessment for overnight discharge",
+          "Bed pressure is the zero-mark trap — accepting it as a clinical reason for discharge is the most frequently cited examiner failure in this domain"
+        ],
+        domains: [
+          {
+            name: "Re-titration vs Full-Dose Restart (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "There is tension between Robert's informed demand for his usual dose and the clinical safety requirement for re-titration after more than two days missed — the defensible position is that the re-titration requirement is not a bureaucratic obstacle; restarting at the usual dose risks severe hypotension, sedation and seizures because receptor sensitivity has changed during the interruption",
+              "Explain this to Robert specifically and honestly — because Robert's 12 years of experience with clozapine makes him a knowledgeable patient; he deserves an explanation of why his pharmacology has changed during the interruption, not a generic refusal",
+              "Begin re-titration at the locally specified starting dose under observation — because safe re-titration requires monitored dose escalation; the protocol protects Robert from the harms he is at risk of, not from his medication"
+            ]
+          },
+          {
+            name: "Relapse Risk and Disposition (4 marks)",
+            marks: 4,
+            keyPoints: [
+              "There is tension between the bed manager's request to discharge and Robert's high relapse risk during re-titration — the defensible position is that discharge with tablets for unsupervised re-titration at home is clinically indefensible given documented prior rapid relapse within a week of interruption",
+              "His brother's account of rapid psychosis during the previous interruption changes the risk calculation — because documented rapid relapse history is a specific and clinically significant risk factor that must be named in the disposition decision; this is not generic relapse prevention reasoning",
+              "Admit or observe Robert for the initial re-titration phase — because the combination of high relapse risk, re-titration requirement, and limited community support for overnight monitoring makes admission or extended ED observation the safer disposition",
+              "Escalate bed pressure conflict explicitly — because safety overrides ED flow; the clinical rationale for admission must be documented and the bed manager must be given a specific clinical reason, not a general appeal to safety"
+            ]
+          },
+          {
+            name: "Monitoring and Supply (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "Resolve the monitoring system gap before discharge — because clozapine cannot be dispensed without a current authorising blood result; if the gap cannot be resolved tonight, a new blood result is required before community supply can resume",
+              "Contact the clozapine clinic and community pharmacy tonight — because they need to know Robert is being admitted and re-titrated so they can coordinate supply and monitoring continuity from the point of discharge",
+              "Involve Robert's brother with Robert's consent — because the brother has provided important relapse collateral and can contribute to monitoring during re-titration if Robert is discharged after initial stabilisation"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Prescribing the usual full dose because Robert is knowledgeable and insistent",
+          "Discharging with tablets because the ED is crowded",
+          "Treating the brother's account of rapid relapse as background history rather than a named clinical risk factor"
+        ],
+        postExaminerNote: "Candidates who declined full-dose restart with a specific pharmacological rationale, used the brother's account of rapid relapse as a named clinical risk factor in the disposition decision, admitted or arranged supervised observation for re-titration, and declined bed pressure as a clinical justification for unsafe discharge scored in the upper range. Candidates who prescribed the usual dose because Robert was insistent, or who accepted the bed manager's request without clinical justification, did not achieve the standard."
+      },
+      {
+        stemNumber: "1.3",
+        vignette: "The next morning, you discover the discharge summary did not specify who was responsible for clozapine blood monitoring. The community pharmacy tried to contact the ward but received no reply. The clozapine clinic thought Robert was still an inpatient. Robert's brother is angry and asks: 'How can this happen with such a dangerous medication?'",
+        question: "Describe — list and explain how you would respond to Robert and his brother, including what open disclosure requires in this situation and what you can honestly say about what happened.\nA list without explanation will not be awarded any marks.\n(7 marks | 7 minutes)",
+        commandWord: "describe_explain",
+        marks: 7,
+        timeMinutes: 7,
+        stemSignals: [
+          "Open disclosure is not optional when a monitoring failure has caused a patient to miss medication and re-present to ED — the brother's anger signals the relationship damage that undisclosed system failures cause",
+          "What you can honestly say at this point is limited — the investigation is not complete; open disclosure requires honesty about what is known and unknown, not a premature explanation",
+          "Robert is the patient — he must be part of this conversation, not spoken around"
+        ],
+        domains: [
+          {
+            name: "Immediate Response to Robert (2 marks)",
+            marks: 2,
+            keyPoints: [
+              "Ensure Robert's current re-titration and monitoring plan is safe before the family conversation — because clinical safety is the first obligation; the disclosure conversation cannot compensate for an inadequate clinical response",
+              "Include Robert directly in the conversation — because Robert is the patient; addressing the brother's anger without engaging Robert directly treats him as a passive subject rather than the person whose care was affected"
+            ]
+          },
+          {
+            name: "Open Disclosure (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "Acknowledge that a breakdown in discharge communication appears to have occurred — because the brother's question deserves an honest answer; the discharge summary did not specify monitoring responsibility, the pharmacy could not get a reply, and the clozapine clinic did not know Robert had been discharged; these are facts that can be stated",
+              "Apologise for the distress and inconvenience caused — because an apology for the impact of a confirmed system failure is appropriate and required by open disclosure principles; it does not require full investigation findings to be honest about the distress caused",
+              "Be clear about what is not yet known — because premature attribution of cause or blame before the investigation is complete is both ethically and legally problematic; the brother deserves honesty about the limits of what can be said at this stage"
+            ]
+          },
+          {
+            name: "Next Steps and Contact (2 marks)",
+            marks: 2,
+            keyPoints: [
+              "State that the incident will be formally reviewed and explain what that means in practice — because the brother needs to understand that this is not being dismissed; naming that an incident review will examine what happened and how it will be prevented gives the family a concrete rather than a vague response",
+              "Provide a named contact person for ongoing questions — because directing the family to ask the ward generally is not adequate after a confirmed system failure; a named person with responsibility for following up creates accountability and reduces the family's experience of being passed around"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Responding primarily to the brother's anger without engaging Robert directly",
+          "Providing a premature explanation of cause before the investigation is complete",
+          "Treating the response as a complaint management task rather than an open disclosure obligation"
+        ],
+        postExaminerNote: "Candidates who confirmed Robert's clinical safety first, addressed both Robert and his brother with Robert as the primary person, acknowledged the system failure honestly within the limits of what was known, apologised for the distress caused, and provided a named contact for follow-up scored in the upper range. Candidates who responded primarily to the brother's anger without engaging Robert, or who gave a premature causal explanation before investigation, did not achieve the standard."
+      },
+      {
+        stemNumber: "1.4",
+        vignette: "The service director asks you to review the incident. Early findings show inconsistent discharge checklists, unclear pharmacy notification processes, no after-hours pathway for missing clozapine blood results, and poor communication between the ward and clozapine clinic. A junior registrar says: 'This is just an admin error. Robert is fine now.'",
+        question: "Discuss — list and debate the actions you would take in response to this incident, including your response to the registrar's framing, the governance obligations and the systems changes required.\nA list without debate specific to this case will not be awarded any marks.\n(8 marks | 8 minutes)",
+        commandWord: "debate",
+        marks: 8,
+        timeMinutes: 8,
+        stemSignals: [
+          "The registrar's framing is the hidden examiner trap — Robert is fine now is the classic minimisation of a serious near-miss; how the consultant corrects this without creating blame is a distinct and testable task",
+          "The four system failures named by the early findings are not equivalent — inconsistent checklists, unclear pharmacy notification, no after-hours pathway and poor handover represent different levels of risk and require different remedies",
+          "The consultant's role here is not investigation — it is governance leadership; the debate is about what a consultant must do, not what the investigation team will find"
+        ],
+        domains: [
+          {
+            name: "Responding to the Registrar (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "There is tension between maintaining the registrar's psychological safety and correcting a minimisation framing that could allow a serious safety risk to recur — the defensible position is that Robert being fine now does not retrospectively make the near-miss acceptable; foreseeable serious harm that did not eventuate is the definition of a near-miss, not evidence that the system worked",
+              "Explain to the registrar what a near-miss means — because the registrar's framing reveals a learning need about how safety events are classified; the absence of harm after a dangerous system failure means the system needs fixing, not that the concern was overcalculated",
+              "Approach this as a supervision and learning conversation — because attributing blame to the registrar for minimising would be counterproductive; the goal is to shift the framing from outcome to process, modelling the just-culture approach the governance system requires"
+            ]
+          },
+          {
+            name: "Governance Obligations (3 marks)",
+            marks: 3,
+            keyPoints: [
+              "Report through the local incident management system at the appropriate severity level — because a clozapine missed-dose event that caused ED re-presentation and required re-titration meets the threshold for a formal patient safety incident report; this is a consultant governance obligation, not a choice",
+              "Use a just-culture approach in the review — because the early findings show system failures at multiple points; identifying the system vulnerabilities that produced the failure protects future patients and staff, while attributing individual blame without examining the system context recreates the conditions for recurrence",
+              "Audit recent clozapine discharges — because if the discharge checklist is inconsistently used and pharmacy notification is unclear, Robert's case is unlikely to be isolated; an audit of recent discharges identifies the scope of the problem before the next case presents"
+            ]
+          },
+          {
+            name: "Systems Changes Required (2 marks)",
+            marks: 2,
+            keyPoints: [
+              "Create an after-hours pathway for blocked clozapine dispensing — because the absence of a pathway for missing blood results meant the pharmacy had no escalation route and Robert had no medication; this gap must be closed with a named process before the next after-hours dispensing block occurs",
+              "Revise the discharge checklist to include last clozapine dose, next blood test due date, dispensing pharmacy, monitoring program status and contingency if dispensing is blocked — because the current checklist does not reliably capture the information required to maintain clozapine continuity after discharge; the checklist must be redesigned and its use must be monitored"
+            ]
+          }
+        ],
+        zeroMarkTraps: [
+          "Accepting the registrar's framing that Robert being fine now means the incident requires no further action",
+          "Treating the governance response as the investigation team's responsibility without naming the consultant's specific obligations",
+          "Providing a list of system changes without addressing the registrar supervision task"
+        ],
+        postExaminerNote: "Candidates who corrected the registrar's minimisation framing using near-miss reasoning without attributing blame, named the incident report as a consultant governance obligation rather than a choice, used a just-culture approach to identify system vulnerabilities, and proposed specific checklist and pathway changes with implementation monitoring scored in the upper range. Candidates who accepted the registrar's framing, or who treated governance response as solely the investigation team's responsibility, did not achieve the standard."
+      }
+    ]
+  }
 ];
 
 // ============================================================

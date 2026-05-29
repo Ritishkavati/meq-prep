@@ -1,7 +1,7 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-05-28",
-  "totalQuestions": 53,
+  "lastUpdated": "2026-05-29",
+  "totalQuestions": 57,
   "questions": [
     {
       "id": "meq_001",
@@ -706,6 +706,66 @@
       "primaryDomain": "Treatment / Scholarship",
       "totalMarks": 29,
       "createdAt": "2026-05-28",
+      "status": "active"
+    },
+    {
+      "id": "meq_054",
+      "title": "James \u2014 Clozapine Initiation, Monitoring and Governance",
+      "usedIn": "daily_meq",
+      "primaryDomain": "Treatment / Scholarship",
+      "ageGroup": "18-25",
+      "setting": "inpatient",
+      "clinicalTheme": "Clozapine initiation in treatment-resistant schizophrenia in a young involuntary patient; CPMS registration gap, anxious mother with specific cardiac and bowel concerns, titration safety under bed pressure, and formal complaint with monitoring failures.",
+      "culturalTag": "none",
+      "pressureSequence": "Registration and baseline gaps precede first dose, then family fear and patient ambivalence at consent meeting, then tachycardia and bed pressure during titration, then formal complaint with monitoring failure on chart review.",
+      "finalDilemma": "How to respond simultaneously to a formal complaint, confirmed monitoring failures, registrar supervision needs and ward protocol breakdown while keeping James's current clinical safety as the first obligation.",
+      "patientName": "James",
+      "createdAt": "2026-05-29",
+      "status": "active"
+    },
+    {
+      "id": "meq_055",
+      "title": "Sarah \u2014 Clozapine Side-Effect Burden, Autonomy and Recovery",
+      "usedIn": "daily_meq",
+      "primaryDomain": "Ethics / Professionalism / Legal",
+      "ageGroup": "26-64",
+      "setting": "community",
+      "clinicalTheme": "Stable clozapine patient requests cessation due to side-effect burden; elevated level driven by fluvoxamine, smoking cessation and caffeine; capacitous right to stop versus relapse risk; recovery goal of full-time work.",
+      "culturalTag": "none",
+      "pressureSequence": "Side-effect complaint escalates to a legal question about compulsory treatment, then to identification of a drug interaction driving toxicity, then to supporting vocational recovery while maintaining monitoring continuity.",
+      "finalDilemma": "Whether to prioritise the case manager's relapse prevention concerns or Sarah's stated recovery goal, and how to adapt monitoring logistics to enable full-time work without compromising clozapine dispensing requirements.",
+      "patientName": "Sarah",
+      "createdAt": "2026-05-29",
+      "status": "active"
+    },
+    {
+      "id": "meq_056",
+      "title": "Andrew \u2014 Clozapine Toxicity, Medical Ward and Discharge Governance",
+      "usedIn": "daily_meq",
+      "primaryDomain": "Management / Disposition",
+      "ageGroup": "26-64",
+      "setting": "CL",
+      "clinicalTheme": "Clozapine toxicity on a respiratory ward driven by smoking cessation, fluvoxamine and sedating polypharmacy; agitation misattributed to relapse; unsafe sedation request; discharge governance for smoking resumption.",
+      "culturalTag": "none",
+      "pressureSequence": "Psychiatric transfer request escalates to toxicity formulation, then respiratory team insistence on unchanged prescribing, then high-dose sedation request opposed by falls history, then discharge with smoking resumption dose governance gap.",
+      "finalDilemma": "How to manage clozapine dose after discharge when smoking resumption will lower levels but the wife fears relapse from underdosing, and how to assign named monitoring responsibility to prevent recurrence of the admission failure.",
+      "patientName": "Andrew",
+      "createdAt": "2026-05-29",
+      "status": "active"
+    },
+    {
+      "id": "meq_057",
+      "title": "Robert \u2014 Missed Clozapine Doses and Transfer-of-Care Failure",
+      "usedIn": "daily_meq",
+      "primaryDomain": "Governance / Systems / Leadership",
+      "ageGroup": "26-64",
+      "setting": "ED",
+      "clinicalTheme": "Clozapine missed after discharge due to monitoring system failure; ED re-presentation with relapse symptoms; re-titration requirement; open disclosure to angry family; governance review with registrar minimisation.",
+      "culturalTag": "none",
+      "pressureSequence": "Monitoring gap prevents dispensing after discharge, escalating to ED re-presentation with relapse risk, then disposition debate under bed pressure with re-titration requirement, then open disclosure to family, then governance review with registrar near-miss minimisation.",
+      "finalDilemma": "How to respond to a registrar who minimises a serious clozapine near-miss while simultaneously meeting governance reporting obligations and designing system changes that prevent recurrence.",
+      "patientName": "Robert",
+      "createdAt": "2026-05-29",
       "status": "active"
     }
   ]
