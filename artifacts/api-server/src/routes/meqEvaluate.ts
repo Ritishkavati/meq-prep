@@ -51,7 +51,7 @@ router.post("/detect-signals", async (req, res) => {
       req.log?.warn({ rawText: text, err: e }, "Signal detection parse error");
       identifiedIds = [];
     }
-    res.json({ identifiedIds });
+    res.json({ identifiedIds, rawText: text });
   } catch (err: any) {
     const detail = {
       name: err?.name,

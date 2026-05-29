@@ -221,7 +221,10 @@ export async function assessAnswer(stem: QuizStem, candidateAnswer: string, time
     });
     if (!response.ok) throw new Error(`detect-signals ${response.status}`);
     const data = await response.json();
+    console.log("AI signal detection raw response:", data.rawText);
     const identifiedIds: string[] = Array.isArray(data.identifiedIds) ? data.identifiedIds : [];
+    console.log("Identified IDs:", identifiedIds);
+    if (identifiedIds.length === 0) throw new Error("AI returned empty identifiedIds — falling back to keywords");
 
     matches = stem.signals.map((signal) => {
       const psNote = generatePSReason(signal);
