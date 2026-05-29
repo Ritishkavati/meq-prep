@@ -1,7 +1,7 @@
 {
   "version": "1.0",
   "lastUpdated": "2026-05-28",
-  "totalQuestions": 48,
+  "totalQuestions": 53,
   "questions": [
     {
       "id": "meq_001",
@@ -660,6 +660,51 @@
       "usedIn": "daily_meq",
       "primaryDomain": "Ethics / Professionalism / Legal",
       "totalMarks": 32,
+      "createdAt": "2026-05-28",
+      "status": "active"
+    },
+    {
+      "id": "meq_049",
+      "title": "Emily \u2014 Adult ADHD Assessment and Prescribing Governance",
+      "usedIn": "daily_meq",
+      "primaryDomain": "Assessment Maintenance",
+      "totalMarks": 27,
+      "createdAt": "2026-05-28",
+      "status": "active"
+    },
+    {
+      "id": "meq_050",
+      "title": "Thomas \u2014 Online ADHD Diagnosis and Shared-Care Refusal",
+      "usedIn": "daily_meq",
+      "primaryDomain": "Ethics / Professionalism / Legal",
+      "totalMarks": 28,
+      "createdAt": "2026-05-28",
+      "status": "active"
+    },
+    {
+      "id": "meq_051",
+      "title": "Daniel \u2014 ADHD, Methamphetamine Relapse and Stimulant Diversion",
+      "usedIn": "daily_meq",
+      "primaryDomain": "Ethics / Professionalism / Legal",
+      "totalMarks": 29,
+      "createdAt": "2026-05-28",
+      "status": "active"
+    },
+    {
+      "id": "meq_052",
+      "title": "Oliver \u2014 Child ADHD, Tics and Parental Conflict",
+      "usedIn": "daily_meq",
+      "primaryDomain": "Ethics / Professionalism / Legal",
+      "totalMarks": 28,
+      "createdAt": "2026-05-28",
+      "status": "active"
+    },
+    {
+      "id": "meq_053",
+      "title": "Sophie \u2014 ADHD Treatment During Pregnancy",
+      "usedIn": "daily_meq",
+      "primaryDomain": "Treatment / Scholarship",
+      "totalMarks": 29,
       "createdAt": "2026-05-28",
       "status": "active"
     }

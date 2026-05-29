@@ -8120,5 +8120,829 @@
       }
     ],
     "meqNumber": 48
+  },
+  {
+    "id": "meq_049",
+    "title": "Emily — Adult ADHD Assessment and Prescribing Governance",
+    "case": "Emily, 29, solicitor, adult ADHD assessment, outpatient",
+    "examSource": "Generated — Assessment Maintenance",
+    "topic": "Adult ADHD diagnostic assessment in a high-achieving professional; tests longitudinal diagnostic reasoning, interpretation of collateral absence and non-prescribed stimulant use, multimodal treatment planning with prescribing safeguards, and managing GP and employer pressure before assessment is complete",
+    "primaryDomain": "Assessment Maintenance",
+    "totalMarks": 27,
+    "totalTimeMinutes": 27,
+    "stems": [
+      {
+        "stemNumber": "1.1",
+        "vignette": "Emily is a 29-year-old solicitor referred by her GP for assessment of worsening concentration, missed deadlines, emotional reactivity and work-related distress. She was recently promoted to a role requiring independent management of large files and has been placed on a formal performance plan. The GP referral asks whether this is burnout, anxiety or adult ADHD. Emily says she has always felt chaotic internally but previously coped by working late and over-preparing. She brings screenshots of online ADHD screening questionnaires but also says she does not want another wrong label and just needs to understand why she is failing now.",
+        "question": "Outline — list and justify the key information you would obtain to establish diagnostic confidence for adult ADHD and distinguish it from alternative explanations in this presentation.\nA list without because-clauses specific to this case will not be awarded any marks.\n(8 marks | 8 minutes)",
+        "commandWord": "outline_justify",
+        "marks": 8,
+        "timeMinutes": 8,
+        "stemSignals": [
+          "The GP referral frames this as three alternatives — burnout, anxiety or ADHD — but all three can coexist; the assessment task is to establish which is primary and how they interact, not to pick one",
+          "Emily's self-referral with screening questionnaires and urgency around job preservation creates diagnostic pressure; the examiner trap is accepting her framing rather than running an independent assessment",
+          "High achievement at work does not exclude ADHD — but it does require explanation; if she coped until promotion, what changed and why?"
+        ],
+        "domains": [
+          {
+            "name": "Diagnostic Reasoning (8 marks)",
+            "marks": 8,
+            "keyPoints": [
+              "Clarify whether ADHD symptoms began in childhood — because adult ADHD is a neurodevelopmental disorder requiring a longitudinal pattern, not a new-onset response to workplace stress",
+              "Establish cross-setting impairment — because impairment limited to one high-pressure work role after promotion may reflect role mismatch or burnout rather than ADHD",
+              "Explore developmental and educational history including school reports where available — because contemporaneous accounts of disorganisation can confirm childhood onset even without parental collateral",
+              "Screen for comorbid generalised anxiety, depression, trauma, bipolar spectrum illness and sleep disorder — because each can cause inattention and emotional reactivity and changes the treatment plan",
+              "Take a detailed substance-use history including alcohol and cannabis — because both impair attention and affect prescribing safety independently of any ADHD diagnosis",
+              "Ask about previous psychiatric assessments, diagnoses and medication trials — because a history of prior labels or treatments may reveal diagnostic drift or confirm longstanding difficulties",
+              "Seek collateral history from a consenting source — because self-report in a high-stakes occupational context may amplify or minimise symptoms and external corroboration strengthens diagnostic confidence",
+              "Clarify Emily's occupational role demands and the specific nature of her performance failure — because understanding what changed at promotion helps distinguish ADHD unmasked by complexity from burnout or an anxiety disorder driven by role expectations",
+              "Assess Emily's goals and expectations from this assessment — because her urgency around medication must not substitute for diagnostic rigour, and her expectations shape therapeutic alliance and treatment planning"
+            ]
+          }
+        ],
+        "zeroMarkTraps": [
+          "Accepting the GP's three-option framing without running an independent differential diagnostic process",
+          "Treating Emily's online ADHD screening scores as diagnostic evidence",
+          "Beginning with a treatment plan before diagnostic reasoning is complete"
+        ],
+        "postExaminerNote": "Candidates who framed the assessment as establishing longitudinal evidence across settings rather than confirming a self-referred diagnosis, who explicitly named comorbidities that could explain the presentation, and who addressed the prescribing-pressure context as a reason for thorough rather than expedited assessment scored in the upper range. Candidates who organised their answer around the GP's three options, or who began planning treatment before establishing the diagnosis, did not achieve the standard."
+      },
+      {
+        "stemNumber": "1.2",
+        "vignette": "Emily becomes distressed when you ask about childhood collateral. She says her parents were emotionally abusive and that contacting them would be harmful. She performed well academically at school but recalls being described as bright but disorganised. She also admits she recently took one tablet of a friend's methylphenidate and felt calm and normal for the first time.",
+        "question": "Discuss — list and debate how you would interpret the absence of easy parental collateral, her strong academic history, and her reported response to methylphenidate in forming a diagnostic position.\nA list without debate specific to this case will not be awarded any marks.\n(8 marks | 8 minutes)",
+        "commandWord": "debate",
+        "marks": 8,
+        "timeMinutes": 8,
+        "stemSignals": [
+          "The absence of parental collateral is a clinical problem to solve — not a reason to abandon diagnostic assessment or a reason to accept self-report unchallenged",
+          "High academic achievement creates genuine diagnostic tension: it can mask ADHD through compensatory effort and perfectionism, or it can indicate that ADHD is not the primary explanation for current impairment",
+          "Methylphenidate response is not a diagnostic test — stimulants improve focus in people without ADHD; the non-prescribed use itself raises safety and boundary concerns that must be addressed"
+        ],
+        "domains": [
+          {
+            "name": "Formulation and Diagnostic Debate (8 marks)",
+            "marks": 8,
+            "keyPoints": [
+              "Parental collateral is useful but not mandatory — because the diagnostic requirement is evidence of childhood onset and cross-setting impairment, not parental testimony specifically; this must be sought from alternative sources",
+              "Alternative collateral sources should be actively explored — because school reports, old GP records, a consenting sibling, partner observations or structured retrospective rating tools can provide childhood-onset evidence without requiring contact with abusive parents",
+              "Strong academic history does not exclude ADHD — because intelligent individuals often compensate through overwork, perfectionism and hyperfocus, masking ADHD until complexity or workload exceeds compensatory capacity",
+              "Strong academic history also genuinely weakens diagnostic confidence — because ADHD requires demonstrated impairment in childhood, not just subjective chaos; high grades achieved without apparent struggle require explanation before ADHD is confirmed",
+              "The methylphenidate response should be treated as one data point among many — because stimulants improve attention and reduce anxiety in people without ADHD; feeling calm is not pathognomonic",
+              "The non-prescribed stimulant use raises immediate prescribing safety and boundary concerns — because it signals potential for misuse or diversion, models medication-seeking behaviour, and must be named as a factor that increases the need for careful prescribing safeguards",
+              "The most defensible diagnostic position is to delay stimulant prescribing until assessment is complete — because premature confirmation of ADHD based on self-report, absent parental collateral and stimulant response creates iatrogenic risk",
+              "Anxiety, burnout, and trauma-related inattention remain live differentials — because emotional abuse history may produce hypervigilance, concentration difficulties and emotional reactivity that closely mimic ADHD without meeting neurodevelopmental criteria"
+            ]
+          }
+        ],
+        "zeroMarkTraps": [
+          "Treating the methylphenidate response as confirmatory of ADHD",
+          "Concluding that ADHD cannot be diagnosed without parental collateral without exploring alternative sources",
+          "Ignoring the prescribing safety implications of non-prescribed stimulant use"
+        ],
+        "postExaminerNote": "Candidates who articulated both sides of the academic history and methylphenidate response debates, named the prescribing safety concern raised by non-prescribed use, and took a defensible consultant position of completing assessment before prescribing scored in the upper range. Candidates who treated stimulant response as diagnostic or who dismissed diagnostic possibility because parental collateral was unavailable did not achieve the standard."
+      },
+      {
+        "stemNumber": "1.3",
+        "vignette": "After two assessment sessions, you find evidence of longstanding inattentive symptoms from childhood, current impairment at work and home, and significant comorbid generalised anxiety. There is no history of mania or psychosis. Baseline blood pressure, pulse and ECG are normal. Before your report is completed, the GP emails asking whether they can start stimulant prescribing to prevent job loss. Emily's employer also requests a certificate stating whether she is fit to continue in a role involving client trust accounts and legal deadlines.",
+        "question": "Describe — list and explain a multimodal initial management plan, including treatment sequencing, prescribing governance, monitoring, non-pharmacological interventions and your response to the GP and employer requests.\nA list without explanation will not be awarded any marks.\n(11 marks | 11 minutes)",
+        "commandWord": "describe_explain",
+        "marks": 11,
+        "timeMinutes": 11,
+        "stemSignals": [
+          "Two external parties are now applying prescribing and disclosure pressure — the GP wanting to start stimulants and the employer wanting a fitness certificate; both requests must be handled as distinct clinical and ethical problems, not administrative tasks",
+          "Comorbid generalised anxiety changes the stimulant prescribing sequence — anxiety may worsen on stimulants and must be treated actively as part of the plan, not as an afterthought",
+          "The employer's request touches on occupational disclosure and client-safety obligations — Emily's role involves managing client trust accounts and legal deadlines; there is a professional responsibility dimension that goes beyond standard workplace accommodation"
+        ],
+        "domains": [
+          {
+            "name": "Treatment Sequencing and Prescribing Governance (5 marks)",
+            "marks": 5,
+            "keyPoints": [
+              "Inform the GP that stimulant prescribing should not commence before the specialist report and documented monitoring plan are complete — because prescribing before the assessment is finalised bypasses the safeguards that protect Emily from misdiagnosis and adverse effects",
+              "If stimulants are indicated, begin with a long-acting preparation at the lowest effective dose — because this reduces misuse potential and minimises peak-trough anxiety and cardiovascular effects",
+              "Establish single prescriber and single pharmacy arrangements from the outset — because Schedule 8 stimulant prescribing requires governance safeguards that must be set up before prescribing begins, not added reactively",
+              "Treat generalised anxiety concurrently and actively — because untreated anxiety may worsen on stimulants and is independently impairing; sequencing must address both conditions",
+              "Arrange early clinical review during titration — because adverse effects including worsening anxiety, insomnia, appetite suppression and cardiovascular changes may emerge rapidly and require dose adjustment"
+            ]
+          },
+          {
+            "name": "Monitoring (2 marks)",
+            "marks": 2,
+            "keyPoints": [
+              "Establish baseline and ongoing monitoring of blood pressure, pulse, weight, sleep, appetite and anxiety severity — because cardiovascular and metabolic parameters must be tracked throughout stimulant titration and long-term prescribing",
+              "Screen for stimulant misuse, cannabis and alcohol use at baseline and during treatment — because ongoing substance use interacts with stimulant safety and may signal emerging misuse"
+            ]
+          },
+          {
+            "name": "Non-Pharmacological Interventions (2 marks)",
+            "marks": 2,
+            "keyPoints": [
+              "Offer ADHD-specific cognitive behavioural strategies, executive functioning coaching or structured ADHD skills work — because non-pharmacological approaches address planning, organisation and emotional regulation that medication alone does not fully treat",
+              "Provide psychological treatment for generalised anxiety — because CBT for anxiety has independent evidence and may reduce the stimulant dose required or clarify whether anxiety is the primary driver of impairment"
+            ]
+          },
+          {
+            "name": "GP and Employer Communication (2 marks)",
+            "marks": 2,
+            "keyPoints": [
+              "Respond to the GP collegially but clearly — explain that stimulant prescribing before the specialist report creates clinical and legal risk, and provide a timeline for the completed assessment and prescribing plan rather than a blanket refusal",
+              "Respond to the employer's fitness certificate request only with Emily's informed consent — explain that any certificate must be functional rather than diagnostic, limited to what Emily has consented to share, and must not disclose her diagnosis or treatment plan without her explicit agreement"
+            ]
+          }
+        ],
+        "zeroMarkTraps": [
+          "Starting stimulants to prevent job loss before the assessment report is complete",
+          "Providing the employer with a diagnostic certificate without Emily's informed consent",
+          "Treating anxiety as a minor comorbidity rather than a condition that directly affects treatment sequencing"
+        ],
+        "postExaminerNote": "Candidates who named the sequencing problem created by comorbid anxiety, addressed both the GP and employer requests as distinct clinical and ethical problems, and built prescribing governance into the plan from the start scored in the upper range. Candidates who prescribed to prevent job loss, ignored anxiety in the treatment plan, or provided employer disclosure without consent did not achieve the standard."
+      }
+    ],
+    "meqNumber": 49
+  },
+  {
+    "id": "meq_050",
+    "title": "Thomas — Online ADHD Diagnosis and Shared-Care Refusal",
+    "case": "Thomas, 35, online ADHD diagnosis, public community clinic, GP shared-care request",
+    "examSource": "Generated — Ethics / Professionalism / Legal",
+    "topic": "GP shared-care stimulant prescribing request following inadequate online ADHD assessment; tests evaluation of a clinically deficient private report, managing an escalating patient under complaint threat with registrar present, and reformulating after undisclosed bipolar disorder and substance use emerge",
+    "primaryDomain": "Ethics / Professionalism / Legal",
+    "totalMarks": 28,
+    "totalTimeMinutes": 28,
+    "stems": [
+      {
+        "stemNumber": "1.1",
+        "vignette": "A GP sends an urgent referral asking the public adult community mental health service to take over stimulant prescribing for Thomas, a 35-year-old man diagnosed with ADHD by an online commercial clinic after a single brief video appointment. The attached report lists DSM symptoms and recommends dexamphetamine. It contains no collateral history, no physical health baseline, no substance-use history and no mood-disorder screening. The GP writes that they are not comfortable initiating Schedule 8 medication on this basis and that Thomas is angry and says the GP is obstructing his care.",
+        "question": "Outline — list and justify the clinical, ethical and shared-care issues raised by this referral before any clinical decision is made.\nA list without because-clauses specific to this referral will not be awarded any marks.\n(8 marks | 8 minutes)",
+        "commandWord": "outline_justify",
+        "marks": 8,
+        "timeMinutes": 8,
+        "stemSignals": [
+          "The GP's discomfort is clinically appropriate and should be supported — the examiner trap is treating the GP's caution as an obstacle to care rather than a defensible prescribing boundary",
+          "Thomas's anger at the GP is a clinical signal, not a reason to expedite prescribing — the consultant must assess what drives the anger before responding to it",
+          "The report's omissions are not minor gaps — they are the specific information required to prescribe stimulants safely; each missing element has a direct patient-safety consequence"
+        ],
+        "domains": [
+          {
+            "name": "Clinical Issues (3 marks)",
+            "marks": 3,
+            "keyPoints": [
+              "The report lacks collateral history, developmental assessment and cross-setting impairment data — because these are the core diagnostic requirements for adult ADHD and their absence means diagnostic confidence cannot be established from this document alone",
+              "The report contains no mood-disorder screening — because bipolar disorder is a contraindication to stimulant prescribing and must be excluded before Schedule 8 medication is initiated",
+              "The report contains no substance-use history or physical health baseline — because both are prerequisites for safe stimulant prescribing and their absence means cardiovascular and misuse risks have not been assessed"
+            ]
+          },
+          {
+            "name": "Ethical Issues (3 marks)",
+            "marks": 3,
+            "keyPoints": [
+              "A consultant cannot ethically endorse Schedule 8 prescribing based on a report they have not independently verified — because professional and legal responsibility for the prescribing decision rests with the prescribing clinician, not the referring service",
+              "The GP's refusal to prescribe is professionally appropriate and should be supported — because the GP is correctly identifying that the available information does not meet the standard for safe initiation",
+              "Thomas's anger and complaint threat cannot override clinical safety — because prescribing to avoid a complaint is a recognised ethical failure and creates greater long-term risk to the patient and the prescriber"
+            ]
+          },
+          {
+            "name": "Shared-Care Issues (2 marks)",
+            "marks": 2,
+            "keyPoints": [
+              "Shared care requires a defined agreement about diagnosis, initiation, monitoring, dose changes and escalation — because without a written shared-care agreement, responsibility is unclear and patient safety is compromised",
+              "The immediate response should offer a structured independent assessment pathway rather than blanket refusal — because refusing without offering a pathway abandons the patient and does not resolve the prescribing safety problem"
+            ]
+          }
+        ],
+        "zeroMarkTraps": [
+          "Treating the GP's caution as an obstacle to the patient's care rather than appropriate clinical governance",
+          "Endorsing shared-care prescribing without independent assessment because the diagnosis has already been made",
+          "Framing the response primarily around managing Thomas's anger rather than addressing the prescribing safety issues in the referral"
+        ],
+        "postExaminerNote": "Candidates who named each missing element with a specific patient-safety consequence, supported the GP's position explicitly, and offered a pathway rather than only a refusal scored in the upper range. Candidates who treated the online report as sufficient basis for shared-care or who organised their answer around managing Thomas's anger rather than the referral's clinical deficiencies did not achieve the standard."
+      },
+      {
+        "stemNumber": "1.2",
+        "vignette": "Thomas attends the clinic demanding an immediate stimulant prescription. He brings a printed copy of the online clinic report and says the diagnosis has already been made and that further delay is obstructing his care. A junior registrar is sitting in and appears unsure whether to continue the interview or end it. The GP phones the clinic during the appointment asking for a same-day decision because Thomas has returned to the GP reception desk repeatedly.",
+        "question": "Describe — list and explain how you would manage this consultation, including your engagement with Thomas, supervision of the registrar, response to the GP, and maintenance of safe prescribing boundaries.\nA list without explanation will not be awarded any marks.\n(10 marks | 10 minutes)",
+        "commandWord": "describe_explain",
+        "marks": 10,
+        "timeMinutes": 10,
+        "stemSignals": [
+          "This consultation is simultaneously a clinical encounter, a supervision task and a GP communication task — treating it as only one of these misses the consultant register the question is testing",
+          "The registrar's uncertainty is itself a governance signal — a junior clinician who is unsure whether to end the interview needs explicit real-time guidance, not a debrief after the consultation",
+          "The GP's phone call during the appointment creates pressure for a same-day decision — this must be managed without making a prescribing commitment under duress"
+        ],
+        "domains": [
+          {
+            "name": "Consultation Management (4 marks)",
+            "marks": 4,
+            "keyPoints": [
+              "Acknowledge Thomas's frustration without validating his conclusion that the diagnosis is established and prescribing should follow — because alliance requires hearing his distress while maintaining clinical boundaries",
+              "Explain the clinical reason for independent assessment calmly and specifically — because Thomas deserves to understand that stimulants can worsen mania, psychosis, anxiety and cardiovascular risk, and that the online report does not contain the information needed to prescribe safely",
+              "Clarify that complaint rights are respected but do not determine prescribing decisions — because Thomas needs to understand that his right to complain is acknowledged, but that this is separate from the clinical decision",
+              "Offer a timely structured assessment pathway as the alternative to immediate prescribing — because refusing without a pathway creates therapeutic abandonment and escalates the consultation"
+            ]
+          },
+          {
+            "name": "Registrar Supervision (2 marks)",
+            "marks": 2,
+            "keyPoints": [
+              "Give the registrar explicit in-consultation direction — because a junior clinician who is uncertain whether to continue an interview is in a situation where real-time guidance protects both the patient and the registrar",
+              "Debrief the registrar after the consultation about managing prescribing pressure and boundary-setting — because the registrar needs to understand that safety overrides complaint threat and why this is modelled by the consultant"
+            ]
+          },
+          {
+            "name": "GP Response and Documentation (2 marks)",
+            "marks": 2,
+            "keyPoints": [
+              "Respond to the GP by end of day with a clinical summary and proposed assessment pathway rather than a prescribing decision — because same-day GP communication supports the GP safely and prevents Thomas from returning to the GP reception desk with a misrepresentation of what occurred",
+              "Document Thomas's demands, the clinical explanation provided, the risk assessment, and the plan — because contemporaneous documentation protects both the patient and the clinical team if a complaint follows"
+            ]
+          },
+          {
+            "name": "Risk Assessment (2 marks)",
+            "marks": 2,
+            "keyPoints": [
+              "Conduct a focused risk assessment during the consultation — because escalating behaviour, anger and impulsivity require assessment of aggression, self-harm, intoxication and substance use before the consultation closes",
+              "Note any signs of intoxication, withdrawal, manic or psychotic features observed during the interview — because these directly affect safety and may indicate why urgent independent assessment is needed"
+            ]
+          }
+        ],
+        "zeroMarkTraps": [
+          "Ending the consultation early or asking Thomas to leave without offering a clinical pathway",
+          "Providing the GP with a same-day prescribing commitment to manage reception desk disruption",
+          "Treating the registrar's uncertainty as a post-consultation debrief matter rather than a real-time supervision need"
+        ],
+        "postExaminerNote": "Candidates who addressed all three parallel tasks — patient engagement, registrar supervision and GP response — with specific actions for each, and who maintained prescribing boundaries without abandoning the therapeutic relationship scored in the upper range. Candidates who treated this as only a de-escalation exercise, or who gave the GP a prescribing commitment to resolve the reception desk problem, did not achieve the standard."
+      },
+      {
+        "stemNumber": "1.3",
+        "vignette": "During your assessment, Thomas reports two previous admissions for elevated mood, decreased need for sleep, grandiosity and reckless spending. He also drinks heavily most nights and uses cocaine monthly. These details were not included in the online ADHD report. He says that was years ago and the only issue now is focus.",
+        "question": "Discuss — list and debate your response to the GP's shared-care stimulant prescribing request in light of this new information, including your diagnostic formulation, alternative treatment priorities and any service-level governance action.\nA list without debate specific to this case will not be awarded any marks.\n(10 marks | 10 minutes)",
+        "commandWord": "debate",
+        "marks": 10,
+        "timeMinutes": 10,
+        "stemSignals": [
+          "Thomas's minimisation of his bipolar history is itself a clinical data point — years ago does not change the contraindication to unsequenced stimulant prescribing",
+          "The online report did not screen for mood disorder or substance use — this is not a minor omission; it is a systematic failure that directly created the current clinical risk",
+          "The governance action must address the pattern, not just this individual case — online ADHD clinic reports without mood or substance screening represent a service-boundary problem that requires a systemic response"
+        ],
+        "domains": [
+          {
+            "name": "Diagnostic Formulation (3 marks)",
+            "marks": 3,
+            "keyPoints": [
+              "Reformulate Thomas's presentation to prioritise bipolar disorder and alcohol and cocaine use disorder — because these diagnoses are not historical background; they are active clinical conditions that change the risk profile and treatment sequence",
+              "ADHD remains a possible comorbid diagnosis but cannot be safely assessed or treated until mood and substance use are stabilised — because stimulants may precipitate mania, worsen mixed states and interact with alcohol and cocaine",
+              "Thomas's minimisation that this was years ago does not reduce the contraindication — because the biological and prescribing risk of stimulants in bipolar disorder is not time-limited by the patient's subjective experience of stability"
+            ]
+          },
+          {
+            "name": "Treatment Priorities (4 marks)",
+            "marks": 4,
+            "keyPoints": [
+              "Decline the GP's shared-care stimulant prescribing request at this stage — because prescribing stimulants without mood stabilisation and substance-use assessment would be clinically indefensible",
+              "Communicate the refusal transparently and specifically to Thomas — because he deserves an honest explanation that this is a safety decision based on his medical history, not a judgment about his character or the legitimacy of his ADHD difficulties",
+              "Prioritise assessment and treatment of bipolar disorder including relapse prevention and mood stabilisation — because this is the highest-risk active condition in the formulation",
+              "Address alcohol and cocaine use with an AOD referral and motivational work — because substance use independently impairs cognition, complicates bipolar management, and must be treated before ADHD can be fairly assessed",
+              "Provide the GP with a written plan that specifies what would need to change before ADHD medication could be reconsidered — because the GP needs clear guidance for future shared-care conversations with Thomas"
+            ]
+          },
+          {
+            "name": "Service Governance (3 marks)",
+            "marks": 3,
+            "keyPoints": [
+              "Raise the pattern of online ADHD reports without mood or substance screening as a service-level governance issue — because this case is unlikely to be isolated; a systematic gap in private assessment quality requires a systemic response",
+              "Develop or contribute to a triage protocol for online ADHD assessment referrals — because the public service needs minimum assessment standards, triage criteria and GP guidance for handling these referrals",
+              "Document the clinical reasoning and prescribing refusal carefully — because if Thomas makes a complaint, the documentation must show that the refusal was based on identified safety risks, not administrative gatekeeping"
+            ]
+          }
+        ],
+        "zeroMarkTraps": [
+          "Accepting Thomas's framing that the bipolar history was years ago and does not affect current prescribing",
+          "Prescribing stimulants to avoid a complaint despite active bipolar disorder and polysubstance use",
+          "Treating the governance response as optional rather than as a consultant obligation when a systemic referral pattern is identified"
+        ],
+        "postExaminerNote": "Candidates who reformulated around bipolar disorder and substance use as the primary clinical priorities, declined stimulant prescribing with a specific safety rationale, and named a service-level governance response to the pattern of inadequate online reports scored in the upper range. Candidates who accepted the online diagnosis and proceeded to shared-care conditions, or who organised the refusal around administrative grounds rather than clinical safety, did not achieve the standard."
+      }
+    ],
+    "meqNumber": 50
+  },
+  {
+    "id": "meq_051",
+    "title": "Daniel — ADHD, Methamphetamine Relapse and Stimulant Diversion",
+    "case": "Daniel, 33, ADHD, methamphetamine dependence, stimulant diversion, heavy machinery operator",
+    "examSource": "Generated — Ethics / Professionalism / Legal",
+    "topic": "High-risk stimulant prescribing in methamphetamine dependence; tests occupational and public-safety risk assessment before dose escalation, duties around confidentiality and workplace notification after confirmed diversion and relapse, and harm-minimisation recovery planning with return-to-work criteria",
+    "primaryDomain": "Ethics / Professionalism / Legal",
+    "totalMarks": 29,
+    "totalTimeMinutes": 29,
+    "stems": [
+      {
+        "stemNumber": "1.1",
+        "vignette": "Daniel is a 33-year-old warehouse supervisor with a childhood diagnosis of ADHD and a history of methamphetamine dependence. He reports four months of abstinence and is prescribed long-acting methylphenidate by a previous psychiatrist. He now asks for a dose increase and short-acting dexamphetamine for the afternoons. He operates heavy machinery at work and reports near-miss incidents, which he attributes to undertreated ADHD. He has poor sleep, increasing irritability and excoriations on his arms, which he describes as stress scratching.",
+        "question": "Outline — list and justify the immediate clinical, occupational and public-safety risks you would assess before considering any change to Daniel's medication.\nA list without because-clauses specific to this case will not be awarded any marks.\n(8 marks | 8 minutes)",
+        "commandWord": "outline_justify",
+        "marks": 8,
+        "timeMinutes": 8,
+        "stemSignals": [
+          "Daniel is attributing near-miss incidents to undertreated ADHD — this is a self-serving explanation that must be assessed against other explanations including relapse, stimulant toxicity and sleep deprivation before any dose change is considered",
+          "The excoriations, poor sleep and irritability form a clinical cluster that requires explanation before prescribing is changed — each has a different implication for safety and management",
+          "Operating heavy machinery is not background information — it creates a specific foreseeable harm to others that changes the urgency and nature of the safety assessment"
+        ],
+        "domains": [
+          {
+            "name": "Clinical Risk Assessment (4 marks)",
+            "marks": 4,
+            "keyPoints": [
+              "Assess for methamphetamine relapse — because the near-misses, poor sleep, irritability and excoriations are consistent with stimulant use or stimulant withdrawal and must be objectively investigated before any prescribed stimulant dose is increased",
+              "Assess for stimulant toxicity from the current methylphenidate dose — because restlessness, insomnia and irritability may indicate the current dose is already excessive rather than insufficient",
+              "Assess for psychosis or hypomanic features — because methamphetamine and stimulant medications can both precipitate psychotic and manic symptoms that could explain the near-miss incidents and behavioural changes",
+              "Review prescription monitoring records — because early replacement requests, dose escalation patterns or multiple prescribers would indicate diversion or misuse before the current consultation",
+              "Order a urine drug screen — because self-report of abstinence in a high-stakes prescribing context with physical signs of possible stimulant use requires objective verification"
+            ]
+          },
+          {
+            "name": "Occupational and Public Safety (4 marks)",
+            "marks": 4,
+            "keyPoints": [
+              "Assess fitness to operate heavy machinery immediately — because near-miss incidents in a person with possible stimulant intoxication or relapse create foreseeable risk to Daniel and to others in the workplace",
+              "Assess driving safety — because Daniel commutes to work and the same clinical concerns that affect machinery operation apply to driving",
+              "Do not increase stimulant medication before safety risks are assessed and resolved — because escalating prescribing in a person with possible relapse or stimulant toxicity may increase rather than reduce workplace risk",
+              "Explore what the employer knows about the near-miss incidents — because if workplace safety has already been compromised, there may be an obligation to act that goes beyond clinical monitoring"
+            ]
+          }
+        ],
+        "zeroMarkTraps": [
+          "Accepting Daniel's self-attribution of near-misses to undertreated ADHD without independent assessment",
+          "Increasing the stimulant dose or adding dexamphetamine before the safety assessment is complete",
+          "Treating the excoriations as a minor incidental finding rather than a potential clinical signal requiring explanation"
+        ],
+        "postExaminerNote": "Candidates who identified the near-misses as a workplace and public safety trigger requiring immediate assessment before any prescribing change, connected the clinical cluster of excoriations, insomnia and irritability to possible relapse or toxicity, and named objective verification via urine drug screen and prescription monitoring as essential steps scored in the upper range. Candidates who proceeded to a prescribing plan without addressing the safety assessment, or who accepted Daniel's explanation of near-misses without scrutiny, did not achieve the standard."
+      },
+      {
+        "stemNumber": "1.2",
+        "vignette": "Prescription monitoring records show two early replacement requests from emergency departments for lost medication. A urine drug screen is positive for methamphetamine. Daniel initially denies relapse, then admits he has been using methamphetamine on weekends and selling some prescribed tablets to repay a drug debt. He says please do not stop everything — if he loses his job he will have nothing.",
+        "question": "Discuss — list and debate your duties regarding stimulant prescribing, confidentiality, workplace safety and fitness to operate machinery, given what you now know.\nA list without debate specific to this case will not be awarded any marks.\n(10 marks | 10 minutes)",
+        "commandWord": "debate",
+        "marks": 10,
+        "timeMinutes": 10,
+        "stemSignals": [
+          "Daniel's disclosure is a turning point — confirmed diversion, relapse and machinery operation while using methamphetamine create duties that extend beyond the therapeutic relationship",
+          "The tension between confidentiality and public safety is genuine and must be debated — Daniel's job loss is a real harm; but his current fitness to operate heavy machinery creates a foreseeable risk to others that confidentiality does not protect",
+          "Daniel's emotional appeal must be heard and acknowledged — but it cannot drive the prescribing decision; the clinical and legal obligations remain regardless of the consequences he fears"
+        ],
+        "domains": [
+          {
+            "name": "Stimulant Prescribing (2 marks)",
+            "marks": 2,
+            "keyPoints": [
+              "Suspend stimulant prescribing immediately — because confirmed methamphetamine use and diversion make continued stimulant prescribing clinically indefensible and legally unsafe",
+              "Frame suspension as a safety intervention rather than a punitive response — because maintaining therapeutic alliance is essential for harm minimisation and Daniel must understand the clinical rationale, not experience it as punishment"
+            ]
+          },
+          {
+            "name": "Confidentiality and Disclosure (4 marks)",
+            "marks": 4,
+            "keyPoints": [
+              "Confidentiality is not absolute when there is foreseeable serious risk to identifiable others — because Daniel operating heavy machinery while using methamphetamine and diverting stimulants creates a specific, foreseeable risk to other workers that may override his privacy interests",
+              "The preferred first step is to ask Daniel to self-disclose to his employer and take leave from safety-critical duties — because voluntary disclosure preserves autonomy and alliance while addressing the safety risk",
+              "If Daniel refuses to self-disclose and continues operating machinery, a limited breach of confidentiality to prevent foreseeable serious harm may be justified — because the duty to prevent harm to identified third parties can override confidentiality when the risk is serious, specific and not manageable by other means",
+              "Any disclosure must be minimum necessary — because the legal and ethical basis for overriding confidentiality requires that only the information needed to prevent the specific harm is shared, not the full clinical history"
+            ]
+          },
+          {
+            "name": "Fitness to Drive and Operate Machinery (2 marks)",
+            "marks": 2,
+            "keyPoints": [
+              "Advise Daniel that he is not fit to operate heavy machinery or drive while using methamphetamine — because this advice must be documented as given regardless of whether he accepts it",
+              "Follow applicable jurisdictional reporting obligations regarding fitness to drive — because obligations vary by jurisdiction but generally require documentation that the patient has been advised, and may require reporting if there is continued unsafe driving"
+            ]
+          },
+          {
+            "name": "Ongoing Care (2 marks)",
+            "marks": 2,
+            "keyPoints": [
+              "Maintain the clinical relationship and arrange addiction service involvement urgently — because discharging Daniel because he has diverted medication increases the risk of methamphetamine escalation, suicide and complete disengagement",
+              "Acknowledge Daniel's fear of job loss directly — because validating the real consequences he faces while maintaining clinical boundaries is both therapeutically necessary and models honest consultant communication"
+            ]
+          }
+        ],
+        "zeroMarkTraps": [
+          "Continuing stimulant prescribing with increased monitoring after confirmed diversion and methamphetamine use",
+          "Treating confidentiality as absolute when Daniel continues operating heavy machinery while using methamphetamine",
+          "Discharging Daniel from the service because he has diverted medication"
+        ],
+        "postExaminerNote": "Candidates who suspended prescribing with a safety rationale, debated confidentiality against public safety with a specific conclusion about what would justify disclosure, named voluntary self-disclosure as the preferred first step, and maintained the therapeutic relationship throughout scored in the upper range. Candidates who continued prescribing with additional conditions, treated confidentiality as absolute, or discharged Daniel punitively did not achieve the standard."
+      },
+      {
+        "stemNumber": "1.3",
+        "vignette": "Daniel agrees to take leave from work and engage with the addictions team. His employer sends a form requesting medical clearance before he can return to forklift operation. The addictions team says they will work with him but are concerned that untreated ADHD may undermine relapse prevention. Daniel asks what would need to change before ADHD medication could be reconsidered.",
+        "question": "Describe — list and explain a harm-minimisation and recovery-oriented management plan, including addiction treatment, prescribing boundaries, monitoring and return-to-work criteria.\nA list without explanation will not be awarded any marks.\n(11 marks | 11 minutes)",
+        "commandWord": "describe_explain",
+        "marks": 11,
+        "timeMinutes": 11,
+        "stemSignals": [
+          "The addictions team's concern about untreated ADHD is clinically valid — ADHD impulsivity and dysregulation genuinely increase relapse risk; non-stimulant ADHD options and psychosocial strategies must be considered as part of the recovery plan, not deferred indefinitely",
+          "The employer's medical clearance form requires a response — it must be handled with Daniel's consent and should address functional capacity, not disclose diagnoses or clinical history beyond what Daniel has agreed",
+          "Daniel's question about what would need to change to reconsider ADHD medication is a therapeutic opportunity — answering it clearly and honestly supports recovery orientation and gives Daniel a structured pathway rather than an indefinite prohibition"
+        ],
+        "domains": [
+          {
+            "name": "Addiction Treatment and Recovery (3 marks)",
+            "marks": 3,
+            "keyPoints": [
+              "Engage the addictions team as the primary treatment coordination service — because methamphetamine dependence with diversion requires specialist addiction management including relapse prevention, contingency planning and peer support",
+              "Address financial coercion from drug debt through social work and safety planning — because the drug debt that drove diversion represents an ongoing risk that addiction treatment alone will not resolve",
+              "Develop a crisis plan for methamphetamine craving, relapse and self-harm risk — because each of these may emerge during early recovery and Daniel needs a clear response pathway"
+            ]
+          },
+          {
+            "name": "ADHD Treatment During Recovery (3 marks)",
+            "marks": 3,
+            "keyPoints": [
+              "Consider non-stimulant ADHD treatment during the recovery phase — because the addictions team's concern about untreated ADHD is valid; atomoxetine or other non-stimulant options may address ADHD without the diversion and relapse risk of stimulants",
+              "Offer ADHD-specific cognitive and behavioural strategies — because psychosocial approaches to executive functioning, impulsivity and planning have evidence in ADHD and directly support relapse prevention",
+              "Explain to Daniel the specific conditions under which stimulant prescribing could be reconsidered — because a clear, transparent pathway is more therapeutically effective than an open-ended refusal and supports recovery motivation"
+            ]
+          },
+          {
+            "name": "Prescribing Boundaries and Monitoring (3 marks)",
+            "marks": 3,
+            "keyPoints": [
+              "If stimulants are ever reconsidered, require demonstrated sustained abstinence verified by random urine drug screens — because prescribing stimulants to someone with active methamphetamine use or recent diversion recreates the original risk",
+              "Require single prescriber, single pharmacy and written prescribing agreement before any stimulant trial — because these governance safeguards must be in place before prescribing resumes, not added reactively",
+              "Establish prescription monitoring review as a standard component of any future stimulant trial — because the pattern of early replacement requests was the first objective evidence of diversion; this monitoring must continue"
+            ]
+          },
+          {
+            "name": "Return-to-Work and Employer Response (2 marks)",
+            "marks": 2,
+            "keyPoints": [
+              "Obtain an independent occupational assessment before providing medical clearance for forklift operation — because the clinician's role is not to certify fitness for a safety-critical role without objective functional assessment; an occupational physician or independent assessor should provide clearance",
+              "Any communication with the employer requires Daniel's explicit informed consent — because the employer's form must be completed with minimum necessary functional information agreed with Daniel, not a disclosure of diagnosis, treatment or substance use history"
+            ]
+          }
+        ],
+        "zeroMarkTraps": [
+          "Prescribing stimulants as part of the recovery plan because Daniel is engaged with treatment",
+          "Providing the employer with a medical clearance without an independent occupational assessment",
+          "Deferring all ADHD treatment indefinitely rather than considering non-stimulant options during recovery"
+        ],
+        "postExaminerNote": "Candidates who addressed the addictions team's concern about ADHD by naming non-stimulant options, gave Daniel a specific and transparent pathway for future stimulant reconsideration, required independent occupational assessment before employer clearance, and built monitoring into the prescribing governance plan scored in the upper range. Candidates who prescribed stimulants as part of the engagement offer, certified fitness without occupational assessment, or refused all ADHD treatment indefinitely did not achieve the standard."
+      }
+    ],
+    "meqNumber": 51
+  },
+  {
+    "id": "meq_052",
+    "title": "Oliver — Child ADHD, Tics and Parental Conflict",
+    "case": "Oliver, 10, ADHD, stimulant-related tics, school refusal, separated parents in conflict",
+    "examSource": "Generated — Ethics / Professionalism / Legal",
+    "topic": "Child ADHD complicated by emerging tics, school refusal, and parental conflict involving shared parental responsibility; tests clinical appraisal of new movements and comorbidities, ethical management of adversarial parenting without losing focus on the child, and biopsychosocial planning when parents demand opposite outcomes",
+    "primaryDomain": "Ethics / Professionalism / Legal",
+    "totalMarks": 28,
+    "totalTimeMinutes": 28,
+    "stems": [
+      {
+        "stemNumber": "1.1",
+        "vignette": "Oliver is a 10-year-old boy diagnosed with ADHD six months ago by a paediatrician and taking modified-release methylphenidate. His mother brings him to clinic because over the past month he has developed frequent blinking, facial grimacing and shoulder shrugging. These movements worsen later in the day and when he is tired or embarrassed. Oliver is now refusing school. He says he hates school because everyone stares at him. The school has warned the family that he may be suspended due to emotional outbursts and classroom disruption.",
+        "question": "Outline — list and justify your clinical appraisal of Oliver's new movements, school refusal and emerging emotional difficulties.\nA list without because-clauses specific to this case will not be awarded any marks.\n(8 marks | 8 minutes)",
+        "commandWord": "outline_justify",
+        "marks": 8,
+        "timeMinutes": 8,
+        "stemSignals": [
+          "The movements must be characterised before they are attributed to methylphenidate — their timing, suppressibility, fluctuation and relationship to emotional state are diagnostically important",
+          "Oliver's voice is clinically significant — everyone stares at me is a direct account of the functional and social impact that must inform the formulation, not be noted as background",
+          "School refusal and emotional outbursts are not simply behavioural — they require explanation in terms of tic visibility, shame, anxiety, peer teasing and possibly medication timing before a management plan is formed"
+        ],
+        "domains": [
+          {
+            "name": "Clinical Appraisal of Movements (3 marks)",
+            "marks": 3,
+            "keyPoints": [
+              "Characterise the movements as possible tics — because the pattern of involuntary repetitive movements affecting face and shoulders that worsen with fatigue and embarrassment is consistent with a tic disorder, which may be primary or stimulant-related",
+              "Do not assume methylphenidate must be immediately stopped — because tics may be comorbid with ADHD independent of medication, may be dose-related and reversible, or may have emerged coincidentally; dose reduction, timing change or switching are options that require clinical assessment first",
+              "Review medication dose, timing and recent dose changes — because tic exacerbation associated with peak stimulant levels or a recent dose increase is different in implication and management from tics that occur independent of medication timing"
+            ]
+          },
+          {
+            "name": "School Refusal and Emotional Functioning (3 marks)",
+            "marks": 3,
+            "keyPoints": [
+              "Assess school refusal as a consequence of visible tic distress and peer teasing, not primarily as an ADHD behaviour problem — because the cause of avoidance determines the intervention; treating this as non-compliance misses the underlying shame and anxiety",
+              "Seek independent collateral from the school — because the school's warning of suspension must be understood in the context of whether staff have observed tics, teasing, and emotional dysregulation, which changes both the formulation and the school intervention needed",
+              "Assess anxiety as a comorbidity requiring active treatment — because anxiety worsening after lunch may reflect rebound from morning methylphenidate and is also an independent driver of school avoidance and emotional outbursts"
+            ]
+          },
+          {
+            "name": "Oliver's Perspective and Functional Impact (2 marks)",
+            "marks": 2,
+            "keyPoints": [
+              "Hear Oliver's account directly and give it clinical weight — because his description of being stared at is not simply a child's complaint; it describes the social consequence of visible tics that is driving school avoidance and requires a specific response",
+              "Assess the risk of continuing school exclusion — because suspension would remove Oliver from the educational environment at a time when academic and social development is disrupted, compounding the functional harm already present"
+            ]
+          }
+        ],
+        "zeroMarkTraps": [
+          "Automatically stopping methylphenidate without characterising the movements or considering alternative explanations",
+          "Increasing the methylphenidate dose because behaviour is described as worse by the mother without first understanding what is driving the behaviour",
+          "Treating Oliver's school refusal as a behavioural problem without connecting it to tic visibility, shame and peer teasing"
+        ],
+        "postExaminerNote": "Candidates who characterised the movements before attributing them to medication, gave clinical weight to Oliver's account of peer staring, and connected school refusal to tic-related shame and anxiety rather than ADHD non-compliance scored in the upper range. Candidates who stopped or increased medication without clinical appraisal, or who treated the school behaviour as the primary clinical problem without addressing what was driving it, did not achieve the standard."
+      },
+      {
+        "stemNumber": "1.2",
+        "vignette": "Oliver's parents are separated and share parental responsibility. His father contacts you stating he objects to psychiatric drugs and believes Oliver's mother is exaggerating symptoms to influence parenting arrangements. His mother says the father has never accepted Oliver's difficulties and that stopping medication would be educational neglect. Both parents ask you to put in writing that the other parent is acting against Oliver's best interests.",
+        "question": "Discuss — list and debate the ethical, legal and communication issues in managing Oliver's care in the context of this parental conflict.\nA list without debate specific to this case will not be awarded any marks.\n(10 marks | 10 minutes)",
+        "commandWord": "debate",
+        "marks": 10,
+        "timeMinutes": 10,
+        "stemSignals": [
+          "Both parents are asking for adversarial letters — this request must be declined but the refusal must be explained in terms of Oliver's interests, not as a bureaucratic boundary",
+          "Shared parental responsibility has specific legal implications for consent to treatment — if parents cannot agree, there is a defined pathway that must be followed rather than allowing one parent's view to default",
+          "The clinical question and the family-court question are different — the clinician's role is to provide evidence-based care for Oliver, not to adjudicate the parenting dispute"
+        ],
+        "domains": [
+          {
+            "name": "Oliver's Welfare as the Primary Frame (2 marks)",
+            "marks": 2,
+            "keyPoints": [
+              "Keep Oliver's welfare as the central focus of every decision — because both parents are framing this as a dispute about each other; the clinician's role is to maintain focus on what Oliver needs clinically, not to validate either parent's position",
+              "Involve Oliver in decisions in a manner proportionate to his developmental capacity — because a 10-year-old has a voice in treatment decisions and his account of distress is clinically relevant independent of the parental conflict"
+            ]
+          },
+          {
+            "name": "Consent and Shared Parental Responsibility (3 marks)",
+            "marks": 3,
+            "keyPoints": [
+              "Clarify the legal consent position for treatment with shared parental responsibility — because both parents have legal standing in treatment decisions; clinical action requires either joint agreement or a court direction if agreement cannot be reached on a significant non-urgent treatment change",
+              "Seek joint parental agreement where possible — because unilateral clinical decisions in shared-care arrangements without attempting to engage both parents create legal exposure and damage the therapeutic relationship with the excluded parent",
+              "Escalate to legal or ethics advice if parental disagreement prevents necessary treatment for Oliver — because the clinician should not be forced into a position of choosing between parents; a formal mechanism exists for resolving this"
+            ]
+          },
+          {
+            "name": "Declining Adversarial Letters (2 marks)",
+            "marks": 2,
+            "keyPoints": [
+              "Decline to write adversarial letters against either parent — because the clinician's role is not to provide advocacy material for family-court proceedings; doing so compromises neutrality, creates medico-legal risk, and harms the therapeutic relationship",
+              "Explain the refusal in terms of Oliver's interests rather than as a refusal to engage — because framing the refusal as protecting Oliver from being placed in the middle of a parental dispute is more likely to maintain both parents' engagement than a simple boundary statement"
+            ]
+          },
+          {
+            "name": "Documentation and Communication (3 marks)",
+            "marks": 3,
+            "keyPoints": [
+              "Document both parents' views, Oliver's clinical presentation, and the independent school collateral separately from the parental dispute — because clinical records must reflect objective clinical findings and all relevant perspectives, not become a record of the parental conflict",
+              "Use objective school data to anchor clinical decisions — because independent school collateral about tic visibility, peer teasing and academic functioning provides a basis for clinical recommendations that is not dependent on either parent's account",
+              "Communicate the same clinical information to both parents — because differential communication to parents in conflict creates further division and exposes the clinician to claims of bias"
+            ]
+          }
+        ],
+        "zeroMarkTraps": [
+          "Writing an adversarial letter for either parent because the clinical evidence supports one parent's position",
+          "Allowing one parent's legal threat to determine the treatment decision",
+          "Treating shared parental responsibility as permission for either parent to make unilateral treatment decisions"
+        ],
+        "postExaminerNote": "Candidates who kept Oliver's welfare as the explicit primary frame, declined adversarial letters with a child-focused explanation, addressed consent under shared parental responsibility, and used independent school data to anchor clinical recommendations scored in the upper range. Candidates who wrote letters supporting one parent's position, or who allowed legal threats to determine the clinical decision, did not achieve the standard."
+      },
+      {
+        "stemNumber": "1.3",
+        "vignette": "Independent school collateral confirms that Oliver's tics are visible and distressing, that peers tease him, and that his anxiety worsens after lunch. His attention improves on medication but tics and anxiety appear worse since the dose increase three months ago. His mother fears academic collapse if medication is reduced; his father demands immediate cessation.",
+        "question": "Describe — list and explain a biopsychosocial management plan addressing medication, tics, anxiety, school functioning and the parental disagreement.\nA list without explanation will not be awarded any marks.\n(10 marks | 10 minutes)",
+        "commandWord": "describe_explain",
+        "marks": 10,
+        "timeMinutes": 10,
+        "stemSignals": [
+          "The school collateral has changed the clinical picture — it is now independently confirmed that tics are visible and causing peer teasing, which is driving school avoidance; this must drive the plan, not either parent's demand",
+          "The dose increase three months ago is clinically significant — tic and anxiety worsening correlated with dose escalation suggests a dose-timing or dose-level problem that should be addressed before any other change",
+          "The parents' demands are opposite — the plan must be child-centred and evidence-based, not a compromise between the parents' positions"
+        ],
+        "domains": [
+          {
+            "name": "Medication Plan (3 marks)",
+            "marks": 3,
+            "keyPoints": [
+              "Consider dose reduction or timing adjustment as the first medication step — because tics and anxiety worsened after the dose increase; reverting toward the previous dose or adjusting timing to reduce peak-level effects addresses the most likely medication contributor without stopping treatment entirely",
+              "Monitor attention, tics, anxiety and appetite after any medication change — because the clinical goal is to find the lowest dose that maintains acceptable attention benefit without worsening tics or anxiety",
+              "If tics remain distressing despite optimised stimulant dosing, consider a specialist review for tic-specific treatment options — because severe or functionally impairing tics that persist on optimised stimulant dosing may warrant a trial of a medication that addresses both ADHD and tics"
+            ]
+          },
+          {
+            "name": "Tics and Anxiety (3 marks)",
+            "marks": 3,
+            "keyPoints": [
+              "Provide psychoeducation to Oliver and both parents about tic disorders — because demystifying the movements and explaining they are not voluntary or a sign of psychiatric severity reduces shame and improves parental collaboration",
+              "Offer tic-specific behavioural strategies if available — because habit reversal training and Comprehensive Behavioural Intervention for Tics have evidence in this age group and address the tics directly without medication change",
+              "Provide child-focused anxiety treatment — because anxiety worsening in the afternoons requires active intervention; CBT for anxiety in children is evidence-based and addresses the social anxiety component driving school avoidance"
+            ]
+          },
+          {
+            "name": "School Functioning (2 marks)",
+            "marks": 2,
+            "keyPoints": [
+              "Convene a school meeting to address teasing, provide Oliver with safe spaces and adjust classroom expectations during the transition — because the school's threat of suspension must be redirected toward an anti-bullying and adjustment support plan for Oliver",
+              "Provide graded return-to-school planning if school avoidance has become established — because abrupt return without addressing the teasing and anxiety that drove avoidance is likely to fail"
+            ]
+          },
+          {
+            "name": "Parental Disagreement (2 marks)",
+            "marks": 2,
+            "keyPoints": [
+              "Present the plan to both parents simultaneously with the same written information — because a child-centred evidence-based plan presented equally to both parents is less easily contested than separate communications",
+              "Name the basis for clinical recommendations as independent school data and Oliver's account — because anchoring recommendations in objective evidence reduces the likelihood that either parent can successfully frame the plan as favouring the other"
+            ]
+          }
+        ],
+        "zeroMarkTraps": [
+          "Stopping methylphenidate immediately because the father demands it",
+          "Continuing the current dose because the mother fears academic collapse",
+          "Writing a plan that is a compromise between the parents' demands rather than a clinically justified child-centred response"
+        ],
+        "postExaminerNote": "Candidates who used independent school collateral as the clinical anchor, addressed the dose-timing relationship to tic and anxiety worsening before any other change, provided both parents the same evidence-based plan without adversarial framing, and included school-level intervention beyond individual treatment scored in the upper range. Candidates whose plan was primarily responsive to parental demands rather than Oliver's clinical needs, or who automatically stopped or increased medication without a clinical rationale, did not achieve the standard."
+      }
+    ],
+    "meqNumber": 52
+  },
+  {
+    "id": "meq_053",
+    "title": "Sophie — ADHD Treatment During Pregnancy",
+    "case": "Sophie, 24, ADHD in pregnancy, abrupt stimulant cessation, perinatal service",
+    "examSource": "Generated — Treatment / Scholarship",
+    "topic": "Perinatal ADHD management after GP-advised abrupt stimulant cessation; tests risk-benefit analysis of treating versus withholding ADHD medication during pregnancy, informed shared decision-making with a distressed pregnant patient, and perinatal service governance when no clinician will accept prescribing responsibility",
+    "primaryDomain": "Treatment / Scholarship",
+    "totalMarks": 29,
+    "totalTimeMinutes": 29,
+    "stems": [
+      {
+        "stemNumber": "1.1",
+        "vignette": "Sophie is a 24-year-old laboratory scientist who is 10 weeks pregnant. The pregnancy was unplanned but is now wanted. She has a longstanding diagnosis of ADHD and has been stable for several years on lisdexamfetamine. When her pregnancy was confirmed, her GP advised her to stop the medication immediately because stimulants are unsafe in pregnancy. Since stopping, Sophie has become disorganised, sleep-deprived and distressed. She has made several errors at work, forgotten meals and appointments, and left the stove on twice. She reports shame, hopelessness and passive suicidal thoughts.",
+        "question": "Discuss — list and debate the decision to abruptly cease Sophie's stimulant medication, including the maternal, fetal, occupational and safety considerations.\nA list without debate specific to this case will not be awarded any marks.\n(9 marks | 9 minutes)",
+        "commandWord": "debate",
+        "marks": 9,
+        "timeMinutes": 9,
+        "stemSignals": [
+          "The GP's decision to stop all stimulants immediately was not a safe default — abrupt cessation without specialist review created the current clinical crisis; the examiner trap is framing this as GP versus medication rather than as inadequate individualised risk-benefit analysis",
+          "Passive suicidal thoughts in the context of hopelessness and functional collapse are a safety signal that must be assessed immediately — they are not background distress",
+          "Sophie's occupational errors in a laboratory setting and domestic safety failures are not incidental — they represent real-world functional impairment that creates risk to her, the pregnancy and potentially others"
+        ],
+        "domains": [
+          {
+            "name": "Critique of the Abrupt Cessation Decision (3 marks)",
+            "marks": 3,
+            "keyPoints": [
+              "Abrupt cessation without specialist review was not standard care — because medication decisions in pregnancy require individualised risk-benefit analysis that weighs fetal exposure risk against maternal risk from untreated illness, not a blanket prohibition",
+              "Blanket stimulant cessation advice oversimplifies a genuinely uncertain evidence base — because available evidence suggests stimulant risks in pregnancy are real but context-dependent; a discussion of options including lowest effective dose, medication-free periods, or non-pharmacological alternatives would have been more appropriate than immediate cessation",
+              "The GP's intention to reduce fetal risk is understandable — but the outcome has been functional collapse, occupational errors and suicidal ideation, all of which create risk to the pregnancy that the cessation was intended to protect"
+            ]
+          },
+          {
+            "name": "Maternal Risk from Untreated ADHD (3 marks)",
+            "marks": 3,
+            "keyPoints": [
+              "Untreated ADHD in pregnancy creates specific risks beyond subjective distress — because disorganisation, missed meals, sleep deprivation and domestic safety failures are not minor functional inconveniences; they represent concrete maternal and fetal risks",
+              "Passive suicidal ideation requires urgent safety assessment — because hopelessness and passive ideation in a pregnant woman who feels she is failing and is ashamed require immediate clinical attention, not management as a secondary issue",
+              "Occupational errors in a laboratory setting may create risk to Sophie, other staff or products — because the functional consequences of untreated ADHD extend beyond the home environment and may create an occupational safety dimension"
+            ]
+          },
+          {
+            "name": "Fetal Considerations (2 marks)",
+            "marks": 2,
+            "keyPoints": [
+              "Fetal exposure risk from stimulants must be acknowledged honestly — because the evidence base is limited and fetal risks including possible effects on growth and cardiovascular parameters are real, even if their magnitude is uncertain",
+              "There is no zero-risk option — because both continued medication exposure and the risks created by severe untreated maternal ADHD carry fetal implications; honest engagement with this uncertainty is required for genuine informed consent"
+            ]
+          },
+          {
+            "name": "Immediate Safety Response (1 mark)",
+            "marks": 1,
+            "keyPoints": [
+              "Conduct an urgent safety assessment for passive suicidal ideation before any treatment decision — because suicidal thoughts in the context of acute functional deterioration must be assessed for risk level, plan, access to means and protective factors before any other clinical priority is addressed"
+            ]
+          }
+        ],
+        "zeroMarkTraps": [
+          "Endorsing the GP's decision as a reasonable precaution without engaging with the clinical consequences of abrupt cessation",
+          "Treating passive suicidal ideation as background distress rather than as a safety signal requiring immediate assessment",
+          "Framing the clinical task as choosing between medication safety and fetal safety rather than as an individualised risk-benefit analysis"
+        ],
+        "postExaminerNote": "Candidates who critiqued the abrupt cessation on clinical grounds rather than on pharmacological grounds alone, named the maternal risks from untreated ADHD as equally real to fetal medication risks, conducted an immediate safety assessment for suicidal ideation, and framed the task as individualised risk-benefit analysis rather than a binary choice scored in the upper range. Candidates who endorsed the GP's decision, or who discussed fetal pharmacology without addressing Sophie's acute functional and safety deterioration, did not achieve the standard."
+      },
+      {
+        "stemNumber": "1.2",
+        "vignette": "Sophie attends with her partner, who says they want the baby to be safe but that Sophie is falling apart and they need honest information rather than blanket reassurance. Sophie asks whether restarting medication would make her a bad mother. She is also worried her employer will dismiss her if she makes another laboratory error.",
+        "question": "Describe — list and explain the information and communication approach you would use to support informed shared decision-making about ADHD treatment during pregnancy.\nA list without explanation will not be awarded any marks.\n(9 marks | 9 minutes)",
+        "commandWord": "describe_explain",
+        "marks": 9,
+        "timeMinutes": 9,
+        "stemSignals": [
+          "Sophie's question about being a bad mother is the most clinically important statement in this stem — it signals shame-driven reasoning that will interfere with genuine informed consent if not addressed directly",
+          "The partner's request for honest information rather than blanket reassurance is a legitimate clinical request — it requires a communication approach that acknowledges uncertainty rather than providing false certainty in either direction",
+          "The occupational concern is not separate from the clinical decision — Sophie's ability to continue working safely is part of the risk-benefit analysis and connects treatment to real-world functioning"
+        ],
+        "domains": [
+          {
+            "name": "Addressing Shame and Alliance (2 marks)",
+            "marks": 2,
+            "keyPoints": [
+              "Address Sophie's shame directly and before providing clinical information — because her question about being a bad mother reflects a belief that needing treatment is a moral failure; this belief must be explicitly corrected for genuine informed consent to be possible",
+              "Name that treatment during pregnancy is not a moral position — because needing psychiatric medication during pregnancy is a clinical decision, not a character assessment; framing it this way creates the conditions for Sophie to engage with the actual risks and benefits"
+            ]
+          },
+          {
+            "name": "Communicating Uncertainty Honestly (3 marks)",
+            "marks": 3,
+            "keyPoints": [
+              "Explain that the evidence on stimulants in pregnancy is genuinely limited and that certainty in either direction is not appropriate — because both reassurance that stimulants are safe and prohibition on the grounds that they are definitely harmful misrepresent the evidence; honest engagement with uncertainty is the correct clinical standard",
+              "Describe the known and possible fetal risks from stimulant exposure in accessible terms — because Sophie and her partner need to understand what is known, what is uncertain and what monitoring can address, not a pharmacology lecture",
+              "Describe the maternal and fetal risks from severe untreated ADHD in equal terms — because informed decision-making requires both sides of the risk-benefit analysis to be presented with equal clarity and without either being minimised"
+            ]
+          },
+          {
+            "name": "Decision-Making Process (2 marks)",
+            "marks": 2,
+            "keyPoints": [
+              "Include Sophie's partner as a participant in the informed consent discussion — because the partner has directly requested honest information and their engagement supports Sophie's decision-making and reduces the isolation that shame creates",
+              "Document the shared decision-making discussion explicitly — because in a pregnant patient with suicidal ideation and a contested medication decision, contemporaneous documentation of what information was given, what Sophie understood, and what she decided protects both Sophie and the clinical team"
+            ]
+          },
+          {
+            "name": "Occupational and Practical Considerations (2 marks)",
+            "marks": 2,
+            "keyPoints": [
+              "Discuss the occupational dimension as part of the risk-benefit analysis — because Sophie's ability to work safely in a laboratory is not separate from her clinical situation; it is a concrete risk that medication or non-medication management must address",
+              "Explore interim non-pharmacological strategies that could reduce occupational and domestic risk during the decision-making period — because Sophie may need time to decide and immediate supports can reduce harm regardless of the medication decision"
+            ]
+          }
+        ],
+        "zeroMarkTraps": [
+          "Providing a pharmacology information session about stimulants in pregnancy without addressing Sophie's shame or her question about being a bad mother",
+          "Offering false certainty in either direction about stimulant safety in pregnancy",
+          "Excluding the partner from the informed consent discussion despite their explicit request for honest information"
+        ],
+        "postExaminerNote": "Candidates who addressed shame before providing clinical information, communicated uncertainty honestly without false reassurance in either direction, included the partner as a named participant in the decision-making process, and connected the occupational safety concern to the risk-benefit analysis scored in the upper range. Candidates who began with a pharmacology review, gave blanket reassurance or prohibition, or treated the partner as background scored lower."
+      },
+      {
+        "stemNumber": "1.3",
+        "vignette": "After discussion, Sophie wishes to restart medication at the lowest effective dose. Her previous private psychiatrist has retired and no clinician has accepted ongoing prescribing responsibility. The GP will only prescribe if the perinatal service provides written governance and monitoring instructions. Obstetrics requests a risk-benefit plan, and Sophie's employer requests guidance about temporary work adjustments.",
+        "question": "Discuss — list and debate whether the perinatal service should accept interim prescribing responsibility, and describe the multidisciplinary management plan including monitoring, non-pharmacological supports, workplace liaison and postpartum planning.\nA list without debate and explanation will not be awarded any marks.\n(11 marks | 11 minutes)",
+        "commandWord": "debate",
+        "marks": 11,
+        "timeMinutes": 11,
+        "stemSignals": [
+          "The prescribing responsibility question is the core dilemma of this final stem — if no clinician accepts responsibility, Sophie remains untreated because of system fragmentation, not because treatment is contraindicated",
+          "The GP has offered a conditional willingness to prescribe — this is a shared-care opportunity that should be actively developed rather than declined",
+          "Multiple external parties are now requesting guidance simultaneously — the plan must assign specific responsibilities to each party rather than producing a generic multidisciplinary statement"
+        ],
+        "domains": [
+          {
+            "name": "Prescribing Responsibility Debate (3 marks)",
+            "marks": 3,
+            "keyPoints": [
+              "The perinatal service should consider accepting interim prescribing responsibility — because if no other clinician will prescribe and treatment is clinically indicated, Sophie will be left untreated by system fragmentation rather than clinical contraindication; this is a foreseeable harm the perinatal service has an obligation to address",
+              "Accepting prescribing responsibility should be time-limited with a documented transition plan — because interim prescribing in a specialist service should include a planned handover to a community psychiatrist or GP shared-care arrangement rather than becoming indefinite",
+              "The GP's conditional willingness to prescribe creates a shared-care pathway that should be actively developed — because providing the GP with written governance and monitoring instructions transforms their conditional offer into an active prescribing arrangement, which is the most sustainable long-term model"
+            ]
+          },
+          {
+            "name": "Monitoring During Pregnancy (2 marks)",
+            "marks": 2,
+            "keyPoints": [
+              "Coordinate with obstetrics for fetal growth monitoring and maternal blood pressure and cardiovascular surveillance — because stimulant effects on maternal blood pressure and fetal growth require obstetric input that the psychiatry service cannot provide independently",
+              "Establish monitoring of maternal weight, appetite, sleep, anxiety and mood throughout pregnancy — because the same parameters that matter for stimulant safety in non-pregnant adults remain relevant in pregnancy with additional attention to nutritional adequacy"
+            ]
+          },
+          {
+            "name": "Non-Pharmacological Supports (2 marks)",
+            "marks": 2,
+            "keyPoints": [
+              "Establish partner-supported routines, environmental reminders and task management strategies to reduce functional impairment during the titration period — because non-pharmacological supports reduce the dose needed and provide a safety net if medication needs to be adjusted",
+              "Develop a crisis and safety plan that includes rapid clinical review if suicidal ideation worsens, sleep deteriorates significantly or functional safety errors recur — because the suicidal ideation documented in the first stem requires an ongoing monitoring and response plan"
+            ]
+          },
+          {
+            "name": "Workplace and Employer Liaison (2 marks)",
+            "marks": 2,
+            "keyPoints": [
+              "Liaise with Sophie's employer only with her explicit informed consent — because any communication with the employer must be limited to what Sophie has agreed to share and should address functional adjustment needs rather than diagnoses or treatment details",
+              "Recommend temporary adjustments to high-risk laboratory tasks during the stabilisation period — because the occupational errors that occurred during untreated ADHD created a safety risk that temporary task modification can address without requiring full disclosure of diagnosis"
+            ]
+          },
+          {
+            "name": "Postpartum Planning (2 marks)",
+            "marks": 2,
+            "keyPoints": [
+              "Plan postpartum psychiatric follow-up before perinatal discharge — because sleep deprivation in the postpartum period worsens ADHD and mood, and a clinician needs to be named before the perinatal service closes the episode",
+              "Address breastfeeding and stimulant prescribing as a postpartum decision that requires informed consent before delivery — because breastfeeding plans affect prescribing choices and should be discussed proactively rather than urgently after birth"
+            ]
+          }
+        ],
+        "zeroMarkTraps": [
+          "Declining perinatal service prescribing responsibility on administrative grounds when no other clinician will prescribe and treatment is clinically indicated",
+          "Providing generic multidisciplinary recommendations without assigning specific monitoring responsibilities to obstetrics, psychiatry and the GP",
+          "Failing to include postpartum planning as a named component of the perinatal management plan"
+        ],
+        "postExaminerNote": "Candidates who debated the prescribing responsibility question explicitly and concluded that service fragmentation leaving Sophie untreated is a foreseeable harm requiring action, developed the GP's conditional offer into a shared-care plan, assigned specific monitoring responsibilities to each party, and included postpartum planning before perinatal discharge scored in the upper range. Candidates who declined prescribing on administrative grounds, or who produced a generic multidisciplinary plan without assigned responsibilities, did not achieve the standard."
+      }
+    ],
+    "meqNumber": 53
   }
 ]
