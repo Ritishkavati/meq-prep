@@ -1174,9 +1174,9 @@ export default function QuizMode() {
     setPhase("quiz");
   }
 
-  function handleSubmit(answer: string, timeUsed: number) {
+  async function handleSubmit(answer: string, timeUsed: number) {
     if (!currentStem) return;
-    const r = assessAnswer(currentStem, answer, timeUsed);
+    const r = await assessAnswer(currentStem, answer, timeUsed);
     setResult(r);
     setLastCandidateAnswer(answer);
     const attempt = createAttempt(fullName, candidateNumber, currentStem, answer, r);

@@ -205,19 +205,34 @@ function generateExaminerSummary(matches: SignalMatch[]): string {
 }
 
 // ─── Assess candidate answer against signal map ───────────────────────────────
-export function assessAnswer(stem: QuizStem, candidateAnswer: string, timeUsed: number): QuizResult {
-  const normalized = candidateAnswer.toLowerCase();
+export async function assessAnswer(stem: QuizStem, candidateAnswer: string, timeUsed: number): Promise<QuizResult> {
+  // ── AI signal detection ──
+  let identifiedIds: string[] = [];
+  try {
+    const response = await fetch("/api/detect-signals", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        signals: stem.signals.map((s) => ({ id: s.id, name: s.name, clueInStem: s.clueInStem })),
+        candidateAnswer,
+      }),
+    });
+    if (response.ok) {
+      const data = await response.json();
+      if (Array.isArray(data.identifiedIds)) {
+        identifiedIds = data.identifiedIds;
+      }
+    }
+  } catch {
+    // fall through — identifiedIds stays empty, all signals treated as missed
+  }
 
   // ── Match signals and annotate with PS reasoning ──
   const matches: SignalMatch[] = stem.signals.map((signal) => {
-    const matchedKeyword = signal.keywords.find((kw) =>
-      normalized.includes(kw.toLowerCase())
-    );
     const psNote = generatePSReason(signal);
     return {
       signal,
-      identified: !!matchedKeyword,
-      matchedKeyword,
+      identified: identifiedIds.includes(signal.id),
       psLevelReason: psNote?.reason,
       psStatement: psNote?.statement,
     };
@@ -270,6 +285,7 @@ export function assessAnswer(stem: QuizStem, candidateAnswer: string, timeUsed: 
   const examinerSummary = generateExaminerSummary(matches);
 
   // ── Overcalled ──
+  const normalized = candidateAnswer.toLowerCase();
   const overcalled = detectOvercalled(normalized, matches);
 
   return {
