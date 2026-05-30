@@ -29,12 +29,12 @@ export const FINAL_ELITE_MEQ_BANK: QuizStem[] = [
     "signals": [
       {
         "id": "s1",
-        "name": "Strategic denial of suicidal intent conceals lethal preparatory behaviour",
+        "name": "Strategic denial conceals lethal suicide preparation",
         "category": "risk_self",
         "severity": "critical",
         "clueInStem": "He denies suicidal intent and we need the cubicle.",
-        "whyItMatters": "Missing this signal means the candidate has allowed \"He denies suicidal intent and we need the cubicle.\" to substitute for clinical risk formulation and produced a disposition that is neither safe nor defensible.",
-        "modelWording": "Recognise that \"He denies suicidal intent and we need the cubicle.\" is a system or role pressure rather than evidence of clinical safety, and require explicit risk formulation before any disposition decision is reached or communicated.",
+        "whyItMatters": "Missing this signal means the candidate has accepted verbal denial and ED bed pressure despite behaviour suggesting organised suicidal preparation.",
+        "modelWording": "Recognise strategic denial as unreliable because the hose, tape, former workplace context and police attendance outweigh reassurance based on stated intent.",
         "keywords": [
           "denial-based discharge",
           "unsafe shortcut",
@@ -48,12 +48,12 @@ export const FINAL_ELITE_MEQ_BANK: QuizStem[] = [
       },
       {
         "id": "s2",
-        "name": "concealed high-context suicide risk despite denial",
+        "name": "Assessment-aware wording suggests concealed suicidal intent",
         "category": "risk_self",
         "severity": "critical",
         "clueInStem": "I am not stupid enough to say anything that gets me locked up.",
-        "whyItMatters": "Missing this signal means the candidate has produced a generic formulation without identifying concealed high-context suicide risk despite denial as the specific clinical pivot that determines risk, capacity, and safe disposition in this case.",
-        "modelWording": "Formulate concealed high-context suicide risk despite denial by treating \"I am not stupid enough to say anything that gets me locked up.\" as the pivotal clinical signal and linking it to risk, capacity, treatment, and a defensible disposition.",
+        "whyItMatters": "Missing this signal means the candidate has failed to recognise that Mr Cole is managing disclosure to avoid containment.",
+        "modelWording": "Formulate his statement as evidence of possible concealed intent because he appears to understand how to avoid triggering involuntary assessment.",
         "keywords": [
           "concealed high-context suicide risk despite denial",
           "formulation",
@@ -66,12 +66,12 @@ export const FINAL_ELITE_MEQ_BANK: QuizStem[] = [
       },
       {
         "id": "s3",
-        "name": "capacity and safe discharge after self-harm risk",
+        "name": "Safety contract cannot replace risk formulation",
         "category": "mental_health_act",
         "severity": "critical",
         "clueInStem": "Can I discharge if he contracts for safety?",
-        "whyItMatters": "Missing this signal means the candidate has named a legal or policy pathway without demonstrating how capacity and safe discharge after self-harm risk applies to this patient and what it specifically authorises or constrains.",
-        "modelWording": "Clarify whether capacity and safe discharge after self-harm risk applies to this situation, identify the correct legal threshold and authority, and document the least restrictive lawful pathway and the rationale for choosing it.",
+        "whyItMatters": "Missing this signal means the candidate has treated a contract for safety as protection despite method preparation and unreliable disclosure.",
+        "modelWording": "Clarify that a safety contract has no standalone protective value because disposition must be based on risk formulation, capacity and lawful containment options.",
         "keywords": [
           "capacity and safe discharge after self-harm risk",
           "legal threshold",
@@ -85,12 +85,12 @@ export const FINAL_ELITE_MEQ_BANK: QuizStem[] = [
       },
       {
         "id": "s4",
-        "name": "children and ex-partner affected by suicide and blame",
+        "name": "Children are central to burdensomeness formulation",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "The kids will be better off without me.",
-        "whyItMatters": "Missing this signal means the candidate has focused only on the identified patient and overlooked children and ex-partner affected by suicide and blame, who face foreseeable harm that demands an independent clinical and legal response.",
-        "modelWording": "Identify children and ex-partner affected by suicide and blame as an independent duty-of-care priority, act on \"The kids will be better off without me.\", and document a safety plan that does not depend solely on the primary patient's cooperation.",
+        "whyItMatters": "Missing this signal means the candidate has overlooked perceived burdensomeness involving the children as a marker of suicide risk.",
+        "modelWording": "Identify the children and ex-wife as part of the risk formulation because collateral suggests altruistic suicidal thinking and family impact.",
         "keywords": [
           "children and ex-partner affected by suicide and blame",
           "vulnerable person",
@@ -104,12 +104,12 @@ export const FINAL_ELITE_MEQ_BANK: QuizStem[] = [
       },
       {
         "id": "s5",
-        "name": "Rural stigma and police pressure creating false discharge urgency",
+        "name": "Rural shame may increase concealment and risk",
         "category": "collateral",
         "severity": "important",
         "clueInStem": "We cannot stay here all night.",
-        "whyItMatters": "Missing this signal means the candidate has produced a disposition that ignores Rural stigma and police pressure creating false discharge urgency, making the safety plan unrealistic or unsafe for this specific patient in this context.",
-        "modelWording": "Address Rural stigma and police pressure creating false discharge urgency directly, clarifying how it shapes realistic engagement and safety planning without allowing it to override clinical judgment about patient safety.",
+        "whyItMatters": "Missing this signal means the candidate has ignored how rural stigma may worsen shame, non-disclosure and resistance to admission.",
+        "modelWording": "Address rural stigma directly because shame about admission may increase concealment while still requiring safe containment.",
         "keywords": [
           "family pressure",
           "cultural safety",
@@ -123,12 +123,12 @@ export const FINAL_ELITE_MEQ_BANK: QuizStem[] = [
       },
       {
         "id": "s6",
-        "name": "Documenting high-context risk, discharge decision and MHA basis",
+        "name": "Documentation must justify containment or discharge",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether he can leave ED tonight or requires involuntary/voluntary containment",
-        "whyItMatters": "Missing this signal means the candidate has reached a clinical decision without providing the documentation, legal reasoning, and accountability trail that makes Documenting high-context risk, discharge decision and MHA basis defensible under review.",
-        "modelWording": "Document Documenting high-context risk, discharge decision and MHA basis comprehensively, recording the risks weighed, the legal basis applied, alternatives rejected, and the escalation plan that makes the disposition defensible.",
+        "whyItMatters": "Missing this signal means the candidate has not created a defensible record explaining risk, collateral, legal reasoning and rejected alternatives.",
+        "modelWording": "Document the risk formulation, collateral, means, system pressures, capacity reasoning and legal basis because this decision is likely to be scrutinised.",
         "keywords": [
           "documentation",
           "governance",
@@ -195,12 +195,12 @@ I would document that the decision was not based on denial alone. The note shoul
     "signals": [
       {
         "id": "s1",
-        "name": "Medical urgency drives coercive sedation before legal and capacity review",
+        "name": "Medical urgency cannot justify coercive sedation alone",
         "category": "physical_health",
         "severity": "critical",
         "clueInStem": "He could arrest tonight, just sedate him.",
-        "whyItMatters": "Missing this signal means the candidate has allowed \"He could arrest tonight, just sedate him.\" to substitute for clinical risk formulation and produced a disposition that is neither safe nor defensible.",
-        "modelWording": "Recognise that \"He could arrest tonight, just sedate him.\" is a system or role pressure rather than evidence of clinical safety, and require explicit risk formulation before any disposition decision is reached or communicated.",
+        "whyItMatters": "Missing this signal means the candidate has allowed fear of cardiac arrest to bypass capacity assessment and lawful treatment planning.",
+        "modelWording": "Recognise medical urgency while separating sedation, dialysis authority and capacity because life-saving treatment still requires lawful safeguards.",
         "keywords": [
           "sedation to force treatment",
           "unsafe shortcut",
@@ -214,12 +214,12 @@ I would document that the decision was not based on denial alone. The note shoul
       },
       {
         "id": "s2",
-        "name": "psychosis-driven refusal of life-saving dialysis",
+        "name": "Psychotic belief directly drives dialysis refusal",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "The machine is poisoning my blood because immigration put trackers in it.",
-        "whyItMatters": "Missing this signal means the candidate has produced a generic formulation without identifying psychosis-driven refusal of life-saving dialysis as the specific clinical pivot that determines risk, capacity, and safe disposition in this case.",
-        "modelWording": "Formulate psychosis-driven refusal of life-saving dialysis by treating \"The machine is poisoning my blood because immigration put trackers in it.\" as the pivotal clinical signal and linking it to risk, capacity, treatment, and a defensible disposition.",
+        "whyItMatters": "Missing this signal means the candidate has failed to connect Raj's refusal to persecutory delusions about poisoning and immigration tracking.",
+        "modelWording": "Formulate the refusal as psychosis-driven because the belief about poisoning and trackers may impair appreciation and weighing of dialysis risk.",
         "keywords": [
           "psychosis-driven refusal of life-saving dialysis",
           "formulation",
@@ -232,12 +232,12 @@ I would document that the decision was not based on denial alone. The note shoul
       },
       {
         "id": "s3",
-        "name": "emergency treatment authority versus MHA",
+        "name": "MHA may not authorise physical dialysis treatment",
         "category": "mental_health_act",
         "severity": "critical",
         "clueInStem": "Does the Mental Health Act let us dialyse him?",
-        "whyItMatters": "Missing this signal means the candidate has named a legal or policy pathway without demonstrating how emergency treatment authority versus MHA applies to this patient and what it specifically authorises or constrains.",
-        "modelWording": "Clarify whether emergency treatment authority versus MHA applies to this situation, identify the correct legal threshold and authority, and document the least restrictive lawful pathway and the rationale for choosing it.",
+        "whyItMatters": "Missing this signal means the candidate has assumed mental health detention automatically permits dialysis against objection.",
+        "modelWording": "Clarify the legal pathway because compulsory psychiatric treatment, emergency medical treatment and substitute decision-making may have different thresholds.",
         "keywords": [
           "emergency treatment authority versus MHA",
           "legal threshold",
@@ -251,12 +251,12 @@ I would document that the decision was not based on denial alone. The note shoul
       },
       {
         "id": "s4",
-        "name": "family collateral about relapse and treatment refusal",
+        "name": "Family collateral shows relapse and poisoning fears",
         "category": "collateral",
         "severity": "important",
         "clueInStem": "He stopped medication because he thought we were poisoning him.",
-        "whyItMatters": "Missing this signal means the candidate has focused only on the identified patient and overlooked family collateral about relapse and treatment refusal, who face foreseeable harm that demands an independent clinical and legal response.",
-        "modelWording": "Identify family collateral about relapse and treatment refusal as an independent duty-of-care priority, act on \"He stopped medication because he thought we were poisoning him.\", and document a safety plan that does not depend solely on the primary patient's cooperation.",
+        "whyItMatters": "Missing this signal means the candidate has ignored collateral showing a broader psychotic relapse pattern affecting medication and treatment refusal.",
+        "modelWording": "Integrate the sister's collateral because medication cessation and poisoning beliefs support relapse, incapacity risk and urgent treatment planning.",
         "keywords": [
           "family collateral about relapse and treatment refusal",
           "vulnerable person",
@@ -270,12 +270,12 @@ I would document that the decision was not based on denial alone. The note shoul
       },
       {
         "id": "s5",
-        "name": "Security and ward-flow pressure accelerating coercive treatment",
+        "name": "Migration fears may amplify treatment mistrust",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "We cannot keep security here all evening.",
-        "whyItMatters": "Missing this signal means the candidate has produced a disposition that ignores Security and ward-flow pressure accelerating coercive treatment, making the safety plan unrealistic or unsafe for this specific patient in this context.",
-        "modelWording": "Address Security and ward-flow pressure accelerating coercive treatment directly, clarifying how it shapes realistic engagement and safety planning without allowing it to override clinical judgment about patient safety.",
+        "whyItMatters": "Missing this signal means the candidate has overlooked how immigration and cost fears may worsen paranoia and disengagement.",
+        "modelWording": "Address migration and billing fears because culturally safe explanation may reduce mistrust and support the least restrictive treatment plan.",
         "keywords": [
           "family pressure",
           "cultural safety",
@@ -289,12 +289,12 @@ I would document that the decision was not based on denial alone. The note shoul
       },
       {
         "id": "s6",
-        "name": "Documenting lawful involuntary dialysis framework and safeguards",
+        "name": "Safeguards must accompany treatment against objection",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to treat against objection, under what legal basis, and with what safeguards",
-        "whyItMatters": "Missing this signal means the candidate has reached a clinical decision without providing the documentation, legal reasoning, and accountability trail that makes Documenting lawful involuntary dialysis framework and safeguards defensible under review.",
-        "modelWording": "Document Documenting lawful involuntary dialysis framework and safeguards comprehensively, recording the risks weighed, the legal basis applied, alternatives rejected, and the escalation plan that makes the disposition defensible.",
+        "whyItMatters": "Missing this signal means the candidate has not documented why coercive dialysis is necessary, lawful, proportionate and least restrictive.",
+        "modelWording": "Document the medical urgency, capacity findings, legal authority, sedation rationale, family communication and monitoring safeguards before treating against objection.",
         "keywords": [
           "documentation",
           "governance",
