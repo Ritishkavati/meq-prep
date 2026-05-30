@@ -1,4 +1,4 @@
-import { QuizStem } from "../quizData";
+import type { QuizStem } from "../quizData";
 
 export const ETH_STEMS: QuizStem[] = [
   {
@@ -16,81 +16,24 @@ Mr Roberts says, "I understand I may die, but I do not want my last weeks spent 
 Mr Roberts is a retired pastor and says he has "made peace with dying." The cardiologist says surgery offers a reasonable chance of survival but carries high risk of stroke and prolonged ventilation. The family asks you to find him incapable so they can consent.`,
     totalMarks: 22,
     signals: [
-      {
-        id: "s1",
-        name: "Capacitous refusal may be valid",
-        category: "capacity",
-        severity: "critical",
-        clueInStem: "I understand I may die, but I do not want my last weeks spent in ICU.",
-        whyItMatters: "A capacitous adult can refuse life-saving treatment; family distress does not override autonomy.",
-        modelWording: "Assess capacity carefully; if he understands, appreciates and weighs death versus ICU burden, refusal should be respected.",
-        keywords: ["capacity", "refusal", "life-saving treatment", "autonomy", "ICU", "aortic stenosis", "weighing", "informed refusal"],
-      },
-      {
-        id: "s2",
-        name: "Family pressure to misuse capacity assessment",
-        category: "ethics",
-        severity: "critical",
-        clueInStem: "find him incapable",
-        whyItMatters: "Capacity assessment must not be used to resolve family disagreement or force unwanted treatment.",
-        modelWording: "Maintain independence and make a clinical capacity opinion, not an outcome-driven decision to satisfy family.",
-        keywords: ["family pressure", "capacity misuse", "independence", "ethics", "legal threat", "autonomy", "substitute decision-making"],
-      },
-      {
-        id: "s3",
-        name: "Depression/grief differential",
-        category: "diagnosis_formulation",
-        severity: "important",
-        clueInStem: "depressed since Mum died",
-        whyItMatters: "Grief or depression may influence decision-making but should be assessed rather than presumed.",
-        modelWording: "Assess depression, grief and demoralisation, but do not assume a values-based refusal is depressive incapacity.",
-        keywords: ["depression", "grief", "bereavement", "demoralisation", "values-based refusal", "capacity", "old age"],
-      },
-      {
-        id: "s4",
-        name: "Spiritual/cultural values",
-        category: "cultural_safety",
-        severity: "important",
-        clueInStem: "made peace with dying.",
-        whyItMatters: "Spiritual values may support a coherent refusal and should be respected.",
-        modelWording: "Explore his pastoral/spiritual values as part of understanding the decision and offer chaplaincy if desired.",
-        keywords: ["spiritual values", "pastor", "chaplaincy", "made peace", "death", "cultural safety", "values", "end-of-life"],
-      },
-      {
-        id: "s5",
-        name: "Balanced medical information",
-        category: "physical_health",
-        severity: "important",
-        clueInStem: "high risk of stroke and prolonged ventilation.",
-        whyItMatters: "Capacity requires understanding realistic benefits and burdens of surgery.",
-        modelWording: "Confirm he has received balanced cardiology information about survival chance, stroke, ventilation and non-surgical outcomes.",
-        keywords: ["cardiology", "stroke risk", "ventilation", "surgical risk", "benefits", "burdens", "medical information"],
-      },
-      {
-        id: "s6",
-        name: "Governance and legal threat",
-        category: "governance",
-        severity: "optional",
-        clueInStem: "threatens legal action",
-        whyItMatters: "Threats require clear documentation and possibly ethics/legal consultation.",
-        modelWording: "Document capacity reasoning clearly and consider ethics/legal support due to family legal threat.",
-        keywords: ["legal threat", "documentation", "ethics consultation", "governance", "defensible decision", "family conflict"],
-      },
+      { id: "s1", name: "Urgent valve refusal is a high-stakes capacity decision", category: "capacity", severity: "critical", clueInStem: "You are the consultant psychiatrist asked to assess Mr Roberts, a 79-year-old man with severe aortic stenosis who is refusing urgent valve surgery.", whyItMatters: "Missing this signal means the candidate treats a potentially life-saving refusal as a family dispute rather than a decision-specific capacity assessment.", modelWording: "Assess capacity decision-specifically because refusal of urgent valve surgery may be life-shortening and needs defensible reasoning.", keywords: ["capacity", "valve surgery", "refusal", "aortic stenosis"] },
+      { id: "s2", name: "Values-based refusal may be valid", category: "ethics", severity: "critical", clueInStem: "Mr Roberts says, \"I understand I may die, but I do not want my last weeks spent in ICU.\"", whyItMatters: "Missing this signal means the candidate may override an informed and values-based refusal simply because death is possible.", modelWording: "Respect a capacitous refusal if he understands death risk and is weighing it against ICU burden.", keywords: ["ICU", "die", "autonomy", "values"] },
+      { id: "s3", name: "Bereavement and depression need assessment, not presumption", category: "diagnosis_formulation", severity: "important", clueInStem: "His daughter says, \"He is depressed since Mum died, so this can't be his real decision.\"", whyItMatters: "Missing this signal means family grief concerns are either dismissed or accepted as proof of incapacity without assessment.", modelWording: "Assess depression, grief and demoralisation because bereavement may influence but does not automatically invalidate refusal.", keywords: ["depression", "bereavement", "grief", "capacity"] },
+      { id: "s4", name: "Legal threat should not change clinical opinion", category: "governance", severity: "important", clueInStem: "His son threatens legal action if surgery is not performed.", whyItMatters: "Missing this signal means fear of complaint or litigation may distort an independent capacity opinion.", modelWording: "Document carefully and seek ethics or legal support because legal threats require governance support, not outcome-driven assessment.", keywords: ["legal action", "documentation", "governance"] },
+      { id: "s5", name: "Pastoral identity may support settled end-of-life values", category: "cultural_safety", severity: "important", clueInStem: "Mr Roberts is a retired pastor and says he has \"made peace with dying.\"", whyItMatters: "Missing this signal means spiritual values relevant to his decision are ignored or pathologised.", modelWording: "Explore his pastoral and spiritual values because they may explain a coherent acceptance of death.", keywords: ["pastor", "spiritual", "made peace", "dying"] },
+      { id: "s6", name: "Cardiology information must be balanced and understood", category: "physical_health", severity: "important", clueInStem: "The cardiologist says surgery offers a reasonable chance of survival but carries high risk of stroke and prolonged ventilation.", whyItMatters: "Missing this signal means capacity may be assessed without ensuring he understands both benefits and burdens of surgery.", modelWording: "Confirm balanced medical understanding because he must appreciate survival chance, stroke risk, ventilation and the alternative course.", keywords: ["stroke", "ventilation", "cardiology", "benefits", "burdens"] },
+      { id: "s7", name: "Family request to find incapacity is ethically unsafe", category: "ethics", severity: "critical", clueInStem: "The family asks you to find him incapable so they can consent.", whyItMatters: "Missing this signal means capacity assessment is misused to achieve the family's preferred treatment outcome.", modelWording: "Maintain independence because capacity assessment must answer the clinical question, not enable substitute consent desired by family.", keywords: ["find him incapable", "family", "substitute consent", "independence"] },
     ],
-    priorityOrder: {
-      urgent: ["s1", "s2"],
-      secondary: ["s3", "s4", "s5"],
-      lowYield: ["s6"],
-    },
-    modelAnswer: `Mr Roberts' refusal of urgent valve surgery must be approached as a serious capacity assessment, not as a family vote. His statement, "I understand I may die, but I do not want my last weeks spent in ICU," is coherent and values-based. It shows he is not simply denying risk; he is weighing death against the burdens of intensive care. A capacitous adult can refuse life-saving treatment, and the consultant role is to protect that right if the decision is valid.
+    priorityOrder: { urgent: ["s1", "s2", "s7"], secondary: ["s3", "s4", "s5", "s6"], lowYield: [] },
+    modelAnswer: `Mr Roberts' refusal requires a careful decision-specific capacity assessment, not a family vote. He is refusing urgent valve surgery for severe aortic stenosis, and the outcome may be death, but a capacitous adult can refuse life-saving treatment.
 
-The daughter's concern that he is "depressed since Mum died" is clinically relevant, but it is not proof of incapacity. I would assess depression, grief, demoralisation, delirium and cognitive impairment, because these can affect appreciation and weighing. However, I would not assume that bereavement makes his refusal pathological. I would ask whether his wish is consistent over time, whether he still experiences pleasure or meaning, whether there is hopelessness unrelated to the cardiac illness, and whether he can discuss alternatives. A values-based end-of-life refusal can coexist with grief.
+His statement, "I understand I may die, but I do not want my last weeks spent in ICU," is a coherent values-based statement. I would test whether he understands the condition, the proposed surgery, the chance of survival, the risk of stroke and prolonged ventilation, the likely course without surgery and palliative options. If he can understand, retain, use and weigh that information, his refusal should be respected.
 
-The medical facts must be clearly understood. The cardiologist says surgery offers a reasonable chance of survival but carries "high risk of stroke and prolonged ventilation." I would ensure Mr Roberts understands both the potential benefit and burdens of surgery, the likely course without surgery, palliative options and the uncertainty involved. Capacity requires realistic information, not a simplified family narrative of "surgery saves him."
+The daughter's concern that he has been depressed since his wife died is clinically relevant but not determinative. I would assess depression, grief, demoralisation, delirium and cognition, while avoiding the assumption that acceptance of death is pathological. His identity as a retired pastor and statement that he has made peace with dying may represent settled spiritual values.
 
-The family's request to "find him incapable" is ethically problematic. Capacity assessment cannot be outcome-driven to resolve family distress or legal threats. I would explain to the son and daughter that if their father has capacity, they cannot consent on his behalf and clinicians cannot impose surgery. If he lacks capacity, then substitute decision-making would be based on his values and best interests, not simply on the family's wish to prolong life.
+The family's request that I find him incapable so they can consent is ethically unsafe. Capacity assessment must not be outcome-driven or used to resolve family distress. If he has capacity, his children cannot consent for him; if he lacks capacity, substitute decisions should be based on his values and best interests, not simply the family's wish for surgery.
 
-His identity as a retired pastor and his statement that he has "made peace with dying" should be explored as part of his values. I would offer chaplaincy or spiritual support if he wants it. This is not to persuade him either way, but to ensure the decision is supported and settled. Given the son's threat of legal action, I would document carefully and consider ethics or legal consultation, but I would not change my opinion because of pressure. The final consultant position is that respecting autonomy sometimes means allowing a person to refuse treatment others desperately want them to accept, provided the capacity assessment is robust and the decision is informed.`,
+Because the son threatens legal action, I would document the assessment carefully and consider ethics or legal consultation. That support should protect transparent decision-making, not pressure the clinical opinion.`,
   },
   {
     id: "ETH-002",
@@ -107,81 +50,24 @@ Daniel says, "My former manager planted cameras in my walls and I know where he 
 His case manager reports Daniel stopped depot medication two months ago and has been searching the manager's address online. Daniel's sister says he has been drinking heavily and carrying a hunting knife. The team asks whether confidentiality prevents warning police or the former manager.`,
     totalMarks: 22,
     signals: [
-      {
-        id: "s1",
-        name: "Specific threat to identifiable victim",
-        category: "risk_others",
-        severity: "critical",
-        clueInStem: "I know where he lives.",
-        whyItMatters: "A specific identifiable victim with threat and address-seeking creates serious foreseeable harm.",
-        modelWording: "Treat this as serious risk to an identifiable person requiring urgent protective action.",
-        keywords: ["identified victim", "specific threat", "violence risk", "former manager", "address", "foreseeable harm", "duty to protect"],
-      },
-      {
-        id: "s2",
-        name: "Confidentiality may be overridden",
-        category: "ethics",
-        severity: "critical",
-        clueInStem: "If you tell him, I will never speak to services again.",
-        whyItMatters: "Therapeutic alliance matters but does not prevent disclosure when serious risk to others exists.",
-        modelWording: "Explain confidentiality limits: serious risk to an identifiable person may require disclosure to police or others necessary for safety.",
-        keywords: ["confidentiality", "duty to warn", "duty to protect", "serious risk", "therapeutic alliance", "disclosure", "police", "ethics"],
-      },
-      {
-        id: "s3",
-        name: "Medication non-adherence and relapse",
-        category: "collateral",
-        severity: "important",
-        clueInStem: "stopped depot medication two months ago",
-        whyItMatters: "Non-adherence increases psychotic intensity and violence risk.",
-        modelWording: "Use collateral about depot cessation to support relapse formulation and urgent treatment review.",
-        keywords: ["depot", "non-adherence", "psychotic relapse", "case manager", "collateral", "treatment review", "risk escalation"],
-      },
-      {
-        id: "s4",
-        name: "Weapon access",
-        category: "immediate_safety",
-        severity: "important",
-        clueInStem: "carrying a hunting knife.",
-        whyItMatters: "Weapon carriage indicates capability and imminent risk.",
-        modelWording: "Escalate immediately due to weapon access, including police welfare/safety response where appropriate.",
-        keywords: ["hunting knife", "weapon access", "immediate safety", "police", "violence capability", "risk escalation", "means"],
-      },
-      {
-        id: "s5",
-        name: "Substance use increases disinhibition",
-        category: "substance_use",
-        severity: "important",
-        clueInStem: "drinking heavily",
-        whyItMatters: "Alcohol increases impulsivity and lowers threshold for violence.",
-        modelWording: "Assess alcohol use as a dynamic risk factor amplifying psychosis-linked violence risk.",
-        keywords: ["alcohol", "drinking heavily", "disinhibition", "impulsivity", "dynamic risk", "violence", "substance use"],
-      },
-      {
-        id: "s6",
-        name: "MHA assessment",
-        category: "mental_health_act",
-        severity: "optional",
-        clueInStem: "I will sort him out myself.",
-        whyItMatters: "Psychotic threat plus risk to others may meet involuntary assessment criteria.",
-        modelWording: "Consider urgent Mental Health Act assessment if mental disorder is driving serious risk and voluntary care is refused.",
-        keywords: ["Mental Health Act", "involuntary assessment", "risk to others", "psychosis", "refusal", "urgent assessment"],
-      },
+      { id: "s1", name: "Persecutory delusion identifies a specific victim", category: "risk_others", severity: "critical", clueInStem: "Daniel says, \"My former manager planted cameras in my walls and I know where he lives.\"", whyItMatters: "Missing this signal means the candidate has not recognised a foreseeable risk to a named or identifiable target.", modelWording: "Treat the former manager as an identifiable potential victim because Daniel links persecutory belief with knowledge of his address.", keywords: ["former manager", "cameras", "address", "victim"] },
+      { id: "s2", name: "Threat shows intent to act if police do not", category: "risk_others", severity: "critical", clueInStem: "He adds, \"If police won't act, I will sort him out myself.\"", whyItMatters: "Missing this signal means an explicit threat is minimised as psychotic talk rather than potential action.", modelWording: "Escalate protective action because Daniel is describing self-directed retaliation if authorities do not act.", keywords: ["sort him out", "threat", "police", "violence"] },
+      { id: "s3", name: "Alliance concern does not remove confidentiality limits", category: "ethics", severity: "critical", clueInStem: "He refuses permission for you to contact anyone and says, \"If you tell him, I will never speak to services again.\"", whyItMatters: "Missing this signal means therapeutic alliance is allowed to override serious foreseeable harm to another person.", modelWording: "Explain confidentiality limits because serious risk to an identifiable person may require proportionate disclosure.", keywords: ["confidentiality", "permission", "services", "disclosure"] },
+      { id: "s4", name: "Depot cessation suggests psychotic relapse", category: "collateral", severity: "important", clueInStem: "His case manager reports Daniel stopped depot medication two months ago and has been searching the manager's address online.", whyItMatters: "Missing this signal means relapse and target-seeking behaviour are not integrated into risk formulation.", modelWording: "Use case-manager collateral because depot cessation and address searching show escalating relapse-linked risk.", keywords: ["depot", "case manager", "address", "relapse"] },
+      { id: "s5", name: "Online address searching increases imminence", category: "immediate_safety", severity: "critical", clueInStem: "His case manager reports Daniel stopped depot medication two months ago and has been searching the manager's address online.", whyItMatters: "Missing this signal means preparatory behaviour toward the victim is overlooked.", modelWording: "Treat address searching as preparatory behaviour because it increases proximity and imminence of harm.", keywords: ["searching address", "preparatory", "imminent"] },
+      { id: "s6", name: "Alcohol and knife carrying amplify violence capability", category: "substance_use", severity: "critical", clueInStem: "Daniel's sister says he has been drinking heavily and carrying a hunting knife.", whyItMatters: "Missing this signal means disinhibition and weapon capability are not factored into the duty-to-protect decision.", modelWording: "Escalate urgently because heavy drinking and carrying a hunting knife increase capability and disinhibition.", keywords: ["drinking", "hunting knife", "weapon", "alcohol"] },
+      { id: "s7", name: "Police or victim warning requires minimum necessary disclosure", category: "governance", severity: "important", clueInStem: "The team asks whether confidentiality prevents warning police or the former manager.", whyItMatters: "Missing this signal means the team may either over-disclose or fail to protect because it has not applied a proportionality framework.", modelWording: "Use minimum necessary disclosure because confidentiality may yield only to the extent needed for safety.", keywords: ["police", "former manager", "warning", "minimum necessary"] },
     ],
-    priorityOrder: {
-      urgent: ["s1", "s2"],
-      secondary: ["s3", "s4", "s5"],
-      lowYield: ["s6"],
-    },
-    modelAnswer: `Daniel's presentation creates a clear tension between confidentiality and protection of an identifiable victim. His statement, "My former manager planted cameras in my walls and I know where he lives," establishes both persecutory delusion and access to a specific target. The later statement, "If police won't act, I will sort him out myself," moves the concern from psychotic belief to potential action. This is not a vague risk to the public; it is a foreseeable risk to a named or identifiable person.
+    priorityOrder: { urgent: ["s1", "s2", "s3", "s5", "s6"], secondary: ["s4", "s7"], lowYield: [] },
+    modelAnswer: `Daniel's case creates a clear duty-to-protect dilemma. He has paranoid schizophrenia and says his former manager planted cameras in his walls and that he knows where the manager lives. That identifies a specific potential victim, not a vague risk to the public.
 
-I would not be reassured by his refusal of permission to contact anyone or by his threat, "If you tell him, I will never speak to services again." Therapeutic alliance matters, and unnecessary disclosure can damage engagement. However, confidentiality has limits where there is serious risk to others. I would explain this to Daniel in plain language if safe: I will keep information private where possible, but I cannot keep threats to an identifiable person confidential if disclosure is necessary to prevent harm.
+The risk is made more serious by his statement, "If police won't act, I will sort him out myself." The case manager's report that he stopped depot medication two months ago and has been searching the manager's address online suggests relapse and preparatory behaviour. His sister's report of heavy drinking and carrying a hunting knife adds disinhibition and weapon capability.
 
-The collateral makes the risk more urgent. The case manager reports he stopped depot medication two months ago and has been searching the manager's address online. His sister says he has been "drinking heavily" and "carrying a hunting knife." These are dynamic risk factors: relapse, target-seeking, disinhibition and weapon access. I would immediately consider police involvement, welfare/safety response, and urgent mental health assessment. If mental illness is driving serious risk and he refuses voluntary care, I would consider Mental Health Act assessment.
+I would explain to Daniel that confidentiality has limits when there is serious risk to an identifiable person. His threat to disengage from services matters, but it cannot prevent proportionate protective action if serious harm is foreseeable.
 
-The question is not whether to warn everyone, but what minimum disclosure is necessary and lawful. I would liaise with police and senior service governance, consider warning the former manager through appropriate channels if required, and document exactly what was disclosed and why. I would also assess whether there are workplace security measures, restraining orders or other protective steps. The aim is victim safety, not punishment of Daniel.
+The disclosure should be lawful and limited to what is necessary. I would involve senior service governance and police, and consider warning the former manager through appropriate channels if needed. I would document what was disclosed, to whom, why, and why less intrusive options were insufficient.
 
-Clinically, I would assess mental state, insight, medication adherence, alcohol use, weapon access, proximity to the manager, plans, command hallucinations, and capacity to collaborate with safety. I would attempt engagement around medication restart or admission, but I would not allow engagement concerns to paralyse protective action. The defensible consultant response explicitly works through the tension: preserve confidentiality as far as possible, but override it proportionately where a specific, serious and foreseeable risk to an identifiable person exists.`,
+Clinically, I would urgently reassess mental state, medication, alcohol use, weapon access, proximity to the manager and willingness for voluntary treatment. If mental illness is driving serious risk and he refuses care, Mental Health Act assessment should be considered.`,
   },
   {
     id: "ETH-003",
@@ -198,81 +84,24 @@ Nursing staff report that Dr K, a consultant psychiatrist, appeared intoxicated 
 Dr K tells you, "I'm going through a divorce; please don't destroy my career." The hospital executive asks whether this can be handled quietly because "we cannot afford another consultant vacancy."`,
     totalMarks: 22,
     signals: [
-      {
-        id: "s1",
-        name: "Patient safety from impaired practice",
-        category: "immediate_safety",
-        severity: "critical",
-        clueInStem: "appeared intoxicated during an evening shift",
-        whyItMatters: "Possible intoxicated practice creates immediate risk to patients and requires removal from unsafe duties pending assessment.",
-        modelWording: "Prioritise patient safety by ensuring Dr K is not providing unsupervised clinical care until fitness for duty is assessed.",
-        keywords: ["impaired colleague", "intoxicated", "fitness for duty", "patient safety", "clinical director", "unsafe practice", "consultant", "after-hours"],
-      },
-      {
-        id: "s2",
-        name: "False documentation",
-        category: "governance",
-        severity: "critical",
-        clueInStem: "patient reviewed, clinically indicated",
-        whyItMatters: "False documentation is a serious professionalism and medico-legal issue requiring escalation.",
-        modelWording: "Address apparent false documentation as a serious governance and professionalism concern requiring factual investigation and escalation.",
-        keywords: ["false documentation", "professionalism", "CCTV", "seclusion", "clinical record", "governance", "integrity", "medico-legal"],
-      },
-      {
-        id: "s3",
-        name: "Mandatory reporting consideration",
-        category: "governance",
-        severity: "important",
-        clueInStem: "ordered IM sedation for a patient without reviewing them.",
-        whyItMatters: "Impairment and unsafe care may meet mandatory reporting threshold depending on jurisdiction.",
-        modelWording: "Consider mandatory notification if impairment or departure from accepted practice created substantial risk of harm.",
-        keywords: ["mandatory reporting", "AHPRA", "substantial risk", "impaired practitioner", "unsafe sedation", "notification", "professional obligation"],
-      },
-      {
-        id: "s4",
-        name: "Hierarchy and staff fear",
-        category: "mdt_conflict",
-        severity: "important",
-        clueInStem: "I was afraid to challenge him because he signs our performance reviews.",
-        whyItMatters: "Power imbalance suppresses safety escalation and requires cultural/governance response.",
-        modelWording: "Support staff who spoke up and address hierarchy-related barriers to safety escalation.",
-        keywords: ["hierarchy", "speaking up", "staff fear", "performance reviews", "safety culture", "nursing staff", "power imbalance"],
-      },
-      {
-        id: "s5",
-        name: "Support for colleague without concealment",
-        category: "ethics",
-        severity: "important",
-        clueInStem: "please don't destroy my career.",
-        whyItMatters: "Compassion for impaired colleague must not override patient safety or statutory obligations.",
-        modelWording: "Offer support and occupational health referral while making clear that patient safety and reporting duties cannot be avoided.",
-        keywords: ["colleague support", "occupational health", "divorce", "compassion", "patient safety", "statutory duty", "ethics"],
-      },
-      {
-        id: "s6",
-        name: "Workforce pressure",
-        category: "system_pressure",
-        severity: "optional",
-        clueInStem: "we cannot afford another consultant vacancy.",
-        whyItMatters: "Workforce shortage cannot justify concealing unsafe practice.",
-        modelWording: "Resist workforce-pressure minimisation and follow formal clinical governance processes.",
-        keywords: ["workforce shortage", "consultant vacancy", "executive pressure", "handle quietly", "governance", "transparency", "patient safety"],
-      },
+      { id: "s1", name: "Possible intoxicated practice creates patient-safety risk", category: "immediate_safety", severity: "critical", clueInStem: "Nursing staff report that Dr K, a consultant psychiatrist, appeared intoxicated during an evening shift and ordered IM sedation for a patient without reviewing them.", whyItMatters: "Missing this signal means a potentially impaired consultant may continue unsafe practice.", modelWording: "Protect patients immediately because possible intoxication and sedation orders without review create serious clinical risk.", keywords: ["intoxicated", "IM sedation", "patient safety"] },
+      { id: "s2", name: "Sedated patient needs review", category: "physical_health", severity: "critical", clueInStem: "Nursing staff report that Dr K, a consultant psychiatrist, appeared intoxicated during an evening shift and ordered IM sedation for a patient without reviewing them.", whyItMatters: "Missing this signal means harm from IM sedation may go undetected.", modelWording: "Review the affected patient and medication chart because sedation without medical review may have caused harm.", keywords: ["sedation", "review", "medication chart"] },
+      { id: "s3", name: "Hierarchy suppressed nursing challenge", category: "mdt_conflict", severity: "important", clueInStem: "A nurse says, \"I was afraid to challenge him because he signs our performance reviews.\"", whyItMatters: "Missing this signal means a power imbalance that silences safety escalation remains unaddressed.", modelWording: "Protect and support speaking up because performance-review power suppressed a legitimate safety challenge.", keywords: ["performance reviews", "challenge", "hierarchy"] },
+      { id: "s4", name: "Documentation appears false against CCTV", category: "governance", severity: "critical", clueInStem: "Dr K later documented, \"patient reviewed, clinically indicated,\" but CCTV shows he did not enter the seclusion area.", whyItMatters: "Missing this signal means possible dishonest documentation is treated as a minor note discrepancy.", modelWording: "Investigate and preserve evidence because the clinical record may falsely state that the patient was reviewed.", keywords: ["patient reviewed", "CCTV", "false documentation"] },
+      { id: "s5", name: "Divorce and career plea require support without concealment", category: "ethics", severity: "important", clueInStem: "Dr K tells you, \"I'm going through a divorce; please don't destroy my career.\"", whyItMatters: "Missing this signal means the response either lacks compassion or lets personal stress suppress governance obligations.", modelWording: "Offer occupational health support while making clear that patient safety and reporting obligations cannot be avoided.", keywords: ["divorce", "career", "support", "occupational health"] },
+      { id: "s6", name: "Executive workforce pressure must not hide unsafe practice", category: "system_pressure", severity: "important", clueInStem: "The hospital executive asks whether this can be handled quietly because \"we cannot afford another consultant vacancy.\"", whyItMatters: "Missing this signal means workforce shortage becomes a reason to conceal impaired practice.", modelWording: "Resist quiet handling because workforce pressure cannot override patient safety, transparency and notification duties.", keywords: ["handled quietly", "consultant vacancy", "executive"] },
+      { id: "s7", name: "Mandatory reporting threshold must be considered", category: "governance", severity: "critical", clueInStem: "Nursing staff report that Dr K, a consultant psychiatrist, appeared intoxicated during an evening shift and ordered IM sedation for a patient without reviewing them.", whyItMatters: "Missing this signal means possible impaired practice with substantial risk may not be notified.", modelWording: "Consider mandatory notification because suspected impairment during clinical care may have created substantial patient risk.", keywords: ["mandatory reporting", "impairment", "notification"] },
     ],
-    priorityOrder: {
-      urgent: ["s1", "s2"],
-      secondary: ["s3", "s4", "s5"],
-      lowYield: ["s6"],
-    },
-    modelAnswer: `Dr K's conduct must be treated as an immediate patient safety crisis, not a personality conflict or a single bad night. The nurse reports that she "appeared confused, smelled of alcohol, gave IM sedation without medical authorisation, and became verbally abusive when challenged." The ICU transfer of a patient after that medication event means there has been actual patient harm. I would not wait for investigation to conclude before acting on clinical safety. I would ensure Dr K is removed from unsupervised clinical duties immediately, pending fitness-for-duty assessment, and that the patients affected receive urgent medical review.
+    priorityOrder: { urgent: ["s1", "s2", "s4", "s7"], secondary: ["s3", "s5", "s6"], lowYield: [] },
+    modelAnswer: `This is first a patient-safety issue. Dr K reportedly appeared intoxicated during an evening shift and ordered IM sedation without reviewing the patient. I would ensure Dr K is not providing unsupervised care until fitness for duty is assessed, and I would review the affected patient, observations, medication chart and any adverse outcomes.
 
-The CCTV footage and the false documentation are major governance issues. If Dr K documented something false to cover impaired practice, that is a serious professionalism and medico-legal breach beyond mere intoxication. I would preserve all records, secure CCTV footage, document the sequence of events factually, and initiate an internal incident investigation. I would not allow any record alteration or informal resolution that conceals the sequence of harm.
+The documentation concern is serious. Dr K wrote "patient reviewed, clinically indicated," but CCTV shows he did not enter the seclusion area. I would preserve the record, CCTV and incident material, and investigate factually. False documentation is a professionalism and governance concern beyond a clinical error.
 
-The service director's suggestion to "handle this quietly" and the request to not document formally are ethically unacceptable. Quiet resolution of an impaired clinician who harmed a patient protects the institution at the patient's expense. It may also expose the service to greater liability and breach mandatory reporting obligations. If a reasonable suspicion of health impairment or impaired practice exists, I have professional and possibly legal obligations to report through appropriate channels: the medical board's impaired practitioners pathway, the hospital's medical officer reporting processes, and clinical governance structures.
+The nurse's statement that she was afraid to challenge him because he signs performance reviews shows a hierarchy problem. I would support staff who raised concerns, protect them from retaliation and address speaking-up culture.
 
-Dr K deserves procedural fairness. I would offer her access to occupational health and employee support, explain the process and her rights, and ensure she is treated as someone who may be unwell, not only as a misconduct matter. However, fairness does not mean avoiding mandatory reporting. If intoxication on duty and patient harm meet notification thresholds, they must be reported. I would document both that appropriate support was offered and that reporting obligations were followed.
+Dr K deserves procedural fairness and support. His divorce may be relevant to impairment or wellbeing, and occupational health support should be offered. However, compassion does not mean concealing a safety incident or avoiding mandatory reporting if thresholds are met.
 
-The nurses who raised concerns must be supported and protected. A speaking-up culture does not survive if staff who report impaired colleagues are ignored or isolated. I would acknowledge their actions, debrief the team, address hierarchy concerns, and reinforce that patient safety reporting is expected and protected. My documentation would record the clinical event, patient harm review, immediate safety actions, incident notification, mandatory reporting decision and rationale, support offered to Dr K, and team debrief. The consultant response is not to minimise or manage quietly; it is to act transparently to protect patients and preserve institutional integrity.`,
+The executive request to handle it quietly because of consultant vacancies must be resisted. Workforce shortage cannot override patient safety, transparent governance and professional notification duties. I would document immediate safety actions, support offered, investigation steps and the rationale for any notification decision.`,
   },
   {
     id: "ETH-004",
@@ -289,81 +118,24 @@ A patient emails you saying the registrar has been meeting her after hours at a 
 The patient is a 28-year-old woman with complex trauma and chronic self-harm. She says, "If he gets in trouble, I will cut myself." The service manager asks whether this can be resolved by transferring the patient quietly because the registrar is due to apply for fellowship.`,
     totalMarks: 22,
     signals: [
-      {
-        id: "s1",
-        name: "Boundary violation",
-        category: "governance",
-        severity: "critical",
-        clueInStem: "meeting her after hours at a café",
-        whyItMatters: "Out-of-setting, after-hours meetings create boundary violation, dependency and exploitation risk.",
-        modelWording: "Treat after-hours café meetings as a serious boundary breach requiring immediate containment, supervision escalation and patient safety planning.",
-        keywords: ["boundary violation", "after hours", "café", "psychotherapy", "registrar", "professional boundaries", "exploitation risk", "governance"],
-      },
-      {
-        id: "s2",
-        name: "Missing documentation",
-        category: "governance",
-        severity: "critical",
-        clueInStem: "no notes for the past six sessions.",
-        whyItMatters: "Undocumented therapy creates clinical risk, medico-legal risk and supervision failure.",
-        modelWording: "Address absence of documentation as a serious clinical governance issue and reconstruct facts without falsifying records.",
-        keywords: ["undocumented sessions", "clinical notes", "documentation failure", "medico-legal", "psychotherapy records", "governance", "supervision"],
-      },
-      {
-        id: "s3",
-        name: "Patient self-harm threat and abandonment risk",
-        category: "risk_self",
-        severity: "important",
-        clueInStem: "If he gets in trouble, I will cut myself.",
-        whyItMatters: "Boundary repair/transfer may acutely escalate self-harm risk and requires careful containment.",
-        modelWording: "Assess and manage acute self-harm risk during boundary containment and transition of care.",
-        keywords: ["self-harm", "abandonment", "transition risk", "complex trauma", "boundary repair", "risk assessment", "cut myself"],
-      },
-      {
-        id: "s4",
-        name: "Registrar rationalisation",
-        category: "ethics",
-        severity: "important",
-        clueInStem: "I was being flexible and therapeutic.",
-        whyItMatters: "Rationalising boundary breaches as therapeutic reflects impaired professional judgement.",
-        modelWording: "Challenge the registrar's rationalisation and clarify that flexibility does not justify boundary violations.",
-        keywords: ["rationalisation", "professional judgement", "flexible", "therapeutic", "ethics", "supervision", "psychotherapy boundaries"],
-      },
-      {
-        id: "s5",
-        name: "AHPRA/training notification consideration",
-        category: "governance",
-        severity: "important",
-        clueInStem: "due to apply for fellowship.",
-        whyItMatters: "Career impact cannot suppress reporting, remediation or patient safety obligations.",
-        modelWording: "Consider training program, employer and regulatory notification obligations based on severity, risk and impairment concerns.",
-        keywords: ["AHPRA", "training", "fellowship", "notification", "remediation", "professional conduct", "patient safety"],
-      },
-      {
-        id: "s6",
-        name: "Quiet transfer is unsafe",
-        category: "system_pressure",
-        severity: "optional",
-        clueInStem: "transferring the patient quietly",
-        whyItMatters: "Quiet transfer avoids governance learning and may abandon the patient without addressing harm.",
-        modelWording: "Do not resolve by quiet transfer alone; ensure transparent governance, patient support and safe handover.",
-        keywords: ["quiet transfer", "system pressure", "cover-up", "safe handover", "patient support", "governance", "service manager"],
-      },
+      { id: "s1", name: "After-hours café meetings breach the therapeutic frame", category: "ethics", severity: "critical", clueInStem: "A patient emails you saying the registrar has been meeting her after hours at a café and \"checking in because he understands me better than the service.\"", whyItMatters: "Missing this signal means a private special relationship is misread as therapeutic flexibility.", modelWording: "Stop unsupervised contact immediately because after-hours café meetings create boundary, dependency and exploitation risk.", keywords: ["café", "after hours", "boundary", "special relationship"] },
+      { id: "s2", name: "Six undocumented sessions create governance risk", category: "governance", severity: "critical", clueInStem: "The electronic record has no notes for the past six sessions.", whyItMatters: "Missing this signal means there is no defensible record of therapy, risk or supervision.", modelWording: "Reconstruct facts without falsifying records because six undocumented sessions create serious clinical and medico-legal risk.", keywords: ["no notes", "six sessions", "documentation"] },
+      { id: "s3", name: "Registrar rationalises boundary breach as therapy", category: "governance", severity: "important", clueInStem: "The registrar says, \"She has abandonment issues; I was being flexible and therapeutic.\"", whyItMatters: "Missing this signal means poor professional insight is not addressed in supervision.", modelWording: "Challenge the rationalisation because abandonment issues require consistent boundaries, not secret or undocumented exceptions.", keywords: ["flexible", "therapeutic", "abandonment", "insight"] },
+      { id: "s4", name: "Complex trauma and chronic self-harm increase transition risk", category: "risk_self", severity: "important", clueInStem: "The patient is a 28-year-old woman with complex trauma and chronic self-harm.", whyItMatters: "Missing this signal means boundary repair may occur without anticipating heightened distress and self-harm.", modelWording: "Plan trauma-informed transition because complex trauma and chronic self-harm increase risk during boundary containment.", keywords: ["complex trauma", "chronic self-harm", "transition"] },
+      { id: "s5", name: "Self-harm threat must be managed without blocking governance", category: "risk_self", severity: "critical", clueInStem: "She says, \"If he gets in trouble, I will cut myself.\"", whyItMatters: "Missing this signal means self-harm threat either paralyses necessary action or is dismissed as manipulation.", modelWording: "Assess and safety-plan the self-harm threat because governance must proceed with clinical containment.", keywords: ["cut myself", "self-harm", "governance", "containment"] },
+      { id: "s6", name: "Quiet transfer would conceal harm", category: "system_pressure", severity: "critical", clueInStem: "The service manager asks whether this can be resolved by transferring the patient quietly because the registrar is due to apply for fellowship.", whyItMatters: "Missing this signal means the service colludes with concealment and abandons the patient without learning.", modelWording: "Reject quiet transfer because transparent governance, patient support and safe handover are required.", keywords: ["quietly", "transfer", "fellowship", "concealment"] },
+      { id: "s7", name: "Training and regulatory obligations must be considered", category: "governance", severity: "important", clueInStem: "The service manager asks whether this can be resolved by transferring the patient quietly because the registrar is due to apply for fellowship.", whyItMatters: "Missing this signal means career impact suppresses training remediation or notification duties.", modelWording: "Consider training and regulatory notification because fellowship timing cannot override patient safety and professional conduct obligations.", keywords: ["fellowship", "training", "notification", "remediation"] },
     ],
-    priorityOrder: {
-      urgent: ["s1", "s2"],
-      secondary: ["s3", "s4", "s5"],
-      lowYield: ["s6"],
-    },
-    modelAnswer: `The registrar's conduct appears to be a serious boundary breach, not therapeutic flexibility. Meeting a patient "after hours at a café" removes the therapy from its professional frame, creates secrecy, dependency and possible exploitation risk, and is especially concerning in a patient with complex trauma and chronic self-harm. I would immediately stop unsupervised contact between the registrar and the patient while the matter is reviewed, and I would arrange urgent clinical support for the patient so the boundary intervention does not feel like abandonment.
+    priorityOrder: { urgent: ["s1", "s2", "s5", "s6"], secondary: ["s3", "s4", "s7"], lowYield: [] },
+    modelAnswer: `This appears to be a serious boundary breach, not therapeutic flexibility. The registrar has been meeting the patient after hours at a café and creating a special relationship in which he understands her better than the service. I would stop unsupervised contact immediately and arrange senior clinical support for the patient.
 
-The absence of documentation is also serious. The record has "no notes for the past six sessions," which means there is no defensible account of therapy content, risk assessment, boundaries, transference/countertransference issues or treatment plan. I would not allow retrospective fabrication of notes. I would ask the registrar for a factual chronology, preserve emails and appointment records, and escalate to service governance and the training supervisor.
+The missing documentation is a separate governance failure. There are no notes for the past six sessions, so risk, therapy content, boundaries and supervision cannot be reviewed. I would preserve emails and appointment records, ask for a factual chronology, and ensure no retrospective fabrication occurs.
 
-The registrar's explanation, "She has abandonment issues; I was being flexible and therapeutic," demonstrates poor professional judgement. Flexibility in psychotherapy does not mean private, undocumented, after-hours café meetings. In fact, for a patient with abandonment fears, blurred boundaries may intensify dependency and make later repair more dangerous. I would supervise the registrar firmly, assess insight, remove them from the case, and consider remediation, reporting or disciplinary processes depending on findings.
+The registrar's explanation that the patient has abandonment issues and he was being flexible shows poor professional judgement. For a patient with complex trauma, blurred boundaries may intensify dependency and make later transition more dangerous.
 
-The patient's statement, "If he gets in trouble, I will cut myself," must be taken seriously but cannot be allowed to determine whether governance occurs. It shows acute self-harm risk during boundary repair. I would meet the patient with another senior clinician, validate distress, explain the need for safe professional boundaries, assess current risk, create a crisis plan and arrange a careful transfer of care. The response should be trauma-informed and transparent, not a quiet disappearance of the registrar.
+The patient's statement, "If he gets in trouble, I will cut myself," must be taken seriously without allowing it to block governance. I would assess current risk, create a safety plan and arrange a trauma-informed transfer of care with transparent explanation.
 
-The service manager's suggestion of "transferring the patient quietly" because the registrar is applying for fellowship is ethically wrong. Career impact does not justify concealment. I would consider obligations to the training program, employer and regulator depending on severity, exploitation risk and insight. My documentation would include patient safety actions, boundary concerns, missing notes, registrar discussion, governance escalation and the transition plan. The consultant task is to protect the patient without colluding with secrecy or allowing self-harm threats to block necessary professional action.`,
+The service manager's suggestion of quiet transfer because the registrar is applying for fellowship is unacceptable. Patient safety, training remediation and possible regulatory or employer notification must be considered. Career impact cannot justify concealment.`,
   },
   {
     id: "ETH-005",
@@ -380,80 +152,24 @@ A nurse shows you a social media post by the registrar: "Another night with a ma
 The registrar says, "It was anonymous and I was just venting." The patient's whānau are already distrustful of the admission and have said, "You people are making fun of her." The service manager asks you to delete screenshots and handle it informally because "we don't need another complaint."`,
     totalMarks: 22,
     signals: [
-      {
-        id: "s1",
-        name: "Patient privacy breach",
-        category: "governance",
-        severity: "critical",
-        clueInStem: "includes enough details for ward staff to identify her.",
-        whyItMatters: "Identifiability, not naming, determines privacy risk; this is a serious breach.",
-        modelWording: "Treat this as a privacy breach because the patient is identifiable despite not being named.",
-        keywords: ["privacy breach", "social media", "identifiable patient", "confidentiality", "registrar", "inpatient", "governance"],
-      },
-      {
-        id: "s2",
-        name: "Cultural harm and whānau mistrust",
-        category: "cultural_safety",
-        severity: "critical",
-        clueInStem: "You people are making fun of her.",
-        whyItMatters: "The post reinforces mistrust and may damage culturally safe engagement with patient and whānau.",
-        modelWording: "Acknowledge cultural harm and rebuild trust with the patient and whānau through transparent, respectful disclosure and repair.",
-        keywords: ["Māori", "whānau", "cultural safety", "mistrust", "humiliation", "repair", "involuntary admission", "respect"],
-      },
-      {
-        id: "s3",
-        name: "Registrar minimisation",
-        category: "ethics",
-        severity: "important",
-        clueInStem: "It was anonymous and I was just venting.",
-        whyItMatters: "Minimisation indicates poor insight into confidentiality and professionalism.",
-        modelWording: "Address registrar's minimisation and explain that venting online about identifiable patients is professional misconduct.",
-        keywords: ["minimisation", "anonymous", "venting", "professionalism", "confidentiality", "social media policy", "insight", "misconduct"],
-      },
-      {
-        id: "s4",
-        name: "Evidence preservation",
-        category: "governance",
-        severity: "important",
-        clueInStem: "delete screenshots",
-        whyItMatters: "Destroying evidence undermines governance and transparency.",
-        modelWording: "Do not delete screenshots; preserve evidence and follow privacy incident reporting processes.",
-        keywords: ["evidence preservation", "screenshots", "delete", "incident reporting", "privacy process", "governance", "audit trail"],
-      },
-      {
-        id: "s5",
-        name: "Involuntary patient's vulnerability",
-        category: "risk_vulnerable",
-        severity: "important",
-        clueInStem: "admitted involuntarily yesterday.",
-        whyItMatters: "Involuntary admission increases power imbalance and vulnerability to humiliation or loss of trust.",
-        modelWording: "Recognise heightened vulnerability due to involuntary admission and ensure patient support and advocacy.",
-        keywords: ["involuntary admission", "vulnerability", "power imbalance", "advocacy", "patient rights", "support", "trauma-informed"],
-      },
-      {
-        id: "s6",
-        name: "Complaint avoidance pressure",
-        category: "system_pressure",
-        severity: "optional",
-        clueInStem: "we don't need another complaint.",
-        whyItMatters: "Complaint avoidance cannot override legal/privacy governance duties.",
-        modelWording: "Resist pressure to handle informally; follow privacy, training and open disclosure processes.",
-        keywords: ["complaint avoidance", "informal handling", "system pressure", "open disclosure", "privacy law", "training supervisor", "transparency"],
-      },
+      { id: "s1", name: "Social media post is identifiable despite no name", category: "governance", severity: "critical", clueInStem: "The post does not name her but includes enough details for ward staff to identify her.", whyItMatters: "Missing this signal means privacy breach is dismissed because the patient's name was not used.", modelWording: "Treat this as a privacy breach because identifiability, not naming, determines confidentiality risk.", keywords: ["privacy", "identifiable", "social media", "confidentiality"] },
+      { id: "s2", name: "Post content is mocking and stigmatising", category: "ethics", severity: "critical", clueInStem: "A nurse shows you a social media post by the registrar: \"Another night with a manic influencer who thinks the Queen follows her TikTok.\"", whyItMatters: "Missing this signal means derogatory language about a patient is treated as harmless venting.", modelWording: "Address the mocking content directly because public ridicule of a patient breaches professionalism and trust.", keywords: ["manic influencer", "TikTok", "mocking", "professionalism"] },
+      { id: "s3", name: "Māori involuntary admission increases cultural safety stakes", category: "cultural_safety", severity: "important", clueInStem: "Staff recognise the patient, a 22-year-old Māori woman admitted involuntarily yesterday.", whyItMatters: "Missing this signal means the cultural and coercive context of distrust is ignored.", modelWording: "Respond with cultural safety because a Māori woman admitted involuntarily is especially vulnerable to mistrust from disrespectful care.", keywords: ["Māori", "involuntary", "cultural safety"] },
+      { id: "s4", name: "Registrar minimises breach as anonymous venting", category: "governance", severity: "important", clueInStem: "The registrar says, \"It was anonymous and I was just venting.\"", whyItMatters: "Missing this signal means lack of insight and professionalism are not addressed.", modelWording: "Challenge the registrar's minimisation because anonymous venting is not acceptable when a patient is identifiable.", keywords: ["anonymous", "venting", "insight"] },
+      { id: "s5", name: "Whānau distrust shows harm already occurring", category: "family_carer", severity: "important", clueInStem: "The patient's whānau are already distrustful of the admission and have said, \"You people are making fun of her.\"", whyItMatters: "Missing this signal means the response ignores relational and cultural harm to patient and whānau.", modelWording: "Acknowledge and repair whānau trust because the breach confirms their fear that staff are making fun of her.", keywords: ["whānau", "making fun", "trust", "repair"] },
+      { id: "s6", name: "Deleting screenshots would destroy evidence", category: "governance", severity: "critical", clueInStem: "The service manager asks you to delete screenshots and handle it informally because \"we don't need another complaint.\"", whyItMatters: "Missing this signal means the service may conceal evidence and obstruct a fair governance process.", modelWording: "Preserve screenshots and records because evidence must be secured for factual review and disclosure.", keywords: ["delete screenshots", "evidence", "governance"] },
+      { id: "s7", name: "Complaint avoidance must not replace open disclosure", category: "system_pressure", severity: "critical", clueInStem: "The service manager asks you to delete screenshots and handle it informally because \"we don't need another complaint.\"", whyItMatters: "Missing this signal means reputational protection overrides patient rights and learning.", modelWording: "Reject informal concealment because complaint avoidance cannot override open disclosure and professional accountability.", keywords: ["complaint", "informally", "open disclosure", "accountability"] },
+      { id: "s8", name: "Registrar needs training and conduct response", category: "governance", severity: "important", clueInStem: "You are the consultant supervisor of a Stage 2 registrar.", whyItMatters: "Missing this signal means the breach is managed as a one-off deletion rather than a training and professionalism issue.", modelWording: "Escalate through training supervision because a Stage 2 registrar needs remediation and possible formal conduct review.", keywords: ["Stage 2 registrar", "training", "remediation"] },
     ],
-    priorityOrder: {
-      urgent: ["s1", "s2"],
-      secondary: ["s3", "s4", "s5"],
-      lowYield: ["s6"],
-    },
-    modelAnswer: `The registrar's social media post is a privacy and professionalism breach even though the patient is not named. The key phrase is that the post "includes enough details for ward staff to identify her." Identifiability is what matters. A 22-year-old Māori woman admitted involuntarily yesterday, described as a "manic influencer" with specific TikTok and Queen-related content, is recognisable to staff and potentially others. I would treat this as a reportable privacy incident and ensure the post is removed through proper process, while preserving evidence.
+    priorityOrder: { urgent: ["s1", "s2", "s6", "s7"], secondary: ["s3", "s4", "s5", "s8"], lowYield: [] },
+    modelAnswer: `This is a privacy and professionalism breach even though the patient's name was not used. The post contains enough detail for staff to identify a 22-year-old Māori woman admitted involuntarily yesterday. Identifiability is the issue, not whether the name appears.
 
-The cultural harm is not abstract. The whānau have already said, "You people are making fun of her." The post confirms and amplifies mistrust during an involuntary admission, where the patient is already vulnerable and subject to coercive power. I would arrange a culturally safe disclosure and repair process with the patient and whānau, involving Māori health support if available. The goal would be to acknowledge harm, explain what is being done, and rebuild trust without becoming defensive.
+The content is also mocking and stigmatising. Referring to the patient as a "manic influencer" and describing her beliefs on social media is public ridicule of a vulnerable patient. The registrar's explanation that it was anonymous and just venting shows poor insight.
 
-The registrar's explanation, "It was anonymous and I was just venting," shows minimisation and poor insight. Venting online about identifiable patients is not acceptable professional coping. I would meet with the registrar, address confidentiality, social media policy, cultural safety and professionalism, and escalate to training and service governance. Depending on policy and severity, regulatory notification or formal remediation may be required.
+The cultural context matters. The patient is Māori, has been admitted involuntarily and her whānau already believe staff are making fun of her. The post risks confirming that fear and worsening trust. I would plan open disclosure and repair with cultural support and senior involvement.
 
-The service manager's request to "delete screenshots" and handle it informally because "we don't need another complaint" is a governance red flag. Deleting evidence would undermine transparency and could worsen medico-legal risk. I would preserve screenshots, complete privacy incident reporting, notify appropriate hospital privacy/governance staff and seek advice on disclosure obligations. Complaint avoidance cannot determine response.
+I would not delete screenshots or handle the matter informally. Evidence should be preserved, the incident reported through governance, and privacy and training processes followed. Complaint avoidance cannot justify concealment.
 
-My documentation would be factual: what was posted, how the patient was identifiable, what evidence was preserved, what disclosure occurred, what support was offered to patient and whānau, and what action was taken with the registrar. The consultant role is to protect patient dignity, especially for an involuntary Māori patient, while using the incident to strengthen professional culture rather than hide embarrassment.`,
+As supervisor, I would remove the post if possible through appropriate channels, ensure patient safety and confidentiality, support the nurse who raised it, and address the registrar through remediation and any required conduct or regulatory process. Documentation should record the breach, preservation of evidence, disclosure plan, cultural safety response and supervision actions.`,
   },
 ];

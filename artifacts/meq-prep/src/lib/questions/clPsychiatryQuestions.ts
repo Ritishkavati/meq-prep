@@ -1,4 +1,4 @@
-import { QuizStem } from "../quizData";
+import type { QuizStem } from "../quizData";
 
 export const CL_STEMS: QuizStem[] = [
   {
@@ -16,81 +16,25 @@ Adil refuses surgery and says in limited English, "Hospital papers go to immigra
 His cousin says Adil was detained offshore for months and avoids government offices. Adil says, "Maybe Allah has decided my time." The cardiothoracic team says he may die without surgery but wants psychiatry to determine whether refusal is capacitous.`,
     totalMarks: 22,
     signals: [
-      {
-        id: "s1",
-        name: "Interpreter failure invalidates capacity assessment",
-        category: "cultural_safety",
-        severity: "critical",
-        clueInStem: "professional interpreters take too long.",
-        whyItMatters: "Capacity/refusal cannot be reliably assessed via family interpreter in complex high-stakes surgery decision.",
-        modelWording: "Use a professional interpreter before assessing capacity or accepting refusal of cardiac surgery.",
-        keywords: ["professional interpreter", "capacity assessment", "family interpreter", "Afghan refugee", "language barrier", "surgery refusal", "consent", "CL psychiatry"],
-      },
-      {
-        id: "s2",
-        name: "Trauma-related mistrust",
-        category: "trauma",
-        severity: "critical",
-        clueInStem: "surgery is a trap.",
-        whyItMatters: "Refusal may be driven by detention trauma and authority mistrust rather than incapacity alone.",
-        modelWording: "Formulate refusal in the context of refugee trauma, detention history and fear of immigration/government systems.",
-        keywords: ["refugee trauma", "detention", "mistrust", "immigration fear", "authority", "treatment refusal", "trauma-informed care"],
-      },
-      {
-        id: "s3",
-        name: "Life-threatening cardiac illness",
-        category: "physical_health",
-        severity: "important",
-        clueInStem: "may die without surgery",
-        whyItMatters: "Urgency affects time available for engagement and threshold for emergency/legal pathways if capacity absent.",
-        modelWording: "Clarify urgency, alternatives and consequences of delayed surgery with cardiothoracic team.",
-        keywords: ["infective endocarditis", "valve surgery", "cardiac risk", "life-threatening", "urgency", "surgical liaison", "medical risk"],
-      },
-      {
-        id: "s4",
-        name: "Capacity to refuse surgery",
-        category: "capacity",
-        severity: "important",
-        clueInStem: "determine whether refusal is capacitous.",
-        whyItMatters: "Capacitous refusal of life-saving surgery must be respected; incapacity may require legal treatment pathway.",
-        modelWording: "Assess decision-specific capacity after culturally and linguistically valid explanation of surgery and alternatives.",
-        keywords: ["capacity", "refusal of surgery", "decision-specific", "understanding", "weighing", "appreciation", "life-saving treatment"],
-      },
-      {
-        id: "s5",
-        name: "Security may re-traumatise",
-        category: "immediate_safety",
-        severity: "important",
-        clueInStem: "visibly distressed when security stand near his bed.",
-        whyItMatters: "Visible coercion may worsen fear and refusal unless required for safety.",
-        modelWording: "Minimise visible security unless needed for immediate safety and use trauma-informed engagement.",
-        keywords: ["security", "re-traumatisation", "coercion", "de-escalation", "trauma-informed", "engagement", "ward safety"],
-      },
-      {
-        id: "s6",
-        name: "Religious explanatory model",
-        category: "cultural_safety",
-        severity: "optional",
-        clueInStem: "Maybe Allah has decided my time.",
-        whyItMatters: "Spiritual beliefs may influence decision-making and should be respectfully explored.",
-        modelWording: "Explore religious meaning and offer spiritual support while explaining medical options.",
-        keywords: ["Allah", "spiritual belief", "religious meaning", "Islam", "cultural formulation", "chaplain", "imam", "values"],
-      },
+      { id: "s1", name: "Urgent endocarditis surgery makes refusal high stakes", category: "physical_health", severity: "critical", clueInStem: "You are the consultant psychiatrist asked to assess Adil, a 35-year-old Afghan refugee with infective endocarditis requiring urgent valve surgery.", whyItMatters: "Missing this signal means the candidate has not recognised that the capacity assessment concerns potentially life-saving cardiac surgery.", modelWording: "Clarify the medical urgency because infective endocarditis requiring urgent valve surgery makes the refusal high stakes.", keywords: ["endocarditis", "valve surgery", "urgent", "capacity"] },
+      { id: "s2", name: "Immigration fear may be trauma-related or psychotic", category: "trauma", severity: "critical", clueInStem: "Adil refuses surgery and says in limited English, \"Hospital papers go to immigration; surgery is a trap.\"", whyItMatters: "Missing this signal means mistrust is treated as simple incapacity or refusal rather than formulated in context.", modelWording: "Formulate immigration fear carefully because it may reflect refugee trauma, misunderstanding, delirium or psychosis.", keywords: ["immigration", "trap", "trauma", "refugee"] },
+      { id: "s3", name: "Cousin interpreting makes capacity assessment unsafe", category: "cultural_safety", severity: "critical", clueInStem: "The surgical registrar has been using Adil's cousin as interpreter because \"professional interpreters take too long.\"", whyItMatters: "Missing this signal means a high-stakes refusal may be assessed through an unreliable and conflicted communication process.", modelWording: "Use a professional interpreter because family interpretation is unsafe for surgery consent, capacity and trauma disclosure.", keywords: ["cousin", "professional interpreter", "capacity"] },
+      { id: "s4", name: "Security presence is worsening distress", category: "immediate_safety", severity: "important", clueInStem: "Adil becomes visibly distressed when security stand near his bed.", whyItMatters: "Missing this signal means visible coercion may intensify trauma and worsen refusal.", modelWording: "Minimise visible security where safe because security near the bed may re-traumatise Adil and impair engagement.", keywords: ["security", "distressed", "coercion"] },
+      { id: "s5", name: "Offshore detention explains authority avoidance", category: "collateral", severity: "important", clueInStem: "His cousin says Adil was detained offshore for months and avoids government offices.", whyItMatters: "Missing this signal means key collateral explaining hospital paperwork fear is ignored.", modelWording: "Use detention history to guide trauma-informed explanation because authority avoidance may be understandable and modifiable.", keywords: ["detained offshore", "government offices", "collateral"] },
+      { id: "s6", name: "Religious explanation needs respectful exploration", category: "cultural_safety", severity: "important", clueInStem: "Adil says, \"Maybe Allah has decided my time.\"", whyItMatters: "Missing this signal means faith-based meaning may be dismissed or mistaken for incapacity without exploration.", modelWording: "Explore Islamic spiritual meaning respectfully because acceptance of death may be values-based, demoralised or illness-driven.", keywords: ["Allah", "faith", "spiritual", "death"] },
+      { id: "s7", name: "Capacity must follow valid communication", category: "capacity", severity: "critical", clueInStem: "The cardiothoracic team says he may die without surgery but wants psychiatry to determine whether refusal is capacitous.", whyItMatters: "Missing this signal means psychiatry may provide a yes-or-no capacity opinion before communication, trauma and medical information are adequate.", modelWording: "Assess decision-specific capacity only after valid interpretation, medical explanation and trauma-informed engagement.", keywords: ["capacity", "may die", "cardiothoracic", "refusal"] },
+      { id: "s8", name: "Legal pathway depends on urgency and capacity", category: "consent_refusal", severity: "important", clueInStem: "The cardiothoracic team says he may die without surgery but wants psychiatry to determine whether refusal is capacitous.", whyItMatters: "Missing this signal means the team may delay life-saving treatment or override refusal without lawful basis.", modelWording: "Clarify lawful options because capacitous refusal must be respected, while incapacity plus urgency may require emergency or substitute decision pathways.", keywords: ["legal pathway", "emergency", "substitute decision"] },
     ],
-    priorityOrder: {
-      urgent: ["s1", "s2"],
-      secondary: ["s3", "s4", "s5"],
-      lowYield: ["s6"],
-    },
-    modelAnswer: `Adil's refusal of valve surgery cannot be assessed properly until the communication and trauma issues are addressed. The surgical registrar has used Adil's cousin to interpret because "professional interpreters take too long." That is unacceptable for a life-threatening treatment refusal. A family interpreter may inhibit disclosure, distort medical language or be affected by family pressures. I would arrange a professional interpreter urgently, by phone or video if necessary, before concluding that his refusal is capacitous or incapacitous.
+    priorityOrder: { urgent: ["s1", "s2", "s3", "s7"], secondary: ["s4", "s5", "s6", "s8"], lowYield: [] },
+    modelAnswer: `Adil's refusal cannot be assessed safely until communication is corrected. He is an Afghan refugee with infective endocarditis requiring urgent valve surgery, and the cardiothoracic team says he may die without surgery. This is a high-stakes decision that requires a valid, decision-specific capacity assessment.
 
-The statement "Hospital papers go to immigration; surgery is a trap" is the central formulation clue. It may reflect trauma-related mistrust after detention, a misunderstanding of confidentiality, or psychotic paranoia. His cousin's collateral that Adil was detained offshore and avoids government offices makes trauma highly plausible. I would reduce visible coercion, especially because he becomes distressed when "security stand near his bed," and I would explain the separation between healthcare, records and immigration as accurately as possible with interpreter support.
+The current interpretation process is unsafe. The registrar has used Adil's cousin because professional interpreters take too long, but family interpretation is not adequate for complex surgery, trauma, immigration fear and capacity. I would arrange a professional interpreter urgently by phone or video if necessary.
 
-The cardiothoracic team says he "may die without surgery," so urgency must be clarified. I would ask what the time window is, what alternatives exist, what happens if surgery is delayed, and whether antibiotics or other measures can buy time for engagement. Capacity assessment requires that Adil understands the medical situation, not just that he refuses. If he has capacity after proper explanation, he can refuse life-saving surgery. If he lacks capacity and delay is life-threatening, then emergency or substitute decision pathways may be needed.
+His statement that hospital papers go to immigration and surgery is a trap should be formulated in context. His cousin says he was detained offshore and avoids government offices, so mistrust may be trauma-related and potentially modifiable through explanation. It could also reflect psychosis, delirium or misunderstanding, so I would not assume either capacity or incapacity.
 
-His phrase "Maybe Allah has decided my time" should be explored respectfully. It may be a religiously grounded acceptance of death, demoralisation, trauma, or misunderstanding. I would offer spiritual support, possibly an imam or chaplain, and ask how he sees medical treatment fitting with faith. This is not to persuade him manipulatively, but to ensure the decision is informed and values-based.
+The ward environment should be made less coercive. Adil becomes distressed when security stand near his bed, so visible security should be reduced where safe. His statement that Allah may have decided his time should be explored respectfully, with spiritual support offered if he wants it.
 
-My consultant actions would include interpreter-assisted assessment, trauma-informed engagement, minimising security, involving refugee health/social work, clarifying surgical urgency, assessing capacity decision-specifically and documenting the legal basis for any action. The decision cannot be delegated to psychiatry as a simple "capacity yes/no" stamp for surgery. It must show that communication was valid, trauma was considered, medical urgency was understood and the least restrictive lawful pathway was used.`,
+If, after valid interpretation and explanation, Adil understands, appreciates and weighs the risks, he may refuse even life-saving surgery. If he lacks capacity and delay threatens life, the team needs the appropriate emergency or substitute decision pathway. My documentation would cover interpreter use, trauma formulation, surgical urgency, capacity reasoning, spiritual discussion, security minimisation and the legal basis for the final plan.`,
   },
   {
     id: "CL-002",
@@ -107,81 +51,26 @@ The medical team says she has "progressive dementia" because she is confused, ha
 Nurses have placed the bed rails up and requested haloperidol because "she is impossible to manage." Mrs Wilson is hard of hearing and her hearing aids are in a drawer. Her daughter asks why psychiatry is involved when "this is just old age."`,
     totalMarks: 22,
     signals: [
-      {
-        id: "s1",
-        name: "Acute delirium clue",
-        category: "diagnosis_formulation",
-        severity: "critical",
-        clueInStem: "three days ago.",
-        whyItMatters: "Acute change strongly supports delirium and mandates reversible cause treatment.",
-        modelWording: "Formulate acute delirium rather than progressive dementia given sudden change over days from normal function.",
-        keywords: ["delirium", "acute change", "three days", "dementia misdiagnosis", "reversible causes", "CL psychiatry", "old age"],
-      },
-      {
-        id: "s2",
-        name: "Multiple medical precipitants",
-        category: "physical_health",
-        severity: "critical",
-        clueInStem: "urinary tract infection and sodium of 126.",
-        whyItMatters: "UTI and hyponatraemia are treatable causes of delirium and may be worsened by medications.",
-        modelWording: "Prioritise medical treatment of delirium precipitants including UTI, hyponatraemia, pain, constipation and medication effects.",
-        keywords: ["UTI", "hyponatraemia", "sodium 126", "medical precipitants", "falls", "delirium", "treat causes", "infection"],
-      },
-      {
-        id: "s3",
-        name: "Anticholinergic/sedative burden",
-        category: "physical_health",
-        severity: "important",
-        clueInStem: "oxybutynin, codeine, temazepam and promethazine.",
-        whyItMatters: "These medications can worsen delirium, falls and hallucinations.",
-        modelWording: "Review and rationalise anticholinergic, opioid and sedative medications contributing to delirium.",
-        keywords: ["anticholinergic", "oxybutynin", "promethazine", "temazepam", "codeine", "medication review", "falls", "delirium"],
-      },
-      {
-        id: "s4",
-        name: "Restrictive interventions",
-        category: "ethics",
-        severity: "important",
-        clueInStem: "bed rails up",
-        whyItMatters: "Bed rails/restraint may increase injury and agitation if not clinically justified.",
-        modelWording: "Minimise restrictive interventions and use delirium care bundle before antipsychotic or restraint.",
-        keywords: ["bed rails", "restraint", "least restrictive", "delirium care bundle", "falls prevention", "ethics", "agitation"],
-      },
-      {
-        id: "s5",
-        name: "Sensory impairment worsens delirium",
-        category: "immediate_safety",
-        severity: "important",
-        clueInStem: "hearing aids are in a drawer.",
-        whyItMatters: "Uncorrected hearing impairment worsens confusion, fear and miscommunication.",
-        modelWording: "Restore hearing aids/glasses and reorientation as part of immediate delirium management.",
-        keywords: ["hearing aids", "sensory impairment", "reorientation", "communication", "delirium prevention", "nursing care", "confusion"],
-      },
-      {
-        id: "s6",
-        name: "Family education",
-        category: "family_carer",
-        severity: "optional",
-        clueInStem: "this is just old age.",
-        whyItMatters: "Family misunderstanding may reduce acceptance of urgent delirium treatment.",
-        modelWording: "Explain delirium as an acute medical brain syndrome, not normal ageing.",
-        keywords: ["family education", "old age", "delirium explanation", "son", "daughter", "acute brain syndrome", "reversible"],
-      },
+      { id: "s1", name: "Fall admission creates delirium-risk context", category: "physical_health", severity: "important", clueInStem: "You are the CL psychiatrist asked to review Mrs Wilson, an 84-year-old woman admitted after a fall.", whyItMatters: "Missing this signal means the acute medical context of confusion is overlooked.", modelWording: "Treat the fall as part of an acute delirium-risk presentation because older patients often present with falls from medical illness or medication toxicity.", keywords: ["fall", "older adult", "delirium"] },
+      { id: "s2", name: "Progressive dementia label is contradicted by acute symptoms", category: "diagnosis_formulation", severity: "critical", clueInStem: "The medical team says she has \"progressive dementia\" because she is confused, hallucinating and trying to climb out of bed.", whyItMatters: "Missing this signal means an acute reversible brain syndrome may be mislabelled as chronic dementia.", modelWording: "Challenge the progressive dementia label because acute confusion, hallucinations and climbing behaviour require delirium assessment.", keywords: ["progressive dementia", "confused", "hallucinating"] },
+      { id: "s3", name: "Recent independent baseline supports delirium", category: "collateral", severity: "critical", clueInStem: "Her son says, \"Mum was doing crosswords and paying bills three days ago.\"", whyItMatters: "Missing this signal means the strongest evidence of acute change is not used.", modelWording: "Use the son's collateral because crosswords and bill-paying three days ago strongly support delirium over dementia progression.", keywords: ["crosswords", "bills", "three days", "baseline"] },
+      { id: "s4", name: "Medication chart contains deliriogenic drugs", category: "physical_health", severity: "critical", clueInStem: "The chart includes oxybutynin, codeine, temazepam and promethazine.", whyItMatters: "Missing this signal means anticholinergic, opioid and sedative burden remains untreated.", modelWording: "Review and rationalise deliriogenic medicines because oxybutynin, codeine, temazepam and promethazine can worsen delirium and falls.", keywords: ["oxybutynin", "codeine", "temazepam", "promethazine"] },
+      { id: "s5", name: "UTI and hyponatraemia are treatable precipitants", category: "physical_health", severity: "critical", clueInStem: "She has a urinary tract infection and sodium of 126.", whyItMatters: "Missing this signal means reversible medical precipitants are not prioritised.", modelWording: "Prioritise treatment of UTI and hyponatraemia because these are direct delirium precipitants.", keywords: ["UTI", "sodium 126", "hyponatraemia"] },
+      { id: "s6", name: "Bed rails may function as restraint", category: "ethics", severity: "important", clueInStem: "Nurses have placed the bed rails up and requested haloperidol because \"she is impossible to manage.\"", whyItMatters: "Missing this signal means restrictive interventions may increase injury, agitation and loss of dignity.", modelWording: "Review bed rails as restraint because least restrictive falls and delirium care should be used first.", keywords: ["bed rails", "restraint", "least restrictive"] },
+      { id: "s7", name: "Haloperidol request is behaviour-control framing", category: "consent_refusal", severity: "important", clueInStem: "Nurses have placed the bed rails up and requested haloperidol because \"she is impossible to manage.\"", whyItMatters: "Missing this signal means antipsychotic medication may be used for manageability rather than severe distress or safety risk.", modelWording: "Use haloperidol only cautiously if severe distress or immediate risk persists because 'impossible to manage' is not a medication indication.", keywords: ["haloperidol", "impossible to manage", "antipsychotic"] },
+      { id: "s8", name: "Hearing aids in drawer worsen confusion", category: "immediate_safety", severity: "important", clueInStem: "Mrs Wilson is hard of hearing and her hearing aids are in a drawer.", whyItMatters: "Missing this signal means a simple sensory intervention that can reduce delirium distress is missed.", modelWording: "Restore hearing aids immediately because sensory deprivation worsens confusion, fear and hallucination-like experiences.", keywords: ["hearing aids", "hard of hearing", "sensory"] },
+      { id: "s9", name: "Family needs education that delirium is not old age", category: "family_carer", severity: "important", clueInStem: "Her daughter asks why psychiatry is involved when \"this is just old age.\"", whyItMatters: "Missing this signal means family misunderstanding may reinforce ageist minimisation and delay delirium treatment.", modelWording: "Explain delirium as acute medical brain dysfunction because it is not normal ageing and may be reversible.", keywords: ["old age", "family education", "delirium"] },
     ],
-    priorityOrder: {
-      urgent: ["s1", "s2"],
-      secondary: ["s3", "s4", "s5"],
-      lowYield: ["s6"],
-    },
-    modelAnswer: `Mrs Wilson's presentation is delirium until proven otherwise. The medical team's label of "progressive dementia" is contradicted by her son's statement, "Mum was doing crosswords and paying bills three days ago." Acute change over three days from independent cognition to hallucinations, confusion and attempts to climb out of bed is a delirium pattern. If this is missed, the ward may sedate and restrain her while reversible causes worsen.
+    priorityOrder: { urgent: ["s2", "s3", "s4", "s5"], secondary: ["s1", "s6", "s7", "s8", "s9"], lowYield: [] },
+    modelAnswer: `Mrs Wilson's presentation is delirium until proven otherwise, not progressive dementia. She was admitted after a fall and is now confused, hallucinating and trying to climb out of bed. Her son's statement that she was doing crosswords and paying bills three days ago is the clearest evidence of acute change.
 
-The physical-health clues are strong: she has a urinary tract infection and "sodium of 126," both of which can precipitate delirium. Her medication chart includes "oxybutynin, codeine, temazepam and promethazine," a combination of anticholinergic, opioid and sedative burden that can worsen confusion, hallucinations, falls and urinary retention. I would work with the medical team to treat infection, correct hyponatraemia, review pain and constipation, hydrate, and reduce deliriogenic medication.
+The medical precipitants are substantial. She has a urinary tract infection and sodium of 126, both of which can precipitate delirium. Her medication chart also includes oxybutynin, codeine, temazepam and promethazine, which add anticholinergic, opioid and sedative burden. I would work with the medical team to treat infection, correct hyponatraemia and rationalise deliriogenic medication.
 
-The request for haloperidol because she is "impossible to manage" needs reframing. Antipsychotic medication may be appropriate if she is severely distressed or at immediate risk after reversible causes and non-pharmacological measures are addressed, but it should not be the first response to understaffed behavioural difficulty. If used, it should be at the lowest dose, time-limited and monitored for QTc, extrapyramidal effects, sedation and falls.
+The ward response needs to move from containment to delirium care. Bed rails can function as restraint and may increase injury if she climbs over them. Haloperidol requested because she is impossible to manage should be reframed; antipsychotic use should be reserved for severe distress or immediate safety risk after non-pharmacological measures and cause treatment.
 
-The bed rails being up are not benign. They can function as restraint and may increase injury if she tries to climb over them. I would advise a least restrictive delirium care bundle: restore hearing aids because they are "in a drawer," provide glasses if needed, reorientation, family presence, hydration, mobilisation, sleep-wake support, toileting, pain relief and close observation. Sensory deprivation may be making her fear and hallucinations worse.
+A simple but important intervention is to restore her hearing aids, which are in a drawer. Sensory deprivation can worsen confusion, fear and misinterpretation. Delirium care should include reorientation, family presence, hydration, mobilisation, sleep-wake support, toileting, pain relief and close observation.
 
-The daughter's question about why psychiatry is involved when "this is just old age" is an opportunity for education. I would explain that delirium is an acute medical brain syndrome, often reversible, and psychiatric input is helping the ward identify causes and reduce harmful restraint or sedation. My documentation would state the delirium formulation, acute baseline change, medical precipitants, medication changes, sensory interventions, restraint minimisation and antipsychotic threshold. The consultant action is to redirect the ward from behavioural control to cause-based delirium management.`,
+Her daughter's statement that this is just old age is an opportunity for education. I would explain that delirium is an acute medical brain syndrome, often reversible, and that psychiatry is involved to help identify causes, reduce restraint and avoid harmful sedation.`,
   },
   {
     id: "CL-003",
@@ -198,81 +87,25 @@ Rosa says, "No one believes me because I have trauma and take opioids." She is p
 Rosa has a history of childhood sexual abuse and becomes distressed when male staff examine her. Her partner says, "If you discharge her without pain relief she will buy tablets on the street." Nursing staff are split between giving extra opioids and refusing all PRN medication.`,
     totalMarks: 22,
     signals: [
-      {
-        id: "s1",
-        name: "Validate pain while formulating functional/opioid factors",
-        category: "diagnosis_formulation",
-        severity: "critical",
-        clueInStem: "No one believes me because I have trauma and take opioids.",
-        whyItMatters: "Invalidation worsens distress, conflict and disengagement; pain may be real even with functional mechanisms and opioid dependence.",
-        modelWording: "Validate Rosa's pain while formulating functional pain, trauma, opioid dependence and possible opioid-induced hyperalgesia.",
-        keywords: ["chronic pain", "functional disorder", "validation", "opioid dependence", "trauma", "opioid-induced hyperalgesia", "CL psychiatry", "pain formulation"],
-      },
-      {
-        id: "s2",
-        name: "Opioid escalation risk",
-        category: "substance_use",
-        severity: "critical",
-        clueInStem: "asks for IV fentanyl.",
-        whyItMatters: "Escalating opioids may worsen dependence, sedation and hyperalgesia.",
-        modelWording: "Avoid unstructured opioid escalation and coordinate a single pain/addiction plan.",
-        keywords: ["IV fentanyl", "opioid escalation", "oxycodone", "dependence", "hyperalgesia", "sedation", "addiction", "pain team"],
-      },
-      {
-        id: "s3",
-        name: "Trauma-informed examination",
-        category: "trauma",
-        severity: "important",
-        clueInStem: "becomes distressed when male staff examine her.",
-        whyItMatters: "Trauma triggers can worsen pain, agitation and refusal of care.",
-        modelWording: "Use trauma-informed care: consent before examination, offer female staff/chaperone and avoid repeated unnecessary exams.",
-        keywords: ["trauma-informed care", "childhood sexual abuse", "male staff", "examination", "consent", "chaperone", "distress", "safety"],
-      },
-      {
-        id: "s4",
-        name: "Staff splitting and stigma",
-        category: "mdt_conflict",
-        severity: "important",
-        clueInStem: "she is manipulating us.",
-        whyItMatters: "Stigmatising language polarises staff and produces inconsistent, unsafe prescribing.",
-        modelWording: "Address staff splitting and stigmatising language; establish consistent MDT plan for pain, risk and communication.",
-        keywords: ["staff conflict", "manipulating", "stigma", "splitting", "consistent plan", "MDT", "opioids", "functional pain"],
-      },
-      {
-        id: "s5",
-        name: "Unsafe discharge and illicit medication risk",
-        category: "risk_self",
-        severity: "important",
-        clueInStem: "she will buy tablets on the street.",
-        whyItMatters: "Abrupt opioid cessation or discharge without plan may increase overdose and illicit drug risk.",
-        modelWording: "Plan discharge with harm reduction, opioid taper/substitution considerations and follow-up to reduce illicit tablet use and overdose risk.",
-        keywords: ["street tablets", "overdose risk", "harm reduction", "discharge planning", "opioid taper", "addiction medicine", "illicit opioids"],
-      },
-      {
-        id: "s6",
-        name: "Ethical balance of pain relief and harm",
-        category: "ethics",
-        severity: "optional",
-        clueInStem: "refusing all PRN medication.",
-        whyItMatters: "Both overprescribing and punitive withholding are harmful.",
-        modelWording: "Balance analgesia with opioid harm using clear, compassionate boundaries and non-opioid strategies.",
-        keywords: ["ethics", "pain relief", "non-maleficence", "PRN medication", "boundaries", "analgesia", "harm minimisation"],
-      },
+      { id: "s1", name: "Pain must be validated despite negative investigations", category: "diagnosis_formulation", severity: "critical", clueInStem: "You are the CL psychiatrist asked to review Rosa, a 39-year-old woman admitted with severe abdominal pain after multiple negative investigations.", whyItMatters: "Missing this signal means negative investigations are treated as proof of fabrication rather than part of a functional and pain formulation.", modelWording: "Validate Rosa's pain while formulating functional pain mechanisms because negative investigations do not mean the pain is not real.", keywords: ["pain", "negative investigations", "functional", "validation"] },
+      { id: "s2", name: "Trauma and opioid stigma are damaging engagement", category: "trauma", severity: "important", clueInStem: "Rosa says, \"No one believes me because I have trauma and take opioids.\"", whyItMatters: "Missing this signal means the team may repeat invalidation that worsens distress and conflict.", modelWording: "Acknowledge Rosa's fear of disbelief because trauma and opioid stigma are shaping the therapeutic relationship.", keywords: ["trauma", "opioids", "not believed", "engagement"] },
+      { id: "s3", name: "High-dose oxycodone and IV fentanyl request need addiction-pain plan", category: "substance_use", severity: "critical", clueInStem: "She is prescribed high-dose oxycodone and asks for IV fentanyl.", whyItMatters: "Missing this signal means opioid escalation may worsen dependence, sedation and pain sensitivity.", modelWording: "Avoid unstructured opioid escalation because high-dose oxycodone plus IV fentanyl requests require a coordinated pain and addiction plan.", keywords: ["oxycodone", "IV fentanyl", "opioid escalation"] },
+      { id: "s4", name: "Manipulation label is stigmatising and unsafe", category: "mdt_conflict", severity: "important", clueInStem: "The surgical registrar says, \"This is functional; she is manipulating us.\"", whyItMatters: "Missing this signal means functional symptoms are misrepresented as deliberate deception.", modelWording: "Challenge the manipulation label because functional pain and opioid dependence need consistent care, not punitive language.", keywords: ["manipulating", "functional", "stigma"] },
+      { id: "s5", name: "Opioid-induced hyperalgesia is a plausible mechanism", category: "physical_health", severity: "important", clueInStem: "The pain team says opioid-induced hyperalgesia is likely.", whyItMatters: "Missing this signal means ongoing opioid escalation may worsen the very pain being treated.", modelWording: "Integrate the pain team's hyperalgesia formulation because escalating opioids may worsen pain sensitivity.", keywords: ["hyperalgesia", "pain team", "opioids"] },
+      { id: "s6", name: "Male examinations trigger trauma distress", category: "trauma", severity: "important", clueInStem: "Rosa has a history of childhood sexual abuse and becomes distressed when male staff examine her.", whyItMatters: "Missing this signal means necessary care may re-traumatise Rosa and intensify pain or refusal.", modelWording: "Use trauma-informed examination because male staff examinations are distressing in the context of childhood sexual abuse.", keywords: ["childhood sexual abuse", "male staff", "examine"] },
+      { id: "s7", name: "Street tablet risk requires harm reduction", category: "risk_self", severity: "critical", clueInStem: "Her partner says, \"If you discharge her without pain relief she will buy tablets on the street.\"", whyItMatters: "Missing this signal means discharge may create illicit opioid use and overdose risk.", modelWording: "Plan harm reduction before discharge because buying street tablets creates overdose and contamination risk.", keywords: ["street tablets", "discharge", "overdose", "harm reduction"] },
+      { id: "s8", name: "Nursing split requires one consistent plan", category: "governance", severity: "important", clueInStem: "Nursing staff are split between giving extra opioids and refusing all PRN medication.", whyItMatters: "Missing this signal means ward inconsistency will escalate conflict, unsafe prescribing and mistrust.", modelWording: "Create one MDT analgesia plan because inconsistent PRN decisions are unsafe and relationally destabilising.", keywords: ["nursing split", "PRN", "opioids", "MDT plan"] },
     ],
-    priorityOrder: {
-      urgent: ["s1", "s2"],
-      secondary: ["s3", "s4", "s5"],
-      lowYield: ["s6"],
-    },
-    modelAnswer: `Rosa's pain must be validated while also formulating opioid dependence, trauma and functional mechanisms. Her statement, "No one believes me because I have trauma and take opioids," captures the relational risk: if clinicians respond with disbelief or accusations of manipulation, the ward conflict will worsen and she may escalate distress or seek unsafe medication elsewhere. I would explicitly tell the team that pain can be real even when investigations are negative and even when opioids are causing harm.
+    priorityOrder: { urgent: ["s1", "s3", "s7"], secondary: ["s2", "s4", "s5", "s6", "s8"], lowYield: [] },
+    modelAnswer: `Rosa's pain should be validated while still formulating functional mechanisms, trauma and opioid-related harm. Multiple negative investigations do not prove that she is fabricating pain. Her statement, "No one believes me because I have trauma and take opioids," shows that invalidation and stigma are already central to the ward conflict.
 
-The request for IV fentanyl is a major risk point. She is already prescribed high-dose oxycodone, and the pain team suspects opioid-induced hyperalgesia. Escalating opioids in an unstructured way may worsen pain sensitivity, dependence, sedation and respiratory risk. I would not allow nurses and registrars to negotiate opioids shift by shift. Instead, I would convene surgery, pain, addiction medicine, nursing and psychiatry to create one consistent analgesia and communication plan.
+The opioid plan needs containment. Rosa is prescribed high-dose oxycodone and asks for IV fentanyl, while the pain team believes opioid-induced hyperalgesia is likely. Escalating opioids shift by shift may worsen pain sensitivity, dependence, sedation and respiratory risk. I would convene surgery, pain, addiction medicine, nursing and psychiatry to agree one plan.
 
-The surgical registrar's statement, "This is functional; she is manipulating us," is harmful. It confuses functional disorder with intentional deception and invites punitive care. I would address that language directly, because staff splitting is already present: nursing staff are divided between giving extra opioids and refusing all PRN medication. A consistent plan should avoid both uncontained opioid escalation and punitive withholding. The plan should include non-opioid analgesia, pacing, psychological strategies, agreed PRNs, withdrawal monitoring and clear review points.
+The surgical registrar's statement that she is manipulating the team should be challenged. Functional pain is not deception, and stigmatising language produces punitive care. Nursing staff are already split between extra opioids and refusing all PRN medication, which will worsen mistrust and escalation.
 
-Her trauma history changes how physical care should be delivered. She has childhood sexual abuse and becomes distressed when male staff examine her. I would advise trauma-informed examination: consent before touch, explanation, chaperone, female staff where possible, avoidance of repeated unnecessary exams, and attention to dissociation or panic. This is not special treatment; it is necessary to avoid re-traumatisation and escalation.
+Her trauma history must change physical care. She has childhood sexual abuse and becomes distressed when male staff examine her. Examinations should use consent, explanation, chaperone, female staff where possible and avoidance of repeated unnecessary examinations.
 
-The partner's warning that she will "buy tablets on the street" if discharged without pain relief raises overdose and illicit-drug risk. I would include harm reduction in discharge planning: naloxone if appropriate, addiction follow-up, GP handover, safe prescribing quantities, opioid taper or substitution consideration, and crisis plan. My documentation would state that Rosa's pain is being taken seriously, why IV opioid escalation is unsafe, how trauma-informed care will occur, and how the team will communicate consistently. The consultant role is to contain the ward system as much as the patient.`,
+The partner's warning that she will buy tablets on the street if discharged without pain relief requires harm reduction. The discharge plan should include safe prescribing quantities, non-opioid strategies, naloxone if appropriate, addiction follow-up, GP handover, taper or substitution consideration and clear crisis advice.`,
   },
   {
     id: "CL-004",
@@ -289,81 +122,25 @@ Mr Singh is intermittently awake and says, "No more tubes; let me go." Two hours
 The ICU consultant says prognosis is poor and asks whether Mr Singh has capacity to refuse ventilation and dialysis. Mr Singh speaks Punjabi at home, but the family has been interpreting because staff say "he understands enough English."`,
     totalMarks: 22,
     signals: [
-      {
-        id: "s1",
-        name: "Fluctuating capacity in ICU delirium",
-        category: "capacity",
-        severity: "critical",
-        clueInStem: "Two hours later he asks when he can restart dialysis.",
-        whyItMatters: "Fluctuation suggests delirium/critical illness affecting capacity; single statements should not determine major treatment decisions.",
-        modelWording: "Assess capacity as fluctuating and decision-specific, considering delirium, sedation, sepsis and timing of assessment.",
-        keywords: ["fluctuating capacity", "ICU delirium", "dialysis", "ventilation", "decision-specific", "sepsis", "sedation", "critical illness"],
-      },
-      {
-        id: "s2",
-        name: "Interpreter requirement",
-        category: "cultural_safety",
-        severity: "critical",
-        clueInStem: "he understands enough English.",
-        whyItMatters: "High-stakes capacity assessment cannot rely on presumed partial English or family interpretation.",
-        modelWording: "Use a professional Punjabi interpreter for capacity and goals-of-care discussions.",
-        keywords: ["Punjabi interpreter", "family interpreting", "capacity", "ICU", "language barrier", "cultural safety", "goals of care"],
-      },
-      {
-        id: "s3",
-        name: "Treatment refusal versus inconsistent wishes",
-        category: "consent_refusal",
-        severity: "important",
-        clueInStem: "No more tubes; let me go.",
-        whyItMatters: "Could represent capacitous refusal, delirium, distress, pain or demoralisation; needs assessment in optimal conditions.",
-        modelWording: "Explore whether refusal reflects stable values or delirium-related distress, pain, fear or exhaustion.",
-        keywords: ["refusal of treatment", "ventilation", "dialysis", "distress", "demoralisation", "values", "ICU", "end of life"],
-      },
-      {
-        id: "s4",
-        name: "Family conflict over values",
-        category: "family_carer",
-        severity: "important",
-        clueInStem: "he would never want prolonged machines.",
-        whyItMatters: "Conflicting family views require structured goals-of-care meeting and attention to prior wishes.",
-        modelWording: "Facilitate family meeting to explore prior expressed wishes, faith values and best-interests/substitute decision framework.",
-        keywords: ["family conflict", "prior wishes", "prolonged machines", "goals of care", "substitute decision-maker", "wife", "daughter"],
-      },
-      {
-        id: "s5",
-        name: "Religious values",
-        category: "cultural_safety",
-        severity: "important",
-        clueInStem: "only God decides death",
-        whyItMatters: "Faith beliefs influence family distress and treatment expectations and should be respected without overriding patient wishes/law.",
-        modelWording: "Acknowledge faith values and offer spiritual care while clarifying legal and ethical decision-making standards.",
-        keywords: ["faith", "God decides", "spiritual care", "cultural safety", "end-of-life", "family values", "ethics"],
-      },
-      {
-        id: "s6",
-        name: "Poor prognosis and ethics consultation",
-        category: "ethics",
-        severity: "optional",
-        clueInStem: "prognosis is poor",
-        whyItMatters: "Futility disputes may require ethics support and clear documentation.",
-        modelWording: "If disagreement persists, consider ICU ethics consultation and document capacity/prognosis/family discussions.",
-        keywords: ["poor prognosis", "futility", "ethics consultation", "ICU", "documentation", "treatment limitation", "multi-organ failure"],
-      },
+      { id: "s1", name: "Critical illness creates fluctuating capacity context", category: "physical_health", severity: "critical", clueInStem: "You are the CL psychiatrist asked to assess Mr Singh, a 62-year-old man in ICU after septic shock and multi-organ failure.", whyItMatters: "Missing this signal means ICU delirium, sepsis and organ failure are not considered when interpreting refusal.", modelWording: "Assess capacity in the context of critical illness because septic shock and multi-organ failure can cause delirium and fluctuation.", keywords: ["ICU", "septic shock", "multi-organ failure", "capacity"] },
+      { id: "s2", name: "Refusal may be distress or values", category: "consent_refusal", severity: "important", clueInStem: "Mr Singh is intermittently awake and says, \"No more tubes; let me go.\"", whyItMatters: "Missing this signal means one statement may be accepted as a settled refusal without assessing distress, pain or delirium.", modelWording: "Explore the refusal because it may reflect values, pain, delirium, fear or exhaustion.", keywords: ["no more tubes", "refusal", "distress"] },
+      { id: "s3", name: "Dialysis request two hours later shows fluctuation", category: "capacity", severity: "critical", clueInStem: "Two hours later he asks when he can restart dialysis.", whyItMatters: "Missing this signal means inconsistent wishes are not recognised as possible fluctuating capacity.", modelWording: "Treat capacity as time-specific and fluctuating because he asks for dialysis after earlier refusing tubes.", keywords: ["restart dialysis", "fluctuating", "capacity"] },
+      { id: "s4", name: "Wife's faith position needs respect but cannot override patient wishes", category: "cultural_safety", severity: "important", clueInStem: "His wife says, \"Our faith says only God decides death, so you must continue everything.\"", whyItMatters: "Missing this signal means family faith values may either be dismissed or allowed to override patient-centred decision-making.", modelWording: "Acknowledge faith values while clarifying that decisions depend on Mr Singh's capacity, prior wishes and legal framework.", keywords: ["faith", "God decides", "wife"] },
+      { id: "s5", name: "Daughter provides prior wishes about machines", category: "collateral", severity: "important", clueInStem: "His adult daughter says he previously told her he would never want prolonged machines.", whyItMatters: "Missing this signal means prior values relevant to substitute decision-making are ignored.", modelWording: "Use the daughter's collateral because prior refusal of prolonged machines may guide decisions if capacity is absent.", keywords: ["daughter", "prolonged machines", "prior wishes"] },
+      { id: "s6", name: "Poor prognosis informs benefits and burdens", category: "ethics", severity: "important", clueInStem: "The ICU consultant says prognosis is poor and asks whether Mr Singh has capacity to refuse ventilation and dialysis.", whyItMatters: "Missing this signal means capacity and goals-of-care discussions proceed without clear treatment burden and prognosis information.", modelWording: "Clarify prognosis and treatment burdens because capacity assessment requires realistic ICU information.", keywords: ["poor prognosis", "ventilation", "dialysis"] },
+      { id: "s7", name: "Punjabi language need requires professional interpreter", category: "cultural_safety", severity: "critical", clueInStem: "Mr Singh speaks Punjabi at home, but the family has been interpreting because staff say \"he understands enough English.\"", whyItMatters: "Missing this signal means life-and-death capacity assessment relies on partial English and conflicted family interpretation.", modelWording: "Use a professional Punjabi interpreter because family interpretation is unsafe for ICU capacity and goals-of-care decisions.", keywords: ["Punjabi", "interpreter", "family", "English"] },
+      { id: "s8", name: "Family disagreement may require structured ethics support", category: "family_carer", severity: "important", clueInStem: "His wife says, \"Our faith says only God decides death, so you must continue everything.\" His adult daughter says he previously told her he would never want prolonged machines.", whyItMatters: "Missing this signal means competing family narratives may derail lawful decision-making.", modelWording: "Facilitate a structured family meeting because faith values and prior-wish collateral must be reconciled within the legal framework.", keywords: ["family meeting", "wife", "daughter", "ethics"] },
     ],
-    priorityOrder: {
-      urgent: ["s1", "s2"],
-      secondary: ["s3", "s4", "s5"],
-      lowYield: ["s6"],
-    },
-    modelAnswer: `Mr Singh's ICU statements cannot be treated as a single stable refusal because the stem shows fluctuating cognition. He says, "No more tubes; let me go," but two hours later asks when he can restart dialysis. That fluctuation strongly suggests delirium, sedation effects, sepsis-related encephalopathy or fluctuating capacity in critical illness. I would assess capacity as decision-specific and time-specific, ideally when he is most awake, comfortable, oxygenated and supported by a professional interpreter.
+    priorityOrder: { urgent: ["s1", "s3", "s7"], secondary: ["s2", "s4", "s5", "s6", "s8"], lowYield: [] },
+    modelAnswer: `Mr Singh's capacity cannot be determined from one statement because the stem shows fluctuation in critical illness. He is in ICU after septic shock and multi-organ failure, is intermittently awake, says "No more tubes; let me go," and two hours later asks when he can restart dialysis. That pattern suggests delirium, sedation effects, fear, pain or fluctuating capacity.
 
-The interpreter issue is serious. The family has been interpreting because staff say "he understands enough English." That is not adequate for decisions about ventilation, dialysis and end-of-life care. I would arrange a professional Punjabi interpreter for capacity and goals-of-care discussions. Family members can provide values and collateral, but they should not be the language conduit for a high-stakes capacity assessment, especially when they disagree.
+The language issue must be corrected before any final capacity opinion. Mr Singh speaks Punjabi at home, but family have been interpreting because staff believe he understands enough English. That is not adequate for decisions about ventilation, dialysis and possible end-of-life treatment. A professional Punjabi interpreter is required.
 
-His refusal may still be meaningful. The phrase "No more tubes; let me go" could reflect a capacitous wish to limit burdensome treatment, but it could also be delirium, pain, fear, exhaustion or depression. I would ask what he understands about his condition, what the tubes and dialysis are doing, what he believes will happen with and without them, and what outcomes he would find acceptable. I would also clarify ICU prognosis, reversibility and treatment burdens.
+His refusal may still be meaningful. I would assess what he understands about his illness, ventilation, dialysis, prognosis, alternatives and what outcomes he would find acceptable. The ICU consultant should clarify reversibility, burdens and likely outcomes because capacity assessment depends on realistic information.
 
-Family conflict must be handled through a structured meeting. His wife says, "Our faith says only God decides death," while his daughter reports he previously said he would never want "prolonged machines." Both are important. I would acknowledge faith values, offer spiritual care, and explain that the decision-making framework depends on Mr Singh's capacity. If he has capacity, his decision governs. If he lacks capacity, the team should use prior expressed wishes and best-interests or substitute decision law, not simply the loudest family view.
+Family views should be held in a structured process. His wife says faith requires continuing everything, while his daughter says he previously did not want prolonged machines. Both need respectful hearing, but if Mr Singh has capacity, his decision governs. If he lacks capacity, prior wishes and best-interests or substitute decision law guide the plan.
 
-If disagreement persists and prognosis is poor, ICU ethics consultation may be needed, but that should not replace good communication. My documentation would record interpreter use, capacity fluctuation, delirium contributors, prognosis discussion, family views, spiritual supports and the legal basis for any treatment limitation or continuation. The consultant-level answer recognises the tension between life-preserving family values, prior wishes, fluctuating capacity and non-beneficial treatment, and manages it through valid communication and lawful process.`,
+I would offer spiritual care and consider ICU ethics support if disagreement persists. Documentation should include interpreter use, timing of assessment, fluctuation, delirium contributors, prognosis information, family views, prior wishes and the legal basis for treatment continuation or limitation.`,
   },
   {
     id: "CL-005",
@@ -380,80 +157,23 @@ Oncology recommends curative chemotherapy, but Maria says, "I deserve this cance
 The oncologist says delay reduces chance of cure and asks whether Maria has capacity to refuse chemotherapy. Maria says she does not want her husband involved because "he should find someone better."`,
     totalMarks: 22,
     signals: [
-      {
-        id: "s1",
-        name: "Depressive guilt impairing treatment refusal",
-        category: "capacity",
-        severity: "critical",
-        clueInStem: "I deserve this cancer; treatment would be wasted on me.",
-        whyItMatters: "Pathological guilt may impair appreciation and weighing of curative treatment, invalidating refusal.",
-        modelWording: "Assess whether severe depressive guilt impairs Maria's capacity to refuse potentially curative chemotherapy.",
-        keywords: ["capacity", "depressive guilt", "chemotherapy refusal", "lymphoma", "curative treatment", "weighing", "appreciation", "psycho-oncology"],
-      },
-      {
-        id: "s2",
-        name: "Time-sensitive curative treatment",
-        category: "physical_health",
-        severity: "critical",
-        clueInStem: "delay reduces chance of cure",
-        whyItMatters: "Treatment delay may convert curative illness into poorer prognosis; urgency shapes legal/clinical response.",
-        modelWording: "Clarify oncology urgency and window for treatment while urgently treating depression and assessing capacity.",
-        keywords: ["lymphoma", "curative chemotherapy", "delay", "chance of cure", "oncology", "treatment window", "medical urgency"],
-      },
-      {
-        id: "s3",
-        name: "Collateral indicates state-dependent refusal",
-        category: "collateral",
-        severity: "important",
-        clueInStem: "last month she was begging to start treatment.",
-        whyItMatters: "Recent opposite wishes suggest refusal may be depressive-state dependent.",
-        modelWording: "Use husband's collateral to assess whether refusal is a recent depression-driven change from prior values and wishes.",
-        keywords: ["collateral", "husband", "state-dependent refusal", "prior wishes", "depression", "treatment preference", "values"],
-      },
-      {
-        id: "s4",
-        name: "Severe depression and self-neglect",
-        category: "risk_self",
-        severity: "important",
-        clueInStem: "has stopped eating.",
-        whyItMatters: "Refusal of food plus guilt may indicate severe depression with self-neglect and possible suicidality.",
-        modelWording: "Assess suicide risk, nihilistic guilt, self-neglect, food refusal and need for urgent depression treatment.",
-        keywords: ["severe depression", "psychomotor retardation", "stopped eating", "suicide risk", "self-neglect", "nihilistic guilt", "melancholia"],
-      },
-      {
-        id: "s5",
-        name: "Cultural/traditional healing beliefs",
-        category: "cultural_safety",
-        severity: "important",
-        clueInStem: "traditional remedies from their community healer.",
-        whyItMatters: "Family cultural beliefs must be explored respectfully without allowing misinformation to override Maria's valid decision-making.",
-        modelWording: "Explore traditional healing beliefs respectfully and, if Maria agrees, integrate culturally meaningful supports alongside evidence-based oncology care.",
-        keywords: ["traditional remedies", "community healer", "cultural safety", "family beliefs", "chemotherapy", "integrative support", "respect"],
-      },
-      {
-        id: "s6",
-        name: "Confidentiality versus involving husband",
-        category: "ethics",
-        severity: "optional",
-        clueInStem: "he should find someone better.",
-        whyItMatters: "Depressive guilt may drive exclusion of a supportive spouse; confidentiality still needs respect unless safety requires disclosure.",
-        modelWording: "Respect confidentiality while exploring whether depressive guilt is driving exclusion of husband and seeking consent for support involvement.",
-        keywords: ["confidentiality", "husband involvement", "depressive guilt", "family support", "ethics", "consent", "supportive spouse"],
-      },
+      { id: "s1", name: "Curative chemotherapy refusal is high stakes", category: "capacity", severity: "critical", clueInStem: "You are the psycho-oncology consultant asked to assess Maria, a 46-year-old woman with newly diagnosed lymphoma.", whyItMatters: "Missing this signal means the candidate has not recognised that this is a potentially curative treatment refusal.", modelWording: "Assess capacity urgently because newly diagnosed lymphoma with curative chemotherapy makes refusal high consequence.", keywords: ["lymphoma", "curative", "chemotherapy", "capacity"] },
+      { id: "s2", name: "Depressive guilt may distort treatment value", category: "diagnosis_formulation", severity: "critical", clueInStem: "Oncology recommends curative chemotherapy, but Maria says, \"I deserve this cancer; treatment would be wasted on me.\"", whyItMatters: "Missing this signal means pathological guilt may be mistaken for an autonomous oncology refusal.", modelWording: "Assess depressive guilt because believing treatment would be wasted may impair appreciation and weighing.", keywords: ["deserve cancer", "wasted", "depressive guilt"] },
+      { id: "s3", name: "Severe depression and food refusal indicate self-neglect", category: "risk_self", severity: "critical", clueInStem: "She has severe depression, psychomotor retardation and has stopped eating.", whyItMatters: "Missing this signal means risk from severe depressive illness is not actively treated while chemotherapy decisions are made.", modelWording: "Treat severe depression urgently because psychomotor retardation and food refusal suggest self-neglect and possible suicidality.", keywords: ["severe depression", "psychomotor retardation", "stopped eating"] },
+      { id: "s4", name: "Husband collateral suggests state-dependent refusal", category: "collateral", severity: "important", clueInStem: "Her husband says, \"She is not herself; last month she was begging to start treatment.\"", whyItMatters: "Missing this signal means a recent opposite treatment preference is ignored.", modelWording: "Use husband's collateral because last month's wish for treatment suggests current refusal may be depression-driven and state-dependent.", keywords: ["husband", "not herself", "begging to start"] },
+      { id: "s5", name: "Traditional remedy preference needs respectful discussion", category: "cultural_safety", severity: "important", clueInStem: "Maria's mother believes chemotherapy is \"poison\" and wants traditional remedies from their community healer.", whyItMatters: "Missing this signal means cultural beliefs may be dismissed or allowed to override Maria's own valid decision-making.", modelWording: "Explore traditional healing respectfully because family beliefs should be understood without replacing evidence-based oncology or Maria's wishes.", keywords: ["poison", "traditional remedies", "community healer"] },
+      { id: "s6", name: "Delay reduces cure chance", category: "physical_health", severity: "critical", clueInStem: "The oncologist says delay reduces chance of cure and asks whether Maria has capacity to refuse chemotherapy.", whyItMatters: "Missing this signal means the time window for curative treatment is not integrated into capacity and legal planning.", modelWording: "Clarify the treatment window because delay may reduce cure and affect urgency of psychiatric intervention.", keywords: ["delay", "chance of cure", "oncologist"] },
+      { id: "s7", name: "Excluding husband may be depressive guilt", category: "ethics", severity: "important", clueInStem: "Maria says she does not want her husband involved because \"he should find someone better.\"", whyItMatters: "Missing this signal means confidentiality is respected mechanically without assessing whether guilt is isolating her from support.", modelWording: "Respect confidentiality while exploring whether depressive guilt is driving exclusion of a supportive husband.", keywords: ["husband", "find someone better", "confidentiality"] },
     ],
-    priorityOrder: {
-      urgent: ["s1", "s2"],
-      secondary: ["s3", "s4", "s5"],
-      lowYield: ["s6"],
-    },
-    modelAnswer: `Maria's refusal of potentially curative chemotherapy may be impaired by severe depressive guilt, and it should not be accepted or overridden without a careful capacity assessment. The phrase "I deserve this cancer; treatment would be wasted on me" is not a values-based oncology refusal. It suggests pathological guilt and worthlessness, possibly melancholic or psychotic depression, directly distorting her appreciation of the value of treatment. I would assess capacity to refuse chemotherapy specifically, focusing on whether depression prevents her from appreciating that lymphoma may be curable and that treatment is being offered because it can benefit her.
+    priorityOrder: { urgent: ["s1", "s2", "s3", "s6"], secondary: ["s4", "s5", "s7"], lowYield: [] },
+    modelAnswer: `Maria's refusal of chemotherapy may be impaired by severe depression and pathological guilt. Newly diagnosed lymphoma with curative chemotherapy is a high-stakes context, and her statement, "I deserve this cancer; treatment would be wasted on me," is not a neutral values-based refusal. It suggests depression is distorting appreciation of the value of treatment.
 
-The oncology urgency matters because the oncologist says "delay reduces chance of cure." This is not an abstract preference dispute. Delay may change prognosis. I would ask oncology to clarify the treatment window, expected cure rates, consequences of delay, alternatives and whether brief psychiatric stabilisation can occur without losing curability. That information is necessary for Maria's capacity assessment and for any legal pathway if she lacks capacity.
+Her mental state requires urgent treatment in its own right. She has severe depression, psychomotor retardation and has stopped eating, which raises concern about self-neglect and suicidality. I would assess psychotic guilt, hopelessness, capacity, suicide risk and whether urgent antidepressant, antipsychotic or ECT treatment is needed.
 
-Her husband's collateral that "last month she was begging to start treatment" is very important. It suggests her current refusal may be state-dependent and depression-driven, not a long-standing value. I would seek her consent to involve him, while exploring why she says he "should find someone better." That phrase itself may be depressive guilt rather than a stable wish to exclude support. Confidentiality still matters, but depression may be isolating her from a key support at the exact moment she needs help.
+The husband's collateral is important. He says she is not herself and that last month she was begging to start treatment. That suggests the refusal may be state-dependent and inconsistent with her recent wishes. I would seek Maria's consent to involve him, while recognising that her wish to exclude him because he should find someone better may itself be depressive guilt.
 
-The mother's view that chemotherapy is "poison" and preference for "traditional remedies from their community healer" should be explored respectfully. Cultural and family beliefs may influence Maria, but the central issue is Maria's own capacity and wishes. If Maria wants traditional support alongside oncology, and it does not delay or conflict dangerously with treatment, it may be integrated. But family beliefs should not be allowed to amplify depressive incapacity or prevent curative care if Maria would otherwise choose treatment.
+The oncology urgency must be clarified. The oncologist says delay reduces the chance of cure, so I would ask about the treatment window, expected cure rates, alternatives and whether brief psychiatric stabilisation is possible without losing curability. This information is necessary for capacity assessment and any legal pathway.
 
-Clinically, I would assess severity of depression, psychotic guilt, suicidality, self-neglect and food refusal because she has "stopped eating." Treatment may require urgent antidepressant/antipsychotic treatment, ECT consideration depending on severity, inpatient care or close psycho-oncology follow-up. If she lacks capacity and delay threatens cure, the team may need substitute decision or legal authority to proceed, guided by her prior wishes and best interests. My documentation would quote the guilt statement, oncology urgency, husband's collateral, capacity reasoning, cultural discussion and the legal basis for respecting or overriding the refusal. The consultant task is to protect both autonomy and access to curative treatment when depression may be speaking in the patient's voice.`,
+Maria's mother's belief that chemotherapy is poison and preference for traditional remedies should be explored respectfully. Cultural support may be integrated if Maria wants it and if it does not dangerously delay curative care. The final decision should rest on Maria's capacity and values, not depression, family pressure or unexamined cultural assumptions.`,
   },
 ];
