@@ -29,7 +29,7 @@ export const FINAL_ELITE_MEQ_BANK: QuizStem[] = [
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"He denies suicidal intent and we need the cubicle\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Strategic denial of suicidal intent conceals lethal preparatory behaviour",
         "category": "risk_self",
         "severity": "critical",
         "clueInStem": "He denies suicidal intent and we need the cubicle.",
@@ -195,7 +195,7 @@ I would document that the decision was not based on denial alone. The note shoul
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"He could arrest tonight, just sedate him\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Medical urgency drives coercive sedation before legal and capacity review",
         "category": "physical_health",
         "severity": "critical",
         "clueInStem": "He could arrest tonight, just sedate him.",
@@ -361,7 +361,7 @@ My consultant actions would be to attend or supervise urgently, assess capacity 
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"He is calm now and wants to go home\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Post-incident calm accepted before formulating coercive violence risk",
         "category": "risk_others",
         "severity": "critical",
         "clueInStem": "He is calm now and wants to go home.",
@@ -527,7 +527,7 @@ I would document the exact threat "If I cannot have the kids, no one will," the 
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"She is articulate, so she can refuse\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Adolescent articulacy accepted as proxy for valid treatment refusal",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "She is articulate, so she can refuse.",
@@ -694,7 +694,7 @@ I would document the uncertain ingestion, the treatment urgency, the capacity as
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"He denies wanting to hurt anyone, so early psychosis can see him tomorrow\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Verbal denial of violent intent accepted before independent risk formulation",
         "category": "risk_others",
         "severity": "critical",
         "clueInStem": "He denies wanting to hurt anyone, so early psychosis can see him tomorrow.",
@@ -861,7 +861,7 @@ The ED flow coordinator's statement, "There are no mental health beds and he is 
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"She is calmer now; can we discharge with her mother\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Apparent post-episode calm justifies discharge before manic risk assessment",
         "category": "risk_vulnerable",
         "severity": "critical",
         "clueInStem": "She is calmer now; can we discharge with her mother?",
@@ -1028,7 +1028,7 @@ Maya refuses to speak with non-Aboriginal staff and her mother says, "You are pu
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"She has done this before and I need the bed\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Bed pressure and diagnostic label drive discharge before risk formulation",
         "category": "risk_self",
         "severity": "critical",
         "clueInStem": "She has done this before and I need the bed.",
@@ -1065,7 +1065,7 @@ Maya refuses to speak with non-Aboriginal staff and her mother says, "You are pu
       },
       {
         "id": "s3",
-        "name": "disposition and diagnostic stigma",
+        "name": "Diagnostic stigma driving unsafe discharge without independent risk formulation",
         "category": "disposition",
         "severity": "critical",
         "clueInStem": "Can I document personality disorder and discharge?",
@@ -1195,7 +1195,7 @@ Nursing staff say, "She refuses every plan we offer," which may reflect rigidity
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"She has a right to make bad decisions\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Apparent autonomy accepted without capacity determination in dementia patient",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "She has a right to make bad decisions.",
@@ -1361,7 +1361,7 @@ My documentation would state the exact accommodation-capacity assessment, the hi
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"He can sleep it off in the cells\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Intoxication framing defers formulation of family violence and head injury",
         "category": "risk_others",
         "severity": "critical",
         "clueInStem": "He can sleep it off in the cells.",
@@ -1528,7 +1528,7 @@ I would document the shovel threat, head injury, intoxication, medical clearance
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"Can we inject him tonight so the ward settles\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Ward disruption drives chemical restraint before establishing legal authority",
         "category": "risk_others",
         "severity": "critical",
         "clueInStem": "Can we inject him tonight so the ward settles?",
@@ -1547,7 +1547,7 @@ I would document the shovel threat, head injury, intoxication, medical clearance
       },
       {
         "id": "s2",
-        "name": "psychosis-driven refusal of treatment",
+        "name": "psychosis-driven refusal of treatment requiring MHA authority and capacity determination",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "The tablets are trackers that will let them control my thoughts.",
@@ -1584,7 +1584,7 @@ I would document the shovel threat, head injury, intoxication, medical clearance
       },
       {
         "id": "s4",
-        "name": "vulnerable inpatient safety",
+        "name": "Inpatient safety at risk from undertreated clinical presentation",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "He told me I am one of them.",
@@ -1695,7 +1695,7 @@ I would document the delusional basis of refusal, capacity findings, risk to vul
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"There is no mother-baby bed in the state\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Resource scarcity accepted as grounds to defer urgent perinatal admission",
         "category": "risk_vulnerable",
         "severity": "critical",
         "clueInStem": "There is no mother-baby bed in the state.",
@@ -1751,7 +1751,7 @@ I would document the delusional basis of refusal, capacity findings, risk to vul
       },
       {
         "id": "s4",
-        "name": "newborn safety",
+        "name": "Newborn safety at immediate risk from parental psychiatric episode",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "I cannot be alone with him.",
@@ -1862,7 +1862,7 @@ I would document the absence of a mother-baby bed, the infant-safety quote, slee
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"She is fine and does not need tablets\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Surface functioning normalised before formulating depression and suicidal risk",
         "category": "risk_vulnerable",
         "severity": "critical",
         "clueInStem": "She is fine and does not need tablets.",
@@ -1918,7 +1918,7 @@ I would document the absence of a mother-baby bed, the infant-safety quote, slee
       },
       {
         "id": "s4",
-        "name": "unborn baby wellbeing",
+        "name": "Unborn child welfare at risk from maternal treatment refusal",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "The scan shows mild growth restriction.",
@@ -2029,7 +2029,7 @@ My documentation would include her suicidal phrase, the medication misinformatio
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"I am worried she may harm the baby\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Maternal distress about intrusive thoughts triggers safeguarding before OCD formulation",
         "category": "risk_vulnerable",
         "severity": "critical",
         "clueInStem": "I am worried she may harm the baby.",
@@ -2196,7 +2196,7 @@ I would document the exact nature of the thoughts, her distress and rejection of
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"Last time she stopped lithium she was manic within six weeks\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Euthymic presentation accepted before formulating high lithium-withdrawal relapse risk",
         "category": "risk_vulnerable",
         "severity": "critical",
         "clueInStem": "Last time she stopped lithium she was manic within six weeks.",
@@ -2363,7 +2363,7 @@ I would document lithium cessation timing, the misinformation quote, partner col
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"Should we reduce methadone before delivery\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Opioid stigma drives methadone reduction against evidence-based harm reduction",
         "category": "risk_vulnerable",
         "severity": "critical",
         "clueInStem": "Should we reduce methadone before delivery?",
@@ -2419,7 +2419,7 @@ I would document lithium cessation timing, the misinformation quote, partner col
       },
       {
         "id": "s4",
-        "name": "non-stigmatising NAS planning",
+        "name": "non-stigmatising NAS planning at foreseeable risk requiring independent safety assessment",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "I do not want the baby labelled an addict.",
@@ -2530,7 +2530,7 @@ I would document the rationale for maintaining methadone, benzodiazepine and can
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"She is just lazy and needs to stop complaining\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Laziness attribution replaces formulation of postnatal suicide and infant risk",
         "category": "risk_vulnerable",
         "severity": "critical",
         "clueInStem": "She is just lazy and needs to stop complaining.",
@@ -2567,7 +2567,7 @@ I would document the rationale for maintaining methadone, benzodiazepine and can
       },
       {
         "id": "s3",
-        "name": "infant welfare and safeguarding",
+        "name": "infant welfare and safeguarding duties arising from parental psychiatric episode",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "Can we leave if the baby looks physically well?",
@@ -2586,7 +2586,7 @@ I would document the rationale for maintaining methadone, benzodiazepine and can
       },
       {
         "id": "s4",
-        "name": "infant neglect risk",
+        "name": "infant neglect risk at foreseeable risk requiring independent safety assessment",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "The nappies have not been changed since yesterday.",
@@ -2697,7 +2697,7 @@ I would document the infant-care concerns, Aisha's exact statement, mental state
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"Can security hold her while we check the baby\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Security restraint ordered without legal basis for neonatal examination authority",
         "category": "risk_vulnerable",
         "severity": "critical",
         "clueInStem": "Can security hold her while we check the baby?",
@@ -2753,7 +2753,7 @@ I would document the infant-care concerns, Aisha's exact statement, mental state
       },
       {
         "id": "s4",
-        "name": "neonatal medical risk",
+        "name": "neonatal medical risk at foreseeable risk requiring independent safety assessment",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "He has not fed for eight hours.",
@@ -2864,7 +2864,7 @@ I would document the baby's eight-hour no-feed risk, Jenna's contamination belie
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"Can psychiatry say she is not competent to terminate\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Stated autonomy accepted without formal capacity and risk determination",
         "category": "risk_vulnerable",
         "severity": "critical",
         "clueInStem": "Can psychiatry say she is not competent to terminate?",
@@ -2920,7 +2920,7 @@ I would document the baby's eight-hour no-feed risk, Jenna's contamination belie
       },
       {
         "id": "s4",
-        "name": "maternal-foetal ethical tension",
+        "name": "Unborn child welfare at risk from maternal treatment refusal",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "The pregnancy is wanted by the family, not by me now.",
@@ -3031,7 +3031,7 @@ I would document the capacity assessment, symptom burden, suicide risk, treatmen
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"We may need a removal plan at birth\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Birth removal threat accepted before addressing trauma relapse and engagement risk",
         "category": "risk_vulnerable",
         "severity": "critical",
         "clueInStem": "We may need a removal plan at birth.",
@@ -3198,7 +3198,7 @@ I would document Louise's fear of removal, past history, current mental state, A
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"She is energetic, not unwell, and hates hospitals\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Energetic presentation reattributed as wellness rather than manic episode",
         "category": "risk_vulnerable",
         "severity": "critical",
         "clueInStem": "She is energetic, not unwell, and hates hospitals.",
@@ -3254,7 +3254,7 @@ I would document Louise's fear of removal, past history, current mental state, A
       },
       {
         "id": "s4",
-        "name": "infant immediate safety",
+        "name": "Infant safety at risk from parental psychiatric illness and neglect",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "The baby was unrestrained in the back seat.",
@@ -3365,7 +3365,7 @@ I would document the manic symptoms, the quote about sleep and being chosen, the
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"He is lazy and must be forced back\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Laziness attribution prevents recognition of PTSD-driven school refusal",
         "category": "immediate_safety",
         "severity": "critical",
         "clueInStem": "He is lazy and must be forced back.",
@@ -3384,7 +3384,7 @@ I would document the manic symptoms, the quote about sleep and being chosen, the
       },
       {
         "id": "s2",
-        "name": "PTSD-driven school refusal",
+        "name": "PTSD-driven school refusal in refugee trauma-exposed young person",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "School is not safe; soldiers come when bells ring.",
@@ -3421,7 +3421,7 @@ I would document the manic symptoms, the quote about sleep and being chosen, the
       },
       {
         "id": "s4",
-        "name": "sibling trauma exposure",
+        "name": "Siblings at risk from trauma exposure in shared household",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "He screams at night and she hides.",
@@ -3532,7 +3532,7 @@ My consultant action would be to stop the binary fit/unfit demand and replace it
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"Increase the stimulant; school cannot cope\" as grounds to proceed without formulating the core clinical risk",
+        "name": "School management pressure drives medication increase before trauma formulation",
         "category": "immediate_safety",
         "severity": "critical",
         "clueInStem": "Increase the stimulant; school cannot cope.",
@@ -3551,7 +3551,7 @@ My consultant action would be to stop the binary fit/unfit demand and replace it
       },
       {
         "id": "s2",
-        "name": "trauma mimicking ADHD/aggression",
+        "name": "trauma mimicking ADHD/aggression in Aboriginal young person",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "I get scared when men yell because it sounds like home.",
@@ -3569,7 +3569,7 @@ My consultant action would be to stop the binary fit/unfit demand and replace it
       },
       {
         "id": "s3",
-        "name": "reasonable adjustments and safeguarding",
+        "name": "reasonable adjustments and safeguarding duties for vulnerable dependent in this clinical scenario",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "Can we remove his aide if medication is optimised?",
@@ -3699,7 +3699,7 @@ My consultant plan would be to convene school, paediatrics, grandmother, Aborigi
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"Hospital is making her dramatic; discharge to a dietitian\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Family dramatising narrative drives discharge before formulating capacity and risk",
         "category": "immediate_safety",
         "severity": "critical",
         "clueInStem": "Hospital is making her dramatic; discharge to a dietitian.",
@@ -3718,7 +3718,7 @@ My consultant plan would be to convene school, paediatrics, grandmother, Aborigi
       },
       {
         "id": "s2",
-        "name": "anorexic cognition impairing capacity",
+        "name": "anorexic cognition impairing capacity for life-altering medical treatment decision",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "I know I might die, but gaining weight would be worse.",
@@ -3866,7 +3866,7 @@ I would act by aligning paediatrics, CAMHS, nursing and family around one plan: 
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"This is internet influence; we are taking her home\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Behavioural attribution prevents formulation of suicide and trauma risk",
         "category": "immediate_safety",
         "severity": "critical",
         "clueInStem": "This is internet influence; we are taking her home.",
@@ -3903,7 +3903,7 @@ I would act by aligning paediatrics, CAMHS, nursing and family around one plan: 
       },
       {
         "id": "s3",
-        "name": "minor confidentiality and MHA",
+        "name": "minor confidentiality and MHA criteria and threshold applying in this clinical presentation",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "Can we call parents against their wishes because they are under 18?",
@@ -4033,7 +4033,7 @@ My consultant plan would be to assess depression, suicidality, self-harm, family
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"He assaulted staff, so he needs consequences\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Punitive framework applied before formulating autistic sensory distress",
         "category": "immediate_safety",
         "severity": "critical",
         "clueInStem": "He assaulted staff, so he needs consequences.",
@@ -4200,7 +4200,7 @@ His parents are migrants and say autism is shameful in their community, so engag
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"It is just weed and bad friends\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Substance normalisation defers urgent first-episode psychosis formulation",
         "category": "immediate_safety",
         "severity": "critical",
         "clueInStem": "It is just weed and bad friends.",
@@ -4256,7 +4256,7 @@ His parents are migrants and say autism is shameful in their community, so engag
       },
       {
         "id": "s4",
-        "name": "family violence/weapon risk",
+        "name": "family violence/weapon risk at foreseeable risk requiring independent safety assessment",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "He sleeps with a knife under the pillow.",
@@ -4367,7 +4367,7 @@ I would document the laptop delusion, cannabis use, three-month decline, knife a
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"We are giving notice; she is too hard\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Placement withdrawal issued before formulating attachment-driven self-harm risk",
         "category": "immediate_safety",
         "severity": "critical",
         "clueInStem": "We are giving notice; she is too hard.",
@@ -4386,7 +4386,7 @@ I would document the laptop delusion, cannabis use, three-month decline, knife a
       },
       {
         "id": "s2",
-        "name": "attachment-driven self-harm and absconding",
+        "name": "attachment-driven self-harm and absconding as the specific clinical driver of this presentation",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "I cut so someone comes before I disappear.",
@@ -4404,7 +4404,7 @@ I would document the laptop delusion, cannabis use, three-month decline, knife a
       },
       {
         "id": "s3",
-        "name": "hospital as placement substitute",
+        "name": "hospital as placement substitute framework applying in this specific clinical scenario",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "Can you admit her until we find a placement?",
@@ -4423,7 +4423,7 @@ I would document the laptop delusion, cannabis use, three-month decline, knife a
       },
       {
         "id": "s4",
-        "name": "risk to vulnerable peers",
+        "name": "School peers at risk from untreated psychiatric distress and dysregulation",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "She tells them how to cut safely.",
@@ -4534,7 +4534,7 @@ I would document the function of self-harm, the placement notice, absence or pre
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"This gender nonsense caused the eating disorder\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Identity attribution replaces formulation of eating disorder clinical risk",
         "category": "immediate_safety",
         "severity": "critical",
         "clueInStem": "This gender nonsense caused the eating disorder.",
@@ -4571,7 +4571,7 @@ I would document the function of self-harm, the placement notice, absence or pre
       },
       {
         "id": "s3",
-        "name": "capacity and involuntary refeeding",
+        "name": "capacity and involuntary refeeding threshold determining lawfulness of treatment intervention",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "Can we refeed over his objection?",
@@ -4701,7 +4701,7 @@ I would document Sam's medical instability, dysphoria quote, pronouns and privac
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"He is using self-harm to avoid consequences\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Instrumental self-harm attribution defers custodial suicide risk assessment",
         "category": "immediate_safety",
         "severity": "critical",
         "clueInStem": "He is using self-harm to avoid consequences.",
@@ -4720,7 +4720,7 @@ I would document Sam's medical instability, dysphoria quote, pronouns and privac
       },
       {
         "id": "s2",
-        "name": "custody-related suicide risk",
+        "name": "custody-related suicide risk driving high-stakes disposition and containment",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "I would rather die than stay in that room.",
@@ -4738,7 +4738,7 @@ I would document Sam's medical instability, dysphoria quote, pronouns and privac
       },
       {
         "id": "s3",
-        "name": "least restrictive custody safety",
+        "name": "least restrictive custody safety obligations for vulnerable detainee in this case",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "Can we keep him in isolation for observation?",
@@ -4868,7 +4868,7 @@ I would document the hanging behaviour, the isolation trigger, the uncle's death
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"She needs discipline, not psychiatry\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Behavioural attribution replaces clinical formulation of presenting disorder",
         "category": "immediate_safety",
         "severity": "critical",
         "clueInStem": "She needs discipline, not psychiatry.",
@@ -4905,7 +4905,7 @@ I would document the hanging behaviour, the isolation trigger, the uncle's death
       },
       {
         "id": "s3",
-        "name": "capacity and emergency treatment",
+        "name": "capacity and emergency treatment threshold determining lawfulness of treatment intervention",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "Can we force insulin if she refuses?",
@@ -5035,7 +5035,7 @@ I would document insulin omission and DKA risk, the diabulimia formulation, capa
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"Write that she lacks capacity so we can sell the house\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Documentation request accepted without establishing clinical or legal grounds",
         "category": "risk_vulnerable",
         "severity": "critical",
         "clueInStem": "Write that she lacks capacity so we can sell the house.",
@@ -5072,7 +5072,7 @@ I would document insulin omission and DKA risk, the diabulimia formulation, capa
       },
       {
         "id": "s3",
-        "name": "decision-specific capacity",
+        "name": "decision-specific capacity threshold determining lawfulness of treatment intervention",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "Can you declare her globally incapable?",
@@ -5091,7 +5091,7 @@ I would document insulin omission and DKA risk, the diabulimia formulation, capa
       },
       {
         "id": "s4",
-        "name": "public safety",
+        "name": "Public safety at risk from psychosis-impaired occupational performance",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "She drove across the footpath near the shops.",
@@ -5202,7 +5202,7 @@ I would document the driving incidents, licensing advice, interpreter requiremen
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"He has dementia, please chart risperidone\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Medication order without formulation used to manage postoperative delirium",
         "category": "risk_vulnerable",
         "severity": "critical",
         "clueInStem": "He has dementia, please chart risperidone.",
@@ -5221,7 +5221,7 @@ I would document the driving incidents, licensing advice, interpreter requiremen
       },
       {
         "id": "s2",
-        "name": "delirium with paranoid misperceptions",
+        "name": "delirium with paranoid misperceptions as the specific clinical driver of this presentation",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "Thieves are taking my blood.",
@@ -5258,7 +5258,7 @@ I would document the driving incidents, licensing advice, interpreter requiremen
       },
       {
         "id": "s4",
-        "name": "baseline collateral and reversibility",
+        "name": "baseline collateral and reversibility at foreseeable risk requiring independent safety assessment",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "Dad was shopping alone last week.",
@@ -5369,7 +5369,7 @@ I would document the acute baseline change, delirium formulation, communication 
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"Approve regular quetiapine; staffing is short\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Staffing shortage drives chemical restraint before formulating BPSD cause",
         "category": "risk_vulnerable",
         "severity": "critical",
         "clueInStem": "Approve regular quetiapine; staffing is short.",
@@ -5388,7 +5388,7 @@ I would document the acute baseline change, delirium formulation, communication 
       },
       {
         "id": "s2",
-        "name": "cultural/modesty formulation of BPSD",
+        "name": "cultural/modesty formulation of BPSD as the specific clinical driver of this presentation",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "I am ashamed; no men.",
@@ -5536,7 +5536,7 @@ I would require a behaviour and safeguarding plan before medication: Vietnamese 
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"ECT is barbaric and I will go to the media\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Family media threat defers life-saving ECT for psychotic depression",
         "category": "risk_vulnerable",
         "severity": "critical",
         "clueInStem": "ECT is barbaric and I will go to the media.",
@@ -5703,7 +5703,7 @@ I would document severity of illness, nutritional risk, psychotic guilt, capacit
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"She is depressed; make her have surgery\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Depression diagnosis invoked to override values-based surgical refusal",
         "category": "risk_vulnerable",
         "severity": "critical",
         "clueInStem": "She is depressed; make her have surgery.",
@@ -5759,7 +5759,7 @@ I would document severity of illness, nutritional risk, psychotic guilt, capacit
       },
       {
         "id": "s4",
-        "name": "prior wishes collateral",
+        "name": "prior wishes collateral at foreseeable risk requiring independent safety assessment",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "She always said no machines.",
@@ -5870,7 +5870,7 @@ I would document the capacity assessment, the ICU quote, depression/delirium scr
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"If she refuses, we close the case\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Service withdrawal accepted before formulating capacity and self-neglect risk",
         "category": "risk_vulnerable",
         "severity": "critical",
         "clueInStem": "If she refuses, we close the case.",
@@ -5907,7 +5907,7 @@ I would document the capacity assessment, the ICU quote, depression/delirium scr
       },
       {
         "id": "s3",
-        "name": "capacity/refusal and guardianship",
+        "name": "capacity/refusal and guardianship threshold determining lawfulness of treatment intervention",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "Can we admit her against her will?",
@@ -5926,7 +5926,7 @@ I would document the capacity assessment, the ICU quote, depression/delirium scr
       },
       {
         "id": "s4",
-        "name": "vulnerability and environmental risk",
+        "name": "vulnerability and environmental risk at foreseeable risk requiring independent safety assessment",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "Her door is open all night.",
@@ -6037,7 +6037,7 @@ I would document the home conditions, insulin risk, open-door vulnerability, the
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"He is demented; sedate him so I can manage\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Dementia label drives sedation before assessing possible elder abuse",
         "category": "risk_vulnerable",
         "severity": "critical",
         "clueInStem": "He is demented; sedate him so I can manage.",
@@ -6074,7 +6074,7 @@ I would document the home conditions, insulin risk, open-door vulnerability, the
       },
       {
         "id": "s3",
-        "name": "MHA and emergency access",
+        "name": "MHA and emergency access criteria and threshold applying in this clinical presentation",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "Can we force entry under mental health powers?",
@@ -6093,7 +6093,7 @@ I would document the home conditions, insulin risk, open-door vulnerability, the
       },
       {
         "id": "s4",
-        "name": "possible vulnerable adult abuse",
+        "name": "Vulnerable patient at foreseeable risk from undertreated clinical condition",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "I have bruises but I fall.",
@@ -6204,7 +6204,7 @@ I would document the poisoning belief, bruises, lock change, carer request for s
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"Just keep her here until the nursing home bed opens\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Temporary containment accepted before formulating capacity and placement risk",
         "category": "risk_vulnerable",
         "severity": "critical",
         "clueInStem": "Just keep her here until the nursing home bed opens.",
@@ -6241,7 +6241,7 @@ I would document the poisoning belief, bruises, lock change, carer request for s
       },
       {
         "id": "s3",
-        "name": "guardianship and accommodation capacity",
+        "name": "guardianship and accommodation capacity threshold determining lawfulness of treatment intervention",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "Do we need guardianship if family agree?",
@@ -6260,7 +6260,7 @@ I would document the poisoning belief, bruises, lock change, carer request for s
       },
       {
         "id": "s4",
-        "name": "home safety risk",
+        "name": "home safety risk at foreseeable risk requiring independent safety assessment",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "She leaves the stove on when we sleep.",
@@ -6371,7 +6371,7 @@ I would document the train-station incident, stove risk, the exact home quote, i
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"He denies suicidal thoughts, so I cannot push it\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Denial of ideation prevents engagement with lethal means safety",
         "category": "risk_vulnerable",
         "severity": "critical",
         "clueInStem": "He denies suicidal thoughts, so I cannot push it.",
@@ -6408,7 +6408,7 @@ I would document the train-station incident, stove risk, the exact home quote, i
       },
       {
         "id": "s3",
-        "name": "public safety/firearms legal pathway",
+        "name": "public safety/firearms legal pathway duties arising from psychiatric impairment and occupation",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "What is our authority around firearms?",
@@ -6427,7 +6427,7 @@ I would document the train-station incident, stove risk, the exact home quote, i
       },
       {
         "id": "s4",
-        "name": "immediate family safety concern",
+        "name": "Family members at immediate risk from inadequate clinical risk formulation",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "He sits in the shed with the gun safe open.",
@@ -6538,7 +6538,7 @@ I would document the denial, drought depression context, firearm identity quote,
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"She agreed yesterday; just witness it\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Prior agreement or family benefit sought before reassessing capacity in delirium",
         "category": "risk_vulnerable",
         "severity": "critical",
         "clueInStem": "She agreed yesterday; just witness it.",
@@ -6575,7 +6575,7 @@ I would document the denial, drought depression context, firearm identity quote,
       },
       {
         "id": "s3",
-        "name": "safeguarding and visitor restriction",
+        "name": "safeguarding and visitor restriction duties for vulnerable dependent in this clinical scenario",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "Can we stop visitors if we suspect exploitation?",
@@ -6594,7 +6594,7 @@ I would document the denial, drought depression context, firearm identity quote,
       },
       {
         "id": "s4",
-        "name": "possible financial exploitation",
+        "name": "possible financial exploitation at foreseeable risk requiring independent safety assessment",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "My pension card is missing.",
@@ -6705,7 +6705,7 @@ I would document the delirium, pain, language barrier, exact statement about not
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"Delay will reduce cure; can we override her\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Medical urgency invoked to override depression-impaired cancer refusal",
         "category": "physical_health",
         "severity": "critical",
         "clueInStem": "Delay will reduce cure; can we override her?",
@@ -6761,7 +6761,7 @@ I would document the delirium, pain, language barrier, exact statement about not
       },
       {
         "id": "s4",
-        "name": "state-dependent refusal collateral",
+        "name": "state-dependent refusal collateral at foreseeable risk requiring independent safety assessment",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "Last month she was begging to start treatment.",
@@ -6872,7 +6872,7 @@ I would document the oncology urgency, the exact guilt-laden refusal, the husban
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"Our faith says you must continue everything\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Family faith directive overrides fluctuating patient consent for withdrawal",
         "category": "physical_health",
         "severity": "critical",
         "clueInStem": "Our faith says you must continue everything.",
@@ -6909,7 +6909,7 @@ I would document the oncology urgency, the exact guilt-laden refusal, the husban
       },
       {
         "id": "s3",
-        "name": "capacity for life-sustaining treatment",
+        "name": "capacity for life-sustaining treatment threshold determining lawfulness of treatment intervention",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "Can he refuse dialysis today?",
@@ -6928,7 +6928,7 @@ I would document the oncology urgency, the exact guilt-laden refusal, the husban
       },
       {
         "id": "s4",
-        "name": "prior wishes conflict",
+        "name": "prior wishes conflict at foreseeable risk requiring independent safety assessment",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "He said he never wanted machines.",
@@ -7039,7 +7039,7 @@ I would document the interpreter use, fluctuations in consciousness, delirium as
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"She is manipulating us\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Manipulation label replaces formulation of trauma and opioid dependence",
         "category": "physical_health",
         "severity": "critical",
         "clueInStem": "She is manipulating us.",
@@ -7095,7 +7095,7 @@ I would document the interpreter use, fluctuations in consciousness, delirium as
       },
       {
         "id": "s4",
-        "name": "overdose/illicit use risk",
+        "name": "overdose/illicit use risk at foreseeable risk requiring independent safety assessment",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "She will buy tablets on the street.",
@@ -7206,7 +7206,7 @@ I would document the validation of pain, the opioid risk formulation, the reason
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"He broke the rules; decline him\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Relapse breach invoked to decline transplant before clinical review",
         "category": "physical_health",
         "severity": "critical",
         "clueInStem": "He broke the rules; decline him.",
@@ -7262,7 +7262,7 @@ I would document the validation of pain, the opioid risk formulation, the reason
       },
       {
         "id": "s4",
-        "name": "carer burnout and safety",
+        "name": "Carer at risk from burnout and inadequate family support planning",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "I hide bottles because I cannot watch him die.",
@@ -7373,7 +7373,7 @@ I would document relapse details, suicide assessment, addiction formulation, fam
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"There is nothing neurological, discharge her\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Negative neurology used to justify discharge before validating functional disorder",
         "category": "physical_health",
         "severity": "critical",
         "clueInStem": "There is nothing neurological, discharge her.",
@@ -7410,7 +7410,7 @@ I would document relapse details, suicide assessment, addiction formulation, fam
       },
       {
         "id": "s3",
-        "name": "policy/ethics around frequent presentations",
+        "name": "policy/ethics around frequent presentations framework applying in this specific clinical scenario",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "Can we refuse future ambulances?",
@@ -7429,7 +7429,7 @@ I would document relapse details, suicide assessment, addiction formulation, fam
       },
       {
         "id": "s4",
-        "name": "family anxiety and safety-seeking",
+        "name": "Family members at immediate risk from inadequate clinical risk formulation",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "She stops breathing at home and I panic.",
@@ -7540,7 +7540,7 @@ I would document the positive FND formulation, the validation statement, the agr
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"She is adult and refusing; can we discharge\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Adult status invoked to justify discharge despite anorexic cognitive impairment",
         "category": "physical_health",
         "severity": "critical",
         "clueInStem": "She is adult and refusing; can we discharge?",
@@ -7596,7 +7596,7 @@ I would document the positive FND formulation, the validation statement, the agr
       },
       {
         "id": "s4",
-        "name": "immediate medical vulnerability",
+        "name": "immediate medical vulnerability at foreseeable risk requiring independent safety assessment",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "She faints when she showers.",
@@ -7707,7 +7707,7 @@ I would document her phosphate level and medical risk, the exact "clean" stateme
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"Chart haloperidol so he stops delaying rehab\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Medication order without formulation used to manage postoperative delirium",
         "category": "physical_health",
         "severity": "critical",
         "clueInStem": "Chart haloperidol so he stops delaying rehab.",
@@ -7726,7 +7726,7 @@ I would document her phosphate level and medical risk, the exact "clean" stateme
       },
       {
         "id": "s2",
-        "name": "postoperative delirium",
+        "name": "postoperative delirium as the specific clinical driver of this presentation",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "There are rats in the walls.",
@@ -7763,7 +7763,7 @@ I would document her phosphate level and medical risk, the exact "clean" stateme
       },
       {
         "id": "s4",
-        "name": "sensory impairment vulnerability",
+        "name": "sensory impairment vulnerability at foreseeable risk requiring independent safety assessment",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "I cannot hear anyone.",
@@ -7874,7 +7874,7 @@ I would document the delirium formulation, causative factors, medication review,
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"He lacks capacity because he cannot explain\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Operational pressure overrides clinical formulation of communication impairment versus refusal",
         "category": "physical_health",
         "severity": "critical",
         "clueInStem": "He lacks capacity because he cannot explain.",
@@ -7893,7 +7893,7 @@ I would document the delirium formulation, causative factors, medication review,
       },
       {
         "id": "s2",
-        "name": "communication impairment versus refusal",
+        "name": "communication impairment versus refusal as the specific clinical driver of this presentation",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "Home, home, no hospital.",
@@ -7911,7 +7911,7 @@ I would document the delirium formulation, causative factors, medication review,
       },
       {
         "id": "s3",
-        "name": "substitute decision-making",
+        "name": "substitute decision-making framework applying in this specific clinical scenario",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "Can I sign him into rehab?",
@@ -7930,7 +7930,7 @@ I would document the delirium formulation, causative factors, medication review,
       },
       {
         "id": "s4",
-        "name": "physical vulnerability",
+        "name": "physical vulnerability at foreseeable risk requiring independent safety assessment",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "He falls whenever he stands.",
@@ -8041,7 +8041,7 @@ I would document the communication supports used, interpreter and speech patholo
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"Turning it off is suicide; stop him\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Operational pressure overrides clinical formulation of values-based refusal of device therapy",
         "category": "physical_health",
         "severity": "critical",
         "clueInStem": "Turning it off is suicide; stop him.",
@@ -8078,7 +8078,7 @@ I would document the communication supports used, interpreter and speech patholo
       },
       {
         "id": "s3",
-        "name": "capacity for device deactivation",
+        "name": "capacity for device deactivation threshold determining lawfulness of treatment intervention",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "Can psychiatry clear capacity today?",
@@ -8097,7 +8097,7 @@ I would document the communication supports used, interpreter and speech patholo
       },
       {
         "id": "s4",
-        "name": "stable preference collateral",
+        "name": "stable preference collateral at foreseeable risk requiring independent safety assessment",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "He has said this for months.",
@@ -8208,7 +8208,7 @@ I would document capacity findings, depression assessment, cardiology explanatio
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"Just depot him and restart antivirals\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Depot and antiviral restart ordered before capacity and consent review",
         "category": "physical_health",
         "severity": "critical",
         "clueInStem": "Just depot him and restart antivirals.",
@@ -8264,7 +8264,7 @@ I would document capacity findings, depression assessment, cardiology explanatio
       },
       {
         "id": "s4",
-        "name": "confidentiality and partner safety",
+        "name": "Intimate partner at immediate risk from perpetrator returning home",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "He has not told his family his status.",
@@ -8375,7 +8375,7 @@ I would document the psychotic content, capacity findings for antiretrovirals, t
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"He denies intent, so confidentiality prevents warning\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Denial of intent invoked to avoid duty-to-warn protective disclosure",
         "category": "risk_others",
         "severity": "critical",
         "clueInStem": "He denies intent, so confidentiality prevents warning.",
@@ -8394,7 +8394,7 @@ I would document the psychotic content, capacity findings for antiretrovirals, t
       },
       {
         "id": "s2",
-        "name": "erotomanic fixation with stalking",
+        "name": "erotomanic fixation with stalking with infant endangerment and public safety risk",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "She smiles because she knows I am watching.",
@@ -8431,7 +8431,7 @@ I would document the psychotic content, capacity findings for antiretrovirals, t
       },
       {
         "id": "s4",
-        "name": "identified rival victim",
+        "name": "Identified victim at immediate risk from discharged patient",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "He is the obstacle; obstacles get removed.",
@@ -8542,7 +8542,7 @@ I would document the erotomanic belief, approach behaviour, perceived rival thre
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"Just say he is NGMI\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Operational pressure overrides clinical formulation of offence-related psychosis and legal standards",
         "category": "risk_others",
         "severity": "critical",
         "clueInStem": "Just say he is NGMI.",
@@ -8579,7 +8579,7 @@ I would document the erotomanic belief, approach behaviour, perceived rival thre
       },
       {
         "id": "s3",
-        "name": "fitness versus criminal responsibility",
+        "name": "fitness versus criminal responsibility framework applying in this specific clinical scenario",
         "category": "ethics",
         "severity": "critical",
         "clueInStem": "Comment on fitness to stand trial.",
@@ -8709,7 +8709,7 @@ I would document sources, interpreter use, limitations, diagnosis, current fitne
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"He is mostly fine; recall seems harsh\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Operational pressure overrides clinical formulation of minimisation of forensic conditions",
         "category": "risk_others",
         "severity": "critical",
         "clueInStem": "He is mostly fine; recall seems harsh.",
@@ -8728,7 +8728,7 @@ I would document sources, interpreter use, limitations, diagnosis, current fitne
       },
       {
         "id": "s2",
-        "name": "minimisation of forensic conditions",
+        "name": "minimisation of forensic conditions as the specific clinical driver of this presentation",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "Everyone deserves a night off; I am not a prisoner.",
@@ -8746,7 +8746,7 @@ I would document sources, interpreter use, limitations, diagnosis, current fitne
       },
       {
         "id": "s3",
-        "name": "conditional discharge threshold",
+        "name": "conditional discharge threshold criteria and threshold applying in this clinical presentation",
         "category": "ethics",
         "severity": "critical",
         "clueInStem": "Does this breach require recall?",
@@ -8765,7 +8765,7 @@ I would document sources, interpreter use, limitations, diagnosis, current fitne
       },
       {
         "id": "s4",
-        "name": "victim safety and notification",
+        "name": "Identified victim at immediate risk from discharged patient",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "I need to know if he is near my suburb.",
@@ -8876,7 +8876,7 @@ I would document the exact breaches, drug-screen history, police report that "He
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"He is polite in clinic and denies intent\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Verbal denial of violent intent accepted before independent risk formulation",
         "category": "risk_others",
         "severity": "critical",
         "clueInStem": "He is polite in clinic and denies intent.",
@@ -8895,7 +8895,7 @@ I would document the exact breaches, drug-screen history, police report that "He
       },
       {
         "id": "s2",
-        "name": "delusional family violence risk",
+        "name": "delusional family violence risk requiring urgent formulation and risk management",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "She is killing my bloodline.",
@@ -8913,7 +8913,7 @@ I would document the exact breaches, drug-screen history, police report that "He
       },
       {
         "id": "s3",
-        "name": "firearms and MHA/legal coordination",
+        "name": "firearms and MHA/legal coordination criteria and threshold applying in this clinical presentation",
         "category": "ethics",
         "severity": "critical",
         "clueInStem": "Can we remove firearms without admission?",
@@ -9043,7 +9043,7 @@ I would document the delusional content, firearm access, children's statements, 
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"Keep this quiet because he is high profile\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Operational pressure overrides clinical formulation of professional access-enabled stalking",
         "category": "risk_others",
         "severity": "critical",
         "clueInStem": "Keep this quiet because he is high profile.",
@@ -9062,7 +9062,7 @@ I would document the delusional content, firearm access, children's statements, 
       },
       {
         "id": "s2",
-        "name": "professional access-enabled stalking",
+        "name": "professional access-enabled stalking as the specific clinical driver of this presentation",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "The roster proves she wants me to find her.",
@@ -9099,7 +9099,7 @@ I would document the delusional content, firearm access, children's statements, 
       },
       {
         "id": "s4",
-        "name": "identified workplace victim safety",
+        "name": "Identified victim at immediate risk from discharged patient",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "I am frightened to come to work.",
@@ -9210,7 +9210,7 @@ I would document the stalking behaviour, roster misuse, delusional interpretatio
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"Evict him and the risk is ours no longer\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Eviction invoked before formulating psychosis-linked arson and public risk",
         "category": "risk_others",
         "severity": "critical",
         "clueInStem": "Evict him and the risk is ours no longer.",
@@ -9229,7 +9229,7 @@ I would document the stalking behaviour, roster misuse, delusional interpretatio
       },
       {
         "id": "s2",
-        "name": "psychosis-linked arson risk",
+        "name": "psychosis-linked arson risk requiring MHA containment and public protection",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "Fire is the only clean thing.",
@@ -9247,7 +9247,7 @@ I would document the stalking behaviour, roster misuse, delusional interpretatio
       },
       {
         "id": "s3",
-        "name": "MHA/CTO and housing policy",
+        "name": "MHA/CTO and housing policy authority required for supported accommodation placement",
         "category": "ethics",
         "severity": "critical",
         "clueInStem": "Can we compel depot to keep housing?",
@@ -9266,7 +9266,7 @@ I would document the stalking behaviour, roster misuse, delusional interpretatio
       },
       {
         "id": "s4",
-        "name": "public and child safety",
+        "name": "Child safety at foreseeable risk from parental psychiatric episode",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "Smoke came under our door while children slept.",
@@ -9377,7 +9377,7 @@ I would document the psychotic fire belief, actual smoke exposure to children, h
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"Transfer him to psych before families sue\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Operational pressure overrides clinical formulation of neurocognitive sexual disinhibition",
         "category": "risk_others",
         "severity": "critical",
         "clueInStem": "Transfer him to psych before families sue.",
@@ -9396,7 +9396,7 @@ I would document the psychotic fire belief, actual smoke exposure to children, h
       },
       {
         "id": "s2",
-        "name": "neurocognitive sexual disinhibition",
+        "name": "neurocognitive sexual disinhibition as the specific clinical driver of this presentation",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "I thought she was my wife.",
@@ -9414,7 +9414,7 @@ I would document the psychotic fire belief, actual smoke exposure to children, h
       },
       {
         "id": "s3",
-        "name": "restraint and consent policy",
+        "name": "restraint and consent policy policy requirements for this vulnerable inpatient presentation",
         "category": "ethics",
         "severity": "critical",
         "clueInStem": "Can we use chemical restraint?",
@@ -9433,7 +9433,7 @@ I would document the psychotic fire belief, actual smoke exposure to children, h
       },
       {
         "id": "s4",
-        "name": "vulnerable co-resident safety",
+        "name": "Vulnerable co-resident at risk from sexual disinhibition without management",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "I am scared to sleep.",
@@ -9544,7 +9544,7 @@ I would document incidents, capacity and consent issues, resident-safety measure
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"She is articulate and political, not psychotic\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Articulate presentation accepted before formulating targeted manic threat",
         "category": "risk_others",
         "severity": "critical",
         "clueInStem": "She is articulate and political, not psychotic.",
@@ -9581,7 +9581,7 @@ I would document incidents, capacity and consent issues, resident-safety measure
       },
       {
         "id": "s3",
-        "name": "duty to protect/warn",
+        "name": "duty to protect/warn framework applying in this specific clinical scenario",
         "category": "ethics",
         "severity": "critical",
         "clueInStem": "Do we need to warn the MP's office?",
@@ -9711,7 +9711,7 @@ I would document the threats, manifesto, office attendance, manic formulation, p
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"He does this to get out of segregation\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Operational pressure overrides clinical formulation of custodial suicide risk and trauma",
         "category": "risk_others",
         "severity": "critical",
         "clueInStem": "He does this to get out of segregation.",
@@ -9748,7 +9748,7 @@ I would document the threats, manifesto, office attendance, manic formulation, p
       },
       {
         "id": "s3",
-        "name": "least restrictive custody observation",
+        "name": "least restrictive custody observation obligations for vulnerable detainee in this case",
         "category": "ethics",
         "severity": "critical",
         "clueInStem": "Can we keep him in observation cell naked?",
@@ -9878,7 +9878,7 @@ I would document the repeated ligatures, brother's custody death, psychotic/trau
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"We need him cleared by Monday\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Occupational clearance pressure overrides psychiatric fitness-to-drive formulation",
         "category": "risk_others",
         "severity": "critical",
         "clueInStem": "We need him cleared by Monday.",
@@ -9915,7 +9915,7 @@ I would document the repeated ligatures, brother's custody death, psychotic/trau
       },
       {
         "id": "s3",
-        "name": "public safety reporting obligations",
+        "name": "public safety reporting obligations duties arising from psychiatric impairment and occupation",
         "category": "ethics",
         "severity": "critical",
         "clueInStem": "Should we suspend commercial driving?",
@@ -9934,7 +9934,7 @@ I would document the repeated ligatures, brother's custody death, psychotic/trau
       },
       {
         "id": "s4",
-        "name": "public/child passenger safety",
+        "name": "Child safety at foreseeable risk from parental psychiatric episode",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "Children were on the bus.",
@@ -10045,7 +10045,7 @@ I would document the near-crash, delusional driving explanation, passenger/child
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"We can put him in cells until he settles\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Custodial containment accepted before formulating acute psychosis and public risk",
         "category": "system_pressure",
         "severity": "critical",
         "clueInStem": "We can put him in cells until he settles.",
@@ -10082,7 +10082,7 @@ I would document the near-crash, delusional driving explanation, passenger/child
       },
       {
         "id": "s3",
-        "name": "MHA transport threshold",
+        "name": "MHA transport threshold criteria and threshold applying in this clinical presentation",
         "category": "mental_health_act",
         "severity": "critical",
         "clueInStem": "Will psychiatry certify urgent risk?",
@@ -10101,7 +10101,7 @@ I would document the near-crash, delusional driving explanation, passenger/child
       },
       {
         "id": "s4",
-        "name": "cultural connection and engagement",
+        "name": "cultural connection and engagement at foreseeable risk requiring independent safety assessment",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "If you fly him out alone, he will not come back to us.",
@@ -10212,7 +10212,7 @@ I would document the highway behaviour, the "trucks are demons" belief, possible
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"There are no psych beds, so phone follow-up is all we have\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Absence of inpatient beds justifies deferral of high-risk assessment",
         "category": "system_pressure",
         "severity": "critical",
         "clueInStem": "There are no psych beds, so phone follow-up is all we have.",
@@ -10231,7 +10231,7 @@ I would document the highway behaviour, the "trucks are demons" belief, possible
       },
       {
         "id": "s2",
-        "name": "minimising high-risk overdose",
+        "name": "minimising high-risk overdose as the specific clinical driver of this presentation",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "I just want to go home and sleep.",
@@ -10249,7 +10249,7 @@ I would document the highway behaviour, the "trucks are demons" belief, possible
       },
       {
         "id": "s3",
-        "name": "safe observation governance",
+        "name": "safe observation governance framework applying in this specific clinical scenario",
         "category": "mental_health_act",
         "severity": "critical",
         "clueInStem": "I have never done an overnight suicide watch.",
@@ -10268,7 +10268,7 @@ I would document the highway behaviour, the "trucks are demons" belief, possible
       },
       {
         "id": "s4",
-        "name": "cultural/family protective support",
+        "name": "Family members at immediate risk from inadequate clinical risk formulation",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "She asked for me but I am ninety minutes away.",
@@ -10379,7 +10379,7 @@ I would document the overdose amount, medical treatment, her minimising statemen
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"Transfer cannot happen until morning\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Temporal deferral accepted before completing urgent clinical risk formulation",
         "category": "system_pressure",
         "severity": "critical",
         "clueInStem": "Transfer cannot happen until morning.",
@@ -10416,7 +10416,7 @@ I would document the overdose amount, medical treatment, her minimising statemen
       },
       {
         "id": "s3",
-        "name": "sedation and MHA transport",
+        "name": "sedation and MHA transport criteria and threshold applying in this clinical presentation",
         "category": "mental_health_act",
         "severity": "critical",
         "clueInStem": "Can we sedate him overnight?",
@@ -10546,7 +10546,7 @@ I would document the dangerous driving, the quote about God and road rules, why 
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"Handle it inside community\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Community containment directive displaces clinical and legal risk formulation",
         "category": "system_pressure",
         "severity": "critical",
         "clueInStem": "Handle it inside community.",
@@ -10565,7 +10565,7 @@ I would document the dangerous driving, the quote about God and road rules, why 
       },
       {
         "id": "s2",
-        "name": "alcohol-related family violence",
+        "name": "alcohol-related family violence requiring urgent formulation and risk management",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "I only scared her because she was taking the kids.",
@@ -10583,7 +10583,7 @@ I would document the dangerous driving, the quote about God and road rules, why 
       },
       {
         "id": "s3",
-        "name": "custody and medical clearance",
+        "name": "custody and medical clearance obligations for vulnerable detainee in this case",
         "category": "mental_health_act",
         "severity": "critical",
         "clueInStem": "Can he sober up in cells?",
@@ -10602,7 +10602,7 @@ I would document the dangerous driving, the quote about God and road rules, why 
       },
       {
         "id": "s4",
-        "name": "victim/children immediate safety",
+        "name": "Child safety at foreseeable risk from parental psychiatric episode",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "If he comes back tonight, someone will die.",
@@ -10713,7 +10713,7 @@ I would document the shovel threat, intoxication, Noah's minimising statement, p
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"We do not provide long-term therapy here\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Service boundary invoked before formulating PTSD and family violence risk",
         "category": "system_pressure",
         "severity": "critical",
         "clueInStem": "We do not provide long-term therapy here.",
@@ -10750,7 +10750,7 @@ I would document the shovel threat, intoxication, Noah's minimising statement, p
       },
       {
         "id": "s3",
-        "name": "benzodiazepine governance",
+        "name": "benzodiazepine governance framework applying in this specific clinical scenario",
         "category": "mental_health_act",
         "severity": "critical",
         "clueInStem": "Can psychiatry take over alprazolam scripts?",
@@ -10769,7 +10769,7 @@ I would document the shovel threat, intoxication, Noah's minimising statement, p
       },
       {
         "id": "s4",
-        "name": "young-carer safeguarding",
+        "name": "young-carer safeguarding at foreseeable risk requiring independent safety assessment",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "She stays home from school to watch Mum.",
@@ -10880,7 +10880,7 @@ I would document why generic telehealth was unsafe, the benzodiazepine governanc
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"The plane cannot land until morning, so family must manage\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Weather delay accepted before formulating postpartum psychosis and infant risk",
         "category": "system_pressure",
         "severity": "critical",
         "clueInStem": "The plane cannot land until morning, so family must manage.",
@@ -10936,7 +10936,7 @@ I would document why generic telehealth was unsafe, the benzodiazepine governanc
       },
       {
         "id": "s4",
-        "name": "newborn medical risk",
+        "name": "Newborn safety at immediate risk from parental psychiatric episode",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "He has not fed for ten hours.",
@@ -11047,7 +11047,7 @@ I would document the postpartum timing, the "sea wants him back" belief, baby's 
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"He denies suicidality, so we cannot remove guns\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Denial of ideation prevents engagement with lethal means safety",
         "category": "system_pressure",
         "severity": "critical",
         "clueInStem": "He denies suicidality, so we cannot remove guns.",
@@ -11066,7 +11066,7 @@ I would document the postpartum timing, the "sea wants him back" belief, baby's 
       },
       {
         "id": "s2",
-        "name": "firearms-related suicide risk",
+        "name": "firearms-related suicide risk requiring MHA containment and public protection",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "A man without his rifle is already dead.",
@@ -11084,7 +11084,7 @@ I would document the postpartum timing, the "sea wants him back" belief, baby's 
       },
       {
         "id": "s3",
-        "name": "firearms safety pathway",
+        "name": "firearms safety pathway framework applying in this specific clinical scenario",
         "category": "mental_health_act",
         "severity": "critical",
         "clueInStem": "What is our authority around firearms?",
@@ -11214,7 +11214,7 @@ I would document the open gun safe, depression and alcohol risk, the "rifle" ide
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"She is aggressive; give something strong\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Operational pressure overrides clinical formulation of delirium plus cultural dislocation",
         "category": "system_pressure",
         "severity": "critical",
         "clueInStem": "She is aggressive; give something strong.",
@@ -11233,7 +11233,7 @@ I would document the open gun safe, depression and alcohol risk, the "rifle" ide
       },
       {
         "id": "s2",
-        "name": "delirium plus cultural dislocation",
+        "name": "delirium plus cultural dislocation as the specific clinical driver of this presentation",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "This place is not my country.",
@@ -11270,7 +11270,7 @@ I would document the open gun safe, depression and alcohol risk, the "rifle" ide
       },
       {
         "id": "s4",
-        "name": "baseline collateral",
+        "name": "baseline collateral at foreseeable risk requiring independent safety assessment",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "She was leading community meetings last week.",
@@ -11381,7 +11381,7 @@ I would document the acute baseline change, infection, cultural dislocation phra
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"The wound is superficial and there is no paediatric bed\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Operational pressure overrides clinical formulation of sexual trauma and self-harm",
         "category": "system_pressure",
         "severity": "critical",
         "clueInStem": "The wound is superficial and there is no paediatric bed.",
@@ -11400,7 +11400,7 @@ I would document the acute baseline change, infection, cultural dislocation phra
       },
       {
         "id": "s2",
-        "name": "sexual trauma and self-harm",
+        "name": "sexual trauma and self-harm as the specific clinical driver of this presentation",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "I cut so I would not feel him touching me.",
@@ -11437,7 +11437,7 @@ I would document the acute baseline change, infection, cultural dislocation phra
       },
       {
         "id": "s4",
-        "name": "sibling safety risk",
+        "name": "Siblings at risk from trauma exposure in shared household",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "My brother still sleeps in that house.",
@@ -11548,7 +11548,7 @@ I would document Ella's exact disclosure, who heard it, what questions were and 
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"Breach him; he is non-compliant\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Coercive legal mechanism invoked before completing clinical risk formulation",
         "category": "system_pressure",
         "severity": "critical",
         "clueInStem": "Breach him; he is non-compliant.",
@@ -11585,7 +11585,7 @@ I would document Ella's exact disclosure, who heard it, what questions were and 
       },
       {
         "id": "s3",
-        "name": "CTO legal threshold",
+        "name": "CTO legal threshold criteria and threshold applying in this clinical presentation",
         "category": "mental_health_act",
         "severity": "critical",
         "clueInStem": "Is recall the least restrictive option?",
@@ -11604,7 +11604,7 @@ I would document Ella's exact disclosure, who heard it, what questions were and 
       },
       {
         "id": "s4",
-        "name": "family/cultural protective factors",
+        "name": "Family members at immediate risk from inadequate clinical risk formulation",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "He needs ceremony and medicine, both.",
@@ -11715,7 +11715,7 @@ I would document missed depot, sorry business, mental state, grandmother's colla
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"Handle this quietly; we cannot lose another consultant\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Institutional containment of impaired colleague conceals patient safety risk",
         "category": "governance",
         "severity": "critical",
         "clueInStem": "Handle this quietly; we cannot lose another consultant.",
@@ -11752,7 +11752,7 @@ I would document missed depot, sorry business, mental state, grandmother's colla
       },
       {
         "id": "s3",
-        "name": "AHPRA/mandatory notification threshold",
+        "name": "AHPRA/mandatory notification threshold criteria and threshold applying in this clinical presentation",
         "category": "governance",
         "severity": "critical",
         "clueInStem": "Is this mandatory reporting?",
@@ -11790,7 +11790,7 @@ I would document missed depot, sorry business, mental state, grandmother's colla
       },
       {
         "id": "s5",
-        "name": "Junior staff fear of challenging the impaired colleague as a system safety failure",
+        "name": "Junior staff fear of challenging the impaired colleague as a system safety",
         "category": "mdt_conflict",
         "severity": "important",
         "clueInStem": "I was afraid to challenge him.",
@@ -11882,7 +11882,7 @@ I would document the allegation, immediate patient review, restriction of Dr K's
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"Avoid admitting liability\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Legal caution substitutes for open disclosure after clinical governance failure",
         "category": "governance",
         "severity": "critical",
         "clueInStem": "Avoid admitting liability.",
@@ -12049,7 +12049,7 @@ I would document the event, clinical harm, open disclosure conversation, apology
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"We need this bed today\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Operational bed pressure drives discharge before clinical risk formulation",
         "category": "governance",
         "severity": "critical",
         "clueInStem": "We need this bed today.",
@@ -12105,7 +12105,7 @@ I would document the event, clinical harm, open disclosure conversation, apology
       },
       {
         "id": "s4",
-        "name": "identified victim safety",
+        "name": "Identified victim at immediate risk from discharged patient",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "There is an active family violence order.",
@@ -12216,7 +12216,7 @@ I would document the exact threat, the active family violence order, denial-of-i
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"Staff now bypass the registrar\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Operational pressure overrides clinical formulation of false documentation and supervision failure",
         "category": "governance",
         "severity": "critical",
         "clueInStem": "Staff now bypass the registrar.",
@@ -12383,7 +12383,7 @@ I would document patient review, duty restrictions, record correction, open disc
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"Delete the screenshots and handle it informally\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Informal handling of privacy breach conceals regulatory and governance risk",
         "category": "governance",
         "severity": "critical",
         "clueInStem": "Delete the screenshots and handle it informally.",
@@ -12402,7 +12402,7 @@ I would document patient review, duty restrictions, record correction, open disc
       },
       {
         "id": "s2",
-        "name": "privacy breach minimisation",
+        "name": "privacy breach minimisation as the specific clinical driver of this presentation",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "It was anonymous; I was just venting.",
@@ -12420,7 +12420,7 @@ I would document patient review, duty restrictions, record correction, open disc
       },
       {
         "id": "s3",
-        "name": "privacy/open disclosure governance",
+        "name": "privacy/open disclosure governance obligations arising in this perinatal psychiatric context",
         "category": "governance",
         "severity": "critical",
         "clueInStem": "Do we need open disclosure with the whānau?",
@@ -12439,7 +12439,7 @@ I would document patient review, duty restrictions, record correction, open disc
       },
       {
         "id": "s4",
-        "name": "vulnerable involuntary patient harm",
+        "name": "Vulnerable patient at foreseeable risk from undertreated clinical condition",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "You people are making fun of me.",
@@ -12550,7 +12550,7 @@ I would document the post content, identifiability, screenshot preservation, pat
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"Transfer her quietly before fellowship review\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Quiet transfer prevents formal governance review of boundary violation",
         "category": "governance",
         "severity": "critical",
         "clueInStem": "Transfer her quietly before fellowship review.",
@@ -12569,7 +12569,7 @@ I would document the post content, identifiability, screenshot preservation, pat
       },
       {
         "id": "s2",
-        "name": "boundary-rationalisation",
+        "name": "boundary-rationalisation as the specific clinical driver of this presentation",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "She needed someone who would not abandon her.",
@@ -12587,7 +12587,7 @@ I would document the post content, identifiability, screenshot preservation, pat
       },
       {
         "id": "s3",
-        "name": "boundary/professional governance",
+        "name": "boundary/professional governance arising from supervision and training governance failure",
         "category": "governance",
         "severity": "critical",
         "clueInStem": "Does this require notification?",
@@ -12606,7 +12606,7 @@ I would document the post content, identifiability, screenshot preservation, pat
       },
       {
         "id": "s4",
-        "name": "self-harm during boundary repair",
+        "name": "self-harm during boundary repair at foreseeable risk requiring independent safety assessment",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "If he gets in trouble, I will cut myself.",
@@ -12717,7 +12717,7 @@ I would document the boundary concerns, undocumented sessions, immediate cessati
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"I only did what the bed manager asked\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Operational pressure overrides clinical formulation of family complaint and open disclosure",
         "category": "governance",
         "severity": "critical",
         "clueInStem": "I only did what the bed manager asked.",
@@ -12754,7 +12754,7 @@ I would document the boundary concerns, undocumented sessions, immediate cessati
       },
       {
         "id": "s3",
-        "name": "coronial documentation governance",
+        "name": "coronial documentation governance framework applying in this specific clinical scenario",
         "category": "governance",
         "severity": "critical",
         "clueInStem": "What do we give the coroner?",
@@ -12773,7 +12773,7 @@ I would document the boundary concerns, undocumented sessions, immediate cessati
       },
       {
         "id": "s4",
-        "name": "ignored suicide warning collateral",
+        "name": "ignored suicide warning collateral at foreseeable risk requiring independent safety assessment",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "He was giving away tools and saying I will be free soon.",
@@ -12884,7 +12884,7 @@ I would document the incident response, family contact, record preservation, cor
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"Do not say sorry until legal approves\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Governance suppression prevents appropriate safety and accountability response",
         "category": "governance",
         "severity": "critical",
         "clueInStem": "Do not say sorry until legal approves.",
@@ -12903,7 +12903,7 @@ I would document the incident response, family contact, record preservation, cor
       },
       {
         "id": "s2",
-        "name": "culturally unsafe care allegation",
+        "name": "culturally unsafe care allegation as the specific clinical driver of this presentation",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "You treated him like a criminal, not a patient.",
@@ -12921,7 +12921,7 @@ I would document the incident response, family contact, record preservation, cor
       },
       {
         "id": "s3",
-        "name": "complaint and regulatory governance",
+        "name": "complaint and regulatory governance framework applying in this specific clinical scenario",
         "category": "governance",
         "severity": "critical",
         "clueInStem": "Is this AHPRA or internal review?",
@@ -13051,7 +13051,7 @@ I would document family contact, open disclosure, cultural review process, Abori
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"Our seclusion numbers cannot go up this month\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Performance target compliance drives seclusion decision before clinical formulation",
         "category": "governance",
         "severity": "critical",
         "clueInStem": "Our seclusion numbers cannot go up this month.",
@@ -13088,7 +13088,7 @@ I would document family contact, open disclosure, cultural review process, Abori
       },
       {
         "id": "s3",
-        "name": "seclusion/restraint governance",
+        "name": "seclusion/restraint governance policy requirements for this vulnerable inpatient presentation",
         "category": "governance",
         "severity": "critical",
         "clueInStem": "Was policy breached?",
@@ -13107,7 +13107,7 @@ I would document family contact, open disclosure, cultural review process, Abori
       },
       {
         "id": "s4",
-        "name": "vulnerable inpatient safety",
+        "name": "Inpatient safety at risk from undertreated clinical presentation",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "I am frightened to sleep on the ward.",
@@ -13218,7 +13218,7 @@ I would document the assault, victim impact, seclusion rationale, policy complia
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"He is our main admitting doctor; keep this contained\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Quiet transfer prevents formal governance review of boundary violation",
         "category": "governance",
         "severity": "critical",
         "clueInStem": "He is our main admitting doctor; keep this contained.",
@@ -13237,7 +13237,7 @@ I would document the assault, victim impact, seclusion rationale, policy complia
       },
       {
         "id": "s2",
-        "name": "sexual boundary exploitation",
+        "name": "sexual boundary exploitation as the specific clinical driver of this presentation",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "He said I was special and no one understood us.",
@@ -13255,7 +13255,7 @@ I would document the assault, victim impact, seclusion rationale, policy complia
       },
       {
         "id": "s3",
-        "name": "mandatory reporting threshold",
+        "name": "mandatory reporting threshold criteria and threshold applying in this clinical presentation",
         "category": "governance",
         "severity": "critical",
         "clueInStem": "Does this meet mandatory notification?",
@@ -13385,7 +13385,7 @@ I would document the allegation, messages/evidence preservation, patient safety 
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"Discharge her by midday; ED has psychosis waiting\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Negative test result accepted as grounds to discharge before clinical formulation",
         "category": "risk_self",
         "severity": "critical",
         "clueInStem": "Discharge her by midday; ED has psychosis waiting.",
@@ -13552,7 +13552,7 @@ I would document the acute-on-chronic formulation, the leave refusal trigger, th
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"Close his file; he is not engaging\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Non-engagement label drives case closure before duty-of-care formulation",
         "category": "risk_self",
         "severity": "critical",
         "clueInStem": "Close his file; he is not engaging.",
@@ -13571,7 +13571,7 @@ I would document the acute-on-chronic formulation, the leave refusal trigger, th
       },
       {
         "id": "s2",
-        "name": "dependency and boundary diffusion",
+        "name": "dependency and boundary diffusion in pregnancy requiring evidence-based harm reduction",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "You are the only person stopping me ending it.",
@@ -13719,7 +13719,7 @@ I would document the dependency formulation, personal-phone boundary issue, part
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"We cannot admit every time they cut\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Operational pressure overrides clinical formulation of NSSI as affect regulation with escalation",
         "category": "risk_self",
         "severity": "critical",
         "clueInStem": "We cannot admit every time they cut.",
@@ -13756,7 +13756,7 @@ I would document the dependency formulation, personal-phone boundary issue, part
       },
       {
         "id": "s3",
-        "name": "risk formulation and disposition",
+        "name": "risk formulation and disposition framework applying in this specific clinical scenario",
         "category": "ethics",
         "severity": "critical",
         "clueInStem": "It is superficial, so can they leave?",
@@ -13886,7 +13886,7 @@ I would document the function of cutting, what "something worse" meant, partner 
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"Use restraint and get the feeds in\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Operational pressure overrides clinical formulation of splitting around life-saving feeding",
         "category": "risk_self",
         "severity": "critical",
         "clueInStem": "Use restraint and get the feeds in.",
@@ -13905,7 +13905,7 @@ I would document the function of cutting, what "something worse" meant, partner 
       },
       {
         "id": "s2",
-        "name": "splitting around life-saving feeding",
+        "name": "splitting around life-saving feeding as the specific clinical driver of this presentation",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "You are the only nurse who cares; everyone else wants me fat.",
@@ -13923,7 +13923,7 @@ I would document the function of cutting, what "something worse" meant, partner 
       },
       {
         "id": "s3",
-        "name": "capacity/emergency treatment and proportionality",
+        "name": "capacity/emergency treatment and proportionality threshold determining lawfulness of treatment intervention",
         "category": "ethics",
         "severity": "critical",
         "clueInStem": "Does capacity matter if BMI is critical?",
@@ -13942,7 +13942,7 @@ I would document the function of cutting, what "something worse" meant, partner 
       },
       {
         "id": "s4",
-        "name": "vulnerable co-patient risk",
+        "name": "Vulnerable patient at foreseeable risk from undertreated clinical condition",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "She tells me how to hide food.",
@@ -14053,7 +14053,7 @@ I would document the medical risk, capacity assessment, legal authority for NG f
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"Admit her or she will complain\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Complaint or media threat accepted as reason to defer clinical action",
         "category": "risk_self",
         "severity": "critical",
         "clueInStem": "Admit her or she will complain.",
@@ -14109,7 +14109,7 @@ I would document the medical risk, capacity assessment, legal authority for NG f
       },
       {
         "id": "s4",
-        "name": "young carer risk",
+        "name": "young carer risk at foreseeable risk requiring independent safety assessment",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "I stay home so Mum does not disappear.",
@@ -14220,7 +14220,7 @@ I would document the contamination formulation, complaint pressure, self-harm ri
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"He is impossible; discharge him\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Countertransference-driven discharge accepted before formulating suicide risk",
         "category": "risk_self",
         "severity": "critical",
         "clueInStem": "He is impossible; discharge him.",
@@ -14239,7 +14239,7 @@ I would document the contamination formulation, complaint pressure, self-harm ri
       },
       {
         "id": "s2",
-        "name": "narcissistic injury and risk/escalation",
+        "name": "narcissistic injury and risk/escalation as the specific clinical driver of this presentation",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "You will all regret disrespecting me.",
@@ -14257,7 +14257,7 @@ I would document the contamination formulation, complaint pressure, self-harm ri
       },
       {
         "id": "s3",
-        "name": "defensive documentation ethics",
+        "name": "defensive documentation ethics framework applying in this specific clinical scenario",
         "category": "ethics",
         "severity": "critical",
         "clueInStem": "Do we write only factual notes from now on?",
@@ -14276,7 +14276,7 @@ I would document the contamination formulation, complaint pressure, self-harm ri
       },
       {
         "id": "s4",
-        "name": "suicide risk behind complaint",
+        "name": "suicide risk behind complaint at foreseeable risk requiring independent safety assessment",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "He has been saying life is over.",
@@ -14387,7 +14387,7 @@ I would document the complaint, the rupture, exact threatening and suicidal phra
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"Ban her from ED unless troponin positive\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Operational pressure overrides clinical formulation of dependency and somatic anxiety",
         "category": "risk_self",
         "severity": "critical",
         "clueInStem": "Ban her from ED unless troponin positive.",
@@ -14406,7 +14406,7 @@ I would document the complaint, the rupture, exact threatening and suicidal phra
       },
       {
         "id": "s2",
-        "name": "dependency and somatic anxiety",
+        "name": "dependency and somatic anxiety in pregnancy requiring evidence-based harm reduction",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "If you send me home, I will be alone with my body.",
@@ -14424,7 +14424,7 @@ I would document the complaint, the rupture, exact threatening and suicidal phra
       },
       {
         "id": "s3",
-        "name": "ethics of frequent-attender plan",
+        "name": "ethics of frequent-attender plan framework applying in this specific clinical scenario",
         "category": "ethics",
         "severity": "critical",
         "clueInStem": "Can we make a behavioural contract?",
@@ -14443,7 +14443,7 @@ I would document the complaint, the rupture, exact threatening and suicidal phra
       },
       {
         "id": "s4",
-        "name": "carer burden",
+        "name": "Carer at risk from burnout and inadequate family support planning",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "I left work again to sit with her.",
@@ -14554,7 +14554,7 @@ I would document the positive formulation of somatic anxiety, the medical safety
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"Clear the house by force tomorrow\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Operational pressure overrides clinical formulation of hoarding formulation and identity",
         "category": "risk_self",
         "severity": "critical",
         "clueInStem": "Clear the house by force tomorrow.",
@@ -14573,7 +14573,7 @@ I would document the positive formulation of somatic anxiety, the medical safety
       },
       {
         "id": "s2",
-        "name": "hoarding formulation and identity",
+        "name": "hoarding formulation and identity as the specific clinical driver of this presentation",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "These papers are my memory; throwing them is killing me.",
@@ -14610,7 +14610,7 @@ I would document the positive formulation of somatic anxiety, the medical safety
       },
       {
         "id": "s4",
-        "name": "neighbour/child fire risk",
+        "name": "Child safety at foreseeable risk from parental psychiatric episode",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "Smoke comes through the wall where children sleep.",
@@ -14721,7 +14721,7 @@ I would document the hoarding formulation, capacity findings, suicide risk, neig
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"It feels cruel not to be available\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Operational pressure overrides clinical formulation of dependency and suicide risk in therapy",
         "category": "risk_self",
         "severity": "critical",
         "clueInStem": "It feels cruel not to be available.",
@@ -14777,7 +14777,7 @@ I would document the hoarding formulation, capacity findings, suicide risk, neig
       },
       {
         "id": "s4",
-        "name": "relationship/carer harm",
+        "name": "relationship/carer harm at foreseeable risk requiring independent safety assessment",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "She checks the phone all night.",
@@ -14888,7 +14888,7 @@ I would document the boundary request, risk assessment, dependency formulation, 
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"Discharge her today for staff safety\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Negative test result accepted as grounds to discharge before clinical formulation",
         "category": "risk_self",
         "severity": "critical",
         "clueInStem": "Discharge her today for staff safety.",
@@ -14925,7 +14925,7 @@ I would document the boundary request, risk assessment, dependency formulation, 
       },
       {
         "id": "s3",
-        "name": "MHA/risk threshold and capacity",
+        "name": "MHA/risk threshold and capacity threshold determining lawfulness of treatment intervention",
         "category": "ethics",
         "severity": "critical",
         "clueInStem": "Can we use the MHA for violence if she is not psychotic?",
@@ -15055,7 +15055,7 @@ I would document the assault, staff fear, trauma/cultural formulation, MHA reaso
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"He is choosing alcohol, so let him leave\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Capacitous autonomy invoked before formulating alcohol dependence and safety",
         "category": "substance_use",
         "severity": "critical",
         "clueInStem": "He is choosing alcohol, so let him leave.",
@@ -15092,7 +15092,7 @@ I would document the assault, staff fear, trauma/cultural formulation, MHA reaso
       },
       {
         "id": "s3",
-        "name": "capacity and emergency treatment",
+        "name": "capacity and emergency treatment threshold determining lawfulness of treatment intervention",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "Can we treat encephalopathy against refusal?",
@@ -15111,7 +15111,7 @@ I would document the assault, staff fear, trauma/cultural formulation, MHA reaso
       },
       {
         "id": "s4",
-        "name": "state-dependent collateral",
+        "name": "state-dependent collateral at foreseeable risk requiring independent safety assessment",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "When he sobers up he wants treatment.",
@@ -15222,7 +15222,7 @@ I would document capacity findings, encephalopathy features, state-dependent col
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"Let him sleep it off and discharge\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Intoxication label defers clinical assessment to custody or passage of time",
         "category": "substance_use",
         "severity": "critical",
         "clueInStem": "Let him sleep it off and discharge.",
@@ -15278,7 +15278,7 @@ I would document capacity findings, encephalopathy features, state-dependent col
       },
       {
         "id": "s4",
-        "name": "collateral diagnostic uncertainty",
+        "name": "collateral diagnostic uncertainty at foreseeable risk requiring independent safety assessment",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "He mutters even when he is not using.",
@@ -15389,7 +15389,7 @@ I would document the six-month decline, smoke-alarm delusion, readiness quote, p
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"Reduce it to prevent neonatal withdrawal\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Opioid stigma drives methadone reduction against evidence-based harm reduction",
         "category": "substance_use",
         "severity": "critical",
         "clueInStem": "Reduce it to prevent neonatal withdrawal.",
@@ -15408,7 +15408,7 @@ I would document the six-month decline, smoke-alarm delusion, readiness quote, p
       },
       {
         "id": "s2",
-        "name": "methadone maintenance as protective",
+        "name": "methadone maintenance as protective in pregnancy requiring evidence-based harm reduction",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "Methadone is why I am not using heroin.",
@@ -15426,7 +15426,7 @@ I would document the six-month decline, smoke-alarm delusion, readiness quote, p
       },
       {
         "id": "s3",
-        "name": "child protection threshold",
+        "name": "child protection threshold criteria and threshold applying in this clinical presentation",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "Should child protection be notified now?",
@@ -15445,7 +15445,7 @@ I would document the six-month decline, smoke-alarm delusion, readiness quote, p
       },
       {
         "id": "s4",
-        "name": "NAS planning and stigma",
+        "name": "NAS planning and stigma at foreseeable risk requiring independent safety assessment",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "I do not want the baby labelled an addict.",
@@ -15556,7 +15556,7 @@ I would document the rationale for maintaining methadone, NAS education, benzodi
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"She will complain if we taper\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Complaint threat defers clinically necessary benzodiazepine taper",
         "category": "substance_use",
         "severity": "critical",
         "clueInStem": "She will complain if we taper.",
@@ -15593,7 +15593,7 @@ I would document the rationale for maintaining methadone, NAS education, benzodi
       },
       {
         "id": "s3",
-        "name": "consent and medication control",
+        "name": "consent and medication control obligations arising in this perinatal psychiatric context",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "Can we hide the tablets?",
@@ -15723,7 +15723,7 @@ I would document benzodiazepine dependence, grief formulation, falls/child-safet
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"He wakes up every time; discharge him\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Discharge invoked before completing clinical risk formulation",
         "category": "substance_use",
         "severity": "critical",
         "clueInStem": "He wakes up every time; discharge him.",
@@ -15760,7 +15760,7 @@ I would document benzodiazepine dependence, grief formulation, falls/child-safet
       },
       {
         "id": "s3",
-        "name": "MHA/capacity limits",
+        "name": "MHA/capacity limits threshold determining lawfulness of treatment intervention",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "Can we detain for addiction alone?",
@@ -15779,7 +15779,7 @@ I would document benzodiazepine dependence, grief formulation, falls/child-safet
       },
       {
         "id": "s4",
-        "name": "near-fatal vulnerable carer context",
+        "name": "Vulnerable patient at foreseeable risk from undertreated clinical condition",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "I find him blue and not breathing.",
@@ -15890,7 +15890,7 @@ I would document overdose history, partner collateral, capacity/withdrawal asses
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"The GP prescribed it, so chart it\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Coercive sedation ordered before establishing legal authority and capacity",
         "category": "substance_use",
         "severity": "critical",
         "clueInStem": "The GP prescribed it, so chart it.",
@@ -15909,7 +15909,7 @@ I would document overdose history, partner collateral, capacity/withdrawal asses
       },
       {
         "id": "s2",
-        "name": "cannabis worsening psychosis risk",
+        "name": "cannabis worsening psychosis risk affecting treatment capacity and clinical safety",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "Cannabis is natural and stops the voices stressing me.",
@@ -15946,7 +15946,7 @@ I would document overdose history, partner collateral, capacity/withdrawal asses
       },
       {
         "id": "s4",
-        "name": "family safety risk",
+        "name": "Family members at immediate risk from inadequate clinical risk formulation",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "He threatens me when he smokes.",
@@ -16057,7 +16057,7 @@ I would document cannabis risk, family-threat collateral, GP liaison and consent
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"Clear him for machinery work tomorrow\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Operational pressure overrides clinical formulation of ADHD versus stimulant misuse/diversion",
         "category": "substance_use",
         "severity": "critical",
         "clueInStem": "Clear him for machinery work tomorrow.",
@@ -16076,7 +16076,7 @@ I would document cannabis risk, family-threat collateral, GP liaison and consent
       },
       {
         "id": "s2",
-        "name": "ADHD versus stimulant misuse/diversion",
+        "name": "ADHD versus stimulant misuse/diversion misattributed as neurodevelopmental disorder",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "I focus better when I take extra before work.",
@@ -16094,7 +16094,7 @@ I would document cannabis risk, family-threat collateral, GP liaison and consent
       },
       {
         "id": "s3",
-        "name": "prescribing governance and safety",
+        "name": "prescribing governance and safety framework applying in this specific clinical scenario",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "Can I keep prescribing if you recommend it?",
@@ -16113,7 +16113,7 @@ I would document cannabis risk, family-threat collateral, GP liaison and consent
       },
       {
         "id": "s4",
-        "name": "public/workplace safety",
+        "name": "Public safety at risk from psychosis-impaired occupational performance",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "He was jittery operating equipment.",
@@ -16224,7 +16224,7 @@ I would document misuse indicators, workplace risk, prescribing rationale, GP co
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"Avoid benzodiazepines in pregnancy\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Operational pressure overrides clinical formulation of alcohol withdrawal and foetal/maternal risk",
         "category": "substance_use",
         "severity": "critical",
         "clueInStem": "Avoid benzodiazepines in pregnancy.",
@@ -16261,7 +16261,7 @@ I would document misuse indicators, workplace risk, prescribing rationale, GP co
       },
       {
         "id": "s3",
-        "name": "capacity and emergency treatment",
+        "name": "capacity and emergency treatment threshold determining lawfulness of treatment intervention",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "Can she leave if she refuses?",
@@ -16280,7 +16280,7 @@ I would document misuse indicators, workplace risk, prescribing rationale, GP co
       },
       {
         "id": "s4",
-        "name": "maternal-foetal medical risk",
+        "name": "Unborn child welfare at risk from maternal treatment refusal",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "She is tremulous and hypertensive.",
@@ -16391,7 +16391,7 @@ I would document withdrawal severity, benzodiazepine risk-benefit reasoning, cap
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"He is just negative and sedated\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Negative symptom label accepted before formulating clozapine toxicity",
         "category": "substance_use",
         "severity": "critical",
         "clueInStem": "He is just negative and sedated.",
@@ -16428,7 +16428,7 @@ I would document withdrawal severity, benzodiazepine risk-benefit reasoning, cap
       },
       {
         "id": "s3",
-        "name": "medication management policy",
+        "name": "medication management policy framework applying in this specific clinical scenario",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "Should we restart cigarettes to fix it?",
@@ -16447,7 +16447,7 @@ I would document withdrawal severity, benzodiazepine risk-benefit reasoning, cap
       },
       {
         "id": "s4",
-        "name": "falls/vulnerable inpatient risk",
+        "name": "Inpatient safety at risk from undertreated clinical presentation",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "He nearly fell twice overnight.",
@@ -16558,7 +16558,7 @@ I would document clozapine toxicity formulation, smoking cessation mechanism, le
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"Breach the CTO; he is non-compliant\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Operational pressure overrides clinical formulation of treatment refusal shaped by homelessness survival",
         "category": "substance_use",
         "severity": "critical",
         "clueInStem": "Breach the CTO; he is non-compliant.",
@@ -16595,7 +16595,7 @@ I would document clozapine toxicity formulation, smoking cessation mechanism, le
       },
       {
         "id": "s3",
-        "name": "coercive treatment/housing ethics",
+        "name": "coercive treatment/housing ethics authority required for supported accommodation placement",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "Can housing require depot?",
@@ -16614,7 +16614,7 @@ I would document clozapine toxicity formulation, smoking cessation mechanism, le
       },
       {
         "id": "s4",
-        "name": "public/self safety risk",
+        "name": "Public safety at risk from psychosis-impaired occupational performance",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "He walks on the tracks at night.",
@@ -16725,7 +16725,7 @@ I would document the homelessness-survival formulation, track risk, opioid use, 
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"The package is wasted because he will not engage\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Non-engagement label prevents recovery-oriented rehabilitation formulation",
         "category": "system_pressure",
         "severity": "critical",
         "clueInStem": "The package is wasted because he will not engage.",
@@ -16744,7 +16744,7 @@ I would document the homelessness-survival formulation, track risk, opioid use, 
       },
       {
         "id": "s2",
-        "name": "recovery-oriented TRS rehabilitation",
+        "name": "recovery-oriented TRS rehabilitation as the specific clinical driver of this presentation",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "Everyone talks about recovery but no one thinks I can do anything.",
@@ -16781,7 +16781,7 @@ I would document the homelessness-survival formulation, track risk, opioid use, 
       },
       {
         "id": "s4",
-        "name": "carer burnout and overfunctioning",
+        "name": "Carer at risk from burnout and inadequate family support planning",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "We organise everything and we are exhausted.",
@@ -16892,7 +16892,7 @@ I would document the TRS formulation, negative symptoms, clozapine plan, NDIS fu
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"Increase monitoring until she complies\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Monitoring and compliance framing displaces engagement with identity ambivalence",
         "category": "system_pressure",
         "severity": "critical",
         "clueInStem": "Increase monitoring until she complies.",
@@ -16911,7 +16911,7 @@ I would document the TRS formulation, negative symptoms, clozapine plan, NDIS fu
       },
       {
         "id": "s2",
-        "name": "identity-based medication ambivalence",
+        "name": "identity-based medication ambivalence as the specific clinical driver of this presentation",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "Lithium takes away who I am.",
@@ -16929,7 +16929,7 @@ I would document the TRS formulation, negative symptoms, clozapine plan, NDIS fu
       },
       {
         "id": "s3",
-        "name": "autonomy and assertive care",
+        "name": "autonomy and assertive care framework applying in this specific clinical scenario",
         "category": "ethics",
         "severity": "critical",
         "clueInStem": "Is assertive follow-up justified if she is voluntary?",
@@ -17059,7 +17059,7 @@ I would document her identity-based medication concern, relapse history, husband
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"Close the file; they do not engage\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Non-engagement framing drives case closure before completing risk formulation",
         "category": "system_pressure",
         "severity": "critical",
         "clueInStem": "Close the file; they do not engage.",
@@ -17078,7 +17078,7 @@ I would document her identity-based medication concern, relapse history, husband
       },
       {
         "id": "s2",
-        "name": "autism-related access barrier",
+        "name": "autism-related access barrier as the specific clinical driver of this presentation",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "The waiting room feels like a siren in my skin.",
@@ -17115,7 +17115,7 @@ I would document her identity-based medication concern, relapse history, husband
       },
       {
         "id": "s4",
-        "name": "functional vulnerability",
+        "name": "functional vulnerability at foreseeable risk requiring independent safety assessment",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "They shut down for days after appointments.",
@@ -17226,7 +17226,7 @@ I would document the sensory formulation, reasonable adjustments offered, pronou
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"Depot is easier; just switch\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Ease of depot delivery overrides informed consent and risk-benefit review",
         "category": "system_pressure",
         "severity": "critical",
         "clueInStem": "Depot is easier; just switch.",
@@ -17263,7 +17263,7 @@ I would document the sensory formulation, reasonable adjustments offered, pronou
       },
       {
         "id": "s3",
-        "name": "physical monitoring and consent",
+        "name": "physical monitoring and consent obligations arising in this perinatal psychiatric context",
         "category": "ethics",
         "severity": "critical",
         "clueInStem": "Can clozapine restart safely?",
@@ -17282,7 +17282,7 @@ I would document the sensory formulation, reasonable adjustments offered, pronou
       },
       {
         "id": "s4",
-        "name": "self-neglect vulnerability",
+        "name": "self-neglect vulnerability at foreseeable risk requiring independent safety assessment",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "He stops eating when voices worsen.",
@@ -17393,7 +17393,7 @@ I would document the adverse-effect scare, Daniel's fear, cardiology advice, cap
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"Keep him until housing is perfect\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Indefinite containment pending perfect housing displaces recovery formulation",
         "category": "system_pressure",
         "severity": "critical",
         "clueInStem": "Keep him until housing is perfect.",
@@ -17412,7 +17412,7 @@ I would document the adverse-effect scare, Daniel's fear, cardiology advice, cap
       },
       {
         "id": "s2",
-        "name": "institutionalisation and recovery planning",
+        "name": "institutionalisation and recovery planning as the specific clinical driver of this presentation",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "I do not know how to live outside now.",
@@ -17430,7 +17430,7 @@ I would document the adverse-effect scare, Daniel's fear, cardiology advice, cap
       },
       {
         "id": "s3",
-        "name": "disability discrimination/housing risk",
+        "name": "disability discrimination/housing risk authority required for supported accommodation placement",
         "category": "ethics",
         "severity": "critical",
         "clueInStem": "Can we refuse because he smokes cannabis sometimes?",
@@ -17449,7 +17449,7 @@ I would document the adverse-effect scare, Daniel's fear, cardiology advice, cap
       },
       {
         "id": "s4",
-        "name": "functional vulnerability",
+        "name": "functional vulnerability at foreseeable risk requiring independent safety assessment",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "He depends on nurses for everything.",
@@ -17560,7 +17560,7 @@ I would document stability, functional assessment, institutionalisation, cannabi
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"Discharge her; she is abusing the service\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Negative test result accepted as grounds to discharge before clinical formulation",
         "category": "system_pressure",
         "severity": "critical",
         "clueInStem": "Discharge her; she is abusing the service.",
@@ -17727,7 +17727,7 @@ I would document the complaint pattern, overdose-after-response collateral, inst
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"He has been good; remove conditions\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Premature condition removal before formulating forensic relapse risk",
         "category": "system_pressure",
         "severity": "critical",
         "clueInStem": "He has been good; remove conditions.",
@@ -17746,7 +17746,7 @@ I would document the complaint pattern, overdose-after-response collateral, inst
       },
       {
         "id": "s2",
-        "name": "recovery versus forensic risk",
+        "name": "recovery versus forensic risk as the specific clinical driver of this presentation",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "I need a normal life or I will stop trying.",
@@ -17764,7 +17764,7 @@ I would document the complaint pattern, overdose-after-response collateral, inst
       },
       {
         "id": "s3",
-        "name": "conditional discharge governance",
+        "name": "conditional discharge governance framework applying in this specific clinical scenario",
         "category": "ethics",
         "severity": "critical",
         "clueInStem": "What level of supervision is proportionate?",
@@ -17783,7 +17783,7 @@ I would document the complaint pattern, overdose-after-response collateral, inst
       },
       {
         "id": "s4",
-        "name": "victim safety",
+        "name": "Identified victim at immediate risk from discharged patient",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "I want to know if he works near my street.",
@@ -17894,7 +17894,7 @@ I would document the recovery rationale, risk formulation, victim notification c
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"We cannot accept until she is eighteen\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Age boundary invoked before formulating transition and eating disorder risk",
         "category": "system_pressure",
         "severity": "critical",
         "clueInStem": "We cannot accept until she is eighteen.",
@@ -17931,7 +17931,7 @@ I would document the recovery rationale, risk formulation, victim notification c
       },
       {
         "id": "s3",
-        "name": "governance of transition",
+        "name": "governance of transition obligations for service transfer of high-risk patient",
         "category": "ethics",
         "severity": "critical",
         "clueInStem": "Who is responsible if she deteriorates?",
@@ -17950,7 +17950,7 @@ I would document the recovery rationale, risk formulation, victim notification c
       },
       {
         "id": "s4",
-        "name": "carer burden",
+        "name": "Carer at risk from burnout and inadequate family support planning",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "I have been the service coordinator for years.",
@@ -18061,7 +18061,7 @@ I would document the transition risks, medical instability, autism accommodation
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"Social prescribing is safer than medication\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Social prescribing preference defers formulation of late-life depression risk",
         "category": "system_pressure",
         "severity": "critical",
         "clueInStem": "Social prescribing is safer than medication.",
@@ -18098,7 +18098,7 @@ I would document the transition risks, medical instability, autism accommodation
       },
       {
         "id": "s3",
-        "name": "capacity and self-neglect",
+        "name": "capacity and self-neglect threshold determining lawfulness of treatment intervention",
         "category": "ethics",
         "severity": "critical",
         "clueInStem": "Can he refuse all treatment if he is losing weight?",
@@ -18117,7 +18117,7 @@ I would document the transition risks, medical instability, autism accommodation
       },
       {
         "id": "s4",
-        "name": "suicide warning collateral",
+        "name": "suicide warning collateral at foreseeable risk requiring independent safety assessment",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "He gives away tools and says he is done.",
@@ -18228,7 +18228,7 @@ I would document suicide collateral, capacity/self-neglect assessment, alcohol a
     "signals": [
       {
         "id": "s1",
-        "name": "Accepting \"He looks physically fine, so supports are reduced\" as grounds to proceed without formulating the core clinical risk",
+        "name": "Physical appearance accepted before formulating neurocognitive impairment risk",
         "category": "system_pressure",
         "severity": "critical",
         "clueInStem": "He looks physically fine, so supports are reduced.",
