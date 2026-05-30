@@ -6,7 +6,7 @@ export const CS_STEMS: QuizStem[] = [
     questionNumber: "MEQ-079",
     topic: "cultural_safety",
     difficulty: "consultant",
-    title: "Aboriginal woman refusing ED mental health assessment",
+    title: "Aboriginal Woman Refusing ED Mental Health Assessment",
     candidateRole: "Consultant psychiatrist, rural emergency psychiatry service",
     setting: "Rural emergency department after police attendance",
     stem: `You are the consultant psychiatrist on call for a rural emergency department.
@@ -18,88 +18,33 @@ Marlee has a history of depression, family violence and previous child protectio
 Her aunt is in the waiting room and says Marlee has not slept for three nights and has been drinking more since a recent family funeral. The ED nurse asks whether Marlee can be assessed involuntarily because she is refusing to engage.`,
     totalMarks: 22,
     signals: [
-      {
-        id: "s1",
-        name: "Cultural mistrust and service trauma",
-        category: "cultural_safety",
-        severity: "critical",
-        clueInStem: "You mob only come when police drag us in.",
-        whyItMatters: "Mistrust linked to police and services may escalate refusal and distress if approached coercively.",
-        modelWording: "Use culturally safe, trauma-informed engagement recognising mistrust of police and health systems before escalating coercion.",
-        keywords: ["cultural safety", "Aboriginal health", "police involvement", "mistrust", "trauma-informed care", "engagement"],
-      },
-      {
-        id: "s2",
-        name: "Threat linked to child removal fear",
-        category: "risk_others",
-        severity: "critical",
-        clueInStem: "If they try to take my babies, I'll fight anyone.",
-        whyItMatters: "Threats linked to child protection fear create risk to staff, police, family and children if poorly managed.",
-        modelWording: "Assess risk to others in the context of perceived child removal, fear, intoxication and sleep deprivation.",
-        keywords: ["risk to others", "child removal fear", "family violence", "staff safety", "dynamic risk", "threats"],
-      },
-      {
-        id: "s3",
-        name: "Children as vulnerable dependants",
-        category: "child_protection",
-        severity: "important",
-        clueInStem: "Her two children are currently with her aunt.",
-        whyItMatters: "The children's safety and care arrangements must be clarified without assuming removal is required.",
-        modelWording: "Clarify immediate safety and care arrangements for the children while avoiding unnecessarily punitive child protection framing.",
-        keywords: ["child protection", "children safety", "kinship care", "aunt", "family context", "safeguarding"],
-      },
-      {
-        id: "s4",
-        name: "Trauma history shaping presentation",
-        category: "trauma",
-        severity: "important",
-        clueInStem: "Hospitals took my sister away and she never came back right.",
-        whyItMatters: "Historical and personal trauma may explain fear of assessment and need for careful communication.",
-        modelWording: "Acknowledge trauma associated with hospitals and family separation, and avoid re-traumatising assessment practices.",
-        keywords: ["trauma history", "hospital mistrust", "family separation", "re-traumatisation", "distress", "engagement"],
-      },
-      {
-        id: "s5",
-        name: "Collateral from trusted family",
-        category: "collateral",
-        severity: "important",
-        clueInStem: "has not slept for three nights",
-        whyItMatters: "Collateral suggests possible mood, trauma or substance-related deterioration not captured by current calmness.",
-        modelWording: "Use aunt's collateral to assess sleep loss, alcohol use, recent bereavement and baseline functioning.",
-        keywords: ["collateral", "aunt", "sleep deprivation", "bereavement", "alcohol", "baseline"],
-      },
-      {
-        id: "s6",
-        name: "Substance use as dynamic risk factor",
-        category: "substance_use",
-        severity: "optional",
-        clueInStem: "has been drinking more",
-        whyItMatters: "Alcohol may increase impulsivity, disinhibition and risk during an acute family crisis.",
-        modelWording: "Assess intoxication and recent alcohol escalation because it may increase impulsivity and impair judgement.",
-        keywords: ["alcohol", "intoxication", "disinhibition", "impulsivity", "dynamic risk", "bereavement"],
-      },
+      { id: "s1", name: "Police-led presentation has activated cultural mistrust", category: "cultural_safety", severity: "critical", clueInStem: "Marlee refuses to speak with the mental health nurse and says, \"You mob only come when police drag us in.\"", whyItMatters: "Missing this signal means the candidate has treated refusal as non-compliance rather than recognising mistrust created by police-led contact with services.", modelWording: "Acknowledge police-related mistrust and use culturally safe engagement because coercive entry to care may intensify Marlee's distress.", keywords: ["Aboriginal health", "police", "mistrust", "cultural safety", "engagement", "refusal"] },
+      { id: "s2", name: "Fear of child removal is driving threat and distress", category: "risk_others", severity: "critical", clueInStem: "She denies suicidal intent but says, \"If they try to take my babies, I'll fight anyone.\"", whyItMatters: "Missing this signal means the candidate has accepted denial of suicide risk while overlooking a threat linked to perceived child removal.", modelWording: "Assess risk to others in the context of child-removal fear because the threat is conditional on perceived loss of her children.", keywords: ["child removal", "risk to others", "threat", "family violence", "staff safety", "dynamic risk"] },
+      { id: "s3", name: "Children's kinship care needs immediate clarification", category: "child_protection", severity: "important", clueInStem: "Her two children are currently with her aunt.", whyItMatters: "Missing this signal means the candidate has not clarified whether the children are safe tonight while avoiding unnecessary statutory escalation.", modelWording: "Clarify the children's immediate safety and kinship care arrangement because safeguarding should not automatically mean removal.", keywords: ["children", "aunt", "kinship care", "child protection", "safeguarding", "family"] },
+      { id: "s4", name: "Institutional trauma is shaping hospital refusal", category: "trauma", severity: "important", clueInStem: "She says, \"Hospitals took my sister away and she never came back right.\"", whyItMatters: "Missing this signal means the candidate has dismissed a trauma narrative that explains fear of hospital assessment and coercion.", modelWording: "Acknowledge hospital-related trauma because dismissing Marlee's fear may re-traumatise her and worsen engagement.", keywords: ["trauma", "hospital mistrust", "family separation", "re-traumatisation", "engagement"] },
+      { id: "s5", name: "Depression, family violence and child protection history contextualise risk", category: "diagnosis_formulation", severity: "important", clueInStem: "Marlee has a history of depression, family violence and previous child protection involvement.", whyItMatters: "Missing this signal means the candidate has not formulated the current crisis in relation to known mood, violence and child-protection vulnerabilities.", modelWording: "Integrate depression, family violence and prior child protection involvement because they explain both current risk and service mistrust.", keywords: ["depression", "family violence", "child protection", "formulation", "trauma", "risk"] },
+      { id: "s6", name: "Acute home disturbance requires safety assessment", category: "immediate_safety", severity: "important", clueInStem: "Police say she was distressed, holding a broken picture frame and yelling that \"everyone is coming to take my kids again.\"", whyItMatters: "Missing this signal means the candidate has ignored the acute behavioural disturbance and possible access to sharp objects or weapons.", modelWording: "Assess immediate safety from the home disturbance because distress, broken glass and child-removal beliefs may escalate quickly.", keywords: ["broken picture frame", "distress", "home disturbance", "weapons", "safety", "police"] },
+      { id: "s7", name: "Aunt's collateral suggests dynamic deterioration", category: "collateral", severity: "important", clueInStem: "Her aunt is in the waiting room and says Marlee has not slept for three nights and has been drinking more since a recent family funeral.", whyItMatters: "Missing this signal means the candidate has not used trusted family collateral showing sleep loss, alcohol escalation and grief-related deterioration.", modelWording: "Use the aunt's collateral to assess sleep deprivation, alcohol use, bereavement and baseline functioning.", keywords: ["aunt", "collateral", "sleep deprivation", "alcohol", "bereavement", "baseline"] },
+      { id: "s8", name: "Current calmness does not remove absconding or relapse risk", category: "disposition", severity: "important", clueInStem: "The police want to leave because she is now calmer, but ED staff are worried she may abscond.", whyItMatters: "Missing this signal means the candidate has allowed transient calmness and police availability to replace a clinical risk formulation.", modelWording: "Do not rely on current calmness alone because absconding risk and unresolved dynamic factors still require a safe plan.", keywords: ["calmer", "abscond", "police", "ED", "risk formulation", "disposition"] },
+      { id: "s9", name: "Involuntary assessment should follow least restrictive engagement", category: "mental_health_act", severity: "important", clueInStem: "The ED nurse asks whether Marlee can be assessed involuntarily because she is refusing to engage.", whyItMatters: "Missing this signal means the candidate has moved directly from refusal to coercion without considering culturally safe engagement and lawful criteria.", modelWording: "Consider involuntary assessment only if lawful criteria are met after least restrictive culturally safe engagement has been attempted where safe.", keywords: ["involuntary assessment", "least restrictive", "Mental Health Act", "refusal", "cultural safety", "legal criteria"] },
     ],
-    priorityOrder: {
-      urgent: ["s1", "s2"],
-      secondary: ["s3", "s4", "s5"],
-      lowYield: ["s6"],
-    },
-    modelAnswer: `Marlee's refusal of assessment must be understood in the context of cultural mistrust, police involvement, trauma and child-protection fear, rather than treated simply as non-compliance. Her statement, "You mob only come when police drag us in," is a direct signal that the route of presentation has already activated mistrust and shame. If the team responds by immediately escalating coercion without culturally safe engagement, it may intensify the very fear driving her distress. I would slow the interaction where safe, introduce myself clearly, acknowledge that being brought by police can feel threatening, and seek Aboriginal Liaison or Aboriginal health support as soon as possible even if not immediately on site.
+    priorityOrder: { urgent: ["s1", "s2"], secondary: ["s3", "s4", "s5", "s6", "s7", "s8", "s9"], lowYield: [] },
+    modelAnswer: `Marlee's refusal of assessment should be understood through cultural safety, trauma and risk rather than treated as simple non-compliance. She is an Aboriginal woman brought by police, and says, "You mob only come when police drag us in." I would acknowledge that the way she arrived may feel shaming and threatening, introduce myself clearly, reduce crowding, seek Aboriginal liaison or Aboriginal health support, and try to build engagement before escalating coercion.
 
-At the same time, cultural safety does not mean ignoring risk. Marlee says, "If they try to take my babies, I'll fight anyone," and this has to be assessed as a risk-to-others statement in the context of fear of child removal, sleep deprivation, alcohol escalation and recent disturbance at home. I would ensure staff safety, reduce stimulation, avoid crowding her with police or security unless necessary, and assess whether she has access to weapons, whether threats are directed at specific people, and whether intoxication or psychosis is present. The consultant task is to reduce coercion while still preventing foreseeable harm.
+Cultural safety does not mean ignoring risk. Marlee was distressed at home, holding a broken picture frame and yelling that "everyone is coming to take my kids again." She also says, "If they try to take my babies, I'll fight anyone." I would assess immediate safety, access to weapons or broken glass, intoxication, psychosis, mood symptoms, family violence risk and whether threats are directed at particular people or agencies.
 
-The children are central, not peripheral. The stem says "Her two children are currently with her aunt." I would clarify immediately whether the aunt is a safe and willing carer tonight, whether the children witnessed violence or distress, whether there are injuries or neglect concerns, and whether child protection notification is required. I would explain to Marlee that checking the children's safety does not automatically mean removal, and I would explore kinship and family supports before assuming statutory intervention is the only solution. This is the balance between safeguarding and avoiding unnecessary re-traumatisation.
+The children's safety must be clarified without automatically framing this as removal. The children are currently with her aunt, so I would check whether the aunt is safe, willing and able to care for them tonight, whether the children witnessed violence or were harmed, and whether child protection consultation is required. I would explain to Marlee that checking the children's safety is not the same as taking them away.
 
-Her statement, "Hospitals took my sister away and she never came back right," suggests personal or family trauma associated with institutions. I would not challenge that belief directly or dismiss it as paranoia. I would acknowledge that hospitals and services can feel unsafe, ask what would help her feel safer, and avoid unnecessary physical control. The aunt's collateral that Marlee "has not slept for three nights" and "has been drinking more" after a recent funeral is clinically significant. It raises a differential including grief reaction, trauma activation, substance-related disturbance, mood episode, psychosis or acute stress response.
+Marlee's history of depression, family violence and previous child protection involvement, and her statement that hospitals took her sister away, help explain the current crisis and service mistrust. Her aunt's collateral that she has not slept for three nights and has been drinking more since a recent funeral suggests grief, sleep deprivation and alcohol-related escalation. These are clinical data, not background colour.
 
-Disposition should not be based only on the fact that she is calmer now or that police want to leave. If she can engage voluntarily with culturally safe supports and a safe family plan, that may be least restrictive. If she remains acutely disturbed, intoxicated, psychotic, threatening or unable to collaborate with safety, then involuntary assessment may be required under the relevant law. I would make that decision transparently, explaining the reason as safety rather than punishment. My documentation would record cultural-safety steps, Aboriginal support attempts, child-safety arrangements, collateral from the aunt, alcohol and sleep factors, risk formulation, and why the final plan was the least restrictive safe option.`,
+The police wanting to leave because she is calmer should not determine disposition. If she can engage voluntarily with culturally safe supports, her aunt, a child-safety plan and follow-up, that may be the least restrictive option. If she remains acutely disturbed, intoxicated, threatening, psychotic, unable to collaborate or likely to abscond into serious risk, involuntary assessment may be required under the relevant law. I would document the cultural-safety steps attempted, collateral, child-safety arrangements, risk formulation, legal basis and why the final plan is the least restrictive safe option.`,
   },
   {
     id: "CS-002",
     questionNumber: "MEQ-080",
     topic: "cultural_safety",
     difficulty: "consultant",
-    title: "Māori man admitted involuntarily with cultural formulation needs",
+    title: "Māori Man Admitted Involuntarily with Cultural Formulation Needs",
     candidateRole: "Consultant psychiatrist, acute inpatient unit",
     setting: "Involuntary admission to metropolitan inpatient unit in Aotearoa New Zealand",
     stem: `You are the consultant psychiatrist reviewing Wiremu, a 27-year-old Māori man admitted involuntarily after walking onto a motorway saying he was following messages from his tūpuna.
@@ -109,90 +54,32 @@ Wiremu says, "This is not sickness; my ancestors are calling me." He refuses ant
 Nursing staff are concerned because Wiremu is pacing, chanting at night and not eating hospital food. His mother says, "He needs help, but not like this." The team asks whether his beliefs are psychosis, cultural experience or both, and whether involuntary treatment should continue.`,
     totalMarks: 22,
     signals: [
-      {
-        id: "s1",
-        name: "Cultural explanation versus psychosis",
-        category: "diagnosis_formulation",
-        severity: "critical",
-        clueInStem: "This is not sickness; my ancestors are calling me.",
-        whyItMatters: "Misclassifying cultural/spiritual experience as psychosis can cause harm, while missing psychosis can increase risk.",
-        modelWording: "Formulate whether ancestral experiences are culturally congruent, psychotic, or both by involving whānau and cultural expertise.",
-        keywords: ["cultural formulation", "tūpuna", "psychosis", "spiritual experience", "whānau", "Māori mental health"],
-      },
-      {
-        id: "s2",
-        name: "Least restrictive involuntary care",
-        category: "mental_health_act",
-        severity: "critical",
-        clueInStem: "admitted involuntarily",
-        whyItMatters: "Ongoing compulsory care must remain justified, culturally safe and least restrictive.",
-        modelWording: "Review whether involuntary treatment remains necessary and least restrictive after culturally informed assessment.",
-        keywords: ["Mental Health Act", "least restrictive", "involuntary treatment", "culturally safe care", "legal criteria"],
-      },
-      {
-        id: "s3",
-        name: "Whānau involvement",
-        category: "family_carer",
-        severity: "important",
-        clueInStem: "His whānau arrive and ask for a kaumātua and Māori health worker to be involved.",
-        whyItMatters: "Whānau participation may improve engagement, formulation and safety planning.",
-        modelWording: "Involve whānau, kaumātua and Māori health worker to support engagement, cultural formulation and care planning.",
-        keywords: ["whānau", "kaumātua", "Māori health worker", "family involvement", "engagement", "care planning"],
-      },
-      {
-        id: "s4",
-        name: "Medication refusal linked to cultural disconnection",
-        category: "consent_refusal",
-        severity: "important",
-        clueInStem: "cutting me off from my whakapapa.",
-        whyItMatters: "Refusal may reflect fear of cultural disconnection as well as illness-related beliefs.",
-        modelWording: "Explore medication refusal in relation to identity, whakapapa, side effects and illness beliefs rather than treating it as simple non-compliance.",
-        keywords: ["medication refusal", "whakapapa", "identity", "consent", "engagement", "shared decision-making"],
-      },
-      {
-        id: "s5",
-        name: "Failure to obtain whānau collateral",
-        category: "collateral",
-        severity: "important",
-        clueInStem: "did not speak with whānau.",
-        whyItMatters: "Without whānau collateral, diagnosis, risk and cultural meaning may be misformulated.",
-        modelWording: "Obtain whānau collateral about baseline beliefs, recent change, risk, substance use and culturally meaningful supports.",
-        keywords: ["collateral", "whānau", "baseline", "risk", "substance use", "cultural meaning"],
-      },
-      {
-        id: "s6",
-        name: "Physical health and nutrition concern",
-        category: "physical_health",
-        severity: "optional",
-        clueInStem: "not eating hospital food.",
-        whyItMatters: "Poor intake may worsen mental state and require culturally appropriate food/support.",
-        modelWording: "Assess nutrition, hydration and reasons for refusing hospital food, including cultural or paranoid concerns.",
-        keywords: ["nutrition", "hydration", "hospital food", "physical health", "cultural needs"],
-      },
+      { id: "s1", name: "Motorway behaviour creates serious safety concern", category: "immediate_safety", severity: "critical", clueInStem: "You are the consultant psychiatrist reviewing Wiremu, a 27-year-old Māori man admitted involuntarily after walking onto a motorway saying he was following messages from his tūpuna.", whyItMatters: "Missing this signal means the candidate has focused on culture alone while underestimating the serious safety behaviour that led to admission.", modelWording: "Reassess risk from the motorway incident because culturally informed care must still address serious foreseeable harm.", keywords: ["motorway", "immediate safety", "risk", "tūpuna", "involuntary admission", "serious harm"] },
+      { id: "s2", name: "Ancestral experience requires cultural formulation before diagnosis", category: "diagnosis_formulation", severity: "critical", clueInStem: "Wiremu says, \"This is not sickness; my ancestors are calling me.\"", whyItMatters: "Missing this signal means the candidate has either pathologised a Māori spiritual experience or missed possible psychosis without proper cultural formulation.", modelWording: "Formulate whether the ancestral experience is culturally congruent, psychotic or both by involving whānau and Māori cultural expertise.", keywords: ["cultural formulation", "tūpuna", "psychosis", "spiritual experience", "Māori mental health", "diagnosis"] },
+      { id: "s3", name: "Medication refusal is linked to whakapapa and identity", category: "consent_refusal", severity: "important", clueInStem: "He refuses antipsychotic medication and says staff are \"cutting me off from my whakapapa.\"", whyItMatters: "Missing this signal means the candidate has treated refusal as poor insight rather than exploring fear of cultural disconnection.", modelWording: "Explore medication refusal in relation to whakapapa, identity, side effects and illness beliefs before assuming simple non-adherence.", keywords: ["medication refusal", "whakapapa", "identity", "antipsychotic", "engagement", "consent"] },
+      { id: "s4", name: "Whānau and kaumātua involvement is clinically necessary", category: "family_carer", severity: "important", clueInStem: "His whānau arrive and ask for a kaumātua and Māori health worker to be involved.", whyItMatters: "Missing this signal means the candidate has treated culturally grounded support as optional rather than central to assessment and care planning.", modelWording: "Involve whānau, a kaumātua and a Māori health worker because they may improve engagement, formulation and safety planning.", keywords: ["whānau", "kaumātua", "Māori health worker", "family", "engagement", "care planning"] },
+      { id: "s5", name: "Registrar's formulation is incomplete without whānau collateral", category: "collateral", severity: "important", clueInStem: "The night registrar documented \"poor insight, delusional, refusing treatment\" but did not speak with whānau.", whyItMatters: "Missing this signal means the candidate has accepted a deficit-based formulation without cultural collateral about baseline, meaning and risk.", modelWording: "Obtain whānau collateral because diagnosis, risk and cultural meaning cannot be adequately assessed from a deficit-based note alone.", keywords: ["registrar", "whānau collateral", "poor insight", "delusional", "cultural formulation", "baseline"] },
+      { id: "s6", name: "Pacing, chanting and poor intake require practical ward response", category: "physical_health", severity: "important", clueInStem: "Nursing staff are concerned because Wiremu is pacing, chanting at night and not eating hospital food.", whyItMatters: "Missing this signal means the candidate has not addressed sleep, nutrition, hydration and ward distress while debating diagnosis.", modelWording: "Assess sleep, hydration, nutrition and reasons for not eating hospital food because practical ward care may reduce distress.", keywords: ["pacing", "chanting", "not eating", "nutrition", "hydration", "ward care"] },
+      { id: "s7", name: "Mother's concern supports help but challenges coercive form", category: "cultural_safety", severity: "important", clueInStem: "His mother says, \"He needs help, but not like this.\"", whyItMatters: "Missing this signal means the candidate has missed the family's nuanced position that help is needed but current care feels culturally unsafe or overly coercive.", modelWording: "Use the mother's feedback to redesign care because whānau support for help may improve a less coercive plan.", keywords: ["mother", "not like this", "whānau", "cultural safety", "coercion", "engagement"] },
+      { id: "s8", name: "Ongoing involuntary treatment requires culturally informed review", category: "mental_health_act", severity: "critical", clueInStem: "The team asks whether his beliefs are psychosis, cultural experience or both, and whether involuntary treatment should continue.", whyItMatters: "Missing this signal means the candidate has either continued coercion by inertia or removed it without reassessing risk and legal criteria.", modelWording: "Review involuntary treatment after cultural formulation because compulsion must remain necessary, lawful and least restrictive.", keywords: ["involuntary treatment", "least restrictive", "Mental Health Act", "cultural formulation", "legal criteria", "risk"] },
     ],
-    priorityOrder: {
-      urgent: ["s1", "s2"],
-      secondary: ["s3", "s4", "s5"],
-      lowYield: ["s6"],
-    },
-    modelAnswer: `Wiremu's presentation requires a cultural formulation before the team can safely conclude that all of his experiences are psychotic symptoms. His statement, "This is not sickness; my ancestors are calling me," cannot be interpreted outside cultural context. A consultant-level response is not to decide that ancestral experience is either entirely cultural or entirely delusional from a registrar note. It is to ask whether the experience is culturally congruent, whether the intensity and behavioural consequences are new, whether it is shared or understood by whānau, and whether it is associated with risk, disorganisation, mood disturbance or impaired functioning.
+    priorityOrder: { urgent: ["s1", "s2", "s8"], secondary: ["s3", "s4", "s5", "s6", "s7"], lowYield: [] },
+    modelAnswer: `Wiremu's presentation should not be reduced to either psychosis or culture without proper formulation. He walked onto a motorway saying he was following messages from his tūpuna, which created serious safety concern and justified urgent assessment. At the same time, his statement, "This is not sickness; my ancestors are calling me," requires cultural interpretation before being labelled delusional.
 
-The involuntary admission remains a live legal issue. The stem says he was "admitted involuntarily" after walking onto a motorway, so there was serious safety concern. However, ongoing compulsory care must be reviewed in light of cultural assessment, current risk and least restrictive alternatives. I would assess whether he continues to meet Mental Health Act criteria, whether he can engage voluntarily with whānau and Māori health support, and whether treatment can be delivered in a less coercive way. The principle is not to remove involuntary status reflexively because culture is involved, nor to maintain it reflexively because the behaviour was risky.
+I would involve whānau, a kaumātua and a Māori health worker urgently because they are not optional extras. They can help clarify whether the ancestral experience is culturally congruent, whether the intensity or behaviour is new, whether there are substance or mood factors, and how care can be made safer and more acceptable. The registrar's note of "poor insight, delusional, refusing treatment" without speaking to whānau is an incomplete and culturally unsafe formulation.
 
-The whānau request for "a kaumātua and Māori health worker to be involved" is clinically important, not an optional courtesy. I would facilitate that involvement urgently because it may improve engagement, clarify cultural meaning, reduce coercion and support risk planning. The night registrar's note of "poor insight, delusional, refusing treatment" without speaking to whānau is an incomplete formulation. I would supervise the registrar that cultural collateral is part of the diagnostic and risk assessment, especially in Māori mental health.
+Medication refusal also needs exploration. Wiremu says antipsychotic medication is "cutting me off from my whakapapa." I would ask what he fears the medication will do, whether he has side effects, whether any part of the experience is frightening or impairing, and whether a whānau-supported conversation can help treatment feel less like cultural disconnection. If medication remains necessary, it should still be delivered in the least coercive way possible.
 
-Wiremu's medication refusal also needs exploration. He says staff are "cutting me off from my whakapapa." If medication or admission is experienced as severing connection to identity, whānau and ancestry, then simply insisting on antipsychotics may worsen mistrust and resistance. I would ask what he fears the medication will do, whether he has had side effects, whether he sees any part of the experience as distressing, and whether a whānau-supported discussion can help. If medication is necessary because risk remains high, I would still present it in a culturally respectful and least restrictive way.
+The ward-care concerns require action while the formulation is developed. Pacing, chanting at night and not eating hospital food may reflect psychosis, distress, cultural dislocation, unfamiliar food, paranoia, sleep disruption or environmental stress. I would assess hydration, nutrition, sleep, physical health and whether family food or cultural support can reduce distress.
 
-The physical and ward-care details matter. He is pacing, chanting at night and "not eating hospital food." That may reflect psychosis, distress, cultural discomfort, paranoia about food, sleep-wake disturbance or unfamiliar environment. I would assess hydration, nutrition, sleep, physical health and whether culturally acceptable food or family support can reduce distress. His mother's statement, "He needs help, but not like this," captures the central tension: the family is not denying need, but they are objecting to the form of care.
-
-My plan would be to review Wiremu with Māori health support, whānau and a culturally informed formulation; reassess risk from the motorway incident and current mental state; consider voluntary or less restrictive options if safe; and if involuntary treatment remains necessary, document exactly why, how culture was considered, and how coercion will be minimised. The model answer should show that cultural safety is not separate from risk and law; it is part of making the diagnostic, legal and disposition decision valid.`,
+The ongoing involuntary status must be reviewed after cultural formulation, current risk assessment and whānau involvement. His mother says, "He needs help, but not like this," which suggests the family is not denying the need for care but is concerned about how care is being delivered. If risk can be managed voluntarily with Māori health support and whānau involvement, that is preferable. If serious risk persists and legal criteria are met, involuntary treatment may continue, but the reasons and the steps to reduce coercion must be clearly documented.`,
   },
   {
     id: "CS-003",
     questionNumber: "MEQ-081",
     topic: "cultural_safety",
     difficulty: "consultant",
-    title: "Afghan refugee refusing medical treatment in CL psychiatry",
+    title: "Afghan Refugee Refusing Medical Treatment in CL Psychiatry",
     candidateRole: "Consultant psychiatrist, consultation-liaison psychiatry service",
     setting: "Metropolitan medical ward",
     stem: `You are the consultant psychiatrist asked to review Ahmad, a 33-year-old Afghan refugee admitted to the medical ward with suspected infective endocarditis related to intravenous heroin use.
@@ -202,82 +89,24 @@ Ahmad initially agreed to investigations but now refuses blood cultures, echocar
 His cousin says Ahmad was detained for months before arriving in Australia and avoids government offices. Ahmad says, "Maybe Allah is punishing me; medicine cannot change this." The infectious diseases team says delayed antibiotics may be life-threatening, and the ward team asks whether he lacks capacity or is simply refusing treatment.`,
     totalMarks: 22,
     signals: [
-      {
-        id: "s1",
-        name: "Interpreter failure affecting consent and capacity assessment",
-        category: "cultural_safety",
-        severity: "critical",
-        clueInStem: "professional interpreters take too long.",
-        whyItMatters: "Capacity and consent cannot be reliably assessed through an ad hoc family interpreter in a complex refusal.",
-        modelWording: "Use a professional interpreter before assessing capacity, consent or refusal because language barriers may invalidate the assessment.",
-        keywords: ["professional interpreter", "capacity assessment", "language barrier", "consent", "ad hoc interpreter", "refugee"],
-      },
-      {
-        id: "s2",
-        name: "Trauma-related mistrust of authorities",
-        category: "trauma",
-        severity: "critical",
-        clueInStem: "hospital makes papers for immigration.",
-        whyItMatters: "Refusal may be driven by trauma and fear of authority rather than psychosis or incapacity alone.",
-        modelWording: "Formulate treatment refusal in the context of refugee trauma, detention and fear of immigration consequences.",
-        keywords: ["refugee trauma", "detention", "mistrust", "immigration fear", "authority", "treatment refusal"],
-      },
-      {
-        id: "s3",
-        name: "Life-threatening medical illness",
-        category: "physical_health",
-        severity: "important",
-        clueInStem: "delayed antibiotics may be life-threatening",
-        whyItMatters: "Urgency determines how long engagement can continue before emergency treatment pathways are considered.",
-        modelWording: "Clarify medical urgency and consequences of delayed antibiotics with infectious diseases before deciding legal options.",
-        keywords: ["infective endocarditis", "antibiotics", "medical urgency", "life-threatening", "infectious diseases"],
-      },
-      {
-        id: "s4",
-        name: "Cultural explanatory model",
-        category: "diagnosis_formulation",
-        severity: "important",
-        clueInStem: "Maybe Allah is punishing me; medicine cannot change this.",
-        whyItMatters: "Spiritual explanatory models may affect acceptance of treatment and require respectful exploration.",
-        modelWording: "Explore Ahmad's religious explanatory model and integrate spiritual supports if acceptable while explaining biomedical treatment.",
-        keywords: ["cultural explanatory model", "spiritual belief", "Islam", "illness meaning", "engagement", "psychoeducation"],
-      },
-      {
-        id: "s5",
-        name: "Security presence may re-traumatise",
-        category: "immediate_safety",
-        severity: "important",
-        clueInStem: "visibly distressed when security staff stand near the door.",
-        whyItMatters: "Security may worsen trauma response and refusal unless safety needs justify their presence.",
-        modelWording: "Minimise visible coercion and security presence unless required for immediate safety, using trauma-informed engagement.",
-        keywords: ["security", "trauma-informed care", "re-traumatisation", "coercion", "engagement", "safety"],
-      },
-      {
-        id: "s6",
-        name: "Substance use and stigma",
-        category: "substance_use",
-        severity: "optional",
-        clueInStem: "intravenous heroin use.",
-        whyItMatters: "Stigma and withdrawal may contribute to distress, absconding risk and refusal.",
-        modelWording: "Assess opioid withdrawal, cravings and stigma because these may worsen refusal and engagement failure.",
-        keywords: ["heroin use", "opioid withdrawal", "stigma", "craving", "absconding", "harm reduction"],
-      },
+      { id: "s1", name: "Endocarditis and heroin use require medical and addiction formulation", category: "physical_health", severity: "critical", clueInStem: "You are the consultant psychiatrist asked to review Ahmad, a 33-year-old Afghan refugee admitted to the medical ward with suspected infective endocarditis related to intravenous heroin use.", whyItMatters: "Missing this signal means the candidate has framed the case only as cultural refusal while overlooking life-threatening infection and opioid-related needs.", modelWording: "Integrate medical and addiction formulation because suspected infective endocarditis and intravenous heroin use require urgent coordinated care.", keywords: ["endocarditis", "intravenous heroin", "addiction", "medical ward", "physical health", "opioid use"] },
+      { id: "s2", name: "Specific treatment refusals need decision-specific capacity assessment", category: "capacity", severity: "critical", clueInStem: "Ahmad initially agreed to investigations but now refuses blood cultures, echocardiography and antibiotics.", whyItMatters: "Missing this signal means the candidate has treated capacity globally rather than assessing refusal of specific investigations and antibiotics.", modelWording: "Assess capacity decision-specifically for blood cultures, echocardiography and antibiotics because each refusal has different consequences.", keywords: ["capacity", "blood cultures", "echocardiography", "antibiotics", "decision-specific", "refusal"] },
+      { id: "s3", name: "Immigration fear may be trauma-based rather than incapacity", category: "trauma", severity: "critical", clueInStem: "He says in limited English, \"No more tests; hospital makes papers for immigration.\"", whyItMatters: "Missing this signal means the candidate has mistaken trauma-related mistrust of institutions for simple incapacity or wilful refusal.", modelWording: "Formulate immigration fear in the context of refugee trauma because mistrust may be understandable and modifiable through explanation.", keywords: ["immigration", "refugee trauma", "mistrust", "detention", "hospital papers", "refusal"] },
+      { id: "s4", name: "Family interpreting makes consent and capacity unsafe", category: "cultural_safety", severity: "critical", clueInStem: "The medical registrar has been using Ahmad's cousin to interpret because \"professional interpreters take too long.\"", whyItMatters: "Missing this signal means the candidate has accepted a high-stakes refusal assessment without reliable professional language support.", modelWording: "Use a professional interpreter urgently because cousin interpretation is unsafe for capacity, consent and trauma-sensitive explanation.", keywords: ["professional interpreter", "cousin", "language", "capacity", "consent", "cultural safety"] },
+      { id: "s5", name: "Security presence may re-traumatise and worsen refusal", category: "immediate_safety", severity: "important", clueInStem: "Ahmad becomes visibly distressed when security staff stand near the door.", whyItMatters: "Missing this signal means the candidate has not recognised that visible coercion may worsen trauma response and refusal.", modelWording: "Minimise visible security where safe because doorway security may re-traumatise Ahmad and undermine engagement.", keywords: ["security", "door", "distress", "trauma-informed", "coercion", "engagement"] },
+      { id: "s6", name: "Detention history explains avoidance of authority", category: "collateral", severity: "important", clueInStem: "His cousin says Ahmad was detained for months before arriving in Australia and avoids government offices.", whyItMatters: "Missing this signal means the candidate has ignored collateral that makes fear of hospital paperwork and authority understandable.", modelWording: "Use detention history to guide engagement because past detention may explain avoidance of officials and hospital documentation.", keywords: ["detention", "government offices", "collateral", "refugee", "authority", "avoidance"] },
+      { id: "s7", name: "Spiritual explanatory model requires respectful exploration", category: "diagnosis_formulation", severity: "important", clueInStem: "Ahmad says, \"Maybe Allah is punishing me; medicine cannot change this.\"", whyItMatters: "Missing this signal means the candidate has either dismissed religious meaning or accepted fatalism without assessing understanding and treatability.", modelWording: "Explore Ahmad's religious explanatory model respectfully while explaining how medical treatment can sit alongside faith.", keywords: ["Allah", "spiritual belief", "Islam", "explanatory model", "fatalism", "engagement"] },
+      { id: "s8", name: "Life-threatening delay limits time for engagement", category: "consent_refusal", severity: "critical", clueInStem: "The infectious diseases team says delayed antibiotics may be life-threatening, and the ward team asks whether he lacks capacity or is simply refusing treatment.", whyItMatters: "Missing this signal means the candidate has not balanced culturally safe engagement with the urgency of potentially life-saving treatment.", modelWording: "Clarify treatment urgency with infectious diseases because legal options depend on how long engagement can safely continue.", keywords: ["life-threatening", "delayed antibiotics", "infectious diseases", "legal options", "urgency", "capacity"] },
     ],
-    priorityOrder: {
-      urgent: ["s1", "s2"],
-      secondary: ["s3", "s4", "s5"],
-      lowYield: ["s6"],
-    },
-    modelAnswer: `Ahmad's refusal of investigation and antibiotics cannot be assessed properly until the communication failure is corrected. The registrar has been using his cousin to interpret because "professional interpreters take too long." That is not acceptable for a complex refusal involving possible life-threatening infective endocarditis, trauma, substance use and capacity. A family interpreter may filter information, inhibit disclosure, misunderstand medical language or have their own interests. My first action would be to arrange a professional interpreter urgently, by phone or video if necessary, before concluding that Ahmad lacks capacity or is making a capacitous refusal.
+    priorityOrder: { urgent: ["s2", "s3", "s4", "s8"], secondary: ["s1", "s5", "s6", "s7"], lowYield: [] },
+    modelAnswer: `Ahmad's refusal cannot be assessed safely until the communication problem is corrected. He is refusing blood cultures, echocardiography and antibiotics for suspected infective endocarditis, but the registrar has been using his cousin to interpret because "professional interpreters take too long." A professional interpreter is required urgently, by phone or video if needed, because capacity, consent and trauma-sensitive explanation cannot rely on family interpretation in a life-threatening refusal.
 
-His statement, "hospital makes papers for immigration," is a major trauma and cultural-safety clue. It may reflect a rational fear based on past detention experiences, a trauma response to institutions, misunderstanding about confidentiality, or psychotic/paranoid thinking. The cousin's collateral that Ahmad "was detained for months before arriving in Australia and avoids government offices" makes trauma-related mistrust highly plausible. I would not respond by surrounding him with security or treating refusal as wilful obstruction. I would explain confidentiality, the separation between health care and immigration as accurately as possible, involve refugee health or social work support, and reduce visible coercion.
+His statement, "No more tests; hospital makes papers for immigration," should be formulated in the context of refugee trauma and detention rather than immediately labelled as psychosis or incapacity. His cousin says Ahmad was detained for months before arriving in Australia and avoids government offices, so fear of paperwork and authority may be understandable. I would explain confidentiality, the separation between health care and immigration as accurately as possible, and involve refugee health, social work or bicultural support if available.
 
-The infectious diseases team says delayed antibiotics "may be life-threatening." That creates urgency, but urgency does not justify an invalid capacity assessment. I would ask the medical team to clarify the diagnosis, expected benefit of antibiotics, risks of delaying blood cultures/echocardiography, alternatives, and how long engagement can safely continue. If Ahmad has capacity after proper interpretation and explanation, he can refuse even life-saving treatment. If he lacks capacity because trauma, delirium, psychosis, intoxication or withdrawal prevents appreciation and weighing, and the risk is imminent, emergency or substitute decision pathways may be needed.
+The visible security presence is likely worsening engagement. Ahmad becomes distressed when security stand near the door, so I would reduce visible coercion where safe, use one calm clinician, avoid crowding and address pain, withdrawal or fear. His intravenous heroin use also requires addiction input because opioid withdrawal, craving or stigma may be contributing to absconding risk and refusal.
 
-His spiritual statement, "Maybe Allah is punishing me; medicine cannot change this," should be explored respectfully. It may be a cultural or religious explanatory model, depressive guilt, demoralisation or misunderstanding of treatment. I would ask what he believes is happening, whether he thinks treatment is forbidden or simply futile, whether he wants an imam or spiritual support, and how medical treatment can sit alongside faith. Respecting religion does not mean accepting a refusal without assessing whether he understands the medical situation; equally, medical urgency does not mean dismissing his spiritual framework.
+The spiritual statement, "Maybe Allah is punishing me; medicine cannot change this," needs respectful exploration. I would ask what he believes is happening, whether treatment conflicts with faith, whether he wants an imam or trusted religious support, and how antibiotics might be understood as compatible with faith rather than opposing it. Spiritual meaning should inform engagement, not replace capacity assessment.
 
-The distress when "security staff stand near the door" matters. Security may be necessary if there is immediate danger, but in this case visible containment may be re-traumatising and worsening refusal. I would ask staff to step back if safe, use a calm single spokesperson, avoid crowding, and address opioid withdrawal or pain because "intravenous heroin use" may mean withdrawal, craving or stigma is also driving distress. Addiction medicine input may help engagement and reduce absconding risk.
-
-My final advice would be to correct communication, formulate trauma and explanatory beliefs, clarify medical urgency, assess capacity decision-specifically, and use the least restrictive lawful path. I would document interpreter use, what Ahmad understood, his appreciation of death or complications, the role of immigration fear and detention trauma, spiritual supports offered, addiction considerations, and the legal basis for any treatment against refusal. Without that, either accepting refusal or overriding it would be unsafe and potentially unlawful.`,
+The medical urgency must be clarified with infectious diseases. Delayed antibiotics may be life-threatening, so the team needs to know how long engagement can safely continue and what the likely consequences are. If Ahmad has capacity after professional interpretation and explanation, he may refuse even serious treatment. If he lacks capacity because trauma, delirium, psychosis, intoxication or withdrawal prevents understanding or weighing, and the risk is imminent, emergency or substitute decision pathways may be needed. I would document interpreter use, decision-specific capacity reasoning, trauma formulation, spiritual supports offered, addiction needs, least restrictive engagement and the legal basis for any treatment against refusal.`,
   },
 ];
