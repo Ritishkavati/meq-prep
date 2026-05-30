@@ -6,7 +6,7 @@ export const GOV_STEMS: QuizStem[] = [
     questionNumber: "MEQ-068",
     topic: "governance",
     difficulty: "consultant",
-    title: "Impaired colleague and mandatory reporting",
+    title: "Impaired Colleague and Mandatory Reporting",
     candidateRole: "Consultant psychiatrist, clinical director of mental health",
     setting: "Public mental health service",
     stem: `You are the clinical director of a public mental health service.
@@ -18,90 +18,29 @@ Dr Lane calls you the next morning and says, "I had one drink at dinner and peop
 You must decide how to respond while ensuring patient safety, fairness to Dr Lane and compliance with professional obligations.`,
     totalMarks: 22,
     signals: [
-      {
-        id: "s1",
-        name: "Potential impairment affecting patient safety",
-        category: "immediate_safety",
-        severity: "critical",
-        clueInStem: "appeared intoxicated during an after-hours shift",
-        whyItMatters: "Possible impairment while practising creates immediate risk to patients and may require removal from clinical duties.",
-        modelWording: "Prioritise patient safety by assessing whether Dr Lane is fit for duty and preventing further unsupervised clinical practice until clarified.",
-        keywords: ["impaired colleague", "fitness for duty", "patient safety", "intoxication", "clinical duties", "risk"],
-      },
-      {
-        id: "s2",
-        name: "Mandatory reporting threshold",
-        category: "governance",
-        severity: "critical",
-        clueInStem: "gave confusing verbal orders for rapid tranquillisation.",
-        whyItMatters: "Practising while impaired and issuing unsafe orders may meet mandatory notification thresholds depending on jurisdiction.",
-        modelWording: "Consider mandatory notification obligations if impairment placed the public at substantial risk of harm.",
-        keywords: ["mandatory reporting", "AHPRA", "substantial risk", "professional obligations", "unsafe practice", "notification"],
-      },
-      {
-        id: "s3",
-        name: "Power imbalance silencing staff",
-        category: "mdt_conflict",
-        severity: "important",
-        clueInStem: "I was scared to question him because he is the consultant.",
-        whyItMatters: "Hierarchy can suppress safety concerns and requires explicit support for speaking up.",
-        modelWording: "Support staff who raised concerns and address hierarchy-related barriers to escalation.",
-        keywords: ["speaking up", "hierarchy", "staff safety", "nursing concerns", "clinical governance"],
-      },
-      {
-        id: "s4",
-        name: "Executive pressure to minimise issue",
-        category: "system_pressure",
-        severity: "important",
-        clueInStem: "handled quietly to avoid reputational damage.",
-        whyItMatters: "Reputation management must not override statutory obligations or patient safety.",
-        modelWording: "Resist pressure to minimise the incident and follow formal governance and professional reporting processes.",
-        keywords: ["executive pressure", "reputation", "governance process", "transparency", "professional duty"],
-      },
-      {
-        id: "s5",
-        name: "Fair process for colleague",
-        category: "ethics",
-        severity: "important",
-        clueInStem: "people are exaggerating because they don't like me.",
-        whyItMatters: "Natural justice requires factual inquiry, support and non-punitive handling while protecting patients.",
-        modelWording: "Ensure procedural fairness while separating support for Dr Lane from patient safety and reporting duties.",
-        keywords: ["procedural fairness", "natural justice", "colleague support", "non-punitive", "confidentiality"],
-      },
-      {
-        id: "s6",
-        name: "Documentation and incident record",
-        category: "governance",
-        severity: "optional",
-        clueInStem: "incomplete notes.",
-        whyItMatters: "Incomplete notes increase clinical and medico-legal risk, especially around sedation decisions.",
-        modelWording: "Secure relevant documentation, medication records and incident reports to support review and patient follow-up.",
-        keywords: ["documentation", "incident report", "sedation orders", "medication record", "audit trail"],
-      },
+      { id: "s1", name: "Possible intoxication while practising creates immediate patient risk", category: "immediate_safety", severity: "critical", clueInStem: "A senior registrar tells you confidentially that Dr Lane, a consultant psychiatrist, appeared intoxicated during an after-hours shift and gave confusing verbal orders for rapid tranquillisation.", whyItMatters: "Missing this signal means the candidate has not protected patients from possible impaired practice during high-risk after-hours care.", modelWording: "Prioritise patient safety by assessing Dr Lane's fitness for duty and preventing further unsupervised clinical practice until the concern is clarified.", keywords: ["impaired colleague", "fitness for duty", "patient safety", "intoxication", "clinical duties", "risk"] },
+      { id: "s2", name: "Confusing rapid tranquillisation orders require patient review", category: "governance", severity: "critical", clueInStem: "A senior registrar tells you confidentially that Dr Lane, a consultant psychiatrist, appeared intoxicated during an after-hours shift and gave confusing verbal orders for rapid tranquillisation.", whyItMatters: "Missing this signal means the candidate has not checked whether sedation-related orders placed patients at risk.", modelWording: "Review affected patients and medication records because confusing rapid tranquillisation orders may have created clinical harm.", keywords: ["rapid tranquillisation", "sedation", "orders", "patient review", "clinical harm"] },
+      { id: "s3", name: "Hierarchy prevented staff from speaking up", category: "mdt_conflict", severity: "important", clueInStem: "One nurse says, \"I was scared to question him because he is the consultant.\"", whyItMatters: "Missing this signal means the candidate has not addressed a safety culture where staff feel unable to challenge a consultant.", modelWording: "Support staff who raised concerns and address hierarchy-related barriers because fear of questioning consultants suppresses safety escalation.", keywords: ["speaking up", "hierarchy", "staff safety", "nursing concerns", "clinical governance"] },
+      { id: "s4", name: "Executive reputation pressure must not suppress reporting", category: "system_pressure", severity: "important", clueInStem: "The hospital executive wants the matter handled quietly to avoid reputational damage.", whyItMatters: "Missing this signal means the candidate has allowed organisational reputation to override patient safety and professional obligations.", modelWording: "Resist pressure to minimise the incident because reputational concern cannot override governance review or reporting duties.", keywords: ["executive pressure", "reputation", "governance process", "transparency", "professional duty"] },
+      { id: "s5", name: "Dr Lane requires procedural fairness and support", category: "ethics", severity: "important", clueInStem: "Dr Lane calls you the next morning and says, \"I had one drink at dinner and people are exaggerating because they don't like me.\"", whyItMatters: "Missing this signal means the candidate has either condemned Dr Lane without inquiry or allowed his explanation to end a serious concern.", modelWording: "Ensure procedural fairness while separating support for Dr Lane from patient safety and reporting duties.", keywords: ["procedural fairness", "natural justice", "colleague support", "non-punitive", "confidentiality"] },
+      { id: "s6", name: "Incomplete notes threaten continuity and audit trail", category: "governance", severity: "important", clueInStem: "Nursing staff say Dr Lane smelled of alcohol and later wrote incomplete notes.", whyItMatters: "Missing this signal means the candidate has not secured the clinical record needed for safe follow-up and review.", modelWording: "Secure relevant notes, medication records and incident reports because incomplete documentation increases clinical and medico-legal risk.", keywords: ["documentation", "incident report", "sedation orders", "medication record", "audit trail"] },
+      { id: "s7", name: "Personal stress may indicate impairment support needs", category: "ethics", severity: "important", clueInStem: "He asks you not to escalate because he is going through a divorce.", whyItMatters: "Missing this signal means the candidate has ignored a possible wellbeing contributor while still needing to prevent personal circumstances being used to avoid escalation.", modelWording: "Offer appropriate wellbeing and impairment support because divorce may be relevant to functioning but does not remove safety obligations.", keywords: ["divorce", "wellbeing", "impairment pathway", "support", "occupational health", "fitness for work"] },
     ],
-    priorityOrder: {
-      urgent: ["s1", "s2"],
-      secondary: ["s3", "s4", "s5"],
-      lowYield: ["s6"],
-    },
-    modelAnswer: `This presentation has to be managed first as a patient-safety and professional-governance issue, not as an interpersonal complaint about a colleague. The phrase "appeared intoxicated during an after-hours shift" is an immediate safety trigger, particularly because Dr Lane allegedly gave "confusing verbal orders for rapid tranquillisation." Rapid tranquillisation carries risk of respiratory depression, hypotension, oversedation and death if poorly assessed or documented. My first action as clinical director would be to ensure Dr Lane is not providing further unsupervised clinical care until fitness for duty is clarified, and to review any patients affected by his orders, including observations, medication doses, adverse events and documentation.
+    priorityOrder: { urgent: ["s1", "s2"], secondary: ["s3", "s4", "s5", "s6", "s7"], lowYield: [] },
+    modelAnswer: `This is a patient-safety and professional-governance concern before it is a collegial dispute. Dr Lane reportedly appeared intoxicated while working after hours and gave confusing rapid tranquillisation orders, so I would first protect patients by ensuring he is not providing further unsupervised care until fitness for duty is clarified. I would also review patients affected by his orders, including medication charts, observations and any adverse outcomes.
 
-The nurse's statement, "I was scared to question him because he is the consultant," is not a peripheral workplace issue. It shows hierarchy suppressing safety escalation. I would speak with the nurse and registrar in a supportive, factual way, reassure them that raising patient-safety concerns is appropriate, and make sure there is no retaliation. I would also review whether the service culture makes it difficult to challenge senior doctors after hours. Consultant leadership here means protecting staff who speak up while maintaining fairness to Dr Lane.
+The incomplete notes and the reports from nursing staff must be secured as part of a factual review. I would not allow retrospective alteration of the record, but appropriate addenda and incident reporting should occur. The nurse's statement that she was scared to question him because he is the consultant also requires action, because hierarchy that prevents escalation is itself a safety risk.
 
-Dr Lane's explanation, "I had one drink at dinner and people are exaggerating because they don't like me," should be heard, but it cannot end the matter. He is entitled to procedural fairness, confidentiality within limits, and support, especially as he says he is going through a divorce. I would meet with him, explain the concerns factually, advise him not to work clinically until assessment, and offer occupational health, employee assistance, GP support or impairment pathway. Compassion and accountability are not opposites. Supporting him does not mean concealing risk.
+Dr Lane is entitled to procedural fairness. His account that he had one drink and that people are exaggerating should be heard, but it cannot end the inquiry. I would meet him, state the concerns factually, offer occupational health or impairment-pathway support, and recognise the stress of his divorce while making clear that support does not replace patient-safety action.
 
-The hospital executive's wish for the matter to be "handled quietly to avoid reputational damage" creates a clear ethical and governance tension. Reputation cannot override patient safety, incident review or mandatory reporting obligations. I would escalate through medical administration and clinical governance, complete incident reporting, secure medication charts and notes, and consider whether the threshold for mandatory notification is met. The threshold depends on jurisdiction and facts, but practising while impaired and issuing unsafe treatment orders may amount to substantial risk to the public. I would seek advice if needed, but I would not allow executive discomfort to suppress reporting.
-
-I would also address documentation. The stem says Dr Lane "later wrote incomplete notes." Incomplete documentation after sedation orders increases medico-legal risk and may compromise ongoing care. I would secure the record, ensure factual corrections are made through proper addenda rather than retrospective alteration, and review whether patients or families require disclosure if harm occurred.
-
-My documentation would be factual: who reported what, what patient reviews were undertaken, what restrictions were placed on clinical duties, what support was offered to Dr Lane, what governance steps occurred, and the rationale for any mandatory notification decision. The consultant standard is to maintain patient safety, natural justice, staff safety and legal obligations simultaneously, rather than choosing loyalty to a colleague or loyalty to the organisation's reputation.`,
+The hospital executive's wish to handle the matter quietly to avoid reputational damage must not determine the response. I would follow governance processes, consider mandatory notification obligations depending on the facts and jurisdiction, and document the rationale for actions taken. The consultant task is to hold patient safety, natural justice, staff support and professional obligations together.`,
   },
   {
     id: "GOV-002",
     questionNumber: "MEQ-069",
     topic: "governance",
     difficulty: "consultant",
-    title: "Serious medication error and open disclosure",
+    title: "Serious Medication Error and Open Disclosure",
     candidateRole: "Consultant psychiatrist, inpatient unit clinical lead",
     setting: "Acute psychiatric inpatient ward",
     stem: `You are the consultant psychiatrist leading an acute inpatient ward.
@@ -113,88 +52,29 @@ Helen's daughter arrives angry and says, "No one told us this was your mistake."
 You are asked to manage the immediate clinical consequences and lead the incident response.`,
     totalMarks: 22,
     signals: [
-      {
-        id: "s1",
-        name: "Immediate clinical harm from medication error",
-        category: "immediate_safety",
-        severity: "critical",
-        clueInStem: "became hypotensive, fell overnight and sustained a fractured wrist.",
-        whyItMatters: "Patient harm requires urgent medical review, monitoring and prevention of further adverse events.",
-        modelWording: "Prioritise Helen's clinical stabilisation, falls management and monitoring for clozapine-related adverse effects.",
-        keywords: ["medication error", "hypotension", "fall", "fracture", "clinical review", "adverse event"],
-      },
-      {
-        id: "s2",
-        name: "Open disclosure required",
-        category: "governance",
-        severity: "critical",
-        clueInStem: "No one told us this was your mistake.",
-        whyItMatters: "Failure to disclose worsens harm, complaint risk and ethical breach.",
-        modelWording: "Conduct timely open disclosure with apology, factual explanation, known consequences and next steps.",
-        keywords: ["open disclosure", "apology", "transparency", "family communication", "adverse event", "duty of candour"],
-      },
-      {
-        id: "s3",
-        name: "Systems error not individual blame only",
-        category: "governance",
-        severity: "important",
-        clueInStem: "pharmacy had checked it.",
-        whyItMatters: "Blame culture prevents learning; root cause analysis must examine prescribing, transcription and checking systems.",
-        modelWording: "Frame the incident as requiring systems review rather than premature individual blame.",
-        keywords: ["systems error", "root cause analysis", "medication safety", "transcription error", "blame culture"],
-      },
-      {
-        id: "s4",
-        name: "Registrar practice and supervision issue",
-        category: "governance",
-        severity: "important",
-        clueInStem: "copied the medication list from a previous discharge summary without confirming it.",
-        whyItMatters: "Unsafe prescribing practice requires supervision, education and possible remediation.",
-        modelWording: "Review registrar prescribing practice and supervision while ensuring learning and accountability.",
-        keywords: ["supervision", "prescribing safety", "medication reconciliation", "registrar", "remediation"],
-      },
-      {
-        id: "s5",
-        name: "Risk manager advice must not prevent honesty",
-        category: "ethics",
-        severity: "important",
-        clueInStem: "avoid admitting liability.",
-        whyItMatters: "Open disclosure can be honest without speculative blame; avoiding truth undermines trust.",
-        modelWording: "Provide factual disclosure and apology for harm without speculating beyond known facts or assigning premature liability.",
-        keywords: ["liability", "truthfulness", "ethics", "open disclosure", "factual communication"],
-      },
-      {
-        id: "s6",
-        name: "Staff distress and team functioning",
-        category: "mdt_conflict",
-        severity: "optional",
-        clueInStem: "Staff are distressed and blaming each other.",
-        whyItMatters: "Team distress can impair ongoing safety and requires containment and debriefing.",
-        modelWording: "Support staff debriefing and psychological safety while maintaining accountability and patient-centred focus.",
-        keywords: ["staff debrief", "psychological safety", "team conflict", "accountability", "patient safety"],
-      },
+      { id: "s1", name: "Wrong clozapine administration caused immediate harm", category: "immediate_safety", severity: "critical", clueInStem: "A 54-year-old woman, Helen, was inadvertently given clozapine 300 mg at night instead of quetiapine 300 mg due to a medication chart transcription error.", whyItMatters: "Missing this signal means the candidate has not recognised a high-risk antipsychotic medication error requiring urgent clinical response.", modelWording: "Prioritise Helen's clinical stabilisation because she received clozapine instead of quetiapine and may have ongoing adverse effects.", keywords: ["medication error", "clozapine", "quetiapine", "clinical review", "adverse event"] },
+      { id: "s2", name: "Hypotension and fracture require medical management", category: "physical_health", severity: "critical", clueInStem: "She became hypotensive, fell overnight and sustained a fractured wrist.", whyItMatters: "Missing this signal means the candidate has focused on incident process before treating the patient's actual injury and physiological risk.", modelWording: "Arrange urgent medical review, observations, falls management and fracture care because the error has already caused physical harm.", keywords: ["hypotension", "fractured wrist", "fall", "medical review", "observations"] },
+      { id: "s3", name: "Family has not received timely open disclosure", category: "governance", severity: "critical", clueInStem: "Helen's daughter arrives angry and says, \"No one told us this was your mistake.\"", whyItMatters: "Missing this signal means the candidate has not addressed the communication failure that compounds harm and undermines trust.", modelWording: "Conduct timely open disclosure with Helen and her daughter because they deserve a factual explanation, apology and plan.", keywords: ["open disclosure", "apology", "transparency", "family communication", "adverse event"] },
+      { id: "s4", name: "Pharmacy-check assumption shows failed safety barriers", category: "governance", severity: "important", clueInStem: "The night nurse says, \"I thought pharmacy had checked it.\"", whyItMatters: "Missing this signal means the candidate has blamed one person rather than examining the failed prescribing, pharmacy and administration checks.", modelWording: "Review the checking system because assuming pharmacy had checked the chart shows unclear medication-safety ownership.", keywords: ["systems error", "root cause analysis", "medication safety", "transcription error", "blame culture"] },
+      { id: "s5", name: "Registrar copied medication list without reconciliation", category: "governance", severity: "important", clueInStem: "The registrar says he copied the medication list from a previous discharge summary without confirming it.", whyItMatters: "Missing this signal means the candidate has not identified unsafe medication reconciliation and prescribing practice requiring supervision.", modelWording: "Review registrar prescribing practice and supervision because copying an old medication list without confirmation is unsafe reconciliation.", keywords: ["supervision", "prescribing safety", "medication reconciliation", "registrar", "remediation"] },
+      { id: "s6", name: "Liability concern must not prevent honest disclosure", category: "ethics", severity: "important", clueInStem: "The hospital risk manager asks you to prepare for open disclosure but warns that \"we should avoid admitting liability.\"", whyItMatters: "Missing this signal means the candidate has allowed legal anxiety to dilute honest patient-centred disclosure.", modelWording: "Provide factual disclosure and apology without speculation because avoiding liability does not mean avoiding truth.", keywords: ["liability", "truthfulness", "ethics", "open disclosure", "factual communication"] },
+      { id: "s7", name: "Staff blame requires just-culture containment", category: "mdt_conflict", severity: "important", clueInStem: "Staff are distressed and blaming each other.", whyItMatters: "Missing this signal means the candidate has not contained team distress or prevented blame from blocking learning.", modelWording: "Support staff debriefing and psychological safety while maintaining accountability because blame will impair incident learning.", keywords: ["staff debrief", "psychological safety", "team conflict", "accountability", "patient safety"] },
     ],
-    priorityOrder: {
-      urgent: ["s1", "s2"],
-      secondary: ["s3", "s4", "s5"],
-      lowYield: ["s6"],
-    },
-    modelAnswer: `Helen's case is a serious medication error with actual harm, so the first consultant action is clinical stabilisation, not administrative language management. The stem states she was inadvertently given clozapine 300 mg instead of quetiapine 300 mg and then "became hypotensive, fell overnight and sustained a fractured wrist." I would ensure she receives immediate medical review, ongoing observations, falls assessment, fracture management, monitoring for clozapine-related sedation, hypotension, anticholinergic effects and cardiac concerns, and that the medication chart is corrected so no further dose is administered. Patient safety and harm mitigation come before the incident meeting.
+    priorityOrder: { urgent: ["s1", "s2", "s3"], secondary: ["s4", "s5", "s6", "s7"], lowYield: [] },
+    modelAnswer: `Helen's case is a serious medication error with actual harm. She received clozapine instead of quetiapine, then became hypotensive, fell and sustained a fractured wrist. I would first ensure medical review, observations, falls management, fracture care, monitoring for ongoing adverse effects and correction of the medication chart so the error is not repeated.
 
-The daughter's statement, "No one told us this was your mistake," is a major communication failure. This requires timely open disclosure. I would meet Helen and her daughter with an appropriate senior clinician and, if possible, the ward manager or risk representative. I would explain the known facts clearly, apologise for the error and the harm, outline what is being done clinically, and describe the review process. I would not speculate beyond known facts or assign premature individual blame, but I would not hide behind vague language. The risk manager's warning to "avoid admitting liability" does not mean avoiding honesty. A factual apology and transparent explanation are ethical and clinically necessary.
+Helen and her daughter require timely open disclosure. The daughter's statement, "No one told us this was your mistake," shows that communication has already failed. I would explain the known facts, apologise for the error and harm, outline the immediate clinical plan and describe the review process without speculating beyond what is known.
 
-The incident must be framed as a systems failure until properly reviewed. The night nurse says, "I thought pharmacy had checked it," and the registrar says he "copied the medication list from a previous discharge summary without confirming it." Those clues point to failures in medication reconciliation, prescribing verification, pharmacy checking, nursing administration, handover and perhaps electronic chart design. I would initiate an incident report and root-cause or systems review that examines how clozapine could be transcribed and administered to a non-clozapine patient, what checks failed, and whether clozapine governance safeguards were bypassed.
+The risk manager's advice to avoid admitting liability should not become avoidance of honesty. Open disclosure can be factual and careful while still being transparent. Patients and families should not receive vague or defensive language after a clear medication error.
 
-The registrar's practice requires supervision and remediation, but I would avoid scapegoating. Copying a medication list without confirming it is unsafe and must be addressed through prescribing supervision, education and review of competence. At the same time, the nurse and pharmacy processes need review because medication safety is deliberately built on multiple checks. Staff are "distressed and blaming each other," so I would organise a debrief that supports staff emotionally while keeping the focus on patient harm, accountability and learning.
-
-I would document the clinical event, open disclosure conversation, family questions, immediate treatment, incident notification, medication-chart correction, and planned review. I would also ensure Helen receives follow-up for the fracture and psychological impact, and that any complaint pathway is explained. The consultant-level response is not to protect the service by minimising the error, nor to punish a single junior doctor to create the appearance of action. It is to care for the patient, tell the truth, preserve evidence, identify system failures and implement changes that reduce recurrence.`,
+The review must examine systems as well as individual practice. The nurse thought pharmacy had checked the chart, and the registrar copied a previous medication list without confirming it. Staff are distressed and blaming each other, so I would use a just-culture approach that addresses prescribing supervision, medication reconciliation, pharmacy and nursing checks, documentation and staff support.`,
   },
   {
     id: "GOV-003",
     questionNumber: "MEQ-070",
     topic: "governance",
     difficulty: "consultant",
-    title: "Executive pressure to discharge unsafe patient",
+    title: "Executive Pressure to Discharge Unsafe Patient",
     candidateRole: "Consultant psychiatrist, acute inpatient unit",
     setting: "Overcrowded metropolitan inpatient service",
     stem: `You are the consultant psychiatrist on an acute inpatient unit during severe bed pressure.
@@ -206,90 +86,29 @@ The hospital executive director phones you and says, "We need this bed today; ED
 Tariq's ex-partner has an active family violence order and has not been contacted because staff are unsure about confidentiality.`,
     totalMarks: 22,
     signals: [
-      {
-        id: "s1",
-        name: "Explicit threat to identifiable person",
-        category: "risk_others",
-        severity: "critical",
-        clueInStem: "When I leave, I know where she lives.",
-        whyItMatters: "A specific threat to an identifiable victim creates serious risk and potential duty to protect/warn considerations.",
-        modelWording: "Treat the statement as a specific dynamic risk to an identifiable person requiring urgent risk formulation and protective action.",
-        keywords: ["specific threat", "identifiable victim", "violence risk", "dynamic risk", "duty to protect", "family violence"],
-      },
-      {
-        id: "s2",
-        name: "Executive pressure compromising clinical independence",
-        category: "system_pressure",
-        severity: "critical",
-        clueInStem: "We need this bed today",
-        whyItMatters: "Bed pressure must not override clinical safety or legal duties.",
-        modelWording: "Maintain clinical independence and refuse discharge if risk cannot be safely managed despite executive pressure.",
-        keywords: ["executive pressure", "bed pressure", "clinical independence", "unsafe discharge", "risk management"],
-      },
-      {
-        id: "s3",
-        name: "False reassurance from denial of intent",
-        category: "risk_others",
-        severity: "important",
-        clueInStem: "document that he denies intent.",
-        whyItMatters: "Denial does not negate contextual and behavioural risk indicators.",
-        modelWording: "Do not rely on denial of intent when recent threats, guardedness and family violence context indicate ongoing risk.",
-        keywords: ["denial of intent", "contextual risk", "guardedness", "violence formulation", "discharge risk"],
-      },
-      {
-        id: "s4",
-        name: "Family violence and victim safety",
-        category: "risk_vulnerable",
-        severity: "important",
-        clueInStem: "active family violence order",
-        whyItMatters: "Victim safety planning and possible information-sharing may be required despite confidentiality concerns.",
-        modelWording: "Consider family violence risk, victim safety planning and lawful information-sharing where serious risk exists.",
-        keywords: ["family violence", "victim safety", "information sharing", "confidentiality", "protective action"],
-      },
-      {
-        id: "s5",
-        name: "Inadequate disposition plan",
-        category: "disposition",
-        severity: "important",
-        clueInStem: "temporary accommodation with crisis follow-up.",
-        whyItMatters: "Crisis follow-up may be inadequate for specific violence risk and active psychosis.",
-        modelWording: "Reject disposition plans that do not address specific violence risk, victim protection and treatment adherence.",
-        keywords: ["temporary accommodation", "crisis follow-up", "discharge planning", "violence risk", "treatment adherence"],
-      },
-      {
-        id: "s6",
-        name: "Defensible documentation under pressure",
-        category: "governance",
-        severity: "optional",
-        clueInStem: "ED is breaching targets",
-        whyItMatters: "Performance targets may later be scrutinised if adverse outcome occurs.",
-        modelWording: "Document clinical reasoning, executive pressure, risk factors, protective actions and rationale for admission/discharge decision.",
-        keywords: ["documentation", "targets", "defensible decision", "governance", "adverse outcome", "clinical reasoning"],
-      },
+      { id: "s1", name: "Direct threat identifies a foreseeable victim", category: "risk_others", severity: "critical", clueInStem: "Yesterday he told a nurse, \"When I leave, I know where she lives.\"", whyItMatters: "Missing this signal means the candidate has treated a specific threat toward an identifiable ex-partner as routine discharge uncertainty.", modelWording: "Treat the statement as a specific dynamic risk to an identifiable person because Tariq has named access to the ex-partner after discharge.", keywords: ["specific threat", "identifiable victim", "violence risk", "dynamic risk", "duty to protect", "family violence"] },
+      { id: "s2", name: "Executive pressure is compromising clinical independence", category: "system_pressure", severity: "critical", clueInStem: "The hospital executive director phones you and says, \"We need this bed today; ED is breaching targets and he is no longer floridly psychotic.\"", whyItMatters: "Missing this signal means the candidate has allowed access targets to replace a clinical violence-risk formulation.", modelWording: "Maintain clinical independence and refuse discharge if risk cannot be safely managed despite executive pressure to free the bed.", keywords: ["executive pressure", "bed pressure", "clinical independence", "unsafe discharge", "risk management"] },
+      { id: "s3", name: "Denial of intent would be false reassurance", category: "risk_others", severity: "important", clueInStem: "The registrar is uncomfortable but says, \"Maybe we can document that he denies intent.\"", whyItMatters: "Missing this signal means the candidate has accepted a denial-based discharge rationale despite recent threats and guarded hostility.", modelWording: "Do not rely on denial of intent because recent threats, guardedness and family violence context indicate ongoing risk.", keywords: ["denial of intent", "contextual risk", "guardedness", "violence formulation", "discharge risk"] },
+      { id: "s4", name: "Family violence order requires victim-safety planning", category: "risk_vulnerable", severity: "important", clueInStem: "Tariq's ex-partner has an active family violence order and has not been contacted because staff are unsure about confidentiality.", whyItMatters: "Missing this signal means the candidate has ignored a legal marker of risk and failed to consider lawful victim protection.", modelWording: "Consider family violence liaison and lawful information sharing because an active order and direct threat create victim-safety obligations.", keywords: ["family violence", "victim safety", "information sharing", "confidentiality", "protective action"] },
+      { id: "s5", name: "Temporary accommodation plan does not manage the violence pathway", category: "disposition", severity: "important", clueInStem: "The bed manager suggests discharge to temporary accommodation with crisis follow-up.", whyItMatters: "Missing this signal means the candidate has accepted a generic discharge plan that does not address access to the ex-partner, treatment adherence or police liaison.", modelWording: "Reject generic temporary accommodation unless it specifically manages victim access, treatment engagement and family violence safety.", keywords: ["temporary accommodation", "crisis follow-up", "discharge planning", "violence risk", "treatment adherence"] },
+      { id: "s6", name: "Ongoing guarded hostility indicates unresolved dynamic risk", category: "diagnosis_formulation", severity: "important", clueInStem: "He remains guarded, intermittently hostile and has refused family meetings.", whyItMatters: "Missing this signal means the candidate has accepted that he is no longer floridly psychotic without assessing ongoing hostility, secrecy and lack of collaboration.", modelWording: "Reassess current mental state and engagement because guarded hostility and refusal of family meetings make risk less manageable.", keywords: ["guarded", "hostile", "family meetings", "dynamic risk", "engagement", "formulation"] },
+      { id: "s7", name: "Documentation must record pressure and protective actions", category: "governance", severity: "important", clueInStem: "The hospital executive director phones you and says, \"We need this bed today; ED is breaching targets and he is no longer floridly psychotic.\"", whyItMatters: "Missing this signal means the candidate has not created a defensible record of clinical reasoning under organisational pressure.", modelWording: "Document the executive pressure, risk formulation and protective actions because the rationale will need to withstand governance scrutiny.", keywords: ["documentation", "targets", "defensible decision", "governance", "adverse outcome", "clinical reasoning"] },
     ],
-    priorityOrder: {
-      urgent: ["s1", "s2"],
-      secondary: ["s3", "s4", "s5"],
-      lowYield: ["s6"],
-    },
-    modelAnswer: `Tariq should not be discharged simply because the hospital executive needs the bed. The phrase "When I leave, I know where she lives" is a specific threat toward an identifiable person in the context of psychosis and family violence. That single sentence changes the risk formulation. It is not neutral that he remains guarded and intermittently hostile, has refused family meetings, and was admitted after threatening his ex-partner while believing she was "infected by demons." I would treat this as ongoing dynamic risk to an identifiable victim, not as a resolved psychotic episode.
+    priorityOrder: { urgent: ["s1", "s2"], secondary: ["s3", "s4", "s5", "s6", "s7"], lowYield: [] },
+    modelAnswer: `Tariq should not be discharged simply because the hospital needs the bed. He told a nurse, "When I leave, I know where she lives," which is a direct threat toward an identifiable ex-partner. This must be read with his recent psychotic belief that she was "infected by demons," his guarded hostility and his refusal of family meetings.
 
-The executive director's statement, "We need this bed today," and the reference to ED targets create a system-pressure trap. A consultant can acknowledge access block and work constructively to create capacity, but clinical independence must be maintained. I would tell the executive that discharge is not safe at this point unless specific violence risk, victim safety and treatment adherence can be managed. I would offer to review other possible discharges or step-down options, but I would not sign an unsafe discharge to meet a performance target. If needed, I would escalate through clinical governance and document the pressure and my reasoning.
+The executive pressure is clear. ED targets and bed pressure are real service problems, but they do not remove the consultant's obligation to make an independent clinical decision. No longer being floridly psychotic is not the same as being safe for discharge when a specific family-violence threat remains.
 
-The registrar's suggestion to "document that he denies intent" is exactly the wrong risk logic. Denial of intent does not neutralise a direct threat, especially in a guarded patient with persecutory beliefs and an active family violence context. I would supervise the registrar that risk assessment is not a box-tick of stated intent; it is a formulation of behaviour, threats, access, mental state, history, substances, victim vulnerability and protective controls. The phrase "document that he denies intent" should be replaced by a documented explanation of why denial is or is not reliable in light of the rest of the evidence.
+The registrar's suggestion to document denial of intent is unsafe reasoning. Denial does not override a direct threat, particularly when the patient is guarded and there is an active family violence order. I would supervise the registrar to document a formulation rather than a single reassuring phrase.
 
-The active family violence order is not a side issue. It indicates prior legal recognition of risk and means that victim safety planning must occur. Staff are unsure about confidentiality, but confidentiality does not prevent lawful information sharing where there is serious risk to an identifiable person. I would consider police/family violence liaison, check the terms of the order, assess whether the ex-partner needs warning or safety support through appropriate channels, and document the legal and ethical basis for any disclosure. The tension is between preserving Tariq's confidentiality and protecting a foreseeable victim. In this case, the threat and context make victim safety an active obligation.
-
-A plan of "temporary accommodation with crisis follow-up" is inadequate unless it specifically addresses the risk pathway. Where will he stay, how far from the ex-partner, who supervises medication, what are the legal restrictions, what happens if he leaves, what is the police role, what is the family violence safety plan, and what treatment engagement exists? If those questions cannot be answered, discharge is not defensible. I would reassess his psychosis, insight, capacity, substance use, access to the victim, access to weapons and willingness to accept treatment. If risk remains high, continued admission or involuntary treatment is justified if statutory criteria are met.
-
-My documentation would record the exact threat, the active family violence order, the executive pressure, the registrar's uncertainty, victim-safety actions, confidentiality reasoning, and why the chosen disposition is the least restrictive safe option. If an adverse event occurred, the record should show that the consultant recognised the risk and acted on it, rather than allowing bed pressure to become the hidden determinant of discharge.`,
+Temporary accommodation with crisis follow-up is inadequate unless it manages the violence pathway: distance from the ex-partner, transport, police or family-violence liaison, medication adherence and what happens if he disengages. My documentation would record the executive pressure, confidentiality reasoning, victim-safety steps and why the chosen disposition is the least restrictive safe option.`,
   },
   {
     id: "GOV-004",
     questionNumber: "MEQ-071",
     topic: "governance",
     difficulty: "consultant",
-    title: "Registrar working beyond competence",
+    title: "Registrar Working Beyond Competence",
     candidateRole: "Consultant psychiatrist, training supervisor and unit consultant",
     setting: "Regional inpatient and emergency psychiatry service",
     stem: `You are the consultant psychiatrist supervising a Stage 1 registrar in a regional service.
@@ -301,90 +120,29 @@ Last night a patient required ICU transfer after oversedation. The registrar did
 The director of training asks you to manage the patient safety issue while supporting the registrar's training.`,
     totalMarks: 22,
     signals: [
-      {
-        id: "s1",
-        name: "Patient harm from unsupervised practice",
-        category: "immediate_safety",
-        severity: "critical",
-        clueInStem: "required ICU transfer after oversedation.",
-        whyItMatters: "Actual harm means immediate review of supervision, scope of practice and affected patient care.",
-        modelWording: "Prioritise patient safety by reviewing the adverse event and restricting independent high-risk decisions until competence is assured.",
-        keywords: ["patient harm", "ICU transfer", "oversedation", "scope of practice", "patient safety", "supervision"],
-      },
-      {
-        id: "s2",
-        name: "False documentation",
-        category: "governance",
-        severity: "critical",
-        clueInStem: "Consultant aware",
-        whyItMatters: "Inaccurate documentation is a serious professionalism and medico-legal issue.",
-        modelWording: "Address inaccurate documentation directly as a professionalism and governance concern requiring correction and escalation.",
-        keywords: ["false documentation", "professionalism", "medico-legal", "clinical record", "governance", "integrity"],
-      },
-      {
-        id: "s3",
-        name: "Supervision failure and unclear escalation culture",
-        category: "governance",
-        severity: "important",
-        clueInStem: "I thought consultants expected us to cope independently.",
-        whyItMatters: "Unsafe independence may reflect both trainee judgement and system supervision failures.",
-        modelWording: "Clarify supervision expectations, escalation thresholds and after-hours support responsibilities.",
-        keywords: ["supervision", "escalation thresholds", "Stage 1 registrar", "training", "after-hours", "competence"],
-      },
-      {
-        id: "s4",
-        name: "Medication safety breach",
-        category: "physical_health",
-        severity: "important",
-        clueInStem: "rapid tranquillisation without physical observations.",
-        whyItMatters: "Sedation without monitoring risks respiratory compromise, hypotension and death.",
-        modelWording: "Review rapid tranquillisation practice and ensure mandatory physical monitoring is embedded.",
-        keywords: ["rapid tranquillisation", "physical observations", "sedation safety", "monitoring", "medication safety"],
-      },
-      {
-        id: "s5",
-        name: "Team loss of confidence",
-        category: "mdt_conflict",
-        severity: "important",
-        clueInStem: "staff have lost confidence",
-        whyItMatters: "Bypassing the registrar fragments care and worsens safety unless leadership restores clear roles.",
-        modelWording: "Restore team safety by clarifying roles, escalation pathways and supervised decision-making arrangements.",
-        keywords: ["team confidence", "bypassing", "MDT", "role clarity", "communication", "safety culture"],
-      },
-      {
-        id: "s6",
-        name: "Training support and remediation",
-        category: "ethics",
-        severity: "optional",
-        clueInStem: "supporting the registrar's training.",
-        whyItMatters: "Patient safety must be balanced with fair remediation rather than punitive abandonment.",
-        modelWording: "Develop a remediation and supervision plan that supports learning while protecting patients.",
-        keywords: ["remediation", "training support", "fairness", "competence", "supervision plan", "education"],
-      },
+      { id: "s1", name: "Oversedation with ICU transfer requires immediate safety response", category: "immediate_safety", severity: "critical", clueInStem: "Last night a patient required ICU transfer after oversedation.", whyItMatters: "Missing this signal means the candidate has not recognised actual harm requiring urgent review of affected patients and current registrar duties.", modelWording: "Prioritise patient safety by reviewing the adverse event and restricting independent high-risk decisions until competence is assured.", keywords: ["patient harm", "ICU transfer", "oversedation", "scope of practice", "patient safety", "supervision"] },
+      { id: "s2", name: "False consultant-aware documentation is a professionalism concern", category: "governance", severity: "critical", clueInStem: "The registrar did not call you until after the transfer and later documented, \"Consultant aware,\" although you had not been contacted.", whyItMatters: "Missing this signal means the candidate has minimised an inaccurate record that misrepresents consultant involvement after serious harm.", modelWording: "Address the inaccurate documentation directly because 'Consultant aware' was false and creates medico-legal and professionalism risk.", keywords: ["false documentation", "professionalism", "medico-legal", "clinical record", "governance", "integrity"] },
+      { id: "s3", name: "Registrar misunderstood escalation expectations", category: "governance", severity: "important", clueInStem: "The registrar says, \"I thought consultants expected us to cope independently.\"", whyItMatters: "Missing this signal means the candidate has not addressed a supervision culture that may have discouraged appropriate escalation.", modelWording: "Clarify supervision expectations and escalation thresholds because a Stage 1 registrar should not infer independence for high-risk decisions.", keywords: ["supervision", "escalation thresholds", "Stage 1 registrar", "training", "after-hours", "competence"] },
+      { id: "s4", name: "Rapid tranquillisation without observations is unsafe practice", category: "physical_health", severity: "important", clueInStem: "Over two weeks, several nurses report that the registrar has been making independent decisions overnight without calling for help, including discharging a suicidal patient from ED and prescribing rapid tranquillisation without physical observations.", whyItMatters: "Missing this signal means the candidate has not addressed a medication-safety breach that may have contributed to serious harm.", modelWording: "Review rapid tranquillisation practice and embed mandatory physical monitoring because sedation without observations is unsafe.", keywords: ["rapid tranquillisation", "physical observations", "sedation safety", "monitoring", "medication safety"] },
+      { id: "s5", name: "Pattern of independent high-risk decisions shows scope problem", category: "governance", severity: "critical", clueInStem: "Over two weeks, several nurses report that the registrar has been making independent decisions overnight without calling for help, including discharging a suicidal patient from ED and prescribing rapid tranquillisation without physical observations.", whyItMatters: "Missing this signal means the candidate has treated the ICU transfer as a single error rather than part of repeated unsafe independent practice.", modelWording: "Review the two-week pattern of independent decisions because repeated high-risk actions suggest a scope-of-practice and supervision failure.", keywords: ["pattern", "independent decisions", "overnight", "suicidal discharge", "scope", "competence"] },
+      { id: "s6", name: "Team bypassing the registrar fragments care", category: "mdt_conflict", severity: "important", clueInStem: "The NUM says staff have lost confidence and now bypass the registrar.", whyItMatters: "Missing this signal means the candidate has not restored clear roles after the MDT lost confidence in the registrar.", modelWording: "Restore team safety by clarifying roles, escalation pathways and supervised decision-making arrangements.", keywords: ["team confidence", "bypassing", "MDT", "role clarity", "communication", "safety culture"] },
+      { id: "s7", name: "Training support must be paired with patient protection", category: "ethics", severity: "important", clueInStem: "The director of training asks you to manage the patient safety issue while supporting the registrar's training.", whyItMatters: "Missing this signal means the candidate has either punished the registrar without remediation or prioritised training over patient safety.", modelWording: "Develop a remediation and supervision plan because the registrar needs support while patients are protected from unsafe independent practice.", keywords: ["remediation", "training support", "fairness", "competence", "supervision plan", "education"] },
     ],
-    priorityOrder: {
-      urgent: ["s1", "s2"],
-      secondary: ["s3", "s4", "s5"],
-      lowYield: ["s6"],
-    },
-    modelAnswer: `This scenario requires immediate patient-safety action and a supervision response, not a vague reminder to the registrar to call more often. The stem includes actual harm: a patient "required ICU transfer after oversedation." That is a sentinel warning that the registrar is making high-risk decisions beyond competence or without adequate escalation. My first action would be to ensure the ICU patient and any other patients affected by recent overnight decisions are reviewed, including the suicidal ED discharge and any rapid tranquillisation episodes. I would restrict the registrar from making independent high-risk after-hours decisions until competence and supervision arrangements are clarified.
+    priorityOrder: { urgent: ["s1", "s2", "s5"], secondary: ["s3", "s4", "s6", "s7"], lowYield: [] },
+    modelAnswer: `This requires immediate patient-safety action and a supervision response. A patient required ICU transfer after oversedation, so I would first review that patient and any others affected by recent overnight decisions. I would temporarily restrict the registrar from independent high-risk after-hours decisions until competence and supervision arrangements are clarified.
 
-The documentation issue is particularly serious. The registrar wrote "Consultant aware" although I had not been contacted. That is not a harmless shorthand. It is inaccurate documentation that could mislead future clinicians and medico-legal review, and it raises professionalism concerns. I would address it directly with the registrar, require the record to be corrected through a proper addendum rather than hidden alteration, and escalate through clinical governance and the training pathway. The response must be fair and factual, but inaccurate documentation cannot be minimised as stress or inexperience.
+The issue is a pattern, not one isolated error. Nurses have reported independent overnight decisions over two weeks, including discharge of a suicidal patient and rapid tranquillisation without physical observations. That suggests a scope-of-practice and supervision failure.
 
-The registrar's explanation, "I thought consultants expected us to cope independently," suggests a system and supervision failure as well as an individual performance problem. I would ask how escalation expectations were communicated, whether after-hours workload is excessive, whether the registrar knew rapid tranquillisation policies, and whether they feared being criticised for calling. A Stage 1 registrar should not be left to infer when consultant input is required for suicidal discharge, seclusion, rapid tranquillisation or deteriorating medical status. I would create explicit escalation thresholds and make myself or the duty consultant visibly available.
+The documentation issue is serious. The registrar wrote "Consultant aware" although I had not been contacted. I would require correction through a proper addendum and address it as a professionalism and governance concern.
 
-The rapid tranquillisation clue, "without physical observations," is a concrete safety breach. Sedation without monitoring can cause respiratory depression, hypotension, arrhythmia or death. I would audit recent rapid tranquillisation events, reinforce policy, ensure nursing staff are empowered to refuse unsafe medication administration or escalate, and arrange direct teaching and observed practice for the registrar. The aim is not to humiliate the registrar, but to protect patients and restore safe practice.
-
-The NUM's statement that "staff have lost confidence" matters because the MDT is now bypassing the registrar. That may be understandable, but it fragments care and can create further risk. I would meet the nursing team, acknowledge their concerns, clarify who makes which decisions, and establish a safe escalation pathway that does not rely on informal bypassing. Staff need to know that calling the consultant directly is acceptable when high-risk decisions exceed the registrar's competence.
-
-At the same time, the director of training is right that the registrar requires support, not abandonment. I would develop a remediation plan with increased supervision, case review, prescribing/rapid tranquillisation training, observed assessments, documentation review, and clear competence milestones. Depending on the severity and insight, temporary removal from after-hours duties may be necessary. My documentation would cover patient reviews, incident reporting, correction of the false note, supervision changes, registrar discussion, MDT communication and training plan. The consultant-level standard is to hold patient safety, procedural fairness, education and governance together.`,
+The registrar's belief that consultants expected independent coping suggests unsafe escalation culture. I would set mandatory escalation thresholds, meet the NUM to restore role clarity, and develop a remediation plan with closer supervision, case review, prescribing teaching and observed assessments. Supporting training must occur alongside protecting patients.`,
   },
   {
     id: "GOV-005",
     questionNumber: "MEQ-072",
     topic: "governance",
     difficulty: "consultant",
-    title: "Coronial inquiry and defensible documentation",
+    title: "Coronial Inquiry and Defensible Documentation",
     candidateRole: "Consultant psychiatrist, community mental health team clinical lead",
     setting: "Community mental health service after patient death",
     stem: `You are the consultant psychiatrist clinical lead of a community mental health team.
@@ -396,82 +154,21 @@ A junior clinician documented the call as "partner anxious" and no senior review
 Staff are distressed and worried about blame. You must lead the immediate response, documentation review and service learning process.`,
     totalMarks: 22,
     signals: [
-      {
-        id: "s1",
-        name: "Missed collateral warning signs",
-        category: "collateral",
-        severity: "critical",
-        clueInStem: "He has given away his tools and keeps saying we'll be better off without him.",
-        whyItMatters: "Preparatory behaviour and burdensomeness statements are high-risk warning signs; missing collateral may be a major systems failure.",
-        modelWording: "Identify the partner's collateral as significant dynamic suicide risk requiring senior review and safety action.",
-        keywords: ["collateral warning", "preparatory behaviour", "burdensomeness", "suicide risk", "senior review", "family call"],
-      },
-      {
-        id: "s2",
-        name: "Inadequate risk formulation documentation",
-        category: "governance",
-        severity: "critical",
-        clueInStem: "denies suicidal ideation, low risk",
-        whyItMatters: "A denial-based risk label is not defensible without formulation, context and rationale.",
-        modelWording: "Critique reliance on denial of suicidal ideation and absence of documented risk formulation.",
-        keywords: ["risk formulation", "denial of suicidal ideation", "documentation", "defensibility", "coronial inquiry", "low risk"],
-      },
-      {
-        id: "s3",
-        name: "Need for immediate postvention and family response",
-        category: "family_carer",
-        severity: "important",
-        clueInStem: "You ignored our warning.",
-        whyItMatters: "Family communication must be compassionate, transparent and coordinated without speculative defensiveness.",
-        modelWording: "Provide compassionate family contact, acknowledge distress, explain review process and avoid premature conclusions.",
-        keywords: ["postvention", "family communication", "open disclosure", "complaint", "bereavement", "transparency"],
-      },
-      {
-        id: "s4",
-        name: "Senior review escalation failure",
-        category: "governance",
-        severity: "important",
-        clueInStem: "no senior review occurred.",
-        whyItMatters: "Failure to escalate collateral risk indicates possible service process gap.",
-        modelWording: "Review escalation processes for high-risk collateral calls and after-hours clinical decision-making.",
-        keywords: ["senior review", "escalation failure", "service process", "clinical governance", "risk call"],
-      },
-      {
-        id: "s5",
-        name: "Staff distress and blame anxiety",
-        category: "mdt_conflict",
-        severity: "important",
-        clueInStem: "Staff are distressed and worried about blame.",
-        whyItMatters: "A just culture response supports staff while preserving accountability and learning.",
-        modelWording: "Use a just culture approach: support staff, preserve records and focus on systems learning.",
-        keywords: ["just culture", "staff support", "blame", "debrief", "systems learning", "psychological safety"],
-      },
-      {
-        id: "s6",
-        name: "Records request and coronial process",
-        category: "governance",
-        severity: "optional",
-        clueInStem: "a coronial investigation is likely",
-        whyItMatters: "Records must be preserved, factual and managed through appropriate governance/legal channels.",
-        modelWording: "Preserve records and coordinate information release through appropriate legal and governance processes.",
-        keywords: ["coronial investigation", "records request", "preserve records", "legal process", "documentation review"],
-      },
+      { id: "s1", name: "Partner reported preparatory behaviour and burdensomeness", category: "collateral", severity: "critical", clueInStem: "His partner had phoned the team the day before death saying, \"He has given away his tools and keeps saying we'll be better off without him.\"", whyItMatters: "Missing this signal means the candidate has not recognised family collateral describing dynamic warning signs immediately before death.", modelWording: "Identify the partner's collateral as significant dynamic risk because giving away tools and burdensomeness required senior review.", keywords: ["collateral warning", "preparatory behaviour", "burdensomeness", "suicide risk", "senior review", "family call"] },
+      { id: "s2", name: "Denial-based low-risk note was not a formulation", category: "governance", severity: "critical", clueInStem: "The file notes state \"denies suicidal ideation, low risk,\" but there is no documented formulation.", whyItMatters: "Missing this signal means the candidate has accepted a risk label that failed to reconcile denial with behaviour, collateral and context.", modelWording: "Critique the denial-based low-risk note because defensible documentation requires synthesis of collateral, behaviour and context.", keywords: ["risk formulation", "denial of suicidal ideation", "documentation", "defensibility", "coronial inquiry", "low risk"] },
+      { id: "s3", name: "Death occurred in high-risk post-discharge period", category: "disposition", severity: "critical", clueInStem: "Daniel, a 41-year-old man with recurrent depression and alcohol dependence, died by suicide two days after discharge from crisis team follow-up.", whyItMatters: "Missing this signal means the candidate has not linked the death to the need to review transition planning after crisis-team discharge.", modelWording: "Review the crisis-team discharge plan because death two days later occurred during a high-risk transition period.", keywords: ["post-discharge", "crisis team", "transition", "suicide", "follow-up", "disposition"] },
+      { id: "s4", name: "Partner's warning was minimised by junior triage", category: "governance", severity: "important", clueInStem: "A junior clinician documented the call as \"partner anxious\" and no senior review occurred.", whyItMatters: "Missing this signal means the candidate has not identified the triage and escalation failure that converted warning information into reassurance.", modelWording: "Review escalation processes because documenting the caller as anxious without senior review minimised clinically significant warning signs.", keywords: ["senior review", "escalation failure", "service process", "clinical governance", "risk call"] },
+      { id: "s5", name: "Family requires compassionate response and postvention", category: "family_carer", severity: "important", clueInStem: "The family has requested records and says, \"You ignored our warning.\"", whyItMatters: "Missing this signal means the candidate has focused on defensibility rather than family distress, communication and postvention duties.", modelWording: "Provide compassionate family contact and explain the review process because the family experienced their warning as ignored.", keywords: ["postvention", "family communication", "open disclosure", "complaint", "bereavement", "transparency"] },
+      { id: "s6", name: "Coronial process requires record preservation and factual review", category: "governance", severity: "important", clueInStem: "The service manager tells you a coronial investigation is likely and asks you to review the case.", whyItMatters: "Missing this signal means the candidate has not protected the integrity of records and review processes once coronial scrutiny is likely.", modelWording: "Preserve records and coordinate information release through legal and governance processes because coronial investigation is likely.", keywords: ["coronial investigation", "records request", "preserve records", "legal process", "documentation review"] },
+      { id: "s7", name: "Staff distress requires just-culture leadership", category: "mdt_conflict", severity: "important", clueInStem: "Staff are distressed and worried about blame.", whyItMatters: "Missing this signal means the candidate has not supported staff while still requiring honest analysis of decision-making and systems failures.", modelWording: "Use a just-culture approach because staff need support while the service examines documentation, escalation and discharge processes.", keywords: ["just culture", "staff support", "blame", "debrief", "systems learning", "psychological safety"] },
     ],
-    priorityOrder: {
-      urgent: ["s1", "s2"],
-      secondary: ["s3", "s4", "s5"],
-      lowYield: ["s6"],
-    },
-    modelAnswer: `Daniel's death needs to be approached as a serious incident with potential coronial scrutiny, but the clinical heart of the review is already visible in the stem. The partner's call that "He has given away his tools and keeps saying we'll be better off without him" was not simply an anxious family call. Giving away meaningful possessions and expressing perceived burdensomeness are major dynamic suicide warning signs. In a man with recurrent depression and alcohol dependence, two days after discharge from crisis follow-up, that collateral should have triggered senior review and active safety planning.
+    priorityOrder: { urgent: ["s1", "s2", "s3"], secondary: ["s4", "s5", "s6", "s7"], lowYield: [] },
+    modelAnswer: `Daniel's death must be managed as a serious incident with likely external scrutiny. He died two days after discharge from crisis team follow-up, so the review must examine the discharge plan, transition supports, alcohol-risk management and follow-up arrangements.
 
-The file note "denies suicidal ideation, low risk" is not defensible as a risk formulation. It records one negative symptom response and then applies a label. It does not reconcile the denial with the partner's warning, alcohol dependence, recent crisis involvement, possible preparatory behaviour, or the very high-risk transition period after discharge. I would explicitly identify this in the review: the failure was not that risk prediction is impossible, but that available dynamic risk information was not adequately weighted or escalated.
+The partner's phone call was clinically important. She said he had given away his tools and kept saying they would be better off without him. That collateral should have been treated as dynamic risk information requiring senior review, not recorded simply as an anxious family call.
 
-The junior clinician's documentation of the call as "partner anxious" and the fact that "no senior review occurred" suggest a system problem in triage and escalation. I would construct a factual timeline: when the call came, who took it, what was documented, what policies exist for collateral suicide warnings, whether the clinician had supervision available, whether the partner was called back, and what attempts were made to contact Daniel. I would review whether the service culture unintentionally discounts family collateral when the patient denies suicidal ideation.
+The file note "denies suicidal ideation, low risk" is not a defensible formulation. It does not integrate family collateral, recurrent depression, alcohol dependence, recent crisis-team discharge or behavioural warning signs. The review should identify this as a documentation and formulation failure rather than pretending risk assessment was adequate because denial was recorded.
 
-The family's statement, "You ignored our warning," requires a compassionate and transparent response. I would not become defensive or speculate about causation. I would arrange senior contact through an open disclosure and postvention pathway, acknowledge the family's distress, explain that the service is reviewing the care, provide information about support and complaints processes, and preserve all records. If a coronial investigation is likely, communication should be factual, empathic and coordinated with governance/legal advice, but not evasive.
-
-Staff are "distressed and worried about blame," so I would lead this as a just-culture review. That means supporting staff while still asking hard questions about decision-making, documentation and escalation. Just culture does not mean no accountability; it means distinguishing human error, system weakness, training needs and reckless practice. The review should lead to concrete improvements, such as mandatory senior review for collateral involving preparatory behaviour, clearer documentation standards, family-call escalation protocols, and safer discharge-from-crisis procedures.
-
-My documentation and governance response would include preservation of the record, incident notification, timeline, family contact, staff support, clinical review findings and action plan. The consultant-level lesson is that suicide-risk assessment must synthesise behaviour, collateral and context, not rely on "denies suicidal ideation." Daniel's partner gave the team a clinically significant warning; the service response must acknowledge that and improve the system that allowed it to be minimised.`,
+The family require compassionate contact, explanation of the review process and appropriate postvention support. Records should be preserved and any release managed through governance and legal channels because a coronial investigation is likely. Staff are distressed and worried about blame, so I would lead a just-culture review that supports them while still examining escalation, documentation and discharge-process failures honestly.`,
   },
 ];
