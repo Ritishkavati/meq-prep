@@ -1,8 +1,4 @@
-// ============================================================
-// PERINATAL QUESTIONS — PER_STEMS
-// ============================================================
-
-import { QuizStem } from "../quizData";
+import type { QuizStem } from "../quizData";
 
 export const PER_STEMS: QuizStem[] = [
   {
@@ -22,87 +18,27 @@ The summary does not name Lily or include a child safety assessment. Breastfeedi
 You note from the referral documentation that Aisha arrived in Australia from Somalia three years ago, has no extended family in Australia, and her husband works long hours and was not involved in the admission. The registrar who wrote the summary asks you to co-sign so Aisha can go home today.`,
     totalMarks: 22,
     signals: [
-      {
-        id: "s1",
-        name: "Do not co-sign — child safety assessment absent",
-        category: "child_protection",
-        severity: "critical",
-        clueInStem: "The summary does not name Lily or include a child safety assessment.",
-        whyItMatters: "Any discharge from a mother-baby unit requires explicit documentation of the infant's safety assessment, parenting capacity observations, and a child safeguarding plan. Lily is a vulnerable third party — co-signing without this creates medico-legal exposure and infant safety risk.",
-        modelWording: "I will not co-sign this summary. Lily must be named and a child safety assessment documented — including parenting capacity observations during the six-week admission, infant attachment quality, and a specific community safety plan for Lily.",
-        keywords: ["lily", "child safety", "infant", "not co-sign", "parenting capacity", "safeguarding", "child assessment", "named"],
-      },
-      {
-        id: "s2",
-        name: "Postpartum psychosis relapse risk — no perinatal relapse prevention plan",
-        category: "risk_self",
-        severity: "critical",
-        clueInStem: "postpartum psychotic episode — her first psychiatric presentation",
-        whyItMatters: "Postpartum psychosis carries a 50% recurrence risk in subsequent pregnancies and significant relapse risk in the months after the current episode. A perinatal-specific relapse prevention plan is essential — its absence makes this discharge clinically unsafe.",
-        modelWording: "A perinatal-specific relapse prevention plan must be written before discharge: agreed early warning signs, crisis escalation pathway, what to do if Aisha deteriorates at home alone with Lily, and guidance for any future pregnancy.",
-        keywords: ["relapse prevention", "postpartum", "perinatal", "early warning", "recurrence", "future pregnancy", "contingency", "50 percent"],
-      },
-      {
-        id: "s3",
-        name: "Olanzapine and breastfeeding not addressed",
-        category: "physical_health",
-        severity: "critical",
-        clueInStem: "continue olanzapine 10mg",
-        whyItMatters: "Prescribing olanzapine at discharge without addressing breastfeeding is a clinical documentation failure. If Aisha is breastfeeding, infant exposure through breast milk must be discussed and documented. The risk-benefit discussion and Aisha's informed decision must be recorded.",
-        modelWording: "The olanzapine and breastfeeding decision must be explicitly documented — the risk-benefit discussion, Aisha's informed decision, and any infant monitoring requirements must be written before discharge.",
-        keywords: ["breastfeeding", "olanzapine", "breast milk", "lactation", "infant exposure", "breastfeed", "medication safety", "informed decision"],
-      },
-      {
-        id: "s4",
-        name: "Social isolation — Somali background, no family, husband not involved",
-        category: "cultural_safety",
-        severity: "critical",
-        clueInStem: "arrived in Australia from Somalia three years ago, has no extended family in Australia, and her husband works long hours and was not involved in the admission.",
-        whyItMatters: "Aisha is being discharged into profound social isolation with a newborn. The highest-risk period after postpartum psychosis is when a mother is alone with her infant. The discharge plan must explicitly address who will be present, what support is in place, and what happens if she deteriorates alone with Lily.",
-        modelWording: "The discharge plan must explicitly address Aisha's home situation — no Australian family network, husband absent throughout admission, newborn infant. Who will be present in the first weeks? What community supports are arranged? What is the plan if she deteriorates alone with Lily?",
-        keywords: ["social isolation", "no family", "husband", "alone", "support", "somali", "cultural", "community support", "isolated"],
-      },
-      {
-        id: "s5",
-        name: "Four-week follow-up is too long",
-        category: "disposition",
-        severity: "important",
-        clueInStem: "Follow up with perinatal outpatient clinic in 4 weeks.",
-        whyItMatters: "The highest-risk period after postpartum psychosis discharge is the first one to two weeks. Four weeks is clinically unsafe — community perinatal team contact within 48-72 hours and clinical review within one week is the standard of care.",
-        modelWording: "Four-week follow-up is clinically insufficient for postpartum psychosis discharge. I will change this to community perinatal team contact within 48-72 hours and clinical review within one week before co-signing.",
-        keywords: ["four weeks", "too long", "48 hours", "72 hours", "one week", "community", "perinatal", "follow-up insufficient"],
-      },
-      {
-        id: "s6",
-        name: "Teaching opportunity — registrar needs perinatal discharge standards",
-        category: "governance",
-        severity: "important",
-        clueInStem: "The registrar who wrote the summary asks you to co-sign so Aisha can go home today.",
-        whyItMatters: "This is a supervision opportunity. The registrar needs to understand why perinatal discharge documentation has a higher standard — the infant's life and Aisha's safety depend on getting this right.",
-        modelWording: "I will supervise the registrar in rewriting this summary — explaining what a perinatal discharge requires and why each element protects Aisha and Lily. Co-signing an inadequate summary is not an option regardless of time pressure.",
-        keywords: ["teach", "supervision", "registrar", "perinatal standard", "co-sign", "educate", "rewrite"],
-      },
+      { id: "s1", name: "Consultant should not co-sign an unsafe perinatal discharge", category: "governance", severity: "critical", clueInStem: "A discharge summary for Aisha, a 29-year-old Somali-Australian woman, is awaiting your co-signature.", whyItMatters: "Missing this signal means the candidate has accepted consultant responsibility for a discharge document that omits perinatal and infant-safety essentials.", modelWording: "Refuse to co-sign until the summary and discharge plan are corrected because consultant signature would endorse unsafe perinatal care.", keywords: ["co-sign", "consultant responsibility", "discharge summary", "perinatal", "unsafe"] },
+      { id: "s2", name: "Postpartum psychosis must be named explicitly", category: "diagnosis_formulation", severity: "critical", clueInStem: "Aisha was admitted six weeks ago following a postpartum psychotic episode — her first psychiatric presentation — three weeks after the birth of her daughter Lily.", whyItMatters: "Missing this signal means the summary under-communicates the diagnosis and relapse implications of a recent postpartum psychotic episode.", modelWording: "Name postpartum psychosis clearly because it shapes relapse prevention, infant safety, future pregnancy counselling and follow-up intensity.", keywords: ["postpartum psychosis", "diagnosis", "relapse", "future pregnancy", "perinatal"] },
+      { id: "s3", name: "Brief psychotic episode label minimises perinatal risk", category: "diagnosis_formulation", severity: "important", clueInStem: "Diagnosis: brief psychotic episode.", whyItMatters: "Missing this signal means the candidate has accepted a generic diagnostic label that may mislead the GP and community team about postpartum-specific risk.", modelWording: "Correct the diagnosis wording because a generic brief psychotic episode label does not communicate postpartum psychosis risk.", keywords: ["brief psychotic episode", "diagnosis", "postpartum", "risk communication"] },
+      { id: "s4", name: "Lily is unnamed and child safety is undocumented", category: "child_protection", severity: "critical", clueInStem: "The summary does not name Lily or include a child safety assessment.", whyItMatters: "Missing this signal means the baby being discharged from a mother-baby unit has no documented safety assessment.", modelWording: "Name Lily and document child safety because discharge home with a baby requires explicit infant-safety reasoning.", keywords: ["Lily", "child safety", "infant", "safeguarding", "baby"] },
+      { id: "s5", name: "Breastfeeding and olanzapine discussion is missing", category: "physical_health", severity: "important", clueInStem: "Breastfeeding and olanzapine compatibility is not addressed.", whyItMatters: "Missing this signal means Aisha and Lily leave without documented counselling about medication, feeding choice and infant monitoring.", modelWording: "Document the olanzapine and breastfeeding discussion because Aisha needs informed medication and feeding guidance.", keywords: ["olanzapine", "breastfeeding", "infant monitoring", "medication", "feeding"] },
+      { id: "s6", name: "Perinatal relapse and home deterioration plans are absent", category: "risk_self", severity: "critical", clueInStem: "There is no relapse prevention plan specific to the perinatal context and no contingency plan if Aisha deteriorates at home.", whyItMatters: "Missing this signal means the family and services have no plan for early warning signs or deterioration while Aisha is caring for Lily.", modelWording: "Write a perinatal relapse and contingency plan because postpartum psychosis can recur rapidly and affects both mother and infant safety.", keywords: ["relapse prevention", "contingency", "deteriorates at home", "early warning", "perinatal"] },
+      { id: "s7", name: "Four-week follow-up is too delayed", category: "disposition", severity: "important", clueInStem: "Follow up with perinatal outpatient clinic in 4 weeks.", whyItMatters: "Missing this signal means the candidate has accepted routine follow-up after a high-risk mother-baby discharge.", modelWording: "Arrange earlier perinatal follow-up because four weeks is too delayed after postpartum psychosis discharge.", keywords: ["four weeks", "follow-up", "perinatal outpatient", "early review"] },
+      { id: "s8", name: "Migration isolation and absent partner involvement increase vulnerability", category: "cultural_safety", severity: "important", clueInStem: "Aisha arrived in Australia from Somalia three years ago, has no extended family in Australia, and her husband works long hours and was not involved in the admission.", whyItMatters: "Missing this signal means the discharge plan assumes support that the stem says may not exist.", modelWording: "Assess culturally safe practical supports because migration isolation and limited partner involvement increase discharge vulnerability.", keywords: ["Somalia", "no extended family", "husband", "social isolation", "cultural safety"] },
+      { id: "s9", name: "Same-day discharge pressure should not override safety", category: "system_pressure", severity: "important", clueInStem: "The registrar who wrote the summary asks you to co-sign so Aisha can go home today.", whyItMatters: "Missing this signal means time pressure has replaced completion of perinatal discharge safeguards.", modelWording: "Pause same-day discharge if safeguards are incomplete because speed cannot override infant safety and relapse planning.", keywords: ["go home today", "pressure", "discharge", "safeguards", "registrar"] },
     ],
-    priorityOrder: {
-      urgent: ["s1", "s2", "s3", "s4"],
-      secondary: ["s5", "s6"],
-      lowYield: [],
-    },
-    modelAnswer: `I will not co-sign this summary. I will return it to the registrar with required additions before discharge proceeds.
+    priorityOrder: { urgent: ["s1", "s2", "s4", "s6"], secondary: ["s3", "s5", "s7", "s8", "s9"], lowYield: [] },
+    modelAnswer: `I would not co-sign the summary or allow discharge to proceed on the current documentation. Aisha was admitted after a postpartum psychotic episode three weeks after Lily's birth, yet the summary calls it a brief psychotic episode and gives a routine plan. That wording fails to communicate the perinatal diagnosis, relapse risk, infant-safety implications and need for close follow-up.
 
-Child safety: Lily must be named and a child safety assessment documented — including parenting capacity observations from the six-week admission, infant attachment quality, and a specific community safety plan for Lily.
+Lily must be named and her safety explicitly documented. A vague statement that Aisha is bonding appropriately is not enough for a mother-baby discharge. The corrected summary should include parenting observations from admission, feeding and settling, responsiveness, supervision needs, protective factors and any safeguarding concerns or child protection involvement.
 
-Breastfeeding: The olanzapine and breastfeeding decision must be explicitly documented — the risk-benefit discussion, Aisha's informed decision, and any infant monitoring plan.
+The medication and feeding plan is also incomplete. Aisha is to continue olanzapine 10 mg, but breastfeeding and olanzapine compatibility are not addressed. I would document the risk-benefit discussion, Aisha's feeding decision and any monitoring needed for Lily.
 
-Relapse prevention: A perinatal-specific relapse prevention plan must be written — agreed early warning signs, crisis escalation pathway, what to do if she deteriorates at home with Lily, and guidance for any future pregnancy. Postpartum psychosis carries a 50% recurrence risk in subsequent pregnancies.
+The discharge plan must include perinatal relapse prevention and a home contingency plan. It should list early warning signs, sleep-protection arrangements, medication adherence, what her husband should do if symptoms return, emergency contacts, after-hours escalation and what happens if she deteriorates while alone with Lily. Four-week follow-up is too delayed; early perinatal community contact and senior review should be arranged.
 
-Social isolation: The discharge plan must explicitly address Aisha's home situation. No Australian family, husband absent throughout admission, newborn infant — who will be present? What community supports are arranged? What is the plan if she deteriorates alone with Lily?
-
-Follow-up: Four weeks is clinically unsafe. Community perinatal team contact within 48-72 hours and clinical review within one week is the minimum standard after postpartum psychosis discharge.
-
-Teaching: I will supervise the registrar in rewriting this summary before any co-signature occurs.`,
+The social and cultural context makes discharge more vulnerable. Aisha arrived from Somalia three years ago, has no extended family in Australia, and her husband works long hours and was not involved in the admission. I would involve him before discharge, assess culturally appropriate supports, link maternal-child health and community perinatal services, and supervise the registrar to rewrite the summary before any co-signature occurs.`,
   },
-
   {
     id: "PER-002",
     questionNumber: "MEQ-092",
@@ -118,97 +54,26 @@ Mei reports worsening low mood, inability to sleep, poor appetite and passive su
 The obstetrician's referral letter notes the foetus has mild growth restriction on the last scan. Mei's mother, who is visiting from China, is the only local support and speaks no English.`,
     totalMarks: 25,
     signals: [
-      {
-        id: "s1",
-        name: "Domestic violence — mandatory consideration and safety planning",
-        category: "immediate_safety",
-        severity: "critical",
-        clueInStem: "husband has been pushing and grabbing her during arguments since the pregnancy began.",
-        whyItMatters: "Domestic violence escalates during pregnancy and is a leading cause of maternal mortality. Mei's disclosure requires immediate safety assessment, safety planning, and consideration of mandatory reporting obligations. Her request not to document cannot override safety obligations.",
-        modelWording: "Mei's disclosure of physical violence during pregnancy is the immediate priority. I must assess the frequency, severity and pattern of violence, Mei's immediate safety, the safety plan, and whether mandatory reporting obligations apply in this jurisdiction.",
-        keywords: ["domestic violence", "pushing", "grabbing", "safety plan", "mandatory reporting", "family violence", "pregnancy violence", "immediate safety"],
-      },
-      {
-        id: "s2",
-        name: "Passive suicidal ideation in pregnancy — risk assessment required",
-        category: "risk_self",
-        severity: "critical",
-        clueInStem: "Sometimes I think everyone would be better off without me.",
-        whyItMatters: "Passive suicidal ideation in a pregnant woman with untreated depression, domestic violence, and social isolation represents significant risk to both Mei and the foetus. This must be directly assessed — not normalised as pregnancy-related mood change.",
-        modelWording: "Passive suicidal ideation in a pregnant woman with untreated MDD, domestic violence, and social isolation requires direct risk assessment: intent, plan, means, protective factors including attachment to the foetus, and capacity to engage with safety planning.",
-        keywords: ["suicidal ideation", "passive suicidal", "better off without me", "risk assessment", "pregnancy", "foetal risk", "maternal suicide"],
-      },
-      {
-        id: "s3",
-        name: "Untreated MDD in pregnancy — foetal and maternal risk of non-treatment",
-        category: "physical_health",
-        severity: "critical",
-        clueInStem: "stopped sertraline at six weeks gestation because I read online it harms the baby.",
-        whyItMatters: "Untreated depression in pregnancy causes foetal growth restriction, preterm birth, and impaired foetal neurodevelopment — risks that exceed the well-established safety profile of sertraline in pregnancy. Mei's decision was based on misinformation that must be corrected.",
-        modelWording: "The risks of untreated depression in pregnancy — including foetal growth restriction already present — exceed the risks of sertraline at therapeutic doses. I will provide evidence-based psychoeducation about antidepressant safety in pregnancy and discuss restarting sertraline.",
-        keywords: ["sertraline", "antidepressant", "pregnancy", "foetal risk", "untreated depression", "misinformation", "growth restriction", "evidence-based"],
-      },
-      {
-        id: "s4",
-        name: "Husband's controlling behaviour in consultation — collateral unreliable",
-        category: "collateral",
-        severity: "important",
-        clueInStem: "husband sits with arms crossed and answers questions directed at Mei before she can respond.",
-        whyItMatters: "A partner who answers questions on behalf of the patient in a medical consultation is a red flag for coercive control. Any collateral history from the husband is unreliable and Mei's true presentation could only be assessed when seen alone.",
-        modelWording: "The husband's behaviour of answering for Mei is a clinical red flag for coercive control. All future consultations must include time alone with Mei. Collateral history from the husband must be treated with caution.",
-        keywords: ["coercive control", "husband answering", "seen alone", "collateral unreliable", "controlling behaviour", "consultation", "red flag"],
-      },
-      {
-        id: "s5",
-        name: "Cultural context — Chinese-Australian, stigma, family pressure",
-        category: "cultural_safety",
-        severity: "important",
-        clueInStem: "Chinese-Australian woman; mother visiting from China; speaks no English.",
-        whyItMatters: "Cultural beliefs about mental illness, medication in pregnancy, and domestic violence may significantly affect Mei's engagement with treatment and her ability to safety plan. The mother's presence is both a support and a potential barrier depending on family dynamics.",
-        modelWording: "Mei's Chinese-Australian background requires culturally sensitive engagement — exploring cultural beliefs about depression, medication, and domestic violence without assumptions. The mother's role must be assessed: is she a protective factor or does she reinforce minimisation of the violence?",
-        keywords: ["cultural", "chinese", "stigma", "family pressure", "cultural safety", "mother", "beliefs", "medication beliefs"],
-      },
-      {
-        id: "s6",
-        name: "Foetal wellbeing — growth restriction linked to maternal distress",
-        category: "risk_vulnerable",
-        severity: "important",
-        clueInStem: "foetus has mild growth restriction on the last scan.",
-        whyItMatters: "Foetal growth restriction in the context of untreated maternal depression, domestic violence, and nutritional compromise is a clinical signal requiring obstetric coordination and urgent treatment of contributing factors.",
-        modelWording: "Foetal growth restriction in this context is likely multifactorial — untreated depression, domestic violence stress, poor appetite, and possible nutritional deficiency all contribute. I will coordinate with obstetrics and recommend urgent treatment of the depression.",
-        keywords: ["foetal growth restriction", "foetus", "foetal wellbeing", "obstetric", "coordination", "growth", "scan", "unborn"],
-      },
-      {
-        id: "s7",
-        name: "Confidentiality limits — request not to document domestic violence",
-        category: "ethics",
-        severity: "important",
-        clueInStem: "She asks you not to document this.",
-        whyItMatters: "Mei's request not to document the violence creates an ethical tension between confidentiality and the duty of care to her and the foetus. The clinician cannot agree to omit clinically relevant safety information from the medical record.",
-        modelWording: "I will explain to Mei that I cannot omit clinically relevant safety information from the medical record — but I will discuss with her how it is documented and what happens next. Her concerns about the consequences of documentation must be heard and addressed.",
-        keywords: ["confidentiality", "not document", "request", "limits", "ethics", "safety information", "medical record", "duty of care"],
-      },
+      { id: "s1", name: "Sertraline cessation was based on pregnancy medication misinformation", category: "consent_refusal", severity: "critical", clueInStem: "She stopped sertraline at six weeks gestation \"because I read online it harms the baby.\"", whyItMatters: "Missing this signal means the candidate has not corrected the misinformation driving untreated recurrent depression in pregnancy.", modelWording: "Provide balanced medication counselling because Mei stopped effective sertraline based on online fear rather than informed risk-benefit advice.", keywords: ["sertraline", "pregnancy", "misinformation", "risk-benefit", "antidepressant"] },
+      { id: "s2", name: "Worsening depression and passive suicidal ideation require risk assessment", category: "risk_self", severity: "critical", clueInStem: "Mei reports worsening low mood, inability to sleep, poor appetite and passive suicidal ideation: \"Sometimes I think everyone would be better off without me.\"", whyItMatters: "Missing this signal means the candidate has normalised antenatal depression despite suicidal thinking and functional deterioration.", modelWording: "Assess suicide risk directly because passive suicidal ideation in untreated antenatal depression can escalate and affects maternal-foetal safety.", keywords: ["passive suicidal ideation", "antenatal depression", "sleep", "appetite", "risk assessment"] },
+      { id: "s3", name: "Husband's controlling behaviour requires seeing Mei alone", category: "trauma", severity: "critical", clueInStem: "Her husband has accompanied her today but sits with his arms crossed and answers questions directed at Mei before she can respond.", whyItMatters: "Missing this signal means the candidate has missed a coercive-control cue that could prevent disclosure of violence and risk.", modelWording: "Ensure private time with Mei because her husband's controlling behaviour makes his collateral unreliable and may suppress disclosure.", keywords: ["coercive control", "husband", "answers questions", "seen alone", "family violence"] },
+      { id: "s4", name: "Physical violence in pregnancy needs safety planning", category: "immediate_safety", severity: "critical", clueInStem: "When Mei is seen alone, she becomes tearful and quietly discloses that her husband has been \"pushing and grabbing\" her during arguments since the pregnancy began.", whyItMatters: "Missing this signal means the candidate has not acted on family violence occurring during pregnancy.", modelWording: "Assess family violence severity and safety because pushing and grabbing during pregnancy threatens Mei and the foetus.", keywords: ["pushing and grabbing", "family violence", "pregnancy", "safety plan", "foetus"] },
+      { id: "s5", name: "Request not to document creates a safety-confidentiality tension", category: "ethics", severity: "important", clueInStem: "She asks you not to document this.", whyItMatters: "Missing this signal means the candidate has either breached trust insensitively or agreed to omit clinically relevant safety information.", modelWording: "Explain documentation limits sensitively because clinically relevant violence information cannot simply be omitted from the record.", keywords: ["not document", "confidentiality", "documentation", "safety", "ethics"] },
+      { id: "s6", name: "Foetal growth restriction increases urgency of coordinated care", category: "risk_vulnerable", severity: "important", clueInStem: "The obstetrician's referral letter notes the foetus has mild growth restriction on the last scan.", whyItMatters: "Missing this signal means the candidate has not linked maternal depression, poor appetite and violence stress with foetal wellbeing concerns.", modelWording: "Coordinate with obstetrics because foetal growth restriction increases the urgency of treating depression and addressing violence.", keywords: ["foetal growth restriction", "obstetrician", "foetal wellbeing", "coordination", "pregnancy"] },
+      { id: "s7", name: "Mother may be support but needs interpreter and assessment", category: "family_carer", severity: "important", clueInStem: "Mei's mother, who is visiting from China, is the only local support and speaks no English.", whyItMatters: "Missing this signal means the candidate has assumed support without assessing language barriers, safety and family attitudes.", modelWording: "Assess Mei's mother as a possible support with a professional interpreter because her role may be protective or complicated by stigma and language barriers.", keywords: ["mother", "China", "no English", "support", "interpreter", "family"] },
+      { id: "s8", name: "Chinese-Australian identity requires individual cultural formulation", category: "cultural_safety", severity: "important", clueInStem: "You are reviewing Mei, a 32-year-old Chinese-Australian woman referred by her obstetrician at 18 weeks gestation.", whyItMatters: "Missing this signal means the candidate may ignore or stereotype cultural beliefs about depression, medication, pregnancy and domestic violence.", modelWording: "Explore Mei's cultural beliefs individually because cultural safety requires curiosity without assumptions about her Chinese-Australian background.", keywords: ["Chinese-Australian", "cultural safety", "pregnancy", "medication beliefs", "stigma"] },
     ],
-    priorityOrder: {
-      urgent: ["s1", "s2", "s3"],
-      secondary: ["s4", "s5", "s6"],
-      lowYield: ["s7"],
-    },
-    modelAnswer: `Domestic violence is the immediate priority. Mei has disclosed physical violence during pregnancy — pushing and grabbing since conception began. I will assess frequency, severity, escalation, immediate safety, and safety planning. Her request not to document cannot be honoured but I will discuss with her how this is recorded and what support is available.
+    priorityOrder: { urgent: ["s2", "s3", "s4"], secondary: ["s1", "s5", "s6", "s7", "s8"], lowYield: [] },
+    modelAnswer: `Mei's immediate risks are antenatal depression, suicidal ideation and family violence. She reports worsening low mood, poor sleep, poor appetite and the thought that everyone would be better off without her. I would assess suicidal intent, plans, means, protective factors, attachment to the pregnancy, capacity to safety plan and whether she needs urgent crisis or inpatient care.
 
-Suicidal ideation: Passive suicidal ideation in a pregnant woman with untreated MDD, domestic violence, and social isolation requires direct risk assessment — intent, plan, means, and protective factors including attachment to the foetus.
+The consultation behaviour strongly suggests coercive control. Her husband answers questions directed at Mei, and she discloses only when seen alone that he has been pushing and grabbing her during arguments since the pregnancy began. I would continue to see her alone, assess violence frequency, escalation, injuries, strangulation, threats, access to weapons, immediate safety and safe ways to contact her. I would involve family violence services and consider reporting duties according to jurisdiction and risk.
 
-Sertraline in pregnancy: Mei stopped sertraline based on online misinformation. The risks of untreated depression — including the foetal growth restriction already present — exceed the well-established safety profile of sertraline at therapeutic doses. I will provide evidence-based psychoeducation and discuss restarting.
+Mei's request not to document the violence needs careful handling. I would explain that I cannot omit clinically relevant safety information, but I would discuss how it is documented, who can access it, and how to reduce risk from disclosure. Preserving trust matters, but safety information cannot be erased.
 
-Husband: His behaviour of answering Mei's questions is a red flag for coercive control. All future consultations must include time alone with Mei. Collateral from the husband is unreliable.
+Her medication decision also needs correction. She stopped sertraline because she read online that it harms the baby, yet she has recurrent major depression and is now unwell. I would provide balanced advice about sertraline and the risks of untreated depression, including sleep disruption, poor nutrition, suicide risk and possible effects on foetal wellbeing. Restarting sertraline should be discussed with obstetric coordination.
 
-Cultural context: Mei's Chinese-Australian background requires culturally sensitive engagement about depression, medication safety, and domestic violence. The mother's role — support or minimisation — needs assessment.
-
-Foetal wellbeing: Growth restriction in this context is multifactorial and requires urgent obstetric coordination alongside treatment of the depression.
-
-MDT: Perinatal social work, obstetrics, domestic violence service, and the GP must all be involved.`,
+The foetus has mild growth restriction, so obstetric liaison is important. Mei's mother is the only local support and speaks no English, so I would assess her role with a professional interpreter rather than assuming she can provide safety. I would also explore Mei's Chinese-Australian cultural beliefs about depression, medication, pregnancy and violence without stereotyping, and build a plan with obstetrics, GP, perinatal mental health, social work and family violence supports.`,
   },
-
   {
     id: "PER-003",
     questionNumber: "MEQ-093",
@@ -226,87 +91,26 @@ Her GP's referral letter notes she had significant health anxiety before the pre
 Grace has not slept more than two to three hours per night since the birth. She appears anxious and exhausted but her mental state is otherwise unremarkable. She is breastfeeding and is highly distressed by the prospect of medication.`,
     totalMarks: 22,
     signals: [
-      {
-        id: "s1",
-        name: "Perinatal OCD — not psychosis, not high-risk infanticide",
-        category: "diagnosis_formulation",
-        severity: "critical",
-        clueInStem: "These thoughts terrify me. I spend hours checking on him to make sure he is okay. I have hidden all the sharp objects.",
-        whyItMatters: "Ego-dystonic intrusive thoughts about harming the infant, accompanied by checking compulsions and avoidance, are characteristic of perinatal OCD — not psychosis and not genuine infanticide intent. Misclassifying this as a child protection emergency would be harmful and incorrect.",
-        modelWording: "Grace's presentation is characteristic of perinatal OCD: ego-dystonic intrusive thoughts that terrify her, checking rituals, and avoidance behaviour. This is not psychosis and not genuine infanticide intent — the distress and checking are themselves diagnostic.",
-        keywords: ["perinatal OCD", "ego-dystonic", "intrusive thoughts", "not psychosis", "not infanticide", "checking", "avoidance", "OCD diagnosis"],
-      },
-      {
-        id: "s2",
-        name: "Distinguish from command hallucinations or postpartum psychosis",
-        category: "diagnosis_formulation",
-        severity: "critical",
-        clueInStem: "I would never do it. These thoughts terrify me.",
-        whyItMatters: "The differential diagnosis must exclude postpartum psychosis with command hallucinations instructing harm to the infant — a genuinely high-risk presentation requiring immediate action. The ego-dystonic quality and checking behaviour effectively exclude this.",
-        modelWording: "I must explicitly exclude postpartum psychosis with command hallucinations — the key differentiator is ego-syntonicity. In OCD, the thoughts are unwanted and terrifying. In psychosis, they may be experienced as instructions or as externally imposed. Grace's presentation is clearly OCD.",
-        keywords: ["command hallucinations", "postpartum psychosis", "differential", "ego-syntonic", "ego-dystonic", "exclude psychosis", "distinguish"],
-      },
-      {
-        id: "s3",
-        name: "Child protection threshold — not met in perinatal OCD without intent",
-        category: "child_protection",
-        severity: "critical",
-        clueInStem: "please assess — very worried she may be at risk of harming the baby.",
-        whyItMatters: "The GP's framing of this as a child protection risk reflects a common clinical error — perinatal OCD with ego-dystonic intrusive thoughts does not meet the threshold for child protection notification. Acting on this misunderstanding would be traumatic and counterproductive.",
-        modelWording: "The GP's concern, though understandable, reflects a misunderstanding of perinatal OCD. Ego-dystonic intrusive thoughts in a mother who is actively protecting her infant do not meet the threshold for child protection notification. I will explain this to the GP clearly.",
-        keywords: ["child protection", "threshold", "not met", "OCD", "ego-dystonic", "no intent", "GP education", "misunderstanding"],
-      },
-      {
-        id: "s4",
-        name: "Sleep deprivation as maintaining factor",
-        category: "physical_health",
-        severity: "important",
-        clueInStem: "has not slept more than two to three hours per night since the birth.",
-        whyItMatters: "Severe sleep deprivation at six weeks postpartum maintains and worsens OCD symptoms, anxiety, and cognitive rigidity. Addressing sleep is a clinical priority alongside specific OCD treatment.",
-        modelWording: "Severe sleep deprivation is maintaining Grace's OCD symptoms. Sleep support — through partner involvement, sleep consolidation strategies, and consideration of brief pharmacological support compatible with breastfeeding — is an immediate treatment priority.",
-        keywords: ["sleep deprivation", "two to three hours", "sleep", "maintaining factor", "OCD", "anxiety", "breastfeeding", "postpartum"],
-      },
-      {
-        id: "s5",
-        name: "Husband not told — social support absent, shame driving isolation",
-        category: "family_carer",
-        severity: "important",
-        clueInStem: "I have not told my husband because he will think I am a monster and take Oliver away.",
-        whyItMatters: "Grace is managing this alone due to shame and fear. Her husband is a potential protective factor who is being excluded by stigma. Psychoeducation for both Grace and her husband about perinatal OCD is essential for recovery.",
-        modelWording: "Grace's isolation is driven by shame and catastrophic fear about her husband's reaction. With her consent, I will offer to involve her husband — explaining perinatal OCD to him would likely be protective rather than harmful.",
-        keywords: ["husband", "shame", "isolation", "not told", "stigma", "family support", "psychoeducation", "involve partner"],
-      },
-      {
-        id: "s6",
-        name: "Medication in breastfeeding — fluoxetine history, distress about medication",
-        category: "consent_refusal",
-        severity: "important",
-        clueInStem: "She is breastfeeding and is highly distressed by the prospect of medication.",
-        whyItMatters: "Grace's distress about medication must be taken seriously and addressed with accurate information. SSRIs have established safety profiles in breastfeeding. Her previous positive response to fluoxetine is clinically relevant. The risks of untreated perinatal OCD — including functional impairment and impact on mother-infant bonding — must be weighed.",
-        modelWording: "Grace's concern about medication in breastfeeding is understandable and must be addressed with evidence — SSRIs including sertraline and her previously effective fluoxetine have established safety profiles in breastfeeding. The decision must be hers, informed by accurate information.",
-        keywords: ["medication", "breastfeeding", "fluoxetine", "sertraline", "SSRI", "safety profile", "distress about medication", "informed decision"],
-      },
+      { id: "s1", name: "Intrusive harm thoughts need OCD formulation", category: "diagnosis_formulation", severity: "critical", clueInStem: "She eventually discloses that she has been having intrusive thoughts about harming Oliver — specifically about dropping him or stabbing him with kitchen knives.", whyItMatters: "Missing this signal means the candidate has not recognised the content requiring differentiation between perinatal OCD, psychosis and genuine intent.", modelWording: "Formulate the intrusive harm thoughts carefully because perinatal OCD commonly presents with unwanted infant-harm obsessions.", keywords: ["intrusive thoughts", "perinatal OCD", "Oliver", "harm thoughts", "differential"] },
+      { id: "s2", name: "Ego-dystonic distress and checking favour OCD", category: "diagnosis_formulation", severity: "critical", clueInStem: "She says, \"I would never do it. These thoughts terrify me. I spend hours checking on him to make sure he is okay. I have hidden all the sharp objects in the house.\"", whyItMatters: "Missing this signal means the candidate has misclassified protective checking and avoidance as evidence of dangerousness rather than OCD.", modelWording: "Identify ego-dystonic distress, checking and avoidance because these features support perinatal OCD rather than infanticidal intent.", keywords: ["ego-dystonic", "checking", "avoidance", "sharp objects", "OCD", "not intent"] },
+      { id: "s3", name: "Shame is preventing partner support", category: "family_carer", severity: "important", clueInStem: "She has not told her husband because \"he will think I am a monster and take Oliver away.\"", whyItMatters: "Missing this signal means Grace remains isolated by shame and fear despite a potentially protective partner role.", modelWording: "Offer partner psychoeducation with Grace's consent because accurate understanding may reduce shame and improve support.", keywords: ["husband", "monster", "shame", "support", "psychoeducation"] },
+      { id: "s4", name: "Past health anxiety and fluoxetine response inform treatment", category: "collateral", severity: "important", clueInStem: "Her GP's referral letter notes she had significant health anxiety before the pregnancy and took fluoxetine for two years in her mid-twenties.", whyItMatters: "Missing this signal means the candidate has ignored prior anxiety vulnerability and a potentially useful medication history.", modelWording: "Use the GP history to guide treatment because prior health anxiety and fluoxetine exposure support an OCD-spectrum formulation.", keywords: ["health anxiety", "fluoxetine", "GP", "history", "treatment"] },
+      { id: "s5", name: "GP concern needs education without unnecessary child protection escalation", category: "child_protection", severity: "important", clueInStem: "The GP writes: \"please assess — very worried she may be at risk of harming the baby.\"", whyItMatters: "Missing this signal means the candidate has either ignored infant safety or traumatised Grace by treating ego-dystonic OCD as a child protection emergency.", modelWording: "Educate the GP about perinatal OCD because unwanted intrusive thoughts with protective behaviour usually do not equal intent to harm.", keywords: ["GP", "risk of harming", "child protection", "education", "OCD"] },
+      { id: "s6", name: "Severe sleep deprivation is maintaining symptoms", category: "physical_health", severity: "important", clueInStem: "Grace has not slept more than two to three hours per night since the birth.", whyItMatters: "Missing this signal means the candidate has not addressed a modifiable postpartum driver of anxiety, obsessionality and exhaustion.", modelWording: "Prioritise sleep restoration because two to three hours per night can worsen intrusive thoughts and functioning.", keywords: ["sleep deprivation", "postpartum", "two to three hours", "anxiety", "OCD"] },
+      { id: "s7", name: "Otherwise unremarkable mental state reduces psychosis concern", category: "diagnosis_formulation", severity: "important", clueInStem: "She appears anxious and exhausted but her mental state is otherwise unremarkable.", whyItMatters: "Missing this signal means the candidate has not used the absence of psychotic features to refine risk and avoid over-pathologising.", modelWording: "Exclude psychosis explicitly because an otherwise unremarkable mental state supports OCD when harm thoughts are unwanted and distressing.", keywords: ["mental state", "unremarkable", "psychosis", "risk formulation", "OCD"] },
+      { id: "s8", name: "Breastfeeding medication fear requires informed choice", category: "consent_refusal", severity: "important", clueInStem: "She is breastfeeding and is highly distressed by the prospect of medication.", whyItMatters: "Missing this signal means the candidate has pushed or avoided medication without addressing Grace's breastfeeding-specific fears.", modelWording: "Discuss medication and psychological options collaboratively because breastfeeding concerns require accurate information and respect for Grace's preferences.", keywords: ["breastfeeding", "medication", "SSRI", "informed choice", "CBT"] },
     ],
-    priorityOrder: {
-      urgent: ["s1", "s2", "s3"],
-      secondary: ["s4", "s5", "s6"],
-      lowYield: [],
-    },
-    modelAnswer: `This is perinatal OCD, not postpartum psychosis and not a child protection emergency.
+    priorityOrder: { urgent: ["s1", "s2"], secondary: ["s3", "s4", "s5", "s6", "s7", "s8"], lowYield: [] },
+    modelAnswer: `Grace's presentation is most consistent with perinatal OCD, not postpartum psychosis or high-risk infanticidal intent. She has intrusive thoughts about dropping or stabbing Oliver, but she says, "I would never do it," the thoughts terrify her, she checks on him for hours and she has hidden sharp objects. The distress, ego-dystonic quality, checking and avoidance are diagnostic clues.
 
-The diagnostic key: Grace's thoughts are ego-dystonic — they terrify her, she checks compulsively, she has hidden sharp objects. These are OCD symptoms, not psychotic command hallucinations. The distress and checking behaviour are themselves diagnostic.
+I would still assess risk carefully. I would ask about intent, urges, command hallucinations, delusional beliefs, depression, suicidality, dissociation, substance use, actual caregiving, and whether Oliver is safe today. Her mental state is otherwise unremarkable apart from anxiety and exhaustion, which further supports OCD rather than psychosis.
 
-I must address the GP's concern clearly: ego-dystonic intrusive thoughts in a mother who is actively protecting her infant do not meet the threshold for child protection notification. Acting on this misunderstanding would traumatise Grace and damage the therapeutic alliance.
+The GP's concern is understandable but needs correction. Ego-dystonic intrusive thoughts in a mother who is actively protecting her baby usually do not meet a child protection threshold by themselves. Unnecessary child protection escalation could reinforce Grace's fear that she is a monster and damage engagement, although infant safety still needs to be checked and documented.
 
-Treatment: Evidence-based treatment for perinatal OCD is CBT with ERP. SSRIs — including her previously effective fluoxetine — have established safety profiles in breastfeeding. I will provide accurate information and involve Grace in the decision.
+Treatment should include psychoeducation and CBT with exposure and response prevention where available. Severe sleep deprivation is maintaining symptoms, so I would develop a sleep plan with partner involvement if Grace agrees. Her past health anxiety and previous fluoxetine treatment are relevant to formulation and medication discussion.
 
-Sleep: Severe sleep deprivation is maintaining her symptoms. Addressing sleep through partner involvement and sleep consolidation is an immediate priority.
-
-Husband: With Grace's consent I will offer to involve her husband with psychoeducation — his understanding of OCD is likely to be protective rather than threatening.
-
-Follow-up: Weekly review until symptoms are under control, then monitor through the perinatal period.`,
+Grace is breastfeeding and distressed by the prospect of medication, so I would provide accurate information about SSRI options and breastfeeding without pressuring her. With her consent, I would involve her husband in psychoeducation, because his understanding may reduce shame and increase practical support. Follow-up should be close until symptoms, sleep and confidence in caring for Oliver improve.`,
   },
-
   {
     id: "PER-004",
     questionNumber: "MEQ-094",
@@ -322,82 +126,25 @@ Natasha tells you she stopped lithium four weeks ago "because I read that it cau
 An urgent FBC and lithium level are pending. The obstetrician calls while you are in the consultation and says, "If she is on lithium we need to know — there are cardiac screening implications."`,
     totalMarks: 25,
     signals: [
-      {
-        id: "s1",
-        name: "High relapse risk — lithium cessation with severe bipolar history",
-        category: "immediate_safety",
-        severity: "critical",
-        clueInStem: "Last time she stopped lithium without telling anyone, she was manic within six weeks.",
-        whyItMatters: "Lithium cessation in a woman with bipolar I disorder including a forensic admission carries a very high relapse risk. Manic relapse in pregnancy has serious consequences for the mother, the foetus, and the family — including risk to the foetus if emergency treatment is required.",
-        modelWording: "Lithium cessation four weeks ago in a woman with three severe manic episodes including a forensic admission creates a high and time-sensitive relapse risk. The partner's collateral about a six-week relapse timeline after prior cessation is the most important clinical fact in this consultation.",
-        keywords: ["lithium cessation", "relapse risk", "bipolar I", "manic episode", "six weeks", "forensic", "high risk", "urgent"],
-      },
-      {
-        id: "s2",
-        name: "Informed consent — lithium teratogenicity risk is lower than Natasha believes",
-        category: "consent_refusal",
-        severity: "critical",
-        clueInStem: "stopped lithium four weeks ago because I read that it causes heart defects.",
-        whyItMatters: "Natasha's decision to stop lithium was based on outdated information. The absolute risk of Ebstein's anomaly from first-trimester lithium exposure is approximately 1-2 per 1000 — far lower than the risk of untreated bipolar disorder in pregnancy. Her consent to stop was not truly informed.",
-        modelWording: "Natasha stopped lithium based on outdated and exaggerated teratogenicity information. The absolute risk of cardiac defect from lithium is approximately 0.1-0.2% — this must be weighed against the very high risk of manic relapse, which itself carries foetal, obstetric, and safety risks.",
-        keywords: ["lithium", "teratogenicity", "Ebstein", "cardiac defect", "informed consent", "misinformation", "absolute risk", "risk-benefit"],
-      },
-      {
-        id: "s3",
-        name: "Obstetric communication — lithium cessation must be disclosed",
-        category: "governance",
-        severity: "critical",
-        clueInStem: "She has not told her obstetrician. The obstetrician calls and says if she is on lithium we need to know.",
-        whyItMatters: "The obstetrician needs accurate medication history to plan foetal cardiac screening. Natasha's withholding of this information — however understandable — creates clinical risk. With her consent I will communicate the full picture to obstetrics.",
-        modelWording: "The obstetrician requires accurate information about Natasha's medication history for appropriate foetal cardiac screening. With Natasha's consent I will communicate the lithium history, the cessation, and the relapse risk to obstetrics today.",
-        keywords: ["obstetrician", "communicate", "not told", "cardiac screening", "foetal", "obstetric", "coordination", "consent to share"],
-      },
-      {
-        id: "s4",
-        name: "Partner collateral is the most important risk signal",
-        category: "collateral",
-        severity: "important",
-        clueInStem: "Last time she stopped lithium without telling anyone, she was manic within six weeks. I can't go through that again.",
-        whyItMatters: "The partner has direct experience of Natasha's relapse pattern after lithium cessation. His collateral provides the most accurate relapse timeline and must be explicitly incorporated into the risk formulation — alongside his evident carer distress.",
-        modelWording: "The partner's account of a six-week relapse timeline after prior lithium cessation is the most clinically useful piece of collateral in this consultation. His distress also requires acknowledgement — he is a carer under significant stress.",
-        keywords: ["partner collateral", "relapse timeline", "six weeks", "prior cessation", "carer distress", "collateral", "most important"],
-      },
-      {
-        id: "s5",
-        name: "Alternative mood stabilisers in pregnancy — options and limitations",
-        category: "physical_health",
-        severity: "important",
-        clueInStem: "I feel completely fine. I don't think I need medication in pregnancy.",
-        whyItMatters: "If Natasha continues to refuse lithium, alternatives must be discussed — but lamotrigine is not effective for mania prevention, and valproate is contraindicated in pregnancy. Quetiapine has some evidence. The risk of no mood stabiliser in this clinical context is very high.",
-        modelWording: "If Natasha refuses lithium, I will discuss alternatives — noting that lamotrigine does not prevent mania, valproate is absolutely contraindicated in pregnancy, and quetiapine has limited but some evidence. The safest option for this clinical picture is likely restarting lithium with foetal cardiac monitoring.",
-        keywords: ["mood stabiliser", "lamotrigine", "valproate", "contraindicated", "quetiapine", "alternatives", "lithium restart", "mania prevention"],
-      },
-      {
-        id: "s6",
-        name: "MHA consideration if relapse occurs in pregnancy",
-        category: "mental_health_act",
-        severity: "important",
-        clueInStem: "three severe manic episodes, one of which required a forensic psychiatric admission after she assaulted a family member.",
-        whyItMatters: "If Natasha relapses in pregnancy, the complexity of involuntary psychiatric treatment in a pregnant woman — including medication choices, physical restraint implications, and foetal monitoring — must be anticipated and planned for now.",
-        modelWording: "Given the forensic admission history, I will develop an advance care plan with Natasha now — including agreed early warning signs, agreed response plan, and her preferences about treatment if she relapses in pregnancy. This is better done now than in crisis.",
-        keywords: ["MHA", "advance care plan", "relapse in pregnancy", "forensic", "involuntary", "treatment plan", "early warning signs", "crisis plan"],
-      },
+      { id: "s1", name: "Severe bipolar history makes relapse high consequence", category: "diagnosis_formulation", severity: "critical", clueInStem: "She has had three severe manic episodes, one of which required a forensic psychiatric admission after she assaulted a family member.", whyItMatters: "Missing this signal means the candidate has treated medication refusal as low risk despite a history of severe mania and violence.", modelWording: "Formulate relapse as high consequence because Natasha's prior mania included forensic admission after assault.", keywords: ["bipolar I", "mania", "forensic admission", "assault", "relapse risk"] },
+      { id: "s2", name: "Stopping lithium after four years of stability is time-sensitive", category: "immediate_safety", severity: "critical", clueInStem: "She has been stable on lithium 800mg daily for four years.", whyItMatters: "Missing this signal means the candidate has not recognised that ceasing a long-effective mood stabiliser may destabilise pregnancy rapidly.", modelWording: "Treat lithium cessation as urgent because four years of stability on lithium suggests it was a key relapse-prevention treatment.", keywords: ["lithium", "stable", "four years", "cessation", "relapse"] },
+      { id: "s3", name: "Lithium teratogenicity fear needs balanced consent", category: "consent_refusal", severity: "critical", clueInStem: "Natasha tells you she stopped lithium four weeks ago \"because I read that it causes heart defects.\"", whyItMatters: "Missing this signal means the candidate has allowed online fear to drive a high-risk medication decision without balanced counselling.", modelWording: "Correct misinformation with balanced counselling because lithium risks must be weighed against relapse and pregnancy safety risks.", keywords: ["heart defects", "lithium", "pregnancy", "consent", "risk-benefit"] },
+      { id: "s4", name: "Obstetrician has not been informed of lithium exposure and cessation", category: "mdt_conflict", severity: "critical", clueInStem: "She has not told her obstetrician.", whyItMatters: "Missing this signal means the candidate has not repaired a communication gap that affects foetal screening and maternal relapse planning.", modelWording: "Facilitate communication with obstetrics because the team needs accurate lithium exposure and cessation history for safe antenatal care.", keywords: ["obstetrician", "communication", "lithium exposure", "cardiac screening", "antenatal"] },
+      { id: "s5", name: "Feeling fine may reflect limited early insight", category: "capacity", severity: "important", clueInStem: "She says, \"I feel completely fine. I don't think I need medication in pregnancy.\"", whyItMatters: "Missing this signal means the candidate has accepted current wellbeing as evidence that relapse prevention is unnecessary.", modelWording: "Assess understanding and weighing because feeling well now does not remove high relapse risk after lithium cessation.", keywords: ["feel fine", "insight", "capacity", "medication refusal", "relapse prevention"] },
+      { id: "s6", name: "Partner collateral gives a prior relapse timeline", category: "collateral", severity: "critical", clueInStem: "Her partner is visibly worried and says, \"Last time she stopped lithium without telling anyone, she was manic within six weeks. I can't go through that again.\"", whyItMatters: "Missing this signal means the candidate has ignored the clearest case-specific predictor of imminent relapse and carer strain.", modelWording: "Use the partner's collateral because previous mania within six weeks of stopping lithium makes the current four-week cessation urgent.", keywords: ["partner", "six weeks", "collateral", "relapse timeline", "carer distress"] },
+      { id: "s7", name: "Pending bloods should inform safe lithium planning", category: "physical_health", severity: "important", clueInStem: "An urgent FBC and lithium level are pending.", whyItMatters: "Missing this signal means the candidate has not integrated physical monitoring into medication decision-making.", modelWording: "Review pending investigations because restarting or adjusting lithium requires safe baseline and monitoring information.", keywords: ["FBC", "lithium level", "monitoring", "bloods", "physical health"] },
+      { id: "s8", name: "Foetal cardiac screening implications require coordinated plan", category: "risk_vulnerable", severity: "important", clueInStem: "The obstetrician calls while you are in the consultation and says, \"If she is on lithium we need to know — there are cardiac screening implications.\"", whyItMatters: "Missing this signal means the candidate has not linked medication history to foetal cardiac screening and obstetric coordination.", modelWording: "Coordinate foetal cardiac screening with obstetrics because lithium exposure history affects antenatal monitoring.", keywords: ["cardiac screening", "foetal", "obstetrician", "lithium", "coordination"] },
+      { id: "s9", name: "Advance relapse plan is needed before crisis", category: "mental_health_act", severity: "important", clueInStem: "Last time she stopped lithium without telling anyone, she was manic within six weeks. I can't go through that again.", whyItMatters: "Missing this signal means the candidate waits for relapse rather than planning early warning signs and preferred responses while Natasha is well.", modelWording: "Develop an advance relapse plan now because planning is safer before mania impairs insight and consent.", keywords: ["advance plan", "early warning signs", "mania", "pregnancy", "Mental Health Act"] },
     ],
-    priorityOrder: {
-      urgent: ["s1", "s2", "s3"],
-      secondary: ["s4", "s5", "s6"],
-      lowYield: [],
-    },
-    modelAnswer: `Immediate priority: Natasha stopped lithium four weeks ago with a documented six-week relapse timeline. This is time-critical. With three severe manic episodes including a forensic admission, the relapse risk is high and the consequences in pregnancy are serious.
+    priorityOrder: { urgent: ["s1", "s2", "s3", "s4", "s6"], secondary: ["s5", "s7", "s8", "s9"], lowYield: [] },
+    modelAnswer: `Natasha's lithium cessation is a time-sensitive perinatal relapse risk. She has bipolar I disorder with three severe manic episodes, including a forensic admission after assaulting a family member, and she had been stable on lithium 800 mg for four years. Stopping the medication four weeks ago removes a treatment that appears central to her stability.
 
-Informed consent: Natasha stopped based on outdated teratogenicity information. The absolute risk of Ebstein's anomaly from lithium is approximately 0.1-0.2% — far lower than the risk of untreated bipolar I disorder in pregnancy. I will provide accurate evidence-based information and give her time to reconsider.
+Her decision was made on incomplete risk information. She stopped lithium because she read that it causes heart defects, so I would provide balanced counselling about lithium exposure, foetal cardiac screening, the risk of relapse if untreated, and the risks of acute mania in pregnancy. The aim is not to frighten her into treatment, but to support genuinely informed consent.
 
-Obstetric communication: With Natasha's consent I will communicate the full picture to obstetrics today — the lithium history, the cessation, and the relapse risk — so appropriate foetal cardiac screening can be planned.
+The partner's collateral is highly important. He says that last time she stopped lithium without telling anyone, she was manic within six weeks, and he cannot go through that again. That gives a case-specific relapse timeline and shows carer distress. Natasha's statement that she feels completely fine should not be treated as reassurance that medication is unnecessary.
 
-Partner collateral: The partner's six-week relapse timeline is the most important clinical fact. His distress also requires acknowledgement.
+The obstetrician needs accurate information. Natasha has not told obstetrics, and the obstetrician is explicitly asking because there are cardiac screening implications. I would seek Natasha's consent to communicate the medication history, cessation, relapse risk and current plan to obstetrics today, and I would coordinate foetal cardiac screening and medication monitoring.
 
-Alternatives: If Natasha refuses lithium, I will discuss alternatives — noting that lamotrigine does not prevent mania, valproate is contraindicated, and quetiapine has limited evidence. Restarting lithium with foetal cardiac monitoring is the safest option for this clinical picture.
-
-Advance care plan: I will develop a crisis plan with Natasha now — agreed early warning signs, agreed response, and her preferences if she relapses. This is better done now than in an acute manic episode at 28 weeks.`,
+Pending FBC and lithium level should be reviewed as part of safe prescribing. If Natasha agrees, restarting lithium with careful monitoring may be the most protective option; if she refuses, I would discuss alternatives and their limitations. I would also develop an advance relapse plan while she is well, including early warning signs, partner involvement, rapid review, preferred treatments and what would happen if mania impaired her capacity or safety during pregnancy.`,
   },
 ];
