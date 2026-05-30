@@ -29,7 +29,7 @@ export const FINAL_ELITE_MEQ_BANK: QuizStem[] = [
     "signals": [
       {
         "id": "s1",
-        "name": "denial-based discharge — unsafe shortcut under pressure",
+        "name": "denial-based discharge",
         "category": "risk_self",
         "severity": "critical",
         "clueInStem": "He denies suicidal intent and we need the cubicle.",
@@ -48,7 +48,7 @@ export const FINAL_ELITE_MEQ_BANK: QuizStem[] = [
       },
       {
         "id": "s2",
-        "name": "concealed high-context suicide risk despite denial — core clinical formulation",
+        "name": "concealed high-context suicide risk despite denial",
         "category": "risk_self",
         "severity": "critical",
         "clueInStem": "I am not stupid enough to say anything that gets me locked up.",
@@ -66,7 +66,7 @@ export const FINAL_ELITE_MEQ_BANK: QuizStem[] = [
       },
       {
         "id": "s3",
-        "name": "capacity and safe discharge after self-harm risk — legal/policy hinge",
+        "name": "capacity and safe discharge after self-harm risk",
         "category": "mental_health_act",
         "severity": "critical",
         "clueInStem": "Can I discharge if he contracts for safety?",
@@ -85,7 +85,7 @@ export const FINAL_ELITE_MEQ_BANK: QuizStem[] = [
       },
       {
         "id": "s4",
-        "name": "children and ex-partner affected by suicide and blame — vulnerable person safety",
+        "name": "children and ex-partner affected by suicide and blame",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "The kids will be better off without me.",
@@ -104,7 +104,7 @@ export const FINAL_ELITE_MEQ_BANK: QuizStem[] = [
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Rural stigma and police pressure creating false discharge urgency",
         "category": "collateral",
         "severity": "important",
         "clueInStem": "We cannot stay here all night.",
@@ -123,7 +123,7 @@ export const FINAL_ELITE_MEQ_BANK: QuizStem[] = [
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting high-context risk, discharge decision and MHA basis",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether he can leave ED tonight or requires involuntary/voluntary containment",
@@ -139,6 +139,23 @@ export const FINAL_ELITE_MEQ_BANK: QuizStem[] = [
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Collateral from ex-wife and risk of altruistic suicidal thinking",
+        "category": "collateral",
+        "severity": "important",
+        "clueInStem": "The kids will be better off without me.",
+        "whyItMatters": "Altruistic framing of suicide — believing others benefit from one's death — significantly elevates lethality. The ex-wife's report corroborates concealed intent and cannot be dismissed even if Mr Cole denies it directly.",
+        "modelWording": "I would contact the ex-wife directly, document the altruistic statement verbatim, and incorporate it into the risk formulation as evidence of organised suicidal thinking despite denial.",
+        "keywords": [
+          "altruistic suicidality",
+          "collateral",
+          "ex-wife",
+          "concealed intent",
+          "risk formulation",
+          "denial override"
+        ]
       }
     ],
     "priorityOrder": {
@@ -150,7 +167,8 @@ export const FINAL_ELITE_MEQ_BANK: QuizStem[] = [
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -177,7 +195,7 @@ I would document that the decision was not based on denial alone. The note shoul
     "signals": [
       {
         "id": "s1",
-        "name": "sedation to force treatment — unsafe shortcut under pressure",
+        "name": "sedation to force treatment",
         "category": "physical_health",
         "severity": "critical",
         "clueInStem": "He could arrest tonight, just sedate him.",
@@ -196,7 +214,7 @@ I would document that the decision was not based on denial alone. The note shoul
       },
       {
         "id": "s2",
-        "name": "psychosis-driven refusal of life-saving dialysis — core clinical formulation",
+        "name": "psychosis-driven refusal of life-saving dialysis",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "The machine is poisoning my blood because immigration put trackers in it.",
@@ -214,7 +232,7 @@ I would document that the decision was not based on denial alone. The note shoul
       },
       {
         "id": "s3",
-        "name": "emergency treatment authority versus MHA — legal/policy hinge",
+        "name": "emergency treatment authority versus MHA",
         "category": "mental_health_act",
         "severity": "critical",
         "clueInStem": "Does the Mental Health Act let us dialyse him?",
@@ -233,7 +251,7 @@ I would document that the decision was not based on denial alone. The note shoul
       },
       {
         "id": "s4",
-        "name": "family collateral about relapse and treatment refusal — vulnerable person safety",
+        "name": "family collateral about relapse and treatment refusal",
         "category": "collateral",
         "severity": "important",
         "clueInStem": "He stopped medication because he thought we were poisoning him.",
@@ -252,7 +270,7 @@ I would document that the decision was not based on denial alone. The note shoul
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Security and ward-flow pressure accelerating coercive treatment",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "We cannot keep security here all evening.",
@@ -271,10 +289,10 @@ I would document that the decision was not based on denial alone. The note shoul
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting lawful involuntary dialysis framework and safeguards",
         "category": "governance",
         "severity": "important",
-        "clueInStem": "whether to treat against objection, under what legal basis, and with what safegu",
+        "clueInStem": "whether to treat against objection, under what legal basis, and with what safeguards",
         "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
         "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
         "keywords": [
@@ -287,6 +305,23 @@ I would document that the decision was not based on denial alone. The note shoul
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Culturally and linguistically responsive engagement to reduce paranoia",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "The machine is poisoning my blood because immigration put trackers in it.",
+        "whyItMatters": "Paranoid beliefs about dialysis machines linked to immigration fear may reflect CALD trauma rather than primary psychosis alone. Interpreter-supported psychoeducation and culturally safe communication can shift cooperation before legal pathways are invoked.",
+        "modelWording": "I would arrange a professional interpreter, interview him without security present, explore immigration fears and prior trauma, and attempt to negotiate voluntary dialysis before applying involuntary treatment authority.",
+        "keywords": [
+          "CALD engagement",
+          "interpreter",
+          "immigration trauma",
+          "paranoia reduction",
+          "voluntary cooperation",
+          "cultural safety"
+        ]
       }
     ],
     "priorityOrder": {
@@ -298,7 +333,8 @@ I would document that the decision was not based on denial alone. The note shoul
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -325,7 +361,7 @@ My consultant actions would be to attend or supervise urgently, assess capacity 
     "signals": [
       {
         "id": "s1",
-        "name": "calm presentation discharge shortcut — unsafe shortcut under pressure",
+        "name": "calm presentation discharge shortcut",
         "category": "risk_others",
         "severity": "critical",
         "clueInStem": "He is calm now and wants to go home.",
@@ -344,7 +380,7 @@ My consultant actions would be to attend or supervise urgently, assess capacity 
       },
       {
         "id": "s2",
-        "name": "coercive family violence with risk to others — core clinical formulation",
+        "name": "coercive family violence with risk to others",
         "category": "risk_others",
         "severity": "critical",
         "clueInStem": "If I cannot have the kids, no one will.",
@@ -362,7 +398,7 @@ My consultant actions would be to attend or supervise urgently, assess capacity 
       },
       {
         "id": "s3",
-        "name": "MHA threshold and family violence safety — legal/policy hinge",
+        "name": "MHA threshold and family violence safety",
         "category": "mental_health_act",
         "severity": "critical",
         "clueInStem": "Is this just relationship conflict rather than MHA?",
@@ -381,7 +417,7 @@ My consultant actions would be to attend or supervise urgently, assess capacity 
       },
       {
         "id": "s4",
-        "name": "partner and children at imminent risk — vulnerable person safety",
+        "name": "partner and children at imminent risk",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "I am afraid to go home with the children.",
@@ -400,7 +436,7 @@ My consultant actions would be to attend or supervise urgently, assess capacity 
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Minimised family violence and partner's self-exculpatory account",
         "category": "family_carer",
         "severity": "important",
         "clueInStem": "I only threatened myself so she would listen.",
@@ -419,10 +455,10 @@ My consultant actions would be to attend or supervise urgently, assess capacity 
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting family violence risk, MHA basis and least restrictive safety plan",
         "category": "governance",
         "severity": "important",
-        "clueInStem": "whether to support return home, arrange police/family violence protection, or pu",
+        "clueInStem": "whether to support return home, arrange police/family violence protection, or pursue MHA admission",
         "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
         "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
         "keywords": [
@@ -435,6 +471,23 @@ My consultant actions would be to attend or supervise urgently, assess capacity 
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Safety planning for partner and children at immediate risk",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "I am afraid to go home with the children.",
+        "whyItMatters": "The partner's fear and the children's exposure to violence create an independent duty of care. A safety plan that ignores the family as the primary risk target is incomplete regardless of the perpetrator's mental state.",
+        "modelWording": "I would speak with the partner separately, assess her and the children's immediate safety, provide family violence referrals, and document the risk to third parties independently of the psychiatric disposition for Mr Santos.",
+        "keywords": [
+          "partner safety",
+          "children at risk",
+          "family violence",
+          "safety plan",
+          "third party risk",
+          "independent duty of care"
+        ]
       }
     ],
     "priorityOrder": {
@@ -446,7 +499,8 @@ My consultant actions would be to attend or supervise urgently, assess capacity 
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -473,7 +527,7 @@ I would document the exact threat "If I cannot have the kids, no one will," the 
     "signals": [
       {
         "id": "s1",
-        "name": "articulate-capacity shortcut — unsafe shortcut under pressure",
+        "name": "articulate-capacity shortcut",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "She is articulate, so she can refuse.",
@@ -492,7 +546,7 @@ I would document the exact threat "If I cannot have the kids, no one will," the 
       },
       {
         "id": "s2",
-        "name": "adolescent suicidal refusal with apparent understanding — core clinical formulation",
+        "name": "adolescent suicidal refusal with apparent understanding",
         "category": "risk_self",
         "severity": "critical",
         "clueInStem": "I understand my liver could fail, but that is my choice.",
@@ -510,7 +564,7 @@ I would document the exact threat "If I cannot have the kids, no one will," the 
       },
       {
         "id": "s3",
-        "name": "minor consent, capacity and MHA — legal/policy hinge",
+        "name": "minor consent, capacity and MHA",
         "category": "consent_refusal",
         "severity": "critical",
         "clueInStem": "Can we use the Act if she is Gillick competent?",
@@ -529,7 +583,7 @@ I would document the exact threat "If I cannot have the kids, no one will," the 
       },
       {
         "id": "s4",
-        "name": "unsafe minimising carer and lack of supervision — vulnerable person safety",
+        "name": "unsafe minimising carer and lack of supervision",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "She is dramatic but clever; discharge her if she promises.",
@@ -548,7 +602,7 @@ I would document the exact threat "If I cannot have the kids, no one will," the 
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Ward staffing pressure undermining capacity for overnight observation",
         "category": "collateral",
         "severity": "important",
         "clueInStem": "We cannot keep a staff member here overnight.",
@@ -567,10 +621,10 @@ I would document the exact threat "If I cannot have the kids, no one will," the 
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting capacity, overdose uncertainty and legal basis for continued treatment",
         "category": "governance",
         "severity": "important",
-        "clueInStem": "whether to continue treatment and admission despite refusal and uncertain overdo",
+        "clueInStem": "whether to continue treatment and admission despite refusal and uncertain overdose severity",
         "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
         "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
         "keywords": [
@@ -583,6 +637,24 @@ I would document the exact threat "If I cannot have the kids, no one will," the 
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Adolescent assent, parental consent and therapeutic alliance",
+        "category": "capacity",
+        "severity": "important",
+        "clueInStem": "She is dramatic but clever; discharge her if she promises.",
+        "whyItMatters": "Adolescent capacity exists on a spectrum; assent from the patient alongside parental consent strengthens the ethical basis for continued treatment and reduces the risk of absconding. The carer's minimising view does not remove parental authority to consent to necessary care.",
+        "modelWording": "I would explain to the patient and her carer, separately, why overnight monitoring is medically indicated, explore what would make this acceptable to the patient, and obtain parental consent for continued care where her own capacity is uncertain.",
+        "keywords": [
+          "adolescent assent",
+          "parental consent",
+          "therapeutic alliance",
+          "capacity",
+          "Gillick",
+          "carer minimisation",
+          "continued treatment"
+        ]
       }
     ],
     "priorityOrder": {
@@ -594,7 +666,8 @@ I would document the exact threat "If I cannot have the kids, no one will," the 
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -621,7 +694,7 @@ I would document the uncertain ingestion, the treatment urgency, the capacity as
     "signals": [
       {
         "id": "s1",
-        "name": "denial-based outpatient shortcut — unsafe shortcut under pressure",
+        "name": "denial-based outpatient shortcut",
         "category": "risk_others",
         "severity": "critical",
         "clueInStem": "He denies wanting to hurt anyone, so early psychosis can see him tomorrow.",
@@ -640,7 +713,7 @@ I would document the uncertain ingestion, the treatment urgency, the capacity as
       },
       {
         "id": "s2",
-        "name": "persecutory psychosis causing defensive violence risk — core clinical formulation",
+        "name": "persecutory psychosis causing defensive violence risk",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "If they come through the ceiling, I will protect myself.",
@@ -658,7 +731,7 @@ I would document the uncertain ingestion, the treatment urgency, the capacity as
       },
       {
         "id": "s3",
-        "name": "MHA assessment and police involvement — legal/policy hinge",
+        "name": "MHA assessment and police involvement",
         "category": "mental_health_act",
         "severity": "critical",
         "clueInStem": "Do you want us to leave or keep him under guard?",
@@ -677,7 +750,7 @@ I would document the uncertain ingestion, the treatment urgency, the capacity as
       },
       {
         "id": "s4",
-        "name": "family cannot supervise weapon-related risk — vulnerable person safety",
+        "name": "family cannot supervise weapon-related risk",
         "category": "family_carer",
         "severity": "important",
         "clueInStem": "I cannot take him home tonight.",
@@ -696,7 +769,7 @@ I would document the uncertain ingestion, the treatment urgency, the capacity as
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Bed scarcity and age minimisation blocking urgent containment",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "There are no mental health beds and he is only nineteen.",
@@ -715,10 +788,10 @@ I would document the uncertain ingestion, the treatment urgency, the capacity as
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting threat formulation, legal basis and crisis containment plan",
         "category": "governance",
         "severity": "important",
-        "clueInStem": "whether admission, involuntary assessment, or intensive crisis containment is re",
+        "clueInStem": "whether admission, involuntary assessment, or intensive crisis containment is required",
         "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
         "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
         "keywords": [
@@ -731,6 +804,24 @@ I would document the uncertain ingestion, the treatment urgency, the capacity as
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Family who cannot supervise weapon-related risk at home",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "I cannot take him home tonight.",
+        "whyItMatters": "When the family identifies themselves as unable to safely supervise the patient, home discharge becomes clinically indefensible regardless of bed availability. The family's statement must be documented as a safety finding that contributes directly to the disposition.",
+        "modelWording": "I would document the family's explicit statement that they cannot manage him safely, treat it as collateral evidence of risk, and use it as additional justification for involuntary assessment or crisis-level care rather than home discharge.",
+        "keywords": [
+          "family unable to supervise",
+          "home discharge unsafe",
+          "collateral",
+          "risk",
+          "weapon",
+          "first episode psychosis",
+          "containment"
+        ]
       }
     ],
     "priorityOrder": {
@@ -742,7 +833,8 @@ I would document the uncertain ingestion, the treatment urgency, the capacity as
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -769,7 +861,7 @@ The ED flow coordinator's statement, "There are no mental health beds and he is 
     "signals": [
       {
         "id": "s1",
-        "name": "calm-now discharge shortcut — unsafe shortcut under pressure",
+        "name": "calm-now discharge shortcut",
         "category": "risk_vulnerable",
         "severity": "critical",
         "clueInStem": "She is calmer now; can we discharge with her mother?",
@@ -788,7 +880,7 @@ The ED flow coordinator's statement, "There are no mental health beds and he is 
       },
       {
         "id": "s2",
-        "name": "manic psychosis impairing maternal-foetal decisions — core clinical formulation",
+        "name": "manic psychosis impairing maternal-foetal decisions",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "The baby is chosen and hospital machines will steal its spirit.",
@@ -806,7 +898,7 @@ The ED flow coordinator's statement, "There are no mental health beds and he is 
       },
       {
         "id": "s3",
-        "name": "maternal capacity and emergency obstetric care — legal/policy hinge",
+        "name": "maternal capacity and emergency obstetric care",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "Can we monitor the foetus against her wishes?",
@@ -825,7 +917,7 @@ The ED flow coordinator's statement, "There are no mental health beds and he is 
       },
       {
         "id": "s4",
-        "name": "existing child and unborn baby safety — vulnerable person safety",
+        "name": "existing child and unborn baby safety",
         "category": "child_protection",
         "severity": "important",
         "clueInStem": "He was crying in the house when police arrived.",
@@ -844,7 +936,7 @@ The ED flow coordinator's statement, "There are no mental health beds and he is 
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Cultural accusation weaponised to block involuntary perinatal care",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "You are punishing her for being Aboriginal.",
@@ -863,10 +955,10 @@ The ED flow coordinator's statement, "There are no mental health beds and he is 
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting maternal-foetal risk, cultural engagement and legal basis for admission",
         "category": "governance",
         "severity": "important",
-        "clueInStem": "whether to involuntarily admit, how to manage foetal assessment, and how to prote",
+        "clueInStem": "whether to involuntarily admit, how to manage foetal assessment, and how to protect the family",
         "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
         "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
         "keywords": [
@@ -879,6 +971,24 @@ The ED flow coordinator's statement, "There are no mental health beds and he is 
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Foetal and existing child safety as distinct clinical and legal obligations",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "He was crying in the house when police arrived.",
+        "whyItMatters": "The existing child's distress in the household creates a separate child protection obligation that must be documented alongside the foetal and maternal risk. Clinical decisions about admission must address both.",
+        "modelWording": "I would contact child protection regarding the existing child, document the child's observed distress, co-ordinate with obstetrics regarding foetal wellbeing, and ensure the involuntary admission plan addresses all three safeguarding domains.",
+        "keywords": [
+          "existing child",
+          "child protection",
+          "foetal safety",
+          "dual obligation",
+          "maternal admission",
+          "safeguarding",
+          "Aboriginal culturally safe care"
+        ]
       }
     ],
     "priorityOrder": {
@@ -890,7 +1000,8 @@ The ED flow coordinator's statement, "There are no mental health beds and he is 
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -917,7 +1028,7 @@ Maya refuses to speak with non-Aboriginal staff and her mother says, "You are pu
     "signals": [
       {
         "id": "s1",
-        "name": "habituation and bed-pressure shortcut — unsafe shortcut under pressure",
+        "name": "habituation and bed-pressure shortcut",
         "category": "risk_self",
         "severity": "critical",
         "clueInStem": "She has done this before and I need the bed.",
@@ -936,7 +1047,7 @@ Maya refuses to speak with non-Aboriginal staff and her mother says, "You are pu
       },
       {
         "id": "s2",
-        "name": "acute-on-chronic self-harm risk with invalidating care — core clinical formulation",
+        "name": "acute-on-chronic self-harm risk with invalidating care",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "If I stay here I will just get worse.",
@@ -954,7 +1065,7 @@ Maya refuses to speak with non-Aboriginal staff and her mother says, "You are pu
       },
       {
         "id": "s3",
-        "name": "disposition and diagnostic stigma — legal/policy hinge",
+        "name": "disposition and diagnostic stigma",
         "category": "disposition",
         "severity": "critical",
         "clueInStem": "Can I document personality disorder and discharge?",
@@ -973,7 +1084,7 @@ Maya refuses to speak with non-Aboriginal staff and her mother says, "You are pu
       },
       {
         "id": "s4",
-        "name": "carer unable to supervise discharge — vulnerable person safety",
+        "name": "carer unable to supervise discharge",
         "category": "family_carer",
         "severity": "important",
         "clueInStem": "I am terrified and cannot take her home.",
@@ -992,7 +1103,7 @@ Maya refuses to speak with non-Aboriginal staff and her mother says, "You are pu
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Therapeutic impasse driven by repeated rejection of structured safety plans",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "She refuses every plan we offer.",
@@ -1011,10 +1122,10 @@ Maya refuses to speak with non-Aboriginal staff and her mother says, "You are pu
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting risk formulation, disposition rationale and crisis alternative plan",
         "category": "governance",
         "severity": "important",
-        "clueInStem": "whether to discharge, admit briefly, or create a crisis alternative that is safe",
+        "clueInStem": "whether to discharge, admit briefly, or create a crisis alternative that is safe and defensible",
         "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
         "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
         "keywords": [
@@ -1027,6 +1138,24 @@ Maya refuses to speak with non-Aboriginal staff and her mother says, "You are pu
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Carer's acute distress and capacity to continue supervision",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "I am terrified and cannot take her home.",
+        "whyItMatters": "A carer who is terrified and refuses to take the patient home is not merely expressing preference; they are communicating that the home safety plan is not viable. This must be weighted as clinical information, not family pressure.",
+        "modelWording": "I would speak with the carer separately, document their distress and explicit refusal to provide home supervision, and treat this as a key risk factor requiring an alternative disposition rather than a discharge barrier to be managed.",
+        "keywords": [
+          "carer distress",
+          "carer refusal",
+          "home supervision",
+          "disposition",
+          "safety plan viability",
+          "risk factor",
+          "BPD"
+        ]
       }
     ],
     "priorityOrder": {
@@ -1038,7 +1167,8 @@ Maya refuses to speak with non-Aboriginal staff and her mother says, "You are pu
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -1065,7 +1195,7 @@ Nursing staff say, "She refuses every plan we offer," which may reflect rigidity
     "signals": [
       {
         "id": "s1",
-        "name": "autonomy shortcut without capacity analysis — unsafe shortcut under pressure",
+        "name": "autonomy shortcut without capacity analysis",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "She has a right to make bad decisions.",
@@ -1084,7 +1214,7 @@ Nursing staff say, "She refuses every plan we offer," which may reflect rigidity
       },
       {
         "id": "s2",
-        "name": "dementia-related refusal of safe accommodation — core clinical formulation",
+        "name": "dementia-related refusal of safe accommodation",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "I have lived there fifty years and I am not going to a prison.",
@@ -1102,7 +1232,7 @@ Nursing staff say, "She refuses every plan we offer," which may reflect rigidity
       },
       {
         "id": "s3",
-        "name": "guardianship and least restrictive detention — legal/policy hinge",
+        "name": "guardianship and least restrictive detention",
         "category": "governance",
         "severity": "critical",
         "clueInStem": "Can we hold her here until guardianship?",
@@ -1121,7 +1251,7 @@ Nursing staff say, "She refuses every plan we offer," which may reflect rigidity
       },
       {
         "id": "s4",
-        "name": "vulnerability from wandering and exposure — vulnerable person safety",
+        "name": "vulnerability from wandering and exposure",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "She was on the highway in the rain.",
@@ -1140,7 +1270,7 @@ Nursing staff say, "She refuses every plan we offer," which may reflect rigidity
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Bed-loss pressure forcing premature permanent placement capacity decision",
         "category": "family_carer",
         "severity": "important",
         "clueInStem": "If we lose the bed today, she will never get placed.",
@@ -1159,10 +1289,10 @@ Nursing staff say, "She refuses every plan we offer," which may reflect rigidity
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting domain-specific capacity, guardianship pathway and least restrictive placement",
         "category": "governance",
         "severity": "important",
-        "clueInStem": "whether she has accommodation capacity and what lawful safe disposition is possi",
+        "clueInStem": "whether she has accommodation capacity and what lawful safe disposition is possible",
         "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
         "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
         "keywords": [
@@ -1175,6 +1305,23 @@ Nursing staff say, "She refuses every plan we offer," which may reflect rigidity
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Highway wandering as immediate public safety and medical emergency",
+        "category": "immediate_safety",
+        "severity": "important",
+        "clueInStem": "She was on the highway in the rain.",
+        "whyItMatters": "An elderly woman found wandering on a highway in the rain is at immediate risk of death. This finding is not only a capacity indicator; it is an acute emergency that independently justifies medical assessment and intervention before any placement decision is made.",
+        "modelWording": "I would treat the highway incident as an acute safety emergency requiring immediate medical review, not only as evidence for a capacity assessment. I would document the immediate risk and ensure it is addressed before the team moves to longer-term placement planning.",
+        "keywords": [
+          "highway wandering",
+          "acute safety",
+          "immediate risk",
+          "dementia",
+          "medical emergency",
+          "capacity independent of placement urgency"
+        ]
       }
     ],
     "priorityOrder": {
@@ -1186,7 +1333,8 @@ Nursing staff say, "She refuses every plan we offer," which may reflect rigidity
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -1213,7 +1361,7 @@ My documentation would state the exact accommodation-capacity assessment, the hi
     "signals": [
       {
         "id": "s1",
-        "name": "custody-as-care shortcut — unsafe shortcut under pressure",
+        "name": "custody-as-care shortcut",
         "category": "risk_others",
         "severity": "critical",
         "clueInStem": "He can sleep it off in the cells.",
@@ -1232,7 +1380,7 @@ My documentation would state the exact accommodation-capacity assessment, the hi
       },
       {
         "id": "s2",
-        "name": "alcohol-related family violence with possible brain injury — core clinical formulation",
+        "name": "alcohol-related family violence with possible brain injury",
         "category": "substance_use",
         "severity": "critical",
         "clueInStem": "I only scared her because she was taking the kids.",
@@ -1250,7 +1398,7 @@ My documentation would state the exact accommodation-capacity assessment, the hi
       },
       {
         "id": "s3",
-        "name": "medical risk and custody safety policy — legal/policy hinge",
+        "name": "medical risk and custody safety policy",
         "category": "physical_health",
         "severity": "critical",
         "clueInStem": "Do we have to medically clear him before police custody?",
@@ -1269,7 +1417,7 @@ My documentation would state the exact accommodation-capacity assessment, the hi
       },
       {
         "id": "s4",
-        "name": "partner and children at lethal family violence risk — vulnerable person safety",
+        "name": "partner and children at lethal family violence risk",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "If he comes back tonight, someone will die.",
@@ -1288,7 +1436,7 @@ My documentation would state the exact accommodation-capacity assessment, the hi
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Complicated grief and bereavement amplifying acute intoxicated violence risk",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "His brother's suicide broke him.",
@@ -1307,10 +1455,10 @@ My documentation would state the exact accommodation-capacity assessment, the hi
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting medical clearance, custody risk and safe disposition plan",
         "category": "governance",
         "severity": "important",
-        "clueInStem": "whether he needs medical transfer, psychiatric assessment, police protection or ",
+        "clueInStem": "whether he needs medical transfer, psychiatric assessment, police protection or continued custody",
         "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
         "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
         "keywords": [
@@ -1323,6 +1471,24 @@ My documentation would state the exact accommodation-capacity assessment, the hi
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Partner and children at risk if man returns home tonight",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "If he comes back tonight, someone will die.",
+        "whyItMatters": "The neighbour's statement that someone will die if the man returns home is specific and time-critical. It creates a duty to warn and protect that is independent of psychiatric assessment and must be addressed in any disposition plan.",
+        "modelWording": "I would ensure police are aware of the domestic violence risk before any release or return home, facilitate a safety plan for the partner and children, and document the neighbour's specific warning alongside the clinical risk assessment.",
+        "keywords": [
+          "domestic violence",
+          "partner safety",
+          "duty to warn",
+          "third party risk",
+          "release plan",
+          "children at risk",
+          "neighbour collateral"
+        ]
       }
     ],
     "priorityOrder": {
@@ -1334,7 +1500,8 @@ My documentation would state the exact accommodation-capacity assessment, the hi
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -1361,7 +1528,7 @@ I would document the shovel threat, head injury, intoxication, medical clearance
     "signals": [
       {
         "id": "s1",
-        "name": "forced medication shortcut — unsafe shortcut under pressure",
+        "name": "forced medication shortcut",
         "category": "risk_others",
         "severity": "critical",
         "clueInStem": "Can we inject him tonight so the ward settles?",
@@ -1380,7 +1547,7 @@ I would document the shovel threat, head injury, intoxication, medical clearance
       },
       {
         "id": "s2",
-        "name": "psychosis-driven refusal of treatment — core clinical formulation",
+        "name": "psychosis-driven refusal of treatment",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "The tablets are trackers that will let them control my thoughts.",
@@ -1398,7 +1565,7 @@ I would document the shovel threat, head injury, intoxication, medical clearance
       },
       {
         "id": "s3",
-        "name": "MHA treatment authority and proportionality — legal/policy hinge",
+        "name": "MHA treatment authority and proportionality",
         "category": "mental_health_act",
         "severity": "critical",
         "clueInStem": "Does involuntary admission automatically allow treatment?",
@@ -1417,7 +1584,7 @@ I would document the shovel threat, head injury, intoxication, medical clearance
       },
       {
         "id": "s4",
-        "name": "vulnerable inpatient safety — vulnerable person safety",
+        "name": "vulnerable inpatient safety",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "He told me I am one of them.",
@@ -1436,7 +1603,7 @@ I would document the shovel threat, head injury, intoxication, medical clearance
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Staffing constraint driving the team towards chemical restraint over least restrictive care",
         "category": "trauma",
         "severity": "important",
         "clueInStem": "We cannot staff special observations all night.",
@@ -1455,7 +1622,7 @@ I would document the shovel threat, head injury, intoxication, medical clearance
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting involuntary treatment criteria, least restrictive options and monitoring plan",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether involuntary treatment is lawful, necessary and least restrictive tonight",
@@ -1471,6 +1638,24 @@ I would document the shovel threat, head injury, intoxication, medical clearance
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Paranoid misidentification posing specific staff safety risk",
+        "category": "immediate_safety",
+        "severity": "important",
+        "clueInStem": "He told me I am one of them.",
+        "whyItMatters": "A patient identifying a specific staff member as part of a persecutory group creates a targeted aggression risk that requires immediate ward management: staff rotation, de-escalation briefing, and safe observation planning that is not simply injecting sedation.",
+        "modelWording": "I would advise removing the identified staff member from direct care, brief the team about the specific threat, review the ward environment for escalation triggers, and document this as a distinct safety signal requiring a care plan adjustment.",
+        "keywords": [
+          "staff safety",
+          "paranoid misidentification",
+          "targeted aggression",
+          "de-escalation",
+          "ward safety",
+          "staff rotation",
+          "involuntary treatment"
+        ]
       }
     ],
     "priorityOrder": {
@@ -1482,7 +1667,8 @@ I would document the shovel threat, head injury, intoxication, medical clearance
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -1509,7 +1695,7 @@ I would document the delusional basis of refusal, capacity findings, risk to vul
     "signals": [
       {
         "id": "s1",
-        "name": "resource-driven discharge shortcut — unsafe shortcut under pressure",
+        "name": "resource-driven discharge shortcut",
         "category": "risk_vulnerable",
         "severity": "critical",
         "clueInStem": "There is no mother-baby bed in the state.",
@@ -1528,7 +1714,7 @@ I would document the delusional basis of refusal, capacity findings, risk to vul
       },
       {
         "id": "s2",
-        "name": "postpartum psychosis and infant safety — core clinical formulation",
+        "name": "postpartum psychosis and infant safety",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "This baby is not safe in my hands tonight.",
@@ -1546,7 +1732,7 @@ I would document the delusional basis of refusal, capacity findings, risk to vul
       },
       {
         "id": "s3",
-        "name": "MHA/admission threshold in postpartum illness — legal/policy hinge",
+        "name": "MHA/admission threshold in postpartum illness",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "Can crisis follow her at home if her mother supervises?",
@@ -1565,7 +1751,7 @@ I would document the delusional basis of refusal, capacity findings, risk to vul
       },
       {
         "id": "s4",
-        "name": "newborn safety — vulnerable person safety",
+        "name": "newborn safety",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "I cannot be alone with him.",
@@ -1584,7 +1770,7 @@ I would document the delusional basis of refusal, capacity findings, risk to vul
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Family anti-hospital belief blocking urgently needed perinatal admission",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "Hospital will make her worse.",
@@ -1603,7 +1789,7 @@ I would document the delusional basis of refusal, capacity findings, risk to vul
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting infant protection, admission basis and mother-baby care plan",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to admit without a mother-baby bed and how to protect the infant",
@@ -1619,6 +1805,24 @@ I would document the delusional basis of refusal, capacity findings, risk to vul
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Infant safety and bonding risk from acute postpartum psychosis",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "This baby is not safe in my hands tonight.",
+        "whyItMatters": "The patient's own statement that the baby is not safe in her hands is a high-validity risk disclosure. It must be taken as primary evidence of risk rather than dismissed as self-deprecating distress, and it creates an independent obligation to protect the infant.",
+        "modelWording": "I would treat this statement as a direct safety signal, arrange continuous infant supervision by a trusted adult, contact child protection if no safe adult is available, and document it verbatim as the basis for the admission and infant protection decision.",
+        "keywords": [
+          "infant safety",
+          "maternal self-report",
+          "bonding risk",
+          "postpartum psychosis",
+          "child protection",
+          "admission basis",
+          "safe adult supervision"
+        ]
       }
     ],
     "priorityOrder": {
@@ -1630,7 +1834,8 @@ I would document the delusional basis of refusal, capacity findings, risk to vul
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -1657,7 +1862,7 @@ I would document the absence of a mother-baby bed, the infant-safety quote, slee
     "signals": [
       {
         "id": "s1",
-        "name": "partner minimisation shortcut — unsafe shortcut under pressure",
+        "name": "partner minimisation shortcut",
         "category": "risk_vulnerable",
         "severity": "critical",
         "clueInStem": "She is fine and does not need tablets.",
@@ -1676,7 +1881,7 @@ I would document the absence of a mother-baby bed, the infant-safety quote, slee
       },
       {
         "id": "s2",
-        "name": "antenatal depression with suicidal thoughts and medication misinformation — core clinical formulation",
+        "name": "antenatal depression with suicidal thoughts and medication misinformation",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "Everyone would be better off without me.",
@@ -1694,7 +1899,7 @@ I would document the absence of a mother-baby bed, the infant-safety quote, slee
       },
       {
         "id": "s3",
-        "name": "informed consent and medication risk-benefit — legal/policy hinge",
+        "name": "informed consent and medication risk-benefit",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "Can you document that antidepressants are unsafe?",
@@ -1713,7 +1918,7 @@ I would document the absence of a mother-baby bed, the infant-safety quote, slee
       },
       {
         "id": "s4",
-        "name": "unborn baby wellbeing — vulnerable person safety",
+        "name": "unborn baby wellbeing",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "The scan shows mild growth restriction.",
@@ -1732,7 +1937,7 @@ I would document the absence of a mother-baby bed, the infant-safety quote, slee
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Intimate partner violence concealment under documentation pressure",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "Please do not write down that he pushes me.",
@@ -1751,7 +1956,7 @@ I would document the absence of a mother-baby bed, the infant-safety quote, slee
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting IPV, antidepressant indication and confidential safety planning",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to restart treatment, address violence, and document safely",
@@ -1767,6 +1972,24 @@ I would document the absence of a mother-baby bed, the infant-safety quote, slee
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Foetal growth restriction as medical consequence of depression and IPV",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "The scan shows mild growth restriction.",
+        "whyItMatters": "Foetal growth restriction in the context of untreated depression and intimate partner violence creates a tripartite risk: maternal mental health, physical violence and foetal wellbeing. Psychiatry must document the obstetric finding as part of the clinical justification for treatment, not treat it as a separate team's problem.",
+        "modelWording": "I would coordinate with obstetrics regarding the growth restriction, document depression and IPV as likely contributing factors, and incorporate the foetal risk explicitly into the treatment urgency rationale and the safety plan.",
+        "keywords": [
+          "foetal growth restriction",
+          "IPV",
+          "depression",
+          "maternal-foetal risk",
+          "obstetric liaison",
+          "treatment urgency",
+          "perinatal"
+        ]
       }
     ],
     "priorityOrder": {
@@ -1778,7 +2001,8 @@ I would document the absence of a mother-baby bed, the infant-safety quote, slee
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -1805,7 +2029,7 @@ My documentation would include her suicidal phrase, the medication misinformatio
     "signals": [
       {
         "id": "s1",
-        "name": "automatic child protection shortcut — unsafe shortcut under pressure",
+        "name": "automatic child protection shortcut",
         "category": "risk_vulnerable",
         "severity": "critical",
         "clueInStem": "I am worried she may harm the baby.",
@@ -1824,7 +2048,7 @@ My documentation would include her suicidal phrase, the medication misinformatio
       },
       {
         "id": "s2",
-        "name": "ego-dystonic perinatal OCD versus psychosis — core clinical formulation",
+        "name": "ego-dystonic perinatal OCD versus psychosis",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "I would never do it; the thoughts horrify me.",
@@ -1842,7 +2066,7 @@ My documentation would include her suicidal phrase, the medication misinformatio
       },
       {
         "id": "s3",
-        "name": "safeguarding threshold and infant risk — legal/policy hinge",
+        "name": "safeguarding threshold and infant risk",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "Should we notify child protection now?",
@@ -1861,7 +2085,7 @@ My documentation would include her suicidal phrase, the medication misinformatio
       },
       {
         "id": "s4",
-        "name": "infant safety with maternal compulsions — vulnerable person safety",
+        "name": "infant safety with maternal compulsions",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "I check him for hours to make sure he is alive.",
@@ -1880,7 +2104,7 @@ My documentation would include her suicidal phrase, the medication misinformatio
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Fear of family separation blocking disclosure of intrusive thoughts",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "My husband will take him away if he knows.",
@@ -1899,7 +2123,7 @@ My documentation would include her suicidal phrase, the medication misinformatio
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting OCD formulation, safety threshold and child protection decision",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to distinguish OCD from psychosis and plan safe treatment",
@@ -1915,6 +2139,24 @@ My documentation would include her suicidal phrase, the medication misinformatio
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Distinguishing ego-dystonic OCD from ego-syntonic psychotic risk",
+        "category": "diagnosis_formulation",
+        "severity": "important",
+        "clueInStem": "I would never do it; the thoughts horrify me.",
+        "whyItMatters": "Ego-dystonic horrifying intrusive thoughts about harming an infant are the clinical hallmark of perinatal OCD, not psychosis or genuine intent. The candidate who misidentifies this as dangerous suicidal or homicidal ideation may trigger unnecessary child protection action and worsen the presentation through shame.",
+        "modelWording": "I would explicitly document the ego-dystonic quality of the thoughts — that they horrify her and she has never acted on them — as the primary evidence differentiating OCD from psychotic risk, and calibrate child protection notification to the actual risk level.",
+        "keywords": [
+          "ego-dystonic",
+          "OCD",
+          "perinatal",
+          "intrusive thoughts",
+          "psychosis differential",
+          "child protection threshold",
+          "formulation"
+        ]
       }
     ],
     "priorityOrder": {
@@ -1926,7 +2168,8 @@ My documentation would include her suicidal phrase, the medication misinformatio
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -1953,7 +2196,7 @@ I would document the exact nature of the thoughts, her distress and rejection of
     "signals": [
       {
         "id": "s1",
-        "name": "collateral-driven relapse warning — unsafe shortcut under pressure",
+        "name": "collateral-driven relapse warning",
         "category": "risk_vulnerable",
         "severity": "critical",
         "clueInStem": "Last time she stopped lithium she was manic within six weeks.",
@@ -1972,7 +2215,7 @@ I would document the exact nature of the thoughts, her distress and rejection of
       },
       {
         "id": "s2",
-        "name": "euthymic period masking high relapse risk — core clinical formulation",
+        "name": "euthymic period masking high relapse risk",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "I feel fine and I do not need medication in pregnancy.",
@@ -1990,7 +2233,7 @@ I would document the exact nature of the thoughts, her distress and rejection of
       },
       {
         "id": "s3",
-        "name": "perinatal medication disclosure and consent — legal/policy hinge",
+        "name": "perinatal medication disclosure and consent",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "If she used lithium we need foetal cardiac screening.",
@@ -2009,7 +2252,7 @@ I would document the exact nature of the thoughts, her distress and rejection of
       },
       {
         "id": "s4",
-        "name": "risk to others during relapse — vulnerable person safety",
+        "name": "risk to others during relapse",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "She assaulted a family member during the last mania.",
@@ -2028,7 +2271,7 @@ I would document the exact nature of the thoughts, her distress and rejection of
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Medication misinformation about lithium teratogenicity driving dangerous discontinuation",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "Lithium will poison the baby.",
@@ -2047,10 +2290,10 @@ I would document the exact nature of the thoughts, her distress and rejection of
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting lithium risk-benefit discussion, foetal monitoring and treatment decision",
         "category": "governance",
         "severity": "important",
-        "clueInStem": "whether to restart lithium or alternative treatment and coordinate obstetric ris",
+        "clueInStem": "whether to restart lithium or alternative treatment and coordinate obstetric risk",
         "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
         "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
         "keywords": [
@@ -2063,6 +2306,24 @@ I would document the exact nature of the thoughts, her distress and rejection of
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Bipolar relapse risk to mother, foetus and existing family during untreated episode",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "She assaulted a family member during the last mania.",
+        "whyItMatters": "A prior manic episode involving assault of a family member establishes that relapse carries serious third-party risk beyond the patient. The harm of untreated mania must be explicitly weighed against medication teratogenicity when formulating the treatment plan.",
+        "modelWording": "I would document the prior assault as evidence of relapse severity, present the family violence risk as part of the harm-minimisation rationale for treatment, and ensure obstetrics and the family are included in safety planning if relapse occurs.",
+        "keywords": [
+          "mania relapse",
+          "family violence",
+          "third party risk",
+          "risk-benefit",
+          "lithium",
+          "teratogenicity",
+          "untreated bipolar"
+        ]
       }
     ],
     "priorityOrder": {
@@ -2074,7 +2335,8 @@ I would document the exact nature of the thoughts, her distress and rejection of
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -2101,7 +2363,7 @@ I would document lithium cessation timing, the misinformation quote, partner col
     "signals": [
       {
         "id": "s1",
-        "name": "dose-reduction shortcut — unsafe shortcut under pressure",
+        "name": "dose-reduction shortcut",
         "category": "risk_vulnerable",
         "severity": "critical",
         "clueInStem": "Should we reduce methadone before delivery?",
@@ -2120,7 +2382,7 @@ I would document lithium cessation timing, the misinformation quote, partner col
       },
       {
         "id": "s2",
-        "name": "opioid maintenance as protective harm reduction — core clinical formulation",
+        "name": "opioid maintenance as protective harm reduction",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "Methadone is the only reason I am not using heroin.",
@@ -2138,7 +2400,7 @@ I would document lithium cessation timing, the misinformation quote, partner col
       },
       {
         "id": "s3",
-        "name": "child protection thresholds and engagement — legal/policy hinge",
+        "name": "child protection thresholds and engagement",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "Do we need child protection now?",
@@ -2157,7 +2419,7 @@ I would document lithium cessation timing, the misinformation quote, partner col
       },
       {
         "id": "s4",
-        "name": "non-stigmatising NAS planning — vulnerable person safety",
+        "name": "non-stigmatising NAS planning",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "I do not want the baby labelled an addict.",
@@ -2176,7 +2438,7 @@ I would document lithium cessation timing, the misinformation quote, partner col
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Child protection fear driving opioid treatment concealment and non-disclosure",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "If child protection hears, they will take my baby.",
@@ -2195,7 +2457,7 @@ I would document lithium cessation timing, the misinformation quote, partner col
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting methadone continuation, NAS plan and child protection engagement",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to maintain methadone, plan NAS and protect maternal-infant safety",
@@ -2211,6 +2473,24 @@ I would document lithium cessation timing, the misinformation quote, partner col
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "NAS planning and neonatal care as a co-treatment obligation",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "I do not want the baby labelled an addict.",
+        "whyItMatters": "NAS is a predictable consequence of methadone in pregnancy and must be planned proactively with neonatology. Failure to plan exposes the neonate to undertreated withdrawal. The mother's wish to avoid a label must be separated from the infant's need for appropriate medical care.",
+        "modelWording": "I would liaise with neonatology now, document the NAS plan clearly, explain to the mother that NAS management protects rather than labels her baby, and ensure she understands what to expect so that withdrawal in the newborn is not misinterpreted as medical emergency without context.",
+        "keywords": [
+          "NAS",
+          "neonatal abstinence",
+          "neonatology",
+          "methadone",
+          "maternal-infant",
+          "withdrawal",
+          "co-treatment planning"
+        ]
       }
     ],
     "priorityOrder": {
@@ -2222,7 +2502,8 @@ I would document lithium cessation timing, the misinformation quote, partner col
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -2249,7 +2530,7 @@ I would document the rationale for maintaining methadone, benzodiazepine and can
     "signals": [
       {
         "id": "s1",
-        "name": "partner invalidation shortcut — unsafe shortcut under pressure",
+        "name": "partner invalidation shortcut",
         "category": "risk_vulnerable",
         "severity": "critical",
         "clueInStem": "She is just lazy and needs to stop complaining.",
@@ -2268,7 +2549,7 @@ I would document the rationale for maintaining methadone, benzodiazepine and can
       },
       {
         "id": "s2",
-        "name": "postnatal depression with maternal suicide and infant care risk — core clinical formulation",
+        "name": "postnatal depression with maternal suicide and infant care risk",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "The baby would be better with someone else.",
@@ -2286,7 +2567,7 @@ I would document the rationale for maintaining methadone, benzodiazepine and can
       },
       {
         "id": "s3",
-        "name": "infant welfare and safeguarding — legal/policy hinge",
+        "name": "infant welfare and safeguarding",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "Can we leave if the baby looks physically well?",
@@ -2305,7 +2586,7 @@ I would document the rationale for maintaining methadone, benzodiazepine and can
       },
       {
         "id": "s4",
-        "name": "infant neglect risk — vulnerable person safety",
+        "name": "infant neglect risk",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "The nappies have not been changed since yesterday.",
@@ -2324,7 +2605,7 @@ I would document the rationale for maintaining methadone, benzodiazepine and can
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Cultural prohibition on discussing depression blocking engagement and treatment",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "In our family we do not talk about depression.",
@@ -2343,7 +2624,7 @@ I would document the rationale for maintaining methadone, benzodiazepine and can
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting neglect concerns, depression severity and infant safety plan",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether urgent admission/support or child protection action is needed",
@@ -2359,6 +2640,24 @@ I would document the rationale for maintaining methadone, benzodiazepine and can
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Infant neglect indicators as independent child protection signal",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "The nappies have not been changed since yesterday.",
+        "whyItMatters": "Unchanged nappies for more than 24 hours in a neonate is a specific and time-critical neglect indicator that creates an independent obligation to involve child protection, regardless of whether maternal depression is treated. The infant's basic care needs must be addressed immediately.",
+        "modelWording": "I would document the nappy-change collateral as a specific neglect indicator, contact child protection immediately, ensure the infant's basic needs are met now, and treat this separately from — but alongside — the maternal depression treatment plan.",
+        "keywords": [
+          "infant neglect",
+          "nappy",
+          "child protection",
+          "basic needs",
+          "immediate safety",
+          "postpartum depression",
+          "mandatory reporting"
+        ]
       }
     ],
     "priorityOrder": {
@@ -2370,7 +2669,8 @@ I would document the rationale for maintaining methadone, benzodiazepine and can
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -2397,7 +2697,7 @@ I would document the infant-care concerns, Aisha's exact statement, mental state
     "signals": [
       {
         "id": "s1",
-        "name": "coercive examination shortcut — unsafe shortcut under pressure",
+        "name": "coercive examination shortcut",
         "category": "risk_vulnerable",
         "severity": "critical",
         "clueInStem": "Can security hold her while we check the baby?",
@@ -2416,7 +2716,7 @@ I would document the infant-care concerns, Aisha's exact statement, mental state
       },
       {
         "id": "s2",
-        "name": "psychotic belief preventing neonatal care — core clinical formulation",
+        "name": "psychotic belief preventing neonatal care",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "If you touch him, you will infect his soul.",
@@ -2434,7 +2734,7 @@ I would document the infant-care concerns, Aisha's exact statement, mental state
       },
       {
         "id": "s3",
-        "name": "maternal capacity and infant treatment authority — legal/policy hinge",
+        "name": "maternal capacity and infant treatment authority",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "Does she have capacity to refuse baby checks?",
@@ -2453,7 +2753,7 @@ I would document the infant-care concerns, Aisha's exact statement, mental state
       },
       {
         "id": "s4",
-        "name": "neonatal medical risk — vulnerable person safety",
+        "name": "neonatal medical risk",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "He has not fed for eight hours.",
@@ -2472,7 +2772,7 @@ I would document the infant-care concerns, Aisha's exact statement, mental state
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Religious belief system weaponised against evidence-based neonatal care",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "Hospital is corrupting her faith.",
@@ -2491,7 +2791,7 @@ I would document the infant-care concerns, Aisha's exact statement, mental state
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting neonatal risk, capacity basis and least restrictive maternal care plan",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to protect neonatal health while using least restrictive maternal care",
@@ -2507,6 +2807,24 @@ I would document the infant-care concerns, Aisha's exact statement, mental state
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Eight-hour no-feed neonatal risk as an independent emergency",
+        "category": "immediate_safety",
+        "severity": "important",
+        "clueInStem": "He has not fed for eight hours.",
+        "whyItMatters": "An eight-hour feeding gap in a neonate is a distinct medical emergency that may require paediatric intervention independent of the mother's psychiatric management. The consultant must separate the two clinical streams and act on the infant's acute need without waiting for the maternal capacity question to be fully resolved.",
+        "modelWording": "I would urgently involve paediatrics regarding the eight-hour no-feed, document this as a separate emergency requiring immediate action, and ensure that the clinical response to the infant's risk is not delayed by the complexity of the maternal capacity and MHA decision.",
+        "keywords": [
+          "neonatal no-feed",
+          "eight hours",
+          "paediatrics",
+          "immediate emergency",
+          "dual clinical stream",
+          "neonatal risk",
+          "postpartum psychosis"
+        ]
       }
     ],
     "priorityOrder": {
@@ -2518,7 +2836,8 @@ I would document the infant-care concerns, Aisha's exact statement, mental state
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -2545,7 +2864,7 @@ I would document the baby's eight-hour no-feed risk, Jenna's contamination belie
     "signals": [
       {
         "id": "s1",
-        "name": "paternalistic capacity shortcut — unsafe shortcut under pressure",
+        "name": "paternalistic capacity shortcut",
         "category": "risk_vulnerable",
         "severity": "critical",
         "clueInStem": "Can psychiatry say she is not competent to terminate?",
@@ -2564,7 +2883,7 @@ I would document the baby's eight-hour no-feed risk, Jenna's contamination belie
       },
       {
         "id": "s2",
-        "name": "depression, suffering and reproductive decision-making — core clinical formulation",
+        "name": "depression, suffering and reproductive decision-making",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "I would rather die than keep vomiting like this.",
@@ -2582,7 +2901,7 @@ I would document the baby's eight-hour no-feed risk, Jenna's contamination belie
       },
       {
         "id": "s3",
-        "name": "capacity, consent and reproductive autonomy — legal/policy hinge",
+        "name": "capacity, consent and reproductive autonomy",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "Our religion does not allow termination.",
@@ -2601,7 +2920,7 @@ I would document the baby's eight-hour no-feed risk, Jenna's contamination belie
       },
       {
         "id": "s4",
-        "name": "maternal-foetal ethical tension — vulnerable person safety",
+        "name": "maternal-foetal ethical tension",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "The pregnancy is wanted by the family, not by me now.",
@@ -2620,7 +2939,7 @@ I would document the baby's eight-hour no-feed risk, Jenna's contamination belie
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Reproductive confidentiality under dual family and religious pressure",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "Do not tell my mother I asked for this.",
@@ -2639,7 +2958,7 @@ I would document the baby's eight-hour no-feed risk, Jenna's contamination belie
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting capacity assessment, confidentiality decision and reproductive autonomy",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether capacity is intact and how to manage confidentiality and family pressure",
@@ -2655,6 +2974,24 @@ I would document the baby's eight-hour no-feed risk, Jenna's contamination belie
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Treating reversible hyperemesis as a precondition for valid capacity reassessment",
+        "category": "diagnosis_formulation",
+        "severity": "important",
+        "clueInStem": "I would rather die than keep vomiting like this.",
+        "whyItMatters": "Capacity to decide about termination may be reversibly impaired by undertreated suffering. Maximising hyperemesis treatment first is both ethically and clinically necessary; it is only after adequate symptom control that a valid reassessment can determine whether the termination request is a settled autonomous decision or a distress-driven one.",
+        "modelWording": "I would ensure maximal hyperemesis treatment — antiemetics, hydration, nutritional support — is offered before conducting the final capacity assessment, and document that adequate symptomatic treatment was a prerequisite for a valid reproductive decision.",
+        "keywords": [
+          "hyperemesis treatment",
+          "reversible impairment",
+          "capacity prerequisite",
+          "symptom control",
+          "termination",
+          "suffering",
+          "reproductive autonomy"
+        ]
       }
     ],
     "priorityOrder": {
@@ -2666,7 +3003,8 @@ I would document the baby's eight-hour no-feed risk, Jenna's contamination belie
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -2693,7 +3031,7 @@ I would document the capacity assessment, symptom burden, suicide risk, treatmen
     "signals": [
       {
         "id": "s1",
-        "name": "removal-first shortcut — unsafe shortcut under pressure",
+        "name": "removal-first shortcut",
         "category": "risk_vulnerable",
         "severity": "critical",
         "clueInStem": "We may need a removal plan at birth.",
@@ -2712,7 +3050,7 @@ I would document the capacity assessment, symptom burden, suicide risk, treatmen
       },
       {
         "id": "s2",
-        "name": "trauma and relapse risk around child protection — core clinical formulation",
+        "name": "trauma and relapse risk around child protection",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "They will steal this baby too, so I will run before labour.",
@@ -2730,7 +3068,7 @@ I would document the capacity assessment, symptom burden, suicide risk, treatmen
       },
       {
         "id": "s3",
-        "name": "MHA threshold and least restrictive perinatal planning — legal/policy hinge",
+        "name": "MHA threshold and least restrictive perinatal planning",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "Can we detain her now to prevent absconding?",
@@ -2749,7 +3087,7 @@ I would document the capacity assessment, symptom burden, suicide risk, treatmen
       },
       {
         "id": "s4",
-        "name": "unborn baby and maternal risk from disengagement — vulnerable person safety",
+        "name": "unborn baby and maternal risk from disengagement",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "I will give birth alone if I have to.",
@@ -2768,7 +3106,7 @@ I would document the capacity assessment, symptom burden, suicide risk, treatmen
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Aboriginal kinship network as essential partner in safe birth planning",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "You need to work with us, not around us.",
@@ -2787,10 +3125,10 @@ I would document the capacity assessment, symptom burden, suicide risk, treatmen
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting cultural safety plan, legal threshold and Aboriginal family engagement",
         "category": "governance",
         "severity": "important",
-        "clueInStem": "whether to create a culturally safe birth/safety plan without unnecessary coerci",
+        "clueInStem": "whether to create a culturally safe birth/safety plan without unnecessary coercion",
         "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
         "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
         "keywords": [
@@ -2803,6 +3141,24 @@ I would document the capacity assessment, symptom burden, suicide risk, treatmen
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "MHA detention threshold when the threat is disengagement rather than active crisis",
+        "category": "mental_health_act",
+        "severity": "important",
+        "clueInStem": "Can we detain her now to prevent absconding?",
+        "whyItMatters": "Preventive detention to stop a well woman from leaving before labour is almost always unlawful. The legal threshold requires current mental disorder with serious risk, not anticipated future non-compliance. Holding Louise lawfully requires demonstrating she is currently unwell and at risk, not simply that she might disengage.",
+        "modelWording": "I would document Louise's current mental state clearly — whether she is currently relapsing or currently well — and advise the registrar that MHA criteria cannot be applied to prevent anticipated future behaviour without present mental disorder meeting the threshold.",
+        "keywords": [
+          "MHA threshold",
+          "preventive detention",
+          "lawfulness",
+          "anticipated non-compliance",
+          "current mental disorder",
+          "absconding",
+          "Aboriginal"
+        ]
       }
     ],
     "priorityOrder": {
@@ -2814,7 +3170,8 @@ I would document the capacity assessment, symptom burden, suicide risk, treatmen
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -2841,7 +3198,7 @@ I would document Louise's fear of removal, past history, current mental state, A
     "signals": [
       {
         "id": "s1",
-        "name": "minimising family shortcut — unsafe shortcut under pressure",
+        "name": "minimising family shortcut",
         "category": "risk_vulnerable",
         "severity": "critical",
         "clueInStem": "She is energetic, not unwell, and hates hospitals.",
@@ -2860,7 +3217,7 @@ I would document Louise's fear of removal, past history, current mental state, A
       },
       {
         "id": "s2",
-        "name": "postpartum mania with infant endangerment — core clinical formulation",
+        "name": "postpartum mania with infant endangerment",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "Sleep is for ordinary mothers; my baby and I are chosen.",
@@ -2878,7 +3235,7 @@ I would document Louise's fear of removal, past history, current mental state, A
       },
       {
         "id": "s3",
-        "name": "public safety and MHA assessment — legal/policy hinge",
+        "name": "public safety and MHA assessment",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "Can we just take her licence and leave?",
@@ -2897,7 +3254,7 @@ I would document Louise's fear of removal, past history, current mental state, A
       },
       {
         "id": "s4",
-        "name": "infant immediate safety — vulnerable person safety",
+        "name": "infant immediate safety",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "The baby was unrestrained in the back seat.",
@@ -2916,7 +3273,7 @@ I would document Louise's fear of removal, past history, current mental state, A
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Wellness community belief system reinforcing mania and blocking medication",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "Medication will destroy her gift.",
@@ -2935,7 +3292,7 @@ I would document Louise's fear of removal, past history, current mental state, A
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting mania severity, infant endangerment and legal admission basis",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether urgent admission and infant protection are required",
@@ -2951,6 +3308,24 @@ I would document Louise's fear of removal, past history, current mental state, A
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Driving with unrestrained infant as immediate statutory risk notification",
+        "category": "immediate_safety",
+        "severity": "important",
+        "clueInStem": "The baby was unrestrained in the back seat.",
+        "whyItMatters": "An unrestrained infant in a car driven at night by an acutely manic mother is a reportable child safety incident. The police involvement should prompt immediate infant protection action independent of the psychiatric admission decision, and the consultant must document both.",
+        "modelWording": "I would advise that the infant's unrestrained transport constitutes a reportable child safety matter and ensure child protection is notified now, separate from the MHA assessment, because infant safety cannot wait for the psychiatric admission to be formalised.",
+        "keywords": [
+          "unrestrained infant",
+          "child safety",
+          "mandatory reporting",
+          "child protection",
+          "driving",
+          "mania",
+          "immediate risk"
+        ]
       }
     ],
     "priorityOrder": {
@@ -2962,7 +3337,8 @@ I would document Louise's fear of removal, past history, current mental state, A
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -2989,7 +3365,7 @@ I would document the manic symptoms, the quote about sleep and being chosen, the
     "signals": [
       {
         "id": "s1",
-        "name": "behavioural-laziness shortcut — unsafe shortcut under pressure",
+        "name": "behavioural-laziness shortcut",
         "category": "immediate_safety",
         "severity": "critical",
         "clueInStem": "He is lazy and must be forced back.",
@@ -3008,7 +3384,7 @@ I would document the manic symptoms, the quote about sleep and being chosen, the
       },
       {
         "id": "s2",
-        "name": "PTSD-driven school refusal — core clinical formulation",
+        "name": "PTSD-driven school refusal",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "School is not safe; soldiers come when bells ring.",
@@ -3026,7 +3402,7 @@ I would document the manic symptoms, the quote about sleep and being chosen, the
       },
       {
         "id": "s3",
-        "name": "consent, confidentiality and school obligations — legal/policy hinge",
+        "name": "consent, confidentiality and school obligations",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "Can you certify him fit or unfit today?",
@@ -3045,7 +3421,7 @@ I would document the manic symptoms, the quote about sleep and being chosen, the
       },
       {
         "id": "s4",
-        "name": "sibling trauma exposure — vulnerable person safety",
+        "name": "sibling trauma exposure",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "He screams at night and she hides.",
@@ -3064,7 +3440,7 @@ I would document the manic symptoms, the quote about sleep and being chosen, the
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Shame and family stigma within refugee community blocking trauma disclosure",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "If people know what happened, my family will be ashamed.",
@@ -3083,7 +3459,7 @@ I would document the manic symptoms, the quote about sleep and being chosen, the
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting trauma formulation, interpreter failure and graduated return-to-school plan",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to treat trauma while managing school, consent and family pressure",
@@ -3099,6 +3475,24 @@ I would document the manic symptoms, the quote about sleep and being chosen, the
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Sibling secondary trauma exposure as independent safeguarding concern",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "He screams at night and she hides.",
+        "whyItMatters": "A younger sibling hiding in response to nighttime screaming suggests secondary trauma exposure that may constitute emotional harm. This child requires her own assessment independent of Hamid's treatment, and the family home environment must be evaluated as a safeguarding matter.",
+        "modelWording": "I would document the sister's observed response as evidence of secondary trauma, request a welfare check or referral for the sister through school or GP, and include household safety in the overall care plan alongside Hamid's individual trauma treatment.",
+        "keywords": [
+          "sibling trauma",
+          "secondary exposure",
+          "safeguarding",
+          "household safety",
+          "emotional harm",
+          "welfare check",
+          "trauma-informed family care"
+        ]
       }
     ],
     "priorityOrder": {
@@ -3110,7 +3504,8 @@ I would document the manic symptoms, the quote about sleep and being chosen, the
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -3137,7 +3532,7 @@ My consultant action would be to stop the binary fit/unfit demand and replace it
     "signals": [
       {
         "id": "s1",
-        "name": "medication-escalation shortcut — unsafe shortcut under pressure",
+        "name": "medication-escalation shortcut",
         "category": "immediate_safety",
         "severity": "critical",
         "clueInStem": "Increase the stimulant; school cannot cope.",
@@ -3156,7 +3551,7 @@ My consultant action would be to stop the binary fit/unfit demand and replace it
       },
       {
         "id": "s2",
-        "name": "trauma mimicking ADHD/aggression — core clinical formulation",
+        "name": "trauma mimicking ADHD/aggression",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "I get scared when men yell because it sounds like home.",
@@ -3174,7 +3569,7 @@ My consultant action would be to stop the binary fit/unfit demand and replace it
       },
       {
         "id": "s3",
-        "name": "reasonable adjustments and safeguarding — legal/policy hinge",
+        "name": "reasonable adjustments and safeguarding",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "Can we remove his aide if medication is optimised?",
@@ -3193,7 +3588,7 @@ My consultant action would be to stop the binary fit/unfit demand and replace it
       },
       {
         "id": "s4",
-        "name": "child exposed to polypharmacy risk — vulnerable person safety",
+        "name": "child exposed to polypharmacy risk",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "Every time he is upset they add another tablet.",
@@ -3212,7 +3607,7 @@ My consultant action would be to stop the binary fit/unfit demand and replace it
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Deliberate-defiance narrative displacing trauma-informed Aboriginal identity",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "He chooses to be defiant.",
@@ -3231,7 +3626,7 @@ My consultant action would be to stop the binary fit/unfit demand and replace it
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting re-formulation, polypharmacy review and cultural health integration",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to re-formulate trauma/ADHD and safely rationalise medication",
@@ -3247,6 +3642,24 @@ My consultant action would be to stop the binary fit/unfit demand and replace it
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Absence of OT and Aboriginal health worker as a system-level safety failure",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "No Aboriginal health worker or OT has been involved.",
+        "whyItMatters": "Providing a polypharmacy treatment plan to an Aboriginal child without OT input (for sensory and environmental factors) or Aboriginal health worker involvement is clinically and culturally incomplete. These absences mean the plan has been built on an incomplete formulation.",
+        "modelWording": "I would formally document that OT and Aboriginal health worker assessments are prerequisites for any medication change, refuse to endorse stimulant escalation until both are completed, and record this as a governance failure requiring correction before treatment optimisation.",
+        "keywords": [
+          "OT absence",
+          "Aboriginal health worker",
+          "systemic gap",
+          "governance",
+          "polypharmacy",
+          "incomplete formulation",
+          "cultural safety obligation"
+        ]
       }
     ],
     "priorityOrder": {
@@ -3258,7 +3671,8 @@ My consultant action would be to stop the binary fit/unfit demand and replace it
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -3285,7 +3699,7 @@ My consultant plan would be to convene school, paediatrics, grandmother, Aborigi
     "signals": [
       {
         "id": "s1",
-        "name": "minimising discharge shortcut — unsafe shortcut under pressure",
+        "name": "minimising discharge shortcut",
         "category": "immediate_safety",
         "severity": "critical",
         "clueInStem": "Hospital is making her dramatic; discharge to a dietitian.",
@@ -3304,7 +3718,7 @@ My consultant plan would be to convene school, paediatrics, grandmother, Aborigi
       },
       {
         "id": "s2",
-        "name": "anorexic cognition impairing capacity — core clinical formulation",
+        "name": "anorexic cognition impairing capacity",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "I know I might die, but gaining weight would be worse.",
@@ -3322,7 +3736,7 @@ My consultant plan would be to convene school, paediatrics, grandmother, Aborigi
       },
       {
         "id": "s3",
-        "name": "legal authority for involuntary treatment — legal/policy hinge",
+        "name": "legal authority for involuntary treatment",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "Can psychiatry authorise feeding against her wishes?",
@@ -3341,7 +3755,7 @@ My consultant plan would be to convene school, paediatrics, grandmother, Aborigi
       },
       {
         "id": "s4",
-        "name": "carer inability and medical risk — vulnerable person safety",
+        "name": "carer inability and medical risk",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "I cannot keep her alive at home.",
@@ -3360,7 +3774,7 @@ My consultant plan would be to convene school, paediatrics, grandmother, Aborigi
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Absconding threat as barrier to life-saving inpatient refeeding",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "I will run away if you force me.",
@@ -3379,10 +3793,10 @@ My consultant plan would be to convene school, paediatrics, grandmother, Aborigi
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting capacity, legal refeeding authority and absconding risk management",
         "category": "governance",
         "severity": "important",
-        "clueInStem": "whether life-saving refeeding requires legal coercion and how to contain abscond",
+        "clueInStem": "whether life-saving refeeding requires legal coercion and how to contain absconding",
         "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
         "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
         "keywords": [
@@ -3395,6 +3809,24 @@ My consultant plan would be to convene school, paediatrics, grandmother, Aborigi
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Carer inability to provide medical supervision as a disposition determinant",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "I cannot keep her alive at home.",
+        "whyItMatters": "A carer who explicitly states they cannot keep the patient alive at home removes the clinical option of home discharge. This statement must be documented as a critical safety finding that independently forecloses home care as a disposition, regardless of whether legal authority for NG feeding exists.",
+        "modelWording": "I would document the mother's statement verbatim and treat it as a clinical and social safety finding that rules out home discharge, then focus the team on inpatient stabilisation with the appropriate legal authority for refeeding.",
+        "keywords": [
+          "carer inability",
+          "home discharge excluded",
+          "mother collateral",
+          "disposition",
+          "medical supervision",
+          "anorexia",
+          "inpatient refeeding"
+        ]
       }
     ],
     "priorityOrder": {
@@ -3406,7 +3838,8 @@ My consultant plan would be to convene school, paediatrics, grandmother, Aborigi
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -3433,7 +3866,7 @@ I would act by aligning paediatrics, CAMHS, nursing and family around one plan: 
     "signals": [
       {
         "id": "s1",
-        "name": "unsafe parental discharge shortcut — unsafe shortcut under pressure",
+        "name": "unsafe parental discharge shortcut",
         "category": "immediate_safety",
         "severity": "critical",
         "clueInStem": "This is internet influence; we are taking her home.",
@@ -3452,7 +3885,7 @@ I would act by aligning paediatrics, CAMHS, nursing and family around one plan: 
       },
       {
         "id": "s2",
-        "name": "suicide risk driven by family rejection — core clinical formulation",
+        "name": "suicide risk driven by family rejection",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "I cannot survive another night in that house.",
@@ -3470,7 +3903,7 @@ I would act by aligning paediatrics, CAMHS, nursing and family around one plan: 
       },
       {
         "id": "s3",
-        "name": "minor confidentiality and MHA — legal/policy hinge",
+        "name": "minor confidentiality and MHA",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "Can we call parents against their wishes because they are under 18?",
@@ -3489,7 +3922,7 @@ I would act by aligning paediatrics, CAMHS, nursing and family around one plan: 
       },
       {
         "id": "s4",
-        "name": "means access and peer collateral — vulnerable person safety",
+        "name": "means access and peer collateral",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "They have tablets hidden in their bedroom.",
@@ -3508,7 +3941,7 @@ I would act by aligning paediatrics, CAMHS, nursing and family around one plan: 
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Parental rejection of gender identity as an acute driver of suicidal crisis",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "You are not my child if this continues.",
@@ -3527,7 +3960,7 @@ I would act by aligning paediatrics, CAMHS, nursing and family around one plan: 
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting suicidal risk, gender safety and confidentiality reasoning",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to admit or find safe alternative without unsafe outing",
@@ -3543,6 +3976,24 @@ I would act by aligning paediatrics, CAMHS, nursing and family around one plan: 
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Means access from hidden medications requiring immediate safety intervention",
+        "category": "immediate_safety",
+        "severity": "important",
+        "clueInStem": "They have tablets hidden in their bedroom.",
+        "whyItMatters": "A friend's collateral confirming hidden tablets in a suicidal adolescent's bedroom creates an immediate means-access crisis that requires action tonight. Verbal safety plans are inadequate when the means are already at home and the home environment is acutely unsafe.",
+        "modelWording": "I would treat the tablet access as an immediate safety matter requiring removal of means, involve a trusted responsible adult or crisis services to access the home, and document why a verbal safety plan alone is insufficient given confirmed means access and an unsafe home environment.",
+        "keywords": [
+          "means access",
+          "hidden tablets",
+          "immediate safety",
+          "means removal",
+          "home environment",
+          "suicidal risk",
+          "gender-diverse youth"
+        ]
       }
     ],
     "priorityOrder": {
@@ -3554,7 +4005,8 @@ I would act by aligning paediatrics, CAMHS, nursing and family around one plan: 
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -3581,7 +4033,7 @@ My consultant plan would be to assess depression, suicidality, self-harm, family
     "signals": [
       {
         "id": "s1",
-        "name": "criminalising-meltdown shortcut — unsafe shortcut under pressure",
+        "name": "criminalising-meltdown shortcut",
         "category": "immediate_safety",
         "severity": "critical",
         "clueInStem": "He assaulted staff, so he needs consequences.",
@@ -3600,7 +4052,7 @@ My consultant plan would be to assess depression, suicidality, self-harm, family
       },
       {
         "id": "s2",
-        "name": "sensory overload and autistic distress — core clinical formulation",
+        "name": "sensory overload and autistic distress",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "The alarm felt like knives in my head.",
@@ -3618,7 +4070,7 @@ My consultant plan would be to assess depression, suicidality, self-harm, family
       },
       {
         "id": "s3",
-        "name": "consent, restraint and disability policy — legal/policy hinge",
+        "name": "consent, restraint and disability policy",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "Can we sedate him if he refuses examination?",
@@ -3637,7 +4089,7 @@ My consultant plan would be to assess depression, suicidality, self-harm, family
       },
       {
         "id": "s4",
-        "name": "risk to others during dysregulation — vulnerable person safety",
+        "name": "risk to others during dysregulation",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "Children were hiding in the corridor.",
@@ -3656,7 +4108,7 @@ My consultant plan would be to assess depression, suicidality, self-harm, family
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Deliberate-defiance narrative obstructing neurodevelopmental distress formulation",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "He is manipulative and knows what he is doing.",
@@ -3675,7 +4127,7 @@ My consultant plan would be to assess depression, suicidality, self-harm, family
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting sensory formulation, disability-appropriate care and school safety plan",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to formulate neurodevelopmental distress and prevent punitive escalation",
@@ -3691,6 +4143,24 @@ My consultant plan would be to assess depression, suicidality, self-harm, family
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Modifying the school environment to prevent recurrence of sensory overload",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "The alarm felt like knives in my head.",
+        "whyItMatters": "Without a sensory plan and fire-alarm modification, Noah will face the same trigger again and the ED will see the same presentation. Prevention through environmental adjustment is a consultant-level obligation and must be documented alongside the individual clinical plan.",
+        "modelWording": "I would formally recommend to the school that fire alarm preparation be individualised for Noah, include a sensory exit plan and quiet space, refer to OT for a sensory assessment, and document these environmental recommendations as part of the clinical response to prevent recurrence.",
+        "keywords": [
+          "sensory plan",
+          "fire alarm",
+          "environmental modification",
+          "school safety",
+          "OT referral",
+          "recurrence prevention",
+          "autism reasonable adjustments"
+        ]
       }
     ],
     "priorityOrder": {
@@ -3702,7 +4172,8 @@ My consultant plan would be to assess depression, suicidality, self-harm, family
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -3729,7 +4200,7 @@ His parents are migrants and say autism is shameful in their community, so engag
     "signals": [
       {
         "id": "s1",
-        "name": "substance-only shortcut — unsafe shortcut under pressure",
+        "name": "substance-only shortcut",
         "category": "immediate_safety",
         "severity": "critical",
         "clueInStem": "It is just weed and bad friends.",
@@ -3748,7 +4219,7 @@ His parents are migrants and say autism is shameful in their community, so engag
       },
       {
         "id": "s2",
-        "name": "first episode psychosis versus substance-related paranoia — core clinical formulation",
+        "name": "first episode psychosis versus substance-related paranoia",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "They are recording me through the school laptops.",
@@ -3766,7 +4237,7 @@ His parents are migrants and say autism is shameful in their community, so engag
       },
       {
         "id": "s3",
-        "name": "MHA for minors and parental disagreement — legal/policy hinge",
+        "name": "MHA for minors and parental disagreement",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "Does he meet involuntary criteria if parents refuse admission?",
@@ -3785,7 +4256,7 @@ His parents are migrants and say autism is shameful in their community, so engag
       },
       {
         "id": "s4",
-        "name": "family violence/weapon risk — vulnerable person safety",
+        "name": "family violence/weapon risk",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "He sleeps with a knife under the pillow.",
@@ -3804,7 +4275,7 @@ His parents are migrants and say autism is shameful in their community, so engag
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Family confidentiality request conflicting with school-based weapon and safety risk",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "Please do not tell the school anything.",
@@ -3823,7 +4294,7 @@ His parents are migrants and say autism is shameful in their community, so engag
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting psychosis, weapon risk, admission basis and confidentiality reasoning",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to admit/engage and manage confidentiality, school and weapon risk",
@@ -3839,6 +4310,24 @@ His parents are migrants and say autism is shameful in their community, so engag
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Knife under the pillow as immediate household safety threat to younger sibling",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "He sleeps with a knife under the pillow.",
+        "whyItMatters": "The younger brother sharing the house with a paranoid adolescent who keeps a knife under his pillow is at direct physical risk. This is not only a risk-to-self or risk-to-classmates issue; it is an immediate household safety matter requiring a specific safeguarding response.",
+        "modelWording": "I would contact child protection regarding the younger sibling's safety, document the knife access as a specific immediate risk to a third party in the home, and ensure weapon removal is part of the safety plan regardless of whether admission is voluntary or involuntary.",
+        "keywords": [
+          "sibling safety",
+          "knife access",
+          "weapon removal",
+          "immediate household risk",
+          "child protection",
+          "paranoia",
+          "first episode psychosis"
+        ]
       }
     ],
     "priorityOrder": {
@@ -3850,7 +4339,8 @@ His parents are migrants and say autism is shameful in their community, so engag
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -3877,7 +4367,7 @@ I would document the laptop delusion, cannabis use, three-month decline, knife a
     "signals": [
       {
         "id": "s1",
-        "name": "placement rejection shortcut — unsafe shortcut under pressure",
+        "name": "placement rejection shortcut",
         "category": "immediate_safety",
         "severity": "critical",
         "clueInStem": "We are giving notice; she is too hard.",
@@ -3896,7 +4386,7 @@ I would document the laptop delusion, cannabis use, three-month decline, knife a
       },
       {
         "id": "s2",
-        "name": "attachment-driven self-harm and absconding — core clinical formulation",
+        "name": "attachment-driven self-harm and absconding",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "I cut so someone comes before I disappear.",
@@ -3914,7 +4404,7 @@ I would document the laptop delusion, cannabis use, three-month decline, knife a
       },
       {
         "id": "s3",
-        "name": "hospital as placement substitute — legal/policy hinge",
+        "name": "hospital as placement substitute",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "Can you admit her until we find a placement?",
@@ -3933,7 +4423,7 @@ I would document the laptop delusion, cannabis use, three-month decline, knife a
       },
       {
         "id": "s4",
-        "name": "risk to vulnerable peers — vulnerable person safety",
+        "name": "risk to vulnerable peers",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "She tells them how to cut safely.",
@@ -3952,7 +4442,7 @@ I would document the laptop delusion, cannabis use, three-month decline, knife a
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Abandonment schema and therapeutic pessimism as core clinical barriers to engagement",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "Every adult leaves; you will too.",
@@ -3971,7 +4461,7 @@ I would document the laptop delusion, cannabis use, three-month decline, knife a
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting attachment-driven risk, hospital-as-placement risk and kinship reconnection plan",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether admission is clinically indicated versus urgent placement/stability plan",
@@ -3987,6 +4477,24 @@ I would document the laptop delusion, cannabis use, three-month decline, knife a
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Self-harm modelling to peers as a safeguarding matter within residential care",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "She tells them how to cut safely.",
+        "whyItMatters": "Teaching cutting methods to younger residents creates risk of contagion and immediate harm to third parties. This is a residential care safeguarding issue that requires an urgent management response independent of Mia's individual clinical plan.",
+        "modelWording": "I would inform the residential care manager and child protection that Mia's peer interactions constitute a safeguarding risk to younger residents, recommend immediate separation or structured supervision, and document this as a third-party risk requiring action alongside her individual care plan.",
+        "keywords": [
+          "self-harm modelling",
+          "contagion risk",
+          "younger residents",
+          "safeguarding",
+          "residential care",
+          "peer risk",
+          "third party"
+        ]
       }
     ],
     "priorityOrder": {
@@ -3998,7 +4506,8 @@ I would document the laptop delusion, cannabis use, three-month decline, knife a
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -4025,7 +4534,7 @@ I would document the function of self-harm, the placement notice, absence or pre
     "signals": [
       {
         "id": "s1",
-        "name": "invalidating-cause shortcut — unsafe shortcut under pressure",
+        "name": "invalidating-cause shortcut",
         "category": "immediate_safety",
         "severity": "critical",
         "clueInStem": "This gender nonsense caused the eating disorder.",
@@ -4044,7 +4553,7 @@ I would document the function of self-harm, the placement notice, absence or pre
       },
       {
         "id": "s2",
-        "name": "gender dysphoria intertwined with eating disorder risk — core clinical formulation",
+        "name": "gender dysphoria intertwined with eating disorder risk",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "If my body changes any more, I cannot live in it.",
@@ -4062,7 +4571,7 @@ I would document the function of self-harm, the placement notice, absence or pre
       },
       {
         "id": "s3",
-        "name": "capacity and involuntary refeeding — legal/policy hinge",
+        "name": "capacity and involuntary refeeding",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "Can we refeed over his objection?",
@@ -4081,7 +4590,7 @@ I would document the function of self-harm, the placement notice, absence or pre
       },
       {
         "id": "s4",
-        "name": "dignity and medical care conflict — vulnerable person safety",
+        "name": "dignity and medical care conflict",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "He refuses gowns and examinations.",
@@ -4100,7 +4609,7 @@ I would document the function of self-harm, the placement notice, absence or pre
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Family invalidation of gender identity entrenching eating disorder and medical risk",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "We just need him to eat like a girl again.",
@@ -4119,7 +4628,7 @@ I would document the function of self-harm, the placement notice, absence or pre
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting capacity, legal refeeding basis, gender-affirming approach and family conflict",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to deliver gender-affirming eating disorder treatment under medical risk",
@@ -4135,6 +4644,24 @@ I would document the function of self-harm, the placement notice, absence or pre
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Extended family privacy as a safety factor in gender-affirming inpatient care",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "He refuses gowns and examinations.",
+        "whyItMatters": "Involuntary examination or refeeding that does not account for gender dysphoria risks re-traumatising Sam and worsening his engagement with treatment. Privacy management and staff pronoun use are clinical safety measures, not optional courtesies.",
+        "modelWording": "I would document specific care adaptations: he/him pronouns, privacy screens for examination, preferred name use, female or gender-affirming staff for intimate care, and explanation before touch. These should be recorded as clinical safety measures in the care plan, not left to individual staff discretion.",
+        "keywords": [
+          "gender dysphoria",
+          "inpatient privacy",
+          "pronouns",
+          "care adaptations",
+          "examination trauma",
+          "gender-affirming care",
+          "clinical safety"
+        ]
       }
     ],
     "priorityOrder": {
@@ -4146,7 +4673,8 @@ I would document the function of self-harm, the placement notice, absence or pre
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -4173,7 +4701,7 @@ I would document Sam's medical instability, dysphoria quote, pronouns and privac
     "signals": [
       {
         "id": "s1",
-        "name": "manipulation shortcut — unsafe shortcut under pressure",
+        "name": "manipulation shortcut",
         "category": "immediate_safety",
         "severity": "critical",
         "clueInStem": "He is using self-harm to avoid consequences.",
@@ -4192,7 +4720,7 @@ I would document Sam's medical instability, dysphoria quote, pronouns and privac
       },
       {
         "id": "s2",
-        "name": "custody-related suicide risk — core clinical formulation",
+        "name": "custody-related suicide risk",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "I would rather die than stay in that room.",
@@ -4210,7 +4738,7 @@ I would document Sam's medical instability, dysphoria quote, pronouns and privac
       },
       {
         "id": "s3",
-        "name": "least restrictive custody safety — legal/policy hinge",
+        "name": "least restrictive custody safety",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "Can we keep him in isolation for observation?",
@@ -4229,7 +4757,7 @@ I would document Sam's medical instability, dysphoria quote, pronouns and privac
       },
       {
         "id": "s4",
-        "name": "trauma and vulnerable detainee risk — vulnerable person safety",
+        "name": "trauma and vulnerable detainee risk",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "His uncle died in custody too.",
@@ -4248,7 +4776,7 @@ I would document Sam's medical instability, dysphoria quote, pronouns and privac
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Systemic cultural disconnection in detention compounding suicide and trauma risk",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "No one here listens to our mob.",
@@ -4267,7 +4795,7 @@ I would document Sam's medical instability, dysphoria quote, pronouns and privac
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting isolation trigger, Aboriginal cultural support sought and custody safety plan",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether isolation should stop and how to manage suicide risk in custody",
@@ -4283,6 +4811,24 @@ I would document Sam's medical instability, dysphoria quote, pronouns and privac
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Uncle's death in custody as a formative trauma shaping acute suicidal hopelessness",
+        "category": "diagnosis_formulation",
+        "severity": "important",
+        "clueInStem": "His uncle died in custody too.",
+        "whyItMatters": "Knowing that a close family member died in custody is not background context; it is a formative trauma that makes current isolation feel like a rehearsal for his own death. This must be incorporated directly into the suicide risk formulation and urgently addressed in the therapeutic response.",
+        "modelWording": "I would directly address the uncle's death in my assessment of Kobi's hopelessness, document how the custodial setting reactivates this trauma, and ensure that any isolation plan is immediately reviewed with this context clearly stated as a clinical contraindication.",
+        "keywords": [
+          "custodial trauma",
+          "uncle's death",
+          "intergenerational",
+          "hopelessness",
+          "isolation contraindicated",
+          "suicide formulation",
+          "Aboriginal"
+        ]
       }
     ],
     "priorityOrder": {
@@ -4294,7 +4840,8 @@ I would document Sam's medical instability, dysphoria quote, pronouns and privac
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -4321,7 +4868,7 @@ I would document the hanging behaviour, the isolation trigger, the uncle's death
     "signals": [
       {
         "id": "s1",
-        "name": "discipline shortcut — unsafe shortcut under pressure",
+        "name": "discipline shortcut",
         "category": "immediate_safety",
         "severity": "critical",
         "clueInStem": "She needs discipline, not psychiatry.",
@@ -4340,7 +4887,7 @@ I would document the hanging behaviour, the isolation trigger, the uncle's death
       },
       {
         "id": "s2",
-        "name": "capacity, eating disorder and diabetic risk — core clinical formulation",
+        "name": "capacity, eating disorder and diabetic risk",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "Insulin makes me fat; I do not care if I die.",
@@ -4358,7 +4905,7 @@ I would document the hanging behaviour, the isolation trigger, the uncle's death
       },
       {
         "id": "s3",
-        "name": "capacity and emergency treatment — legal/policy hinge",
+        "name": "capacity and emergency treatment",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "Can we force insulin if she refuses?",
@@ -4377,7 +4924,7 @@ I would document the hanging behaviour, the isolation trigger, the uncle's death
       },
       {
         "id": "s4",
-        "name": "sibling vulnerability to disordered eating — vulnerable person safety",
+        "name": "sibling vulnerability to disordered eating",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "She copies everything Lina does.",
@@ -4396,7 +4943,7 @@ I would document the hanging behaviour, the isolation trigger, the uncle's death
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Family documentation pressure as barrier to accurate eating disorder recording",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "Do not document eating disorder; it will shame us.",
@@ -4415,7 +4962,7 @@ I would document the hanging behaviour, the isolation trigger, the uncle's death
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting DKA risk, eating disorder formulation, capacity and legal insulin authority",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether refusal is capacitous and how to treat medical/eating risk",
@@ -4431,6 +4978,24 @@ I would document the hanging behaviour, the isolation trigger, the uncle's death
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Younger sibling as a vulnerable child modelling disordered eating behaviour",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "She copies everything Lina does.",
+        "whyItMatters": "A younger sibling who copies everything Lina does may be modelling insulin restriction, food restriction or suicidal indifference. This creates an independent child health and safeguarding concern requiring a family-level intervention.",
+        "modelWording": "I would ask about the sister's eating, insulin use and emotional wellbeing, document the modelling risk in the clinical record, involve the family in psychoeducation about the danger of the younger child learning disordered eating, and refer the sister for her own assessment if indicated.",
+        "keywords": [
+          "sibling modelling",
+          "disordered eating",
+          "insulin restriction",
+          "family risk",
+          "safeguarding",
+          "child health",
+          "eating disorder contagion"
+        ]
       }
     ],
     "priorityOrder": {
@@ -4442,7 +5007,8 @@ I would document the hanging behaviour, the isolation trigger, the uncle's death
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -4469,7 +5035,7 @@ I would document insulin omission and DKA risk, the diabulimia formulation, capa
     "signals": [
       {
         "id": "s1",
-        "name": "financial-capacity shortcut — unsafe shortcut under pressure",
+        "name": "financial-capacity shortcut",
         "category": "risk_vulnerable",
         "severity": "critical",
         "clueInStem": "Write that she lacks capacity so we can sell the house.",
@@ -4488,7 +5054,7 @@ I would document insulin omission and DKA risk, the diabulimia formulation, capa
       },
       {
         "id": "s2",
-        "name": "dementia-related driving risk and impaired insight — core clinical formulation",
+        "name": "dementia-related driving risk and impaired insight",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "The road moved behind me.",
@@ -4506,7 +5072,7 @@ I would document insulin omission and DKA risk, the diabulimia formulation, capa
       },
       {
         "id": "s3",
-        "name": "decision-specific capacity — legal/policy hinge",
+        "name": "decision-specific capacity",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "Can you declare her globally incapable?",
@@ -4525,7 +5091,7 @@ I would document insulin omission and DKA risk, the diabulimia formulation, capa
       },
       {
         "id": "s4",
-        "name": "public safety — vulnerable person safety",
+        "name": "public safety",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "She drove across the footpath near the shops.",
@@ -4544,7 +5110,7 @@ I would document insulin omission and DKA risk, the diabulimia formulation, capa
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Family financial conflict of interest undermining valid capacity assessment",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "Fees will take everything if we delay.",
@@ -4563,7 +5129,7 @@ I would document insulin omission and DKA risk, the diabulimia formulation, capa
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting domain-specific capacity, driving notification and elder financial abuse assessment",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to notify driving authority and assess capacity/abuse independently",
@@ -4579,6 +5145,24 @@ I would document insulin omission and DKA risk, the diabulimia formulation, capa
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Family interpreter in a financial dispute as a critical assessment validity failure",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "The road moved behind me.",
+        "whyItMatters": "An assessment conducted through a family interpreter who has a financial stake in the outcome is clinically invalid and potentially legally indefensible. It must be refused and repeated with a professional Mandarin interpreter before any capacity opinion is formed.",
+        "modelWording": "I would formally document that the current assessment is invalid due to conflict-of-interest interpretation, refuse to provide a capacity opinion until a professional Mandarin interpreter is arranged, and record this as a clinical governance requirement rather than a preference.",
+        "keywords": [
+          "interpreter conflict of interest",
+          "financial stake",
+          "capacity validity",
+          "professional interpreter",
+          "Mandarin",
+          "elder abuse",
+          "governance"
+        ]
       }
     ],
     "priorityOrder": {
@@ -4590,7 +5174,8 @@ I would document insulin omission and DKA risk, the diabulimia formulation, capa
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -4617,7 +5202,7 @@ I would document the driving incidents, licensing advice, interpreter requiremen
     "signals": [
       {
         "id": "s1",
-        "name": "dementia-label shortcut — unsafe shortcut under pressure",
+        "name": "dementia-label shortcut",
         "category": "risk_vulnerable",
         "severity": "critical",
         "clueInStem": "He has dementia, please chart risperidone.",
@@ -4636,7 +5221,7 @@ I would document the driving incidents, licensing advice, interpreter requiremen
       },
       {
         "id": "s2",
-        "name": "delirium with paranoid misperceptions — core clinical formulation",
+        "name": "delirium with paranoid misperceptions",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "Thieves are taking my blood.",
@@ -4654,7 +5239,7 @@ I would document the driving incidents, licensing advice, interpreter requiremen
       },
       {
         "id": "s3",
-        "name": "restraint policy and delirium care — legal/policy hinge",
+        "name": "restraint policy and delirium care",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "Can we restrain him overnight?",
@@ -4673,7 +5258,7 @@ I would document the driving incidents, licensing advice, interpreter requiremen
       },
       {
         "id": "s4",
-        "name": "baseline collateral and reversibility — vulnerable person safety",
+        "name": "baseline collateral and reversibility",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "Dad was shopping alone last week.",
@@ -4692,7 +5277,7 @@ I would document the driving incidents, licensing advice, interpreter requiremen
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Language barrier and absent hearing aids manufacturing apparent dementia",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "He is terrified because no one speaks to him properly.",
@@ -4711,7 +5296,7 @@ I would document the driving incidents, licensing advice, interpreter requiremen
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting delirium formulation, communication plan and non-pharmacological management",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to diagnose/treat delirium and reduce restraint/medication harm",
@@ -4727,6 +5312,24 @@ I would document the driving incidents, licensing advice, interpreter requiremen
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Anticholinergic medication burden as a reversible cause of acute delirium",
+        "category": "diagnosis_formulation",
+        "severity": "important",
+        "clueInStem": "He has dementia, please chart risperidone.",
+        "whyItMatters": "Falls and urinary retention are both classic presentations of anticholinergic toxicity, which is itself a common cause of delirium in older adults. Charting additional antipsychotic medication without reviewing the existing anticholinergic burden risks worsening the delirium rather than treating it.",
+        "modelWording": "I would review all current medications for anticholinergic burden, arrange medication reconciliation with pharmacy, recommend reduction or cessation of anticholinergic agents as the first pharmacological intervention, and document this as part of the delirium cause-and-treatment formulation.",
+        "keywords": [
+          "anticholinergic",
+          "medication review",
+          "delirium cause",
+          "urinary retention",
+          "polypharmacy",
+          "older adult",
+          "reversible delirium"
+        ]
       }
     ],
     "priorityOrder": {
@@ -4738,7 +5341,8 @@ I would document the driving incidents, licensing advice, interpreter requiremen
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -4765,7 +5369,7 @@ I would document the acute baseline change, delirium formulation, communication 
     "signals": [
       {
         "id": "s1",
-        "name": "chemical-restraint shortcut — unsafe shortcut under pressure",
+        "name": "chemical-restraint shortcut",
         "category": "risk_vulnerable",
         "severity": "critical",
         "clueInStem": "Approve regular quetiapine; staffing is short.",
@@ -4784,7 +5388,7 @@ I would document the acute baseline change, delirium formulation, communication 
       },
       {
         "id": "s2",
-        "name": "cultural/modesty formulation of BPSD — core clinical formulation",
+        "name": "cultural/modesty formulation of BPSD",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "I am ashamed; no men.",
@@ -4802,7 +5406,7 @@ I would document the acute baseline change, delirium formulation, communication 
       },
       {
         "id": "s3",
-        "name": "chemical restraint consent and policy — legal/policy hinge",
+        "name": "chemical restraint consent and policy",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "Is this consent if the EPOA agrees to sedation?",
@@ -4821,7 +5425,7 @@ I would document the acute baseline change, delirium formulation, communication 
       },
       {
         "id": "s4",
-        "name": "restraint injury and vulnerable resident safety — vulnerable person safety",
+        "name": "restraint injury and vulnerable resident safety",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "My wrists hurt.",
@@ -4840,7 +5444,7 @@ I would document the acute baseline change, delirium formulation, communication 
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Professional identity and lifelong privacy values as foundation for person-centred care",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "She was a midwife and privacy mattered to her.",
@@ -4859,7 +5463,7 @@ I would document the acute baseline change, delirium formulation, communication 
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting chemical restraint refusal, behaviour plan requirements and safeguarding actions",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to approve medication or require behaviour/safeguarding plan",
@@ -4875,6 +5479,24 @@ I would document the acute baseline change, delirium formulation, communication 
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Wrist injury and possible physical abuse requiring immediate safeguarding review",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "My wrists hurt.",
+        "whyItMatters": "A resident with dementia who reports wrist pain in a context where staff are struggling with showering resistance requires a safeguarding assessment. The pain may reflect physical restraint injury or rough handling, and must be examined, documented and reported if abuse is suspected.",
+        "modelWording": "I would examine Mrs Nguyen's wrists immediately with a registered nurse present, photograph any bruising, review incident reports, and if injury is inconsistent with self-inflicted falls, escalate to the residential care safeguarding officer and aged care regulatory authority.",
+        "keywords": [
+          "wrist injury",
+          "restraint injury",
+          "physical abuse",
+          "safeguarding escalation",
+          "aged care",
+          "examination",
+          "mandatory reporting"
+        ]
       }
     ],
     "priorityOrder": {
@@ -4886,7 +5508,8 @@ I would document the acute baseline change, delirium formulation, communication 
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -4913,7 +5536,7 @@ I would require a behaviour and safeguarding plan before medication: Vietnamese 
     "signals": [
       {
         "id": "s1",
-        "name": "media-pressure shortcut — unsafe shortcut under pressure",
+        "name": "media-pressure shortcut",
         "category": "risk_vulnerable",
         "severity": "critical",
         "clueInStem": "ECT is barbaric and I will go to the media.",
@@ -4932,7 +5555,7 @@ I would require a behaviour and safeguarding plan before medication: Vietnamese 
       },
       {
         "id": "s2",
-        "name": "psychotic depression with life-threatening self-neglect — core clinical formulation",
+        "name": "psychotic depression with life-threatening self-neglect",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "I deserve to die because I ruined my family.",
@@ -4950,7 +5573,7 @@ I would require a behaviour and safeguarding plan before medication: Vietnamese 
       },
       {
         "id": "s3",
-        "name": "ECT consent law and capacity — legal/policy hinge",
+        "name": "ECT consent law and capacity",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "Can his wife sign for ECT?",
@@ -4969,7 +5592,7 @@ I would require a behaviour and safeguarding plan before medication: Vietnamese 
       },
       {
         "id": "s4",
-        "name": "carer distress and substitute pressure — vulnerable person safety",
+        "name": "carer distress and substitute pressure",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "I cannot sign his brain away.",
@@ -4988,7 +5611,7 @@ I would require a behaviour and safeguarding plan before medication: Vietnamese 
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Catholic spiritual concerns and depressive incapacity complicating ECT consent",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "Do whatever she says; I cannot think.",
@@ -5007,7 +5630,7 @@ I would require a behaviour and safeguarding plan before medication: Vietnamese 
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting ECT capacity assessment, legal pathway and media and family communication",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether ECT can proceed and how to manage legal/family conflict",
@@ -5023,6 +5646,24 @@ I would require a behaviour and safeguarding plan before medication: Vietnamese 
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Media threat requiring governance escalation and proactive communication plan",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "ECT is barbaric and I will go to the media.",
+        "whyItMatters": "A media threat in the context of a contested ECT decision requires governance engagement rather than defensive clinical avoidance. Hospitals must be informed, a communication plan agreed with the legal or communications team, and the clinical record made demonstrably transparent and thorough.",
+        "modelWording": "I would notify hospital management and legal services of the media threat, ensure the clinical record is comprehensive and shows the legal ECT pathway was followed, prepare a factual communication brief for media queries, and document that clinical decisions were not changed by external pressure.",
+        "keywords": [
+          "media threat",
+          "governance escalation",
+          "communications plan",
+          "legal services",
+          "hospital management",
+          "transparency",
+          "ECT governance"
+        ]
       }
     ],
     "priorityOrder": {
@@ -5034,7 +5675,8 @@ I would require a behaviour and safeguarding plan before medication: Vietnamese 
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -5061,7 +5703,7 @@ I would document severity of illness, nutritional risk, psychotic guilt, capacit
     "signals": [
       {
         "id": "s1",
-        "name": "family-coercion shortcut — unsafe shortcut under pressure",
+        "name": "family-coercion shortcut",
         "category": "risk_vulnerable",
         "severity": "critical",
         "clueInStem": "She is depressed; make her have surgery.",
@@ -5080,7 +5722,7 @@ I would document severity of illness, nutritional risk, psychotic guilt, capacit
       },
       {
         "id": "s2",
-        "name": "values-based refusal of life-prolonging treatment — core clinical formulation",
+        "name": "values-based refusal of life-prolonging treatment",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "More days in ICU is not living.",
@@ -5098,7 +5740,7 @@ I would document severity of illness, nutritional risk, psychotic guilt, capacit
       },
       {
         "id": "s3",
-        "name": "capacity to refuse life-saving treatment — legal/policy hinge",
+        "name": "capacity to refuse life-saving treatment",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "Can you declare incapacity so we can operate?",
@@ -5117,7 +5759,7 @@ I would document severity of illness, nutritional risk, psychotic guilt, capacit
       },
       {
         "id": "s4",
-        "name": "prior wishes collateral — vulnerable person safety",
+        "name": "prior wishes collateral",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "She always said no machines.",
@@ -5136,7 +5778,7 @@ I would document severity of illness, nutritional risk, psychotic guilt, capacit
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Family grief and Buddhist values shaping end-of-life decision context",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "Our family cannot accept giving up.",
@@ -5155,7 +5797,7 @@ I would document severity of illness, nutritional risk, psychotic guilt, capacit
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting capacity, Buddhist values, prior wishes and goals of care",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether refusal is capacitous and how to support family/goals of care",
@@ -5171,6 +5813,24 @@ I would document severity of illness, nutritional risk, psychotic guilt, capacit
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Palliative care and Buddhist spiritual support as non-negotiable clinical priorities",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "She is a devout Buddhist and asks for her monk.",
+        "whyItMatters": "Mrs Davies's request for her monk is a direct expression of her religious and spiritual values at end of life. Failing to facilitate this urgently may constitute a failure of person-centred and culturally safe care. Palliative care must be engaged now to address comfort, spiritual needs and family communication.",
+        "modelWording": "I would facilitate the monk's visit urgently if surgical timing permits, refer to palliative care for symptom management and family support, and document the request for spiritual care as a clinical priority alongside the capacity assessment and goals-of-care discussion.",
+        "keywords": [
+          "Buddhist spiritual care",
+          "palliative care",
+          "monk",
+          "end of life",
+          "person-centred",
+          "goals of care",
+          "family communication"
+        ]
       }
     ],
     "priorityOrder": {
@@ -5182,7 +5842,8 @@ I would document severity of illness, nutritional risk, psychotic guilt, capacit
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -5209,7 +5870,7 @@ I would document the capacity assessment, the ICU quote, depression/delirium scr
     "signals": [
       {
         "id": "s1",
-        "name": "refusal-as-closure shortcut — unsafe shortcut under pressure",
+        "name": "refusal-as-closure shortcut",
         "category": "risk_vulnerable",
         "severity": "critical",
         "clueInStem": "If she refuses, we close the case.",
@@ -5228,7 +5889,7 @@ I would document the capacity assessment, the ICU quote, depression/delirium scr
       },
       {
         "id": "s2",
-        "name": "self-neglect with possible impaired capacity — core clinical formulation",
+        "name": "self-neglect with possible impaired capacity",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "Everyone should mind their own business.",
@@ -5246,7 +5907,7 @@ I would document the capacity assessment, the ICU quote, depression/delirium scr
       },
       {
         "id": "s3",
-        "name": "capacity/refusal and guardianship — legal/policy hinge",
+        "name": "capacity/refusal and guardianship",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "Can we admit her against her will?",
@@ -5265,7 +5926,7 @@ I would document the capacity assessment, the ICU quote, depression/delirium scr
       },
       {
         "id": "s4",
-        "name": "vulnerability and environmental risk — vulnerable person safety",
+        "name": "vulnerability and environmental risk",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "Her door is open all night.",
@@ -5284,7 +5945,7 @@ I would document the capacity assessment, the ICU quote, depression/delirium scr
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Possible bereavement or cognitive impairment driving dangerous medication self-neglect",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "My husband handled medicines; he is still coming back.",
@@ -5303,7 +5964,7 @@ I would document the capacity assessment, the ICU quote, depression/delirium scr
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting capacity domains, safeguarding pathway and least restrictive home support",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether she has capacity and what least restrictive safeguarding is needed",
@@ -5319,6 +5980,24 @@ I would document the capacity assessment, the ICU quote, depression/delirium scr
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Open door at night as an immediate environmental safety risk requiring action",
+        "category": "immediate_safety",
+        "severity": "important",
+        "clueInStem": "Her door is open all night.",
+        "whyItMatters": "An open door at night in a 79-year-old woman living alone creates immediate risk of wandering, exploitation, assault or cold exposure. This must be treated as an acute safety problem requiring a practical response today, not as background context to be addressed once guardianship or admission is arranged.",
+        "modelWording": "I would arrange an immediate practical response to the open-door risk — neighbour check, council safety latch, carer visit tonight — and document this as an acute environmental risk requiring same-day action independent of the longer-term capacity and safeguarding decisions.",
+        "keywords": [
+          "open door",
+          "environmental risk",
+          "wandering",
+          "immediate safety",
+          "exploitation",
+          "practical intervention",
+          "elderly living alone"
+        ]
       }
     ],
     "priorityOrder": {
@@ -5330,7 +6009,8 @@ I would document the capacity assessment, the ICU quote, depression/delirium scr
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -5357,7 +6037,7 @@ I would document the home conditions, insulin risk, open-door vulnerability, the
     "signals": [
       {
         "id": "s1",
-        "name": "carer-convenience sedation shortcut — unsafe shortcut under pressure",
+        "name": "carer-convenience sedation shortcut",
         "category": "risk_vulnerable",
         "severity": "critical",
         "clueInStem": "He is demented; sedate him so I can manage.",
@@ -5376,7 +6056,7 @@ I would document the home conditions, insulin risk, open-door vulnerability, the
       },
       {
         "id": "s2",
-        "name": "paranoia versus possible elder abuse — core clinical formulation",
+        "name": "paranoia versus possible elder abuse",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "She is poisoning my tea to get the house.",
@@ -5394,7 +6074,7 @@ I would document the home conditions, insulin risk, open-door vulnerability, the
       },
       {
         "id": "s3",
-        "name": "MHA and emergency access — legal/policy hinge",
+        "name": "MHA and emergency access",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "Can we force entry under mental health powers?",
@@ -5413,7 +6093,7 @@ I would document the home conditions, insulin risk, open-door vulnerability, the
       },
       {
         "id": "s4",
-        "name": "possible vulnerable adult abuse — vulnerable person safety",
+        "name": "possible vulnerable adult abuse",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "I have bruises but I fall.",
@@ -5432,7 +6112,7 @@ I would document the home conditions, insulin risk, open-door vulnerability, the
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Carer lock-change and access control as elder abuse indicators requiring investigation",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "The carer changed the locks last month.",
@@ -5451,7 +6131,7 @@ I would document the home conditions, insulin risk, open-door vulnerability, the
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting psychosis versus abuse formulation, safe access and safeguarding escalation",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to assess psychosis, capacity and elder abuse safely",
@@ -5467,6 +6147,24 @@ I would document the home conditions, insulin risk, open-door vulnerability, the
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Bruising disclosure requiring immediate injury documentation and abuse assessment",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "I have bruises but I fall.",
+        "whyItMatters": "A resident who discloses bruises while immediately offering a minimising explanation ('I fall') in the presence of a potentially abusive carer may be in a coercive situation. This pattern requires the carer to be separated from the patient and the bruises formally examined and documented before any clinical opinion is formed.",
+        "modelWording": "I would insist on interviewing Mr Green alone without the carer present, examine and photograph any bruises, document his account of how each was caused, compare this with the pattern and location of injuries, and escalate to adult safeguarding if the explanation is inconsistent.",
+        "keywords": [
+          "bruising",
+          "falls excuse",
+          "carer separation",
+          "elder abuse",
+          "physical examination",
+          "safeguarding",
+          "inconsistent explanation"
+        ]
       }
     ],
     "priorityOrder": {
@@ -5478,7 +6176,8 @@ I would document the home conditions, insulin risk, open-door vulnerability, the
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -5505,7 +6204,7 @@ I would document the poisoning belief, bruises, lock change, carer request for s
     "signals": [
       {
         "id": "s1",
-        "name": "hospital-as-holding shortcut — unsafe shortcut under pressure",
+        "name": "hospital-as-holding shortcut",
         "category": "risk_vulnerable",
         "severity": "critical",
         "clueInStem": "Just keep her here until the nursing home bed opens.",
@@ -5524,7 +6223,7 @@ I would document the poisoning belief, bruises, lock change, carer request for s
       },
       {
         "id": "s2",
-        "name": "dementia, grief and displacement affecting capacity — core clinical formulation",
+        "name": "dementia, grief and displacement affecting capacity",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "My real home is not this place.",
@@ -5542,7 +6241,7 @@ I would document the poisoning belief, bruises, lock change, carer request for s
       },
       {
         "id": "s3",
-        "name": "guardianship and accommodation capacity — legal/policy hinge",
+        "name": "guardianship and accommodation capacity",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "Do we need guardianship if family agree?",
@@ -5561,7 +6260,7 @@ I would document the poisoning belief, bruises, lock change, carer request for s
       },
       {
         "id": "s4",
-        "name": "home safety risk — vulnerable person safety",
+        "name": "home safety risk",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "She leaves the stove on when we sleep.",
@@ -5580,7 +6279,7 @@ I would document the poisoning belief, bruises, lock change, carer request for s
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Community shame as barrier to necessary residential aged care placement",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "Residential care will shame us in our community.",
@@ -5599,7 +6298,7 @@ I would document the poisoning belief, bruises, lock change, carer request for s
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting accommodation capacity, lawful discharge and least restrictive plan",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether she has accommodation capacity and safest lawful discharge",
@@ -5615,6 +6314,24 @@ I would document the poisoning belief, bruises, lock change, carer request for s
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Stove-leaving and night wandering as immediate household safety emergencies",
+        "category": "immediate_safety",
+        "severity": "important",
+        "clueInStem": "She leaves the stove on when we sleep.",
+        "whyItMatters": "Leaving the stove on overnight and wandering are not merely indicators of cognitive decline; they are immediate fire and safety risks that require a practical response today, independent of the longer-term accommodation decision.",
+        "modelWording": "I would arrange a same-day safety response — stove guard, carer overnight, safe-return bracelet — and document these as urgent risk management actions needed while the accommodation capacity assessment and guardianship pathway are being formalised.",
+        "keywords": [
+          "stove risk",
+          "fire safety",
+          "wandering",
+          "immediate risk",
+          "practical intervention",
+          "dementia",
+          "same-day action"
+        ]
       }
     ],
     "priorityOrder": {
@@ -5626,7 +6343,8 @@ I would document the poisoning belief, bruises, lock change, carer request for s
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -5653,7 +6371,7 @@ I would document the train-station incident, stove risk, the exact home quote, i
     "signals": [
       {
         "id": "s1",
-        "name": "denial-of-SI shortcut — unsafe shortcut under pressure",
+        "name": "denial-of-SI shortcut",
         "category": "risk_vulnerable",
         "severity": "critical",
         "clueInStem": "He denies suicidal thoughts, so I cannot push it.",
@@ -5672,7 +6390,7 @@ I would document the train-station incident, stove risk, the exact home quote, i
       },
       {
         "id": "s2",
-        "name": "suicide risk and identity tied to firearms — core clinical formulation",
+        "name": "suicide risk and identity tied to firearms",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "A man without his rifle is already dead.",
@@ -5690,7 +6408,7 @@ I would document the train-station incident, stove risk, the exact home quote, i
       },
       {
         "id": "s3",
-        "name": "public safety/firearms legal pathway — legal/policy hinge",
+        "name": "public safety/firearms legal pathway",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "What is our authority around firearms?",
@@ -5709,7 +6427,7 @@ I would document the train-station incident, stove risk, the exact home quote, i
       },
       {
         "id": "s4",
-        "name": "immediate family safety concern — vulnerable person safety",
+        "name": "immediate family safety concern",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "He sits in the shed with the gun safe open.",
@@ -5728,7 +6446,7 @@ I would document the train-station incident, stove risk, the exact home quote, i
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Rural masculine stigma and confidentiality fear blocking risk disclosure",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "Do not tell the neighbours I am seeing psychiatry.",
@@ -5747,7 +6465,7 @@ I would document the train-station incident, stove risk, the exact home quote, i
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting firearm access plan, suicide risk formulation and confidentiality reasoning",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to manage firearm access, suicide risk and confidentiality",
@@ -5763,6 +6481,24 @@ I would document the train-station incident, stove risk, the exact home quote, i
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Gun safe left open as immediate access indicator requiring urgent response",
+        "category": "immediate_safety",
+        "severity": "important",
+        "clueInStem": "He sits in the shed with the gun safe open.",
+        "whyItMatters": "A man with suicidal ideation sitting in the shed with the gun safe open is at immediate acute risk. This is not a background history item; it is a current behavioural pattern requiring same-day means restriction.",
+        "modelWording": "I would treat the open gun safe as an immediate clinical emergency, engage the patient and family around means restriction today, document the specific behaviour as evidence of access readiness, and liaise with police firearms licensing if voluntary surrender is refused.",
+        "keywords": [
+          "gun safe open",
+          "immediate access",
+          "means restriction",
+          "acute risk",
+          "police firearms",
+          "voluntary surrender",
+          "rural suicidality"
+        ]
       }
     ],
     "priorityOrder": {
@@ -5774,7 +6510,8 @@ I would document the train-station incident, stove risk, the exact home quote, i
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -5801,7 +6538,7 @@ I would document the denial, drought depression context, firearm identity quote,
     "signals": [
       {
         "id": "s1",
-        "name": "witnessing-signature shortcut — unsafe shortcut under pressure",
+        "name": "witnessing-signature shortcut",
         "category": "risk_vulnerable",
         "severity": "critical",
         "clueInStem": "She agreed yesterday; just witness it.",
@@ -5820,7 +6557,7 @@ I would document the denial, drought depression context, firearm identity quote,
       },
       {
         "id": "s2",
-        "name": "delirium and financial capacity vulnerability — core clinical formulation",
+        "name": "delirium and financial capacity vulnerability",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "I don't know what I signed; I was in pain.",
@@ -5838,7 +6575,7 @@ I would document the denial, drought depression context, firearm identity quote,
       },
       {
         "id": "s3",
-        "name": "safeguarding and visitor restriction — legal/policy hinge",
+        "name": "safeguarding and visitor restriction",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "Can we stop visitors if we suspect exploitation?",
@@ -5857,7 +6594,7 @@ I would document the denial, drought depression context, firearm identity quote,
       },
       {
         "id": "s4",
-        "name": "possible financial exploitation — vulnerable person safety",
+        "name": "possible financial exploitation",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "My pension card is missing.",
@@ -5876,7 +6613,7 @@ I would document the denial, drought depression context, firearm identity quote,
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Family privacy norm conflicting with mandatory capacity and abuse investigation",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "In our family we handle these things privately.",
@@ -5895,7 +6632,7 @@ I would document the denial, drought depression context, firearm identity quote,
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting capacity domains, record protection and elder abuse escalation",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to assess capacity, protect records and escalate abuse concerns",
@@ -5911,6 +6648,24 @@ I would document the denial, drought depression context, firearm identity quote,
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Missing pension card as a specific financial exploitation indicator",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "My pension card is missing.",
+        "whyItMatters": "A missing pension card in an older person with fluctuating capacity who has just signed legal documents is a specific indicator of financial exploitation requiring immediate investigation before any capacity opinion is finalised.",
+        "modelWording": "I would document the missing pension card, ask directly about bank access, ATM use, bill payment and control of finances, alert social work and elder abuse services, and ensure the capacity assessment is not used to validate a document signed while he may have been exploited.",
+        "keywords": [
+          "pension card",
+          "financial exploitation",
+          "elder abuse",
+          "bank access",
+          "social work",
+          "safeguarding",
+          "capacity validity"
+        ]
       }
     ],
     "priorityOrder": {
@@ -5922,7 +6677,8 @@ I would document the denial, drought depression context, firearm identity quote,
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -5949,7 +6705,7 @@ I would document the delirium, pain, language barrier, exact statement about not
     "signals": [
       {
         "id": "s1",
-        "name": "override-without-process shortcut — unsafe shortcut under pressure",
+        "name": "override-without-process shortcut",
         "category": "physical_health",
         "severity": "critical",
         "clueInStem": "Delay will reduce cure; can we override her?",
@@ -5968,7 +6724,7 @@ I would document the delirium, pain, language barrier, exact statement about not
       },
       {
         "id": "s2",
-        "name": "depression impairing capacity to refuse chemotherapy — core clinical formulation",
+        "name": "depression impairing capacity to refuse chemotherapy",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "I deserve this cancer; treatment is wasted on me.",
@@ -5986,7 +6742,7 @@ I would document the delirium, pain, language barrier, exact statement about not
       },
       {
         "id": "s3",
-        "name": "capacity and substitute decision pathway — legal/policy hinge",
+        "name": "capacity and substitute decision pathway",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "Does depression automatically remove capacity?",
@@ -6005,7 +6761,7 @@ I would document the delirium, pain, language barrier, exact statement about not
       },
       {
         "id": "s4",
-        "name": "state-dependent refusal collateral — vulnerable person safety",
+        "name": "state-dependent refusal collateral",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "Last month she was begging to start treatment.",
@@ -6024,7 +6780,7 @@ I would document the delirium, pain, language barrier, exact statement about not
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Marital shame and self-blame amplifying depressive guilt and treatment refusal",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "Do not involve my husband; he should find someone better.",
@@ -6043,7 +6799,7 @@ I would document the delirium, pain, language barrier, exact statement about not
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting capacity assessment, depression treatment urgency and autonomy",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether refusal is capacitous and how to treat depression urgently",
@@ -6059,6 +6815,24 @@ I would document the delirium, pain, language barrier, exact statement about not
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Temporal inconsistency in preferences as evidence of fluctuating capacity",
+        "category": "capacity",
+        "severity": "important",
+        "clueInStem": "Last month she was begging to start treatment.",
+        "whyItMatters": "A patient who was pleading for treatment one month ago and is now refusing because she deserves cancer shows a marked change in expressed preference that may reflect depressive distortion of capacity rather than a settled autonomous refusal. This temporal inconsistency is key evidence for the capacity assessment.",
+        "modelWording": "I would document the previous treatment-seeking behaviour and contrast it explicitly with the current refusal, frame this inconsistency as evidence of depression-driven capacity fluctuation, and use it to support the argument for urgent psychiatric treatment prior to any final oncology decision.",
+        "keywords": [
+          "temporal inconsistency",
+          "fluctuating preference",
+          "depressive capacity",
+          "treatment-seeking history",
+          "capacity fluctuation",
+          "oncology refusal",
+          "depression"
+        ]
       }
     ],
     "priorityOrder": {
@@ -6070,7 +6844,8 @@ I would document the delirium, pain, language barrier, exact statement about not
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -6097,7 +6872,7 @@ I would document the oncology urgency, the exact guilt-laden refusal, the husban
     "signals": [
       {
         "id": "s1",
-        "name": "religious-demand shortcut — unsafe shortcut under pressure",
+        "name": "religious-demand shortcut",
         "category": "physical_health",
         "severity": "critical",
         "clueInStem": "Our faith says you must continue everything.",
@@ -6116,7 +6891,7 @@ I would document the oncology urgency, the exact guilt-laden refusal, the husban
       },
       {
         "id": "s2",
-        "name": "fluctuating ICU capacity and possible delirium — core clinical formulation",
+        "name": "fluctuating ICU capacity and possible delirium",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "No more tubes; let me go.",
@@ -6134,7 +6909,7 @@ I would document the oncology urgency, the exact guilt-laden refusal, the husban
       },
       {
         "id": "s3",
-        "name": "capacity for life-sustaining treatment — legal/policy hinge",
+        "name": "capacity for life-sustaining treatment",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "Can he refuse dialysis today?",
@@ -6153,7 +6928,7 @@ I would document the oncology urgency, the exact guilt-laden refusal, the husban
       },
       {
         "id": "s4",
-        "name": "prior wishes conflict — vulnerable person safety",
+        "name": "prior wishes conflict",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "He said he never wanted machines.",
@@ -6172,7 +6947,7 @@ I would document the oncology urgency, the exact guilt-laden refusal, the husban
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Family demand to continue everything despite patient's expressed wishes to stop",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "Stopping treatment is killing him.",
@@ -6191,7 +6966,7 @@ I would document the oncology urgency, the exact guilt-laden refusal, the husban
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting capacity assessment, prior wishes and lawful goals-of-care decision",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to determine capacity and guide goals-of-care lawfully",
@@ -6207,6 +6982,24 @@ I would document the oncology urgency, the exact guilt-laden refusal, the husban
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Prior expressed wishes as determinative evidence of current goals of care",
+        "category": "capacity",
+        "severity": "important",
+        "clueInStem": "He said he never wanted machines.",
+        "whyItMatters": "A son's collateral that the patient previously stated he never wanted machines is not merely family opinion; it is prior expressed preference that must be incorporated into the capacity and goals-of-care assessment. If the patient now lacks capacity, this prior statement may be determinative.",
+        "modelWording": "I would document the son's collateral about prior wishes, explore whether any advance directive or EPOA exists, and frame the prior statement as evidence of the patient's values that must guide substitute decision-making if current capacity is impaired.",
+        "keywords": [
+          "prior expressed wishes",
+          "advance directive",
+          "EPOA",
+          "substitute decision-making",
+          "goals of care",
+          "dialysis refusal",
+          "ICU"
+        ]
       }
     ],
     "priorityOrder": {
@@ -6218,7 +7011,8 @@ I would document the oncology urgency, the exact guilt-laden refusal, the husban
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -6245,7 +7039,7 @@ I would document the interpreter use, fluctuations in consciousness, delirium as
     "signals": [
       {
         "id": "s1",
-        "name": "stigma shortcut — unsafe shortcut under pressure",
+        "name": "stigma shortcut",
         "category": "physical_health",
         "severity": "critical",
         "clueInStem": "She is manipulating us.",
@@ -6264,7 +7058,7 @@ I would document the interpreter use, fluctuations in consciousness, delirium as
       },
       {
         "id": "s2",
-        "name": "functional pain, trauma and opioid dependence — core clinical formulation",
+        "name": "functional pain, trauma and opioid dependence",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "No one believes me because I have trauma and take opioids.",
@@ -6282,7 +7076,7 @@ I would document the interpreter use, fluctuations in consciousness, delirium as
       },
       {
         "id": "s3",
-        "name": "opioid withdrawal and harm reduction — legal/policy hinge",
+        "name": "opioid withdrawal and harm reduction",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "Can we stop all opioids today?",
@@ -6301,7 +7095,7 @@ I would document the interpreter use, fluctuations in consciousness, delirium as
       },
       {
         "id": "s4",
-        "name": "overdose/illicit use risk — vulnerable person safety",
+        "name": "overdose/illicit use risk",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "She will buy tablets on the street.",
@@ -6320,7 +7114,7 @@ I would document the interpreter use, fluctuations in consciousness, delirium as
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Team splitting and inconsistent opioid prescribing as systemic governance failure",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "Half the team gives extra doses and half refuses.",
@@ -6339,7 +7133,7 @@ I would document the interpreter use, fluctuations in consciousness, delirium as
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting unified pain management plan, trauma formulation and team governance",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to create a unified trauma-informed pain/addiction plan",
@@ -6355,6 +7149,24 @@ I would document the interpreter use, fluctuations in consciousness, delirium as
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Street tablet access as immediate harm-reduction and overdose risk",
+        "category": "immediate_safety",
+        "severity": "important",
+        "clueInStem": "She will buy tablets on the street.",
+        "whyItMatters": "A patient who will seek illicit opioids if not prescribed adequately faces uncontrolled overdose risk from unknown dose and fentanyl contamination. Street access must be treated as an immediate harm-reduction issue, not merely a threat to encourage compliance.",
+        "modelWording": "I would document street access as an acute overdose risk, consider whether a bridging opioid prescription or opioid agonist therapy reduces harm, refer to harm reduction services, prescribe naloxone, and document why this clinical decision was made in the context of undertreated pain and opioid dependence.",
+        "keywords": [
+          "street tablets",
+          "illicit opioids",
+          "overdose risk",
+          "fentanyl",
+          "harm reduction",
+          "naloxone",
+          "opioid agonist therapy"
+        ]
       }
     ],
     "priorityOrder": {
@@ -6366,7 +7178,8 @@ I would document the interpreter use, fluctuations in consciousness, delirium as
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -6393,7 +7206,7 @@ I would document the validation of pain, the opioid risk formulation, the reason
     "signals": [
       {
         "id": "s1",
-        "name": "punitive-delisting shortcut — unsafe shortcut under pressure",
+        "name": "punitive-delisting shortcut",
         "category": "physical_health",
         "severity": "critical",
         "clueInStem": "He broke the rules; decline him.",
@@ -6412,7 +7225,7 @@ I would document the validation of pain, the opioid risk formulation, the reason
       },
       {
         "id": "s2",
-        "name": "suicide risk and alcohol use in transplant context — core clinical formulation",
+        "name": "suicide risk and alcohol use in transplant context",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "If I am not listed, I may as well drink myself to death.",
@@ -6430,7 +7243,7 @@ I would document the validation of pain, the opioid risk formulation, the reason
       },
       {
         "id": "s3",
-        "name": "transplant ethics and capacity of commitment — legal/policy hinge",
+        "name": "transplant ethics and capacity of commitment",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "Can psychiatry certify motivation?",
@@ -6449,7 +7262,7 @@ I would document the validation of pain, the opioid risk formulation, the reason
       },
       {
         "id": "s4",
-        "name": "carer burnout and safety — vulnerable person safety",
+        "name": "carer burnout and safety",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "I hide bottles because I cannot watch him die.",
@@ -6468,7 +7281,7 @@ I would document the validation of pain, the opioid risk formulation, the reason
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Stigma-based documentation suppression threatening transplant assessment integrity",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "Do not put alcoholism in the letter.",
@@ -6487,7 +7300,7 @@ I would document the validation of pain, the opioid risk formulation, the reason
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting addiction risk, transplant candidacy rationale and honest assessment",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to balance transplant candidacy, addiction treatment and risk",
@@ -6503,6 +7316,24 @@ I would document the validation of pain, the opioid risk formulation, the reason
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Family concealment of drinking as a collateral validity problem",
+        "category": "collateral",
+        "severity": "important",
+        "clueInStem": "I hide bottles because I cannot watch him die.",
+        "whyItMatters": "A carer who hides bottles out of love is invalidating the team's ability to assess current alcohol use accurately. This is not merely a family dynamics issue; it undermines the safety and validity of the transplant candidacy assessment, which depends on honest collateral history.",
+        "modelWording": "I would interview the carer separately, explain the clinical and ethical importance of accurate reporting, document the concealment and its effect on assessment validity, and adjust the transplant letter to reflect the limitations of the collateral history obtained.",
+        "keywords": [
+          "hidden bottles",
+          "collateral validity",
+          "carer concealment",
+          "assessment accuracy",
+          "transplant candidacy",
+          "alcohol use",
+          "grief"
+        ]
       }
     ],
     "priorityOrder": {
@@ -6514,7 +7345,8 @@ I would document the validation of pain, the opioid risk formulation, the reason
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -6541,7 +7373,7 @@ I would document relapse details, suicide assessment, addiction formulation, fam
     "signals": [
       {
         "id": "s1",
-        "name": "dismissive-discharge shortcut — unsafe shortcut under pressure",
+        "name": "dismissive-discharge shortcut",
         "category": "physical_health",
         "severity": "critical",
         "clueInStem": "There is nothing neurological, discharge her.",
@@ -6560,7 +7392,7 @@ I would document relapse details, suicide assessment, addiction formulation, fam
       },
       {
         "id": "s2",
-        "name": "functional neurological disorder with validation challenge — core clinical formulation",
+        "name": "functional neurological disorder with validation challenge",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "If you discharge me, you are saying I am faking.",
@@ -6578,7 +7410,7 @@ I would document relapse details, suicide assessment, addiction formulation, fam
       },
       {
         "id": "s3",
-        "name": "policy/ethics around frequent presentations — legal/policy hinge",
+        "name": "policy/ethics around frequent presentations",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "Can we refuse future ambulances?",
@@ -6597,7 +7429,7 @@ I would document relapse details, suicide assessment, addiction formulation, fam
       },
       {
         "id": "s4",
-        "name": "family anxiety and safety-seeking — vulnerable person safety",
+        "name": "family anxiety and safety-seeking",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "She stops breathing at home and I panic.",
@@ -6616,7 +7448,7 @@ I would document relapse details, suicide assessment, addiction formulation, fam
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Staff exhaustion and diagnostic uncertainty creating unsafe discharge pressure",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "Staff are exhausted and do not know what to do.",
@@ -6635,7 +7467,7 @@ I would document relapse details, suicide assessment, addiction formulation, fam
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting functional disorder formulation, safe explanation and non-iatrogenic plan",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to provide safe explanation, plan and non-iatrogenic disposition",
@@ -6651,6 +7483,24 @@ I would document relapse details, suicide assessment, addiction formulation, fam
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Carer distress and panic responses amplifying functional symptoms",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "She stops breathing at home and I panic.",
+        "whyItMatters": "A carer who panics when the patient stops breathing may inadvertently reinforce functional symptoms through hypervigilant responses, emergency calls and hospital transfers. Carer psychoeducation is a therapeutic intervention, not an optional extra.",
+        "modelWording": "I would provide the carer with a specific management plan for apparent apnoea events — calm reassurance, avoid calling 999 unless the episode does not self-resolve — document this guidance, and refer the carer for their own psychological support to reduce the reinforcing cycle.",
+        "keywords": [
+          "carer panic",
+          "reinforcing cycle",
+          "functional symptoms",
+          "carer psychoeducation",
+          "emergency reinforcement",
+          "management plan",
+          "functional neurological disorder"
+        ]
       }
     ],
     "priorityOrder": {
@@ -6662,7 +7512,8 @@ I would document relapse details, suicide assessment, addiction formulation, fam
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -6689,7 +7540,7 @@ I would document the positive FND formulation, the validation statement, the agr
     "signals": [
       {
         "id": "s1",
-        "name": "autonomy-discharge shortcut — unsafe shortcut under pressure",
+        "name": "autonomy-discharge shortcut",
         "category": "physical_health",
         "severity": "critical",
         "clueInStem": "She is adult and refusing; can we discharge?",
@@ -6708,7 +7559,7 @@ I would document the positive FND formulation, the validation statement, the agr
       },
       {
         "id": "s2",
-        "name": "anorexic cognition and medical risk — core clinical formulation",
+        "name": "anorexic cognition and medical risk",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "A low phosphate is proof I am finally clean.",
@@ -6726,7 +7577,7 @@ I would document the positive FND formulation, the validation statement, the agr
       },
       {
         "id": "s3",
-        "name": "legal basis for compulsory treatment — legal/policy hinge",
+        "name": "legal basis for compulsory treatment",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "Can we use the MHA for refeeding?",
@@ -6745,7 +7596,7 @@ I would document the positive FND formulation, the validation statement, the agr
       },
       {
         "id": "s4",
-        "name": "immediate medical vulnerability — vulnerable person safety",
+        "name": "immediate medical vulnerability",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "She faints when she showers.",
@@ -6764,7 +7615,7 @@ I would document the positive FND formulation, the validation statement, the agr
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Eating disorder negotiation tactics delaying necessary medical refeeding",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "She bargains every gram of feed.",
@@ -6783,7 +7634,7 @@ I would document the positive FND formulation, the validation statement, the agr
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting medical refusal, legal refeeding authority and admission basis",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to treat medically against refusal and with what legal safeguards",
@@ -6799,6 +7650,24 @@ I would document the positive FND formulation, the validation statement, the agr
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Syncope during showering as acute medical risk requiring immediate monitoring",
+        "category": "immediate_safety",
+        "severity": "important",
+        "clueInStem": "She faints when she showers.",
+        "whyItMatters": "Fainting while showering in a malnourished patient indicates orthostatic hypotension and cardiac risk. This is an acute safety hazard requiring shower supervision, cardiac monitoring and electrolyte review, independent of the refeeding dispute.",
+        "modelWording": "I would document the syncopal episodes as an acute cardiac risk requiring shower supervision, cardiac monitoring, electrolyte review and possible electrophysiology consultation, and ensure the medical team treats this as an urgent matter separate from the refeeding consent dispute.",
+        "keywords": [
+          "syncope",
+          "showering safety",
+          "orthostatic hypotension",
+          "cardiac risk",
+          "electrolytes",
+          "monitoring",
+          "anorexia medical risk"
+        ]
       }
     ],
     "priorityOrder": {
@@ -6810,7 +7679,8 @@ I would document the positive FND formulation, the validation statement, the agr
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -6837,7 +7707,7 @@ I would document her phosphate level and medical risk, the exact "clean" stateme
     "signals": [
       {
         "id": "s1",
-        "name": "sedation-for-flow shortcut — unsafe shortcut under pressure",
+        "name": "sedation-for-flow shortcut",
         "category": "physical_health",
         "severity": "critical",
         "clueInStem": "Chart haloperidol so he stops delaying rehab.",
@@ -6856,7 +7726,7 @@ I would document her phosphate level and medical risk, the exact "clean" stateme
       },
       {
         "id": "s2",
-        "name": "postoperative delirium — core clinical formulation",
+        "name": "postoperative delirium",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "There are rats in the walls.",
@@ -6874,7 +7744,7 @@ I would document her phosphate level and medical risk, the exact "clean" stateme
       },
       {
         "id": "s3",
-        "name": "restraint governance and least restrictive care — legal/policy hinge",
+        "name": "restraint governance and least restrictive care",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "Why is he tied to the bed?",
@@ -6893,7 +7763,7 @@ I would document her phosphate level and medical risk, the exact "clean" stateme
       },
       {
         "id": "s4",
-        "name": "sensory impairment vulnerability — vulnerable person safety",
+        "name": "sensory impairment vulnerability",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "I cannot hear anyone.",
@@ -6912,7 +7782,7 @@ I would document her phosphate level and medical risk, the exact "clean" stateme
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Understaffing driving chemical restraint as a substitute for safe observation",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "We do not have staff for one-to-one.",
@@ -6931,7 +7801,7 @@ I would document her phosphate level and medical risk, the exact "clean" stateme
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting delirium causes, restraint rationale and non-pharmacological management",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to treat delirium causes and reduce restraint under system pressure",
@@ -6947,6 +7817,24 @@ I would document her phosphate level and medical risk, the exact "clean" stateme
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Physical restraint use as a governance and dignity rights concern",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "Why is he tied to the bed?",
+        "whyItMatters": "Physical restraint in delirium is associated with worsening agitation, injury and prolonged confusion. A family member's question about why restraint is being used requires an honest, transparent answer and a documented clinical rationale, not dismissal.",
+        "modelWording": "I would respond to the family's question with a transparent explanation of the current safety rationale, document the restraint decision including alternatives tried, involve the family in de-escalation, and set a clear time-bound review for the restraint to be reassessed and reduced.",
+        "keywords": [
+          "physical restraint",
+          "family question",
+          "transparency",
+          "dignity",
+          "restraint review",
+          "alternatives",
+          "delirium governance"
+        ]
       }
     ],
     "priorityOrder": {
@@ -6958,7 +7846,8 @@ I would document her phosphate level and medical risk, the exact "clean" stateme
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -6985,7 +7874,7 @@ I would document the delirium formulation, causative factors, medication review,
     "signals": [
       {
         "id": "s1",
-        "name": "aphasia-incapacity shortcut — unsafe shortcut under pressure",
+        "name": "aphasia-incapacity shortcut",
         "category": "physical_health",
         "severity": "critical",
         "clueInStem": "He lacks capacity because he cannot explain.",
@@ -7004,7 +7893,7 @@ I would document the delirium formulation, causative factors, medication review,
       },
       {
         "id": "s2",
-        "name": "communication impairment versus refusal — core clinical formulation",
+        "name": "communication impairment versus refusal",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "Home, home, no hospital.",
@@ -7022,7 +7911,7 @@ I would document the delirium formulation, causative factors, medication review,
       },
       {
         "id": "s3",
-        "name": "substitute decision-making — legal/policy hinge",
+        "name": "substitute decision-making",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "Can I sign him into rehab?",
@@ -7041,7 +7930,7 @@ I would document the delirium formulation, causative factors, medication review,
       },
       {
         "id": "s4",
-        "name": "physical vulnerability — vulnerable person safety",
+        "name": "physical vulnerability",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "He falls whenever he stands.",
@@ -7060,7 +7949,7 @@ I would document the delirium formulation, causative factors, medication review,
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Cultural family authority conflicting with patient's individual autonomous decision",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "In our family, I decide health matters.",
@@ -7079,10 +7968,10 @@ I would document the delirium formulation, causative factors, medication review,
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting communication-supported capacity assessment and rehabilitation plan",
         "category": "governance",
         "severity": "important",
-        "clueInStem": "whether capacity can be assessed with communication supports and how to plan reh",
+        "clueInStem": "whether capacity can be assessed with communication supports and how to plan rehabilitation",
         "whyItMatters": "Consultant-level answers must show leadership, escalation and documentation under pressure, not just clinical knowledge.",
         "modelWording": "I would document the decision, the risks considered, legal basis, alternatives rejected, stakeholder communication and escalation plan.",
         "keywords": [
@@ -7095,6 +7984,24 @@ I would document the delirium formulation, causative factors, medication review,
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Falls risk as an acute safety issue requiring immediate environmental modification",
+        "category": "immediate_safety",
+        "severity": "important",
+        "clueInStem": "He falls whenever he stands.",
+        "whyItMatters": "A patient who falls every time he stands is at immediate risk of fracture, head injury or death. This is a current medical emergency that must be addressed with falls precautions, physiotherapy assessment and mobility aids today, not deferred until the capacity and rehabilitation planning is resolved.",
+        "modelWording": "I would ensure falls precautions are in place immediately — bed rails, call bell, non-slip footwear, physiotherapy assessment, assisted standing — and document this as an acute safety requirement independent of the capacity dispute over rehabilitation.",
+        "keywords": [
+          "falls risk",
+          "immediate safety",
+          "acute injury risk",
+          "physiotherapy",
+          "falls precautions",
+          "stroke",
+          "rehabilitation"
+        ]
       }
     ],
     "priorityOrder": {
@@ -7106,7 +8013,8 @@ I would document the delirium formulation, causative factors, medication review,
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -7133,7 +8041,7 @@ I would document the communication supports used, interpreter and speech patholo
     "signals": [
       {
         "id": "s1",
-        "name": "suicide-label shortcut — unsafe shortcut under pressure",
+        "name": "suicide-label shortcut",
         "category": "physical_health",
         "severity": "critical",
         "clueInStem": "Turning it off is suicide; stop him.",
@@ -7152,7 +8060,7 @@ I would document the communication supports used, interpreter and speech patholo
       },
       {
         "id": "s2",
-        "name": "values-based refusal of device therapy — core clinical formulation",
+        "name": "values-based refusal of device therapy",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "Every shock feels like being tortured back to life.",
@@ -7170,7 +8078,7 @@ I would document the communication supports used, interpreter and speech patholo
       },
       {
         "id": "s3",
-        "name": "capacity for device deactivation — legal/policy hinge",
+        "name": "capacity for device deactivation",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "Can psychiatry clear capacity today?",
@@ -7189,7 +8097,7 @@ I would document the communication supports used, interpreter and speech patholo
       },
       {
         "id": "s4",
-        "name": "stable preference collateral — vulnerable person safety",
+        "name": "stable preference collateral",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "He has said this for months.",
@@ -7208,7 +8116,7 @@ I would document the communication supports used, interpreter and speech patholo
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Family spiritual authority and grief delaying a settled patient preference",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "The family wants spiritual guidance first.",
@@ -7227,7 +8135,7 @@ I would document the communication supports used, interpreter and speech patholo
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting capacity for device deactivation and family and spiritual support plan",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether request is capacitous and how to support family/ethics",
@@ -7243,6 +8151,24 @@ I would document the communication supports used, interpreter and speech patholo
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "ICD shock distress as a treatable palliative and psychological symptom",
+        "category": "diagnosis_formulation",
+        "severity": "important",
+        "clueInStem": "Every shock feels like being tortured back to life.",
+        "whyItMatters": "The patient's description of ICD shocks as torture is clinically significant: shock-related PTSD, depression and anticipatory anxiety are treatable even while the deactivation decision is being deliberated. Treating these symptoms is both humane and ensures the capacity assessment reflects a genuine values-based preference rather than despair.",
+        "modelWording": "I would assess for shock-related PTSD, depression and anticipatory anxiety, initiate appropriate treatment, refer to palliative care for symptom management, and document that psychological treatment is being offered alongside the capacity assessment to distinguish settled values-based preference from treatable despair.",
+        "keywords": [
+          "ICD shock PTSD",
+          "shock distress",
+          "palliative care",
+          "anticipatory anxiety",
+          "treatable despair",
+          "deactivation",
+          "psychological treatment"
+        ]
       }
     ],
     "priorityOrder": {
@@ -7254,7 +8180,8 @@ I would document the communication supports used, interpreter and speech patholo
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -7281,7 +8208,7 @@ I would document capacity findings, depression assessment, cardiology explanatio
     "signals": [
       {
         "id": "s1",
-        "name": "treatment-collapse shortcut — unsafe shortcut under pressure",
+        "name": "treatment-collapse shortcut",
         "category": "physical_health",
         "severity": "critical",
         "clueInStem": "Just depot him and restart antivirals.",
@@ -7300,7 +8227,7 @@ I would document capacity findings, depression assessment, cardiology explanatio
       },
       {
         "id": "s2",
-        "name": "psychosis impairing medical treatment decisions — core clinical formulation",
+        "name": "psychosis impairing medical treatment decisions",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "The tablets tell the government where I am.",
@@ -7318,7 +8245,7 @@ I would document capacity findings, depression assessment, cardiology explanatio
       },
       {
         "id": "s3",
-        "name": "MHA versus medical treatment authority — legal/policy hinge",
+        "name": "MHA versus medical treatment authority",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "Can MHA force HIV treatment?",
@@ -7337,7 +8264,7 @@ I would document capacity findings, depression assessment, cardiology explanatio
       },
       {
         "id": "s4",
-        "name": "confidentiality and partner safety — vulnerable person safety",
+        "name": "confidentiality and partner safety",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "He has not told his family his status.",
@@ -7356,7 +8283,7 @@ I would document capacity findings, depression assessment, cardiology explanatio
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Premature departure before results as an HIV risk and duty-of-care issue",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "He wants to leave before results come back.",
@@ -7375,7 +8302,7 @@ I would document capacity findings, depression assessment, cardiology explanatio
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting capacity assessment, HIV confidentiality and legal treatment pathway",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether capacity is impaired and what legal/ethical path applies",
@@ -7391,6 +8318,24 @@ I would document capacity findings, depression assessment, cardiology explanatio
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Undisclosed HIV status as a public health and partner notification obligation",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "He has not told his family his status.",
+        "whyItMatters": "Untreated HIV with undisclosed status creates a public health risk to sexual partners. Public health legislation may create a duty to notify or disclose in specific circumstances, independent of psychiatric management. This must be assessed alongside the capacity and MHA questions.",
+        "modelWording": "I would consult with the public health team and legal services regarding partner notification obligations, document the undisclosed status as a public health concern, and ensure this dimension of risk is addressed in the management plan alongside the psychiatric treatment decision.",
+        "keywords": [
+          "HIV disclosure",
+          "partner notification",
+          "public health",
+          "duty to warn",
+          "legal obligation",
+          "undisclosed status",
+          "sexual partners"
+        ]
       }
     ],
     "priorityOrder": {
@@ -7402,7 +8347,8 @@ I would document capacity findings, depression assessment, cardiology explanatio
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -7429,7 +8375,7 @@ I would document the psychotic content, capacity findings for antiretrovirals, t
     "signals": [
       {
         "id": "s1",
-        "name": "confidentiality shortcut — unsafe shortcut under pressure",
+        "name": "confidentiality shortcut",
         "category": "risk_others",
         "severity": "critical",
         "clueInStem": "He denies intent, so confidentiality prevents warning.",
@@ -7448,7 +8394,7 @@ I would document the psychotic content, capacity findings for antiretrovirals, t
       },
       {
         "id": "s2",
-        "name": "erotomanic fixation with stalking — core clinical formulation",
+        "name": "erotomanic fixation with stalking",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "She smiles because she knows I am watching.",
@@ -7466,7 +8412,7 @@ I would document the psychotic content, capacity findings for antiretrovirals, t
       },
       {
         "id": "s3",
-        "name": "duty to protect versus police threshold — legal/policy hinge",
+        "name": "duty to protect versus police threshold",
         "category": "ethics",
         "severity": "critical",
         "clueInStem": "We need a direct threat before acting.",
@@ -7485,7 +8431,7 @@ I would document the psychotic content, capacity findings for antiretrovirals, t
       },
       {
         "id": "s4",
-        "name": "identified rival victim — vulnerable person safety",
+        "name": "identified rival victim",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "He is the obstacle; obstacles get removed.",
@@ -7504,7 +8450,7 @@ I would document the psychotic content, capacity findings for antiretrovirals, t
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Patient's direct access request exposing specific victim to immediate danger",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "I just need five minutes alone with her.",
@@ -7523,7 +8469,7 @@ I would document the psychotic content, capacity findings for antiretrovirals, t
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting stalking risk, confidentiality breach rationale and victim protection",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to breach confidentiality, use MHA/CTO, and protect victims",
@@ -7539,6 +8485,24 @@ I would document the psychotic content, capacity findings for antiretrovirals, t
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Erotomania with identified victim requiring specific protective communication",
+        "category": "diagnosis_formulation",
+        "severity": "important",
+        "clueInStem": "She smiles because she knows I am watching.",
+        "whyItMatters": "Erotomanic delusions are characterised by a belief that the victim is in love with the patient and communicates this through signals. This cognitive framework means the patient interprets normal staff behaviour as reciprocation, requiring staff to minimise perceived interactions and avoid inadvertent reinforcement.",
+        "modelWording": "I would advise the identified victim and her employer about the erotomanic belief system, document the specific delusion and its implications for how normal interactions are misinterpreted, and recommend that the victim modify her visible presence and contact with the patient to reduce delusional reinforcement.",
+        "keywords": [
+          "erotomania",
+          "delusional framework",
+          "victim communication",
+          "signal misinterpretation",
+          "victim modification",
+          "stalking",
+          "protective communication"
+        ]
       }
     ],
     "priorityOrder": {
@@ -7550,7 +8514,8 @@ I would document the psychotic content, capacity findings for antiretrovirals, t
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -7577,7 +8542,7 @@ I would document the erotomanic belief, approach behaviour, perceived rival thre
     "signals": [
       {
         "id": "s1",
-        "name": "legal-conclusion shortcut — unsafe shortcut under pressure",
+        "name": "legal-conclusion shortcut",
         "category": "risk_others",
         "severity": "critical",
         "clueInStem": "Just say he is NGMI.",
@@ -7596,7 +8561,7 @@ I would document the erotomanic belief, approach behaviour, perceived rival thre
       },
       {
         "id": "s2",
-        "name": "offence-related psychosis and legal standards — core clinical formulation",
+        "name": "offence-related psychosis and legal standards",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "The man was a demon wearing human skin.",
@@ -7614,7 +8579,7 @@ I would document the erotomanic belief, approach behaviour, perceived rival thre
       },
       {
         "id": "s3",
-        "name": "fitness versus criminal responsibility — legal/policy hinge",
+        "name": "fitness versus criminal responsibility",
         "category": "ethics",
         "severity": "critical",
         "clueInStem": "Comment on fitness to stand trial.",
@@ -7633,7 +8598,7 @@ I would document the erotomanic belief, approach behaviour, perceived rival thre
       },
       {
         "id": "s4",
-        "name": "public safety and victim impact — vulnerable person safety",
+        "name": "public safety and victim impact",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "He stabbed me without warning at a bus stop.",
@@ -7652,7 +8617,7 @@ I would document the erotomanic belief, approach behaviour, perceived rival thre
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Paranoid delusion about legal representation compromising fitness to instruct counsel",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "My lawyer works for the demons.",
@@ -7671,7 +8636,7 @@ I would document the erotomanic belief, approach behaviour, perceived rival thre
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting fitness assessment, mental impairment evidence and forensic opinion independence",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to assess fitness and mental impairment separately and independently",
@@ -7687,6 +8652,24 @@ I would document the erotomanic belief, approach behaviour, perceived rival thre
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Victim safety and community risk from premature release",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "He stabbed me without warning at a bus stop.",
+        "whyItMatters": "An unpredictable stabbing at a public location without warning establishes serious community risk. This must be documented as a specific risk formulation finding that informs recommendations about both fitness to plead and mental impairment, independent of the solicitor's request for a simple outcome.",
+        "modelWording": "I would document the random public nature of the attack as a specific risk indicator, address community safety explicitly in my forensic opinion, and ensure that risk to the public is framed as a central consideration in any disposal recommendation, separate from the fitness and mental impairment questions.",
+        "keywords": [
+          "community risk",
+          "random attack",
+          "public safety",
+          "risk formulation",
+          "forensic disposal",
+          "unpredictable violence",
+          "fitness to plead"
+        ]
       }
     ],
     "priorityOrder": {
@@ -7698,7 +8681,8 @@ I would document the erotomanic belief, approach behaviour, perceived rival thre
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -7725,7 +8709,7 @@ I would document sources, interpreter use, limitations, diagnosis, current fitne
     "signals": [
       {
         "id": "s1",
-        "name": "minimise-breach shortcut — unsafe shortcut under pressure",
+        "name": "minimise-breach shortcut",
         "category": "risk_others",
         "severity": "critical",
         "clueInStem": "He is mostly fine; recall seems harsh.",
@@ -7744,7 +8728,7 @@ I would document sources, interpreter use, limitations, diagnosis, current fitne
       },
       {
         "id": "s2",
-        "name": "minimisation of forensic conditions — core clinical formulation",
+        "name": "minimisation of forensic conditions",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "Everyone deserves a night off; I am not a prisoner.",
@@ -7762,7 +8746,7 @@ I would document sources, interpreter use, limitations, diagnosis, current fitne
       },
       {
         "id": "s3",
-        "name": "conditional discharge threshold — legal/policy hinge",
+        "name": "conditional discharge threshold",
         "category": "ethics",
         "severity": "critical",
         "clueInStem": "Does this breach require recall?",
@@ -7781,7 +8765,7 @@ I would document sources, interpreter use, limitations, diagnosis, current fitne
       },
       {
         "id": "s4",
-        "name": "victim safety and notification — vulnerable person safety",
+        "name": "victim safety and notification",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "I need to know if he is near my suburb.",
@@ -7800,7 +8784,7 @@ I would document sources, interpreter use, limitations, diagnosis, current fitne
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Victim proximity to index offence location as a specific dynamic risk indicator",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "He was near the index offence location.",
@@ -7819,7 +8803,7 @@ I would document sources, interpreter use, limitations, diagnosis, current fitne
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting dynamic risk, breach assessment and conditional discharge decision",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to tighten conditions or recall based on dynamic risk",
@@ -7835,6 +8819,24 @@ I would document sources, interpreter use, limitations, diagnosis, current fitne
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Victim's knowledge of proximity as a personal safety and trauma concern",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "I need to know if he is near my suburb.",
+        "whyItMatters": "A victim who is actively seeking information about the offender's location is experiencing ongoing trauma and safety anxiety. The forensic team has a responsibility to consider victim safety in conditional discharge planning and to communicate transparently with victim support services about proximity risks.",
+        "modelWording": "I would ensure victim safety is a specific consideration in the conditional discharge review, liaise with victim support services about proximity concerns, document that the victim's safety question has been considered in the risk assessment, and recommend geographic exclusion zones as a condition if proximity risk is confirmed.",
+        "keywords": [
+          "victim proximity",
+          "exclusion zone",
+          "victim safety",
+          "trauma",
+          "conditional discharge",
+          "victim support services",
+          "geographic condition"
+        ]
       }
     ],
     "priorityOrder": {
@@ -7846,7 +8848,8 @@ I would document sources, interpreter use, limitations, diagnosis, current fitne
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -7873,7 +8876,7 @@ I would document the exact breaches, drug-screen history, police report that "He
     "signals": [
       {
         "id": "s1",
-        "name": "polite-denial shortcut — unsafe shortcut under pressure",
+        "name": "polite-denial shortcut",
         "category": "risk_others",
         "severity": "critical",
         "clueInStem": "He is polite in clinic and denies intent.",
@@ -7892,7 +8895,7 @@ I would document the exact breaches, drug-screen history, police report that "He
       },
       {
         "id": "s2",
-        "name": "delusional family violence risk — core clinical formulation",
+        "name": "delusional family violence risk",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "She is killing my bloodline.",
@@ -7910,7 +8913,7 @@ I would document the exact breaches, drug-screen history, police report that "He
       },
       {
         "id": "s3",
-        "name": "firearms and MHA/legal coordination — legal/policy hinge",
+        "name": "firearms and MHA/legal coordination",
         "category": "ethics",
         "severity": "critical",
         "clueInStem": "Can we remove firearms without admission?",
@@ -7929,7 +8932,7 @@ I would document the exact breaches, drug-screen history, police report that "He
       },
       {
         "id": "s4",
-        "name": "children in coercive delusional conflict — vulnerable person safety",
+        "name": "children in coercive delusional conflict",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "Dad says Mum is dangerous and we must hide.",
@@ -7948,7 +8951,7 @@ I would document the exact breaches, drug-screen history, police report that "He
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Firearms licence as cultural identity complicating psychosis and weapons management",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "Taking my rifles is persecution.",
@@ -7967,7 +8970,7 @@ I would document the exact breaches, drug-screen history, police report that "He
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting psychosis risk, firearms removal, victim safety and legal authority",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to manage firearms, victim safety and involuntary assessment",
@@ -7983,6 +8986,24 @@ I would document the exact breaches, drug-screen history, police report that "He
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Children hiding from father as an immediate family violence safeguarding trigger",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "Dad says Mum is dangerous and we must hide.",
+        "whyItMatters": "Children who are hiding from a parent on instruction from the other parent are experiencing fear that may constitute emotional abuse. This requires immediate child welfare assessment independent of the mental health and firearms management.",
+        "modelWording": "I would contact child protection regarding the children hiding at the father's instruction, document this as a potential emotional abuse and family violence exposure indicator, ensure the children's welfare is assessed independently of the forensic and psychiatric decision, and include child safety in the overall risk management plan.",
+        "keywords": [
+          "children hiding",
+          "emotional abuse",
+          "family violence",
+          "child protection",
+          "child welfare",
+          "parental instruction",
+          "safeguarding"
+        ]
       }
     ],
     "priorityOrder": {
@@ -7994,7 +9015,8 @@ I would document the exact breaches, drug-screen history, police report that "He
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -8021,7 +9043,7 @@ I would document the delusional content, firearm access, children's statements, 
     "signals": [
       {
         "id": "s1",
-        "name": "reputation shortcut — unsafe shortcut under pressure",
+        "name": "reputation shortcut",
         "category": "risk_others",
         "severity": "critical",
         "clueInStem": "Keep this quiet because he is high profile.",
@@ -8040,7 +9062,7 @@ I would document the delusional content, firearm access, children's statements, 
       },
       {
         "id": "s2",
-        "name": "professional access-enabled stalking — core clinical formulation",
+        "name": "professional access-enabled stalking",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "The roster proves she wants me to find her.",
@@ -8058,7 +9080,7 @@ I would document the delusional content, firearm access, children's statements, 
       },
       {
         "id": "s3",
-        "name": "mandatory reporting and duty to protect — legal/policy hinge",
+        "name": "mandatory reporting and duty to protect",
         "category": "ethics",
         "severity": "critical",
         "clueInStem": "Do we notify AHPRA or police?",
@@ -8077,7 +9099,7 @@ I would document the delusional content, firearm access, children's statements, 
       },
       {
         "id": "s4",
-        "name": "identified workplace victim safety — vulnerable person safety",
+        "name": "identified workplace victim safety",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "I am frightened to come to work.",
@@ -8096,7 +9118,7 @@ I would document the delusional content, firearm access, children's statements, 
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Institutional pressure to suppress complaint and protect high-profile colleague",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "If she complains, her career is finished.",
@@ -8115,7 +9137,7 @@ I would document the delusional content, firearm access, children's statements, 
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting stalking behaviour, mandatory reporting obligations and victim protection",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to protect victim, report, and manage professional risk",
@@ -8131,6 +9153,24 @@ I would document the delusional content, firearm access, children's statements, 
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Victim employee's immediate workplace safety requiring management response",
+        "category": "immediate_safety",
+        "severity": "important",
+        "clueInStem": "I am frightened to come to work.",
+        "whyItMatters": "A healthcare worker who is frightened to come to work because of a patient's stalking behaviour is experiencing an occupational health and safety emergency that requires immediate employer action, independent of the psychiatric management of the patient.",
+        "modelWording": "I would formally advise hospital management of the occupational health and safety breach, document the victim's fear as a workplace safety emergency, support the victim in making a formal complaint, and recommend immediate administrative measures — roster change, building access restriction, security escort — to protect her.",
+        "keywords": [
+          "occupational health",
+          "workplace safety",
+          "victim fear",
+          "hospital management",
+          "administrative action",
+          "stalking",
+          "professional patient"
+        ]
       }
     ],
     "priorityOrder": {
@@ -8142,7 +9182,8 @@ I would document the delusional content, firearm access, children's statements, 
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -8169,7 +9210,7 @@ I would document the stalking behaviour, roster misuse, delusional interpretatio
     "signals": [
       {
         "id": "s1",
-        "name": "eviction shortcut — unsafe shortcut under pressure",
+        "name": "eviction shortcut",
         "category": "risk_others",
         "severity": "critical",
         "clueInStem": "Evict him and the risk is ours no longer.",
@@ -8188,7 +9229,7 @@ I would document the stalking behaviour, roster misuse, delusional interpretatio
       },
       {
         "id": "s2",
-        "name": "psychosis-linked arson risk — core clinical formulation",
+        "name": "psychosis-linked arson risk",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "Fire is the only clean thing.",
@@ -8206,7 +9247,7 @@ I would document the stalking behaviour, roster misuse, delusional interpretatio
       },
       {
         "id": "s3",
-        "name": "MHA/CTO and housing policy — legal/policy hinge",
+        "name": "MHA/CTO and housing policy",
         "category": "ethics",
         "severity": "critical",
         "clueInStem": "Can we compel depot to keep housing?",
@@ -8225,7 +9266,7 @@ I would document the stalking behaviour, roster misuse, delusional interpretatio
       },
       {
         "id": "s4",
-        "name": "public and child safety — vulnerable person safety",
+        "name": "public and child safety",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "Smoke came under our door while children slept.",
@@ -8244,7 +9285,7 @@ I would document the stalking behaviour, roster misuse, delusional interpretatio
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Family engagement as essential to preventing disengagement and homelessness",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "Work with family or he will disappear.",
@@ -8263,7 +9304,7 @@ I would document the stalking behaviour, roster misuse, delusional interpretatio
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting arson risk, least restrictive housing plan and involuntary treatment basis",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to manage fire risk without making homelessness worse",
@@ -8279,6 +9320,24 @@ I would document the stalking behaviour, roster misuse, delusional interpretatio
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Children in neighbouring rooms at immediate fire risk requiring urgent escalation",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "Smoke came under our door while children slept.",
+        "whyItMatters": "Smoke entering a neighbouring room where children were sleeping is a documented near-miss fire incident that must be treated as a child safety emergency independent of the psychiatric and housing management. It requires immediate escalation to fire safety authorities and child protection.",
+        "modelWording": "I would document the smoke incident as a specific near-miss fire event involving sleeping children, contact fire safety services and child protection immediately, ensure the housing provider is notified and takes fire prevention measures tonight, and use this incident as additional justification for a more intensive psychiatric management plan.",
+        "keywords": [
+          "fire near-miss",
+          "children at risk",
+          "smoke",
+          "child protection",
+          "fire safety authority",
+          "immediate escalation",
+          "arson risk"
+        ]
       }
     ],
     "priorityOrder": {
@@ -8290,7 +9349,8 @@ I would document the stalking behaviour, roster misuse, delusional interpretatio
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -8317,7 +9377,7 @@ I would document the psychotic fire belief, actual smoke exposure to children, h
     "signals": [
       {
         "id": "s1",
-        "name": "liability-transfer shortcut — unsafe shortcut under pressure",
+        "name": "liability-transfer shortcut",
         "category": "risk_others",
         "severity": "critical",
         "clueInStem": "Transfer him to psych before families sue.",
@@ -8336,7 +9396,7 @@ I would document the psychotic fire belief, actual smoke exposure to children, h
       },
       {
         "id": "s2",
-        "name": "neurocognitive sexual disinhibition — core clinical formulation",
+        "name": "neurocognitive sexual disinhibition",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "I thought she was my wife.",
@@ -8354,7 +9414,7 @@ I would document the psychotic fire belief, actual smoke exposure to children, h
       },
       {
         "id": "s3",
-        "name": "restraint and consent policy — legal/policy hinge",
+        "name": "restraint and consent policy",
         "category": "ethics",
         "severity": "critical",
         "clueInStem": "Can we use chemical restraint?",
@@ -8373,7 +9433,7 @@ I would document the psychotic fire belief, actual smoke exposure to children, h
       },
       {
         "id": "s4",
-        "name": "vulnerable co-resident safety — vulnerable person safety",
+        "name": "vulnerable co-resident safety",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "I am scared to sleep.",
@@ -8392,7 +9452,7 @@ I would document the psychotic fire belief, actual smoke exposure to children, h
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Patient's dignity and preserved sense of self complicating sexual disinhibition management",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "He would be horrified if he knew.",
@@ -8411,7 +9471,7 @@ I would document the psychotic fire belief, actual smoke exposure to children, h
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting sexual disinhibition, resident protection and least restrictive dementia care",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to protect residents while using least restrictive dementia care",
@@ -8427,6 +9487,24 @@ I would document the psychotic fire belief, actual smoke exposure to children, h
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Victim resident's fear and sleep disruption as distinct clinical and care obligations",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "I am scared to sleep.",
+        "whyItMatters": "The victim resident who is scared to sleep is experiencing ongoing psychological harm and sleep deprivation that requires independent clinical care, not only a management plan for the patient with dementia. Her safety and wellbeing are a distinct obligation.",
+        "modelWording": "I would arrange separate care planning for the victim resident including psychological support, room relocation if needed, and communication about the protective measures in place, and document her distress and care needs as an independent obligation separate from the dementia patient's management.",
+        "keywords": [
+          "victim resident",
+          "fear",
+          "sleep disruption",
+          "psychological harm",
+          "independent care planning",
+          "room safety",
+          "dementia safeguarding"
+        ]
       }
     ],
     "priorityOrder": {
@@ -8438,7 +9516,8 @@ I would document the psychotic fire belief, actual smoke exposure to children, h
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -8465,7 +9544,7 @@ I would document incidents, capacity and consent issues, resident-safety measure
     "signals": [
       {
         "id": "s1",
-        "name": "political-speech shortcut — unsafe shortcut under pressure",
+        "name": "political-speech shortcut",
         "category": "risk_others",
         "severity": "critical",
         "clueInStem": "She is articulate and political, not psychotic.",
@@ -8484,7 +9563,7 @@ I would document incidents, capacity and consent issues, resident-safety measure
       },
       {
         "id": "s2",
-        "name": "mania with targeted public figure threat — core clinical formulation",
+        "name": "mania with targeted public figure threat",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "God elected me to remove the corrupt one.",
@@ -8502,7 +9581,7 @@ I would document incidents, capacity and consent issues, resident-safety measure
       },
       {
         "id": "s3",
-        "name": "duty to protect/warn — legal/policy hinge",
+        "name": "duty to protect/warn",
         "category": "ethics",
         "severity": "critical",
         "clueInStem": "Do we need to warn the MP's office?",
@@ -8521,7 +9600,7 @@ I would document incidents, capacity and consent issues, resident-safety measure
       },
       {
         "id": "s4",
-        "name": "approach behaviour and staff safety — vulnerable person safety",
+        "name": "approach behaviour and staff safety",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "She came to the electorate office yesterday.",
@@ -8540,7 +9619,7 @@ I would document incidents, capacity and consent issues, resident-safety measure
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Politicisation of psychiatric admission as persecution framing blocking voluntary care",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "Hospitalising me is political persecution.",
@@ -8559,7 +9638,7 @@ I would document incidents, capacity and consent issues, resident-safety measure
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting MHA basis, warning decision rationale and political context management",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to use MHA, warn/protect, and respect political/cultural context",
@@ -8575,6 +9654,24 @@ I would document incidents, capacity and consent issues, resident-safety measure
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Physical attendance at electorate office as a specific threat proximity indicator",
+        "category": "immediate_safety",
+        "severity": "important",
+        "clueInStem": "She came to the electorate office yesterday.",
+        "whyItMatters": "Physical attendance at a target's workplace the day before a psychiatric review is a specific, recent, time-critical threat proximity behaviour that elevates risk substantially above verbal threats alone. It requires immediate notification to the MP's security and the electorate office.",
+        "modelWording": "I would treat the physical visit to the electorate office as an acute risk indicator requiring immediate notification today, document the date and circumstances of the visit, contact the MP's office security directly, and use this concrete behaviour as evidence in the MHA assessment.",
+        "keywords": [
+          "physical attendance",
+          "electorate office",
+          "threat proximity",
+          "immediate notification",
+          "security contact",
+          "acute risk indicator",
+          "erotomania/mania"
+        ]
       }
     ],
     "priorityOrder": {
@@ -8586,7 +9683,8 @@ I would document incidents, capacity and consent issues, resident-safety measure
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -8613,7 +9711,7 @@ I would document the threats, manifesto, office attendance, manic formulation, p
     "signals": [
       {
         "id": "s1",
-        "name": "manipulation shortcut — unsafe shortcut under pressure",
+        "name": "manipulation shortcut",
         "category": "risk_others",
         "severity": "critical",
         "clueInStem": "He does this to get out of segregation.",
@@ -8632,7 +9730,7 @@ I would document the threats, manifesto, office attendance, manic formulation, p
       },
       {
         "id": "s2",
-        "name": "custodial suicide risk and trauma — core clinical formulation",
+        "name": "custodial suicide risk and trauma",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "I will leave this place the way my brother did.",
@@ -8650,7 +9748,7 @@ I would document the threats, manifesto, office attendance, manic formulation, p
       },
       {
         "id": "s3",
-        "name": "least restrictive custody observation — legal/policy hinge",
+        "name": "least restrictive custody observation",
         "category": "ethics",
         "severity": "critical",
         "clueInStem": "Can we keep him in observation cell naked?",
@@ -8669,7 +9767,7 @@ I would document the threats, manifesto, office attendance, manic formulation, p
       },
       {
         "id": "s4",
-        "name": "trauma and vulnerable prisoner risk — vulnerable person safety",
+        "name": "trauma and vulnerable prisoner risk",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "His brother died in custody.",
@@ -8688,7 +9786,7 @@ I would document the threats, manifesto, office attendance, manic formulation, p
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Cultural disconnection for Māori men in prison compounding trauma and suicidality",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "No one listens to Māori men in here.",
@@ -8707,7 +9805,7 @@ I would document the threats, manifesto, office attendance, manic formulation, p
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting segregation removal, cultural support plan and custody psychiatric care",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to remove segregation, treat psychosis/trauma and manage custody risk",
@@ -8723,6 +9821,24 @@ I would document the threats, manifesto, office attendance, manic formulation, p
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Fraternal bereavement in custody as acute suicide contagion risk",
+        "category": "diagnosis_formulation",
+        "severity": "important",
+        "clueInStem": "His brother died in custody.",
+        "whyItMatters": "Bereavement from a sibling who died in the same setting the patient is now confined in creates a specific and powerful identification with death by custody that must be explicitly addressed in the risk formulation. This is a contagion risk factor that elevates the significance of the patient's statement about leaving the way his brother did.",
+        "modelWording": "I would directly explore the patient's relationship to his brother's death, assess whether he identifies with or plans to follow his brother, document this as a contagion-risk factor in the suicide formulation, and ensure bereavement and cultural grief support is part of the immediate care plan.",
+        "keywords": [
+          "sibling bereavement",
+          "custody death",
+          "suicide contagion",
+          "identification with deceased",
+          "cultural grief",
+          "Māori",
+          "risk formulation"
+        ]
       }
     ],
     "priorityOrder": {
@@ -8734,7 +9850,8 @@ I would document the threats, manifesto, office attendance, manic formulation, p
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -8761,7 +9878,7 @@ I would document the repeated ligatures, brother's custody death, psychotic/trau
     "signals": [
       {
         "id": "s1",
-        "name": "fitness-clearance shortcut — unsafe shortcut under pressure",
+        "name": "fitness-clearance shortcut",
         "category": "risk_others",
         "severity": "critical",
         "clueInStem": "We need him cleared by Monday.",
@@ -8780,7 +9897,7 @@ I would document the repeated ligatures, brother's custody death, psychotic/trau
       },
       {
         "id": "s2",
-        "name": "psychosis affecting occupational public safety — core clinical formulation",
+        "name": "psychosis affecting occupational public safety",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "The route was a trap; I had to brake hard.",
@@ -8798,7 +9915,7 @@ I would document the repeated ligatures, brother's custody death, psychotic/trau
       },
       {
         "id": "s3",
-        "name": "public safety reporting obligations — legal/policy hinge",
+        "name": "public safety reporting obligations",
         "category": "ethics",
         "severity": "critical",
         "clueInStem": "Should we suspend commercial driving?",
@@ -8817,7 +9934,7 @@ I would document the repeated ligatures, brother's custody death, psychotic/trau
       },
       {
         "id": "s4",
-        "name": "public/child passenger safety — vulnerable person safety",
+        "name": "public/child passenger safety",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "Children were on the bus.",
@@ -8836,7 +9953,7 @@ I would document the repeated ligatures, brother's custody death, psychotic/trau
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Family financial dependence on commercial driving creating pressure to conceal risk",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "If he loses work, we lose everything.",
@@ -8855,7 +9972,7 @@ I would document the repeated ligatures, brother's custody death, psychotic/trau
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting driving risk notification, fitness assessment and livelihood impact",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to report driving risk and manage livelihood/family pressure",
@@ -8871,6 +9988,24 @@ I would document the repeated ligatures, brother's custody death, psychotic/trau
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Children on bus as identified victims requiring immediate risk notification",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "Children were on the bus.",
+        "whyItMatters": "The presence of children on the bus during an incident that may have been driven by psychosis establishes an identified vulnerable third-party population that creates an independent duty to notify. This is not merely a hypothetical risk; it is a documented near-miss involving known victims.",
+        "modelWording": "I would document the incident with children on the bus as a specific third-party risk event, notify the transport authority immediately as the competent authority for commercial driver fitness, and ensure the risk notification includes the specific incident rather than only an abstract psychiatric diagnosis.",
+        "keywords": [
+          "children on bus",
+          "identified victims",
+          "transport authority",
+          "commercial driving",
+          "notification",
+          "near-miss",
+          "duty to report"
+        ]
       }
     ],
     "priorityOrder": {
@@ -8882,7 +10017,8 @@ I would document the repeated ligatures, brother's custody death, psychotic/trau
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -8909,7 +10045,7 @@ I would document the near-crash, delusional driving explanation, passenger/child
     "signals": [
       {
         "id": "s1",
-        "name": "cells shortcut — unsafe shortcut under pressure",
+        "name": "cells shortcut",
         "category": "system_pressure",
         "severity": "critical",
         "clueInStem": "We can put him in cells until he settles.",
@@ -8928,7 +10064,7 @@ I would document the near-crash, delusional driving explanation, passenger/child
       },
       {
         "id": "s2",
-        "name": "acute psychosis with highway risk — core clinical formulation",
+        "name": "acute psychosis with highway risk",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "The old people told me the trucks are demons.",
@@ -8946,7 +10082,7 @@ I would document the near-crash, delusional driving explanation, passenger/child
       },
       {
         "id": "s3",
-        "name": "MHA transport threshold — legal/policy hinge",
+        "name": "MHA transport threshold",
         "category": "mental_health_act",
         "severity": "critical",
         "clueInStem": "Will psychiatry certify urgent risk?",
@@ -8965,7 +10101,7 @@ I would document the near-crash, delusional driving explanation, passenger/child
       },
       {
         "id": "s4",
-        "name": "cultural connection and engagement — vulnerable person safety",
+        "name": "cultural connection and engagement",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "If you fly him out alone, he will not come back to us.",
@@ -8984,7 +10120,7 @@ I would document the near-crash, delusional driving explanation, passenger/child
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Methamphetamine complicating remote psychosis and culturally safe transfer planning",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "He used ice from town yesterday.",
@@ -9003,7 +10139,7 @@ I would document the near-crash, delusional driving explanation, passenger/child
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting RFDS activation, cultural transfer plan and psychosis-substance risk",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to activate RFDS and how to plan culturally safe transfer",
@@ -9019,6 +10155,24 @@ I would document the near-crash, delusional driving explanation, passenger/child
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Family refusal of solo transfer as a culturally embedded safety concern",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "If you fly him out alone, he will not come back to us.",
+        "whyItMatters": "Family concern that the patient will not return if transferred alone is a clinically significant predictor of treatment dropout and cultural disconnection. Planning for a family member or community escort is not a preference; it is a clinical retention strategy that must be resourced and documented.",
+        "modelWording": "I would document the family's prediction about solo transfer outcome as a clinical risk factor, actively resource an escort — community health worker, elder, family member — and record this as a care requirement in the RFDS transfer plan rather than an optional courtesy.",
+        "keywords": [
+          "solo transfer",
+          "cultural disconnection",
+          "escort requirement",
+          "RFDS",
+          "treatment retention",
+          "remote",
+          "Aboriginal community"
+        ]
       }
     ],
     "priorityOrder": {
@@ -9030,7 +10184,8 @@ I would document the near-crash, delusional driving explanation, passenger/child
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -9057,7 +10212,7 @@ I would document the highway behaviour, the "trucks are demons" belief, possible
     "signals": [
       {
         "id": "s1",
-        "name": "no-bed discharge shortcut — unsafe shortcut under pressure",
+        "name": "no-bed discharge shortcut",
         "category": "system_pressure",
         "severity": "critical",
         "clueInStem": "There are no psych beds, so phone follow-up is all we have.",
@@ -9076,7 +10231,7 @@ I would document the highway behaviour, the "trucks are demons" belief, possible
       },
       {
         "id": "s2",
-        "name": "minimising high-risk overdose — core clinical formulation",
+        "name": "minimising high-risk overdose",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "I just want to go home and sleep.",
@@ -9094,7 +10249,7 @@ I would document the highway behaviour, the "trucks are demons" belief, possible
       },
       {
         "id": "s3",
-        "name": "safe observation governance — legal/policy hinge",
+        "name": "safe observation governance",
         "category": "mental_health_act",
         "severity": "critical",
         "clueInStem": "I have never done an overnight suicide watch.",
@@ -9113,7 +10268,7 @@ I would document the highway behaviour, the "trucks are demons" belief, possible
       },
       {
         "id": "s4",
-        "name": "cultural/family protective support — vulnerable person safety",
+        "name": "cultural/family protective support",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "She asked for me but I am ninety minutes away.",
@@ -9132,7 +10287,7 @@ I would document the highway behaviour, the "trucks are demons" belief, possible
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Undocumented request blocking accurate clinical record and governance accountability",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "Do not put this in her record.",
@@ -9151,7 +10306,7 @@ I would document the highway behaviour, the "trucks are demons" belief, possible
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting rural constraints, safe transfer decision and documentation obligation",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to hold/transfer and document despite rural constraints",
@@ -9167,6 +10322,24 @@ I would document the highway behaviour, the "trucks are demons" belief, possible
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Rural nursing staff without suicide watch training as an acute safety system gap",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "I have never done an overnight suicide watch.",
+        "whyItMatters": "A nurse who has never conducted an overnight suicide watch is not an appropriate sole guardian for an acutely suicidal patient. This is a system-level safety failure that must be escalated to management today, not quietly worked around.",
+        "modelWording": "I would formally document that the overnight nurse does not have suicide observation training, escalate to the nurse in charge and hospital management, and use this as additional clinical justification for transfer rather than local overnight management in an inadequately resourced setting.",
+        "keywords": [
+          "untrained nurse",
+          "suicide watch",
+          "system gap",
+          "governance escalation",
+          "rural capacity",
+          "safe transfer",
+          "documentation"
+        ]
       }
     ],
     "priorityOrder": {
@@ -9178,7 +10351,8 @@ I would document the highway behaviour, the "trucks are demons" belief, possible
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -9205,7 +10379,7 @@ I would document the overdose amount, medical treatment, her minimising statemen
     "signals": [
       {
         "id": "s1",
-        "name": "delay-as-wait shortcut — unsafe shortcut under pressure",
+        "name": "delay-as-wait shortcut",
         "category": "system_pressure",
         "severity": "critical",
         "clueInStem": "Transfer cannot happen until morning.",
@@ -9224,7 +10398,7 @@ I would document the overdose amount, medical treatment, her minimising statemen
       },
       {
         "id": "s2",
-        "name": "mania causing public safety risk — core clinical formulation",
+        "name": "mania causing public safety risk",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "God told me road rules do not apply.",
@@ -9242,7 +10416,7 @@ I would document the overdose amount, medical treatment, her minimising statemen
       },
       {
         "id": "s3",
-        "name": "sedation and MHA transport — legal/policy hinge",
+        "name": "sedation and MHA transport",
         "category": "mental_health_act",
         "severity": "critical",
         "clueInStem": "Can we sedate him overnight?",
@@ -9261,7 +10435,7 @@ I would document the overdose amount, medical treatment, her minimising statemen
       },
       {
         "id": "s4",
-        "name": "least restrictive culturally informed containment — vulnerable person safety",
+        "name": "least restrictive culturally informed containment",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "He gets worse when police are around.",
@@ -9280,7 +10454,7 @@ I would document the overdose amount, medical treatment, her minimising statemen
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Police presence as a de-escalation barrier for acutely psychotic patients",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "Let me talk him down before cuffs.",
@@ -9299,7 +10473,7 @@ I would document the overdose amount, medical treatment, her minimising statemen
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting overnight detention basis, sedation rationale and safe transfer plan",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to detain safely overnight and transfer lawfully",
@@ -9315,6 +10489,24 @@ I would document the overdose amount, medical treatment, her minimising statemen
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Grandiose religious belief about driving as an immediate public safety emergency",
+        "category": "immediate_safety",
+        "severity": "important",
+        "clueInStem": "God told me road rules do not apply.",
+        "whyItMatters": "A patient who believes divine instruction exempts him from road rules is at immediate risk of causing a road fatality. This requires immediate driving prohibition and vehicle key removal as an acute safety measure, independent of the overnight detention and transfer planning.",
+        "modelWording": "I would ensure the patient cannot access a vehicle tonight — keys removed, police informed of driving risk — document the specific grandiose belief about road rules as a driving danger, and notify the licensing authority of a reportable psychiatric driving risk.",
+        "keywords": [
+          "grandiose road belief",
+          "driving prohibition",
+          "key removal",
+          "vehicle access",
+          "public safety",
+          "immediate risk",
+          "religious psychosis"
+        ]
       }
     ],
     "priorityOrder": {
@@ -9326,7 +10518,8 @@ I would document the overdose amount, medical treatment, her minimising statemen
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -9353,7 +10546,7 @@ I would document the dangerous driving, the quote about God and road rules, why 
     "signals": [
       {
         "id": "s1",
-        "name": "community-pressure shortcut — unsafe shortcut under pressure",
+        "name": "community-pressure shortcut",
         "category": "system_pressure",
         "severity": "critical",
         "clueInStem": "Handle it inside community.",
@@ -9372,7 +10565,7 @@ I would document the dangerous driving, the quote about God and road rules, why 
       },
       {
         "id": "s2",
-        "name": "alcohol-related family violence — core clinical formulation",
+        "name": "alcohol-related family violence",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "I only scared her because she was taking the kids.",
@@ -9390,7 +10583,7 @@ I would document the dangerous driving, the quote about God and road rules, why 
       },
       {
         "id": "s3",
-        "name": "custody and medical clearance — legal/policy hinge",
+        "name": "custody and medical clearance",
         "category": "mental_health_act",
         "severity": "critical",
         "clueInStem": "Can he sober up in cells?",
@@ -9409,7 +10602,7 @@ I would document the dangerous driving, the quote about God and road rules, why 
       },
       {
         "id": "s4",
-        "name": "victim/children immediate safety — vulnerable person safety",
+        "name": "victim/children immediate safety",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "If he comes back tonight, someone will die.",
@@ -9428,7 +10621,7 @@ I would document the dangerous driving, the quote about God and road rules, why 
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Community elder's grief-linked drinking as a culturally embedded vulnerability",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "He drinks when grief takes him.",
@@ -9447,7 +10640,7 @@ I would document the dangerous driving, the quote about God and road rules, why 
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting community role, intoxication risk, family safety and least restrictive plan",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to protect family, manage intoxication and respect community role",
@@ -9463,6 +10656,24 @@ I would document the dangerous driving, the quote about God and road rules, why 
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Specific threat that someone will die if he returns home tonight",
+        "category": "immediate_safety",
+        "severity": "important",
+        "clueInStem": "If he comes back tonight, someone will die.",
+        "whyItMatters": "A community member's specific statement that someone will die is not a vague risk assessment. It is a concrete, credible threat that creates an immediate duty to prevent return home tonight, independent of capacity, community dynamics or cultural context.",
+        "modelWording": "I would treat the specific death threat as an immediate safety matter requiring active steps to prevent return home tonight — detention, safe house, police escort — document the specific words used by the community member, and ensure this risk is not dismissed as community conflict rather than credible violence threat.",
+        "keywords": [
+          "specific death threat",
+          "immediate safety",
+          "return home prevention",
+          "credible threat",
+          "community violence",
+          "duty of care",
+          "domestic violence"
+        ]
       }
     ],
     "priorityOrder": {
@@ -9474,7 +10685,8 @@ I would document the dangerous driving, the quote about God and road rules, why 
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -9501,7 +10713,7 @@ I would document the shovel threat, intoxication, Noah's minimising statement, p
     "signals": [
       {
         "id": "s1",
-        "name": "service-boundary shortcut — unsafe shortcut under pressure",
+        "name": "service-boundary shortcut",
         "category": "system_pressure",
         "severity": "critical",
         "clueInStem": "We do not provide long-term therapy here.",
@@ -9520,7 +10732,7 @@ I would document the shovel threat, intoxication, Noah's minimising statement, p
       },
       {
         "id": "s2",
-        "name": "telehealth unsafe due to family violence proximity — core clinical formulation",
+        "name": "telehealth unsafe due to family violence proximity",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "If they hear me talking on video, I am not safe.",
@@ -9538,7 +10750,7 @@ I would document the shovel threat, intoxication, Noah's minimising statement, p
       },
       {
         "id": "s3",
-        "name": "benzodiazepine governance — legal/policy hinge",
+        "name": "benzodiazepine governance",
         "category": "mental_health_act",
         "severity": "critical",
         "clueInStem": "Can psychiatry take over alprazolam scripts?",
@@ -9557,7 +10769,7 @@ I would document the shovel threat, intoxication, Noah's minimising statement, p
       },
       {
         "id": "s4",
-        "name": "young-carer safeguarding — vulnerable person safety",
+        "name": "young-carer safeguarding",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "She stays home from school to watch Mum.",
@@ -9576,7 +10788,7 @@ I would document the shovel threat, intoxication, Noah's minimising statement, p
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Repeated re-traumatisation through retelling as a therapeutic harm in rural care",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "Every new clinician makes me retell it then leaves.",
@@ -9595,7 +10807,7 @@ I would document the shovel threat, intoxication, Noah's minimising statement, p
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting trauma-informed stepped care plan, telehealth safety and referral pathway",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to provide trauma-informed stepped care despite rural limits",
@@ -9611,6 +10823,24 @@ I would document the shovel threat, intoxication, Noah's minimising statement, p
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Child missing school to provide carer support as a safeguarding concern",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "She stays home from school to watch Mum.",
+        "whyItMatters": "A child staying home from school to care for a parent with severe PTSD is experiencing educational disadvantage and may be exposed to secondary trauma. This constitutes a child welfare concern requiring a separate assessment of the child's needs and carer-load.",
+        "modelWording": "I would document the child's school absence and caring role as a child welfare concern, refer to a family support service or school wellbeing team for the child, and ensure that the mother's care plan includes formal support that reduces the child's caring burden.",
+        "keywords": [
+          "young carer",
+          "school absence",
+          "child welfare",
+          "secondary trauma",
+          "carer load",
+          "family support",
+          "PTSD"
+        ]
       }
     ],
     "priorityOrder": {
@@ -9622,7 +10852,8 @@ I would document the shovel threat, intoxication, Noah's minimising statement, p
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -9649,7 +10880,7 @@ I would document why generic telehealth was unsafe, the benzodiazepine governanc
     "signals": [
       {
         "id": "s1",
-        "name": "weather-delay shortcut — unsafe shortcut under pressure",
+        "name": "weather-delay shortcut",
         "category": "system_pressure",
         "severity": "critical",
         "clueInStem": "The plane cannot land until morning, so family must manage.",
@@ -9668,7 +10899,7 @@ I would document why generic telehealth was unsafe, the benzodiazepine governanc
       },
       {
         "id": "s2",
-        "name": "postpartum psychosis with infant neglect risk — core clinical formulation",
+        "name": "postpartum psychosis with infant neglect risk",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "The sea wants him back.",
@@ -9686,7 +10917,7 @@ I would document why generic telehealth was unsafe, the benzodiazepine governanc
       },
       {
         "id": "s3",
-        "name": "infant safety and legal authority — legal/policy hinge",
+        "name": "infant safety and legal authority",
         "category": "mental_health_act",
         "severity": "critical",
         "clueInStem": "Can we separate mother and baby without an order?",
@@ -9705,7 +10936,7 @@ I would document why generic telehealth was unsafe, the benzodiazepine governanc
       },
       {
         "id": "s4",
-        "name": "newborn medical risk — vulnerable person safety",
+        "name": "newborn medical risk",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "He has not fed for ten hours.",
@@ -9724,7 +10955,7 @@ I would document why generic telehealth was unsafe, the benzodiazepine governanc
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Family opposition to remote transfer as a cultural safety and relational concern",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "Do not send her away alone.",
@@ -9743,7 +10974,7 @@ I would document why generic telehealth was unsafe, the benzodiazepine governanc
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting local containment plan, cultural retrieval safety and transfer decision",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to contain locally overnight and plan culturally safe retrieval",
@@ -9759,6 +10990,24 @@ I would document why generic telehealth was unsafe, the benzodiazepine governanc
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Neonate not feeding for ten hours as an independent paediatric emergency",
+        "category": "immediate_safety",
+        "severity": "important",
+        "clueInStem": "He has not fed for ten hours.",
+        "whyItMatters": "A neonate who has not fed for ten hours in a remote location without paediatric support is a medical emergency. Neonatal hypoglycaemia, dehydration and sepsis risk require immediate paediatric assessment separate from the maternal psychiatric transfer planning.",
+        "modelWording": "I would immediately mobilise RFDS or paediatric telemedicine support for the neonate independently of the maternal transfer decision, document the ten-hour no-feed as an acute emergency, and ensure the neonate is not overlooked while the team focuses on the mother's psychiatric crisis.",
+        "keywords": [
+          "neonate no-feed",
+          "ten hours",
+          "paediatric emergency",
+          "neonatal hypoglycaemia",
+          "RFDS",
+          "remote",
+          "dual stream"
+        ]
       }
     ],
     "priorityOrder": {
@@ -9770,7 +11019,8 @@ I would document why generic telehealth was unsafe, the benzodiazepine governanc
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -9797,7 +11047,7 @@ I would document the postpartum timing, the "sea wants him back" belief, baby's 
     "signals": [
       {
         "id": "s1",
-        "name": "denial shortcut — unsafe shortcut under pressure",
+        "name": "denial shortcut",
         "category": "system_pressure",
         "severity": "critical",
         "clueInStem": "He denies suicidality, so we cannot remove guns.",
@@ -9816,7 +11066,7 @@ I would document the postpartum timing, the "sea wants him back" belief, baby's 
       },
       {
         "id": "s2",
-        "name": "firearms-related suicide risk — core clinical formulation",
+        "name": "firearms-related suicide risk",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "A man without his rifle is already dead.",
@@ -9834,7 +11084,7 @@ I would document the postpartum timing, the "sea wants him back" belief, baby's 
       },
       {
         "id": "s3",
-        "name": "firearms safety pathway — legal/policy hinge",
+        "name": "firearms safety pathway",
         "category": "mental_health_act",
         "severity": "critical",
         "clueInStem": "What is our authority around firearms?",
@@ -9853,7 +11103,7 @@ I would document the postpartum timing, the "sea wants him back" belief, baby's 
       },
       {
         "id": "s4",
-        "name": "spouse collateral and immediate risk — vulnerable person safety",
+        "name": "spouse collateral and immediate risk",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "He sits in the shed with the gun safe open.",
@@ -9872,7 +11122,7 @@ I would document the postpartum timing, the "sea wants him back" belief, baby's 
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Rural masculine shame about weakness as a lethal barrier to help-seeking",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "Do not let the town know I am weak.",
@@ -9891,7 +11141,7 @@ I would document the postpartum timing, the "sea wants him back" belief, baby's 
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting firearms restriction, shame-sensitive engagement and suicide risk management",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to restrict firearms and manage suicide risk without shaming",
@@ -9907,6 +11157,24 @@ I would document the postpartum timing, the "sea wants him back" belief, baby's 
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Open gun safe as an immediate means-access emergency requiring same-day action",
+        "category": "immediate_safety",
+        "severity": "important",
+        "clueInStem": "He sits in the shed with the gun safe open.",
+        "whyItMatters": "Sitting in the shed with the gun safe open is a specific high-lethality means-access behaviour that requires urgent action today. Verbal safety plans and outpatient follow-up are insufficient when means are physically accessible and the patient is in the shed.",
+        "modelWording": "I would treat the open gun safe as an immediate clinical emergency, arrange same-day voluntary surrender of firearms with the patient's agreement or police involvement, document the specific access behaviour, and ensure firearms are removed before any outpatient plan is activated.",
+        "keywords": [
+          "gun safe open",
+          "immediate access",
+          "means restriction",
+          "voluntary surrender",
+          "police",
+          "same-day action",
+          "rural firearm suicide"
+        ]
       }
     ],
     "priorityOrder": {
@@ -9918,7 +11186,8 @@ I would document the postpartum timing, the "sea wants him back" belief, baby's 
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -9945,7 +11214,7 @@ I would document the open gun safe, depression and alcohol risk, the "rifle" ide
     "signals": [
       {
         "id": "s1",
-        "name": "sedation shortcut — unsafe shortcut under pressure",
+        "name": "sedation shortcut",
         "category": "system_pressure",
         "severity": "critical",
         "clueInStem": "She is aggressive; give something strong.",
@@ -9964,7 +11233,7 @@ I would document the open gun safe, depression and alcohol risk, the "rifle" ide
       },
       {
         "id": "s2",
-        "name": "delirium plus cultural dislocation — core clinical formulation",
+        "name": "delirium plus cultural dislocation",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "This place is not my country.",
@@ -9982,7 +11251,7 @@ I would document the open gun safe, depression and alcohol risk, the "rifle" ide
       },
       {
         "id": "s3",
-        "name": "transfer versus local delirium care — legal/policy hinge",
+        "name": "transfer versus local delirium care",
         "category": "mental_health_act",
         "severity": "critical",
         "clueInStem": "Can we transfer her 500km for behaviour?",
@@ -10001,7 +11270,7 @@ I would document the open gun safe, depression and alcohol risk, the "rifle" ide
       },
       {
         "id": "s4",
-        "name": "baseline collateral — vulnerable person safety",
+        "name": "baseline collateral",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "She was leading community meetings last week.",
@@ -10020,7 +11289,7 @@ I would document the open gun safe, depression and alcohol risk, the "rifle" ide
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Language and family presence as essential cultural safety elements for delirium care",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "She calms when family speak language.",
@@ -10039,7 +11308,7 @@ I would document the open gun safe, depression and alcohol risk, the "rifle" ide
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting delirium formulation, local cultural treatment plan and transfer decision",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to treat delirium locally with cultural supports",
@@ -10055,6 +11324,24 @@ I would document the open gun safe, depression and alcohol risk, the "rifle" ide
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Acute behavioural change in a community elder requiring rapid medical assessment",
+        "category": "diagnosis_formulation",
+        "severity": "important",
+        "clueInStem": "She was leading community meetings last week.",
+        "whyItMatters": "An abrupt change from community leadership functioning to confused, agitated behaviour strongly suggests delirium with a reversible cause rather than primary dementia. This recent functional baseline is critical collateral that must be documented and used to drive urgent medical investigation.",
+        "modelWording": "I would document the one-week functional baseline — community meeting leadership — as high-quality collateral evidence for acute delirium, use this to prioritise urgent medical investigation of reversible causes, and document why the team should not accept a dementia label without a full delirium work-up.",
+        "keywords": [
+          "functional baseline",
+          "community leader",
+          "acute change",
+          "delirium versus dementia",
+          "collateral",
+          "reversible cause",
+          "Aboriginal elder"
+        ]
       }
     ],
     "priorityOrder": {
@@ -10066,7 +11353,8 @@ I would document the open gun safe, depression and alcohol risk, the "rifle" ide
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -10093,7 +11381,7 @@ I would document the acute baseline change, infection, cultural dislocation phra
     "signals": [
       {
         "id": "s1",
-        "name": "superficial-wound shortcut — unsafe shortcut under pressure",
+        "name": "superficial-wound shortcut",
         "category": "system_pressure",
         "severity": "critical",
         "clueInStem": "The wound is superficial and there is no paediatric bed.",
@@ -10112,7 +11400,7 @@ I would document the acute baseline change, infection, cultural dislocation phra
       },
       {
         "id": "s2",
-        "name": "sexual trauma and self-harm — core clinical formulation",
+        "name": "sexual trauma and self-harm",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "I cut so I would not feel him touching me.",
@@ -10130,7 +11418,7 @@ I would document the acute baseline change, infection, cultural dislocation phra
       },
       {
         "id": "s3",
-        "name": "child protection and forensic safety — legal/policy hinge",
+        "name": "child protection and forensic safety",
         "category": "mental_health_act",
         "severity": "critical",
         "clueInStem": "Can she go home while we investigate?",
@@ -10149,7 +11437,7 @@ I would document the acute baseline change, infection, cultural dislocation phra
       },
       {
         "id": "s4",
-        "name": "sibling safety risk — vulnerable person safety",
+        "name": "sibling safety risk",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "My brother still sleeps in that house.",
@@ -10168,7 +11456,7 @@ I would document the acute baseline change, infection, cultural dislocation phra
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Family pressure to suppress abuse disclosure as a reporting barrier",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "You will destroy our family if you report.",
@@ -10187,7 +11475,7 @@ I would document the acute baseline change, infection, cultural dislocation phra
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting abuse disclosure, mandatory reporting obligation and safe placement",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to ensure safe placement and forensic/medical pathway",
@@ -10203,6 +11491,24 @@ I would document the acute baseline change, infection, cultural dislocation phra
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Sibling still in the home as an independent child protection emergency",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "My brother still sleeps in that house.",
+        "whyItMatters": "A sibling still living in the home where sexual abuse occurred is at immediate ongoing risk. This creates an independent child protection obligation that must be acted on today, separate from the presenting patient's clinical management.",
+        "modelWording": "I would immediately contact child protection regarding the sibling living in the home, document this as an independent safeguarding emergency, ensure the sibling's safety is assessed the same day, and record this action separately from the presenting patient's forensic medical pathway.",
+        "keywords": [
+          "sibling at risk",
+          "home abuse",
+          "ongoing risk",
+          "child protection",
+          "immediate reporting",
+          "sexual abuse",
+          "independent safeguarding"
+        ]
       }
     ],
     "priorityOrder": {
@@ -10214,7 +11520,8 @@ I would document the acute baseline change, infection, cultural dislocation phra
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -10241,7 +11548,7 @@ I would document Ella's exact disclosure, who heard it, what questions were and 
     "signals": [
       {
         "id": "s1",
-        "name": "breach shortcut — unsafe shortcut under pressure",
+        "name": "breach shortcut",
         "category": "system_pressure",
         "severity": "critical",
         "clueInStem": "Breach him; he is non-compliant.",
@@ -10260,7 +11567,7 @@ I would document Ella's exact disclosure, who heard it, what questions were and 
       },
       {
         "id": "s2",
-        "name": "cultural obligations and relapse risk — core clinical formulation",
+        "name": "cultural obligations and relapse risk",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "The clinic is not where my spirit should be right now.",
@@ -10278,7 +11585,7 @@ I would document Ella's exact disclosure, who heard it, what questions were and 
       },
       {
         "id": "s3",
-        "name": "CTO legal threshold — legal/policy hinge",
+        "name": "CTO legal threshold",
         "category": "mental_health_act",
         "severity": "critical",
         "clueInStem": "Is recall the least restrictive option?",
@@ -10297,7 +11604,7 @@ I would document Ella's exact disclosure, who heard it, what questions were and 
       },
       {
         "id": "s4",
-        "name": "family/cultural protective factors — vulnerable person safety",
+        "name": "family/cultural protective factors",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "He needs ceremony and medicine, both.",
@@ -10316,7 +11623,7 @@ I would document Ella's exact disclosure, who heard it, what questions were and 
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Police presence as a flight trigger threatening both safety and cultural engagement",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "If police come, I will run bush.",
@@ -10335,7 +11642,7 @@ I would document Ella's exact disclosure, who heard it, what questions were and 
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting CTO adaptation, cultural obligations and least restrictive treatment plan",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to enforce CTO or adapt culturally safe treatment",
@@ -10351,6 +11658,24 @@ I would document Ella's exact disclosure, who heard it, what questions were and 
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Ceremonial obligation as a clinically relevant protective and recovery factor",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "He needs ceremony and medicine, both.",
+        "whyItMatters": "A patient who needs both ceremony and medication is identifying a genuine dual pathway for recovery. Dismissing the ceremonial need as non-clinical risks therapeutic rupture, disengagement and return to bush. Facilitating ceremony alongside medication is a clinical strategy, not a compromise.",
+        "modelWording": "I would document the ceremonial need as a clinically relevant cultural health requirement, explore how ceremony and medication can be scheduled compatibly, involve the Aboriginal health worker and community elder in co-designing the plan, and record this as a positive engagement and protective factor in the management plan.",
+        "keywords": [
+          "ceremony",
+          "cultural healing",
+          "dual pathway",
+          "recovery",
+          "protective factor",
+          "Aboriginal health worker",
+          "CTO adaptation"
+        ]
       }
     ],
     "priorityOrder": {
@@ -10362,7 +11687,8 @@ I would document Ella's exact disclosure, who heard it, what questions were and 
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -10389,7 +11715,7 @@ I would document missed depot, sorry business, mental state, grandmother's colla
     "signals": [
       {
         "id": "s1",
-        "name": "reputation/workforce shortcut — unsafe shortcut under pressure",
+        "name": "reputation/workforce shortcut",
         "category": "governance",
         "severity": "critical",
         "clueInStem": "Handle this quietly; we cannot lose another consultant.",
@@ -10408,7 +11734,7 @@ I would document missed depot, sorry business, mental state, grandmother's colla
       },
       {
         "id": "s2",
-        "name": "impaired colleague with patient safety risk — core clinical formulation",
+        "name": "impaired colleague with patient safety risk",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "I am going through a divorce; please do not destroy my career.",
@@ -10426,7 +11752,7 @@ I would document missed depot, sorry business, mental state, grandmother's colla
       },
       {
         "id": "s3",
-        "name": "AHPRA/mandatory notification threshold — legal/policy hinge",
+        "name": "AHPRA/mandatory notification threshold",
         "category": "governance",
         "severity": "critical",
         "clueInStem": "Is this mandatory reporting?",
@@ -10445,7 +11771,7 @@ I would document missed depot, sorry business, mental state, grandmother's colla
       },
       {
         "id": "s4",
-        "name": "patient harmed by unsafe order — vulnerable person safety",
+        "name": "patient harmed by unsafe order",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "He never came into the seclusion area.",
@@ -10464,7 +11790,7 @@ I would document missed depot, sorry business, mental state, grandmother's colla
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Junior staff fear of challenging the impaired colleague as a system safety failure",
         "category": "mdt_conflict",
         "severity": "important",
         "clueInStem": "I was afraid to challenge him.",
@@ -10483,7 +11809,7 @@ I would document missed depot, sorry business, mental state, grandmother's colla
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting duty removal, investigation process and mandatory reporting obligations",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to remove from duty, investigate and report",
@@ -10499,6 +11825,24 @@ I would document missed depot, sorry business, mental state, grandmother's colla
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Patient safety incidents during the impaired colleague's shift requiring review",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "He never came into the seclusion area.",
+        "whyItMatters": "An intoxicated clinician who was absent from seclusion observation duties may have caused or failed to prevent patient safety incidents during that shift. A retrospective review of all patients under his care during the shift is required, not only action for the current situation.",
+        "modelWording": "I would arrange an immediate case review of all patients managed during the shift when the colleague was impaired, document any potential adverse events, escalate to the medical director and patient safety unit, and ensure families are notified through open disclosure if any patient was harmed.",
+        "keywords": [
+          "patient safety review",
+          "retrospective audit",
+          "seclusion absence",
+          "impaired clinician",
+          "open disclosure",
+          "adverse events",
+          "governance escalation"
+        ]
       }
     ],
     "priorityOrder": {
@@ -10510,7 +11854,8 @@ I would document missed depot, sorry business, mental state, grandmother's colla
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -10537,7 +11882,7 @@ I would document the allegation, immediate patient review, restriction of Dr K's
     "signals": [
       {
         "id": "s1",
-        "name": "defensive-disclosure shortcut — unsafe shortcut under pressure",
+        "name": "defensive-disclosure shortcut",
         "category": "governance",
         "severity": "critical",
         "clueInStem": "Avoid admitting liability.",
@@ -10556,7 +11901,7 @@ I would document the allegation, immediate patient review, restriction of Dr K's
       },
       {
         "id": "s2",
-        "name": "open disclosure after medication harm — core clinical formulation",
+        "name": "open disclosure after medication harm",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "No one told us this was your mistake.",
@@ -10574,7 +11919,7 @@ I would document the allegation, immediate patient review, restriction of Dr K's
       },
       {
         "id": "s3",
-        "name": "incident governance and systems review — legal/policy hinge",
+        "name": "incident governance and systems review",
         "category": "governance",
         "severity": "critical",
         "clueInStem": "Do we incident report if pharmacy also missed it?",
@@ -10593,7 +11938,7 @@ I would document the allegation, immediate patient review, restriction of Dr K's
       },
       {
         "id": "s4",
-        "name": "patient harm and physical safety — vulnerable person safety",
+        "name": "patient harm and physical safety",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "I fell because I could not stand.",
@@ -10612,7 +11957,7 @@ I would document the allegation, immediate patient review, restriction of Dr K's
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Responsibility displacement between pharmacy and prescriber blocking accountability",
         "category": "mdt_conflict",
         "severity": "important",
         "clueInStem": "I thought pharmacy checked it.",
@@ -10631,7 +11976,7 @@ I would document the allegation, immediate patient review, restriction of Dr K's
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting medication error, open disclosure, root cause analysis and harm management",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to manage harm, disclose and investigate systems",
@@ -10647,6 +11992,24 @@ I would document the allegation, immediate patient review, restriction of Dr K's
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Patient's physical sequelae requiring immediate clinical assessment and documentation",
+        "category": "immediate_safety",
+        "severity": "important",
+        "clueInStem": "I fell because I could not stand.",
+        "whyItMatters": "A patient who fell because she could not stand has sustained a physical injury that requires immediate medical assessment, documentation and treatment, independent of the medication error investigation. The fall is a harm event in itself requiring clinical care, not only a governance report.",
+        "modelWording": "I would arrange immediate medical assessment for the fall and any injuries, document the fall as a consequence of the medication error, ensure pain management and mobility assessment are completed, and include the fall as a harm event in the open disclosure and incident report.",
+        "keywords": [
+          "fall injury",
+          "physical harm",
+          "medical assessment",
+          "medication error consequence",
+          "open disclosure",
+          "harm documentation",
+          "immediate care"
+        ]
       }
     ],
     "priorityOrder": {
@@ -10658,7 +12021,8 @@ I would document the allegation, immediate patient review, restriction of Dr K's
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -10685,7 +12049,7 @@ I would document the event, clinical harm, open disclosure conversation, apology
     "signals": [
       {
         "id": "s1",
-        "name": "executive-pressure shortcut — unsafe shortcut under pressure",
+        "name": "executive-pressure shortcut",
         "category": "governance",
         "severity": "critical",
         "clueInStem": "We need this bed today.",
@@ -10704,7 +12068,7 @@ I would document the event, clinical harm, open disclosure conversation, apology
       },
       {
         "id": "s2",
-        "name": "specific threat to identifiable victim — core clinical formulation",
+        "name": "specific threat to identifiable victim",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "When I leave, I know where she lives.",
@@ -10722,7 +12086,7 @@ I would document the event, clinical harm, open disclosure conversation, apology
       },
       {
         "id": "s3",
-        "name": "defensible documentation and duty to protect — legal/policy hinge",
+        "name": "defensible documentation and duty to protect",
         "category": "governance",
         "severity": "critical",
         "clueInStem": "Can we document that he denies intent?",
@@ -10741,7 +12105,7 @@ I would document the event, clinical harm, open disclosure conversation, apology
       },
       {
         "id": "s4",
-        "name": "identified victim safety — vulnerable person safety",
+        "name": "identified victim safety",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "There is an active family violence order.",
@@ -10760,7 +12124,7 @@ I would document the event, clinical harm, open disclosure conversation, apology
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "System performance targets weaponised to override clinical safety decision-making",
         "category": "mdt_conflict",
         "severity": "important",
         "clueInStem": "ED is breaching targets.",
@@ -10779,7 +12143,7 @@ I would document the event, clinical harm, open disclosure conversation, apology
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting discharge refusal rationale, victim safety escalation and governance record",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to refuse discharge and escalate victim safety/legal actions",
@@ -10795,6 +12159,24 @@ I would document the event, clinical harm, open disclosure conversation, apology
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Active family violence order as a legal and statutory safety mandate",
+        "category": "mental_health_act",
+        "severity": "important",
+        "clueInStem": "There is an active family violence order.",
+        "whyItMatters": "An active family violence order is a legal instrument that creates statutory obligations. Discharging a patient in violation of an active protection order may itself be unlawful and certainly constitutes a governance failure. The order must be sighted, documented and inform the discharge decision independently of the clinical risk assessment.",
+        "modelWording": "I would obtain and document the current family violence order, identify what conduct it prohibits, ensure the discharge plan does not enable breach of the order, and escalate to legal services and police liaison if the discharge creates conditions for order breach.",
+        "keywords": [
+          "family violence order",
+          "statutory obligation",
+          "legal instrument",
+          "order breach",
+          "police liaison",
+          "discharge planning",
+          "legal mandate"
+        ]
       }
     ],
     "priorityOrder": {
@@ -10806,7 +12188,8 @@ I would document the event, clinical harm, open disclosure conversation, apology
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -10833,7 +12216,7 @@ I would document the exact threat, the active family violence order, denial-of-i
     "signals": [
       {
         "id": "s1",
-        "name": "workaround shortcut — unsafe shortcut under pressure",
+        "name": "workaround shortcut",
         "category": "governance",
         "severity": "critical",
         "clueInStem": "Staff now bypass the registrar.",
@@ -10852,7 +12235,7 @@ I would document the exact threat, the active family violence order, denial-of-i
       },
       {
         "id": "s2",
-        "name": "false documentation and supervision failure — core clinical formulation",
+        "name": "false documentation and supervision failure",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "Consultant aware.",
@@ -10870,7 +12253,7 @@ I would document the exact threat, the active family violence order, denial-of-i
       },
       {
         "id": "s3",
-        "name": "training governance and professional conduct — legal/policy hinge",
+        "name": "training governance and professional conduct",
         "category": "governance",
         "severity": "critical",
         "clueInStem": "Is this remediation or notification?",
@@ -10889,7 +12272,7 @@ I would document the exact threat, the active family violence order, denial-of-i
       },
       {
         "id": "s4",
-        "name": "patient harm and open disclosure — vulnerable person safety",
+        "name": "patient harm and open disclosure",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "I woke up in ICU and no one explained.",
@@ -10908,7 +12291,7 @@ I would document the exact threat, the active family violence order, denial-of-i
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Registrar's concealment of inadequacy through false consultant documentation",
         "category": "mdt_conflict",
         "severity": "important",
         "clueInStem": "I thought consultants wanted us to cope.",
@@ -10927,7 +12310,7 @@ I would document the exact threat, the active family violence order, denial-of-i
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting duty restriction, remediation pathway and mandatory notification assessment",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to restrict duties, remediate and investigate",
@@ -10943,6 +12326,24 @@ I would document the exact threat, the active family violence order, denial-of-i
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Patient harmed by undertreated condition as a disclosure and compensation obligation",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "I woke up in ICU and no one explained.",
+        "whyItMatters": "A patient who was harmed and woke in ICU without explanation has a right to open disclosure, full information about what occurred, and access to a complaints and compensation pathway. The consultant's obligation to disclose is separate from — and should not wait for — the internal investigation of the registrar.",
+        "modelWording": "I would arrange an open disclosure meeting with the patient and family, provide a full explanation of events, apologise for the harm caused, document the disclosure meeting, and ensure the patient has access to the patient advocacy service and compensation pathway independently of the internal governance process.",
+        "keywords": [
+          "open disclosure",
+          "patient explanation",
+          "ICU harm",
+          "apology",
+          "compensation pathway",
+          "patient advocacy",
+          "governance obligation"
+        ]
       }
     ],
     "priorityOrder": {
@@ -10954,7 +12355,8 @@ I would document the exact threat, the active family violence order, denial-of-i
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -10981,7 +12383,7 @@ I would document patient review, duty restrictions, record correction, open disc
     "signals": [
       {
         "id": "s1",
-        "name": "cover-up shortcut — unsafe shortcut under pressure",
+        "name": "cover-up shortcut",
         "category": "governance",
         "severity": "critical",
         "clueInStem": "Delete the screenshots and handle it informally.",
@@ -11000,7 +12402,7 @@ I would document patient review, duty restrictions, record correction, open disc
       },
       {
         "id": "s2",
-        "name": "privacy breach minimisation — core clinical formulation",
+        "name": "privacy breach minimisation",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "It was anonymous; I was just venting.",
@@ -11018,7 +12420,7 @@ I would document patient review, duty restrictions, record correction, open disc
       },
       {
         "id": "s3",
-        "name": "privacy/open disclosure governance — legal/policy hinge",
+        "name": "privacy/open disclosure governance",
         "category": "governance",
         "severity": "critical",
         "clueInStem": "Do we need open disclosure with the whānau?",
@@ -11037,7 +12439,7 @@ I would document patient review, duty restrictions, record correction, open disc
       },
       {
         "id": "s4",
-        "name": "vulnerable involuntary patient harm — vulnerable person safety",
+        "name": "vulnerable involuntary patient harm",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "You people are making fun of me.",
@@ -11056,7 +12458,7 @@ I would document patient review, duty restrictions, record correction, open disc
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Minimising attitude towards social media breach blocking accountability",
         "category": "mdt_conflict",
         "severity": "important",
         "clueInStem": "Everyone posts de-identified things.",
@@ -11075,7 +12477,7 @@ I would document patient review, duty restrictions, record correction, open disc
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting evidence preservation, open disclosure and mandatory reporting",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to preserve evidence, disclose and remediate/report",
@@ -11091,6 +12493,24 @@ I would document patient review, duty restrictions, record correction, open disc
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Whānau patient who was mocked requiring culturally safe apology",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "You people are making fun of me.",
+        "whyItMatters": "A Māori patient who has been mocked on social media by a registrar has experienced a specific cultural harm that requires a culturally safe, face-to-face apology to the patient and whānau, not only a governance process.",
+        "modelWording": "I would arrange a separate cultural apology process involving the patient and whānau with Māori health liaison support, document this as a specific harm requiring reparative action, and ensure the apology is not delayed pending legal advice.",
+        "keywords": [
+          "cultural apology",
+          "whānau",
+          "Māori",
+          "reparative action",
+          "cultural harm",
+          "Māori health liaison",
+          "open disclosure"
+        ]
       }
     ],
     "priorityOrder": {
@@ -11102,7 +12522,8 @@ I would document patient review, duty restrictions, record correction, open disc
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -11129,7 +12550,7 @@ I would document the post content, identifiability, screenshot preservation, pat
     "signals": [
       {
         "id": "s1",
-        "name": "quiet-transfer shortcut — unsafe shortcut under pressure",
+        "name": "quiet-transfer shortcut",
         "category": "governance",
         "severity": "critical",
         "clueInStem": "Transfer her quietly before fellowship review.",
@@ -11148,7 +12569,7 @@ I would document the post content, identifiability, screenshot preservation, pat
       },
       {
         "id": "s2",
-        "name": "boundary-rationalisation — core clinical formulation",
+        "name": "boundary-rationalisation",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "She needed someone who would not abandon her.",
@@ -11166,7 +12587,7 @@ I would document the post content, identifiability, screenshot preservation, pat
       },
       {
         "id": "s3",
-        "name": "boundary/professional governance — legal/policy hinge",
+        "name": "boundary/professional governance",
         "category": "governance",
         "severity": "critical",
         "clueInStem": "Does this require notification?",
@@ -11185,7 +12606,7 @@ I would document the post content, identifiability, screenshot preservation, pat
       },
       {
         "id": "s4",
-        "name": "self-harm during boundary repair — vulnerable person safety",
+        "name": "self-harm during boundary repair",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "If he gets in trouble, I will cut myself.",
@@ -11204,7 +12625,7 @@ I would document the post content, identifiability, screenshot preservation, pat
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Therapist's rationalisation of boundary violation as therapeutic flexibility",
         "category": "mdt_conflict",
         "severity": "important",
         "clueInStem": "I was being flexible and therapeutic.",
@@ -11223,7 +12644,7 @@ I would document the post content, identifiability, screenshot preservation, pat
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting boundary breach, mandatory notification and patient protection",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to stop contact, protect patient and escalate governance",
@@ -11239,6 +12660,24 @@ I would document the post content, identifiability, screenshot preservation, pat
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Patient's self-harm threat tied to therapist's professional consequences",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "If he gets in trouble, I will cut myself.",
+        "whyItMatters": "A patient who threatens self-harm if the therapist faces consequences is in a coercive attachment that must be treated as an immediate clinical risk, not as leverage to suppress reporting. The threat must be risk-assessed independently and must not influence the governance decision.",
+        "modelWording": "I would treat the self-harm threat as an immediate clinical risk requiring its own safety assessment, arrange transfer to a different clinician for ongoing care, document that the threat was not used to suppress mandatory reporting, and ensure the patient's safety plan does not depend on continuation of the boundary-violating therapeutic relationship.",
+        "keywords": [
+          "coercive attachment",
+          "self-harm threat",
+          "safety assessment",
+          "mandatory reporting",
+          "boundary violation",
+          "therapist transfer",
+          "independence of governance"
+        ]
       }
     ],
     "priorityOrder": {
@@ -11250,7 +12689,8 @@ I would document the post content, identifiability, screenshot preservation, pat
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -11277,7 +12717,7 @@ I would document the boundary concerns, undocumented sessions, immediate cessati
     "signals": [
       {
         "id": "s1",
-        "name": "blame-shifting shortcut — unsafe shortcut under pressure",
+        "name": "blame-shifting shortcut",
         "category": "governance",
         "severity": "critical",
         "clueInStem": "I only did what the bed manager asked.",
@@ -11296,7 +12736,7 @@ I would document the boundary concerns, undocumented sessions, immediate cessati
       },
       {
         "id": "s2",
-        "name": "family complaint and open disclosure — core clinical formulation",
+        "name": "family complaint and open disclosure",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "You discharged the bed, not the patient.",
@@ -11314,7 +12754,7 @@ I would document the boundary concerns, undocumented sessions, immediate cessati
       },
       {
         "id": "s3",
-        "name": "coronial documentation governance — legal/policy hinge",
+        "name": "coronial documentation governance",
         "category": "governance",
         "severity": "critical",
         "clueInStem": "What do we give the coroner?",
@@ -11333,7 +12773,7 @@ I would document the boundary concerns, undocumented sessions, immediate cessati
       },
       {
         "id": "s4",
-        "name": "ignored suicide warning collateral — vulnerable person safety",
+        "name": "ignored suicide warning collateral",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "He was giving away tools and saying I will be free soon.",
@@ -11352,7 +12792,7 @@ I would document the boundary concerns, undocumented sessions, immediate cessati
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "System bed pressure as the proximal driver of the unsafe discharge decision",
         "category": "mdt_conflict",
         "severity": "important",
         "clueInStem": "The ward was desperate for a bed.",
@@ -11371,7 +12811,7 @@ I would document the boundary concerns, undocumented sessions, immediate cessati
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting serious incident review, coronial obligations and family support",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to lead serious incident review and support family/staff",
@@ -11387,6 +12827,24 @@ I would document the boundary concerns, undocumented sessions, immediate cessati
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Pre-discharge warning signs that were documented but not acted upon",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "He was giving away tools and saying I will be free soon.",
+        "whyItMatters": "A patient who was giving away possessions and making statements about being free soon exhibited classic warning signs that were documented in the record. The coroner will focus on whether these were identified, escalated and acted upon. Honest documentation and explanation of how these signals were interpreted at the time are essential.",
+        "modelWording": "I would ensure the clinical record accurately reflects what was observed, what clinical judgement was applied, and why the discharge was still made — not to minimise, but to enable the serious incident review to identify the system failure honestly and prevent recurrence.",
+        "keywords": [
+          "warning signs",
+          "giving away possessions",
+          "free soon",
+          "coronial",
+          "clinical record",
+          "honest documentation",
+          "system failure"
+        ]
       }
     ],
     "priorityOrder": {
@@ -11398,7 +12856,8 @@ I would document the boundary concerns, undocumented sessions, immediate cessati
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -11425,7 +12884,7 @@ I would document the incident response, family contact, record preservation, cor
     "signals": [
       {
         "id": "s1",
-        "name": "defensive complaint shortcut — unsafe shortcut under pressure",
+        "name": "defensive complaint shortcut",
         "category": "governance",
         "severity": "critical",
         "clueInStem": "Do not say sorry until legal approves.",
@@ -11444,7 +12903,7 @@ I would document the incident response, family contact, record preservation, cor
       },
       {
         "id": "s2",
-        "name": "culturally unsafe care allegation — core clinical formulation",
+        "name": "culturally unsafe care allegation",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "You treated him like a criminal, not a patient.",
@@ -11462,7 +12921,7 @@ I would document the incident response, family contact, record preservation, cor
       },
       {
         "id": "s3",
-        "name": "complaint and regulatory governance — legal/policy hinge",
+        "name": "complaint and regulatory governance",
         "category": "governance",
         "severity": "critical",
         "clueInStem": "Is this AHPRA or internal review?",
@@ -11481,7 +12940,7 @@ I would document the incident response, family contact, record preservation, cor
       },
       {
         "id": "s4",
-        "name": "vulnerable patient and family harm — vulnerable person safety",
+        "name": "vulnerable patient and family harm",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "He begged not to be taken by police.",
@@ -11500,7 +12959,7 @@ I would document the incident response, family contact, record preservation, cor
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Staff fear and understaffing offered as justification for coercive police transfer",
         "category": "mdt_conflict",
         "severity": "important",
         "clueInStem": "We were scared and short-staffed.",
@@ -11519,7 +12978,7 @@ I would document the incident response, family contact, record preservation, cor
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting open disclosure, cultural review and governance escalation",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to conduct open disclosure, cultural review and governance escalation",
@@ -11535,6 +12994,24 @@ I would document the incident response, family contact, record preservation, cor
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Patient's experience of being treated like a criminal as a specific cultural harm",
+        "category": "cultural_safety",
+        "severity": "important",
+        "clueInStem": "He begged not to be taken by police.",
+        "whyItMatters": "A patient who begged not to be taken by police — and then was — has experienced a documented traumatic and culturally unsafe event. This must be acknowledged explicitly in open disclosure and addressed through a cultural review, not only a procedural governance process.",
+        "modelWording": "I would lead open disclosure that directly acknowledges the patient's expressed distress at police involvement, initiate a cultural review to understand the systemic factors that led to this decision, and involve Aboriginal or cultural health services in the apology and reparative process.",
+        "keywords": [
+          "begged not police",
+          "cultural trauma",
+          "open disclosure",
+          "cultural review",
+          "reparative process",
+          "Aboriginal health",
+          "police transfer"
+        ]
       }
     ],
     "priorityOrder": {
@@ -11546,7 +13023,8 @@ I would document the incident response, family contact, record preservation, cor
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -11573,7 +13051,7 @@ I would document family contact, open disclosure, cultural review process, Abori
     "signals": [
       {
         "id": "s1",
-        "name": "metric-driven shortcut — unsafe shortcut under pressure",
+        "name": "metric-driven shortcut",
         "category": "governance",
         "severity": "critical",
         "clueInStem": "Our seclusion numbers cannot go up this month.",
@@ -11592,7 +13070,7 @@ I would document family contact, open disclosure, cultural review process, Abori
       },
       {
         "id": "s2",
-        "name": "immediate ward safety versus restraint minimisation — core clinical formulation",
+        "name": "immediate ward safety versus restraint minimisation",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "He punched an elderly patient before we could move anyone.",
@@ -11610,7 +13088,7 @@ I would document family contact, open disclosure, cultural review process, Abori
       },
       {
         "id": "s3",
-        "name": "seclusion/restraint governance — legal/policy hinge",
+        "name": "seclusion/restraint governance",
         "category": "governance",
         "severity": "critical",
         "clueInStem": "Was policy breached?",
@@ -11629,7 +13107,7 @@ I would document family contact, open disclosure, cultural review process, Abori
       },
       {
         "id": "s4",
-        "name": "vulnerable inpatient safety — vulnerable person safety",
+        "name": "vulnerable inpatient safety",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "I am frightened to sleep on the ward.",
@@ -11648,7 +13126,7 @@ I would document family contact, open disclosure, cultural review process, Abori
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Contradictory policy directives leaving staff unable to protect patients or themselves",
         "category": "mdt_conflict",
         "severity": "important",
         "clueInStem": "We are told never to seclude, then blamed when someone is hurt.",
@@ -11667,7 +13145,7 @@ I would document family contact, open disclosure, cultural review process, Abori
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting safety rationale, seclusion decision and governance learning",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to balance safety, least restrictive care and governance learning",
@@ -11683,6 +13161,24 @@ I would document family contact, open disclosure, cultural review process, Abori
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Elderly patient who was punched requiring immediate injury assessment and documentation",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "He punched an elderly patient before we could move anyone.",
+        "whyItMatters": "An elderly patient who was struck requires immediate medical assessment, documentation of injuries and referral for a separate serious incident review. This victim's welfare is an independent clinical obligation that must be addressed alongside the governance question about seclusion.",
+        "modelWording": "I would arrange immediate medical assessment for the elderly patient, document the injuries, initiate a separate serious incident report for the patient-on-patient assault, ensure the victim and their family are offered open disclosure, and use the incident to inform the governance review of the ward safety policy.",
+        "keywords": [
+          "elderly victim",
+          "patient assault",
+          "injury assessment",
+          "separate incident report",
+          "open disclosure",
+          "victim welfare",
+          "ward safety policy"
+        ]
       }
     ],
     "priorityOrder": {
@@ -11694,7 +13190,8 @@ I would document family contact, open disclosure, cultural review process, Abori
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -11721,7 +13218,7 @@ I would document the assault, victim impact, seclusion rationale, policy complia
     "signals": [
       {
         "id": "s1",
-        "name": "reputation shortcut — unsafe shortcut under pressure",
+        "name": "reputation shortcut",
         "category": "governance",
         "severity": "critical",
         "clueInStem": "He is our main admitting doctor; keep this contained.",
@@ -11740,7 +13237,7 @@ I would document the assault, victim impact, seclusion rationale, policy complia
       },
       {
         "id": "s2",
-        "name": "sexual boundary exploitation — core clinical formulation",
+        "name": "sexual boundary exploitation",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "He said I was special and no one understood us.",
@@ -11758,7 +13255,7 @@ I would document the assault, victim impact, seclusion rationale, policy complia
       },
       {
         "id": "s3",
-        "name": "mandatory reporting threshold — legal/policy hinge",
+        "name": "mandatory reporting threshold",
         "category": "governance",
         "severity": "critical",
         "clueInStem": "Does this meet mandatory notification?",
@@ -11777,7 +13274,7 @@ I would document the assault, victim impact, seclusion rationale, policy complia
       },
       {
         "id": "s4",
-        "name": "vulnerable patient guilt and dependence — vulnerable person safety",
+        "name": "vulnerable patient guilt and dependence",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "I feel responsible if he loses his job.",
@@ -11796,7 +13293,7 @@ I would document the assault, victim impact, seclusion rationale, policy complia
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Patient self-blame and victim-credibility dismissal enabling continued abuse",
         "category": "mdt_conflict",
         "severity": "important",
         "clueInStem": "She is a difficult patient who exaggerates.",
@@ -11815,7 +13312,7 @@ I would document the assault, victim impact, seclusion rationale, policy complia
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting mandatory notification, patient protection and clinician removal",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to protect patient, remove clinician and report",
@@ -11831,6 +13328,24 @@ I would document the assault, victim impact, seclusion rationale, policy complia
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Other patients under the boundary-violating clinician requiring review",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "He said I was special and no one understood us.",
+        "whyItMatters": "A clinician who has sexually exploited one patient may have exploited others. The 'you are special' language is a grooming pattern that suggests systematic behaviour. A review of all current and recent patients under his care is a mandatory governance step.",
+        "modelWording": "I would immediately arrange a confidential review of all patients currently or recently under the clinician's care, identify any others who may have experienced boundary violations, offer them a safe disclosure process, and include this review in the mandatory notification report.",
+        "keywords": [
+          "grooming language",
+          "other patients",
+          "systematic behaviour",
+          "confidential review",
+          "mandatory notification",
+          "boundary violation",
+          "safeguarding audit"
+        ]
       }
     ],
     "priorityOrder": {
@@ -11842,7 +13357,8 @@ I would document the assault, victim impact, seclusion rationale, policy complia
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -11869,7 +13385,7 @@ I would document the allegation, messages/evidence preservation, patient safety 
     "signals": [
       {
         "id": "s1",
-        "name": "bed-pressure shortcut — unsafe shortcut under pressure",
+        "name": "bed-pressure shortcut",
         "category": "risk_self",
         "severity": "critical",
         "clueInStem": "Discharge her by midday; ED has psychosis waiting.",
@@ -11888,7 +13404,7 @@ I would document the allegation, messages/evidence preservation, patient safety 
       },
       {
         "id": "s2",
-        "name": "acute-on-chronic suicide risk and splitting — core clinical formulation",
+        "name": "acute-on-chronic suicide risk and splitting",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "If you discharge me, my blood is on your hands.",
@@ -11906,7 +13422,7 @@ I would document the allegation, messages/evidence preservation, patient safety 
       },
       {
         "id": "s3",
-        "name": "risk formulation versus false endpoint — legal/policy hinge",
+        "name": "risk formulation versus false endpoint",
         "category": "ethics",
         "severity": "critical",
         "clueInStem": "Should we keep her until she denies suicidal thoughts?",
@@ -11925,7 +13441,7 @@ I would document the allegation, messages/evidence preservation, patient safety 
       },
       {
         "id": "s4",
-        "name": "family anxiety sustaining admission pressure — vulnerable person safety",
+        "name": "family anxiety sustaining admission pressure",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "Every discharge makes her worse.",
@@ -11944,7 +13460,7 @@ I would document the allegation, messages/evidence preservation, patient safety 
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Bed pressure narrative dehumanising patients with personality disorder",
         "category": "mdt_conflict",
         "severity": "important",
         "clueInStem": "She is taking a bed from real patients.",
@@ -11963,7 +13479,7 @@ I would document the allegation, messages/evidence preservation, patient safety 
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting structured discharge plan, safety rationale and therapeutic consistency",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to provide structured discharge without nihilism or dependency",
@@ -11979,6 +13495,24 @@ I would document the allegation, messages/evidence preservation, patient safety 
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Repeated discharge-driven escalation as a systemic pattern requiring formulation",
+        "category": "diagnosis_formulation",
+        "severity": "important",
+        "clueInStem": "Every discharge makes her worse.",
+        "whyItMatters": "If every discharge produces escalation, the pattern itself is clinically significant. It may reflect discharge being experienced as abandonment, a learned contingency between leaving and crisis, or inadequate community support. The pattern must be explicitly formulated rather than simply repeated.",
+        "modelWording": "I would document the discharge-escalation pattern explicitly in the formulation, explore with the patient what discharge triggers and what it means to her, adjust the care plan to address the abandonment or contingency response, and ensure the discharge plan includes an immediate meaningful connection to community support.",
+        "keywords": [
+          "discharge-escalation pattern",
+          "abandonment",
+          "contingency",
+          "formulation",
+          "community support",
+          "BPD",
+          "pattern recognition"
+        ]
       }
     ],
     "priorityOrder": {
@@ -11990,7 +13524,8 @@ I would document the allegation, messages/evidence preservation, patient safety 
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -12017,7 +13552,7 @@ I would document the acute-on-chronic formulation, the leave refusal trigger, th
     "signals": [
       {
         "id": "s1",
-        "name": "punitive-discharge shortcut — unsafe shortcut under pressure",
+        "name": "punitive-discharge shortcut",
         "category": "risk_self",
         "severity": "critical",
         "clueInStem": "Close his file; he is not engaging.",
@@ -12036,7 +13571,7 @@ I would document the acute-on-chronic formulation, the leave refusal trigger, th
       },
       {
         "id": "s2",
-        "name": "dependency and boundary diffusion — core clinical formulation",
+        "name": "dependency and boundary diffusion",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "You are the only person stopping me ending it.",
@@ -12054,7 +13589,7 @@ I would document the acute-on-chronic formulation, the leave refusal trigger, th
       },
       {
         "id": "s3",
-        "name": "professional boundaries and duty of care — legal/policy hinge",
+        "name": "professional boundaries and duty of care",
         "category": "ethics",
         "severity": "critical",
         "clueInStem": "Can I block him from my personal phone?",
@@ -12073,7 +13608,7 @@ I would document the acute-on-chronic formulation, the leave refusal trigger, th
       },
       {
         "id": "s4",
-        "name": "acute risk linked to service boundaries — vulnerable person safety",
+        "name": "acute risk linked to service boundaries",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "He drinks and cuts when you do not reply.",
@@ -12092,7 +13627,7 @@ I would document the acute-on-chronic formulation, the leave refusal trigger, th
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Therapist guilt about boundary-setting weaponised as proof of abandonment",
         "category": "mdt_conflict",
         "severity": "important",
         "clueInStem": "If you set limits, you prove you do not care.",
@@ -12111,7 +13646,7 @@ I would document the acute-on-chronic formulation, the leave refusal trigger, th
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting team-based contact plan, boundary rationale and safety maintenance",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to create team-based boundaries and maintain engagement",
@@ -12127,6 +13662,24 @@ I would document the acute-on-chronic formulation, the leave refusal trigger, th
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Alcohol use concurrent with cutting as an acute lethality amplifier",
+        "category": "immediate_safety",
+        "severity": "important",
+        "clueInStem": "He drinks and cuts when you do not reply.",
+        "whyItMatters": "Concurrent alcohol use and self-cutting significantly elevates lethality risk. Disinhibited impulsivity during intoxication combined with access to cutting implements creates an acute overdose and exsanguination risk that must be part of the safety plan, not treated only as a communication problem.",
+        "modelWording": "I would assess the extent and timing of alcohol use alongside self-harm, develop a specific safety plan for intoxicated high-risk periods, recommend means restriction for cutting implements, and document the lethality risk of the combined pattern explicitly in the risk formulation.",
+        "keywords": [
+          "alcohol and cutting",
+          "disinhibition",
+          "lethality amplifier",
+          "means restriction",
+          "intoxicated risk",
+          "safety plan",
+          "combined risk"
+        ]
       }
     ],
     "priorityOrder": {
@@ -12138,7 +13691,8 @@ I would document the acute-on-chronic formulation, the leave refusal trigger, th
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -12165,7 +13719,7 @@ I would document the dependency formulation, personal-phone boundary issue, part
     "signals": [
       {
         "id": "s1",
-        "name": "therapeutic nihilism shortcut — unsafe shortcut under pressure",
+        "name": "therapeutic nihilism shortcut",
         "category": "risk_self",
         "severity": "critical",
         "clueInStem": "We cannot admit every time they cut.",
@@ -12184,7 +13738,7 @@ I would document the dependency formulation, personal-phone boundary issue, part
       },
       {
         "id": "s2",
-        "name": "NSSI as affect regulation with escalation risk — core clinical formulation",
+        "name": "NSSI as affect regulation with escalation risk",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "Cutting stops me doing something worse.",
@@ -12202,7 +13756,7 @@ I would document the dependency formulation, personal-phone boundary issue, part
       },
       {
         "id": "s3",
-        "name": "risk formulation and disposition — legal/policy hinge",
+        "name": "risk formulation and disposition",
         "category": "ethics",
         "severity": "critical",
         "clueInStem": "It is superficial, so can they leave?",
@@ -12221,7 +13775,7 @@ I would document the dependency formulation, personal-phone boundary issue, part
       },
       {
         "id": "s4",
-        "name": "carer exhaustion and unsafe discharge — vulnerable person safety",
+        "name": "carer exhaustion and unsafe discharge",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "I cannot supervise tonight.",
@@ -12240,7 +13794,7 @@ I would document the dependency formulation, personal-phone boundary issue, part
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Carer inability to supervise leaving no safe home option after ED discharge",
         "category": "mdt_conflict",
         "severity": "important",
         "clueInStem": "They refuse every plan then complain.",
@@ -12259,7 +13813,7 @@ I would document the dependency formulation, personal-phone boundary issue, part
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting acute-on-chronic risk formulation, safe alternative and therapeutic respect",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to manage acute-on-chronic risk without rejection",
@@ -12275,6 +13829,24 @@ I would document the dependency formulation, personal-phone boundary issue, part
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Patient's own theory that cutting substitutes for greater harm",
+        "category": "diagnosis_formulation",
+        "severity": "important",
+        "clueInStem": "Cutting stops me doing something worse.",
+        "whyItMatters": "The patient's statement that cutting prevents worse harm is a formulation disclosure that deserves clinical attention. It may reveal active suicidal or violent ideation being managed through NSSI, which changes the risk picture significantly and must be explored rather than dismissed as manipulation.",
+        "modelWording": "I would take this statement seriously, explore directly what the 'something worse' refers to — suicidal intent, violence, substance use — document the response, and adjust the risk formulation to account for active ideation if disclosed, rather than accepting NSSI as the only risk in the picture.",
+        "keywords": [
+          "NSSI as substitute",
+          "active ideation",
+          "something worse",
+          "formulation disclosure",
+          "direct exploration",
+          "suicidal intent",
+          "risk recalibration"
+        ]
       }
     ],
     "priorityOrder": {
@@ -12286,7 +13858,8 @@ I would document the dependency formulation, personal-phone boundary issue, part
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -12313,7 +13886,7 @@ I would document the function of cutting, what "something worse" meant, partner 
     "signals": [
       {
         "id": "s1",
-        "name": "force-first shortcut — unsafe shortcut under pressure",
+        "name": "force-first shortcut",
         "category": "risk_self",
         "severity": "critical",
         "clueInStem": "Use restraint and get the feeds in.",
@@ -12332,7 +13905,7 @@ I would document the function of cutting, what "something worse" meant, partner 
       },
       {
         "id": "s2",
-        "name": "splitting around life-saving feeding — core clinical formulation",
+        "name": "splitting around life-saving feeding",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "You are the only nurse who cares; everyone else wants me fat.",
@@ -12350,7 +13923,7 @@ I would document the function of cutting, what "something worse" meant, partner 
       },
       {
         "id": "s3",
-        "name": "capacity/emergency treatment and proportionality — legal/policy hinge",
+        "name": "capacity/emergency treatment and proportionality",
         "category": "ethics",
         "severity": "critical",
         "clueInStem": "Does capacity matter if BMI is critical?",
@@ -12369,7 +13942,7 @@ I would document the function of cutting, what "something worse" meant, partner 
       },
       {
         "id": "s4",
-        "name": "vulnerable co-patient risk — vulnerable person safety",
+        "name": "vulnerable co-patient risk",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "She tells me how to hide food.",
@@ -12388,7 +13961,7 @@ I would document the function of cutting, what "something worse" meant, partner 
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Nurse favourite-target dynamic as therapeutic frame rupture requiring supervision",
         "category": "mdt_conflict",
         "severity": "important",
         "clueInStem": "I cannot keep being her favourite.",
@@ -12407,7 +13980,7 @@ I would document the function of cutting, what "something worse" meant, partner 
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting refeeding authority, staff splitting management and unified care plan",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to maintain medical safety and unified therapeutic frame",
@@ -12423,6 +13996,24 @@ I would document the function of cutting, what "something worse" meant, partner 
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Patient teaching staff to conceal food as an immediate refeeding safety failure",
+        "category": "immediate_safety",
+        "severity": "important",
+        "clueInStem": "She tells me how to hide food.",
+        "whyItMatters": "A patient who coaches staff to conceal food is actively sabotaging a medically necessary refeeding programme. This is not only a therapeutic alliance challenge; it is a patient safety emergency that requires immediate care plan review, supervised mealtimes and possible legal refeeding authority.",
+        "modelWording": "I would document the food-concealing behaviour as an immediate refeeding safety failure, review and strengthen mealtime supervision protocols, re-assess the legal authority for refeeding given active sabotage, and discuss with the team the need for a unified response that removes opportunities for individual staff to be manipulated.",
+        "keywords": [
+          "food hiding",
+          "refeeding sabotage",
+          "supervised mealtimes",
+          "legal authority",
+          "immediate safety",
+          "unified response",
+          "eating disorder medical ward"
+        ]
       }
     ],
     "priorityOrder": {
@@ -12434,7 +14025,8 @@ I would document the function of cutting, what "something worse" meant, partner 
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -12461,7 +14053,7 @@ I would document the medical risk, capacity assessment, legal authority for NG f
     "signals": [
       {
         "id": "s1",
-        "name": "complaint-driven admission shortcut — unsafe shortcut under pressure",
+        "name": "complaint-driven admission shortcut",
         "category": "risk_self",
         "severity": "critical",
         "clueInStem": "Admit her or she will complain.",
@@ -12480,7 +14072,7 @@ I would document the medical risk, capacity assessment, legal authority for NG f
       },
       {
         "id": "s2",
-        "name": "trauma safety behaviour and dependency — core clinical formulation",
+        "name": "trauma safety behaviour and dependency",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "Hospital is the only place I do not feel contaminated.",
@@ -12498,7 +14090,7 @@ I would document the medical risk, capacity assessment, legal authority for NG f
       },
       {
         "id": "s3",
-        "name": "duty of care and least restrictive care — legal/policy hinge",
+        "name": "duty of care and least restrictive care",
         "category": "ethics",
         "severity": "critical",
         "clueInStem": "Can we refuse admission if she threatens self-harm?",
@@ -12517,7 +14109,7 @@ I would document the medical risk, capacity assessment, legal authority for NG f
       },
       {
         "id": "s4",
-        "name": "young carer risk — vulnerable person safety",
+        "name": "young carer risk",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "I stay home so Mum does not disappear.",
@@ -12536,7 +14128,7 @@ I would document the medical risk, capacity assessment, legal authority for NG f
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Hospital admission as the only place free from contamination beliefs",
         "category": "mdt_conflict",
         "severity": "important",
         "clueInStem": "Every discharge feels like being abandoned again.",
@@ -12555,7 +14147,7 @@ I would document the medical risk, capacity assessment, legal authority for NG f
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting safety assessment, admission threshold and community engagement plan",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to contain risk without reinforcing admission dependency",
@@ -12571,6 +14163,24 @@ I would document the medical risk, capacity assessment, legal authority for NG f
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Child staying home from school to prevent mother disappearing as a child welfare concern",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "I stay home so Mum does not disappear.",
+        "whyItMatters": "A child skipping school to monitor a parent's whereabouts is carrying a parental care role that constitutes educational harm and secondary trauma. This requires immediate child welfare referral independent of the mother's admission decision.",
+        "modelWording": "I would document the child's school absence and caring role as a safeguarding concern, refer to a family support service for the child independently, and incorporate a plan for the child's welfare into the mother's care plan so that the child's safety is not contingent on the mother's admission status.",
+        "keywords": [
+          "young carer",
+          "school absence",
+          "child welfare",
+          "secondary trauma",
+          "safeguarding referral",
+          "PTSD",
+          "parental mental illness"
+        ]
       }
     ],
     "priorityOrder": {
@@ -12582,7 +14192,8 @@ I would document the medical risk, capacity assessment, legal authority for NG f
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -12609,7 +14220,7 @@ I would document the contamination formulation, complaint pressure, self-harm ri
     "signals": [
       {
         "id": "s1",
-        "name": "countertransference discharge shortcut — unsafe shortcut under pressure",
+        "name": "countertransference discharge shortcut",
         "category": "risk_self",
         "severity": "critical",
         "clueInStem": "He is impossible; discharge him.",
@@ -12628,7 +14239,7 @@ I would document the contamination formulation, complaint pressure, self-harm ri
       },
       {
         "id": "s2",
-        "name": "narcissistic injury and risk/escalation — core clinical formulation",
+        "name": "narcissistic injury and risk/escalation",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "You will all regret disrespecting me.",
@@ -12646,7 +14257,7 @@ I would document the contamination formulation, complaint pressure, self-harm ri
       },
       {
         "id": "s3",
-        "name": "defensive documentation ethics — legal/policy hinge",
+        "name": "defensive documentation ethics",
         "category": "ethics",
         "severity": "critical",
         "clueInStem": "Do we write only factual notes from now on?",
@@ -12665,7 +14276,7 @@ I would document the contamination formulation, complaint pressure, self-harm ri
       },
       {
         "id": "s4",
-        "name": "suicide risk behind complaint — vulnerable person safety",
+        "name": "suicide risk behind complaint",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "He has been saying life is over.",
@@ -12684,7 +14295,7 @@ I would document the contamination formulation, complaint pressure, self-harm ri
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Cultural honour and public humiliation as acute drivers of suicidal risk",
         "category": "mdt_conflict",
         "severity": "important",
         "clueInStem": "In my community, this insult destroys a man.",
@@ -12703,7 +14314,7 @@ I would document the contamination formulation, complaint pressure, self-harm ri
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting complaint management, risk formulation and therapeutic rupture response",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to manage complaint, risk and therapeutic rupture",
@@ -12719,6 +14330,24 @@ I would document the contamination formulation, complaint pressure, self-harm ri
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "End-of-life suicidal statements requiring immediate risk stratification",
+        "category": "immediate_safety",
+        "severity": "important",
+        "clueInStem": "He has been saying life is over.",
+        "whyItMatters": "Statements that life is over in the context of acute honour-related shame must be treated as suicide risk signals, not simply expressions of frustration. Cultural shame-based suicidality can be acute and high lethality. The countertransference pull to discharge a 'difficult' patient must not override a structured risk assessment.",
+        "modelWording": "I would conduct a structured suicide risk assessment anchored to the cultural shame context, document the 'life is over' statements as risk indicators, explore the patient's specific plan and access to means, and ensure the risk assessment is conducted by a clinician who is not the subject of the complaint.",
+        "keywords": [
+          "honour shame",
+          "life is over",
+          "suicide risk signal",
+          "cultural suicidality",
+          "countertransference",
+          "structured risk assessment",
+          "complaint-risk intersection"
+        ]
       }
     ],
     "priorityOrder": {
@@ -12730,7 +14359,8 @@ I would document the contamination formulation, complaint pressure, self-harm ri
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -12757,7 +14387,7 @@ I would document the complaint, the rupture, exact threatening and suicidal phra
     "signals": [
       {
         "id": "s1",
-        "name": "exclusion shortcut — unsafe shortcut under pressure",
+        "name": "exclusion shortcut",
         "category": "risk_self",
         "severity": "critical",
         "clueInStem": "Ban her from ED unless troponin positive.",
@@ -12776,7 +14406,7 @@ I would document the complaint, the rupture, exact threatening and suicidal phra
       },
       {
         "id": "s2",
-        "name": "dependency and somatic anxiety — core clinical formulation",
+        "name": "dependency and somatic anxiety",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "If you send me home, I will be alone with my body.",
@@ -12794,7 +14424,7 @@ I would document the complaint, the rupture, exact threatening and suicidal phra
       },
       {
         "id": "s3",
-        "name": "ethics of frequent-attender plan — legal/policy hinge",
+        "name": "ethics of frequent-attender plan",
         "category": "ethics",
         "severity": "critical",
         "clueInStem": "Can we make a behavioural contract?",
@@ -12813,7 +14443,7 @@ I would document the complaint, the rupture, exact threatening and suicidal phra
       },
       {
         "id": "s4",
-        "name": "carer burden — vulnerable person safety",
+        "name": "carer burden",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "I left work again to sit with her.",
@@ -12832,7 +14462,7 @@ I would document the complaint, the rupture, exact threatening and suicidal phra
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Carer secondary exhaustion and work absence as an independent clinical concern",
         "category": "mdt_conflict",
         "severity": "important",
         "clueInStem": "Good doctors keep me until I feel safe.",
@@ -12851,7 +14481,7 @@ I would document the complaint, the rupture, exact threatening and suicidal phra
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting compassionate boundary plan, carer support and iatrogenic risk reduction",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to create compassionate boundaries and reduce iatrogenic care",
@@ -12867,6 +14497,24 @@ I would document the complaint, the rupture, exact threatening and suicidal phra
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Carer burnout from repeated work absences as an independent welfare concern",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "I left work again to sit with her.",
+        "whyItMatters": "A carer who is repeatedly leaving work to sit with the patient is experiencing occupational and relationship harm that is a direct consequence of the current management pattern. This must be assessed and addressed as an independent clinical concern, not treated as the carer being unhelpfully involved.",
+        "modelWording": "I would assess the carer's own wellbeing separately, provide psychoeducation about the role of reinforcement in somatic symptoms, involve the carer in the boundary plan as an active therapeutic participant, and document carer welfare as a separate care obligation alongside the patient's management.",
+        "keywords": [
+          "carer burnout",
+          "work absence",
+          "reinforcement",
+          "carer welfare",
+          "psychoeducation",
+          "independent concern",
+          "somatic symptoms"
+        ]
       }
     ],
     "priorityOrder": {
@@ -12878,7 +14526,8 @@ I would document the complaint, the rupture, exact threatening and suicidal phra
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -12905,7 +14554,7 @@ I would document the positive formulation of somatic anxiety, the medical safety
     "signals": [
       {
         "id": "s1",
-        "name": "coercive-cleanout shortcut — unsafe shortcut under pressure",
+        "name": "coercive-cleanout shortcut",
         "category": "risk_self",
         "severity": "critical",
         "clueInStem": "Clear the house by force tomorrow.",
@@ -12924,7 +14573,7 @@ I would document the positive formulation of somatic anxiety, the medical safety
       },
       {
         "id": "s2",
-        "name": "hoarding formulation and identity — core clinical formulation",
+        "name": "hoarding formulation and identity",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "These papers are my memory; throwing them is killing me.",
@@ -12942,7 +14591,7 @@ I would document the positive formulation of somatic anxiety, the medical safety
       },
       {
         "id": "s3",
-        "name": "capacity and public safety powers — legal/policy hinge",
+        "name": "capacity and public safety powers",
         "category": "ethics",
         "severity": "critical",
         "clueInStem": "Can we declare him incapable?",
@@ -12961,7 +14610,7 @@ I would document the positive formulation of somatic anxiety, the medical safety
       },
       {
         "id": "s4",
-        "name": "neighbour/child fire risk — vulnerable person safety",
+        "name": "neighbour/child fire risk",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "Smoke comes through the wall where children sleep.",
@@ -12980,7 +14629,7 @@ I would document the positive formulation of somatic anxiety, the medical safety
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Patient's attachment to hoarded papers as memory and identity preservation",
         "category": "mdt_conflict",
         "severity": "important",
         "clueInStem": "If you touch anything, I will not survive.",
@@ -12999,7 +14648,7 @@ I would document the positive formulation of somatic anxiety, the medical safety
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting capacity assessment, fire risk, autonomy and engagement plan",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to balance autonomy, capacity, fire risk and engagement",
@@ -13015,6 +14664,24 @@ I would document the positive formulation of somatic anxiety, the medical safety
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Children sleeping next door to fire risk requiring immediate fire safety escalation",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "Smoke comes through the wall where children sleep.",
+        "whyItMatters": "Smoke entering a wall shared with a children's room constitutes an immediate, documented fire risk to identifiable third parties. This is a statutory fire safety matter requiring escalation today, separate from the hoarding patient's capacity and autonomy decision.",
+        "modelWording": "I would notify the fire safety authority and building management immediately, document the smoke-through-wall event as a specific near-miss incident affecting children, ensure the council is aware of the fire risk as a tenancy safety matter, and treat this as an urgent escalation separate from the clinical capacity and engagement work.",
+        "keywords": [
+          "smoke through wall",
+          "children at risk",
+          "fire safety authority",
+          "statutory escalation",
+          "near-miss",
+          "hoarding",
+          "third party risk"
+        ]
       }
     ],
     "priorityOrder": {
@@ -13026,7 +14693,8 @@ I would document the positive formulation of somatic anxiety, the medical safety
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -13053,7 +14721,7 @@ I would document the hoarding formulation, capacity findings, suicide risk, neig
     "signals": [
       {
         "id": "s1",
-        "name": "rescue shortcut — unsafe shortcut under pressure",
+        "name": "rescue shortcut",
         "category": "risk_self",
         "severity": "critical",
         "clueInStem": "It feels cruel not to be available.",
@@ -13072,7 +14740,7 @@ I would document the hoarding formulation, capacity findings, suicide risk, neig
       },
       {
         "id": "s2",
-        "name": "dependency and suicide risk in therapy frame — core clinical formulation",
+        "name": "dependency and suicide risk in therapy frame",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "If I cannot text you, I will die.",
@@ -13090,7 +14758,7 @@ I would document the hoarding formulation, capacity findings, suicide risk, neig
       },
       {
         "id": "s3",
-        "name": "therapeutic boundaries and duty of care — legal/policy hinge",
+        "name": "therapeutic boundaries and duty of care",
         "category": "ethics",
         "severity": "critical",
         "clueInStem": "Is refusal abandonment?",
@@ -13109,7 +14777,7 @@ I would document the hoarding formulation, capacity findings, suicide risk, neig
       },
       {
         "id": "s4",
-        "name": "relationship/carer harm — vulnerable person safety",
+        "name": "relationship/carer harm",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "She checks the phone all night.",
@@ -13128,7 +14796,7 @@ I would document the hoarding formulation, capacity findings, suicide risk, neig
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Limits experienced as abandonment due to early attachment trauma",
         "category": "mdt_conflict",
         "severity": "important",
         "clueInStem": "Rules are how people leave me.",
@@ -13147,7 +14815,7 @@ I would document the hoarding formulation, capacity findings, suicide risk, neig
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting boundary rationale, safety plan and therapeutic frame continuity",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to set boundaries while maintaining safety plan",
@@ -13163,6 +14831,24 @@ I would document the hoarding formulation, capacity findings, suicide risk, neig
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Phone-checking behaviour as a compulsive safety-seeking pattern requiring formulation",
+        "category": "diagnosis_formulation",
+        "severity": "important",
+        "clueInStem": "She checks the phone all night.",
+        "whyItMatters": "Compulsive phone-checking overnight to see if the therapist has responded is a safety-seeking behaviour that maintains the crisis state rather than developing internal regulatory capacity. It must be formulated and addressed therapeutically, not simply restricted without explanation.",
+        "modelWording": "I would name the phone-checking behaviour explicitly in the formulation as a safety-seeking pattern that maintains distress, explain to the patient how the pattern works and why boundaries support rather than abandon her, and develop a graded plan to reduce contact frequency while building alternative coping strategies.",
+        "keywords": [
+          "compulsive safety-seeking",
+          "phone checking",
+          "formulation",
+          "maintain distress",
+          "therapeutic explanation",
+          "graded reduction",
+          "attachment"
+        ]
       }
     ],
     "priorityOrder": {
@@ -13174,7 +14860,8 @@ I would document the hoarding formulation, capacity findings, suicide risk, neig
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -13201,7 +14888,7 @@ I would document the boundary request, risk assessment, dependency formulation, 
     "signals": [
       {
         "id": "s1",
-        "name": "punitive-discharge shortcut — unsafe shortcut under pressure",
+        "name": "punitive-discharge shortcut",
         "category": "risk_self",
         "severity": "critical",
         "clueInStem": "Discharge her today for staff safety.",
@@ -13220,7 +14907,7 @@ I would document the boundary request, risk assessment, dependency formulation, 
       },
       {
         "id": "s2",
-        "name": "trauma-related threat response and aggression — core clinical formulation",
+        "name": "trauma-related threat response and aggression",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "You lied like everyone who traps me.",
@@ -13238,7 +14925,7 @@ I would document the boundary request, risk assessment, dependency formulation, 
       },
       {
         "id": "s3",
-        "name": "MHA/risk threshold and capacity — legal/policy hinge",
+        "name": "MHA/risk threshold and capacity",
         "category": "ethics",
         "severity": "critical",
         "clueInStem": "Can we use the MHA for violence if she is not psychotic?",
@@ -13257,7 +14944,7 @@ I would document the boundary request, risk assessment, dependency formulation, 
       },
       {
         "id": "s4",
-        "name": "staff safety and therapeutic relationship — vulnerable person safety",
+        "name": "staff safety and therapeutic relationship",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "I am scared she will target me.",
@@ -13276,7 +14963,7 @@ I would document the boundary request, risk assessment, dependency formulation, 
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Cultural experience of hospitals as places of forcible detainment",
         "category": "mdt_conflict",
         "severity": "important",
         "clueInStem": "Hospitals are where people get taken.",
@@ -13295,7 +14982,7 @@ I would document the boundary request, risk assessment, dependency formulation, 
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting staff safety, MHA authority, discharge risk and protective plan",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to protect staff without retaliatory discharge",
@@ -13311,6 +14998,24 @@ I would document the boundary request, risk assessment, dependency formulation, 
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Staff fear as a clinical signal requiring immediate team safety planning",
+        "category": "immediate_safety",
+        "severity": "important",
+        "clueInStem": "I am scared she will target me.",
+        "whyItMatters": "A staff member who is scared of being targeted by a patient requires immediate occupational safety measures. The fear is a clinical signal about risk severity that must be assessed and acted upon, not managed only with reassurance.",
+        "modelWording": "I would take the staff member's fear seriously, assess whether the specific threat behaviour meets the threshold for MHA detention or police notification, arrange staff allocation changes so the threatened worker does not have direct patient contact, and document the fear as a clinical risk signal informing the overall risk assessment.",
+        "keywords": [
+          "staff fear",
+          "targeted threat",
+          "occupational safety",
+          "staff allocation",
+          "MHA threshold",
+          "police notification",
+          "workplace safety"
+        ]
       }
     ],
     "priorityOrder": {
@@ -13322,7 +15027,8 @@ I would document the boundary request, risk assessment, dependency formulation, 
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -13349,7 +15055,7 @@ I would document the assault, staff fear, trauma/cultural formulation, MHA reaso
     "signals": [
       {
         "id": "s1",
-        "name": "moralising-discharge shortcut — unsafe shortcut under pressure",
+        "name": "moralising-discharge shortcut",
         "category": "substance_use",
         "severity": "critical",
         "clueInStem": "He is choosing alcohol, so let him leave.",
@@ -13368,7 +15074,7 @@ I would document the assault, staff fear, trauma/cultural formulation, MHA reaso
       },
       {
         "id": "s2",
-        "name": "alcohol dependence, demoralisation and fluctuating capacity — core clinical formulation",
+        "name": "alcohol dependence, demoralisation and fluctuating capacity",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "I know I am dying, so let me drink.",
@@ -13386,7 +15092,7 @@ I would document the assault, staff fear, trauma/cultural formulation, MHA reaso
       },
       {
         "id": "s3",
-        "name": "capacity and emergency treatment — legal/policy hinge",
+        "name": "capacity and emergency treatment",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "Can we treat encephalopathy against refusal?",
@@ -13405,7 +15111,7 @@ I would document the assault, staff fear, trauma/cultural formulation, MHA reaso
       },
       {
         "id": "s4",
-        "name": "state-dependent collateral — vulnerable person safety",
+        "name": "state-dependent collateral",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "When he sobers up he wants treatment.",
@@ -13424,7 +15130,7 @@ I would document the assault, staff fear, trauma/cultural formulation, MHA reaso
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Family pressure to compel rehabilitation conflicting with patient's capacitous refusal",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "Can you force rehab this time?",
@@ -13443,7 +15149,7 @@ I would document the assault, staff fear, trauma/cultural formulation, MHA reaso
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting capacity, harm reduction plan and encephalopathy treatment authority",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether capacity is present and how to use harm reduction",
@@ -13459,6 +15165,24 @@ I would document the assault, staff fear, trauma/cultural formulation, MHA reaso
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Temporal inconsistency between intoxicated and sober treatment preferences",
+        "category": "capacity",
+        "severity": "important",
+        "clueInStem": "When he sobers up he wants treatment.",
+        "whyItMatters": "A patient who wants treatment when sober but refuses it when intoxicated exhibits a capacity state that varies with alcohol level. The sober preference may represent his authentic values and can inform substitute decision-making if encephalopathy impairs current capacity.",
+        "modelWording": "I would document both the intoxicated refusal and the sober treatment preference, explore whether an advance statement or Ulysses agreement can be developed during a sober period, and use the sober preference as evidence of values in any substitute decision-making if current encephalopathy impairs capacity.",
+        "keywords": [
+          "sober preference",
+          "intoxicated refusal",
+          "advance statement",
+          "Ulysses agreement",
+          "capacity fluctuation",
+          "encephalopathy",
+          "authentic values"
+        ]
       }
     ],
     "priorityOrder": {
@@ -13470,7 +15194,8 @@ I would document the assault, staff fear, trauma/cultural formulation, MHA reaso
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -13497,7 +15222,7 @@ I would document capacity findings, encephalopathy features, state-dependent col
     "signals": [
       {
         "id": "s1",
-        "name": "intoxication-only shortcut — unsafe shortcut under pressure",
+        "name": "intoxication-only shortcut",
         "category": "substance_use",
         "severity": "critical",
         "clueInStem": "Let him sleep it off and discharge.",
@@ -13516,7 +15241,7 @@ I would document capacity findings, encephalopathy features, state-dependent col
       },
       {
         "id": "s2",
-        "name": "methamphetamine psychosis versus primary psychosis — core clinical formulation",
+        "name": "methamphetamine psychosis versus primary psychosis",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "Neighbours put cameras in the smoke alarm.",
@@ -13534,7 +15259,7 @@ I would document capacity findings, encephalopathy features, state-dependent col
       },
       {
         "id": "s3",
-        "name": "violence risk and MHA threshold — legal/policy hinge",
+        "name": "violence risk and MHA threshold",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "Do we need to stay if he denies intent?",
@@ -13553,7 +15278,7 @@ I would document capacity findings, encephalopathy features, state-dependent col
       },
       {
         "id": "s4",
-        "name": "collateral diagnostic uncertainty — vulnerable person safety",
+        "name": "collateral diagnostic uncertainty",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "He mutters even when he is not using.",
@@ -13572,7 +15297,7 @@ I would document capacity findings, encephalopathy features, state-dependent col
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Patient's specific preparedness language indicating imminent targeted violence",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "If they come in, I will be ready.",
@@ -13591,7 +15316,7 @@ I would document capacity findings, encephalopathy features, state-dependent col
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting psychosis-substance differentiation, admission basis and violence risk",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether ongoing psychosis/risk requires admission after intoxication clears",
@@ -13607,6 +15332,24 @@ I would document capacity findings, encephalopathy features, state-dependent col
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Persistent psychotic symptoms between intoxication episodes requiring formulation",
+        "category": "diagnosis_formulation",
+        "severity": "important",
+        "clueInStem": "He mutters even when he is not using.",
+        "whyItMatters": "Persisting psychotic symptoms between methamphetamine use episodes — not only during intoxication — suggests either methamphetamine-induced psychotic disorder or primary psychosis unmasked by substance use, both of which require active psychiatric management rather than observation until intoxication clears.",
+        "modelWording": "I would document the inter-episode psychotic symptoms as evidence of persistent psychosis, formulate whether this represents primary psychosis or substance-induced psychotic disorder, and use this formulation to justify admission and antipsychotic treatment rather than awaiting spontaneous resolution.",
+        "keywords": [
+          "inter-episode psychosis",
+          "persistent symptoms",
+          "substance-induced psychosis",
+          "primary psychosis",
+          "formulation",
+          "antipsychotic indication",
+          "admission basis"
+        ]
       }
     ],
     "priorityOrder": {
@@ -13618,7 +15361,8 @@ I would document capacity findings, encephalopathy features, state-dependent col
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -13645,7 +15389,7 @@ I would document the six-month decline, smoke-alarm delusion, readiness quote, p
     "signals": [
       {
         "id": "s1",
-        "name": "foetal-risk shortcut — unsafe shortcut under pressure",
+        "name": "foetal-risk shortcut",
         "category": "substance_use",
         "severity": "critical",
         "clueInStem": "Reduce it to prevent neonatal withdrawal.",
@@ -13664,7 +15408,7 @@ I would document the six-month decline, smoke-alarm delusion, readiness quote, p
       },
       {
         "id": "s2",
-        "name": "methadone maintenance as protective — core clinical formulation",
+        "name": "methadone maintenance as protective",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "Methadone is why I am not using heroin.",
@@ -13682,7 +15426,7 @@ I would document the six-month decline, smoke-alarm delusion, readiness quote, p
       },
       {
         "id": "s3",
-        "name": "child protection threshold — legal/policy hinge",
+        "name": "child protection threshold",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "Should child protection be notified now?",
@@ -13701,7 +15445,7 @@ I would document the six-month decline, smoke-alarm delusion, readiness quote, p
       },
       {
         "id": "s4",
-        "name": "NAS planning and stigma — vulnerable person safety",
+        "name": "NAS planning and stigma",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "I do not want the baby labelled an addict.",
@@ -13720,7 +15464,7 @@ I would document the six-month decline, smoke-alarm delusion, readiness quote, p
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Child protection fear driving methadone concealment and treatment non-disclosure",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "If they hear methadone, they will take my baby.",
@@ -13739,7 +15483,7 @@ I would document the six-month decline, smoke-alarm delusion, readiness quote, p
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting methadone maintenance, NAS planning and child protection engagement",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to maintain treatment and plan infant safety",
@@ -13755,6 +15499,24 @@ I would document the six-month decline, smoke-alarm delusion, readiness quote, p
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Partner violence as a concurrent risk to mother and foetus",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "I do not want the baby labelled an addict.",
+        "whyItMatters": "Opioid dependence in pregnancy combined with partner violence creates a tripartite risk: maternal safety, foetal wellbeing and infant safety after birth. The partner violence must be assessed separately and addressed in the safety plan, not treated as a secondary concern to the addiction treatment.",
+        "modelWording": "I would assess partner violence independently using a validated screening tool, document the violence as a separate risk requiring its own safety plan, co-ordinate with social work and domestic violence services, and ensure the family violence risk is included in both the birth plan and child protection notification.",
+        "keywords": [
+          "partner violence",
+          "domestic violence",
+          "foetal risk",
+          "safety plan",
+          "validated screening",
+          "birth plan",
+          "child protection"
+        ]
       }
     ],
     "priorityOrder": {
@@ -13766,7 +15528,8 @@ I would document the six-month decline, smoke-alarm delusion, readiness quote, p
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -13793,7 +15556,7 @@ I would document the rationale for maintaining methadone, NAS education, benzodi
     "signals": [
       {
         "id": "s1",
-        "name": "avoidance shortcut — unsafe shortcut under pressure",
+        "name": "avoidance shortcut",
         "category": "substance_use",
         "severity": "critical",
         "clueInStem": "She will complain if we taper.",
@@ -13812,7 +15575,7 @@ I would document the rationale for maintaining methadone, NAS education, benzodi
       },
       {
         "id": "s2",
-        "name": "benzodiazepine dependence, grief and falls — core clinical formulation",
+        "name": "benzodiazepine dependence, grief and falls",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "The tablets are the only way I sleep since my husband died.",
@@ -13830,7 +15593,7 @@ I would document the rationale for maintaining methadone, NAS education, benzodi
       },
       {
         "id": "s3",
-        "name": "consent and medication control — legal/policy hinge",
+        "name": "consent and medication control",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "Can we hide the tablets?",
@@ -13849,7 +15612,7 @@ I would document the rationale for maintaining methadone, NAS education, benzodi
       },
       {
         "id": "s4",
-        "name": "child safety and falls risk — vulnerable person safety",
+        "name": "child safety and falls risk",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "She fell while babysitting me.",
@@ -13868,7 +15631,7 @@ I would document the rationale for maintaining methadone, NAS education, benzodi
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Alcohol and benzodiazepine co-use concealed from daughter to preserve autonomy",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "Do not tell my daughter about the wine.",
@@ -13887,7 +15650,7 @@ I would document the rationale for maintaining methadone, NAS education, benzodi
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting harm reduction plan, fall risk, confidentiality and carer communication",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to reduce harm while respecting autonomy/confidentiality",
@@ -13903,6 +15666,24 @@ I would document the rationale for maintaining methadone, NAS education, benzodi
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Fall while babysitting as a documented harm event requiring grandchild safety review",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "She fell while babysitting me.",
+        "whyItMatters": "A fall while babysitting a grandchild is not only a patient safety event; it is a child safety incident. The grandchild's welfare must be assessed, and the family must be informed of the risk to the grandchild — separate from any medication confidentiality decisions about the patient.",
+        "modelWording": "I would assess whether the grandchild was harmed in the fall, document the fall as a child safety incident independent of the medication confidentiality decision, advise the family that unsupervised childcare carries specific risks given the current medication and alcohol situation, and refer to appropriate supports.",
+        "keywords": [
+          "babysitting fall",
+          "grandchild safety",
+          "child welfare",
+          "family notification",
+          "medication risk",
+          "alcohol",
+          "independent concern"
+        ]
       }
     ],
     "priorityOrder": {
@@ -13914,7 +15695,8 @@ I would document the rationale for maintaining methadone, NAS education, benzodi
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -13941,7 +15723,7 @@ I would document benzodiazepine dependence, grief formulation, falls/child-safet
     "signals": [
       {
         "id": "s1",
-        "name": "normalisation shortcut — unsafe shortcut under pressure",
+        "name": "normalisation shortcut",
         "category": "substance_use",
         "severity": "critical",
         "clueInStem": "He wakes up every time; discharge him.",
@@ -13960,7 +15742,7 @@ I would document benzodiazepine dependence, grief formulation, falls/child-safet
       },
       {
         "id": "s2",
-        "name": "GHB dependence and overdose risk — core clinical formulation",
+        "name": "GHB dependence and overdose risk",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "I only blacked out; I know my limits.",
@@ -13978,7 +15760,7 @@ I would document benzodiazepine dependence, grief formulation, falls/child-safet
       },
       {
         "id": "s3",
-        "name": "MHA/capacity limits — legal/policy hinge",
+        "name": "MHA/capacity limits",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "Can we detain for addiction alone?",
@@ -13997,7 +15779,7 @@ I would document benzodiazepine dependence, grief formulation, falls/child-safet
       },
       {
         "id": "s4",
-        "name": "near-fatal vulnerable carer context — vulnerable person safety",
+        "name": "near-fatal vulnerable carer context",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "I find him blue and not breathing.",
@@ -14016,7 +15798,7 @@ I would document benzodiazepine dependence, grief formulation, falls/child-safet
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Scene community norms minimising GHB overdose severity and treatment need",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "Do not lecture me about my scene.",
@@ -14035,7 +15817,7 @@ I would document benzodiazepine dependence, grief formulation, falls/child-safet
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting GHB withdrawal risk, engagement plan and overdose risk management",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to manage withdrawal/overdose risk and engagement",
@@ -14051,6 +15833,24 @@ I would document benzodiazepine dependence, grief formulation, falls/child-safet
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Carer finding patient blue and not breathing as acute death-adjacent risk",
+        "category": "immediate_safety",
+        "severity": "important",
+        "clueInStem": "I find him blue and not breathing.",
+        "whyItMatters": "A carer who has found the patient blue and not breathing has witnessed a near-death event that constitutes acute psychological trauma for the carer and an acute overdose safety failure for the patient. Both require attention: carer psychological support and a same-day overdose risk plan.",
+        "modelWording": "I would assess the carer's acute distress and refer for psychological support, document the blue-and-not-breathing event as a near-death overdose incident, provide the carer with specific overdose response training including when to call emergency services, prescribe take-home naloxone, and document this as an acute harm reduction priority.",
+        "keywords": [
+          "near-death",
+          "blue and not breathing",
+          "carer trauma",
+          "overdose response",
+          "naloxone",
+          "harm reduction",
+          "psychological support for carer"
+        ]
       }
     ],
     "priorityOrder": {
@@ -14062,7 +15862,8 @@ I would document benzodiazepine dependence, grief formulation, falls/child-safet
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -14089,7 +15890,7 @@ I would document overdose history, partner collateral, capacity/withdrawal asses
     "signals": [
       {
         "id": "s1",
-        "name": "medical-cannabis shortcut — unsafe shortcut under pressure",
+        "name": "medical-cannabis shortcut",
         "category": "substance_use",
         "severity": "critical",
         "clueInStem": "The GP prescribed it, so chart it.",
@@ -14108,7 +15909,7 @@ I would document overdose history, partner collateral, capacity/withdrawal asses
       },
       {
         "id": "s2",
-        "name": "cannabis worsening psychosis risk — core clinical formulation",
+        "name": "cannabis worsening psychosis risk",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "Cannabis is natural and stops the voices stressing me.",
@@ -14126,7 +15927,7 @@ I would document overdose history, partner collateral, capacity/withdrawal asses
       },
       {
         "id": "s3",
-        "name": "shared care, consent and duty — legal/policy hinge",
+        "name": "shared care, consent and duty",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "Can we tell the GP to stop prescribing?",
@@ -14145,7 +15946,7 @@ I would document overdose history, partner collateral, capacity/withdrawal asses
       },
       {
         "id": "s4",
-        "name": "family safety risk — vulnerable person safety",
+        "name": "family safety risk",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "He threatens me when he smokes.",
@@ -14164,7 +15965,7 @@ I would document overdose history, partner collateral, capacity/withdrawal asses
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Family attribution of psychiatric medication side effects to antipsychotics not cannabis",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "Your tablets made him a zombie.",
@@ -14183,7 +15984,7 @@ I would document overdose history, partner collateral, capacity/withdrawal asses
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting cannabis refusal rationale, GP liaison and violence risk management",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to refuse cannabis, liaise with GP and manage risk",
@@ -14199,6 +16000,24 @@ I would document overdose history, partner collateral, capacity/withdrawal asses
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Family violence linked to cannabis use requiring immediate safety planning",
+        "category": "immediate_safety",
+        "severity": "important",
+        "clueInStem": "He threatens me when he smokes.",
+        "whyItMatters": "Threatened family violence linked to cannabis use is a specific third-party risk that creates an immediate duty to protect. This is not only a clinical indication to refuse cannabis prescription; it is a safety matter requiring a family safety plan.",
+        "modelWording": "I would assess the family member's safety directly, document the cannabis-linked threat as a third-party risk, develop a safety plan for the family that includes what to do if threats escalate, and document why cannabis prescription is clinically and legally untenable given the violence association.",
+        "keywords": [
+          "cannabis-linked violence",
+          "family threat",
+          "third-party safety",
+          "safety plan",
+          "family member",
+          "immediate risk",
+          "cannabis refusal"
+        ]
       }
     ],
     "priorityOrder": {
@@ -14210,7 +16029,8 @@ I would document overdose history, partner collateral, capacity/withdrawal asses
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -14237,7 +16057,7 @@ I would document cannabis risk, family-threat collateral, GP liaison and consent
     "signals": [
       {
         "id": "s1",
-        "name": "fitness shortcut — unsafe shortcut under pressure",
+        "name": "fitness shortcut",
         "category": "substance_use",
         "severity": "critical",
         "clueInStem": "Clear him for machinery work tomorrow.",
@@ -14256,7 +16076,7 @@ I would document cannabis risk, family-threat collateral, GP liaison and consent
       },
       {
         "id": "s2",
-        "name": "ADHD versus stimulant misuse/diversion — core clinical formulation",
+        "name": "ADHD versus stimulant misuse/diversion",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "I focus better when I take extra before work.",
@@ -14274,7 +16094,7 @@ I would document cannabis risk, family-threat collateral, GP liaison and consent
       },
       {
         "id": "s3",
-        "name": "prescribing governance and safety — legal/policy hinge",
+        "name": "prescribing governance and safety",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "Can I keep prescribing if you recommend it?",
@@ -14293,7 +16113,7 @@ I would document cannabis risk, family-threat collateral, GP liaison and consent
       },
       {
         "id": "s4",
-        "name": "public/workplace safety — vulnerable person safety",
+        "name": "public/workplace safety",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "He was jittery operating equipment.",
@@ -14312,7 +16132,7 @@ I would document cannabis risk, family-threat collateral, GP liaison and consent
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Diversion threat as leverage to maintain stimulant prescription against clinical judgement",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "If you do not prescribe, I will get it elsewhere.",
@@ -14331,7 +16151,7 @@ I would document cannabis risk, family-threat collateral, GP liaison and consent
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting stimulant risk assessment, diversion concern and prescribing decision",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to prescribe, restrict, or treat substance use first",
@@ -14347,6 +16167,24 @@ I would document cannabis risk, family-threat collateral, GP liaison and consent
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Jitteriness operating machinery as a specific workplace safety and liability event",
+        "category": "immediate_safety",
+        "severity": "important",
+        "clueInStem": "He was jittery operating equipment.",
+        "whyItMatters": "Psychomotor agitation while operating heavy machinery is a documented workplace safety incident that creates a legal and ethical obligation to notify the patient's employer or the workplace health authority. This is separate from the prescribing decision and must be addressed today.",
+        "modelWording": "I would treat the jitteriness-on-machinery incident as a workplace safety notification matter, advise the patient that he must not operate machinery until his stimulant dose and side effects are stabilised, consider notifying the occupational health authority if he refuses, and document this advice explicitly.",
+        "keywords": [
+          "machinery safety",
+          "jitteriness",
+          "workplace safety",
+          "notification",
+          "occupational health",
+          "stimulant side effects",
+          "liability"
+        ]
       }
     ],
     "priorityOrder": {
@@ -14358,7 +16196,8 @@ I would document cannabis risk, family-threat collateral, GP liaison and consent
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -14385,7 +16224,7 @@ I would document misuse indicators, workplace risk, prescribing rationale, GP co
     "signals": [
       {
         "id": "s1",
-        "name": "over-avoidance shortcut — unsafe shortcut under pressure",
+        "name": "over-avoidance shortcut",
         "category": "substance_use",
         "severity": "critical",
         "clueInStem": "Avoid benzodiazepines in pregnancy.",
@@ -14404,7 +16243,7 @@ I would document misuse indicators, workplace risk, prescribing rationale, GP co
       },
       {
         "id": "s2",
-        "name": "alcohol withdrawal and foetal/maternal risk — core clinical formulation",
+        "name": "alcohol withdrawal and foetal/maternal risk",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "Medication will poison my baby.",
@@ -14422,7 +16261,7 @@ I would document misuse indicators, workplace risk, prescribing rationale, GP co
       },
       {
         "id": "s3",
-        "name": "capacity and emergency treatment — legal/policy hinge",
+        "name": "capacity and emergency treatment",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "Can she leave if she refuses?",
@@ -14441,7 +16280,7 @@ I would document misuse indicators, workplace risk, prescribing rationale, GP co
       },
       {
         "id": "s4",
-        "name": "maternal-foetal medical risk — vulnerable person safety",
+        "name": "maternal-foetal medical risk",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "She is tremulous and hypertensive.",
@@ -14460,7 +16299,7 @@ I would document misuse indicators, workplace risk, prescribing rationale, GP co
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Stigma fear about alcohol use in pregnancy driving dangerous withdrawal concealment",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "If anyone knows, I am finished.",
@@ -14479,7 +16318,7 @@ I would document misuse indicators, workplace risk, prescribing rationale, GP co
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting alcohol withdrawal risk, safe treatment plan and engagement strategy",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to treat withdrawal safely and maintain engagement",
@@ -14495,6 +16334,24 @@ I would document misuse indicators, workplace risk, prescribing rationale, GP co
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Tremulousness and hypertension as indicators of severe withdrawal requiring urgent treatment",
+        "category": "immediate_safety",
+        "severity": "important",
+        "clueInStem": "She is tremulous and hypertensive.",
+        "whyItMatters": "Tremulousness and hypertension in alcohol withdrawal indicate Withdrawal Assessment Score severity that may require urgent benzodiazepine treatment to prevent seizure and delirium tremens, regardless of pregnancy concerns. Untreated severe alcohol withdrawal is more dangerous to the foetus than appropriately dosed benzodiazepines.",
+        "modelWording": "I would perform an immediate CIWA-Ar assessment, document the severity grade, co-ordinate with obstetrics regarding the foetal risk of untreated withdrawal versus benzodiazepine treatment, and initiate treatment immediately with the principle that undertreated severe withdrawal poses greater foetal risk than evidence-based pharmacotherapy.",
+        "keywords": [
+          "CIWA-Ar",
+          "severe withdrawal",
+          "tremulousness",
+          "hypertension",
+          "seizure risk",
+          "delirium tremens",
+          "benzodiazepine in pregnancy"
+        ]
       }
     ],
     "priorityOrder": {
@@ -14506,7 +16363,8 @@ I would document misuse indicators, workplace risk, prescribing rationale, GP co
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -14533,7 +16391,7 @@ I would document withdrawal severity, benzodiazepine risk-benefit reasoning, cap
     "signals": [
       {
         "id": "s1",
-        "name": "misattribution shortcut — unsafe shortcut under pressure",
+        "name": "misattribution shortcut",
         "category": "substance_use",
         "severity": "critical",
         "clueInStem": "He is just negative and sedated.",
@@ -14552,7 +16410,7 @@ I would document withdrawal severity, benzodiazepine risk-benefit reasoning, cap
       },
       {
         "id": "s2",
-        "name": "clozapine toxicity after smoking cessation — core clinical formulation",
+        "name": "clozapine toxicity after smoking cessation",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "I did not smoke because nurses said it is banned.",
@@ -14570,7 +16428,7 @@ I would document withdrawal severity, benzodiazepine risk-benefit reasoning, cap
       },
       {
         "id": "s3",
-        "name": "medication management policy — legal/policy hinge",
+        "name": "medication management policy",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "Should we restart cigarettes to fix it?",
@@ -14589,7 +16447,7 @@ I would document withdrawal severity, benzodiazepine risk-benefit reasoning, cap
       },
       {
         "id": "s4",
-        "name": "falls/vulnerable inpatient risk — vulnerable person safety",
+        "name": "falls/vulnerable inpatient risk",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "He nearly fell twice overnight.",
@@ -14608,7 +16466,7 @@ I would document withdrawal severity, benzodiazepine risk-benefit reasoning, cap
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Documentation omission request blocking safe discharge and carer communication",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "Do not put smoking in the discharge letter.",
@@ -14627,7 +16485,7 @@ I would document withdrawal severity, benzodiazepine risk-benefit reasoning, cap
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting clozapine toxicity, nicotine plan and disclosure obligations",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to manage clozapine levels, nicotine and disclosure",
@@ -14643,6 +16501,24 @@ I would document withdrawal severity, benzodiazepine risk-benefit reasoning, cap
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Repeated near-falls overnight as an acute safety and litigation risk",
+        "category": "immediate_safety",
+        "severity": "important",
+        "clueInStem": "He nearly fell twice overnight.",
+        "whyItMatters": "Two near-falls overnight in the context of elevated clozapine levels indicate sedation and ataxia that constitute an immediate fall-risk emergency. This requires falls precautions, level monitoring and dose review tonight — not a morning handover item.",
+        "modelWording": "I would implement immediate falls precautions — bed rails, call bell, assisted ambulation — request urgent clozapine level and ECG, review the overnight nursing observations for sedation, and document the near-falls as an acute adverse event requiring same-night medical review and clozapine dose adjustment.",
+        "keywords": [
+          "near-falls",
+          "clozapine toxicity",
+          "falls precautions",
+          "sedation",
+          "acute adverse event",
+          "overnight review",
+          "level monitoring"
+        ]
       }
     ],
     "priorityOrder": {
@@ -14654,7 +16530,8 @@ I would document withdrawal severity, benzodiazepine risk-benefit reasoning, cap
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -14681,7 +16558,7 @@ I would document clozapine toxicity formulation, smoking cessation mechanism, le
     "signals": [
       {
         "id": "s1",
-        "name": "coercion shortcut — unsafe shortcut under pressure",
+        "name": "coercion shortcut",
         "category": "substance_use",
         "severity": "critical",
         "clueInStem": "Breach the CTO; he is non-compliant.",
@@ -14700,7 +16577,7 @@ I would document clozapine toxicity formulation, smoking cessation mechanism, le
       },
       {
         "id": "s2",
-        "name": "treatment refusal shaped by homelessness survival — core clinical formulation",
+        "name": "treatment refusal shaped by homelessness survival",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "The depot makes me slow when I need to stay awake.",
@@ -14718,7 +16595,7 @@ I would document clozapine toxicity formulation, smoking cessation mechanism, le
       },
       {
         "id": "s3",
-        "name": "coercive treatment/housing ethics — legal/policy hinge",
+        "name": "coercive treatment/housing ethics",
         "category": "capacity",
         "severity": "critical",
         "clueInStem": "Can housing require depot?",
@@ -14737,7 +16614,7 @@ I would document clozapine toxicity formulation, smoking cessation mechanism, le
       },
       {
         "id": "s4",
-        "name": "public/self safety risk — vulnerable person safety",
+        "name": "public/self safety risk",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "He walks on the tracks at night.",
@@ -14756,7 +16633,7 @@ I would document clozapine toxicity formulation, smoking cessation mechanism, le
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Shelter danger presenting street homelessness as a least-harm preference",
         "category": "cultural_safety",
         "severity": "important",
         "clueInStem": "Shelters are more dangerous than the street.",
@@ -14775,7 +16652,7 @@ I would document clozapine toxicity formulation, smoking cessation mechanism, le
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting housing integration, harm reduction plan and MHA threshold",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to integrate housing, harm reduction and MHA",
@@ -14791,6 +16668,24 @@ I would document clozapine toxicity formulation, smoking cessation mechanism, le
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Track walking at night as an immediate train strike risk requiring urgent action",
+        "category": "immediate_safety",
+        "severity": "important",
+        "clueInStem": "He walks on the tracks at night.",
+        "whyItMatters": "Walking on railway tracks at night is an immediate life-threatening behaviour whether or not it is suicidal in intent. It requires urgent risk assessment including suicidality, immediate safety planning to prevent track access, and notification to relevant transport safety authorities.",
+        "modelWording": "I would treat track walking as an immediate safety emergency, conduct a focused assessment of intent, contact the relevant transport safety authority regarding a person at risk on the network, arrange crisis accommodation with supervision tonight, and document why the risk cannot be managed with the current community plan.",
+        "keywords": [
+          "track walking",
+          "train strike risk",
+          "immediate safety",
+          "transport authority",
+          "crisis accommodation",
+          "suicidality",
+          "night wandering"
+        ]
       }
     ],
     "priorityOrder": {
@@ -14802,7 +16697,8 @@ I would document clozapine toxicity formulation, smoking cessation mechanism, le
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -14829,7 +16725,7 @@ I would document the homelessness-survival formulation, track risk, opioid use, 
     "signals": [
       {
         "id": "s1",
-        "name": "engagement-blame shortcut — unsafe shortcut under pressure",
+        "name": "engagement-blame shortcut",
         "category": "system_pressure",
         "severity": "critical",
         "clueInStem": "The package is wasted because he will not engage.",
@@ -14848,7 +16744,7 @@ I would document the homelessness-survival formulation, track risk, opioid use, 
       },
       {
         "id": "s2",
-        "name": "recovery-oriented TRS rehabilitation — core clinical formulation",
+        "name": "recovery-oriented TRS rehabilitation",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "Everyone talks about recovery but no one thinks I can do anything.",
@@ -14866,7 +16762,7 @@ I would document the homelessness-survival formulation, track risk, opioid use, 
       },
       {
         "id": "s3",
-        "name": "functional recovery versus risk-only care — legal/policy hinge",
+        "name": "functional recovery versus risk-only care",
         "category": "ethics",
         "severity": "critical",
         "clueInStem": "Should we just focus on relapse prevention?",
@@ -14885,7 +16781,7 @@ I would document the homelessness-survival formulation, track risk, opioid use, 
       },
       {
         "id": "s4",
-        "name": "carer burnout and overfunctioning — vulnerable person safety",
+        "name": "carer burnout and overfunctioning",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "We organise everything and we are exhausted.",
@@ -14904,7 +16800,7 @@ I would document the homelessness-survival formulation, track risk, opioid use, 
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Family exhaustion from over-functioning creating low-expectation treatment culture",
         "category": "family_carer",
         "severity": "important",
         "clueInStem": "He should accept disability pension forever.",
@@ -14923,7 +16819,7 @@ I would document the homelessness-survival formulation, track risk, opioid use, 
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting vocational potential, NDIS rights and clozapine maintenance plan",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to balance clozapine care, NDIS and vocational recovery",
@@ -14939,6 +16835,24 @@ I would document the homelessness-survival formulation, track risk, opioid use, 
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Patient's own recovery aspiration as a clinical driver requiring documentation",
+        "category": "diagnosis_formulation",
+        "severity": "important",
+        "clueInStem": "Everyone talks about recovery but no one thinks I can do anything.",
+        "whyItMatters": "The patient's articulate awareness that his recovery aspirations are not taken seriously is a clinical finding that must be documented and incorporated into the care plan. It identifies low-expectation countertransference as a systemic barrier to his recovery.",
+        "modelWording": "I would document the patient's stated aspiration to work and his perception that staff do not believe in his capability, frame this as evidence of preserved insight and motivation, ensure the NDIS plan reflects recovery-oriented goals rather than custodial management, and address low-expectation attitudes in the team reflective practice.",
+        "keywords": [
+          "recovery aspiration",
+          "low expectation",
+          "countertransference",
+          "NDIS goals",
+          "vocational",
+          "patient agency",
+          "reflective practice"
+        ]
       }
     ],
     "priorityOrder": {
@@ -14950,7 +16864,8 @@ I would document the homelessness-survival formulation, track risk, opioid use, 
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -14977,7 +16892,7 @@ I would document the TRS formulation, negative symptoms, clozapine plan, NDIS fu
     "signals": [
       {
         "id": "s1",
-        "name": "paternalistic-monitoring shortcut — unsafe shortcut under pressure",
+        "name": "paternalistic-monitoring shortcut",
         "category": "system_pressure",
         "severity": "critical",
         "clueInStem": "Increase monitoring until she complies.",
@@ -14996,7 +16911,7 @@ I would document the TRS formulation, negative symptoms, clozapine plan, NDIS fu
       },
       {
         "id": "s2",
-        "name": "identity-based medication ambivalence — core clinical formulation",
+        "name": "identity-based medication ambivalence",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "Lithium takes away who I am.",
@@ -15014,7 +16929,7 @@ I would document the TRS formulation, negative symptoms, clozapine plan, NDIS fu
       },
       {
         "id": "s3",
-        "name": "autonomy and assertive care — legal/policy hinge",
+        "name": "autonomy and assertive care",
         "category": "ethics",
         "severity": "critical",
         "clueInStem": "Is assertive follow-up justified if she is voluntary?",
@@ -15033,7 +16948,7 @@ I would document the TRS formulation, negative symptoms, clozapine plan, NDIS fu
       },
       {
         "id": "s4",
-        "name": "carer burnout and public safety — vulnerable person safety",
+        "name": "carer burnout and public safety",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "I cannot keep hiding the car keys every year.",
@@ -15052,7 +16967,7 @@ I would document the TRS formulation, negative symptoms, clozapine plan, NDIS fu
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Patient's identity and vitality investment in energy as barrier to lithium adherence",
         "category": "family_carer",
         "severity": "important",
         "clueInStem": "I need energy to start my company.",
@@ -15071,7 +16986,7 @@ I would document the TRS formulation, negative symptoms, clozapine plan, NDIS fu
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting collaborative relapse plan, driving risk and carer inclusion",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to create collaborative relapse plan preserving autonomy",
@@ -15087,6 +17002,24 @@ I would document the TRS formulation, negative symptoms, clozapine plan, NDIS fu
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Carer secretly hiding car keys as an unsustainable safety strategy",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "I cannot keep hiding the car keys every year.",
+        "whyItMatters": "A carer who must hide car keys every year to prevent a manic driving incident is carrying an unsafe and unsustainable burden that signals recurring high-risk episodes without an adequate professional safety plan. The carer's disclosure is a clinical finding requiring systemic action, not informal validation.",
+        "modelWording": "I would document the key-hiding disclosure as evidence of recurrent driving risk during mania, develop a formal relapse signature agreement with the patient that includes an agreed driving plan, notify the licensing authority if the patient refuses to engage, and ensure the carer is not left as the sole safety mechanism.",
+        "keywords": [
+          "car keys",
+          "driving mania",
+          "carer burden",
+          "relapse signature",
+          "licensing authority",
+          "sustainable safety plan",
+          "bipolar driving risk"
+        ]
       }
     ],
     "priorityOrder": {
@@ -15098,7 +17031,8 @@ I would document the TRS formulation, negative symptoms, clozapine plan, NDIS fu
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -15125,7 +17059,7 @@ I would document her identity-based medication concern, relapse history, husband
     "signals": [
       {
         "id": "s1",
-        "name": "non-engagement shortcut — unsafe shortcut under pressure",
+        "name": "non-engagement shortcut",
         "category": "system_pressure",
         "severity": "critical",
         "clueInStem": "Close the file; they do not engage.",
@@ -15144,7 +17078,7 @@ I would document her identity-based medication concern, relapse history, husband
       },
       {
         "id": "s2",
-        "name": "autism-related access barrier — core clinical formulation",
+        "name": "autism-related access barrier",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "The waiting room feels like a siren in my skin.",
@@ -15162,7 +17096,7 @@ I would document her identity-based medication concern, relapse history, husband
       },
       {
         "id": "s3",
-        "name": "consent and service access policy — legal/policy hinge",
+        "name": "consent and service access policy",
         "category": "ethics",
         "severity": "critical",
         "clueInStem": "Can supports require psychiatric attendance?",
@@ -15181,7 +17115,7 @@ I would document her identity-based medication concern, relapse history, husband
       },
       {
         "id": "s4",
-        "name": "functional vulnerability — vulnerable person safety",
+        "name": "functional vulnerability",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "They shut down for days after appointments.",
@@ -15200,7 +17134,7 @@ I would document her identity-based medication concern, relapse history, husband
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Sensory environment causing clinic-induced shutdown framed as non-compliance",
         "category": "family_carer",
         "severity": "important",
         "clueInStem": "I am not refusing help; I am refusing harm.",
@@ -15219,7 +17153,7 @@ I would document her identity-based medication concern, relapse history, husband
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting environmental adaptations, reasonable adjustments and engagement plan",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to adapt care rather than discharge",
@@ -15235,6 +17169,24 @@ I would document her identity-based medication concern, relapse history, husband
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Clinic environment as an iatrogenic harm requiring reasonable adjustments",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "The waiting room feels like a siren in my skin.",
+        "whyItMatters": "Describing the waiting room as painful sensory experience is a patient disclosing that the clinical environment causes harm. Under disability discrimination legislation, reasonable adjustments to the physical environment and appointment structure are a legal obligation, not optional accommodations.",
+        "modelWording": "I would document the patient's sensory experience of the waiting room as an environmental harm, recommend specific reasonable adjustments — quiet room, direct entry, non-fluorescent lighting, reduced wait time — and frame this formally as a disability accommodation request that must be acted upon by the service.",
+        "keywords": [
+          "sensory environment",
+          "waiting room",
+          "reasonable adjustments",
+          "disability rights",
+          "environmental harm",
+          "autism",
+          "legal obligation"
+        ]
       }
     ],
     "priorityOrder": {
@@ -15246,7 +17198,8 @@ I would document her identity-based medication concern, relapse history, husband
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -15273,7 +17226,7 @@ I would document the sensory formulation, reasonable adjustments offered, pronou
     "signals": [
       {
         "id": "s1",
-        "name": "simplistic-switch shortcut — unsafe shortcut under pressure",
+        "name": "simplistic-switch shortcut",
         "category": "system_pressure",
         "severity": "critical",
         "clueInStem": "Depot is easier; just switch.",
@@ -15292,7 +17245,7 @@ I would document the sensory formulation, reasonable adjustments offered, pronou
       },
       {
         "id": "s2",
-        "name": "risk-benefit refusal after adverse effect fear — core clinical formulation",
+        "name": "risk-benefit refusal after adverse effect fear",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "I would rather hear voices than die from the tablets.",
@@ -15310,7 +17263,7 @@ I would document the sensory formulation, reasonable adjustments offered, pronou
       },
       {
         "id": "s3",
-        "name": "physical monitoring and consent — legal/policy hinge",
+        "name": "physical monitoring and consent",
         "category": "ethics",
         "severity": "critical",
         "clueInStem": "Can clozapine restart safely?",
@@ -15329,7 +17282,7 @@ I would document the sensory formulation, reasonable adjustments offered, pronou
       },
       {
         "id": "s4",
-        "name": "self-neglect vulnerability — vulnerable person safety",
+        "name": "self-neglect vulnerability",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "He stops eating when voices worsen.",
@@ -15348,7 +17301,7 @@ I would document the sensory formulation, reasonable adjustments offered, pronou
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Family fear framed as testing and medical experimentation blocking clozapine restart",
         "category": "family_carer",
         "severity": "important",
         "clueInStem": "You are testing drugs on him.",
@@ -15367,7 +17320,7 @@ I would document the sensory formulation, reasonable adjustments offered, pronou
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting cardiac risk assessment, informed consent and clozapine restart decision",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to balance cardiac risk, relapse and informed consent",
@@ -15383,6 +17336,24 @@ I would document the sensory formulation, reasonable adjustments offered, pronou
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Deteriorating nutrition as an acute relapse indicator requiring immediate response",
+        "category": "immediate_safety",
+        "severity": "important",
+        "clueInStem": "He stops eating when voices worsen.",
+        "whyItMatters": "Reduced eating linked to worsening voices is a physical indicator of acute psychotic deterioration that creates immediate medical risk on top of psychiatric risk. It requires nutritional assessment, monitoring and urgent review of the antipsychotic plan.",
+        "modelWording": "I would assess current nutritional intake and weight, document the eating-voice link as an acute relapse indicator, arrange urgent review with the treating team, initiate nutritional support, and use the clinical deterioration as additional justification for urgent discussion of clozapine reinstatement or alternative antipsychotic.",
+        "keywords": [
+          "nutritional decline",
+          "voice worsening",
+          "acute relapse",
+          "eating-psychosis link",
+          "nutritional assessment",
+          "urgent review",
+          "clozapine restart"
+        ]
       }
     ],
     "priorityOrder": {
@@ -15394,7 +17365,8 @@ I would document the sensory formulation, reasonable adjustments offered, pronou
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -15421,7 +17393,7 @@ I would document the adverse-effect scare, Daniel's fear, cardiology advice, cap
     "signals": [
       {
         "id": "s1",
-        "name": "zero-risk shortcut — unsafe shortcut under pressure",
+        "name": "zero-risk shortcut",
         "category": "system_pressure",
         "severity": "critical",
         "clueInStem": "Keep him until housing is perfect.",
@@ -15440,7 +17412,7 @@ I would document the adverse-effect scare, Daniel's fear, cardiology advice, cap
       },
       {
         "id": "s2",
-        "name": "institutionalisation and recovery planning — core clinical formulation",
+        "name": "institutionalisation and recovery planning",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "I do not know how to live outside now.",
@@ -15458,7 +17430,7 @@ I would document the adverse-effect scare, Daniel's fear, cardiology advice, cap
       },
       {
         "id": "s3",
-        "name": "disability discrimination/housing risk — legal/policy hinge",
+        "name": "disability discrimination/housing risk",
         "category": "ethics",
         "severity": "critical",
         "clueInStem": "Can we refuse because he smokes cannabis sometimes?",
@@ -15477,7 +17449,7 @@ I would document the adverse-effect scare, Daniel's fear, cardiology advice, cap
       },
       {
         "id": "s4",
-        "name": "functional vulnerability — vulnerable person safety",
+        "name": "functional vulnerability",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "He depends on nurses for everything.",
@@ -15496,7 +17468,7 @@ I would document the adverse-effect scare, Daniel's fear, cardiology advice, cap
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Neighbour stigma blocking housing reintegration as a systemic discrimination issue",
         "category": "family_carer",
         "severity": "important",
         "clueInStem": "If neighbours know, he cannot come home.",
@@ -15515,7 +17487,7 @@ I would document the adverse-effect scare, Daniel's fear, cardiology advice, cap
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting step-down plan, housing risks, independence goals and community supports",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to step down safely despite imperfect housing",
@@ -15531,6 +17503,24 @@ I would document the adverse-effect scare, Daniel's fear, cardiology advice, cap
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Institutionalisation as a clinical harm requiring active rehabilitation",
+        "category": "diagnosis_formulation",
+        "severity": "important",
+        "clueInStem": "I do not know how to live outside now.",
+        "whyItMatters": "A patient who no longer knows how to live outside has been institutionalised by prolonged inpatient care. This is a recognised clinical harm that creates an obligation to actively rehabilitate skills for community living rather than continuing indefinite inpatient stay as the path of least resistance.",
+        "modelWording": "I would document the patient's loss of community living skills as evidence of institutionalisation, recommend urgent OT and social work rehabilitation focused on independent living skills, involve peer support workers with lived experience of transition, and set a specific graded discharge timeline rather than waiting for perfect conditions.",
+        "keywords": [
+          "institutionalisation",
+          "independent living skills",
+          "OT rehabilitation",
+          "peer support",
+          "graded discharge",
+          "long-stay",
+          "community reintegration"
+        ]
       }
     ],
     "priorityOrder": {
@@ -15542,7 +17532,8 @@ I would document the adverse-effect scare, Daniel's fear, cardiology advice, cap
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -15569,7 +17560,7 @@ I would document stability, functional assessment, institutionalisation, cannabi
     "signals": [
       {
         "id": "s1",
-        "name": "punitive-discharge shortcut — unsafe shortcut under pressure",
+        "name": "punitive-discharge shortcut",
         "category": "system_pressure",
         "severity": "critical",
         "clueInStem": "Discharge her; she is abusing the service.",
@@ -15588,7 +17579,7 @@ I would document stability, functional assessment, institutionalisation, cannabi
       },
       {
         "id": "s2",
-        "name": "complaints as communication and risk — core clinical formulation",
+        "name": "complaints as communication and risk",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "Complaints are the only way anyone listens.",
@@ -15606,7 +17597,7 @@ I would document stability, functional assessment, institutionalisation, cannabi
       },
       {
         "id": "s3",
-        "name": "reasonable boundaries and duty of care — legal/policy hinge",
+        "name": "reasonable boundaries and duty of care",
         "category": "ethics",
         "severity": "critical",
         "clueInStem": "Can we restrict contact under behaviour policy?",
@@ -15625,7 +17616,7 @@ I would document stability, functional assessment, institutionalisation, cannabi
       },
       {
         "id": "s4",
-        "name": "risk linked to service rupture — vulnerable person safety",
+        "name": "risk linked to service rupture",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "She overdoses after complaint responses.",
@@ -15644,7 +17635,7 @@ I would document stability, functional assessment, institutionalisation, cannabi
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Complaint behaviour as the only available mechanism for service accountability",
         "category": "family_carer",
         "severity": "important",
         "clueInStem": "Your policies are just abandonment with logos.",
@@ -15663,7 +17654,7 @@ I would document stability, functional assessment, institutionalisation, cannabi
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting exclusion risk assessment, boundary rationale and complaint response",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to set boundaries without unsafe exclusion",
@@ -15679,6 +17670,24 @@ I would document stability, functional assessment, institutionalisation, cannabi
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Post-complaint overdoses as a documented pattern requiring safety protocol",
+        "category": "immediate_safety",
+        "severity": "important",
+        "clueInStem": "She overdoses after complaint responses.",
+        "whyItMatters": "If overdoses consistently follow complaint responses, this pattern is a predictable acute safety risk that must be formulated and built into the management plan. Any complaint response must be accompanied by a specific safety plan for the period following notification.",
+        "modelWording": "I would document the post-complaint overdose pattern explicitly in the risk formulation, develop a specific safety protocol for any future complaint responses — increased contact, crisis line, carer notification — and ensure complaint-response letters include a safety-check call or appointment rather than being sent without follow-up.",
+        "keywords": [
+          "post-complaint overdose",
+          "predictable risk",
+          "safety protocol",
+          "pattern formulation",
+          "complaint response",
+          "crisis plan",
+          "follow-up contact"
+        ]
       }
     ],
     "priorityOrder": {
@@ -15690,7 +17699,8 @@ I would document stability, functional assessment, institutionalisation, cannabi
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -15717,7 +17727,7 @@ I would document the complaint pattern, overdose-after-response collateral, inst
     "signals": [
       {
         "id": "s1",
-        "name": "over-optimistic shortcut — unsafe shortcut under pressure",
+        "name": "over-optimistic shortcut",
         "category": "system_pressure",
         "severity": "critical",
         "clueInStem": "He has been good; remove conditions.",
@@ -15736,7 +17746,7 @@ I would document the complaint pattern, overdose-after-response collateral, inst
       },
       {
         "id": "s2",
-        "name": "recovery versus forensic risk — core clinical formulation",
+        "name": "recovery versus forensic risk",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "I need a normal life or I will stop trying.",
@@ -15754,7 +17764,7 @@ I would document the complaint pattern, overdose-after-response collateral, inst
       },
       {
         "id": "s3",
-        "name": "conditional discharge governance — legal/policy hinge",
+        "name": "conditional discharge governance",
         "category": "ethics",
         "severity": "critical",
         "clueInStem": "What level of supervision is proportionate?",
@@ -15773,7 +17783,7 @@ I would document the complaint pattern, overdose-after-response collateral, inst
       },
       {
         "id": "s4",
-        "name": "victim safety — vulnerable person safety",
+        "name": "victim safety",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "I want to know if he works near my street.",
@@ -15792,7 +17802,7 @@ I would document the complaint pattern, overdose-after-response collateral, inst
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Every supervision condition experienced as public declaration of dangerousness",
         "category": "family_carer",
         "severity": "important",
         "clueInStem": "Every condition tells people I am dangerous.",
@@ -15811,7 +17821,7 @@ I would document the complaint pattern, overdose-after-response collateral, inst
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting proportionate conditions, victim notification and recovery support",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to balance recovery, conditions and victim safety",
@@ -15827,6 +17837,24 @@ I would document the complaint pattern, overdose-after-response collateral, inst
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Victim's request for proximity information as a safety and trauma right",
+        "category": "risk_vulnerable",
+        "severity": "important",
+        "clueInStem": "I want to know if he works near my street.",
+        "whyItMatters": "A victim who wants to know if the offender works near her street is expressing a legitimate ongoing safety need. Victim notification protocols exist for this reason; whether the request can be accommodated must be assessed under the applicable legislation, not dismissed as intrusive.",
+        "modelWording": "I would refer the victim's request to the victim support service and victim notification scheme, document the request and the response, and ensure the forensic team is aware of the victim's proximity concern when reviewing conditions — particularly workplace location — in the reintegration plan.",
+        "keywords": [
+          "victim notification",
+          "proximity request",
+          "workplace location",
+          "victim safety",
+          "forensic conditions",
+          "victim support service",
+          "legislative protocol"
+        ]
       }
     ],
     "priorityOrder": {
@@ -15838,7 +17866,8 @@ I would document the complaint pattern, overdose-after-response collateral, inst
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -15865,7 +17894,7 @@ I would document the recovery rationale, risk formulation, victim notification c
     "signals": [
       {
         "id": "s1",
-        "name": "age-boundary shortcut — unsafe shortcut under pressure",
+        "name": "age-boundary shortcut",
         "category": "system_pressure",
         "severity": "critical",
         "clueInStem": "We cannot accept until she is eighteen.",
@@ -15884,7 +17913,7 @@ I would document the recovery rationale, risk formulation, victim notification c
       },
       {
         "id": "s2",
-        "name": "transition risk and autism needs — core clinical formulation",
+        "name": "transition risk and autism needs",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "If adult services make me retell everything, I will stop coming.",
@@ -15902,7 +17931,7 @@ I would document the recovery rationale, risk formulation, victim notification c
       },
       {
         "id": "s3",
-        "name": "governance of transition — legal/policy hinge",
+        "name": "governance of transition",
         "category": "ethics",
         "severity": "critical",
         "clueInStem": "Who is responsible if she deteriorates?",
@@ -15921,7 +17950,7 @@ I would document the recovery rationale, risk formulation, victim notification c
       },
       {
         "id": "s4",
-        "name": "carer burden — vulnerable person safety",
+        "name": "carer burden",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "I have been the service coordinator for years.",
@@ -15940,7 +17969,7 @@ I would document the recovery rationale, risk formulation, victim notification c
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Service transition as abandonment for a patient for whom change worsens eating",
         "category": "family_carer",
         "severity": "important",
         "clueInStem": "Change makes my eating worse.",
@@ -15959,7 +17988,7 @@ I would document the recovery rationale, risk formulation, victim notification c
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting transition plan, joint handover and responsibility during transfer",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to create shared transition plan despite service boundaries",
@@ -15975,6 +18004,24 @@ I would document the recovery rationale, risk formulation, victim notification c
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Responsibility gap during transition as a governance and safety risk",
+        "category": "governance",
+        "severity": "important",
+        "clueInStem": "Who is responsible if she deteriorates?",
+        "whyItMatters": "A clear written agreement about clinical responsibility during the transition period — who holds the risk, who is the treating clinician, what triggers re-referral — is a governance requirement, not a courtesy. Ambiguity about responsibility during transition has caused patient deaths.",
+        "modelWording": "I would insist on a formal written transition protocol that specifies which clinician holds responsibility at each stage, what deterioration thresholds trigger CAMHS re-engagement before the eighteenth birthday, and what the adult service will provide from day one — and I would refuse to sign off on transition without this documentation.",
+        "keywords": [
+          "transition responsibility",
+          "governance protocol",
+          "written agreement",
+          "clinical handover",
+          "deterioration threshold",
+          "CAMHS to adult",
+          "service boundary"
+        ]
       }
     ],
     "priorityOrder": {
@@ -15986,7 +18033,8 @@ I would document the recovery rationale, risk formulation, victim notification c
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -16013,7 +18061,7 @@ I would document the transition risks, medical instability, autism accommodation
     "signals": [
       {
         "id": "s1",
-        "name": "under-treatment shortcut — unsafe shortcut under pressure",
+        "name": "under-treatment shortcut",
         "category": "system_pressure",
         "severity": "critical",
         "clueInStem": "Social prescribing is safer than medication.",
@@ -16032,7 +18080,7 @@ I would document the transition risks, medical instability, autism accommodation
       },
       {
         "id": "s2",
-        "name": "late-life depression and masculine shame — core clinical formulation",
+        "name": "late-life depression and masculine shame",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "Talking is for people who still matter.",
@@ -16050,7 +18098,7 @@ I would document the transition risks, medical instability, autism accommodation
       },
       {
         "id": "s3",
-        "name": "capacity and self-neglect — legal/policy hinge",
+        "name": "capacity and self-neglect",
         "category": "ethics",
         "severity": "critical",
         "clueInStem": "Can he refuse all treatment if he is losing weight?",
@@ -16069,7 +18117,7 @@ I would document the transition risks, medical instability, autism accommodation
       },
       {
         "id": "s4",
-        "name": "suicide warning collateral — vulnerable person safety",
+        "name": "suicide warning collateral",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "He gives away tools and says he is done.",
@@ -16088,7 +18136,7 @@ I would document the transition risks, medical instability, autism accommodation
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Social worthlessness belief blocking both social prescribing and psychiatric treatment",
         "category": "family_carer",
         "severity": "important",
         "clueInStem": "Do not make me a mental patient.",
@@ -16107,7 +18155,7 @@ I would document the transition risks, medical instability, autism accommodation
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting suicide risk, treatment refusal, social needs and least restrictive plan",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to combine social, medical and suicide risk interventions",
@@ -16123,6 +18171,24 @@ I would document the transition risks, medical instability, autism accommodation
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Giving away tools as a specific and time-critical suicide warning sign",
+        "category": "immediate_safety",
+        "severity": "important",
+        "clueInStem": "He gives away tools and says he is done.",
+        "whyItMatters": "Giving away valued possessions — especially tools that represent identity and craft — is a classic preparatory suicide behaviour. Combined with the statement that he is done, this is a specific and urgent suicide warning that requires immediate risk assessment and intervention, not a routine social prescribing discussion.",
+        "modelWording": "I would treat the tool-giving as an acute suicide preparatory behaviour, conduct an urgent structured suicide risk assessment including plan and intent, document the giving-away behaviour explicitly as a warning sign, and determine whether voluntary or involuntary assessment is required before any social prescribing referral.",
+        "keywords": [
+          "giving away tools",
+          "preparatory behaviour",
+          "suicide warning sign",
+          "acute risk",
+          "structured assessment",
+          "intent",
+          "older adult suicidality"
+        ]
       }
     ],
     "priorityOrder": {
@@ -16134,7 +18200,8 @@ I would document the transition risks, medical instability, autism accommodation
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
@@ -16161,7 +18228,7 @@ I would document suicide collateral, capacity/self-neglect assessment, alcohol a
     "signals": [
       {
         "id": "s1",
-        "name": "invisible-disability shortcut — unsafe shortcut under pressure",
+        "name": "invisible-disability shortcut",
         "category": "system_pressure",
         "severity": "critical",
         "clueInStem": "He looks physically fine, so supports are reduced.",
@@ -16180,7 +18247,7 @@ I would document suicide collateral, capacity/self-neglect assessment, alcohol a
       },
       {
         "id": "s2",
-        "name": "TBI-related impulsivity and violence risk — core clinical formulation",
+        "name": "TBI-related impulsivity and violence risk",
         "category": "diagnosis_formulation",
         "severity": "critical",
         "clueInStem": "I hit people before I know I am angry.",
@@ -16198,7 +18265,7 @@ I would document suicide collateral, capacity/self-neglect assessment, alcohol a
       },
       {
         "id": "s3",
-        "name": "MHA versus disability support law — legal/policy hinge",
+        "name": "MHA versus disability support law",
         "category": "ethics",
         "severity": "critical",
         "clueInStem": "Can we use the Mental Health Act to force supports?",
@@ -16217,7 +18284,7 @@ I would document suicide collateral, capacity/self-neglect assessment, alcohol a
       },
       {
         "id": "s4",
-        "name": "staff safety and support risk — vulnerable person safety",
+        "name": "staff safety and support risk",
         "category": "risk_vulnerable",
         "severity": "important",
         "clueInStem": "I cannot safely work alone with him.",
@@ -16236,7 +18303,7 @@ I would document suicide collateral, capacity/self-neglect assessment, alcohol a
       },
       {
         "id": "s5",
-        "name": "Cultural/family context affecting safety and engagement",
+        "name": "Administrative forms failing to capture functional identity and pre-injury personhood",
         "category": "family_carer",
         "severity": "important",
         "clueInStem": "Forms do not show who I was before.",
@@ -16255,7 +18322,7 @@ I would document suicide collateral, capacity/self-neglect assessment, alcohol a
       },
       {
         "id": "s6",
-        "name": "Governance and defensible documentation",
+        "name": "Documenting functional advocacy, NDIS dispute and risk management plan",
         "category": "governance",
         "severity": "important",
         "clueInStem": "whether to advocate functional supports while managing risk",
@@ -16271,6 +18338,24 @@ I would document suicide collateral, capacity/self-neglect assessment, alcohol a
           "system pressure",
           "accountability"
         ]
+      },
+      {
+        "id": "s7",
+        "name": "Staff unable to work safely alone as an immediate occupational risk requiring response",
+        "category": "immediate_safety",
+        "severity": "important",
+        "clueInStem": "I cannot safely work alone with him.",
+        "whyItMatters": "A staff member who cannot safely work alone with the patient is communicating a current safety risk that must be acted upon today. It cannot be deferred to the next NDIS review or care planning meeting.",
+        "modelWording": "I would treat the staffing safety disclosure as a workplace safety matter requiring immediate action — two-person contact, de-escalation training, specific risk management plan — document it formally, and use the staffing safety concern as additional evidence in the NDIS dispute to support higher-intensity support hours.",
+        "keywords": [
+          "staff safety",
+          "two-person contact",
+          "workplace safety",
+          "immediate action",
+          "NDIS evidence",
+          "de-escalation",
+          "neurocognitive risk"
+        ]
       }
     ],
     "priorityOrder": {
@@ -16282,7 +18367,8 @@ I would document suicide collateral, capacity/self-neglect assessment, alcohol a
       "secondary": [
         "s4",
         "s5",
-        "s6"
+        "s6",
+        "s7"
       ],
       "lowYield": []
     },
