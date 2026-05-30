@@ -76,10 +76,20 @@ The ED registrar says: "He's calmed down, his obs are stable, and I need the bed
         modelWording: "Arrange admission or urgent early psychosis follow-up with documented diagnostic uncertainty, because a first-presentation psychosis cannot leave ED without a clear pathway.",
         keywords: ["early psychosis", "follow-up", "CATT", "admission", "next-day review", "discharge plan", "first episode", "sister briefed"],
       },
+      {
+        id: "s7",
+        name: "Methamphetamine use still requires assessment and harm-reduction planning",
+        category: "substance_use",
+        severity: "important",
+        clueInStem: "A urine drug screen is positive for methamphetamine.",
+        whyItMatters: "Missing this signal means the candidate has rejected the drug-only diagnosis without still assessing methamphetamine use as an acute risk amplifier and relapse factor.",
+        modelWording: "Assess methamphetamine use directly, because it may have escalated Marcus's psychosis, impaired sleep and judgement, and must be addressed in the follow-up plan.",
+        keywords: ["methamphetamine", "urine drug screen", "substance use", "sleep", "harm reduction", "drug use", "acute risk", "relapse"],
+      },
     ],
     priorityOrder: {
       urgent: ["s1", "s2", "s3"],
-      secondary: ["s4", "s5", "s6"],
+      secondary: ["s4", "s5", "s6", "s7"],
       lowYield: [],
     },
     modelAnswer: `The critical diagnostic issue is the timeline. Marcus tells me that the transmitters have been monitoring him "for six months," while his sister says he has been deteriorating for eight months and only started using methamphetamine last week "to cope with the fear." That makes a primary psychotic disorder, including first-episode schizophrenia, the working diagnosis until proven otherwise. The positive urine drug screen may explain acute escalation, but it does not explain months of persecutory beliefs and functional decline.
@@ -88,7 +98,7 @@ I would not accept the proposed drug-psychosis discharge on the basis that he is
 
 The ED consultant's pressure to clear the bed is understandable but cannot determine the psychiatric decision. The statement "once he's settled he can go" is premature diagnostic closure under system pressure. I remain responsible for my assessment and, if disagreement persists, I would escalate to my own consultant or the on-call psychiatric consultant rather than providing a discharge endorsement that I do not believe is clinically safe.
 
-My risk assessment would address self-neglect, vulnerability in public, risk of acting on persecutory beliefs, substance use, family supports, insight and willingness to accept follow-up. His sister's collateral is central to the formulation and should inform both the diagnosis and the safety plan.
+My risk assessment would address self-neglect, vulnerability in public, risk of acting on persecutory beliefs, substance use, family supports, insight and willingness to accept follow-up. The positive methamphetamine screen still matters: it may have amplified his fear, impaired sleep and judgement, and needs direct assessment and harm-reduction planning even though it is not the primary explanation. His sister's collateral is central to the formulation and should inform both the diagnosis and the safety plan.
 
 Disposition would depend on the completed assessment, but admission is likely because this is probable first-episode psychosis with functional decline and uncertain insight. If discharge were considered, it would require a documented risk formulation, involvement of his sister, a specific safety plan, and urgent early psychosis or CATT review within 24–48 hours. Discharge with no first-episode psychosis pathway would be unsafe.`,
   },
@@ -167,10 +177,20 @@ The ED consultant says he is willing to "accept her decision" because she is "ca
         modelWording: "Notify the specialist eating disorder team and dietetics urgently, because safe refeeding, medical monitoring and psychiatric formulation require coordinated expertise.",
         keywords: ["eating disorder specialist", "multidisciplinary", "dietitian", "refeeding", "specialist service", "consult", "expertise"],
       },
+      {
+        id: "s7",
+        name: "Partial acceptance of treatment should be used to build engagement",
+        category: "disposition",
+        severity: "important",
+        clueInStem: "The treating ED team has commenced IV electrolyte replacement, which she is tolerating.",
+        whyItMatters: "Missing this signal means the candidate has ignored an opportunity to build therapeutic engagement while also mistaking partial electrolyte treatment for adequate management.",
+        modelWording: "Recognise her acceptance of IV electrolyte replacement as an engagement opportunity, while explaining that it does not replace nutrition, admission or refeeding management.",
+        keywords: ["IV electrolyte", "tolerating", "engagement", "partial treatment", "alliance", "refeeding", "admission", "nutrition"],
+      },
     ],
     priorityOrder: {
       urgent: ["s1", "s2", "s3"],
-      secondary: ["s4", "s5", "s6"],
+      secondary: ["s4", "s5", "s6", "s7"],
       lowYield: [],
     },
     modelAnswer: `Eliza is medically unstable. The heart rate of 44 bpm, potassium of 2.6 mmol/L, phosphate of 0.55 mmol/L and BMI of 12.5 indicate immediate risk of arrhythmia, collapse and refeeding complications. This is not primarily a question of whether she appears calm in conversation; she requires inpatient medical management, cardiac monitoring and specialist refeeding precautions.
@@ -181,7 +201,7 @@ I would assess what Eliza believes will happen if she goes home, how she underst
 
 If she lacks capacity for this decision and continues to refuse nasogastric feeding or admission, I would use the relevant legal pathway, whether Mental Health Act or guardianship legislation depending on jurisdiction, to authorise necessary treatment. The decision must be documented as necessary, proportionate and the least restrictive safe response to an immediately life-threatening illness.
 
-I would involve the specialist eating disorder service, dietetics and the medical team urgently, because safe management requires coordinated refeeding expertise. I would also discuss parental involvement with Eliza transparently. Her wish for privacy matters, but in a medical emergency where capacity may be impaired, parental collateral about recent intake, weight trajectory and supports may be essential to safe treatment and disposition.`,
+I would involve the specialist eating disorder service, dietetics and the medical team urgently, because safe management requires coordinated refeeding expertise. The fact that she is tolerating IV electrolyte replacement is useful for engagement and alliance, but it does not make discharge safe and does not replace nutritional restoration. I would also discuss parental involvement with Eliza transparently. Her wish for privacy matters, but in a medical emergency where capacity may be impaired, parental collateral about recent intake, weight trajectory and supports may be essential to safe treatment and disposition.`,
   },
 
   {
@@ -260,10 +280,20 @@ The ED registrar tells you: "She's been here twice before for confusion — both
         modelWording: "Investigate delirium systematically with medication review, infection screen, metabolic tests and non-pharmacological management, because the MMSE decline indicates acute cerebral dysfunction.",
         keywords: ["delirium screen", "infection", "electrolytes", "FBC", "EUC", "MSU", "multifactorial", "non-pharmacological", "medication review", "hydration"],
       },
+      {
+        id: "s7",
+        name: "Distress should be managed as part of delirium care",
+        category: "disposition",
+        severity: "important",
+        clueInStem: "She is distressed and repeatedly calls for her late husband.",
+        whyItMatters: "Missing this signal means the candidate may respond to Nora's distress with unnecessary sedation rather than orientation, reassurance and family-supported delirium care.",
+        modelWording: "Address Nora's distress with non-pharmacological delirium care, because calling for her late husband reflects fear and disorientation rather than a primary psychotic disorder.",
+        keywords: ["distressed", "late husband", "orientation", "reassurance", "non-pharmacological", "family", "delirium care", "avoid sedation"],
+      },
     ],
     priorityOrder: {
       urgent: ["s1", "s2", "s3"],
-      secondary: ["s4", "s5", "s6"],
+      secondary: ["s4", "s5", "s6", "s7"],
       lowYield: [],
     },
     modelAnswer: `Nora has delirium until proven otherwise. The acute two-day change, fluctuating attention, disorientation, inability to complete serial sevens and fall in MMSE from 21 to 12 are not explained by ordinary dementia progression. Calling this "her dementia" would miss an acute medical syndrome with significant morbidity and mortality.
@@ -274,7 +304,7 @@ The previous ED presentations are important because they suggest a pattern of di
 
 I would obtain detailed collateral from Nora's daughter about her true baseline, the timing of this episode, oral intake, medication adherence, falls, urinary symptoms, pain and previous recovery after similar events. Her daughter's comment that Nora has been "going downhill anyway" needs clarification rather than passive acceptance.
 
-Nora should not be discharged tonight. She is confused, refusing food and medications, and lives semi-independently in a granny flat. I would recommend admission for delirium work-up, including infection screen, electrolytes, renal and liver function, medication review and hydration assessment, with non-pharmacological management such as orientation cues, sleep-wake support, family presence and avoidance of unnecessary sedation.`,
+Nora should not be discharged tonight. She is confused, refusing food and medications, and lives semi-independently in a granny flat. I would recommend admission for delirium work-up, including infection screen, electrolytes, renal and liver function, medication review and hydration assessment. Her distress and repeated calling for her late husband should be managed with orientation, reassurance, family presence, sleep-wake support and avoidance of unnecessary sedation.`,
   },
 
   {
@@ -453,13 +483,45 @@ When you speak to Jade alone, she tells you she has been cutting for approximate
         modelWording: "Discharge Jade only if home safety is clarified, a collaborative safety plan is agreed and urgent CAMHS follow-up is arranged; otherwise admit for further assessment and protection.",
         keywords: ["discharge only if safe", "home safety clarified", "safety plan", "CAMHS follow-up", "urgent review", "48 hours", "not binary", "admission if unsafe", "robust plan"],
       },
+      {
+        id: "s7",
+        name: "Developmental formulation is required for emerging psychopathology",
+        category: "diagnosis_formulation",
+        severity: "important",
+        clueInStem: "The paediatric ED asks you to review Jade, a 15-year-old girl who presented with superficial lacerations to her forearms.",
+        whyItMatters: "Missing this signal means the candidate has treated the presentation as an isolated ED event rather than formulating emerging psychopathology in an adolescent developmental context.",
+        modelWording: "Formulate developmentally by considering emerging emotional dysregulation, depressive episode, attachment difficulties and trauma response in the context of adolescence and family conflict.",
+        keywords: ["developmental formulation", "adolescent", "emerging psychopathology", "emotional dysregulation", "depressive", "attachment", "trauma response", "family conflict"],
+      },
+      {
+        id: "s8",
+        name: "Functional assessment across school, peers and family is needed",
+        category: "diagnosis_formulation",
+        severity: "important",
+        clueInStem: "When you speak to Jade alone, she tells you she has been cutting for approximately four months and has been hiding it.",
+        whyItMatters: "Missing this signal means the candidate has not assessed the sustained functional impact of four months of hidden self-harm across school, social and family domains.",
+        modelWording: "Assess school attendance, academic change, peer relationships, online stressors and family functioning because four months of hidden cutting implies sustained distress beyond tonight's argument.",
+        keywords: ["school", "peers", "social", "family functioning", "functional assessment", "academic", "attendance", "online", "four months"],
+      },
+      {
+        id: "s9",
+        name: "Substance use screen is part of adolescent self-harm assessment",
+        category: "substance_use",
+        severity: "important",
+        clueInStem: "She self-inflicted the cuts with scissors three hours ago.",
+        whyItMatters: "Missing this signal means the candidate has omitted a standard risk amplifier in adolescent self-harm assessment, including intoxication, disinhibition and coping-related substance use.",
+        modelWording: "Screen for alcohol, cannabis, vaping and other substance use because intoxication and disinhibition can change risk, supervision needs and discharge safety.",
+        keywords: ["substance use", "alcohol", "cannabis", "vaping", "intoxication", "disinhibition", "adolescent", "self-harm", "screen"],
+      },
     ],
     priorityOrder: {
       urgent: ["s1", "s2", "s3"],
-      secondary: ["s4", "s5", "s6"],
+      secondary: ["s4", "s5", "s6", "s7", "s8", "s9"],
       lowYield: [],
     },
     modelAnswer: `Jade's presentation cannot be reduced to "not suicidal, therefore discharge." She has been cutting for approximately four months, has multiple healed scars and has hidden the behaviour. Even if the current episode was not intended to end her life, chronic concealed NSSI in a 15-year-old requires assessment of function, escalation, emotional regulation, shame, suicidal overlap and protective supports.
+
+I would formulate this developmentally rather than as an isolated ED event. Jade is 15, her parents are separated, there is high conflict in the corridor, she becomes tearful when her mother's name is mentioned, and she has hidden self-harm for months. The differential includes emerging emotional dysregulation, depressive episode, attachment difficulties and trauma response, and the assessment must include school attendance, academic change, peer relationships, online stressors, substance use and family functioning.
 
 The most important immediate issue is her statement that she "doesn't feel safe at home." That must be explored privately, gently and without leading questions. Her tearfulness when her mother's name is mentioned and the history of self-harm being kept within the family raise concern about whether home is emotionally or physically safe, and whether Jade can disclose distress there.
 
@@ -467,6 +529,6 @@ The child protection threshold depends on what further assessment reveals, but I
 
 The parents need to be separated and managed calmly. The father's demand for admission "so the court can see what her mother is doing to her" is not a clinical indication, and the mother's decision to keep previous cutting within the family requires careful exploration rather than blame. I would interview each parent separately, keep the focus on Jade's safety and avoid allowing family court conflict to determine disposition.
 
-Discharge tonight is only appropriate if I can clarify the home safety concern, complete a credible safety plan with Jade and a safe adult, restrict access to means, and arrange urgent CAMHS follow-up within 48–72 hours. If home safety remains unclear, if Jade cannot speak safely, or if child protection planning cannot be completed, admission under CAMHS or paediatrics for further assessment and safeguarding is the safer disposition.`,
+Discharge tonight is only appropriate if I can clarify the home safety concern, complete a credible safety plan with Jade and a safe adult, restrict access to means, and arrange urgent CAMHS follow-up within 48–72 hours. If home safety remains unclear, if Jade cannot speak safely, if substance use or functional deterioration increases concern, or if child protection planning cannot be completed, admission under CAMHS or paediatrics for further assessment and safeguarding is the safer disposition.`,
   },
 ];
