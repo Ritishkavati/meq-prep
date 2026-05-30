@@ -6,7 +6,7 @@ export const FOR_STEMS: QuizStem[] = [
     questionNumber: "MEQ-065",
     topic: "forensic",
     difficulty: "consultant",
-    title: "Stalking and erotomania in community care",
+    title: "Stalking and Erotomania in Community Care",
     candidateRole: "Consultant psychiatrist, community forensic consultation service",
     setting: "Community mental health team risk review",
     stem: `You are the consultant psychiatrist asked to advise a community mental health team about Marcus, a 44-year-old man with schizophrenia and previous stalking convictions.
@@ -18,88 +18,98 @@ His case manager says Marcus is taking medication inconsistently and has started
     signals: [
       {
         id: "s1",
-        name: "Erotomanic delusion with fixation",
+        name: "Erotomanic delusion is driving stalking behaviour",
         category: "diagnosis_formulation",
         severity: "critical",
-        clueInStem: "She smiles at the end of the bulletin because she knows I'm watching.",
-        whyItMatters: "Erotomanic fixation can drive persistent stalking and escalation despite denial of harmful intent.",
-        modelWording: "Formulate erotomanic delusional belief with fixation and behavioural pursuit as central to risk.",
+        clueInStem: "He says, \"She smiles at the end of the bulletin because she knows I'm watching.\"",
+        whyItMatters: "Missing this signal means the candidate has not recognised that Marcus's pursuit is driven by fixed delusional interpretation rather than ordinary romantic interest.",
+        modelWording: "Formulate erotomanic delusional fixation as central to risk because Marcus interprets a public television gesture as personal communication.",
         keywords: ["erotomania", "delusional fixation", "stalking", "psychosis", "behavioural pursuit", "risk formulation"],
       },
       {
         id: "s2",
-        name: "Identifiable victim and potential rival",
+        name: "Perceived husband rival increases risk to identifiable people",
         category: "risk_others",
         severity: "critical",
-        clueInStem: "Her husband is the only thing keeping us apart.",
-        whyItMatters: "Identification of a rival increases risk to the victim and third parties.",
-        modelWording: "Assess risk to the newsreader and perceived rival, including escalation, access and grievance.",
+        clueInStem: "Marcus says, \"Her husband is the only thing keeping us apart.\"",
+        whyItMatters: "Missing this signal means the candidate has not recognised that Marcus has identified a rival who may become a target of grievance or violence.",
+        modelWording: "Assess risk to the newsreader, her husband and workplace staff because Marcus has named a perceived obstacle to the delusional relationship.",
         keywords: ["identifiable victim", "rival", "violence risk", "stalking", "duty to protect", "grievance"],
       },
       {
         id: "s3",
-        name: "Escalation from messages to approach behaviour",
+        name: "Approach behaviour shows escalation beyond messaging",
         category: "risk_others",
         severity: "important",
-        clueInStem: "attended the television studio reception.",
-        whyItMatters: "Physical approach behaviour marks escalation and increases concern despite denial.",
-        modelWording: "Treat attendance at the studio as escalation from ideation/messages to approach behaviour.",
+        clueInStem: "Police have warned him twice after he attended the television studio reception.",
+        whyItMatters: "Missing this signal means the candidate has treated the behaviour as online harassment despite physical approach to the victim's workplace.",
+        modelWording: "Treat attendance at the studio as escalation because Marcus has moved from messages to physical proximity despite police warnings.",
         keywords: ["approach behaviour", "escalation", "studio attendance", "stalking behaviour", "proximity", "victim safety"],
       },
       {
         id: "s4",
-        name: "Medication non-adherence",
+        name: "Inconsistent medication may worsen delusional intensity",
         category: "collateral",
         severity: "important",
-        clueInStem: "taking medication inconsistently",
-        whyItMatters: "Non-adherence may worsen delusional intensity and reduce community manageability.",
-        modelWording: "Review adherence and consider assertive treatment options because relapse may increase stalking risk.",
+        clueInStem: "His case manager says Marcus is taking medication inconsistently and has started drinking again.",
+        whyItMatters: "Missing this signal means the candidate has not linked non-adherence with possible worsening psychosis and reduced community manageability.",
+        modelWording: "Review adherence and treatment intensity because inconsistent medication may increase the intensity and persistence of stalking delusions.",
         keywords: ["medication adherence", "relapse", "assertive treatment", "psychosis", "community risk", "case manager"],
       },
       {
         id: "s5",
-        name: "Alcohol relapse",
+        name: "Alcohol relapse increases disinhibition and approach risk",
         category: "substance_use",
         severity: "important",
-        clueInStem: "has started drinking again.",
-        whyItMatters: "Alcohol increases disinhibition and risk of impulsive approach or confrontation.",
-        modelWording: "Assess alcohol use as a dynamic risk factor for disinhibition and escalation.",
+        clueInStem: "His case manager says Marcus is taking medication inconsistently and has started drinking again.",
+        whyItMatters: "Missing this signal means the candidate has not accounted for alcohol-related disinhibition in a man already breaching proximity boundaries.",
+        modelWording: "Assess alcohol use urgently because drinking may increase impulsivity, grievance and likelihood of further approach behaviour.",
         keywords: ["alcohol", "disinhibition", "dynamic risk", "stalking escalation", "relapse", "impulsivity"],
       },
       {
         id: "s6",
-        name: "Confidentiality versus duty to protect",
+        name: "Confidentiality may need to yield to victim protection",
         category: "ethics",
-        severity: "optional",
-        clueInStem: "whether to breach confidentiality to warn the newsreader",
-        whyItMatters: "The team must balance confidentiality with serious foreseeable risk to an identifiable person.",
-        modelWording: "Consider lawful information sharing or warning where there is serious, imminent or foreseeable risk to identifiable people.",
+        severity: "important",
+        clueInStem: "The team is unsure whether to breach confidentiality to warn the newsreader or rely on police.",
+        whyItMatters: "Missing this signal means the candidate has not balanced confidentiality against serious foreseeable risk to an identifiable person.",
+        modelWording: "Consider lawful minimum-necessary information sharing because the newsreader and her husband are identifiable people at potential risk.",
         keywords: ["confidentiality", "duty to warn", "duty to protect", "information sharing", "victim safety", "ethics"],
+      },
+      {
+        id: "s7",
+        name: "Prior stalking convictions raise baseline forensic risk",
+        category: "governance",
+        severity: "important",
+        clueInStem: "You are the consultant psychiatrist asked to advise a community mental health team about Marcus, a 44-year-old man with schizophrenia and previous stalking convictions.",
+        whyItMatters: "Missing this signal means the candidate has ignored historical stalking behaviour that makes the current pattern more concerning and less dismissible.",
+        modelWording: "Integrate the previous stalking convictions into the risk formulation because current erotomanic pursuit is occurring in a known pattern of offending.",
+        keywords: ["previous stalking convictions", "forensic history", "baseline risk", "pattern", "recidivism", "community forensic"],
       },
     ],
     priorityOrder: {
       urgent: ["s1", "s2"],
-      secondary: ["s3", "s4", "s5"],
-      lowYield: ["s6"],
+      secondary: ["s3", "s4", "s5", "s6", "s7"],
+      lowYield: [],
     },
-    modelAnswer: `Marcus is presenting with erotomanic delusional fixation that has already moved from belief into behaviour, and the consultant task is to manage identifiable victim risk rather than simply describe a psychotic symptom. His statement, "She smiles at the end of the bulletin because she knows I'm watching," is the central diagnostic clue: he is interpreting ordinary public behaviour by the newsreader as personal communication. In a man with schizophrenia and previous stalking convictions, this is not a harmless fantasy. It is a delusional framework that can drive persistent pursuit, grievance and escalation even when he denies intent to harm.
+    modelAnswer: `Marcus is presenting with erotomanic delusional fixation that has already moved from belief into behaviour. His statement, "She smiles at the end of the bulletin because she knows I'm watching," shows that he is interpreting ordinary public behaviour by the newsreader as personal communication. In a man with schizophrenia and previous stalking convictions, this is not a harmless fantasy; it is a recurrent forensic risk pattern.
 
-The second critical clue is "Her husband is the only thing keeping us apart." That introduces a perceived rival and therefore widens the risk formulation beyond the newsreader herself. I would assess risk to the newsreader, her husband, workplace staff and anyone Marcus perceives as obstructing the relationship. His attendance at "the television studio reception" shows escalation from messages to approach behaviour, and his statement that "I just need to explain our connection in person" indicates an ongoing intention to gain proximity. Denial of intent to harm is not sufficient when the behavioural pattern is escalating and the belief is fixed.
+The risk formulation must identify specific people. The newsreader is an identifiable victim, and Marcus's statement that "Her husband is the only thing keeping us apart" introduces a perceived rival. I would assess risk to the newsreader, her husband, reception staff, security staff and anyone Marcus believes is obstructing the relationship.
 
-I would urgently convene a risk meeting with the community team, forensic advice and police liaison. I would clarify the number and content of messages, whether there are threats, whether he knows the victim's home address, whether he has weapons, transport, money, substance use, prior breaches, and whether he has approached the studio since the warnings. I would also ask the team to review medication adherence because the case manager reports he is "taking medication inconsistently," and to assess alcohol because he "has started drinking again." Both increase risk by worsening delusional intensity, disinhibition and persistence.
+His behaviour has escalated beyond messages. Police have warned him twice after he attended the television studio reception, and he now says, "I just need to explain our connection in person." Denial of intent to harm is not sufficient when the delusional belief is fixed, the pursuit is persistent, and approach behaviour is continuing despite police warnings.
 
-The ethical tension is confidentiality versus duty to protect. The team is unsure whether to breach confidentiality "to warn the newsreader or rely on police." I would not frame this as an all-or-nothing betrayal of Marcus. I would explain to Marcus, where safe, that confidentiality has limits where there is serious foreseeable risk to identifiable people. I would then consider the minimum necessary lawful disclosure through police or other appropriate channels, including victim safety planning, workplace security advice and potentially warning the newsreader or her representative depending on local law and risk. The decision must be documented with the exact risk rationale and why disclosure was proportionate.
+The dynamic risk factors also need active management. The case manager reports inconsistent medication and renewed alcohol use. I would review mental state, adherence, depot or other assertive treatment options, alcohol use, access to transport, weapons, online behaviour, knowledge of the victim's address and any further breaches or attempts to approach the studio.
 
-Treatment and legal options must be active, not passive. If Marcus is willing to engage, I would intensify follow-up, address alcohol use, review medication and consider depot or other adherence supports. If he refuses treatment or continues approach behaviour and mental illness is driving serious risk, I would consider Mental Health Act assessment or CTO review depending on jurisdiction and criteria. Behavioural restrictions, police orders or forensic community management may be required in parallel; psychiatric treatment alone does not replace victim protection.
+The confidentiality question must be handled lawfully and proportionately. I would not treat warning the newsreader as an all-or-nothing breach. I would consider minimum-necessary information sharing through police or other appropriate channels, victim safety planning, workplace security advice and, where risk justifies it, direct or indirect warning depending on local law. The rationale should be documented clearly.
 
-My final advice would be that the team should not simply rely on police warnings or Marcus's denial. The stem contains delusional fixation, identified victim, perceived rival, approach behaviour, non-adherence and alcohol relapse. A defensible consultant plan must integrate psychiatric treatment, police liaison, victim safety, lawful information sharing, documentation and ongoing monitoring of escalation.`,
+My advice would be that the team should not simply rely on Marcus's denial or on police having warned him. A defensible consultant plan integrates psychiatric treatment, alcohol intervention, forensic risk management, police liaison, victim safety, lawful information sharing and monitoring of escalation. If risk cannot be safely managed voluntarily, Mental Health Act assessment or CTO review may be required depending on jurisdiction and criteria.`,
   },
   {
     id: "FOR-002",
     questionNumber: "MEQ-066",
     topic: "forensic",
     difficulty: "consultant",
-    title: "NGMI report and fitness to stand trial",
+    title: "NGMI Report and Fitness to Stand Trial",
     candidateRole: "Consultant psychiatrist, forensic psychiatry service",
     setting: "Court-ordered forensic assessment",
     stem: `You are a forensic consultant psychiatrist asked to prepare a court report for Arun, a 31-year-old man charged with aggravated assault after stabbing a stranger at a bus stop.
@@ -111,88 +121,96 @@ The solicitor asks whether Arun is "not guilty by reason of mental illness." The
     signals: [
       {
         id: "s1",
-        name: "Mental state at time of offence",
+        name: "Offence mental state must be mapped to the legal test",
         category: "diagnosis_formulation",
         severity: "critical",
-        clueInStem: "The man was a demon wearing human skin",
-        whyItMatters: "NGMI/mental impairment opinions require analysis of mental state at the time of alleged offence, not only current diagnosis.",
-        modelWording: "Assess whether psychosis at the time of offence impaired understanding of nature/quality or wrongfulness of the act according to jurisdictional legal tests.",
+        clueInStem: "Arun says, \"The man was a demon wearing human skin, and I had to stop him before he killed children.\"",
+        whyItMatters: "Missing this signal means the candidate has not linked the delusional account to the legal criteria for criminal responsibility at the time of the alleged offence.",
+        modelWording: "Assess the alleged offence mental state against the jurisdictional legal test because the demon belief may affect nature, quality or wrongfulness of the act.",
         keywords: ["NGMI", "mental impairment", "psychosis", "offence mental state", "wrongfulness", "legal test"],
       },
       {
         id: "s2",
-        name: "Fitness to stand trial concern",
+        name: "Current understanding of court process is impaired",
         category: "capacity",
         severity: "critical",
-        clueInStem: "repeatedly asks what court is",
-        whyItMatters: "Fitness requires ability to understand proceedings, instruct counsel and participate, separate from NGMI.",
-        modelWording: "Assess fitness to stand trial separately from criminal responsibility, focusing on understanding proceedings and ability to instruct counsel.",
+        clueInStem: "At interview he is disorganised, repeatedly asks what court is, and says, \"My lawyer is part of the demon network.\"",
+        whyItMatters: "Missing this signal means the candidate has conflated psychosis with NGMI while overlooking present fitness to participate in proceedings.",
+        modelWording: "Assess fitness to stand trial separately because repeatedly asking what court is suggests impaired understanding of proceedings.",
         keywords: ["fitness to stand trial", "court understanding", "instruct counsel", "participation", "legal capacity", "forensic assessment"],
       },
       {
         id: "s3",
-        name: "Paranoid belief about lawyer",
+        name: "Paranoid belief about lawyer may impair instructions",
         category: "consent_refusal",
         severity: "important",
-        clueInStem: "My lawyer is part of the demon network.",
-        whyItMatters: "Paranoia toward counsel may impair ability to instruct and engage in defence.",
-        modelWording: "Assess whether paranoid beliefs about his lawyer impair his ability to communicate rationally with counsel.",
+        clueInStem: "At interview he is disorganised, repeatedly asks what court is, and says, \"My lawyer is part of the demon network.\"",
+        whyItMatters: "Missing this signal means the candidate has not assessed whether Arun can rationally communicate with the very person meant to represent him.",
+        modelWording: "Assess ability to instruct counsel because the belief that his lawyer is part of the demon network may prevent rational communication.",
         keywords: ["paranoia", "lawyer", "fitness", "instructing counsel", "rational communication", "delusion"],
       },
       {
         id: "s4",
-        name: "Untreated psychosis predating offence",
+        name: "Collateral records support a longitudinal psychosis timeline",
         category: "collateral",
         severity: "important",
-        clueInStem: "untreated psychosis for several months before the alleged offence.",
-        whyItMatters: "Collateral timeline supports assessment of offence-related mental state.",
-        modelWording: "Use collateral and prison health records to establish longitudinal psychosis before and during the alleged offence.",
+        clueInStem: "Prison health records show untreated psychosis for several months before the alleged offence.",
+        whyItMatters: "Missing this signal means the candidate has relied only on current interview comments rather than reconstructing the mental state before and during the alleged offence.",
+        modelWording: "Use prison health records and other collateral to establish the psychosis timeline before, during and after the alleged offence.",
         keywords: ["collateral records", "prison health", "timeline", "untreated psychosis", "offence", "longitudinal history"],
       },
       {
         id: "s5",
-        name: "Clinical versus legal standard",
+        name: "Psychiatrist provides expert opinion, not the legal verdict",
         category: "ethics",
         severity: "important",
-        clueInStem: "not guilty by reason of mental illness.",
-        whyItMatters: "The expert provides psychiatric opinion mapped to legal criteria, not a legal verdict.",
-        modelWording: "Clarify that the psychiatrist gives an expert opinion addressing legal criteria but the court determines the legal outcome.",
+        clueInStem: "The solicitor asks whether Arun is \"not guilty by reason of mental illness.\"",
+        whyItMatters: "Missing this signal means the candidate has accepted the solicitor's wording as if the psychiatrist determines guilt or the legal outcome.",
+        modelWording: "Clarify forensic role because the psychiatrist maps clinical evidence to legal criteria while the court determines the verdict.",
         keywords: ["expert witness", "legal criteria", "court decision", "clinical opinion", "forensic report", "role clarity"],
       },
       {
         id: "s6",
-        name: "Dual role risk",
+        name: "Treatment recommendations require role clarity",
         category: "governance",
         severity: "optional",
-        clueInStem: "include treatment recommendations in the same report.",
-        whyItMatters: "Forensic evaluator must avoid role confusion between treating and independent expert functions.",
-        modelWording: "Maintain role clarity between independent forensic opinion and treating recommendations, while noting treatment needs where relevant.",
+        clueInStem: "The treating team asks whether you can include treatment recommendations in the same report.",
+        whyItMatters: "Missing this signal means the candidate has not managed potential confusion between independent forensic evaluation and treating-team advice.",
+        modelWording: "Maintain role clarity when including treatment recommendations because independent forensic opinion must remain separate from treating responsibilities.",
         keywords: ["dual role", "forensic report", "treatment recommendations", "independence", "role clarity", "governance"],
+      },
+      {
+        id: "s7",
+        name: "Serious violence charge requires source-based factual analysis",
+        category: "risk_others",
+        severity: "important",
+        clueInStem: "You are a forensic consultant psychiatrist asked to prepare a court report for Arun, a 31-year-old man charged with aggravated assault after stabbing a stranger at a bus stop.",
+        whyItMatters: "Missing this signal means the candidate has not anchored the report in verified offence facts, seriousness of violence and limits of available evidence.",
+        modelWording: "Base the opinion on verified offence facts because a serious stabbing charge requires source-based analysis rather than reliance on Arun's account alone.",
+        keywords: ["aggravated assault", "stabbing", "stranger", "bus stop", "offence facts", "violence", "source-based"],
       },
     ],
     priorityOrder: {
       urgent: ["s1", "s2"],
-      secondary: ["s3", "s4", "s5"],
+      secondary: ["s3", "s4", "s5", "s7"],
       lowYield: ["s6"],
     },
-    modelAnswer: `Arun's report must separate two legal questions that are often confused: fitness to stand trial and criminal responsibility or mental impairment at the time of the alleged offence. The stem gives powerful evidence of psychosis, but a forensic consultant cannot simply write "psychotic, therefore NGMI." His statement about the alleged victim, "The man was a demon wearing human skin," is highly relevant to his mental state at the time of the stabbing because it suggests he may have misperceived the nature of the person and acted under a delusional belief. However, the legal question is jurisdiction-specific: whether the mental impairment affected his understanding of the nature and quality of the act, wrongfulness, or another statutory criterion. The court decides the legal outcome; I provide an expert psychiatric opinion mapped to the legal test.
+    modelAnswer: `Arun's report must separate two legal questions that are often confused: criminal responsibility at the time of the alleged offence and current fitness to stand trial. He is charged with aggravated assault after stabbing a stranger at a bus stop, so the opinion must be anchored in verified offence facts, witness material, police information and clinical records, not only Arun's current account.
 
-Fitness is a separate present-focused question. Arun "repeatedly asks what court is" and says, "My lawyer is part of the demon network." These are not merely psychotic symptoms; they may directly impair his ability to understand proceedings, instruct counsel, follow evidence, participate rationally, and make decisions about plea or defence. I would assess whether he understands the charge, the roles of judge, magistrate, jury, prosecutor and defence lawyer, the possible outcomes, the adversarial nature of proceedings, and whether he can communicate with counsel in a rational way. His paranoid belief about his lawyer is particularly important because it may prevent him from giving instructions even if he can repeat some factual information.
+The mental-state-at-offence issue is raised by Arun's statement, "The man was a demon wearing human skin, and I had to stop him before he killed children." That may be highly relevant to whether psychosis affected his understanding of the nature or quality of the act, wrongfulness, or another jurisdiction-specific legal criterion. I would not simply write "psychotic, therefore NGMI"; the court decides the legal outcome, and my role is to map clinical evidence to the legal test.
 
-The prison health records showing "untreated psychosis for several months before the alleged offence" are critical collateral. For an opinion on mental state at the time of the alleged offence, I would reconstruct the timeline using police facts, witness statements, clinical records, prison health records, family collateral, substance-use information and my interview. I would look for evidence of psychotic symptoms before, during and after the stabbing, as well as any motive, planning, concealment, intoxication or behaviour suggesting awareness of wrongfulness. The delusional statement about demons is highly relevant, but I would not rely on one interview statement alone.
+Fitness is a separate present-focused question. Arun is disorganised, repeatedly asks what court is, and says, "My lawyer is part of the demon network." Those features may impair his ability to understand the proceedings, instruct counsel, follow evidence, participate rationally and make decisions about plea or defence. The paranoid belief about his lawyer is especially important because it may prevent rational communication with counsel.
 
-The solicitor's request about "not guilty by reason of mental illness" requires role clarity. I would explain in the report that the psychiatrist does not determine guilt or the legal verdict. My opinion addresses diagnosis, mental state, capacities relevant to the legal test, fitness, risk and treatment needs within my expertise. I would state sources of information, limitations, inconsistencies and the degree of confidence. If information is insufficient, I would say so rather than overstate.
+The prison health records showing untreated psychosis for several months before the alleged offence are critical. I would reconstruct the timeline before, during and after the stabbing using prison health records, police facts, witness statements, family collateral, substance-use information and my interview. I would also consider evidence of planning, motive, concealment, intoxication or behaviour suggesting awareness of wrongfulness.
 
-The treating team's question about including treatment recommendations in the same report raises a dual-role issue. A forensic report can include treatment needs if requested and relevant, especially if fitness restoration or risk management depends on treatment. However, I would maintain independence and avoid becoming the treating clinician within the same evaluative role. I would distinguish recommendations for mental health care, medication, hospital transfer or fitness restoration from the ultimate legal questions.
-
-My report would therefore address current diagnosis, current fitness, mental state at the time of the offence, the relationship between psychosis and the alleged stabbing, sources and limitations, risk considerations and treatment recommendations if within the referral question. I would avoid conclusory statements unsupported by legal reasoning. The consultant-level task is to translate clinical facts into legal standards without collapsing clinical psychosis, incapacity, criminal responsibility and treatment need into one undifferentiated opinion.`,
+The solicitor's question about being "not guilty by reason of mental illness" and the treating team's request for treatment recommendations both require role clarity. A forensic report can include treatment needs if relevant to fitness restoration, risk or court disposal, but I would distinguish that from my independent opinion. The final report should state sources, limitations, uncertainties, diagnosis, fitness opinion, mental-state-at-offence opinion and any treatment recommendations within the referral question.`,
   },
   {
     id: "FOR-003",
     questionNumber: "MEQ-067",
     topic: "forensic",
     difficulty: "consultant",
-    title: "Conditional discharge of forensic patient",
+    title: "Conditional Discharge of Forensic Patient",
     candidateRole: "Consultant forensic psychiatrist, community forensic service",
     setting: "Forensic tribunal conditional discharge review",
     stem: `You are the consultant forensic psychiatrist reviewing Malik, a 38-year-old forensic patient conditionally discharged after a serious assault during methamphetamine-induced psychosis.
@@ -204,80 +222,90 @@ The victim lives in the same suburb and has requested notification if Malik's co
     signals: [
       {
         id: "s1",
-        name: "Substance relapse risk linked to index offence",
+        name: "Missed drug screens reactivate the index-violence pathway",
         category: "substance_use",
         severity: "critical",
-        clueInStem: "missed two urine drug screens",
-        whyItMatters: "Missed screens may indicate relapse risk directly linked to prior serious violence.",
-        modelWording: "Treat missed drug screens and contact with drug-using peers as dynamic risk factors given the index offence occurred during methamphetamine psychosis.",
+        clueInStem: "His support worker reports he missed two urine drug screens and was seen with former drug-using peers.",
+        whyItMatters: "Missing this signal means the candidate has treated missed screens as minor non-compliance despite the index assault occurring during methamphetamine-induced psychosis.",
+        modelWording: "Treat missed drug screens as high-significance risk data because substance relapse is directly linked to Malik's serious assault pathway.",
         keywords: ["missed drug screens", "methamphetamine", "index offence", "dynamic risk", "relapse", "violence"],
       },
       {
         id: "s2",
-        name: "Victim proximity and safety",
+        name: "Victim proximity requires active safety planning",
         category: "risk_others",
         severity: "critical",
-        clueInStem: "The victim lives in the same suburb",
-        whyItMatters: "Geographic proximity increases risk and requires victim safety planning and condition review.",
-        modelWording: "Assess victim safety and geographic proximity, including whether exclusion zones or notification conditions remain adequate.",
+        clueInStem: "The victim lives in the same suburb and has requested notification if Malik's conditions change.",
+        whyItMatters: "Missing this signal means the candidate has not recognised an identifiable victim whose safety may be affected by any change in conditions.",
+        modelWording: "Assess victim safety and proximity because the victim lives locally and has asked to be notified about condition changes.",
         keywords: ["victim safety", "proximity", "exclusion zone", "conditional discharge", "violence risk", "notification"],
       },
       {
         id: "s3",
-        name: "Poor insight into supervision",
+        name: "Minimisation of conditions threatens community manageability",
         category: "diagnosis_formulation",
         severity: "important",
-        clueInStem: "I'm not a prisoner anymore.",
-        whyItMatters: "Minimising conditions may predict non-adherence and escalating risk.",
-        modelWording: "Assess insight into forensic conditions and whether minimisation undermines community manageability.",
+        clueInStem: "Malik says, \"Everyone deserves a night off; I'm not a prisoner anymore.\"",
+        whyItMatters: "Missing this signal means the candidate has not recognised minimisation of forensic conditions as a predictor of non-adherence and escalating risk.",
+        modelWording: "Assess insight into forensic conditions because minimising them as imprisonment may undermine community manageability.",
         keywords: ["insight", "forensic conditions", "minimisation", "community manageability", "supervision"],
       },
       {
         id: "s4",
-        name: "Medication adherence ambivalence",
+        name: "Medication side effects may drive non-adherence",
         category: "consent_refusal",
         severity: "important",
-        clueInStem: `medication makes him "slow and useless."`,
-        whyItMatters: "Side effects may drive non-adherence and relapse unless addressed.",
-        modelWording: "Review medication adherence and side effects because treatment ambivalence may increase relapse risk.",
+        clueInStem: "He denies psychotic symptoms and says medication makes him \"slow and useless.\"",
+        whyItMatters: "Missing this signal means the candidate has tightened control without addressing treatment burden that may drive relapse or disengagement.",
+        modelWording: "Review medication efficacy and side effects because feeling slow and useless may lead to covert non-adherence and relapse.",
         keywords: ["medication adherence", "side effects", "relapse prevention", "forensic patient", "treatment ambivalence"],
       },
       {
         id: "s5",
-        name: "Possible breach of geographic conditions",
+        name: "Police sighting near offence location may indicate breach or preoccupation",
         category: "governance",
         severity: "important",
-        clueInStem: "seen near the street where the assault occurred.",
-        whyItMatters: "Potential breach requires factual verification and tribunal/police liaison.",
-        modelWording: "Verify possible condition breach and liaise with police, tribunal and supervising agencies.",
+        clueInStem: "Police report Malik was recently seen near the street where the assault occurred.",
+        whyItMatters: "Missing this signal means the candidate has not verified a possible geographic breach or return to a high-risk offence location.",
+        modelWording: "Verify the police sighting urgently because proximity to the offence street may represent breach, relapse or renewed preoccupation.",
         keywords: ["condition breach", "police liaison", "tribunal", "geographic restriction", "supervision", "verification"],
       },
       {
         id: "s6",
-        name: "Recall versus enhanced supervision",
+        name: "Recall must be proportionate to verified risk escalation",
         category: "disposition",
         severity: "optional",
-        clueInStem: "whether recall is required.",
-        whyItMatters: "Consultant must weigh proportional response: enhanced conditions, treatment adjustment or recall.",
-        modelWording: "Recommend proportionate response ranging from intensified supervision to recall depending on verified risk escalation.",
+        clueInStem: "The tribunal asks whether conditional discharge remains appropriate or whether recall is required.",
+        whyItMatters: "Missing this signal means the candidate has either ignored risk escalation or treated recall as a punitive response to uncertainty.",
+        modelWording: "Recommend recall or enhanced conditions proportionately because the decision depends on verified risk escalation and community manageability.",
         keywords: ["recall", "enhanced supervision", "conditional discharge", "proportionality", "community risk", "tribunal"],
+      },
+      {
+        id: "s7",
+        name: "Supported accommodation and appointment attendance are protective but insufficient",
+        category: "disposition",
+        severity: "important",
+        clueInStem: "Malik has been living in supported accommodation for nine months and attending appointments.",
+        whyItMatters: "Missing this signal means the candidate has not balanced protective engagement against new dynamic risks before advising recall or continued discharge.",
+        modelWording: "Weigh supported accommodation and appointment attendance as protective factors because they may support enhanced supervision if risk remains manageable.",
+        keywords: ["supported accommodation", "appointments", "protective factors", "community manageability", "conditional discharge", "engagement"],
       },
     ],
     priorityOrder: {
       urgent: ["s1", "s2"],
-      secondary: ["s3", "s4", "s5"],
+      secondary: ["s3", "s4", "s5", "s7"],
       lowYield: ["s6"],
     },
-    modelAnswer: `Malik's conditional discharge review must start from the index offence formulation. He was conditionally discharged after a serious assault during methamphetamine-induced psychosis, so missed drug screens are not a minor compliance issue. The support worker's report that he "missed two urine drug screens" and was seen with former drug-using peers is a dynamic risk warning directly linked to the mechanism of his previous violence. I would treat this as possible early relapse into the same risk pathway, not as ordinary socialising or harmless non-attendance.
+    modelAnswer: `Malik's conditional discharge review must start from the index offence formulation. He was conditionally discharged after a serious assault during methamphetamine-induced psychosis, so missed urine drug screens are not a minor compliance issue. They may indicate relapse into the same pathway that previously led to serious violence.
 
-The second critical issue is victim safety. The stem says, "The victim lives in the same suburb" and has requested notification if Malik's conditions change. That means geographic proximity is not abstract. Police also report Malik was "seen near the street where the assault occurred," which may represent a breach, an accidental encounter or emerging preoccupation; it must be verified urgently. I would liaise with police, the tribunal/supervising authority, supported accommodation and the case manager to clarify location, timing, conditions, exclusion zones, and whether the victim has been exposed to increased risk.
+There are important protective factors. Malik has lived in supported accommodation for nine months and has been attending appointments. Those factors may support continued community management if risk escalation can be verified, contained and reversed, but they do not erase the concern created by missed screens, former drug-using peers and minimisation of conditions.
 
-Malik's statement, "I'm not a prisoner anymore," suggests minimisation of the purpose of forensic conditions. It may reflect a reasonable desire for autonomy after nine months in the community, but in context it also raises concern that he does not understand or accept the risk-management function of supervision. Similarly, his complaint that medication makes him "slow and useless" should not be dismissed. Side effects can drive non-adherence and relapse, and a consultant response must address them actively rather than simply tighten surveillance. I would review medication effectiveness, side effects, adherence, mental state, emerging psychosis, sleep, mood, cognition and substance cravings.
+Victim safety is central. The victim lives in the same suburb and has requested notification if conditions change. Police also report that Malik was recently seen near the street where the assault occurred. That may be accidental, a breach or a sign of renewed preoccupation, and it must be verified urgently through police, tribunal and supervising-agency liaison.
 
-The disposition question is not simply recall or ignore. The tribunal asks whether "recall is required," and the answer depends on whether risk escalation is verified and manageable. If missed screens reflect relapse, if he has breached geographic conditions, if psychosis is returning, if he is avoiding supervision, or if victim proximity cannot be managed, I would recommend recall or inpatient reassessment because community risk may no longer be containable. If investigation shows no substance use, no breach and good engagement, a proportionate alternative may be enhanced supervision, increased testing, substance-use treatment, medication review, reinforced exclusion zones and closer victim-safety planning.
+Malik's statement, "Everyone deserves a night off; I'm not a prisoner anymore," suggests minimisation of the purpose of forensic conditions. His complaint that medication makes him "slow and useless" also matters because side effects can drive covert non-adherence and relapse. I would review mental state, substance use, urine testing, medication adherence, side effects, sleep, psychotic symptoms, contact with peers and understanding of conditions.
 
-The ethical tension is between Malik's liberty and public/victim safety. Conditional discharge is meant to be the least restrictive safe option, not a reward that continues regardless of risk. Equally, recall is a serious deprivation of liberty and should not be used punitively for minor uncertainty. I would make my recommendation based on evidence, dynamic risk and manageability, documenting uncertainty where it remains.
+The tribunal question is not simply recall or ignore. If the missed screens reflect relapse, if he has breached geographic conditions, if psychosis is returning, or if victim safety cannot be managed, recall or inpatient reassessment may be required. If investigation shows no substance use, no breach and good engagement, a proportionate alternative may be enhanced supervision, increased testing, substance-use treatment, medication review, reinforced exclusion zones and victim-safety planning.
 
-My tribunal report would explicitly link missed screens, former drug-using peers, medication ambivalence, possible geographic breach and victim proximity to the original violence formulation. It would state what has been verified, what remains uncertain, what immediate actions have been taken to protect the victim, and why recall or enhanced conditions are the proportionate response. That is the consultant role: not merely to list risks, but to advise the tribunal on whether the community plan still safely contains the known pathway to serious harm.`,
+My tribunal advice would explicitly link the new facts to the original violence pathway and state what is verified, what remains uncertain, and why recall or enhanced conditions are proportionate. Conditional discharge is the least restrictive safe option only while the community plan continues to contain the known pathway to serious harm.`,
   },
 ];
