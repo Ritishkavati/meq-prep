@@ -219,109 +219,107 @@ The mother's calls were also mishandled. She called twice reporting that Daniel 
 I would not manage this as a pharmacy error to avoid a serious incident review. I would notify governance leads, ensure open disclosure to Daniel and his mother, preserve the audit trail, and conduct a formal review of pathology alert ownership, stop-dispense rules, remote prescribing, leave cover, carer escalation and shared clinic-pharmacy protocols.`,
   },
   {
-    id: "QA-011",
+    id: "QA-003",
     questionNumber: "MEQ-055",
-    topic: "quality_assurance",
+    topic: "old_age",
     difficulty: "consultant",
-    title: "Seclusion Injury and Incomplete Documentation",
-    candidateRole: "Clinical director reviewing restrictive practice governance",
-    setting: "Acute inpatient mental health unit",
-    stem: `You are the clinical director of an acute inpatient mental health unit. Overnight, Lena, a 29-year-old woman admitted with psychosis and a history of childhood sexual trauma, was secluded after throwing a plastic chair at the nurses' station. At 3 am she was found on the floor of the seclusion room with a fractured wrist.
+    title: "Dementia, Driving and Enduring Power of Attorney Conflict",
+    candidateRole: "Consultant psychiatrist, old age psychiatry consultation service",
+    setting: "Residential aged care facility",
+    stem: `You are the consultant psychiatrist providing outreach to a residential aged care facility.
 
-The seclusion form states "agitated, unsafe, secluded as per policy." There is no documented attempted de-escalation, no consultant notification, no review time, and no physical observation chart for the first 45 minutes. CCTV shows Lena repeatedly banging on the door and yelling, "Don't lock me in, he locked me in before." A junior nurse says staffing was short and "there was no time to keep writing." The night registrar says security advised seclusion and "everyone agreed." Lena's sister has phoned demanding to know why trauma history was ignored.`,
-    totalMarks: 25,
+George is an 82-year-old retired accountant with vascular dementia who moved into residential care six months ago after several episodes of getting lost while driving. Staff report increasing irritability, accusations that belongings are being stolen, and repeated attempts to leave the facility to "go check the office." George insists he is capable of driving and says, "My son just wants control of my money."
+
+George's son holds enduring power of attorney for finances and health matters. He asks you to formally document that George lacks capacity so the family can sell his car and former home. George's daughter disagrees and says, "Dad still knows exactly what he wants — you're all trying to strip away his independence." Facility staff report escalating conflict between siblings during visits.
+
+Last week George attempted to enter another resident's vehicle in the car park. The GP has already notified the licensing authority regarding driving concerns. The registrar asks whether your role is primarily to assess cognition, mediate the family dispute, or support the facility's risk management concerns.`,
+    totalMarks: 22,
     signals: [
       {
         id: "s1",
-        name: "Fractured wrist in seclusion is a serious restrictive-practice incident",
-        category: "governance",
+        name: "Capacity must be assessed by decision, not globally",
+        category: "capacity",
         severity: "critical",
-        clueInStem: "At 3 am she was found on the floor of the seclusion room with a fractured wrist.",
-        whyItMatters: "Missing this signal means the candidate has not recognised an injury during seclusion as a serious incident requiring immediate reporting and review.",
-        relatedSystem: "Restrictive practices require heightened oversight and documentation.",
-        modelWording: "Report and review the fractured wrist in seclusion as a serious restrictive-practice incident requiring immediate governance response.",
-        keywords: ["fractured wrist", "seclusion", "serious incident", "restrictive practice", "injury", "report", "review"],
+        clueInStem: "George's daughter disagrees and says, \"Dad still knows exactly what he wants — you're all trying to strip away his independence.\"",
+        whyItMatters: "Missing this signal means the candidate has treated dementia as global incapacity or accepted expressed preference as capacity across all decisions.",
+        modelWording: "Assess capacity separately for driving, finances, accommodation and health decisions because vascular dementia does not create global incapacity.",
+        keywords: ["decision-specific", "capacity", "vascular dementia", "not global", "driving capacity", "specific decision"],
       },
       {
         id: "s2",
-        name: "Least restrictive alternatives were not documented",
-        category: "mental_health_act",
+        name: "Driving-related behaviour creates immediate public safety risk",
+        category: "immediate_safety",
         severity: "critical",
-        clueInStem: "There is no documented attempted de-escalation, no consultant notification, no review time, and no physical observation chart for the first 45 minutes.",
-        whyItMatters: "Missing this signal means the candidate has accepted seclusion without evidence that de-escalation or alternatives were attempted.",
-        relatedLegal: "Restrictive practice legality depends on necessity, proportionality and documentation.",
-        modelWording: "Examine whether seclusion was necessary and least restrictive because no attempted de-escalation was documented.",
-        keywords: ["de-escalation", "least restrictive", "seclusion", "necessity", "proportionate", "alternative", "document"],
+        clueInStem: "Last week George attempted to enter another resident's vehicle in the car park.",
+        whyItMatters: "Missing this signal means the candidate has delayed action on an active driving-related risk while the family dispute continues.",
+        modelWording: "Act on driving risk immediately because attempting to enter another resident's vehicle shows ongoing public and resident safety concerns.",
+        keywords: ["driving risk", "public safety", "vehicle", "licensing authority", "immediate", "means restriction"],
       },
       {
         id: "s3",
-        name: "Observation gap created immediate safety risk",
-        category: "immediate_safety",
-        severity: "critical",
-        clueInStem: "There is no documented attempted de-escalation, no consultant notification, no review time, and no physical observation chart for the first 45 minutes.",
-        whyItMatters: "Missing this signal means the candidate has not identified that absent observations may have delayed detection of injury or deterioration.",
-        relatedRisk: "Observation gap may have contributed to delayed detection of injury.",
-        modelWording: "Review the 45-minute observation gap because seclusion requires monitoring to detect injury, collapse and escalating distress.",
-        keywords: ["observation", "45 minutes", "physical observations", "chart", "monitor", "seclusion room"],
+        name: "EPOA request creates potential conflict of interest",
+        category: "governance",
+        severity: "important",
+        clueInStem: "He asks you to formally document that George lacks capacity so the family can sell his car and former home.",
+        whyItMatters: "Missing this signal means the candidate has allowed a family financial objective to frame an independent clinical capacity assessment.",
+        modelWording: "Maintain independence because the son's EPOA request to support asset sale creates a potential conflict of interest.",
+        keywords: ["EPOA", "conflict of interest", "neutral", "financial", "asset sale", "independent", "documentation"],
       },
       {
         id: "s4",
-        name: "Seclusion reactivated trauma and worsened distress",
-        category: "trauma",
-        severity: "critical",
-        clueInStem: "CCTV shows Lena repeatedly banging on the door and yelling, \"Don't lock me in, he locked me in before.\"",
-        whyItMatters: "Missing this signal means the candidate has not recognised that Lena explicitly linked confinement to previous trauma.",
-        relatedCultural: "Trauma history must shape restrictive practice planning, not sit as background information.",
-        modelWording: "Treat Lena's words as a trauma signal because seclusion may have re-traumatised her and contributed to escalation.",
-        keywords: ["trauma", "locked me in", "re-traumatisation", "childhood sexual trauma", "trauma-informed", "distress"],
+        name: "Sibling conflict is worsening George's distress and care environment",
+        category: "family_carer",
+        severity: "important",
+        clueInStem: "Facility staff report escalating conflict between siblings during visits.",
+        whyItMatters: "Missing this signal means the candidate has not recognised family conflict as a clinical and environmental contributor to behavioural symptoms.",
+        modelWording: "Address sibling conflict through structured communication because conflict during visits may worsen George's distress and behavioural symptoms.",
+        keywords: ["family conflict", "siblings", "BPSD", "distress", "behavioural symptoms", "family meeting"],
       },
       {
         id: "s5",
-        name: "Consultant notification was missing despite high-risk seclusion",
-        category: "mdt_conflict",
+        name: "Paranoia and exit-seeking require BPSD assessment",
+        category: "diagnosis_formulation",
         severity: "important",
-        clueInStem: "There is no documented attempted de-escalation, no consultant notification, no review time, and no physical observation chart for the first 45 minutes.",
-        whyItMatters: "Missing this signal means the candidate has not identified absent senior oversight in restrictive practice involving injury and complex trauma.",
-        relatedSystem: "Consultant accountability cannot be replaced by security or informal team agreement.",
-        modelWording: "Review the absence of consultant notification because complex trauma, seclusion and injury require senior medical oversight.",
-        keywords: ["consultant notification", "senior review", "medical oversight", "supervision", "notify consultant"],
+        clueInStem: "Staff report increasing irritability, accusations that belongings are being stolen, and repeated attempts to leave the facility to \"go check the office.\"",
+        whyItMatters: "Missing this signal means the candidate has treated dementia-related behavioural symptoms as character or family dispute rather than assessable clinical symptoms.",
+        modelWording: "Assess BPSD including irritability, theft accusations and exit-seeking because these symptoms need non-pharmacological formulation and management.",
+        keywords: ["BPSD", "paranoia", "exit-seeking", "non-pharmacological", "vascular dementia", "behavioural management"],
       },
       {
         id: "s6",
-        name: "Short staffing explains context but not absent documentation",
+        name: "Consultant role must integrate cognition, risk, family and legal issues",
         category: "system_pressure",
-        severity: "important",
-        clueInStem: "A junior nurse says staffing was short and \"there was no time to keep writing.\"",
-        whyItMatters: "Missing this signal means the candidate has either blamed the nurse or accepted staffing pressure as an excuse for unsafe seclusion records.",
-        relatedSystem: "Requires review of night staffing, acuity, training and escalation.",
-        modelWording: "Review short staffing as a systems contributor while reinforcing that restrictive-practice documentation and observations remain mandatory.",
-        keywords: ["staffing", "short", "no time", "documentation", "night", "acuity", "system factor"],
+        severity: "optional",
+        clueInStem: "The registrar asks whether your role is primarily to assess cognition, mediate the family dispute, or support the facility's risk management concerns.",
+        whyItMatters: "Missing this signal means the candidate has narrowed the consultant role to cognitive testing rather than integrated old age psychiatry formulation.",
+        modelWording: "Integrate cognition, capacity, BPSD, driving risk, family conflict and legal issues because the role is broader than cognitive testing.",
+        keywords: ["integrated", "consultant role", "not just cognition", "risk", "family", "legal", "systems"],
       },
       {
         id: "s7",
-        name: "Security advice and informal agreement do not authorise seclusion",
+        name: "Licensing authority notification supports but does not complete risk management",
         category: "governance",
         severity: "important",
-        clueInStem: "The night registrar says security advised seclusion and \"everyone agreed.\"",
-        whyItMatters: "Missing this signal means the candidate has allowed informal group consensus and security advice to replace clinician-led legal reasoning.",
-        modelWording: "Clarify decision accountability because security advice and informal agreement do not replace clinical authorisation, documentation and review.",
-        keywords: ["security advised", "everyone agreed", "accountability", "clinical authorisation", "seclusion decision", "registrar"],
+        clueInStem: "The GP has already notified the licensing authority regarding driving concerns.",
+        whyItMatters: "Missing this signal means the candidate has assumed licensing notification alone manages immediate access-to-vehicle and facility safety risk.",
+        modelWording: "Support the licensing notification and address means restriction because formal reporting does not by itself prevent attempted driving.",
+        keywords: ["licensing authority", "GP", "driving concerns", "means restriction", "notification", "vehicle access"],
       },
     ],
     priorityOrder: {
-      urgent: ["s1", "s2", "s3", "s4"],
-      secondary: ["s5", "s6", "s7"],
-      lowYield: [],
+      urgent: ["s1", "s2"],
+      secondary: ["s3", "s4", "s5", "s7"],
+      lowYield: ["s6"],
     },
-    modelAnswer: `This is a serious restrictive-practice incident. Lena sustained a fractured wrist in seclusion, and the review must immediately address her physical injury, psychological distress, incident reporting, preservation of CCTV and open disclosure with Lena and, where appropriate, her sister.
+    modelAnswer: `My role is integrated rather than limited to cognitive testing or family mediation. George has vascular dementia, driving-related risk, possible BPSD, family conflict and EPOA issues, all of which affect safety and capacity.
 
-The seclusion documentation is inadequate. The form says only "agitated, unsafe, secluded as per policy," with no documented de-escalation, no consultant notification, no review time and no physical observation chart for the first 45 minutes. That means the team has not demonstrated that seclusion was necessary, proportionate, least restrictive or properly monitored.
+Capacity must be assessed decision-specifically. George may know what he wants, but that does not answer whether he can understand, retain, use and weigh information about driving, finances, accommodation or health care. I would not declare global incapacity simply to enable asset sale.
 
-The trauma issue is central. CCTV shows Lena banging on the door and yelling, "Don't lock me in, he locked me in before." Given her history of childhood sexual trauma, this should have triggered urgent trauma-informed review, consideration of ending or modifying seclusion, and alternative engagement strategies.
+Driving risk is immediate. George moved into care after getting lost while driving and last week attempted to enter another resident's vehicle. The GP has notified the licensing authority, which is appropriate, but the facility and family still need practical means restriction so he cannot access vehicles while the process unfolds.
 
-The explanations from staff need a just-culture response. Short staffing and acuity may be real contributors, but they do not remove the obligation to observe and document seclusion. Similarly, security advice and the statement that "everyone agreed" do not replace clinician-led legal reasoning or consultant oversight.
+The son's request creates a potential conflict of interest because he holds EPOA and wants documentation that allows sale of the car and former home. I would document my independence and base the capacity opinion on clinical evidence, not family financial objectives. The daughter's concern about independence should also be acknowledged, because capacitous adults may make decisions others dislike.
 
-The governance review should examine seclusion authorisation, observation practice, trauma-informed alternatives, consultant notification, night staffing, staff training, physical monitoring and documentation standards. The aim is to learn and prevent recurrence, not simply blame the junior nurse or registrar.`,
+George's irritability, theft accusations and repeated attempts to leave to "go check the office" require BPSD formulation and management. I would review triggers, pain, delirium, environment, unmet needs and non-pharmacological strategies. Escalating sibling conflict during visits should be addressed through a structured family meeting so the facility receives consistent guidance and George is not placed in the middle of a dispute.`,
   },
   {
     id: "QA-004",
@@ -1066,211 +1064,5 @@ The registrar's distress and fear of calling the consultant are central. A Stage
 The system also needs review. The consultant was covering three hospitals, and the email instruction to use judgement overnight unless absolutely necessary was too vague for a junior registrar managing high-risk ED discharges. The service needs mandatory escalation triggers, including ligature self-harm, high-risk discharge, custodial presentations and repeat self-harm.
 
 I would support the registrar without scapegoating, ensure Talia's safety, complete incident reporting and review the after-hours roster, consultant accessibility, supervision expectations, documentation standards and ED interface. The ED director's concern that trainees are managing unacceptable risk should be treated as a governance signal requiring service-level action.`,
-  },
-  {
-    id: "QA-012",
-    questionNumber: "MEQ-063",
-    topic: "quality_assurance",
-    difficulty: "consultant",
-    title: "Repeated Bipolar Admissions and Carer Burnout",
-    candidateRole: "Consultant psychiatrist, community continuing care team",
-    setting: "Regional community mental health service",
-    stem: `You are the consultant psychiatrist in a regional community continuing care team.
-
-Maria is a 48-year-old woman with bipolar I disorder and seven admissions in the past four years, mostly following medication cessation during hypomanic periods. Her husband reports she becomes "brilliant for a few weeks" before stopping lithium because she believes she no longer needs treatment. During recent episodes she has accumulated large debts and driven long distances without sleep.
-
-Maria was discharged from the inpatient unit three weeks ago after a manic relapse. At today's review she says, "Lithium takes away who I am." She admits reducing the dose herself because she wants "more energy to start a business." Her husband becomes visibly distressed and says, "I can't keep doing this every year." He reports hiding car keys and monitoring Maria's medications because he fears another relapse.
-
-The case manager believes Maria requires intensive monitoring, while Maria says the team is "treating me like a child." The registrar asks whether ongoing assertive follow-up is justified when Maria is not currently psychotic and technically attends appointments voluntarily.`,
-    totalMarks: 22,
-    signals: [
-      {
-        id: "s1",
-        name: "Lithium ambivalence is identity-based, not simple non-compliance",
-        category: "diagnosis_formulation",
-        severity: "critical",
-        clueInStem: "At today's review she says, \"Lithium takes away who I am.\"",
-        whyItMatters: "Missing this signal means the candidate has treated adherence as education-only rather than formulating the meaning of mood stabilisation for Maria.",
-        modelWording: "Explore the identity meaning of lithium because perceived loss of self, energy and creativity is driving dose reduction.",
-        keywords: ["ambivalence", "lithium adherence", "identity", "bipolar disorder", "partial insight"],
-      },
-      {
-        id: "s2",
-        name: "Historical mania consequences justify assertive relapse prevention",
-        category: "risk_self",
-        severity: "critical",
-        clueInStem: "During recent episodes she has accumulated large debts and driven long distances without sleep.",
-        whyItMatters: "Missing this signal means the candidate has ignored serious historical behavioural risk because Maria is not currently psychotic.",
-        modelWording: "Justify assertive follow-up using specific past harms because debts, sleepless driving and repeated admissions show high relapse consequence.",
-        keywords: ["relapse prevention", "mania", "behavioural risk", "historical risk", "dangerous driving", "assertive"],
-      },
-      {
-        id: "s3",
-        name: "Husband is over-functioning and burning out",
-        category: "family_carer",
-        severity: "important",
-        clueInStem: "Her husband becomes visibly distressed and says, \"I can't keep doing this every year.\" He reports hiding car keys and monitoring Maria's medications because he fears another relapse.",
-        whyItMatters: "Missing this signal means the candidate has relied on an exhausted carer to provide unpaid relapse monitoring and risk containment.",
-        modelWording: "Assess carer burden and reduce reliance on the husband because hiding keys and monitoring medication is unsustainable.",
-        keywords: ["carer burnout", "over-functioning", "relapse monitoring", "family strain", "husband"],
-      },
-      {
-        id: "s4",
-        name: "Assertive follow-up must be framed as collaborative, not infantilising",
-        category: "ethics",
-        severity: "important",
-        clueInStem: "The case manager believes Maria requires intensive monitoring, while Maria says the team is \"treating me like a child.\"",
-        whyItMatters: "Missing this signal means the candidate has not addressed Maria's experience of care as paternalistic and autonomy-threatening.",
-        modelWording: "Frame monitoring collaboratively because Maria's experience of being treated like a child can undermine engagement and autonomy.",
-        keywords: ["autonomy", "assertive follow-up", "paternalism", "collaborative care", "shared decision-making"],
-      },
-      {
-        id: "s5",
-        name: "Relapse pattern allows advance planning",
-        category: "governance",
-        severity: "important",
-        clueInStem: "Her husband reports she becomes \"brilliant for a few weeks\" before stopping lithium because she believes she no longer needs treatment.",
-        whyItMatters: "Missing this signal means the candidate has not converted a predictable relapse signature into a prevention plan.",
-        modelWording: "Develop an advance relapse plan because becoming 'brilliant' before stopping lithium is a predictable early warning sign.",
-        keywords: ["early warning signs", "relapse signature", "advance directive", "mania prevention", "advance planning"],
-      },
-      {
-        id: "s6",
-        name: "Repeated admissions indicate need for longitudinal service redesign",
-        category: "system_pressure",
-        severity: "optional",
-        clueInStem: "Maria is a 48-year-old woman with bipolar I disorder and seven admissions in the past four years, mostly following medication cessation during hypomanic periods.",
-        whyItMatters: "Missing this signal means the candidate has treated recurrent admissions as isolated episodes rather than evidence of failed longitudinal care.",
-        modelWording: "Review the longitudinal care model because seven admissions in four years indicates the current relapse-prevention system is not working.",
-        keywords: ["continuity of care", "repeated admissions", "longitudinal care", "service planning", "case management"],
-      },
-      {
-        id: "s7",
-        name: "Current dose reduction is an early relapse warning",
-        category: "immediate_safety",
-        severity: "critical",
-        clueInStem: "She admits reducing the dose herself because she wants \"more energy to start a business.\"",
-        whyItMatters: "Missing this signal means the candidate has not recognised current hypomanic relapse risk despite voluntary attendance.",
-        modelWording: "Respond to current lithium dose reduction urgently because wanting more energy to start a business may indicate early relapse and reduced insight.",
-        keywords: ["reducing dose", "more energy", "start a business", "early relapse", "hypomania", "lithium"],
-      },
-    ],
-    priorityOrder: {
-      urgent: ["s1", "s2", "s7"],
-      secondary: ["s3", "s4", "s5"],
-      lowYield: ["s6"],
-    },
-    modelAnswer: `Maria requires a longitudinal bipolar formulation rather than another episode-based response. Seven admissions in four years, mostly after medication cessation during hypomanic periods, show that the current relapse-prevention system is not working.
-
-The treatment issue is not simple non-compliance. Maria says, "Lithium takes away who I am," and she has reduced the dose because she wants "more energy to start a business." That links identity, energy, possible early hypomania and medication ambivalence. I would explore what lithium means to her, how she experiences stability, and whether side effects or loss of creativity are driving dose reduction.
-
-Historical risk justifies assertive follow-up. During recent episodes she accumulated large debts and drove long distances without sleep. Those consequences are serious even if she is not currently psychotic and attends appointments voluntarily.
-
-Her husband is over-functioning and distressed. Hiding car keys and monitoring medication is an unsustainable relapse-prevention system and risks damaging the relationship. I would assess carer burden, reduce reliance on him as the sole safety monitor and involve him in an agreed plan only with appropriate consent and support.
-
-The care plan should be collaborative so it does not feel like infantilisation. I would develop an advance relapse plan with Maria around her early warning sign of feeling "brilliant," dose reduction, increased energy and business plans. The plan should include medication review, rapid access, carer escalation pathways, debt and driving safeguards, and a clear explanation that assertive follow-up is proportionate to specific past harms rather than a judgement about her autonomy.`,
-  },
-  {
-    id: "QA-003",
-    questionNumber: "MEQ-064",
-    topic: "old_age",
-    difficulty: "consultant",
-    title: "Dementia, Driving and Enduring Power of Attorney Conflict",
-    candidateRole: "Consultant psychiatrist, old age psychiatry consultation service",
-    setting: "Residential aged care facility",
-    stem: `You are the consultant psychiatrist providing outreach to a residential aged care facility.
-
-George is an 82-year-old retired accountant with vascular dementia who moved into residential care six months ago after several episodes of getting lost while driving. Staff report increasing irritability, accusations that belongings are being stolen, and repeated attempts to leave the facility to "go check the office." George insists he is capable of driving and says, "My son just wants control of my money."
-
-George's son holds enduring power of attorney for finances and health matters. He asks you to formally document that George lacks capacity so the family can sell his car and former home. George's daughter disagrees and says, "Dad still knows exactly what he wants — you're all trying to strip away his independence." Facility staff report escalating conflict between siblings during visits.
-
-Last week George attempted to enter another resident's vehicle in the car park. The GP has already notified the licensing authority regarding driving concerns. The registrar asks whether your role is primarily to assess cognition, mediate the family dispute, or support the facility's risk management concerns.`,
-    totalMarks: 22,
-    signals: [
-      {
-        id: "s1",
-        name: "Capacity must be assessed by decision, not globally",
-        category: "capacity",
-        severity: "critical",
-        clueInStem: "George's daughter disagrees and says, \"Dad still knows exactly what he wants — you're all trying to strip away his independence.\"",
-        whyItMatters: "Missing this signal means the candidate has treated dementia as global incapacity or accepted expressed preference as capacity across all decisions.",
-        modelWording: "Assess capacity separately for driving, finances, accommodation and health decisions because vascular dementia does not create global incapacity.",
-        keywords: ["decision-specific", "capacity", "vascular dementia", "not global", "driving capacity", "specific decision"],
-      },
-      {
-        id: "s2",
-        name: "Driving-related behaviour creates immediate public safety risk",
-        category: "immediate_safety",
-        severity: "critical",
-        clueInStem: "Last week George attempted to enter another resident's vehicle in the car park.",
-        whyItMatters: "Missing this signal means the candidate has delayed action on an active driving-related risk while the family dispute continues.",
-        modelWording: "Act on driving risk immediately because attempting to enter another resident's vehicle shows ongoing public and resident safety concerns.",
-        keywords: ["driving risk", "public safety", "vehicle", "licensing authority", "immediate", "means restriction"],
-      },
-      {
-        id: "s3",
-        name: "EPOA request creates potential conflict of interest",
-        category: "governance",
-        severity: "important",
-        clueInStem: "He asks you to formally document that George lacks capacity so the family can sell his car and former home.",
-        whyItMatters: "Missing this signal means the candidate has allowed a family financial objective to frame an independent clinical capacity assessment.",
-        modelWording: "Maintain independence because the son's EPOA request to support asset sale creates a potential conflict of interest.",
-        keywords: ["EPOA", "conflict of interest", "neutral", "financial", "asset sale", "independent", "documentation"],
-      },
-      {
-        id: "s4",
-        name: "Sibling conflict is worsening George's distress and care environment",
-        category: "family_carer",
-        severity: "important",
-        clueInStem: "Facility staff report escalating conflict between siblings during visits.",
-        whyItMatters: "Missing this signal means the candidate has not recognised family conflict as a clinical and environmental contributor to behavioural symptoms.",
-        modelWording: "Address sibling conflict through structured communication because conflict during visits may worsen George's distress and behavioural symptoms.",
-        keywords: ["family conflict", "siblings", "BPSD", "distress", "behavioural symptoms", "family meeting"],
-      },
-      {
-        id: "s5",
-        name: "Paranoia and exit-seeking require BPSD assessment",
-        category: "diagnosis_formulation",
-        severity: "important",
-        clueInStem: "Staff report increasing irritability, accusations that belongings are being stolen, and repeated attempts to leave the facility to \"go check the office.\"",
-        whyItMatters: "Missing this signal means the candidate has treated dementia-related behavioural symptoms as character or family dispute rather than assessable clinical symptoms.",
-        modelWording: "Assess BPSD including irritability, theft accusations and exit-seeking because these symptoms need non-pharmacological formulation and management.",
-        keywords: ["BPSD", "paranoia", "exit-seeking", "non-pharmacological", "vascular dementia", "behavioural management"],
-      },
-      {
-        id: "s6",
-        name: "Consultant role must integrate cognition, risk, family and legal issues",
-        category: "system_pressure",
-        severity: "optional",
-        clueInStem: "The registrar asks whether your role is primarily to assess cognition, mediate the family dispute, or support the facility's risk management concerns.",
-        whyItMatters: "Missing this signal means the candidate has narrowed the consultant role to cognitive testing rather than integrated old age psychiatry formulation.",
-        modelWording: "Integrate cognition, capacity, BPSD, driving risk, family conflict and legal issues because the role is broader than cognitive testing.",
-        keywords: ["integrated", "consultant role", "not just cognition", "risk", "family", "legal", "systems"],
-      },
-      {
-        id: "s7",
-        name: "Licensing authority notification supports but does not complete risk management",
-        category: "governance",
-        severity: "important",
-        clueInStem: "The GP has already notified the licensing authority regarding driving concerns.",
-        whyItMatters: "Missing this signal means the candidate has assumed licensing notification alone manages immediate access-to-vehicle and facility safety risk.",
-        modelWording: "Support the licensing notification and address means restriction because formal reporting does not by itself prevent attempted driving.",
-        keywords: ["licensing authority", "GP", "driving concerns", "means restriction", "notification", "vehicle access"],
-      },
-    ],
-    priorityOrder: {
-      urgent: ["s1", "s2"],
-      secondary: ["s3", "s4", "s5", "s7"],
-      lowYield: ["s6"],
-    },
-    modelAnswer: `My role is integrated rather than limited to cognitive testing or family mediation. George has vascular dementia, driving-related risk, possible BPSD, family conflict and EPOA issues, all of which affect safety and capacity.
-
-Capacity must be assessed decision-specifically. George may know what he wants, but that does not answer whether he can understand, retain, use and weigh information about driving, finances, accommodation or health care. I would not declare global incapacity simply to enable asset sale.
-
-Driving risk is immediate. George moved into care after getting lost while driving and last week attempted to enter another resident's vehicle. The GP has notified the licensing authority, which is appropriate, but the facility and family still need practical means restriction so he cannot access vehicles while the process unfolds.
-
-The son's request creates a potential conflict of interest because he holds EPOA and wants documentation that allows sale of the car and former home. I would document my independence and base the capacity opinion on clinical evidence, not family financial objectives. The daughter's concern about independence should also be acknowledged, because capacitous adults may make decisions others dislike.
-
-George's irritability, theft accusations and repeated attempts to leave to "go check the office" require BPSD formulation and management. I would review triggers, pain, delirium, environment, unmet needs and non-pharmacological strategies. Escalating sibling conflict during visits should be addressed through a structured family meeting so the facility receives consistent guidance and George is not placed in the middle of a dispute.`,
-  },
+  }
 ];
