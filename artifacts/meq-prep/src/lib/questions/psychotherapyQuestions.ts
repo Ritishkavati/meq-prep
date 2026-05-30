@@ -6,7 +6,7 @@ export const PSY_STEMS: QuizStem[] = [
     questionNumber: "MEQ-076",
     topic: "psychotherapy",
     difficulty: "consultant",
-    title: "Splitting and chronic suicidality on an inpatient unit",
+    title: "Splitting and Chronic Suicidality on an Inpatient Unit",
     candidateRole: "Consultant psychiatrist, acute inpatient unit",
     setting: "Metropolitan acute psychiatric inpatient ward",
     stem: `You are the consultant psychiatrist on an acute inpatient unit.
@@ -18,94 +18,32 @@ Over the weekend, Alicia cut her forearm superficially after being told that lea
 The bed manager is requesting discharge because three people are waiting in ED. Alicia's mother rings the ward repeatedly, saying, "Every time you send her home she gets worse." The treating psychologist says prolonged admission may undermine the community DBT plan. The junior registrar asks you whether the safest option is to keep Alicia admitted until she denies suicidal thoughts.`,
     totalMarks: 22,
     signals: [
-      {
-        id: "s1",
-        name: "Chronic suicidality versus acute escalation",
-        category: "risk_self",
-        severity: "critical",
-        clueInStem: "If you discharge me, my blood is on your hands.",
-        whyItMatters: "A consultant must distinguish chronic baseline risk from acute dynamic escalation, otherwise admission decisions become reactive and reinforce maladaptive patterns.",
-        modelWording: "Differentiate Alicia's chronic suicide risk from acute dynamic escalation by assessing intent, planning, means, intoxication and recent loss of supports — discharge must be based on dynamic risk, not threats alone.",
-        keywords: ["chronic suicidality", "dynamic risk", "acute escalation", "baseline risk", "discharge planning", "distinguish"],
-      },
-      {
-        id: "s2",
-        name: "Splitting within the inpatient team",
-        category: "mdt_conflict",
-        severity: "critical",
-        clueInStem: "She is the only one who actually cares whether I live or die.",
-        whyItMatters: "Idealisation of one nurse and devaluation of others divides the team, creates inconsistent care, and increases coercive or rejecting responses that worsen outcomes.",
-        modelWording: "Recognise splitting and idealisation as BPD phenomena dividing the team — provide consultant leadership with a unified plan, consistent boundaries and consistent language across all staff.",
-        keywords: ["splitting", "idealisation", "team division", "consistent boundaries", "unified care plan", "BPD"],
-      },
-      {
-        id: "s3",
-        name: "Iatrogenic risk of prolonged admission",
-        category: "ethics",
-        severity: "important",
-        clueInStem: "prolonged admission may undermine the community DBT plan.",
-        whyItMatters: "Inpatient care may reduce immediate anxiety but worsen dependency, avoidance and loss of community treatment momentum — admission can be harmful if prolonged beyond its clinical purpose.",
-        modelWording: "Consider whether continued admission is iatrogenic by reinforcing dependency and undermining the DBT-based community recovery plan — brief admission with clear goals is preferable to open-ended containment.",
-        keywords: ["iatrogenic admission", "dependency", "DBT", "least restrictive", "therapeutic frame", "prolonged"],
-      },
-      {
-        id: "s4",
-        name: "Staff therapeutic nihilism and countertransference",
-        category: "mdt_conflict",
-        severity: "important",
-        clueInStem: "just reinforcing her behaviour.",
-        whyItMatters: "Dismissive framing of BPD increases invalidation, staff burnout and countertransference-driven unsafe decision-making.",
-        modelWording: "Address staff countertransference and therapeutic nihilism directly — validate staff frustration while reframing self-harm as communication and distress, not manipulation.",
-        keywords: ["countertransference", "therapeutic nihilism", "validation", "staff burnout", "behavioural limits", "reframe"],
-      },
-      {
-        id: "s5",
-        name: "Family anxiety reinforcing admission pressure",
-        category: "family_carer",
-        severity: "important",
-        clueInStem: "Every time you send her home she gets worse.",
-        whyItMatters: "Family fear escalates pressure for ongoing admission and may obscure collaborative safety planning — family psychoeducation about chronic risk is essential.",
-        modelWording: "Engage Alicia's mother to validate concern, explain chronic risk formulation, and include family in a realistic safety and crisis plan rather than using family anxiety to drive admission decisions.",
-        keywords: ["family anxiety", "carer involvement", "safety plan", "psychoeducation", "chronic risk", "mother"],
-      },
-      {
-        id: "s6",
-        name: "Bed pressure as unsafe primary driver",
-        category: "system_pressure",
-        severity: "optional",
-        clueInStem: "three people are waiting in ED.",
-        whyItMatters: "Bed pressure is a real system constraint but must not become the clinical rationale for discharge — the decision must be clinically defensible and documented as such.",
-        modelWording: "Acknowledge bed pressure but ensure discharge is clinically justified, documented with risk reasoning, and linked to a safe community plan — not driven by access block.",
-        keywords: ["bed pressure", "clinical rationale", "safe discharge", "documentation", "system pressure", "access block"],
-      },
+      { id: "s1", name: "Acute self-harm must be separated from baseline chronic risk", category: "risk_self", severity: "critical", clueInStem: "Over the weekend, Alicia cut her forearm superficially after being told that leave would not be approved.", whyItMatters: "Missing this signal means the candidate has not distinguished chronic non-suicidal self-injury from acute escalation triggered by ward limits.", modelWording: "Differentiate acute-on-chronic risk by assessing intent, escalation, function of cutting, access to means and response to limit-setting.", keywords: ["chronic suicidality", "dynamic risk", "acute escalation", "NSSI", "leave refusal", "risk formulation"] },
+      { id: "s2", name: "Discharge threat should not determine admission length alone", category: "risk_self", severity: "critical", clueInStem: "She then told the night registrar, \"If you discharge me, my blood is on your hands.\"", whyItMatters: "Missing this signal means the candidate has allowed a high-emotion threat to drive open-ended admission without a structured risk formulation.", modelWording: "Assess the discharge threat seriously while avoiding reactive admission decisions based only on the wording of the threat.", keywords: ["discharge threat", "blood on your hands", "reactive admission", "dynamic risk", "suicide risk"] },
+      { id: "s3", name: "Idealisation of one nurse is dividing care", category: "mdt_conflict", severity: "critical", clueInStem: "Since admission, she has formed a close relationship with one junior nurse and refuses to speak to other staff, saying, \"She is the only one who actually cares whether I live or die.\"", whyItMatters: "Missing this signal means the candidate has not recognised splitting and special-role dependency that can fragment inpatient care.", modelWording: "Recognise splitting and idealisation by moving care from one junior nurse to a consistent team-based plan.", keywords: ["splitting", "idealisation", "team division", "junior nurse", "consistent boundaries", "BPD"] },
+      { id: "s4", name: "Constant observations may become reactive containment", category: "disposition", severity: "important", clueInStem: "The registrar extended admission and placed her on constant observations.", whyItMatters: "Missing this signal means the candidate has accepted observation escalation without clarifying its purpose, review point or possible iatrogenic effect.", modelWording: "Review the rationale for constant observations because observation should be time-limited, purposeful and linked to dynamic risk.", keywords: ["constant observations", "observation rationale", "reactive containment", "review", "risk management"] },
+      { id: "s5", name: "Team polarisation needs consultant containment", category: "mdt_conflict", severity: "important", clueInStem: "The nursing team is now divided: some staff feel she is \"too risky to discharge,\" while others say the admission is \"just reinforcing her behaviour.\"", whyItMatters: "Missing this signal means the candidate has allowed staff fear and therapeutic nihilism to replace a shared formulation.", modelWording: "Contain team polarisation by validating staff anxiety, challenging dismissive language and creating one agreed care plan.", keywords: ["team polarisation", "therapeutic nihilism", "staff fear", "reinforcing behaviour", "consultant leadership"] },
+      { id: "s6", name: "Bed pressure must not be the discharge rationale", category: "system_pressure", severity: "important", clueInStem: "The bed manager is requesting discharge because three people are waiting in ED.", whyItMatters: "Missing this signal means the candidate has allowed access pressure to contaminate a complex risk and psychotherapy-informed discharge decision.", modelWording: "Acknowledge bed pressure while ensuring any discharge is based on clinical formulation, safety planning and continuity of care.", keywords: ["bed pressure", "ED waiting", "system pressure", "defensible discharge", "access block"] },
+      { id: "s7", name: "Mother's repeated calls reflect carer anxiety and risk history", category: "family_carer", severity: "important", clueInStem: "Alicia's mother rings the ward repeatedly, saying, \"Every time you send her home she gets worse.\"", whyItMatters: "Missing this signal means the candidate has either dismissed family anxiety or allowed it to drive indefinite admission without a shared plan.", modelWording: "Engage Alicia's mother with consent because carer anxiety and past deterioration need to be incorporated into a realistic safety plan.", keywords: ["mother", "carer anxiety", "family", "safety plan", "psychoeducation", "discharge history"] },
+      { id: "s8", name: "Denial of suicidal thoughts is not the sole discharge criterion", category: "ethics", severity: "important", clueInStem: "The junior registrar asks you whether the safest option is to keep Alicia admitted until she denies suicidal thoughts.", whyItMatters: "Missing this signal means the candidate has treated denial of suicidal thoughts as the endpoint rather than assessing function, supports and dynamic risk.", modelWording: "Correct the registrar's discharge threshold because safety depends on formulation, collaboration and supports, not simply denial of suicidal thoughts.", keywords: ["denial", "suicidal thoughts", "discharge criteria", "risk formulation", "registrar supervision"] },
     ],
-    priorityOrder: {
-      urgent: ["s1", "s2"],
-      secondary: ["s3", "s4", "s5"],
-      lowYield: ["s6"],
-    },
-    modelAnswer: `Review Alicia directly and formulate risk as chronic baseline versus acute dynamic escalation — threats alone do not determine admission length.
+    priorityOrder: { urgent: ["s1", "s2", "s3"], secondary: ["s4", "s5", "s6", "s7", "s8"], lowYield: [] },
+    modelAnswer: `Alicia's presentation needs an acute-on-chronic formulation rather than a simple decision to admit or discharge. She has chronic non-suicidal self-injury and multiple previous admissions, but she also cut her forearm after a leave refusal and then told the registrar, "If you discharge me, my blood is on your hands." I would take the threat seriously while assessing intent, planning, access to means, intoxication, mental state change, supports and whether this is an escalation from her baseline pattern.
 
-Assess current suicide risk: intent, plan, means, recent escalation, intoxication, mental state change, and ability to collaborate with a safety plan.
+The interpersonal dynamics on the ward are central. Alicia has idealised one junior nurse as the only person who cares whether she lives or dies and refuses to speak to other staff. That creates splitting, staff anxiety and inconsistent care. I would move the plan from one special relationship to a team-based approach with consistent language, agreed limits and predictable contact.
 
-Recognise splitting and team division. Hold an urgent MDT meeting: agree consistent language, clarify observation rationale, define leave and discharge criteria, support junior staff, and stop special arrangements through one nurse.
+The current admission may be helpful only if it has clear goals. Constant observations and extended admission should be reviewed for their purpose, duration and effect. The nursing team is polarised between seeing Alicia as too risky to discharge and seeing admission as simply reinforcing behaviour. Both positions contain partial truths, so the consultant task is to contain the team, challenge dismissive language and create a shared formulation.
 
-Address therapeutic nihilism: validate staff frustration, reframe self-harm as communication and distress regulation, not manipulation.
+The community DBT plan matters because prolonged admission may undermine the treatment intended to help Alicia manage crises outside hospital. I would liaise with the psychologist, crisis team and community supports to plan a brief, goal-directed step-down with a written safety plan, means restriction, distress-tolerance strategies, follow-up and clear return criteria.
 
-Consider iatrogenic effects of prolonged admission: dependency, reinforcement of crisis behaviour, disruption of DBT plan. Brief admission with clear goals is preferable.
-
-Liaise with community DBT and crisis team to create a step-down plan with brief admission goals, crisis plan, follow-up appointment, means restriction and after-hours pathway.
-
-Involve mother with consent: explain chronic risk formulation and clarify that indefinite admission does not eliminate risk.
-
-Document: acute and chronic risk formulation, MDT consensus, rationale for observations, family communication, contingency plan.`,
+Bed pressure and family pressure must both be acknowledged without allowing either to determine the clinical decision. Alicia's mother repeatedly says she gets worse after discharge, so I would involve her with Alicia's consent, validate her fear and explain that indefinite admission does not remove chronic risk. I would also correct the junior registrar's idea that Alicia must remain admitted until she denies suicidal thoughts; discharge should be based on dynamic risk, collaboration, supports and continuity, not on a single denial-based threshold.`,
   },
   {
     id: "PSY-002",
     questionNumber: "MEQ-077",
     topic: "psychotherapy",
     difficulty: "consultant",
-    title: "Dependency and failed engagement in community BPD care",
+    title: "Dependency and Failed Engagement in Community BPD Care",
     candidateRole: "Consultant psychiatrist, community mental health team",
     setting: "Urban community mental health service",
     stem: `You are the consultant psychiatrist supervising a community mental health team.
@@ -117,94 +55,32 @@ The care coordinator feels overwhelmed and says she is receiving emails on her p
 At review, Nathan says, "If you put limits on contact, that proves you don't care." He denies current suicidal intent but says he may drink and cut himself if left alone. The team asks you to decide whether to close his file, increase contact, or refer him back to ED-based crisis care.`,
     totalMarks: 22,
     signals: [
-      {
-        id: "s1",
-        name: "Engagement failure as clinical data not non-compliance",
-        category: "diagnosis_formulation",
-        severity: "critical",
-        clueInStem: "he is not engaging.",
-        whyItMatters: "Discharging for non-attendance without formulation repeats abandonment and increases crisis use — missed appointments in BPD are attachment behaviour, not simple non-compliance.",
-        modelWording: "Formulate missed appointments and crisis contact as attachment insecurity and affect dysregulation — this is clinical data requiring formulation, not grounds for discharge.",
-        keywords: ["engagement failure", "attachment insecurity", "non-attendance", "formulation", "abandonment", "not non-compliance"],
-      },
-      {
-        id: "s2",
-        name: "Boundary diffusion and unsafe clinician dependency",
-        category: "ethics",
-        severity: "critical",
-        clueInStem: "You are the only person stopping me from ending it.",
-        whyItMatters: "Over-reliance on one clinician with personal phone contact increases risk, causes burnout and creates inconsistent care — this is a clinical governance issue not just a personal boundary issue.",
-        modelWording: "Address dependency on the care coordinator by shifting to team-based boundaried care — stop personal phone contact, document communication boundaries, and prevent single-clinician rescue dynamics.",
-        keywords: ["dependency", "boundary setting", "care coordinator", "team-based care", "rescue dynamic", "personal phone"],
-      },
-      {
-        id: "s3",
-        name: "Personal phone contact — governance and staff safety",
-        category: "governance",
-        severity: "important",
-        clueInStem: "receiving emails on her personal phone.",
-        whyItMatters: "Personal phone contact bypasses governance, creates unsafe expectations, exposes staff to burnout and creates medico-legal risk for the clinician and service.",
-        modelWording: "Stop personal phone contact immediately and establish documented service-based communication boundaries — this is a governance issue requiring formal resolution, not a personal preference.",
-        keywords: ["personal phone", "professional boundaries", "staff safety", "communication plan", "governance", "medico-legal"],
-      },
-      {
-        id: "s4",
-        name: "Diazepam prescribing by GP — overdose and disinhibition risk",
-        category: "risk_self",
-        severity: "important",
-        clueInStem: "prescribing diazepam because the mental health team won't help him.",
-        whyItMatters: "Diazepam in a man with BPD and alcohol misuse increases overdose risk, disinhibition and dependency — the GP's prescribing reflects a system failure requiring urgent liaison.",
-        modelWording: "Liaise urgently with the GP to rationalise diazepam — overdose risk, alcohol interaction, disinhibition and dependence make benzodiazepines high-risk in this presentation.",
-        keywords: ["diazepam", "alcohol misuse", "disinhibition", "overdose risk", "GP liaison", "benzodiazepine"],
-      },
-      {
-        id: "s5",
-        name: "Conditional threats around limits — validate and hold",
-        category: "risk_self",
-        severity: "important",
-        clueInStem: "If you put limits on contact, that proves you don't care.",
-        whyItMatters: "Threats conditional on limit-setting must not coerce unstructured care — they require validation of the underlying fear with consistent maintenance of boundaries.",
-        modelWording: "Respond to conditional threats with validation and consistent limits — explain that predictable boundaries are part of safe care, not rejection, and that limits protect the therapeutic relationship.",
-        keywords: ["conditional threats", "limits", "validation", "boundaries", "safe care", "not rejection"],
-      },
-      {
-        id: "s6",
-        name: "Therapy access blocked by stability requirement",
-        category: "system_pressure",
-        severity: "optional",
-        clueInStem: "reluctant to offer therapy until Nathan is more stable",
-        whyItMatters: "Requiring complete stability before therapy access indefinitely excludes the most unwell patients from evidence-based treatment.",
-        modelWording: "Consider staged therapy engagement with clear expectations rather than requiring complete stability — waiting for perfect conditions before offering DBT may never resolve.",
-        keywords: ["staged therapy", "DBT", "therapy access", "stabilisation", "evidence-based", "not waiting"],
-      },
+      { id: "s1", name: "Missed appointments and crisis contact require formulation", category: "diagnosis_formulation", severity: "critical", clueInStem: "He has missed four psychology appointments but sends multiple late-night emails to his care coordinator saying, \"You are the only person stopping me from ending it.\"", whyItMatters: "Missing this signal means the candidate has labelled non-attendance as non-engagement rather than formulating attachment fear and crisis-driven contact.", modelWording: "Formulate missed appointments and late-night emails as attachment insecurity and affect dysregulation rather than simple non-compliance.", keywords: ["engagement", "attachment insecurity", "non-attendance", "late-night emails", "formulation", "BPD"] },
+      { id: "s2", name: "Single-clinician rescue dynamic creates unsafe dependency", category: "ethics", severity: "critical", clueInStem: "He has missed four psychology appointments but sends multiple late-night emails to his care coordinator saying, \"You are the only person stopping me from ending it.\"", whyItMatters: "Missing this signal means the candidate has allowed one clinician to become the perceived suicide-prevention object for Nathan.", modelWording: "Shift care to a team-based frame because dependency on one care coordinator creates burnout and unsafe crisis expectations.", keywords: ["dependency", "rescue dynamic", "care coordinator", "team-based care", "boundary setting"] },
+      { id: "s3", name: "Personal phone contact is a governance boundary breach", category: "governance", severity: "important", clueInStem: "The care coordinator feels overwhelmed and says she is receiving emails on her personal phone.", whyItMatters: "Missing this signal means the candidate has not addressed communication outside service systems that increases staff and medico-legal risk.", modelWording: "Stop personal phone contact and replace it with documented service-based communication boundaries.", keywords: ["personal phone", "communication boundaries", "staff safety", "governance", "medico-legal"] },
+      { id: "s4", name: "ED presentations after delayed replies show abandonment sensitivity", category: "risk_self", severity: "important", clueInStem: "When the care coordinator does not respond immediately, Nathan presents to ED stating he has been abandoned by the team.", whyItMatters: "Missing this signal means the candidate has not linked crisis escalation to perceived abandonment and inconsistent response patterns.", modelWording: "Address abandonment-triggered ED use by creating predictable response times and a written crisis plan.", keywords: ["abandonment", "ED presentation", "crisis use", "response times", "safety plan"] },
+      { id: "s5", name: "Discharge for non-engagement would repeat abandonment", category: "disposition", severity: "important", clueInStem: "A junior registrar suggests discharging Nathan from the service because \"he is not engaging.\"", whyItMatters: "Missing this signal means the candidate has accepted abrupt closure that is likely to intensify abandonment fears and crisis use.", modelWording: "Avoid abrupt discharge for non-engagement because closure should follow formulation, engagement repair and transition planning.", keywords: ["discharge", "not engaging", "abandonment", "transition", "service closure"] },
+      { id: "s6", name: "Therapy should be staged rather than indefinitely deferred", category: "system_pressure", severity: "important", clueInStem: "The psychologist is reluctant to offer therapy until Nathan is more stable and abstinent from alcohol.", whyItMatters: "Missing this signal means the candidate has accepted a stability threshold that may indefinitely exclude Nathan from evidence-based therapy.", modelWording: "Offer staged therapy engagement because waiting for full stability and abstinence may prevent access to needed treatment.", keywords: ["therapy access", "staged therapy", "DBT", "stability", "alcohol", "engagement"] },
+      { id: "s7", name: "Diazepam with alcohol misuse increases risk", category: "substance_use", severity: "important", clueInStem: "Nathan's GP says he is prescribing diazepam \"because the mental health team won't help him.\"", whyItMatters: "Missing this signal means the candidate has not addressed benzodiazepine prescribing that may increase overdose, dependence and disinhibition.", modelWording: "Liaise with the GP to rationalise diazepam because alcohol misuse and crisis self-harm make benzodiazepines high-risk.", keywords: ["diazepam", "alcohol misuse", "benzodiazepine", "overdose", "disinhibition", "GP liaison"] },
+      { id: "s8", name: "Limits must be validated and maintained", category: "risk_self", severity: "important", clueInStem: "At review, Nathan says, \"If you put limits on contact, that proves you don't care.\"", whyItMatters: "Missing this signal means the candidate has either surrendered boundaries to fear or imposed limits without addressing the attachment meaning.", modelWording: "Validate Nathan's fear while maintaining limits because predictable boundaries are part of safe care, not rejection.", keywords: ["limits", "validation", "boundaries", "safe care", "not rejection", "attachment"] },
     ],
-    priorityOrder: {
-      urgent: ["s1", "s2"],
-      secondary: ["s3", "s4", "s5"],
-      lowYield: ["s6"],
-    },
-    modelAnswer: `Do not frame this as non-engagement. Formulate missed appointments, crisis emails and ED presentations as attachment insecurity and affect dysregulation — this is clinical data, not grounds for discharge.
+    priorityOrder: { urgent: ["s1", "s2"], secondary: ["s3", "s4", "s5", "s6", "s7", "s8"], lowYield: [] },
+    modelAnswer: `Nathan should not be framed as simply not engaging. He misses psychology appointments but sends multiple late-night emails saying, "You are the only person stopping me from ending it," and presents to ED when the care coordinator does not respond immediately. That pattern needs formulation as attachment insecurity, affect dysregulation and fear of abandonment, not as grounds for abrupt service discharge.
 
-Assess current risk: suicidal intent, recent self-harm, alcohol use, access to means, escalation from baseline, capacity to use crisis plan.
+The care arrangement is unsafe because one clinician has become the rescue figure. The care coordinator is overwhelmed and receiving emails on her personal phone, which bypasses service governance and creates unrealistic expectations, staff burnout and medico-legal risk. I would move communication to service channels, document response times and ensure risk is held by the team rather than one clinician.
 
-Address dependency on one clinician: move to team-based care, stop personal phone contact immediately, document communication boundaries, provide predictable response times. This is a governance issue.
+Boundaries must be therapeutic rather than punitive. Nathan says, "If you put limits on contact, that proves you don't care." I would validate the fear behind that statement while explaining that predictable limits are part of safe care. The plan should specify how to seek help, what responses can be expected, and when ED is appropriate.
 
-Support and supervise the care coordinator: validate burden, address boundary diffusion, prevent burnout, ensure no single clinician carries risk alone.
+I would not close his file because he is not engaging, and I would not simply increase unstructured contact. Both responses may reinforce the cycle. The better plan is structured care: scheduled appointments, staged psychological engagement, crisis plan, team formulation, clear communication limits and review of acute risk when he says he may drink and cut himself if left alone.
 
-Create a structured care plan: scheduled appointments, crisis plan, clear limits on emails and calls, ED use only for acute risk, written formulation shared with team.
-
-Liaise with GP urgently regarding diazepam — overdose risk, alcohol interaction and disinhibition make this high-risk.
-
-Engage Nathan directly: validate distress, explain boundaries as safety not rejection, clarify what the service can and cannot provide.
-
-Do not discharge abruptly for non-attendance — this repeats abandonment and increases acute risk.`,
+The system around Nathan also needs repair. The psychologist's requirement that he be more stable and abstinent before therapy may exclude him from the very treatment he needs, so staged engagement should be considered. The GP's diazepam prescribing because the mental health team will not help creates overdose, alcohol-interaction and dependence risks, so I would liaise urgently with the GP and offer a safer shared plan.`,
   },
   {
     id: "PSY-003",
     questionNumber: "MEQ-078",
     topic: "psychotherapy",
     difficulty: "consultant",
-    title: "Chronic NSSI, ED access block and therapeutic nihilism",
+    title: "Chronic NSSI, ED Access Block and Therapeutic Nihilism",
     candidateRole: "Consultant psychiatrist, emergency psychiatry service",
     setting: "Busy metropolitan emergency department, Friday evening",
     stem: `You are the consultant psychiatrist covering a busy metropolitan emergency department on a Friday evening.
@@ -216,86 +92,26 @@ Jordan has presented to ED twelve times in the past three months. The ED consult
 Jordan says, "If you send me home tonight, I'll just cut deeper." There are no psychiatric beds available, and the ED executive is calling hourly about mental health access block. Jordan's partner is in the waiting room and says they are exhausted and cannot provide supervision tonight.`,
     totalMarks: 22,
     signals: [
-      {
-        id: "s1",
-        name: "Chronic NSSI with possible acute escalation — not the same risk",
-        category: "risk_self",
-        severity: "critical",
-        clueInStem: "If you send me home tonight, I'll just cut deeper.",
-        whyItMatters: "A consultant must distinguish chronic baseline NSSI from acute escalation in lethality, intent, distress and supports — Jordan's statement about cutting deeper may indicate escalation requiring different management.",
-        modelWording: "Differentiate chronic NSSI from acute escalation by assessing intent, lethality, intoxication, distress level, access to means and available supports tonight — do not assume chronic pattern means static risk.",
-        keywords: ["chronic NSSI", "acute escalation", "lethality", "dynamic risk", "self-harm", "deeper", "distinguish"],
-      },
-      {
-        id: "s2",
-        name: "Therapeutic nihilism — invalidating and clinically unsafe",
-        category: "mdt_conflict",
-        severity: "critical",
-        clueInStem: "We can't keep admitting them every time they cut.",
-        whyItMatters: "Therapeutic nihilism in ED toward BPD patients directly increases invalidation, worsens outcomes and leads to unsafe premature discharge driven by frustration rather than clinical assessment.",
-        modelWording: "Address therapeutic nihilism in the ED team directly — validate staff frustration while challenging dismissive language and ensuring clinical decisions are based on formulation not exasperation.",
-        keywords: ["therapeutic nihilism", "invalidation", "staff frustration", "BPD", "dismissive", "premature discharge"],
-      },
-      {
-        id: "s3",
-        name: "Superficial wound does not equal low risk",
-        category: "risk_self",
-        severity: "important",
-        clueInStem: "low risk because it's superficial.",
-        whyItMatters: "Wound depth is a poor proxy for suicide risk — intent, escalation pattern, intoxication and loss of protective factors determine risk, not wound severity.",
-        modelWording: "Do not use wound superficiality as a risk proxy — assess intent, function of self-harm, escalation from baseline, intoxication and protective capacity tonight.",
-        keywords: ["superficial", "wound severity", "risk formulation", "intent", "function of self-harm", "poor proxy"],
-      },
-      {
-        id: "s4",
-        name: "Self-harm as affect regulation — understand the function",
-        category: "diagnosis_formulation",
-        severity: "important",
-        clueInStem: "Cutting is the only way I stop myself from doing something worse.",
-        whyItMatters: "Understanding self-harm as affect regulation guides crisis intervention and alternatives — Jordan is telling you cutting prevents something worse, which is clinically important information.",
-        modelWording: "Explore the function of self-harm as affect regulation and identify what Jordan fears doing instead — this is the target for safety planning and distress tolerance alternatives.",
-        keywords: ["affect regulation", "coping strategy", "function of self-harm", "distress tolerance", "safety planning", "worse"],
-      },
-      {
-        id: "s5",
-        name: "Partner burnout — discharge plan cannot rely on unavailable supervision",
-        category: "family_carer",
-        severity: "important",
-        clueInStem: "cannot provide supervision tonight.",
-        whyItMatters: "A discharge plan requiring supervision from an exhausted partner who has stated they cannot provide it tonight is not a safe discharge plan.",
-        modelWording: "Assess partner burnout and do not build a discharge plan dependent on supervision the partner has explicitly said they cannot provide tonight.",
-        keywords: ["carer burnout", "partner supervision", "discharge safety", "unavailable", "exhausted", "cannot provide"],
-      },
-      {
-        id: "s6",
-        name: "Executive pressure — document clinical reasoning independently",
-        category: "system_pressure",
-        severity: "optional",
-        clueInStem: "calling hourly about mental health access block.",
-        whyItMatters: "Executive pressure about access block is a real system constraint but cannot override individual clinical risk formulation — the consultant must document defensible clinical reasoning.",
-        modelWording: "Acknowledge access block while documenting a clinically defensible, least restrictive disposition plan — executive pressure is relevant context, not a clinical reason for discharge.",
-        keywords: ["access block", "bed pressure", "executive pressure", "defensible decision", "least restrictive", "document"],
-      },
+      { id: "s1", name: "Respectful care must recognise Jordan's identity and trauma", category: "cultural_safety", severity: "important", clueInStem: "Jordan is a 26-year-old non-binary person with complex trauma, borderline personality disorder and chronic non-suicidal self-injury.", whyItMatters: "Missing this signal means the candidate may reproduce invalidation by overlooking identity, trauma history and respectful language in crisis care.", modelWording: "Use respectful gender-affirming and trauma-informed engagement because invalidation can worsen distress and disengagement.", keywords: ["non-binary", "trauma-informed", "respectful language", "identity", "engagement"] },
+      { id: "s2", name: "Self-harm function should guide crisis planning", category: "diagnosis_formulation", severity: "critical", clueInStem: "Jordan says, \"Cutting is the only way I stop myself from doing something worse.\"", whyItMatters: "Missing this signal means the candidate has treated cutting only as behaviour rather than understanding the function Jordan is describing.", modelWording: "Explore the function of cutting because Jordan is describing self-harm as affect regulation and prevention of something worse.", keywords: ["function of self-harm", "affect regulation", "distress tolerance", "something worse", "safety planning"] },
+      { id: "s3", name: "Threat to cut deeper may indicate acute escalation", category: "risk_self", severity: "critical", clueInStem: "Jordan says, \"If you send me home tonight, I'll just cut deeper.\"", whyItMatters: "Missing this signal means the candidate has assumed chronic NSSI is static despite a stated escalation in lethality tonight.", modelWording: "Differentiate chronic NSSI from acute escalation by assessing intent, lethality, access to razors and ability to collaborate tonight.", keywords: ["acute escalation", "cut deeper", "NSSI", "lethality", "dynamic risk", "self-harm"] },
+      { id: "s4", name: "Superficial wound is not a sufficient risk formulation", category: "risk_self", severity: "critical", clueInStem: "A psychiatry registrar says Jordan is \"low risk because it's superficial.\"", whyItMatters: "Missing this signal means the candidate has accepted wound depth as a false proxy for suicide or self-harm risk.", modelWording: "Correct the superficial-wound reasoning because risk depends on intent, escalation, function, supports and access to means.", keywords: ["superficial", "wound severity", "risk formulation", "intent", "poor proxy"] },
+      { id: "s5", name: "ED therapeutic nihilism needs containment", category: "mdt_conflict", severity: "important", clueInStem: "The ED consultant says, \"We can't keep admitting them every time they cut.\"", whyItMatters: "Missing this signal means the candidate has allowed staff frustration to become the clinical rationale for discharge.", modelWording: "Address ED therapeutic nihilism by validating frustration while keeping decisions formulation-based and respectful.", keywords: ["therapeutic nihilism", "ED frustration", "BPD", "invalidation", "discharge pressure"] },
+      { id: "s6", name: "Repeated ED use shows failed crisis system", category: "system_pressure", severity: "important", clueInStem: "Jordan has presented to ED twelve times in the past three months.", whyItMatters: "Missing this signal means the candidate has treated each presentation as isolated rather than recognising an ineffective crisis pathway.", modelWording: "Review the repeated ED pattern because twelve presentations in three months indicates the current crisis plan is not working.", keywords: ["repeated presentations", "crisis plan", "ED use", "system failure", "continuity"] },
+      { id: "s7", name: "Partner cannot be used as tonight's supervision plan", category: "family_carer", severity: "important", clueInStem: "Jordan's partner is in the waiting room and says they are exhausted and cannot provide supervision tonight.", whyItMatters: "Missing this signal means the candidate has built discharge safety around a carer who explicitly cannot provide it.", modelWording: "Do not rely on partner supervision tonight because the partner is exhausted and has stated they cannot provide supervision.", keywords: ["partner", "exhausted", "cannot supervise", "carer burnout", "discharge safety"] },
+      { id: "s8", name: "Access block must not override clinical reasoning", category: "system_pressure", severity: "important", clueInStem: "There are no psychiatric beds available, and the ED executive is calling hourly about mental health access block.", whyItMatters: "Missing this signal means the candidate has allowed lack of beds and executive pressure to replace an individual risk and care formulation.", modelWording: "Escalate access block while documenting independent clinical reasoning because bed unavailability is not a risk-management plan.", keywords: ["access block", "no beds", "executive pressure", "clinical reasoning", "least restrictive"] },
     ],
-    priorityOrder: {
-      urgent: ["s1", "s2"],
-      secondary: ["s3", "s4", "s5"],
-      lowYield: ["s6"],
-    },
-    modelAnswer: `Review Jordan directly. Do not accept the registrar's low-risk assessment based on wound superficiality — wound depth is not a risk proxy.
+    priorityOrder: { urgent: ["s2", "s3", "s4"], secondary: ["s1", "s5", "s6", "s7", "s8"], lowYield: [] },
+    modelAnswer: `Jordan's presentation needs respectful, trauma-informed and gender-affirming engagement from the outset. They are a non-binary person with complex trauma, borderline personality disorder and chronic non-suicidal self-injury, so invalidating or dismissive responses are likely to worsen distress and disengagement. The assessment should use their affirmed language and focus on function, safety and collaboration.
 
-Assess acute-on-chronic risk: intent, escalation from baseline, intoxication, access to razors tonight, ability to collaborate, reasons for living, and what Jordan means by "something worse."
+The wound requiring suturing but not being life-threatening does not make Jordan low risk. The registrar's statement that they are "low risk because it's superficial" is unsafe because wound depth is a poor proxy for intent, escalation or future risk. Jordan says, "Cutting is the only way I stop myself from doing something worse," so I would ask what the something worse is, how cutting functions, whether suicidal intent is present and whether the current episode differs from baseline.
 
-Understand the function of self-harm: Jordan is telling you cutting prevents something worse — this is the target for safety planning, not just wound management.
+The acute risk may be escalating tonight. Jordan says, "If you send me home tonight, I'll just cut deeper." That must be assessed as a possible increase in lethality, access to razors, distress and inability to collaborate, not dismissed because of repeated presentations. The fact that they have presented twelve times in three months shows the current crisis pathway is not working and needs review.
 
-Address therapeutic nihilism in ED staff: validate frustration, challenge dismissive language, reframe care as structured and boundaried rather than reflexively admitting or rejecting.
+The ED team's countertransference must be contained. The ED consultant says, "We can't keep admitting them every time they cut," and staff are frustrated that Jordan refuses discharge plans but later complains that nobody helps. I would validate staff frustration while reframing the task as structured, boundaried and formulation-based care rather than reflexive admission or rejection.
 
-Do not build a discharge plan around partner supervision — the partner has stated they cannot provide it tonight.
+Discharge cannot rely on Jordan's partner tonight because the partner is exhausted and explicitly says they cannot provide supervision. A safe plan would require wound care, removal of razors where possible, a written crisis plan, distress-tolerance strategies, specific follow-up, and an after-hours pathway that does not depend on an unavailable carer.
 
-Develop a brief crisis intervention: wound care, remove access to razors, distress tolerance alternatives, written safety plan with specific crisis contacts, clear return criteria.
-
-Consider short-stay or crisis stabilisation if acute risk cannot be safely managed at home without supervision and no inpatient bed is available.
-
-Manage system pressure: escalate access block issues through appropriate channels, document clinical reasoning independently of executive pressure.`,
+The lack of psychiatric beds and hourly executive calls about access block are real system pressures, but they are not a clinical risk plan. If acute risk cannot be safely managed at home, I would escalate access issues and consider short-stay or crisis stabilisation. If discharge is clinically appropriate, I would document why, what supports are in place, how means are managed and how Jordan can access help without repeated invalidating ED cycles.`,
   },
 ];
