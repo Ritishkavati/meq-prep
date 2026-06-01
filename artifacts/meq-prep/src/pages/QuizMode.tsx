@@ -338,9 +338,12 @@ function QuizScreen({
 
       {/* answer */}
       <div className="bg-white rounded-2xl border border-card-border shadow-sm p-6">
-        <label className="block text-sm font-semibold text-primary mb-3">
+        <label className="block text-sm font-semibold text-primary mb-1">
           BRAINSTORM
         </label>
+        <p className="text-xs text-muted-foreground mb-3">
+          Write down the key issues identified in the question and plan your answer — helps in concept building and prioritising under pressure.
+        </p>
         <textarea
           value={answer}
           onChange={(e) => setAnswer(e.target.value)}
