@@ -10778,6 +10778,8 @@ export default function DailyMEQMode() {
   const autoSubmitHandlerRef = useRef(null);
   const [statusFilter, setStatusFilter] = useState("all");
   const [domainFilter, setDomainFilter] = useState("Governance / Systems / Leadership");
+  const [expandedAttemptId, setExpandedAttemptId] = useState(null);
+  const [confirmDeleteId, setConfirmDeleteId] = useState(null);
   const [cameFromHistory, setCameFromHistory] = useState(false);
 
   useEffect(() => {
@@ -11112,21 +11114,18 @@ export default function DailyMEQMode() {
     }
   }
 
-  // ── GLOBAL HISTORY PHASE ───────────────────────────────────
+  function fmtDate(d) {
+    return new Intl.DateTimeFormat("en-AU", {
+      day: "numeric", month: "short", year: "numeric",
+      hour: "2-digit", minute: "2-digit",
+    }).format(new Date(d));
+  }
+
+    // ── GLOBAL HISTORY PHASE ───────────────────────────────────
   if (phase === "global_history") {
     const allEvaluated = allAttempts
       .filter((a) => a.status === "evaluated" || a.status === "view_key")
       .sort((a, b) => new Date(b.completedAt ?? 0).getTime() - new Date(a.completedAt ?? 0).getTime());
-
-    const [expandedAttemptId, setExpandedAttemptId] = useState(null);
-    const [confirmDeleteId, setConfirmDeleteId] = useState(null);
-
-    function fmtDate(d) {
-      return new Intl.DateTimeFormat("en-AU", {
-        day: "numeric", month: "short", year: "numeric",
-        hour: "2-digit", minute: "2-digit",
-      }).format(new Date(d));
-    }
 
     return (
       <div className="max-w-4xl mx-auto px-4 py-6">
@@ -11326,16 +11325,6 @@ export default function DailyMEQMode() {
         new Date(b.completedAt ?? 0).getTime() -
         new Date(a.completedAt ?? 0).getTime()
     );
-    const [expandedAttemptId, setExpandedAttemptId] = useState(null);
-    const [confirmDeleteId, setConfirmDeleteId] = useState(null);
-
-    function fmtDate(d) {
-      return new Intl.DateTimeFormat("en-AU", {
-        day: "numeric", month: "short", year: "numeric",
-        hour: "2-digit", minute: "2-digit",
-      }).format(new Date(d));
-    }
-
     return (
       <div className="max-w-4xl mx-auto px-4 py-6">
         {/* Header */}
