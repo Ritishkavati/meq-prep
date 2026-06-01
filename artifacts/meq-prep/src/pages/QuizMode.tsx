@@ -786,7 +786,10 @@ function YourResponsePanel({
 
           {savedState === "saved" && (
             <p className="text-xs text-emerald-700 bg-emerald-50 border border-emerald-100 rounded-lg px-3 py-2">
-              This response is saved to your profile under <strong>Quiz History</strong>. You can review all saved responses in the Review section.
+              Response saved.{" "}
+              <Link href="/review" className="underline font-semibold hover:text-emerald-900">
+                View Quiz History →
+              </Link>
             </p>
           )}
         </div>

@@ -4,7 +4,7 @@ import { useCandidate } from "@/lib/store";
 import { useAdmin } from "@/lib/adminStore";
 import { Header } from "@/components/Header";
 import {
-  ListChecks, BookOpen, ClipboardList, ArrowRight, BarChart2, LogOut, NotebookPen, ShieldCheck,
+  ListChecks, BookOpen, ClipboardList, ArrowRight, BarChart2, LogOut, NotebookPen, ShieldCheck, History,
 } from "lucide-react";
 import {
   getQuizModuleCompletion, getTotalQuizzesCompleted,
@@ -234,6 +234,27 @@ export default function Phases() {
               className="flex-shrink-0 flex items-center gap-2 w-full sm:w-auto justify-center px-5 py-2.5 bg-white text-primary border-2 border-primary hover:bg-primary hover:text-white rounded-lg text-sm font-semibold transition-colors whitespace-nowrap"
             >
               View Progress <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </div>
+
+        {/* Quiz History */}
+        <div className="bg-card rounded-2xl border border-card-border shadow-sm px-6 py-5">
+          <div className="flex items-start sm:items-center gap-4 flex-col sm:flex-row">
+            <div className="flex-shrink-0 w-11 h-11 rounded-xl bg-accent/10 flex items-center justify-center">
+              <History className="w-5 h-5 text-accent" />
+            </div>
+            <div className="flex-1 min-w-0">
+              <h3 className="text-base font-serif font-bold text-primary mb-0.5">Quiz History</h3>
+              <p className="text-xs text-muted-foreground leading-relaxed">
+                Review all saved quiz responses — your written answers, signals identified, signals missed, and model wordings.
+              </p>
+            </div>
+            <Link
+              href="/review"
+              className="flex-shrink-0 flex items-center gap-2 w-full sm:w-auto justify-center px-5 py-2.5 bg-white text-primary border-2 border-primary hover:bg-primary hover:text-white rounded-lg text-sm font-semibold transition-colors whitespace-nowrap"
+            >
+              View History <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
         </div>
