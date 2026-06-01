@@ -303,6 +303,17 @@ export const CATEGORY_LABELS: Record<SignalCategory, string> = {
 };
 
 // ─── Persistence ──────────────────────────────────────────────────────────────
+export function deleteAttemptForStem(stemId: string, registrationNumber: string): void {
+  try {
+    const remaining = loadAttempts().filter(
+      (a) => !(a.stemId === stemId && a.registrationNumber === registrationNumber)
+    );
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(remaining));
+  } catch {
+    // localStorage unavailable
+  }
+}
+
 export function saveAttempt(attempt: QuizAttempt): void {
   try {
     const existing = loadAttempts().filter(

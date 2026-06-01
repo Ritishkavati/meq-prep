@@ -3,13 +3,13 @@ import { Link, useLocation, useSearch } from "wouter";
 import { Header } from "@/components/Header";
 import { useCandidate } from "@/lib/store";
 import {
-  loadAttempts, QuizAttempt, CATEGORY_LABELS,
+  loadAttempts, deleteAttemptForStem, QuizAttempt, CATEGORY_LABELS,
 } from "@/lib/quizEngine";
 import { QUIZ_STEMS, TOPIC_LABELS, TopicKey } from "@/lib/quizData";
 import {
   ArrowLeft, CheckCircle2, XCircle, AlertTriangle,
   ChevronDown, ChevronUp, Clock, BookOpen, Search,
-  Filter, Calendar, BarChart2, RotateCcw,
+  Filter, Calendar, BarChart2, RotateCcw, Trash2,
 } from "lucide-react";
 
 function fmtTime(s: number) {
@@ -32,11 +32,13 @@ const SEVERITY_COLOURS = {
 };
 
 // ─── Single attempt card ───────────────────────────────────────────────────────
-function AttemptCard({ attempt, index }: { attempt: QuizAttempt; index: number }) {
+function AttemptCard({ attempt, index, onReset }: { attempt: QuizAttempt; index: number; onReset: () => void }) {
   const [open, setOpen] = useState(false);
   const [showAnswer, setShowAnswer] = useState(false);
   const [showModel, setShowModel] = useState(false);
+  const [confirmReset, setConfirmReset] = useState(false);
   const [, setLocation] = useLocation();
+  const { candidateNumber } = useCandidate();
 
   const stem = useMemo(
     () => QUIZ_STEMS.find((s) => s.id === attempt.stemId),
@@ -280,8 +282,8 @@ function AttemptCard({ attempt, index }: { attempt: QuizAttempt; index: number }
             </div>
           )}
 
-          {/* Reattempt */}
-          <div className="pt-1">
+          {/* Reattempt + Reset */}
+          <div className="pt-1 flex flex-wrap items-center gap-3">
             <button
               onClick={() => setLocation(`/signals?reattempt=${attempt.stemId}`)}
               className="flex items-center gap-2 px-4 py-2.5 bg-primary text-white rounded-lg text-sm font-semibold hover:bg-primary/90 transition-colors"
@@ -289,6 +291,44 @@ function AttemptCard({ attempt, index }: { attempt: QuizAttempt; index: number }
               <RotateCcw className="w-4 h-4" />
               Reattempt this question
             </button>
+            {!confirmReset ? (
+              <button
+                onClick={() => setConfirmReset(true)}
+                className="flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm font-semibold border border-red-200 text-red-600 hover:bg-red-50 transition-colors"
+              >
+                <Trash2 className="w-4 h-4" />
+                Reset attempt
+              </button>
+            ) : (
+              <div className="flex-1 bg-red-50 border border-red-200 rounded-xl px-4 py-3 space-y-2">
+                <p className="text-sm font-semibold text-red-800 flex items-center gap-1.5">
+                  <AlertTriangle className="w-4 h-4 flex-shrink-0" />
+                  Reset this attempt?
+                </p>
+                <p className="text-xs text-red-700 leading-relaxed">
+                  This will permanently delete your response and score for <strong>{attempt.stemTitle}</strong>.
+                  The question will be marked as unattempted and will reappear in the regular quiz rotation.
+                </p>
+                <div className="flex gap-2 pt-1">
+                  <button
+                    onClick={() => {
+                      deleteAttemptForStem(attempt.stemId, candidateNumber ?? "");
+                      onReset();
+                    }}
+                    className="flex items-center gap-1.5 px-3 py-1.5 bg-red-600 text-white rounded-lg text-xs font-semibold hover:bg-red-700 transition-colors"
+                  >
+                    <Trash2 className="w-3.5 h-3.5" />
+                    Yes, delete it
+                  </button>
+                  <button
+                    onClick={() => setConfirmReset(false)}
+                    className="px-3 py-1.5 rounded-lg text-xs font-semibold border border-slate-200 text-slate-600 hover:bg-slate-100 transition-colors"
+                  >
+                    Cancel
+                  </button>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       )}
@@ -303,6 +343,7 @@ export default function ReviewMode() {
   const [search, setSearch] = useState("");
   const [filterTopic, setFilterTopic] = useState<"all" | TopicKey>("all");
   const [filterResult, setFilterResult] = useState<"all" | "strong" | "borderline" | "weak">("all");
+  const [version, setVersion] = useState(0);
 
   React.useEffect(() => {
     if (!candidateNumber) setLocation("/");
@@ -313,7 +354,8 @@ export default function ReviewMode() {
     return loadAttempts()
       .filter((a) => a.registrationNumber === candidateNumber)
       .sort((a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime());
-  }, [candidateNumber]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [candidateNumber, version]);
 
   const filtered = useMemo(() => {
     return allAttempts.filter((a) => {
@@ -468,8 +510,13 @@ export default function ReviewMode() {
                 No attempts match this filter.
               </div>
             ) : (
-              filtered.map((attempt, i) => (
-                <AttemptCard key={attempt.id} attempt={attempt} index={allAttempts.indexOf(attempt)} />
+              filtered.map((attempt) => (
+                <AttemptCard
+                  key={attempt.id}
+                  attempt={attempt}
+                  index={allAttempts.indexOf(attempt)}
+                  onReset={() => setVersion((v) => v + 1)}
+                />
               ))
             )}
           </div>
