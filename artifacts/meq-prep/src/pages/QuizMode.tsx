@@ -13,6 +13,7 @@ import {
   CATEGORY_LABELS, hasStemBeenAttempted,
   getQuizModuleCompletion, QuizModuleCompletion,
   saveQuizResponse, deleteSavedResponse, isStemResponseSaved,
+  loadAttempts,
 } from "@/lib/quizEngine";
 import {
   getNextStem, getTopicStats, TopicStats,
@@ -21,7 +22,7 @@ import {
   ArrowLeft, RotateCcw, Send, CheckCircle2,
   XCircle, AlertTriangle, ChevronDown, ChevronUp,
   RotateCw, ListChecks, ArrowRight, BookMarked,
-  FileText, Bookmark, BookmarkCheck, Trash2, PenLine,
+  FileText, Bookmark, BookmarkCheck, Trash2, PenLine, History, BarChart2,
 } from "lucide-react";
 
 type Phase = "setup" | "quiz" | "selfmark" | "results";
@@ -49,78 +50,108 @@ const SEVERITY_LABELS = {
 function SetupScreen({
   onGenerate,
   globalProgress,
+  candidateNumber,
 }: {
   onGenerate: (topic: TopicKey, timeSecs: number) => void;
   globalProgress: { completed: number; total: number };
+  candidateNumber: string;
 }) {
   const [topic, setTopic] = useState<TopicKey>("random");
-  const [timeSecs, setTimeSecs] = useState(180);
+  const savedCount = loadAttempts().filter(
+    (a) => a.registrationNumber === candidateNumber
+  ).length;
 
   return (
-    <div className="bg-card rounded-2xl border border-card-border shadow-sm p-6 md:p-8 max-w-2xl mx-auto">
-      <div className="flex items-center gap-3 mb-6">
-        <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center">
+    <div className="space-y-6">
+      {/* Header */}
+      <div className="flex items-center gap-3">
+        <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0">
           <ListChecks className="w-5 h-5 text-accent" />
         </div>
         <div>
-          <h2 className="text-xl font-serif font-bold text-primary">Quiz Mode — Setup</h2>
-          <p className="text-sm text-muted-foreground">Identify the hidden signals in an MEQ stem</p>
+          <h2 className="text-xl font-serif font-bold text-primary">Quiz Mode</h2>
+          <p className="text-sm text-muted-foreground">
+            Multiple MEQ stems across various domains — practice identifying the important information in pressured conditions.
+          </p>
         </div>
       </div>
 
-      <div className="space-y-5">
-        <div className="space-y-2">
-          <label className="block text-xs font-semibold text-primary uppercase tracking-wider">
-            Topic
-          </label>
-          <select
-            value={topic}
-            onChange={(e) => setTopic(e.target.value as TopicKey)}
-            className="w-full h-11 px-3 rounded-lg border border-input bg-background text-sm focus:outline-none focus:ring-2 focus:ring-accent"
-          >
-            {(Object.entries(TOPIC_LABELS) as [TopicKey, string][]).map(([k, v]) => (
-              <option key={k} value={k}>{v}</option>
-            ))}
-          </select>
+      {/* 3-card grid */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
 
-          {/* Global progress */}
-          <div className="flex items-center gap-2 px-1 pt-1">
-            <span className="text-xs text-muted-foreground">
-              Your progress:{" "}
-              <span className="font-semibold text-primary">{globalProgress.completed}</span>
-              {" "}of{" "}
-              <span className="font-semibold text-primary">{globalProgress.total}</span>
-              {" "}questions completed
-            </span>
+        {/* Card 1 — Start Quiz */}
+        <div className="md:col-span-1 bg-card rounded-2xl border border-card-border shadow-sm p-5 flex flex-col gap-4">
+          <div>
+            <p className="text-xs font-semibold text-primary uppercase tracking-wider mb-1.5">Topic</p>
+            <select
+              value={topic}
+              onChange={(e) => setTopic(e.target.value as TopicKey)}
+              className="w-full h-10 px-3 rounded-lg border border-input bg-background text-sm focus:outline-none focus:ring-2 focus:ring-accent"
+            >
+              {(Object.entries(TOPIC_LABELS) as [TopicKey, string][]).map(([k, v]) => (
+                <option key={k} value={k}>{v}</option>
+              ))}
+            </select>
+          </div>
+          <button
+            onClick={() => onGenerate(topic, 180)}
+            className="w-full flex items-center justify-center gap-2 bg-primary text-white py-2.5 rounded-lg font-semibold hover:bg-primary/90 transition-colors text-sm mt-auto"
+          >
+            Generate Quiz Stem <ArrowRight className="w-4 h-4" />
+          </button>
+        </div>
+
+        {/* Card 2 — Progress */}
+        <div className="bg-card rounded-2xl border border-card-border shadow-sm p-5 flex flex-col gap-3">
+          <div className="flex items-center gap-2 mb-1">
+            <BarChart2 className="w-4 h-4 text-accent" />
+            <span className="text-xs font-semibold text-primary uppercase tracking-wider">Your Progress</span>
+          </div>
+          <div className="flex-1 flex flex-col justify-center gap-3">
+            <div>
+              <p className="text-3xl font-bold font-mono text-primary tabular-nums">
+                {globalProgress.completed}
+                <span className="text-lg font-normal text-muted-foreground">/{globalProgress.total}</span>
+              </p>
+              <p className="text-xs text-muted-foreground mt-0.5">unique stems attempted</p>
+            </div>
+            {globalProgress.total > 0 && (
+              <div className="h-1.5 w-full bg-slate-100 rounded-full overflow-hidden">
+                <div
+                  className="h-full bg-accent rounded-full transition-all"
+                  style={{ width: `${Math.min((globalProgress.completed / globalProgress.total) * 100, 100)}%` }}
+                />
+              </div>
+            )}
+            <p className="text-xs text-muted-foreground">
+              {globalProgress.total > 0
+                ? `${Math.round((globalProgress.completed / globalProgress.total) * 100)}% of question bank covered`
+                : "No questions attempted yet"}
+            </p>
           </div>
         </div>
 
-        <div className="space-y-2">
-          <label className="block text-xs font-semibold text-primary uppercase tracking-wider">
-            Time limit
-          </label>
-          <select
-            value={timeSecs}
-            onChange={(e) => setTimeSecs(Number(e.target.value))}
-            className="w-full h-11 px-3 rounded-lg border border-input bg-background text-sm focus:outline-none focus:ring-2 focus:ring-accent"
+        {/* Card 3 — Quiz History */}
+        <div className="bg-card rounded-2xl border border-card-border shadow-sm p-5 flex flex-col gap-3">
+          <div className="flex items-center gap-2 mb-1">
+            <History className="w-4 h-4 text-accent" />
+            <span className="text-xs font-semibold text-primary uppercase tracking-wider">Quiz History</span>
+          </div>
+          <div className="flex-1 flex flex-col justify-center gap-2">
+            <p className="text-3xl font-bold font-mono text-primary tabular-nums">{savedCount}</p>
+            <p className="text-xs text-muted-foreground">saved question attempts</p>
+            <p className="text-xs text-muted-foreground leading-relaxed">
+              Review your written answers, signals identified, signals missed, and model wordings.
+            </p>
+          </div>
+          <Link
+            href="/review"
+            className="w-full flex items-center justify-center gap-2 bg-white text-primary border-2 border-primary hover:bg-primary hover:text-white py-2.5 rounded-lg font-semibold transition-colors text-sm mt-auto"
           >
-            <option value={120}>2 minutes</option>
-            <option value={180}>3 minutes</option>
-          </select>
+            Review Previous Questions <ArrowRight className="w-4 h-4" />
+          </Link>
         </div>
 
-        <div className="bg-amber-50 border border-amber-200 rounded-lg px-4 py-3 text-xs text-amber-800 leading-relaxed">
-          <strong>Important:</strong> Do not consult notes or references during the quiz.
-          The timer begins when you press Start. Submit your own unassisted signal list.
-          Examiner feedback appears only after submission.
-        </div>
-
-        <button
-          onClick={() => onGenerate(topic, timeSecs)}
-          className="w-full flex items-center justify-center gap-2 bg-primary text-white py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
-        >
-          Generate Quiz Stem <ArrowRight className="w-4 h-4" />
-        </button>
       </div>
     </div>
   );
@@ -1241,6 +1272,7 @@ export default function QuizMode() {
             completed: getQuizModuleCompletion(candidateNumber, QUIZ_STEMS.length).uniqueAttempted,
             total: QUIZ_STEMS.length,
           }}
+          candidateNumber={candidateNumber}
         />
       )}
 
