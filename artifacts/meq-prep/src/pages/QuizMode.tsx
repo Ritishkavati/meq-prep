@@ -455,9 +455,15 @@ function SelfMarkScreen({
     return init;
   });
 
-  const sortedSignals = [...stem.signals].sort(
-    (a, b) => SEVERITY_ORDER[a.severity] - SEVERITY_ORDER[b.severity]
-  );
+  const urgentSignals = stem.priorityOrder.urgent
+    .map((id) => stem.signals.find((s) => s.id === id))
+    .filter((s): s is ExpectedSignal => s !== undefined);
+  const secondarySignals = stem.priorityOrder.secondary
+    .map((id) => stem.signals.find((s) => s.id === id))
+    .filter((s): s is ExpectedSignal => s !== undefined);
+  const lowYieldSignals = stem.priorityOrder.lowYield
+    .map((id) => stem.signals.find((s) => s.id === id))
+    .filter((s): s is ExpectedSignal => s !== undefined);
 
   const markedCount = Object.values(marks).filter((v) => v !== null).length;
   const total = stem.signals.length;
@@ -507,73 +513,79 @@ function SelfMarkScreen({
             </span>
           </div>
 
-          {sortedSignals.map((signal) => {
-            const mark = marks[signal.id];
-            return (
-              <div
-                key={signal.id}
-                className={`rounded-xl border p-4 space-y-3 transition-all ${
-                  mark === true
-                    ? "border-emerald-300 bg-emerald-50"
-                    : mark === false
-                    ? "border-red-200 bg-red-50"
-                    : "border-card-border bg-white"
-                }`}
-              >
-                {/* Signal header */}
-                <div className="flex flex-wrap items-center gap-2">
-                  <span className="text-sm font-bold text-primary">{signal.name}</span>
-                  <span
-                    className={`ml-auto text-xs font-semibold border px-2 py-0.5 rounded-full ${SEVERITY_COLOURS[signal.severity]}`}
-                  >
-                    {SEVERITY_LABELS[signal.severity]}
-                  </span>
+          {(
+            [
+              { label: "Must identify", signals: urgentSignals, labelClass: "text-red-700 bg-red-50 border-red-200" },
+              { label: "Important", signals: secondarySignals, labelClass: "text-amber-700 bg-amber-50 border-amber-200" },
+              ...(lowYieldSignals.length > 0
+                ? [{ label: "Low yield", signals: lowYieldSignals, labelClass: "text-slate-600 bg-slate-50 border-slate-200" }]
+                : []),
+            ] as { label: string; signals: ExpectedSignal[]; labelClass: string }[]
+          ).map(({ label, signals, labelClass }) =>
+            signals.length === 0 ? null : (
+              <div key={label} className="space-y-3">
+                <div className={`inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider border px-2.5 py-1 rounded-full ${labelClass}`}>
+                  {label}
                 </div>
-
-                {/* Clue in stem */}
-                <div className="bg-white/70 rounded-lg px-3 py-2 border border-slate-200">
-                  <p className="text-xs font-semibold text-slate-500 mb-0.5 uppercase tracking-wider">Clue in stem</p>
-                  <p className="text-xs text-primary italic">"{signal.clueInStem}"</p>
-                </div>
-
-                {/* Why it matters */}
-                <div>
-                  <p className="text-xs font-semibold text-slate-500 mb-0.5 uppercase tracking-wider">Why it matters</p>
-                  <p className="text-xs text-slate-700 leading-relaxed">{signal.whyItMatters}</p>
-                </div>
-
-                {/* Consultant wording */}
-                <div className="bg-slate-50 rounded-lg px-3 py-2 border border-slate-200">
-                  <p className="text-xs font-semibold text-slate-500 mb-0.5 uppercase tracking-wider">Consultant would say</p>
-                  <p className="text-xs text-slate-800 italic leading-relaxed">{signal.modelWording}</p>
-                </div>
-
-                {/* ✓ / ✗ buttons */}
-                <div className="flex gap-2 pt-1">
-                  <button
-                    onClick={() => setMark(signal.id, true)}
-                    className={`flex-1 flex items-center justify-center gap-1.5 py-2 rounded-lg text-sm font-semibold border-2 transition-all ${
-                      mark === true
-                        ? "bg-emerald-600 border-emerald-600 text-white"
-                        : "border-emerald-300 text-emerald-700 hover:bg-emerald-50"
-                    }`}
-                  >
-                    <CheckCircle2 className="w-4 h-4" /> I identified this
-                  </button>
-                  <button
-                    onClick={() => setMark(signal.id, false)}
-                    className={`flex-1 flex items-center justify-center gap-1.5 py-2 rounded-lg text-sm font-semibold border-2 transition-all ${
-                      mark === false
-                        ? "bg-red-600 border-red-600 text-white"
-                        : "border-red-300 text-red-700 hover:bg-red-50"
-                    }`}
-                  >
-                    <XCircle className="w-4 h-4" /> I missed this
-                  </button>
-                </div>
+                {signals.map((signal) => {
+                  const mark = marks[signal.id];
+                  return (
+                    <div
+                      key={signal.id}
+                      className={`rounded-xl border p-4 space-y-3 transition-all ${
+                        mark === true
+                          ? "border-emerald-300 bg-emerald-50"
+                          : mark === false
+                          ? "border-red-200 bg-red-50"
+                          : "border-card-border bg-white"
+                      }`}
+                    >
+                      <div className="flex flex-wrap items-center gap-2">
+                        <span className="text-sm font-bold text-primary">{signal.name}</span>
+                        <span className={`ml-auto text-xs font-semibold border px-2 py-0.5 rounded-full ${SEVERITY_COLOURS[signal.severity]}`}>
+                          {SEVERITY_LABELS[signal.severity]}
+                        </span>
+                      </div>
+                      <div className="bg-white/70 rounded-lg px-3 py-2 border border-slate-200">
+                        <p className="text-xs font-semibold text-slate-500 mb-0.5 uppercase tracking-wider">Clue in stem</p>
+                        <p className="text-xs text-primary italic">"{signal.clueInStem}"</p>
+                      </div>
+                      <div>
+                        <p className="text-xs font-semibold text-slate-500 mb-0.5 uppercase tracking-wider">Why it matters</p>
+                        <p className="text-xs text-slate-700 leading-relaxed">{signal.whyItMatters}</p>
+                      </div>
+                      <div className="bg-slate-50 rounded-lg px-3 py-2 border border-slate-200">
+                        <p className="text-xs font-semibold text-slate-500 mb-0.5 uppercase tracking-wider">Consultant would say</p>
+                        <p className="text-xs text-slate-800 italic leading-relaxed">{signal.modelWording}</p>
+                      </div>
+                      <div className="flex gap-2 pt-1">
+                        <button
+                          onClick={() => setMark(signal.id, true)}
+                          className={`flex-1 flex items-center justify-center gap-1.5 py-2 rounded-lg text-sm font-semibold border-2 transition-all ${
+                            mark === true
+                              ? "bg-emerald-600 border-emerald-600 text-white"
+                              : "border-emerald-300 text-emerald-700 hover:bg-emerald-50"
+                          }`}
+                        >
+                          <CheckCircle2 className="w-4 h-4" /> I identified this
+                        </button>
+                        <button
+                          onClick={() => setMark(signal.id, false)}
+                          className={`flex-1 flex items-center justify-center gap-1.5 py-2 rounded-lg text-sm font-semibold border-2 transition-all ${
+                            mark === false
+                              ? "bg-red-600 border-red-600 text-white"
+                              : "border-red-300 text-red-700 hover:bg-red-50"
+                          }`}
+                        >
+                          <XCircle className="w-4 h-4" /> I missed this
+                        </button>
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
-            );
-          })}
+            )
+          )}
 
           {/* Submit */}
           <div className="bg-white rounded-2xl border border-card-border shadow-sm p-5 space-y-3">
