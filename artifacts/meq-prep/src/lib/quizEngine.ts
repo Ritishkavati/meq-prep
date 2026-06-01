@@ -359,11 +359,26 @@ export function getTotalQuizzesCompleted(registrationNumber: string): number {
   }
 }
 
-export function hasStemBeenAttempted(stemId: string): boolean {
+export function hasStemBeenAttempted(stemId: string, registrationNumber?: string): boolean {
   try {
-    return loadAttempts().some((a) => a.stemId === stemId);
+    const attempts = loadAttempts();
+    if (registrationNumber) {
+      return attempts.some((a) => a.stemId === stemId && a.registrationNumber === registrationNumber);
+    }
+    return attempts.some((a) => a.stemId === stemId);
   } catch {
     return false;
+  }
+}
+
+export function getCompletedStemIds(registrationNumber: string): string[] {
+  if (!registrationNumber) return [];
+  try {
+    return loadAttempts()
+      .filter((a) => a.registrationNumber === registrationNumber)
+      .map((a) => a.stemId);
+  } catch {
+    return [];
   }
 }
 

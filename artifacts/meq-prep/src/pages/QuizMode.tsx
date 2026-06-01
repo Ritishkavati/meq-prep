@@ -13,7 +13,7 @@ import {
   CATEGORY_LABELS, hasStemBeenAttempted,
   getQuizModuleCompletion, QuizModuleCompletion,
   saveQuizResponse, deleteSavedResponse, isStemResponseSaved,
-  loadAttempts,
+  loadAttempts, getCompletedStemIds,
 } from "@/lib/quizEngine";
 import {
   getNextStem, getTopicStats, TopicStats,
@@ -1184,11 +1184,12 @@ export default function QuizMode() {
   }
 
   function handleGenerate(topic: TopicKey, timeSecs: number) {
-    const stem = getNextStem(topic);
+    const completed = getCompletedStemIds(candidateNumber);
+    const stem = getNextStem(topic, undefined, undefined, completed);
     setCurrentStem(stem);
     setCurrentTopic(topic);
     setCurrentTimeSecs(timeSecs);
-    setStemAlreadyAttempted(hasStemBeenAttempted(stem.id));
+    setStemAlreadyAttempted(hasStemBeenAttempted(stem.id, candidateNumber));
     refreshProgress(topic);
     setPhase("quiz");
   }
@@ -1212,20 +1213,22 @@ export default function QuizMode() {
   }
 
   function handleNextQuestion() {
-    const stem = getNextStem(currentTopic, undefined, currentStem?.id);
+    const completed = getCompletedStemIds(candidateNumber);
+    const stem = getNextStem(currentTopic, undefined, currentStem?.id, completed);
     setCurrentStem(stem);
     setResult(null);
-    setStemAlreadyAttempted(hasStemBeenAttempted(stem.id));
+    setStemAlreadyAttempted(hasStemBeenAttempted(stem.id, candidateNumber));
     refreshProgress(currentTopic);
     setPhase("quiz");
   }
 
   function handleNextRandom() {
-    const stem = getNextStem("random", undefined, currentStem?.id);
+    const completed = getCompletedStemIds(candidateNumber);
+    const stem = getNextStem("random", undefined, currentStem?.id, completed);
     setCurrentStem(stem);
     setCurrentTopic("random");
     setResult(null);
-    setStemAlreadyAttempted(hasStemBeenAttempted(stem.id));
+    setStemAlreadyAttempted(hasStemBeenAttempted(stem.id, candidateNumber));
     refreshProgress("random");
     setPhase("quiz");
   }

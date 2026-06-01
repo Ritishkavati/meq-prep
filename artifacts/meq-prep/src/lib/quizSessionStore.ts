@@ -47,7 +47,8 @@ export function getTopicStats(topic: TopicKey, difficulty?: DifficultyKey): Topi
 export function getNextStem(
   topic: TopicKey,
   difficulty?: DifficultyKey,
-  currentStemId?: string
+  currentStemId?: string,
+  completedStemIds?: string[]
 ): QuizStem {
   const pool = poolFor(topic, difficulty);
   if (pool.length === 0) return QUIZ_STEMS[0];
@@ -55,17 +56,32 @@ export function getNextStem(
   const state = load();
   const topicKey = topic + (difficulty ? `:${difficulty}` : "");
   const seen: string[] = state.seenByTopic[topicKey] ?? [];
+  const completed = new Set(completedStemIds ?? []);
 
-  let unseen = pool.filter((s) => !seen.includes(s.id) && s.id !== currentStemId);
+  // Priority 1: never completed by this candidate AND not seen this session
+  let candidates = pool.filter(
+    (s) => !completed.has(s.id) && !seen.includes(s.id) && s.id !== currentStemId
+  );
 
-  if (unseen.length === 0) {
-    state.seenByTopic[topicKey] = currentStemId ? [currentStemId] : [];
-    save(state);
-    unseen = pool.filter((s) => s.id !== currentStemId);
-    if (unseen.length === 0) unseen = pool;
+  // Priority 2: never completed by this candidate (seen this session is ok)
+  if (candidates.length === 0) {
+    candidates = pool.filter((s) => !completed.has(s.id) && s.id !== currentStemId);
   }
 
-  const stem = unseen[Math.floor(Math.random() * unseen.length)];
+  // Priority 3: all completed — fall back to unseen this session
+  if (candidates.length === 0) {
+    candidates = pool.filter((s) => !seen.includes(s.id) && s.id !== currentStemId);
+  }
+
+  // Priority 4: full reset — everything has been seen this session too
+  if (candidates.length === 0) {
+    state.seenByTopic[topicKey] = currentStemId ? [currentStemId] : [];
+    save(state);
+    candidates = pool.filter((s) => s.id !== currentStemId);
+    if (candidates.length === 0) candidates = pool;
+  }
+
+  const stem = candidates[Math.floor(Math.random() * candidates.length)];
 
   const newSeen = [...(state.seenByTopic[topicKey] ?? [])];
   if (!newSeen.includes(stem.id)) newSeen.push(stem.id);
