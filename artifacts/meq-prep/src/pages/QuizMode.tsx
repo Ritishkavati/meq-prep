@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
-import { Link } from "wouter";
+import { Link, useSearch } from "wouter";
 import { Header } from "@/components/Header";
 import { useCandidate } from "@/lib/store";
 import {
@@ -1166,6 +1166,7 @@ function ResultsScreen({
 // ─── Main component ───────────────────────────────────────────────────────────
 export default function QuizMode() {
   const { fullName, candidateNumber } = useCandidate();
+  const search = useSearch();
   const [phase, setPhase] = useState<Phase>("setup");
   const [currentStem, setCurrentStem] = useState<QuizStem | null>(null);
   const [currentTopic, setCurrentTopic] = useState<TopicKey>("random");
@@ -1177,6 +1178,20 @@ export default function QuizMode() {
   const [prefilledAnswer, setPrefilledAnswer] = useState<string | undefined>(undefined);
   const [pendingAnswer, setPendingAnswer] = useState("");
   const [pendingTimeUsed, setPendingTimeUsed] = useState(0);
+
+  useEffect(() => {
+    if (!candidateNumber) return;
+    const params = new URLSearchParams(search);
+    const reattemptId = params.get("reattempt");
+    if (!reattemptId) return;
+    const stem = QUIZ_STEMS.find((s) => s.id === reattemptId);
+    if (!stem) return;
+    setCurrentStem(stem);
+    setCurrentTopic(stem.topic as TopicKey);
+    setCurrentTimeSecs(180);
+    setStemAlreadyAttempted(true);
+    setPhase("quiz");
+  }, [candidateNumber, search]);
 
   function refreshProgress(topic: TopicKey) {
     const stats = getTopicStats(topic);

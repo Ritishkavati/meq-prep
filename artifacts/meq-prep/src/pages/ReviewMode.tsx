@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from "react";
-import { Link, useLocation } from "wouter";
+import { Link, useLocation, useSearch } from "wouter";
 import { Header } from "@/components/Header";
 import { useCandidate } from "@/lib/store";
 import {
@@ -9,7 +9,7 @@ import { QUIZ_STEMS, TOPIC_LABELS, TopicKey } from "@/lib/quizData";
 import {
   ArrowLeft, CheckCircle2, XCircle, AlertTriangle,
   ChevronDown, ChevronUp, Clock, BookOpen, Search,
-  Filter, Calendar, BarChart2,
+  Filter, Calendar, BarChart2, RotateCcw,
 } from "lucide-react";
 
 function fmtTime(s: number) {
@@ -36,6 +36,7 @@ function AttemptCard({ attempt, index }: { attempt: QuizAttempt; index: number }
   const [open, setOpen] = useState(false);
   const [showAnswer, setShowAnswer] = useState(false);
   const [showModel, setShowModel] = useState(false);
+  const [, setLocation] = useLocation();
 
   const stem = useMemo(
     () => QUIZ_STEMS.find((s) => s.id === attempt.stemId),
@@ -278,6 +279,17 @@ function AttemptCard({ attempt, index }: { attempt: QuizAttempt; index: number }
               )}
             </div>
           )}
+
+          {/* Reattempt */}
+          <div className="pt-1">
+            <button
+              onClick={() => setLocation(`/signals?reattempt=${attempt.stemId}`)}
+              className="flex items-center gap-2 px-4 py-2.5 bg-primary text-white rounded-lg text-sm font-semibold hover:bg-primary/90 transition-colors"
+            >
+              <RotateCcw className="w-4 h-4" />
+              Reattempt this question
+            </button>
+          </div>
         </div>
       )}
     </div>

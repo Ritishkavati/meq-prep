@@ -305,9 +305,11 @@ export const CATEGORY_LABELS: Record<SignalCategory, string> = {
 // ─── Persistence ──────────────────────────────────────────────────────────────
 export function saveAttempt(attempt: QuizAttempt): void {
   try {
-    const existing = loadAttempts();
+    const existing = loadAttempts().filter(
+      (a) => !(a.stemId === attempt.stemId && a.registrationNumber === attempt.registrationNumber)
+    );
     existing.unshift(attempt);
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(existing.slice(0, 50)));
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(existing.slice(0, 200)));
   } catch {
     // localStorage unavailable
   }
