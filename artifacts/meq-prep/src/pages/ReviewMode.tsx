@@ -266,7 +266,7 @@ function AttemptCard({ attempt, index }: { attempt: QuizAttempt; index: number }
                 onClick={() => setShowModel((v) => !v)}
                 className="w-full flex items-center justify-between px-4 py-3 bg-slate-50 hover:bg-slate-100 transition-colors text-left"
               >
-                <span className="text-sm font-semibold text-primary">Consultant model answer</span>
+                <span className="text-sm font-semibold text-primary">Learning</span>
                 {showModel
                   ? <ChevronUp className="w-4 h-4 text-muted-foreground" />
                   : <ChevronDown className="w-4 h-4 text-muted-foreground" />
