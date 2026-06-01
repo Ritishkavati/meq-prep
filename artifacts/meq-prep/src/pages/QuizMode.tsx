@@ -338,13 +338,9 @@ function QuizScreen({
 
       {/* answer */}
       <div className="bg-white rounded-2xl border border-card-border shadow-sm p-6">
-        <label className="block text-sm font-semibold text-primary mb-1">
-          List all signals and issues you identify from this stem
+        <label className="block text-sm font-semibold text-primary mb-3">
+          BRAINSTORM
         </label>
-        <p className="text-xs text-muted-foreground mb-3">
-          Write freely. Cover clinical, risk, legal, capacity, cultural, family, MDT and system signals.
-          Do not use bullet points artificially — write what you genuinely identify.
-        </p>
         <textarea
           value={answer}
           onChange={(e) => setAnswer(e.target.value)}
