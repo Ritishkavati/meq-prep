@@ -10757,7 +10757,7 @@ const errorTypeLabel = (t) =>
 // ============================================================
 export default function DailyMEQMode() {
   const [, setLocation] = useLocation();
-  const [phase, setPhase] = useState("list"); // list | attempt_history | stem | pathway_select | evaluating | view_key | assessment
+  const [phase, setPhase] = useState("list"); // list | global_history | attempt_history | stem | pathway_select | evaluating | view_key | assessment
   const [selectedMEQ, setSelectedMEQ] = useState(null);
   const [currentAttempt, setCurrentAttempt] = useState(null);
   const [currentStemIndex, setCurrentStemIndex] = useState(0);
@@ -11112,6 +11112,210 @@ export default function DailyMEQMode() {
     }
   }
 
+  // ── GLOBAL HISTORY PHASE ───────────────────────────────────
+  if (phase === "global_history") {
+    const allEvaluated = allAttempts
+      .filter((a) => a.status === "evaluated" || a.status === "view_key")
+      .sort((a, b) => new Date(b.completedAt ?? 0).getTime() - new Date(a.completedAt ?? 0).getTime());
+
+    const [expandedAttemptId, setExpandedAttemptId] = useState(null);
+    const [confirmDeleteId, setConfirmDeleteId] = useState(null);
+
+    function fmtDate(d) {
+      return new Intl.DateTimeFormat("en-AU", {
+        day: "numeric", month: "short", year: "numeric",
+        hour: "2-digit", minute: "2-digit",
+      }).format(new Date(d));
+    }
+
+    return (
+      <div className="max-w-4xl mx-auto px-4 py-6">
+        <button
+          onClick={() => setPhase("list")}
+          className="inline-flex items-center gap-1.5 text-sm text-gray-400 hover:text-gray-700 transition-colors mb-5"
+        >
+          ← MEQ List
+        </button>
+
+        <div className="flex items-center gap-3 mb-6">
+          <div>
+            <h2 className="text-xl font-bold text-gray-900">MEQ History</h2>
+            <p className="text-sm text-gray-500 mt-0.5">
+              {allEvaluated.length} completed attempt{allEvaluated.length !== 1 ? "s" : ""} across all domains
+            </p>
+          </div>
+        </div>
+
+        <div className="space-y-3 mb-8">
+          {allEvaluated.length === 0 ? (
+            <div className="bg-white border border-gray-200 rounded-2xl px-6 py-10 text-center">
+              <p className="text-sm text-gray-400 mb-3">No MEQ attempts yet.</p>
+              <button
+                onClick={() => setPhase("list")}
+                className="px-4 py-2 bg-gray-900 text-white rounded-lg text-sm font-semibold hover:bg-gray-800 transition-colors"
+              >
+                Start your first MEQ →
+              </button>
+            </div>
+          ) : (
+            allEvaluated.map((attempt, idx) => {
+              const meq = MEQ_BANK.find((m) => m.id === attempt.meqId);
+              if (!meq) return null;
+              const isEvaluated = !!attempt.evaluation;
+              const pct = isEvaluated
+                ? Math.round(((attempt.evaluation?.totalMarksEarned ?? 0) / meq.totalMarks) * 100)
+                : null;
+              const isOpen = expandedAttemptId === attempt.attemptId;
+              const isConfirmDelete = confirmDeleteId === attempt.attemptId;
+
+              const ratingStyle = pct === null
+                ? "text-gray-600 bg-gray-50 border-gray-200"
+                : pct >= 80 ? "text-emerald-700 bg-emerald-50 border-emerald-300"
+                : pct >= 60 ? "text-amber-700 bg-amber-50 border-amber-300"
+                : "text-red-700 bg-red-50 border-red-300";
+              const ratingLabel = pct === null ? "View Key"
+                : pct >= 80 ? "Strong" : pct >= 60 ? "Borderline" : "Needs work";
+
+              return (
+                <div key={attempt.attemptId} className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
+                  {/* Header row */}
+                  <button
+                    onClick={() => setExpandedAttemptId(isOpen ? null : attempt.attemptId)}
+                    className="w-full text-left px-5 py-4 flex flex-wrap gap-3 items-center hover:bg-gray-50/60 transition-colors"
+                  >
+                    <div className="flex-1 min-w-0">
+                      <p className="text-sm font-bold text-gray-900 truncate">{meq.title}</p>
+                      <div className="flex flex-wrap items-center gap-2 mt-0.5 text-xs text-gray-400">
+                        <span>{meq.primaryDomain}</span>
+                        <span>·</span>
+                        <span>{attempt.completedAt ? fmtDate(attempt.completedAt) : "—"}</span>
+                      </div>
+                      {isEvaluated && attempt.evaluation?.stems?.length > 0 && (
+                        <div className="flex flex-wrap gap-2 mt-1">
+                          {attempt.evaluation.stems.map((s) => (
+                            <span key={s.stemNumber} className={`text-xs font-medium ${s.commandWordCompliance ? "text-emerald-600" : "text-red-500"}`}>
+                              Stem {s.stemNumber}: {s.marksEarned}/{s.marksAvailable}M{s.commandWordCompliance ? " ✓" : " ✗CW"}
+                            </span>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                    <div className="flex items-center gap-3 flex-shrink-0">
+                      {isEvaluated && (
+                        <div className="text-right">
+                          <p className="text-xl font-bold text-gray-900 leading-none">{pct}%</p>
+                          <p className="text-xs text-gray-400 mt-0.5">{attempt.evaluation?.totalMarksEarned}/{meq.totalMarks} marks</p>
+                        </div>
+                      )}
+                      <span className={`text-xs font-semibold border px-2 py-1 rounded-full ${ratingStyle}`}>
+                        {ratingLabel}
+                      </span>
+                      <span className="text-gray-400 text-sm">{isOpen ? "▲" : "▼"}</span>
+                    </div>
+                  </button>
+
+                  {/* Expanded body */}
+                  {isOpen && (
+                    <div className="border-t border-gray-100 px-5 pb-5 pt-4 space-y-4">
+                      {/* Stem answers */}
+                      {meq.stems.map((stem) => {
+                        const ans = attempt.answers?.find((a) => a.stemNumber === stem.stemNumber);
+                        const evalStem = attempt.evaluation?.stems?.find((s) => s.stemNumber === stem.stemNumber);
+                        return (
+                          <div key={stem.stemNumber} className="border border-gray-100 rounded-xl overflow-hidden">
+                            <div className="px-4 py-2.5 bg-gray-50 border-b border-gray-100 flex items-center justify-between gap-2">
+                              <div>
+                                <span className="text-xs font-bold text-gray-700">Stem {stem.stemNumber}</span>
+                                <span className="text-xs text-gray-400 ml-2">{stem.marks} marks · {stem.timeMinutes} min</span>
+                              </div>
+                              {evalStem && (
+                                <span className={`text-xs font-bold ${evalStem.commandWordCompliance ? "text-emerald-600" : "text-red-500"}`}>
+                                  {evalStem.marksEarned}/{evalStem.marksAvailable}M {evalStem.commandWordCompliance ? "✓" : "✗CW"}
+                                </span>
+                              )}
+                            </div>
+                            <div className="px-4 py-3 space-y-3">
+                              <div>
+                                <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">Your answer</p>
+                                <div className="bg-gray-50 border border-gray-200 rounded-lg px-3 py-2.5 text-xs text-gray-800 leading-relaxed whitespace-pre-wrap max-h-40 overflow-y-auto">
+                                  {ans?.answerText?.trim() || <span className="italic text-gray-400">No answer recorded.</span>}
+                                </div>
+                              </div>
+                              {evalStem?.feedback && (
+                                <div>
+                                  <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">Examiner feedback</p>
+                                  <p className="text-xs text-gray-700 leading-relaxed">{evalStem.feedback}</p>
+                                </div>
+                              )}
+                            </div>
+                          </div>
+                        );
+                      })}
+
+                      {/* Actions */}
+                      <div className="pt-1 flex flex-wrap items-center gap-3">
+                        <button
+                          onClick={() => viewAttempt(attempt)}
+                          className="flex items-center gap-2 px-4 py-2.5 bg-gray-900 text-white rounded-lg text-sm font-semibold hover:bg-gray-800 transition-colors"
+                        >
+                          {isEvaluated ? "View Full Assessment" : "View Model Key"}
+                        </button>
+                        <button
+                          onClick={() => startMEQ(meq)}
+                          className="flex items-center gap-2 px-4 py-2.5 border border-gray-300 text-gray-700 rounded-lg text-sm font-semibold hover:bg-gray-50 transition-colors"
+                        >
+                          ↺ Retry MEQ
+                        </button>
+                        {!isConfirmDelete ? (
+                          <button
+                            onClick={() => setConfirmDeleteId(attempt.attemptId)}
+                            className="flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm font-semibold border border-red-200 text-red-600 hover:bg-red-50 transition-colors"
+                          >
+                            🗑 Reset attempt
+                          </button>
+                        ) : (
+                          <div className="flex-1 bg-red-50 border border-red-200 rounded-xl px-4 py-3 space-y-2">
+                            <p className="text-sm font-semibold text-red-800">⚠ Reset this attempt?</p>
+                            <p className="text-xs text-red-700 leading-relaxed">
+                              This will permanently delete your answers and score for <strong>{meq.title}</strong>.
+                              The MEQ will remain in your list but this attempt will be gone.
+                            </p>
+                            <div className="flex gap-2 pt-1">
+                              <button
+                                onClick={() => {
+                                  deleteAttempt(attempt.attemptId);
+                                  setConfirmDeleteId(null);
+                                  setExpandedAttemptId(null);
+                                }}
+                                className="px-3 py-1.5 bg-red-600 text-white rounded-lg text-xs font-semibold hover:bg-red-700 transition-colors"
+                              >
+                                Yes, delete it
+                              </button>
+                              <button
+                                onClick={() => setConfirmDeleteId(null)}
+                                className="px-3 py-1.5 rounded-lg text-xs font-semibold border border-gray-200 text-gray-600 hover:bg-gray-100 transition-colors"
+                              >
+                                Cancel
+                              </button>
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              );
+            })
+          )}
+        </div>
+
+        <p className="text-center text-xs text-gray-400 pb-8">
+          Educational preparation tool only. Not an official RANZCP product.
+        </p>
+      </div>
+    );
+  }
+
   // ── ATTEMPT HISTORY PHASE ──────────────────────────────────
   if (phase === "attempt_history" && selectedMEQ) {
     const stats = getMEQStats(selectedMEQ.id, allAttempts);
@@ -11356,14 +11560,22 @@ export default function DailyMEQMode() {
     return (
       <div className="max-w-3xl mx-auto px-4 py-6">
         {/* Header */}
-        <div className="flex items-center justify-between gap-4 mb-4">
+        <div className="flex items-center justify-between gap-4 mb-4 flex-wrap">
           <h1 className="text-2xl font-bold text-gray-900">Daily MEQ</h1>
-          <button
-            onClick={() => setLocation("/phases")}
-            className="text-xs text-gray-400 hover:text-gray-700 transition-colors whitespace-nowrap"
-          >
-            ← Back to study modes
-          </button>
+          <div className="flex items-center gap-3">
+            <button
+              onClick={() => setPhase("global_history")}
+              className="text-sm font-semibold text-gray-700 border border-gray-300 px-3 py-1.5 rounded-lg hover:bg-gray-50 transition-colors whitespace-nowrap"
+            >
+              MEQ History →
+            </button>
+            <button
+              onClick={() => setLocation("/phases")}
+              className="text-xs text-gray-400 hover:text-gray-700 transition-colors whitespace-nowrap"
+            >
+              ← Back
+            </button>
+          </div>
         </div>
 
         {/* Domain dropdown — required, no "all" option */}
