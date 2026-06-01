@@ -449,12 +449,6 @@ function SelfMarkScreen({
   timeUsed: number;
   onComplete: (identifiedIds: string[]) => void;
 }) {
-  const [marks, setMarks] = useState<Record<string, boolean | null>>(() => {
-    const init: Record<string, boolean | null> = {};
-    for (const s of stem.signals) init[s.id] = null;
-    return init;
-  });
-
   const urgentSignals = stem.priorityOrder.urgent
     .map((id) => stem.signals.find((s) => s.id === id))
     .filter((s): s is ExpectedSignal => s !== undefined);
@@ -465,8 +459,16 @@ function SelfMarkScreen({
     .map((id) => stem.signals.find((s) => s.id === id))
     .filter((s): s is ExpectedSignal => s !== undefined);
 
+  const renderedSignals = [...urgentSignals, ...secondarySignals, ...lowYieldSignals];
+
+  const [marks, setMarks] = useState<Record<string, boolean | null>>(() => {
+    const init: Record<string, boolean | null> = {};
+    for (const s of renderedSignals) init[s.id] = null;
+    return init;
+  });
+
   const markedCount = Object.values(marks).filter((v) => v !== null).length;
-  const total = stem.signals.length;
+  const total = renderedSignals.length;
   const allMarked = markedCount === total;
 
   function setMark(id: string, val: boolean) {
