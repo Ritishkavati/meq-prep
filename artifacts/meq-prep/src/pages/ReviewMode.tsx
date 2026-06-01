@@ -293,8 +293,8 @@ export default function ReviewMode() {
   const [filterResult, setFilterResult] = useState<"all" | "strong" | "borderline" | "weak">("all");
 
   React.useEffect(() => {
-    if (!fullName) setLocation("/");
-  }, [fullName, setLocation]);
+    if (!candidateNumber) setLocation("/");
+  }, [candidateNumber, setLocation]);
 
   const allAttempts = useMemo(() => {
     if (!candidateNumber) return [];
