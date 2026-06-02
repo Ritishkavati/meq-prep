@@ -1,5 +1,18 @@
 import React, { createContext, useContext, useState, ReactNode } from "react";
 
+const STORAGE_KEY = "meq_candidate_number";
+
+function loadCandidateNumber(): string {
+  try { return localStorage.getItem(STORAGE_KEY) ?? ""; } catch { return ""; }
+}
+
+function saveCandidateNumber(num: string) {
+  try {
+    if (num) localStorage.setItem(STORAGE_KEY, num);
+    else localStorage.removeItem(STORAGE_KEY);
+  } catch {}
+}
+
 interface CandidateContextType {
   fullName: string;
   candidateNumber: string;
@@ -14,12 +27,18 @@ const CandidateContext = createContext<CandidateContextType | undefined>(undefin
 
 export function CandidateProvider({ children }: { children: ReactNode }) {
   const [fullName, setFullName] = useState("");
-  const [candidateNumber, setCandidateNumber] = useState("");
+  const [candidateNumber, setCandidateNumberState] = useState(loadCandidateNumber);
   const [examYear, setExamYear] = useState("2026");
 
+  function setCandidateNumber(num: string) {
+    saveCandidateNumber(num);
+    setCandidateNumberState(num);
+  }
+
   function clearCandidate() {
+    saveCandidateNumber("");
     setFullName("");
-    setCandidateNumber("");
+    setCandidateNumberState("");
     setExamYear("2026");
   }
 
