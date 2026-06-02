@@ -349,9 +349,9 @@ A review of the hospital records shows two previous ED presentations in the last
         category: "consent_refusal",
         severity: "critical",
         clueInStem: "he is hostile and says: 'I know what you're going to do. Just let me go home.' He refuses to discuss what happened",
-        whyItMatters: "Missing this signal means the candidate has interpreted refusal to engage as reduced risk rather than recognising it as potential active concealment in the context of a near-lethal attempt",
+        whyItMatters: "Missing this signal means the candidate has either attempted a full MHA assessment on a drowsy post-naloxone patient or has failed to initiate any legal mechanism to prevent a high-risk patient from leaving before assessment is complete.",
         relatedLegal: "Mental Health Act criteria for involuntary assessment may be met",
-        modelWording: "Recognise that Daniel's refusal to engage does not reduce risk and may reflect active concealment, and consider initiating MHA involuntary assessment criteria given the near-lethal attempt and ongoing searching behaviour",
+        modelWording: "Initiate a detention order for the purpose of psychiatric assessment on reasonable grounds because full MHA criteria cannot be formally assessed while Daniel is drowsy from naloxone, but near-lethal overdose, preparatory behaviour, active dose-searching and refusal to engage provide sufficient grounds for detention now.",
         keywords: ["refus", "hostile", "won't engage", "not engag", "conceal", "won't disclose", "limit", "mha", "involuntar"],
       },
       {
