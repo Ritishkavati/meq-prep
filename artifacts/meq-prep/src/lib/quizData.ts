@@ -298,6 +298,50 @@ The use of Amara's 16-year-old daughter Fatima as the sole interpreter for three
 A valid capacity assessment cannot be conducted until a professional interpreter is present. Once that condition is met, I will assess Amara across all four domains: her understanding of her medical condition and the proposed nasogastric feeding, her ability to retain that information, her ability to weigh it against her own values, and her ability to communicate a decision. If she retains capacity, her refusal is legally binding even if it is life-threatening; if she lacks capacity, substitute decision-making under guardianship legislation or a Tribunal order is required before any involuntary feeding can proceed, and these legal pathways must be initiated without delay given the life-threatening clinical context.
 
 The differential diagnosis for Amara's refusal of oral intake must not be collapsed prematurely. Cultural or religious fasting practice, complicated grief following the traumatic loss of her husband during the boat crossing eighteen months ago, a major depressive episode with psychomotor retardation, post-traumatic stress disorder with dissociation, and somatic expression of distress must all remain live diagnostic possibilities until adequately assessed. Her marked distress when male staff enter the room must prompt immediate consideration of gender-based violence or sexual trauma during her displacement — a trauma-informed approach with female-led clinical contact is required from this point. The ward social worker must be urgently involved, and refugee health services, STARTTS equivalent, and community resettlement supports must be mobilised without further delay.`,
+    broadDomains: `Immediate medical risk\nInterpreter / language access\nCapacity assessment\nDifferential diagnosis\nTrauma-informed care\nSocial / systems supports`,
+    pointsInEachDomain: `Immediate medical risk (2 pts): cardiac arrhythmia, refeeding syndrome — must be addressed in parallel with psychiatry\nInterpreter (2 pts): NAATI-accredited interpreter required; use of 16-year-old renders all assessments invalid\nCapacity (3 pts): four-domain assessment once interpreter present; if lacks capacity → guardianship/Tribunal pathway\nDifferential (2 pts): grief, PTSD, MDE, cultural fasting, somatic expression — must remain open\nTrauma-informed (2 pts): female-led care; explore gender-based violence or sexual trauma\nSystems (1 pt): social work, refugee health, STARTTS referral`,
+    missedInformation: `Fatima as interpreter invalidates prior assessments (commonly missed)\nCapacity ≠ consent — refusal with capacity is legally binding\nTrauma history during displacement — gender-based violence screening\nRefugee health and resettlement supports not mentioned`,
+    conceptExplanation: `This question tests the intersection of capacity law, cultural safety, and refugee mental health.\n\nKey principle: a capacity assessment is only valid when conducted in the patient's own language via an accredited interpreter. Using a family member — especially a minor — is a procedural breach with legal consequences.\n\nCapacity has four domains: understanding, retention, weighing, and communication. If capacity is intact, refusal must be respected even if life-threatening. If absent, the least restrictive legal pathway (guardianship, Tribunal) must be activated urgently.\n\nTrauma-informed care is essential: refugees may have experienced gender-based violence, torture, or loss. Male staff causing distress is a clinical red flag requiring active gender-sensitive restructuring of care.`,
+    markingGuide: [
+      {
+        letter: "A",
+        heading: "Immediate medical risk",
+        points: [
+          "Recognise 38 kg / severe malnutrition as immediate risk to life.",
+          "Name specific complications: cardiac arrhythmia, refeeding syndrome, multi-organ failure.",
+          "Medical stabilisation must run in parallel with psychiatric assessment — not sequential.",
+        ],
+      },
+      {
+        letter: "B",
+        heading: "Interpreter and language access",
+        points: [
+          "Identify use of 16-year-old daughter as sole interpreter as a critical systems failure.",
+          "State all prior clinical contacts are procedurally invalid without NAATI-accredited interpreter.",
+          "Identify Fatima's own wellbeing as requiring independent consideration (young carer role).",
+        ],
+      },
+      {
+        letter: "C",
+        heading: "Capacity assessment",
+        points: [
+          "Capacity assessment can only proceed once professional interpreter is present.",
+          "Apply four-domain framework: understanding, retention, weighing, communication.",
+          "If capacity intact: refusal is legally binding.",
+          "If capacity absent: initiate guardianship legislation / Tribunal order without delay.",
+        ],
+      },
+      {
+        letter: "D",
+        heading: "Differential diagnosis and trauma-informed care",
+        points: [
+          "Keep differential broad: cultural/religious fasting, complicated grief, MDE, PTSD, somatic expression.",
+          "Distress when male staff present → screen for gender-based violence / sexual trauma during displacement.",
+          "Female-led clinical contact required.",
+          "Mobilise social work, refugee health services, STARTTS equivalent.",
+        ],
+      },
+    ],
   },
 
   // ─── 2. ED / RISK ─────────────────────────────────────────────────────────

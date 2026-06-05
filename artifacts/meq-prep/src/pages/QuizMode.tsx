@@ -128,7 +128,7 @@ function SetupScreen({
             <p className="text-3xl font-bold font-mono text-primary tabular-nums">{savedCount}</p>
             <p className="text-xs text-muted-foreground">saved question attempts</p>
             <p className="text-xs text-muted-foreground leading-relaxed">
-              Review your written answers, signals identified, signals missed, and model wordings.
+              Review your written answers and compare against the marking guide.
             </p>
           </div>
           <Link
