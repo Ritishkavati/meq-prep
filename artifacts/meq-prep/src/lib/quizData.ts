@@ -49,6 +49,8 @@ export interface QuizStem {
   signals: ExpectedSignal[];
   priorityOrder: { urgent: string[]; secondary: string[]; lowYield: string[] };
   modelAnswer: string;
+  broadDomains?: string;
+  pointsInEachDomain?: string;
 }
 
 export type TopicKey =
