@@ -51,6 +51,8 @@ export interface QuizStem {
   modelAnswer: string;
   broadDomains?: string;
   pointsInEachDomain?: string;
+  missedInformation?: string;
+  conceptExplanation?: string;
 }
 
 export type TopicKey =

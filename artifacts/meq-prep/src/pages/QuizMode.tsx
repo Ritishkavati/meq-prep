@@ -19,9 +19,8 @@ import {
   getNextStem, getTopicStats, TopicStats,
 } from "@/lib/quizSessionStore";
 import {
-  ArrowLeft, RotateCcw, Send, CheckCircle2,
-  XCircle, AlertTriangle, ChevronDown, ChevronUp,
-  RotateCw, ListChecks, ArrowRight, BookMarked,
+  ArrowLeft, RotateCcw, Send, ChevronDown, ChevronUp,
+  RotateCw, ListChecks, ArrowRight,
   FileText, Bookmark, BookmarkCheck, Trash2, PenLine, History, BarChart2,
 } from "lucide-react";
 
@@ -33,18 +32,6 @@ function fmtTime(s: number) {
   const sec = s % 60;
   return `${String(m).padStart(2, "0")}:${String(sec).padStart(2, "0")}`;
 }
-
-const SEVERITY_COLOURS = {
-  critical: "text-red-700 bg-red-50 border-red-200",
-  important: "text-amber-700 bg-amber-50 border-amber-200",
-  optional: "text-slate-600 bg-slate-50 border-slate-200",
-};
-
-const SEVERITY_LABELS = {
-  critical: "Critical",
-  important: "Important",
-  optional: "Optional",
-};
 
 // ─── Setup screen ─────────────────────────────────────────────────────────────
 function SetupScreen({
@@ -395,68 +382,7 @@ function QuizScreen({
 }
 
 // ─── Identified signal card ────────────────────────────────────────────────────
-function IdentifiedCard({ signal }: { signal: ExpectedSignal }) {
-  return (
-    <div className="rounded-xl border border-emerald-200 bg-emerald-50 p-4 space-y-2.5">
-      <div className="flex flex-wrap items-center gap-2">
-        <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
-        <span className="text-sm font-semibold text-emerald-900">{signal.name}</span>
-        <span className={`ml-auto text-xs font-semibold border px-2 py-0.5 rounded-full ${SEVERITY_COLOURS[signal.severity]}`}>
-          {SEVERITY_LABELS[signal.severity]}
-        </span>
-      </div>
-      <div className="bg-white/60 rounded-lg px-3 py-2 border border-emerald-100">
-        <p className="text-xs font-semibold text-emerald-700 mb-0.5 uppercase tracking-wider">Clue in stem</p>
-        <p className="text-xs text-emerald-900 italic">"{signal.clueInStem}"</p>
-      </div>
-      <p className="text-xs text-emerald-900 leading-relaxed">{signal.whyItMatters}</p>
-    </div>
-  );
-}
-
-// ─── Missed signal card ────────────────────────────────────────────────────────
-function MissedCard({ signal }: { signal: ExpectedSignal }) {
-  const isCritical = signal.severity === "critical";
-  return (
-    <div className={`rounded-xl border p-4 space-y-2.5 ${isCritical ? "border-red-200 bg-red-50" : "border-amber-200 bg-amber-50"}`}>
-      <div className="flex flex-wrap items-center gap-2">
-        {isCritical ? (
-          <XCircle className="w-4 h-4 text-red-600 flex-shrink-0" />
-        ) : (
-          <AlertTriangle className="w-4 h-4 text-amber-600 flex-shrink-0" />
-        )}
-        <span className={`text-sm font-semibold ${isCritical ? "text-red-900" : "text-amber-900"}`}>
-          {signal.name}
-        </span>
-        {isCritical && (
-          <span className="text-xs font-bold text-red-700 ml-auto">⚠️ CRITICAL</span>
-        )}
-        {!isCritical && (
-          <span className={`ml-auto text-xs font-semibold border px-2 py-0.5 rounded-full ${SEVERITY_COLOURS[signal.severity]}`}>
-            {SEVERITY_LABELS[signal.severity]}
-          </span>
-        )}
-      </div>
-
-      <div className={`rounded-lg px-3 py-2 border ${isCritical ? "bg-white/60 border-red-100" : "bg-white/60 border-amber-100"}`}>
-        <p className={`text-xs font-semibold mb-0.5 uppercase tracking-wider ${isCritical ? "text-red-700" : "text-amber-700"}`}>
-          Clue you should have spotted
-        </p>
-        <p className={`text-xs italic ${isCritical ? "text-red-900" : "text-amber-900"}`}>"{signal.clueInStem}"</p>
-      </div>
-
-      <p className={`text-xs leading-relaxed ${isCritical ? "text-red-900" : "text-amber-900"}`}>{signal.whyItMatters}</p>
-
-      <div className="bg-white rounded-lg px-3 py-2.5 border border-slate-200">
-        <p className="text-xs font-semibold text-slate-600 mb-0.5 uppercase tracking-wider">What a consultant would say</p>
-        <p className="text-xs text-slate-800 italic leading-relaxed">{signal.modelWording}</p>
-      </div>
-    </div>
-  );
-}
-
 // ─── Self-Marking Screen ───────────────────────────────────────────────────────
-const SEVERITY_ORDER = { critical: 0, important: 1, optional: 2 };
 
 function SelfMarkScreen({
   stem,
@@ -538,111 +464,6 @@ function SelfMarkScreen({
   );
 }
 
-// ─── PS Marking Panel ─────────────────────────────────────────────────────────
-function PSMarkingPanel({ result }: { result: import("@/lib/quizEngine").QuizResult }) {
-  const [open, setOpen] = useState(true);
-
-  if (!result.hasPSLevel) return null;
-
-  const allGood = result.psDomainsMissed.length === 0 && result.psDomainsIdentified.length > 0;
-
-  return (
-    <div
-      className={`rounded-2xl border shadow-sm overflow-hidden ${
-        allGood
-          ? "border-violet-200 bg-violet-50"
-          : result.psDomainsMissed.length > 0
-          ? "border-violet-300 bg-violet-50"
-          : "border-card-border bg-white"
-      }`}
-    >
-      <button
-        onClick={() => setOpen((v) => !v)}
-        className="w-full flex items-center justify-between px-6 py-4 text-left"
-      >
-        <div className="flex items-center gap-3">
-          <BookMarked className="w-5 h-5 text-violet-600" />
-          <div>
-            <h3 className="font-serif font-bold text-primary text-base">
-              RANZCP Position Statement Level Marking
-            </h3>
-            <p className="text-xs text-muted-foreground">
-              Consultant-level awareness of RANZCP policy domains
-            </p>
-          </div>
-        </div>
-        {open ? (
-          <ChevronUp className="w-4 h-4 text-muted-foreground" />
-        ) : (
-          <ChevronDown className="w-4 h-4 text-muted-foreground" />
-        )}
-      </button>
-
-      {open && (
-        <div className="px-6 pb-5 space-y-4 border-t border-violet-200">
-          {/* Examiner summary */}
-          <div className="pt-4">
-            <p className="text-xs font-bold text-violet-800 uppercase tracking-wider mb-2">
-              Examiner assessment
-            </p>
-            <p className="text-sm text-violet-900 leading-relaxed">{result.examinerSummary}</p>
-          </div>
-
-          {/* PS domains grid */}
-          <div className="grid sm:grid-cols-2 gap-3">
-            {result.psDomainsIdentified.length > 0 && (
-              <div>
-                <p className="text-xs font-bold text-emerald-700 uppercase tracking-wider mb-2">
-                  PS domains — identified
-                </p>
-                <ul className="space-y-1.5">
-                  {result.psDomainsIdentified.map((d) => (
-                    <li key={d} className="flex items-center gap-2 text-xs text-emerald-800">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" />
-                      {d}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
-            {result.psDomainsMissed.length > 0 && (
-              <div>
-                <p className="text-xs font-bold text-red-700 uppercase tracking-wider mb-2">
-                  PS domains — missed
-                </p>
-                <ul className="space-y-1.5">
-                  {result.psDomainsMissed.map((d) => (
-                    <li key={d} className="flex items-center gap-2 text-xs text-red-800">
-                      <XCircle className="w-3.5 h-3.5 text-red-500 flex-shrink-0" />
-                      {d}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
-          </div>
-
-          {/* Examiner rule reminder */}
-          <div className="bg-white rounded-lg border border-violet-200 px-4 py-3">
-            <p className="text-xs text-violet-800 leading-relaxed">
-              <strong>Examiner marking rule:</strong> The examiner marks only what the candidate wrote.
-              PS-level reasoning that is absent from the answer cannot be inferred or awarded.
-              Vague phrases such as "consider cultural factors," "involve the family," or "safety plan"
-              without substantive content will not attract PS-level marks.
-            </p>
-          </div>
-
-          {result.psDomainsMissed.length > 0 && (
-            <p className="text-xs text-violet-700 italic">
-              Expand the missed signal cards below to see the exact clue, expected signal,
-              clinical significance, PS-level reasoning, and model wording for each missed domain.
-            </p>
-          )}
-        </div>
-      )}
-    </div>
-  );
-}
 
 // ─── Your Written Response panel ──────────────────────────────────────────────
 function YourResponsePanel({
@@ -780,79 +601,52 @@ function ResultsScreen({
   onRewrite: () => void;
   courseCompletion: QuizModuleCompletion;
 }) {
-  const [showModel, setShowModel] = useState(false);
-  const [showIdentified, setShowIdentified] = useState(false);
-  const [showMissed, setShowMissed] = useState(false);
-
-  const identified = result.matches.filter((m) => m.identified);
-  const missed = result.matches.filter((m) => !m.identified);
-  const totalSignals = result.matches.length;
-
-  const criticalTotal = result.matches.filter((m) => m.signal.severity === "critical").length;
-  const criticalFound = result.matches.filter((m) => m.identified && m.signal.severity === "critical").length;
-
-  // Weighted marks: critical=2, important=1, optional=0.5
-  const WEIGHTS: Record<string, number> = { critical: 2, important: 1, optional: 0.5 };
-  const totalWeighted = result.matches.reduce((s, m) => s + (WEIGHTS[m.signal.severity] ?? 1), 0);
-  const earnedWeighted = result.matches.filter((m) => m.identified).reduce((s, m) => s + (WEIGHTS[m.signal.severity] ?? 1), 0);
-  const estimatedMarks = totalWeighted > 0
-    ? Math.round((earnedWeighted / totalWeighted) * stem.totalMarks)
-    : 0;
-
-  // Rating thresholds per spec
-  let ratingLabel: string;
-  let ratingStyle: string;
-  if (result.percentage >= 80) {
-    ratingLabel = "Examiner-level thinking ✓";
-    ratingStyle = "text-emerald-700 bg-emerald-50 border-emerald-300";
-  } else if (result.percentage >= 60) {
-    ratingLabel = "Borderline pass — review missed signals";
-    ratingStyle = "text-amber-700 bg-amber-50 border-amber-300";
-  } else {
-    ratingLabel = "Needs work — study the missed signals below";
-    ratingStyle = "text-red-700 bg-red-50 border-red-300";
-  }
+  const [showMarkingGuide, setShowMarkingGuide] = useState(false);
+  const [showConcept, setShowConcept] = useState(false);
 
   return (
     <div className="space-y-5 max-w-3xl mx-auto">
 
-      {/* ── A) SCORE BANNER ─────────────────────────────────────────────────── */}
+      {/* ── A) FEEDBACK SCORE CARD ──────────────────────────────────────────── */}
       <div className="bg-white rounded-2xl border border-card-border shadow-sm p-6 space-y-4">
-        <h2 className="text-xl font-serif font-bold text-primary">Examiner Marking — Results</h2>
-
-        {/* Main counts */}
-        <div className="flex flex-wrap gap-6 items-center">
-          <div>
-            <p className="text-4xl font-bold text-primary">{identified.length}<span className="text-2xl text-muted-foreground font-normal"> / {totalSignals}</span></p>
-            <p className="text-xs text-muted-foreground mt-0.5">signals identified</p>
-          </div>
-          <div>
-            <p className="text-4xl font-bold text-primary">{result.percentage}<span className="text-2xl text-muted-foreground font-normal">%</span></p>
-            <p className="text-xs text-muted-foreground mt-0.5">signal coverage</p>
-          </div>
-          <div className="flex flex-col gap-1.5">
-            <span className={`inline-flex text-sm font-semibold border px-3 py-1 rounded-full ${ratingStyle}`}>
-              {ratingLabel}
-            </span>
-            <p className="text-xs text-muted-foreground">Time used: {fmtTime(result.timeUsed)}</p>
-          </div>
+        <div className="flex items-center justify-between">
+          <h2 className="text-xl font-serif font-bold text-primary">Feedback</h2>
+          <p className="text-xs text-muted-foreground">Time used: {fmtTime(result.timeUsed)}</p>
         </div>
 
-        {/* Critical signals summary */}
-        <div className={`flex items-center gap-3 rounded-lg px-4 py-3 border text-sm ${
-          criticalFound === criticalTotal
-            ? "bg-emerald-50 border-emerald-200"
-            : "bg-red-50 border-red-200"
-        }`}>
-          {criticalFound === criticalTotal ? (
-            <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
-          ) : (
-            <XCircle className="w-4 h-4 text-red-600 flex-shrink-0" />
-          )}
-          <p className={`font-semibold ${criticalFound === criticalTotal ? "text-emerald-800" : "text-red-800"}`}>
-            {criticalFound}/{criticalTotal} critical signals found
-            {criticalFound < criticalTotal && " — missing critical signals significantly affects your mark"}
-          </p>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          {/* Domains Identified */}
+          <div className="rounded-xl border border-card-border bg-slate-50 p-4 space-y-2">
+            <p className="text-xs font-bold text-slate-500 uppercase tracking-wider">Domains Identified</p>
+            <div className="text-sm text-primary leading-relaxed whitespace-pre-wrap min-h-[60px]">
+              {stem.broadDomains?.trim()
+                ? stem.broadDomains
+                : <span className="text-muted-foreground italic">Content coming soon.</span>
+              }
+            </div>
+          </div>
+
+          {/* Points Identified */}
+          <div className="rounded-xl border border-card-border bg-slate-50 p-4 space-y-2">
+            <p className="text-xs font-bold text-slate-500 uppercase tracking-wider">Points Identified</p>
+            <div className="text-sm text-primary leading-relaxed whitespace-pre-wrap min-h-[60px]">
+              {stem.pointsInEachDomain?.trim()
+                ? stem.pointsInEachDomain
+                : <span className="text-muted-foreground italic">Content coming soon.</span>
+              }
+            </div>
+          </div>
+
+          {/* Missed Information */}
+          <div className="rounded-xl border border-card-border bg-slate-50 p-4 space-y-2">
+            <p className="text-xs font-bold text-slate-500 uppercase tracking-wider">Missed Information</p>
+            <div className="text-sm text-primary leading-relaxed whitespace-pre-wrap min-h-[60px]">
+              {stem.missedInformation?.trim()
+                ? stem.missedInformation
+                : <span className="text-muted-foreground italic">Content coming soon.</span>
+              }
+            </div>
+          </div>
         </div>
       </div>
 
@@ -864,7 +658,7 @@ function ResultsScreen({
         onRewrite={onRewrite}
       />
 
-      {/* ── NEXT CTA — shown immediately after results ──────────────────────── */}
+      {/* ── NEXT CTA ────────────────────────────────────────────────────────── */}
       <div className="flex flex-col sm:flex-row gap-2">
         <button
           onClick={onNextRandom}
@@ -880,142 +674,51 @@ function ResultsScreen({
         </button>
       </div>
 
-      {/* ── B) SIGNALS YOU IDENTIFIED ───────────────────────────────────────── */}
-      {identified.length > 0 && (
-        <div className="bg-white rounded-2xl border border-card-border shadow-sm overflow-hidden">
-          <button
-            onClick={() => setShowIdentified((v) => !v)}
-            className="w-full flex items-center justify-between px-5 py-4 text-left hover:bg-slate-50 transition-colors"
-          >
-            <span className="font-serif font-bold text-primary flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-              Signals you identified ✅ ({identified.length})
-            </span>
-            {showIdentified
-              ? <ChevronUp className="w-4 h-4 text-muted-foreground" />
-              : <ChevronDown className="w-4 h-4 text-muted-foreground" />
+      {/* ── MARKING GUIDE ───────────────────────────────────────────────────── */}
+      <div className="bg-white rounded-2xl border border-card-border shadow-sm overflow-hidden">
+        <button
+          onClick={() => setShowMarkingGuide((v) => !v)}
+          className="w-full flex items-center justify-between px-5 py-4 text-left bg-slate-50 hover:bg-slate-100 transition-colors"
+        >
+          <span className="text-sm font-semibold text-primary">Marking Guide</span>
+          {showMarkingGuide
+            ? <ChevronUp className="w-4 h-4 text-muted-foreground" />
+            : <ChevronDown className="w-4 h-4 text-muted-foreground" />
+          }
+        </button>
+        {showMarkingGuide && (
+          <div className="px-5 py-4 text-sm text-primary leading-relaxed whitespace-pre-line border-t border-card-border">
+            {stem.modelAnswer?.trim()
+              ? stem.modelAnswer
+              : <span className="text-muted-foreground italic">Content coming soon.</span>
             }
-          </button>
-          {showIdentified && (
-            <div className="px-5 pb-5 space-y-2.5 border-t border-card-border pt-4">
-              {identified.map((m) => (
-                <IdentifiedCard key={m.signal.id} signal={m.signal} />
-              ))}
-            </div>
-          )}
-        </div>
-      )}
-
-      {/* ── C) SIGNALS YOU MISSED ───────────────────────────────────────────── */}
-      {missed.length > 0 && (
-        <div className="bg-white rounded-2xl border border-card-border shadow-sm overflow-hidden">
-          <button
-            onClick={() => setShowMissed((v) => !v)}
-            className="w-full flex items-center justify-between px-5 py-4 text-left hover:bg-slate-50 transition-colors"
-          >
-            <span className="font-serif font-bold text-red-700 flex items-center gap-2">
-              <XCircle className="w-4 h-4" />
-              Signals you missed ❌ ({missed.length})
-            </span>
-            {showMissed
-              ? <ChevronUp className="w-4 h-4 text-muted-foreground" />
-              : <ChevronDown className="w-4 h-4 text-muted-foreground" />
-            }
-          </button>
-          {showMissed && (
-            <div className="px-5 pb-5 space-y-2.5 border-t border-card-border pt-4">
-              {missed
-                .filter((m) => m.signal.severity === "critical")
-                .map((m) => (
-                  <MissedCard key={m.signal.id} signal={m.signal} />
-                ))}
-              {missed
-                .filter((m) => m.signal.severity !== "critical")
-                .map((m) => (
-                  <MissedCard key={m.signal.id} signal={m.signal} />
-                ))}
-            </div>
-          )}
-        </div>
-      )}
-
-      {/* Overcalled vague terms */}
-      {result.overcalled.length > 0 && (
-        <div className="bg-white rounded-2xl border border-card-border shadow-sm p-5">
-          <h3 className="font-serif font-bold text-primary mb-1 text-sm">Vague / overcalled terms in your answer</h3>
-          <p className="text-xs text-muted-foreground mb-3">
-            These phrases were too generic to attract marks without substantive elaboration.
-          </p>
-          <ul className="space-y-2.5">
-            {result.overcalled.map((oc, i) => (
-              <li
-                key={i}
-                className={`flex items-start gap-3 rounded-lg px-3 py-2.5 border text-xs ${
-                  oc.isPSLevel ? "bg-violet-50 border-violet-200" : "bg-amber-50 border-amber-200"
-                }`}
-              >
-                <AlertTriangle className={`w-3.5 h-3.5 flex-shrink-0 mt-0.5 ${oc.isPSLevel ? "text-violet-500" : "text-amber-500"}`} />
-                <div>
-                  <span className={`font-semibold ${oc.isPSLevel ? "text-violet-900" : "text-primary"}`}>"{oc.text}"</span>
-                  {oc.isPSLevel && (
-                    <span className="ml-2 text-xs font-semibold text-violet-700 bg-violet-100 border border-violet-200 px-1.5 py-0.5 rounded-full">PS-level</span>
-                  )}
-                  <p className={`mt-0.5 leading-relaxed ${oc.isPSLevel ? "text-violet-800" : "text-muted-foreground"}`}>{oc.reason}</p>
-                </div>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
-
-      {/* PS-level marking panel */}
-      <PSMarkingPanel result={result} />
-
-      {/* ── D) EXAMINER FEEDBACK SUMMARY ────────────────────────────────────── */}
-      <div className="bg-white rounded-2xl border border-card-border shadow-sm p-6 space-y-4">
-        <h3 className="font-serif font-bold text-primary">Examiner Feedback Summary</h3>
-
-        {/* Marks grid */}
-        <div className="grid grid-cols-3 gap-3 text-center">
-          <div className="bg-slate-50 rounded-xl border border-slate-200 px-3 py-4">
-            <p className="text-2xl font-bold text-primary">{stem.totalMarks}</p>
-            <p className="text-xs text-muted-foreground mt-0.5">marks available</p>
           </div>
-          <div className="bg-accent/8 rounded-xl border border-accent/20 px-3 py-4">
-            <p className="text-2xl font-bold text-accent">{estimatedMarks}</p>
-            <p className="text-xs text-muted-foreground mt-0.5">estimated marks</p>
-          </div>
-          <div className="bg-slate-50 rounded-xl border border-slate-200 px-3 py-4">
-            <p className="text-2xl font-bold text-primary">{result.percentage}%</p>
-            <p className="text-xs text-muted-foreground mt-0.5">signal hit rate</p>
-          </div>
-        </div>
-
-        <p className="text-xs text-muted-foreground">
-          Estimated marks weighted: Critical = 2 pts · Important = 1 pt · Optional = 0.5 pt
-        </p>
-
-        {/* Collapsible model answer */}
-        <div className="border border-card-border rounded-xl overflow-hidden">
-          <button
-            onClick={() => setShowModel((v) => !v)}
-            className="w-full flex items-center justify-between px-4 py-3 text-left bg-slate-50 hover:bg-slate-100 transition-colors"
-          >
-            <span className="text-sm font-semibold text-primary">Show consultant model answer</span>
-            {showModel
-              ? <ChevronUp className="w-4 h-4 text-muted-foreground" />
-              : <ChevronDown className="w-4 h-4 text-muted-foreground" />
-            }
-          </button>
-          {showModel && (
-            <div className="px-5 py-4 bg-primary/3 text-sm text-primary leading-relaxed whitespace-pre-line border-t border-card-border">
-              {stem.modelAnswer}
-            </div>
-          )}
-        </div>
+        )}
       </div>
 
-      {/* Course progress */}
+      {/* ── CONCEPT EXPLANATION ─────────────────────────────────────────────── */}
+      <div className="bg-white rounded-2xl border border-card-border shadow-sm overflow-hidden">
+        <button
+          onClick={() => setShowConcept((v) => !v)}
+          className="w-full flex items-center justify-between px-5 py-4 text-left bg-slate-50 hover:bg-slate-100 transition-colors"
+        >
+          <span className="text-sm font-semibold text-primary">Concept Explanation</span>
+          {showConcept
+            ? <ChevronUp className="w-4 h-4 text-muted-foreground" />
+            : <ChevronDown className="w-4 h-4 text-muted-foreground" />
+          }
+        </button>
+        {showConcept && (
+          <div className="px-5 py-4 text-sm text-primary leading-relaxed whitespace-pre-line border-t border-card-border">
+            {stem.conceptExplanation?.trim()
+              ? stem.conceptExplanation
+              : <span className="text-muted-foreground italic">Content coming soon.</span>
+            }
+          </div>
+        )}
+      </div>
+
+      {/* ── COURSE PROGRESS ─────────────────────────────────────────────────── */}
       <div className="bg-white rounded-2xl border border-card-border shadow-sm p-5 space-y-3">
         <div className="flex items-center justify-between">
           <div>
@@ -1040,7 +743,7 @@ function ResultsScreen({
         </div>
       </div>
 
-      {/* Secondary nav */}
+      {/* ── SECONDARY NAV ───────────────────────────────────────────────────── */}
       <div className="bg-card rounded-2xl border border-card-border shadow-sm p-5 space-y-4">
         <div className="space-y-1.5">
           <div className="flex items-center justify-between text-xs text-muted-foreground">
@@ -1078,7 +781,7 @@ function ResultsScreen({
         </div>
       </div>
 
-      {/* Next Quiz CTA */}
+      {/* ── BOTTOM CTA ──────────────────────────────────────────────────────── */}
       <div className="bg-primary rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4 mb-8">
         <div>
           <p className="text-white font-serif font-bold text-lg">Ready for the next challenge?</p>
