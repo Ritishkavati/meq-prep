@@ -94,7 +94,7 @@ function SetupScreen({
             </select>
           </div>
           <button
-            onClick={() => onGenerate(topic, 180)}
+            onClick={() => onGenerate(topic, 600)}
             className="w-full flex items-center justify-center gap-2 bg-primary text-white py-2.5 rounded-lg font-semibold hover:bg-primary/90 transition-colors text-sm mt-auto"
           >
             Generate Quiz Stem <ArrowRight className="w-4 h-4" />
@@ -170,6 +170,7 @@ function QuizScreen({
 }) {
   const [skipDismissed, setSkipDismissed] = useState(false);
   const [answer, setAnswer] = useState(initialAnswer ?? "");
+  const [answer2, setAnswer2] = useState("");
   const [timeLeft, setTimeLeft] = useState(timeSecs);
   const [started, setStarted] = useState(false);
   const [paused, setPaused] = useState(false);
@@ -209,6 +210,7 @@ function QuizScreen({
     setTimeExpired(false);
     setTimeLeft(timeSecs);
     setAnswer("");
+    setAnswer2("");
     timeUsedRef.current = 0;
   }, [clearTick, timeSecs]);
 
@@ -220,7 +222,8 @@ function QuizScreen({
   function handleSubmit() {
     clearTick();
     const used = timeSecs - timeLeft;
-    onSubmit(answer, used);
+    const combined = `BROAD DOMAINS:\n${answer}\n\nPOINTS IN EACH DOMAIN:\n${answer2}`;
+    onSubmit(combined, used);
   }
 
   function handleTimerClick() {
@@ -337,24 +340,41 @@ function QuizScreen({
       )}
 
       {/* answer */}
-      <div className="bg-white rounded-2xl border border-card-border shadow-sm p-6">
-        <label className="block text-sm font-semibold text-primary mb-1">
-          BRAINSTORM
-        </label>
-        <p className="text-xs text-muted-foreground mb-3">
-          Write down the key issues identified in the question and plan your answer — helps in concept building and prioritising under pressure.
-        </p>
-        <textarea
-          value={answer}
-          onChange={(e) => setAnswer(e.target.value)}
-          rows={10}
-          className="w-full px-4 py-3 rounded-xl border border-input bg-background text-sm focus:outline-none focus:ring-2 focus:ring-accent resize-y leading-relaxed"
-          placeholder="Begin writing your signal list here..."
-        />
+      <div className="bg-white rounded-2xl border border-card-border shadow-sm p-6 space-y-4">
+        <div>
+          <label className="block text-sm font-semibold text-primary mb-1">
+            BROAD DOMAINS
+          </label>
+          <p className="text-xs text-muted-foreground mb-2">
+            List the broad clinical domains relevant to this question (e.g. risk, diagnosis, legal, family, disposition).
+          </p>
+          <textarea
+            value={answer}
+            onChange={(e) => setAnswer(e.target.value)}
+            rows={4}
+            className="w-full px-4 py-3 rounded-xl border border-input bg-background text-sm focus:outline-none focus:ring-2 focus:ring-accent resize-y leading-relaxed"
+            placeholder="e.g. Risk assessment, Capacity / MHA, Family involvement, Disposition..."
+          />
+        </div>
+        <div>
+          <label className="block text-sm font-semibold text-primary mb-1">
+            POINTS IN EACH DOMAIN
+          </label>
+          <p className="text-xs text-muted-foreground mb-2">
+            Expand each domain with specific clinical points, actions and reasoning.
+          </p>
+          <textarea
+            value={answer2}
+            onChange={(e) => setAnswer2(e.target.value)}
+            rows={7}
+            className="w-full px-4 py-3 rounded-xl border border-input bg-background text-sm focus:outline-none focus:ring-2 focus:ring-accent resize-y leading-relaxed"
+            placeholder="e.g. Risk: high-lethality attempt, active intent, no safety plan — cannot discharge..."
+          />
+        </div>
         <button
           onClick={handleSubmit}
-          disabled={!started || answer.trim().length < 10}
-          className="mt-4 w-full flex items-center justify-center gap-2 bg-primary text-white py-3 rounded-lg font-semibold hover:bg-primary/90 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+          disabled={!started || (answer.trim().length + answer2.trim().length) < 10}
+          className="w-full flex items-center justify-center gap-2 bg-primary text-white py-3 rounded-lg font-semibold hover:bg-primary/90 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
         >
           <Send className="w-4 h-4" /> Submit answer for marking
         </button>
@@ -1183,7 +1203,7 @@ export default function QuizMode() {
   const [phase, setPhase] = useState<Phase>("setup");
   const [currentStem, setCurrentStem] = useState<QuizStem | null>(null);
   const [currentTopic, setCurrentTopic] = useState<TopicKey>("random");
-  const [currentTimeSecs, setCurrentTimeSecs] = useState(180);
+  const [currentTimeSecs, setCurrentTimeSecs] = useState(600);
   const [result, setResult] = useState<QuizResult | null>(null);
   const [lastCandidateAnswer, setLastCandidateAnswer] = useState("");
   const [sessionProgress, setSessionProgress] = useState({ attempted: 0, available: 0 });
