@@ -721,9 +721,7 @@ function ResultsScreen({
           <div className="p-5 border-t border-card-border">
             {stem.markingGuide && stem.markingGuide.length > 0
               ? <MarkingGuideTable sections={stem.markingGuide} />
-              : stem.modelAnswer?.trim()
-                ? <div className="text-sm text-primary leading-relaxed whitespace-pre-line">{stem.modelAnswer}</div>
-                : <span className="text-sm text-muted-foreground italic">Content coming soon.</span>
+              : <span className="text-sm text-muted-foreground italic">Content coming soon.</span>
             }
           </div>
         )}
