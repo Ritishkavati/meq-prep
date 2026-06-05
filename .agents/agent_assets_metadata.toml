@@ -54,3 +54,9 @@ id = "fFiiJuYols_mhute9ilvY"
 uri = "file://question_bank.zip"
 type = "unspecified"
 title = "MEQ Question Bank (21 files)"
+
+[[outputs]]
+id = "sMc5njJpJu8ZxE2AxI0fo"
+uri = "file://artifacts/meq-prep/public/quiz_questions.txt"
+type = "text"
+title = "Quiz Questions — All 227 MEQs"
