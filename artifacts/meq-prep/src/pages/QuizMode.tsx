@@ -465,6 +465,37 @@ function SelfMarkScreen({
 }
 
 
+// ─── Marking Guide Table ──────────────────────────────────────────────────────
+function MarkingGuideTable({ sections }: { sections: { letter: string; heading: string; points: string[] }[] }) {
+  return (
+    <div className="border-2 border-pink-400 rounded-sm overflow-hidden text-sm">
+      {sections.map((section, i) => (
+        <div
+          key={section.letter}
+          className={`flex ${i < sections.length - 1 ? "border-b-2 border-pink-400" : ""}`}
+        >
+          {/* Letter cell */}
+          <div className="w-10 flex-shrink-0 bg-pink-100 flex items-start justify-center pt-3 border-r-2 border-pink-400">
+            <span className="font-bold text-pink-700 text-sm">{section.letter}.</span>
+          </div>
+          {/* Content cell */}
+          <div className={`flex-1 px-4 py-3 ${i % 2 === 0 ? "bg-white" : "bg-pink-50"}`}>
+            <p className="font-bold text-primary mb-1">{section.heading}</p>
+            <ul className="space-y-1">
+              {section.points.map((point, j) => (
+                <li key={j} className="flex items-start gap-2 text-primary">
+                  <span className="mt-1 text-pink-500 flex-shrink-0">·</span>
+                  <span>{point}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 // ─── Your Written Response panel ──────────────────────────────────────────────
 function YourResponsePanel({
   stem, candidateAnswer, result, onRewrite,
@@ -687,10 +718,12 @@ function ResultsScreen({
           }
         </button>
         {showMarkingGuide && (
-          <div className="px-5 py-4 text-sm text-primary leading-relaxed whitespace-pre-line border-t border-card-border">
-            {stem.modelAnswer?.trim()
-              ? stem.modelAnswer
-              : <span className="text-muted-foreground italic">Content coming soon.</span>
+          <div className="p-5 border-t border-card-border">
+            {stem.markingGuide && stem.markingGuide.length > 0
+              ? <MarkingGuideTable sections={stem.markingGuide} />
+              : stem.modelAnswer?.trim()
+                ? <div className="text-sm text-primary leading-relaxed whitespace-pre-line">{stem.modelAnswer}</div>
+                : <span className="text-sm text-muted-foreground italic">Content coming soon.</span>
             }
           </div>
         )}

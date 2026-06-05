@@ -53,6 +53,7 @@ export interface QuizStem {
   pointsInEachDomain?: string;
   missedInformation?: string;
   conceptExplanation?: string;
+  markingGuide?: { letter: string; heading: string; points: string[] }[];
 }
 
 export type TopicKey =
