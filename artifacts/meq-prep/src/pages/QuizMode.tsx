@@ -155,10 +155,11 @@ function QuizScreen({
   onSkipToNext: () => void;
   initialAnswer?: string;
 }) {
+  const markSecs = stem.totalMarks * 60;
   const [skipDismissed, setSkipDismissed] = useState(false);
   const [answer, setAnswer] = useState(initialAnswer ?? "");
   const [answer2, setAnswer2] = useState("");
-  const [timeLeft, setTimeLeft] = useState(timeSecs);
+  const [timeLeft, setTimeLeft] = useState(markSecs);
   const [started, setStarted] = useState(false);
   const [paused, setPaused] = useState(false);
   const [timeExpired, setTimeExpired] = useState(false);
@@ -195,20 +196,20 @@ function QuizScreen({
     setStarted(false);
     setPaused(false);
     setTimeExpired(false);
-    setTimeLeft(timeSecs);
+    setTimeLeft(markSecs);
     setAnswer("");
     setAnswer2("");
     timeUsedRef.current = 0;
-  }, [clearTick, timeSecs]);
+  }, [clearTick, markSecs]);
 
   useEffect(() => () => clearTick(), [clearTick]);
 
-  const pct = ((timeSecs - timeLeft) / timeSecs) * 100;
-  const urgent = timeLeft <= 30 && started && !paused;
+  const pct = ((markSecs - timeLeft) / markSecs) * 100;
+  const urgent = timeLeft <= 60 && started && !paused;
 
   function handleSubmit() {
     clearTick();
-    const used = timeSecs - timeLeft;
+    const used = markSecs - timeLeft;
     const combined = `BROAD DOMAINS:\n${answer}\n\nPOINTS IN EACH DOMAIN:\n${answer2}`;
     onSubmit(combined, used);
   }
@@ -224,78 +225,54 @@ function QuizScreen({
   return (
     <div className="space-y-4 max-w-3xl mx-auto">
 
-      {/* ── CLOCK ─────────────────────────────────────────────────────────────── */}
+      {/* ── UNIFIED CLOCK + INFO BOX ──────────────────────────────────────────── */}
       <div
         onClick={!timeExpired ? handleTimerClick : undefined}
         className={[
           "rounded-2xl select-none transition-all overflow-hidden",
-          timeExpired
-            ? "cursor-default"
-            : "cursor-pointer active:scale-[0.99]",
+          timeExpired ? "cursor-default" : "cursor-pointer active:scale-[0.99]",
         ].join(" ")}
-        style={{
-          background: timeExpired
-            ? "#fee2e2"
-            : urgent
-            ? "#1e1040"
-            : "#0f172a",
-        }}
+        style={{ background: timeExpired ? "#450a0a" : urgent ? "#1e0a0a" : "#0f172a" }}
       >
+        {/* top row: status label + reset */}
         <div className="flex items-center justify-between px-5 pt-4 pb-1">
-          <span className={[
-            "text-xs font-bold uppercase tracking-[0.18em]",
-            timeExpired ? "text-red-600" : "text-white/50",
-          ].join(" ")}>
-            {timeExpired
-              ? "Time's up"
-              : !started
-              ? "Click to start"
-              : paused
-              ? "Paused — click to resume"
-              : "Running — click to pause"}
+          <span className="text-xs font-bold uppercase tracking-[0.18em] text-white/40">
+            {timeExpired ? "Time's up" : !started ? "Click to start" : paused ? "Paused — click to resume" : "Running — click to pause"}
           </span>
           <button
             onClick={(e) => { e.stopPropagation(); resetTimer(); }}
-            className="flex items-center gap-1 text-xs font-semibold px-2.5 py-1 rounded-lg text-white/50 hover:text-white transition-colors"
+            className="flex items-center gap-1 text-xs font-semibold px-2 py-1 rounded-lg text-white/40 hover:text-white/80 transition-colors"
           >
             <RotateCcw className="w-3 h-3" /> Reset
           </button>
         </div>
 
-        <div className="flex items-center justify-center py-6">
+        {/* big clock */}
+        <div className="flex items-center justify-center py-5">
           <span className={[
             "font-mono font-black tracking-tight tabular-nums text-7xl md:text-8xl",
-            timeExpired ? "text-red-600" : urgent ? "text-red-400" : "text-white",
+            timeExpired ? "text-red-400" : urgent ? "text-red-400" : "text-white",
           ].join(" ")}>
             {fmtTime(timeLeft)}
           </span>
         </div>
 
-        {/* thin progress bar */}
-        <div className="h-1 bg-white/10">
+        {/* progress bar */}
+        <div className="h-[3px] bg-white/10">
           <div
-            className={["h-full transition-all duration-1000", urgent ? "bg-red-400" : "bg-indigo-400"].join(" ")}
+            className={["h-full transition-all duration-1000", urgent || timeExpired ? "bg-red-500" : "bg-indigo-500"].join(" ")}
             style={{ width: `${100 - pct}%` }}
           />
         </div>
 
-        {timeExpired && (
-          <div className="px-5 py-3 text-center">
-            <span className="text-xs font-semibold text-red-700">
-              Time finished — you can still submit your answer below
-            </span>
-          </div>
-        )}
-      </div>
-
-      {/* ── QUESTION DOMAIN / MARKS META ─────────────────────────────────────── */}
-      <div className="bg-white rounded-2xl border border-card-border shadow-sm px-5 py-3.5 flex flex-wrap gap-x-3 gap-y-1 items-center text-sm">
-        <span className="font-bold text-primary">{TOPIC_LABELS[stem.topic]}</span>
-        <span className="text-muted-foreground">·</span>
-        <span className="text-muted-foreground">{DIFFICULTY_LABELS[stem.difficulty]}</span>
-        <span className="text-muted-foreground">·</span>
-        <span className="text-muted-foreground"><span className="font-semibold text-primary">{stem.totalMarks}</span> marks</span>
-        <span className="ml-auto text-xs font-mono text-muted-foreground hidden sm:block">{stem.candidateRole}</span>
+        {/* domain + marks row */}
+        <div className="flex items-center gap-3 px-5 py-3 border-t border-white/10">
+          <span className="text-sm font-bold text-white/90">{TOPIC_LABELS[stem.topic]}</span>
+          <span className="text-white/30">·</span>
+          <span className="text-sm text-white/60">
+            <span className="font-semibold text-white/90">{stem.totalMarks}</span> marks
+          </span>
+        </div>
       </div>
 
       {/* ── QUESTION ─────────────────────────────────────────────────────────── */}
