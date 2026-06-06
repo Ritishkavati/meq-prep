@@ -222,55 +222,65 @@ function QuizScreen({
   }
 
   return (
-    <div className="space-y-5 max-w-3xl mx-auto">
+    <div className="space-y-4 max-w-3xl mx-auto">
 
-      {/* ── DIGITAL TIMER — top, click to start / click to stop ──────────────── */}
+      {/* ── CLOCK ─────────────────────────────────────────────────────────────── */}
       <div
         onClick={!timeExpired ? handleTimerClick : undefined}
         className={[
-          "rounded-2xl border shadow-sm select-none transition-all",
+          "rounded-2xl select-none transition-all overflow-hidden",
           timeExpired
-            ? "bg-red-50 border-red-300 cursor-default"
-            : urgent
-            ? "bg-red-50 border-red-300 cursor-pointer hover:brightness-95 active:scale-[0.99]"
-            : !started
-            ? "bg-primary border-primary cursor-pointer hover:bg-primary/90 active:scale-[0.99]"
-            : "bg-white border-card-border cursor-pointer hover:bg-slate-50 active:scale-[0.99]",
+            ? "cursor-default"
+            : "cursor-pointer active:scale-[0.99]",
         ].join(" ")}
+        style={{
+          background: timeExpired
+            ? "#fee2e2"
+            : urgent
+            ? "#1e1040"
+            : "#0f172a",
+        }}
       >
         <div className="flex items-center justify-between px-5 pt-4 pb-1">
-          {/* left label */}
           <span className={[
-            "text-xs font-semibold uppercase tracking-widest",
-            timeExpired ? "text-red-500" : urgent ? "text-red-500" : !started ? "text-white/70" : "text-muted-foreground",
+            "text-xs font-bold uppercase tracking-[0.18em]",
+            timeExpired ? "text-red-600" : "text-white/50",
           ].join(" ")}>
-            {timeExpired ? "Time's up" : !started ? "Click to start" : paused ? "Paused — click to resume" : "Running — click to stop"}
+            {timeExpired
+              ? "Time's up"
+              : !started
+              ? "Click to start"
+              : paused
+              ? "Paused — click to resume"
+              : "Running — click to pause"}
           </span>
-          {/* reset */}
           <button
             onClick={(e) => { e.stopPropagation(); resetTimer(); }}
-            className={[
-              "flex items-center gap-1 text-xs font-semibold px-2.5 py-1 rounded-lg transition-colors",
-              !started ? "text-white/60 hover:text-white" : "text-muted-foreground hover:text-primary border border-slate-200 hover:border-primary",
-            ].join(" ")}
+            className="flex items-center gap-1 text-xs font-semibold px-2.5 py-1 rounded-lg text-white/50 hover:text-white transition-colors"
           >
             <RotateCcw className="w-3 h-3" /> Reset
           </button>
         </div>
 
-        {/* Big clock */}
-        <div className="flex items-center justify-center py-5">
+        <div className="flex items-center justify-center py-6">
           <span className={[
-            "font-mono font-bold tracking-tight tabular-nums",
-            "text-6xl md:text-7xl",
-            timeExpired ? "text-red-600" : urgent ? "text-red-700" : !started ? "text-white" : "text-primary",
+            "font-mono font-black tracking-tight tabular-nums text-7xl md:text-8xl",
+            timeExpired ? "text-red-600" : urgent ? "text-red-400" : "text-white",
           ].join(" ")}>
             {fmtTime(timeLeft)}
           </span>
         </div>
 
+        {/* thin progress bar */}
+        <div className="h-1 bg-white/10">
+          <div
+            className={["h-full transition-all duration-1000", urgent ? "bg-red-400" : "bg-indigo-400"].join(" ")}
+            style={{ width: `${100 - pct}%` }}
+          />
+        </div>
+
         {timeExpired && (
-          <div className="px-5 pb-4 text-center">
+          <div className="px-5 py-3 text-center">
             <span className="text-xs font-semibold text-red-700">
               Time finished — you can still submit your answer below
             </span>
@@ -278,24 +288,24 @@ function QuizScreen({
         )}
       </div>
 
-      {/* meta */}
-      <div className="bg-white rounded-2xl border border-card-border shadow-sm px-5 py-4 flex flex-wrap gap-3 items-center text-xs text-muted-foreground">
-        <span className="font-semibold text-primary">{TOPIC_LABELS[stem.topic]}</span>
-        <span>·</span>
-        <span>{DIFFICULTY_LABELS[stem.difficulty]}</span>
-        <span>·</span>
-        <span>{stem.totalMarks} marks</span>
-        <span className="ml-auto font-mono text-xs text-muted-foreground">{stem.candidateRole}</span>
+      {/* ── QUESTION DOMAIN / MARKS META ─────────────────────────────────────── */}
+      <div className="bg-white rounded-2xl border border-card-border shadow-sm px-5 py-3.5 flex flex-wrap gap-x-3 gap-y-1 items-center text-sm">
+        <span className="font-bold text-primary">{TOPIC_LABELS[stem.topic]}</span>
+        <span className="text-muted-foreground">·</span>
+        <span className="text-muted-foreground">{DIFFICULTY_LABELS[stem.difficulty]}</span>
+        <span className="text-muted-foreground">·</span>
+        <span className="text-muted-foreground"><span className="font-semibold text-primary">{stem.totalMarks}</span> marks</span>
+        <span className="ml-auto text-xs font-mono text-muted-foreground hidden sm:block">{stem.candidateRole}</span>
       </div>
 
-      {/* stem */}
-      <div className="bg-white rounded-2xl border border-card-border shadow-sm p-6 md:p-8">
+      {/* ── QUESTION ─────────────────────────────────────────────────────────── */}
+      <div className="bg-white rounded-2xl border border-card-border shadow-sm p-6 md:p-7">
         <p className="text-xs font-mono text-muted-foreground mb-1">{stem.questionNumber}</p>
         <h3 className="text-base font-serif font-bold text-primary mb-1">{stem.title}</h3>
         <p className="text-xs text-muted-foreground mb-4">
-          Setting: {stem.setting} &nbsp;·&nbsp; Role: {stem.candidateRole}
+          Setting: {stem.setting}&nbsp;·&nbsp;Role: {stem.candidateRole}
         </p>
-        <div className="bg-primary/4 rounded-xl p-5 text-sm text-primary leading-relaxed whitespace-pre-line">
+        <div className="bg-slate-50 rounded-xl p-5 text-sm text-primary leading-relaxed whitespace-pre-line border border-slate-100">
           {stem.stem}
         </div>
       </div>
@@ -305,16 +315,14 @@ function QuizScreen({
         <div className="flex items-center justify-between gap-3 bg-violet-50 border border-violet-200 rounded-xl px-4 py-3">
           <div className="flex items-center gap-2 min-w-0">
             <RotateCw className="w-4 h-4 text-violet-500 flex-shrink-0" />
-            <p className="text-sm text-violet-800 font-medium">
-              You've already attempted this stem.
-            </p>
+            <p className="text-sm text-violet-800 font-medium">You've already attempted this stem.</p>
           </div>
           <div className="flex items-center gap-2 flex-shrink-0">
             <button
               onClick={onSkipToNext}
               className="flex items-center gap-1.5 bg-violet-600 text-white text-xs font-semibold px-3 py-1.5 rounded-lg hover:bg-violet-700 transition-colors"
             >
-              <ArrowRight className="w-3.5 h-3.5" /> Skip to Next Quiz
+              <ArrowRight className="w-3.5 h-3.5" /> Skip to Next
             </button>
             <button
               onClick={() => setSkipDismissed(true)}
@@ -326,53 +334,55 @@ function QuizScreen({
         </div>
       )}
 
-      {/* answer */}
-      <div className="bg-white rounded-2xl border border-card-border shadow-sm p-6 space-y-4">
-        <div>
-          <label className="block text-sm font-semibold text-primary mb-1">
-            BROAD DOMAINS
-          </label>
-          <p className="text-xs text-muted-foreground mb-2">
-            List the broad clinical domains relevant to this question (e.g. risk, diagnosis, legal, family, disposition).
-          </p>
-          <textarea
-            value={answer}
-            onChange={(e) => setAnswer(e.target.value)}
-            rows={4}
-            className="w-full px-4 py-3 rounded-xl border border-input bg-background text-sm focus:outline-none focus:ring-2 focus:ring-accent resize-y leading-relaxed"
-            placeholder="e.g. Risk assessment, Capacity / MHA, Family involvement, Disposition..."
-          />
-        </div>
-        <div>
-          <label className="block text-sm font-semibold text-primary mb-1">
-            POINTS IN EACH DOMAIN
-          </label>
-          <p className="text-xs text-muted-foreground mb-2">
-            Expand each domain with specific clinical points, actions and reasoning.
-          </p>
-          <textarea
-            value={answer2}
-            onChange={(e) => setAnswer2(e.target.value)}
-            rows={7}
-            className="w-full px-4 py-3 rounded-xl border border-input bg-background text-sm focus:outline-none focus:ring-2 focus:ring-accent resize-y leading-relaxed"
-            placeholder="e.g. Risk: high-lethality attempt, active intent, no safety plan — cannot discharge..."
-          />
-        </div>
+      {/* ── BROAD DOMAINS ────────────────────────────────────────────────────── */}
+      <div className="bg-white rounded-2xl border border-card-border shadow-sm p-6">
+        <label className="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">
+          Broad Domains
+        </label>
+        <p className="text-xs text-muted-foreground mb-3">
+          List the broad clinical domains relevant to this question (e.g. risk, diagnosis, legal, family, disposition).
+        </p>
+        <textarea
+          value={answer}
+          onChange={(e) => setAnswer(e.target.value)}
+          rows={4}
+          className="w-full px-4 py-3 rounded-xl border border-input bg-background text-sm focus:outline-none focus:ring-2 focus:ring-accent resize-y leading-relaxed"
+          placeholder="e.g. Risk assessment, Capacity / MHA, Family involvement, Disposition..."
+        />
+      </div>
+
+      {/* ── POINTS IN EACH DOMAIN ────────────────────────────────────────────── */}
+      <div className="bg-white rounded-2xl border border-card-border shadow-sm p-6">
+        <label className="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">
+          Points in Each Domain
+        </label>
+        <p className="text-xs text-muted-foreground mb-3">
+          Expand each domain with specific clinical points, actions and reasoning.
+        </p>
+        <textarea
+          value={answer2}
+          onChange={(e) => setAnswer2(e.target.value)}
+          rows={7}
+          className="w-full px-4 py-3 rounded-xl border border-input bg-background text-sm focus:outline-none focus:ring-2 focus:ring-accent resize-y leading-relaxed"
+          placeholder="e.g. Risk: high-lethality attempt, active intent, no safety plan — cannot discharge..."
+        />
+      </div>
+
+      {/* ── SUBMIT / SKIP ─────────────────────────────────────────────────────── */}
+      <div className="space-y-3 pb-6">
         <button
           onClick={handleSubmit}
           disabled={!started || (answer.trim().length + answer2.trim().length) < 10}
-          className="w-full flex items-center justify-center gap-2 bg-primary text-white py-3 rounded-lg font-semibold hover:bg-primary/90 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+          className="w-full flex items-center justify-center gap-2 bg-primary text-white py-3.5 rounded-xl font-semibold hover:bg-primary/90 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
         >
           <Send className="w-4 h-4" /> Submit answer for marking
         </button>
         {!started && (
-          <p className="text-center text-xs text-muted-foreground mt-2">Click the timer above to begin</p>
+          <p className="text-center text-xs text-muted-foreground">Click the timer above to begin</p>
         )}
-
-        {/* Skip */}
         <button
           onClick={onSkipToNext}
-          className="mt-3 w-full flex items-center justify-center gap-2 border-2 border-slate-300 text-muted-foreground py-2.5 rounded-lg text-sm font-semibold hover:border-primary hover:text-primary transition-colors"
+          className="w-full flex items-center justify-center gap-2 border-2 border-slate-200 text-muted-foreground py-2.5 rounded-xl text-sm font-semibold hover:border-primary hover:text-primary transition-colors"
         >
           Skip — try a different question <ArrowRight className="w-3.5 h-3.5" />
         </button>
