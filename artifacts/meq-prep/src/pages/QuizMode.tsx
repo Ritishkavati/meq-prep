@@ -949,6 +949,7 @@ export default function QuizMode() {
 
       {phase === "quiz" && currentStem && (
         <QuizScreen
+          key={currentStem.id}
           stem={currentStem}
           timeSecs={currentTimeSecs}
           onSubmit={handleSubmit}
