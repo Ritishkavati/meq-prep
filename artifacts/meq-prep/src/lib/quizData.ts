@@ -47,8 +47,8 @@ export interface QuizStem {
   stem: string;
   totalMarks: number;
   signals: ExpectedSignal[];
-  priorityOrder: { urgent: string[]; secondary: string[]; lowYield: string[] };
-  modelAnswer: string;
+  priorityOrder?: { urgent: string[]; secondary: string[]; lowYield: string[] };
+  modelAnswer?: string;
   broadDomains?: string;
   pointsInEachDomain?: string;
   missedInformation?: string;
@@ -109,27 +109,8 @@ export const DIFFICULTY_LABELS: Record<DifficultyKey, string> = {
   consultant: "Consultant-level",
 };
 
-// ─── Topic-file imports ───────────────────────────────────────────────────────
-import { QA_STEMS } from "./questions/qaQuestions";
-import { SUP_STEMS } from "./questions/supervisionQuestions";
-import { DOC_STEMS } from "./questions/documentationQuestions";
-import { DIS_STEMS } from "./questions/dischargeReviewQuestions";
-import { ED_STEMS } from "./questions/edQuestions";
-import { PER_STEMS } from "./questions/perinatalQuestions";
-import { CAP_STEMS } from "./questions/capacityMhaQuestions";
-import { GOV_STEMS } from "./questions/governanceQuestions";
-import { RISK_STEMS } from "./questions/riskQuestions";
-import { MDT_STEMS } from "./questions/mdtSystemsQuestions";
-import { PSY_STEMS } from "./questions/psychotherapyQuestions";
-import { CS_STEMS } from "./questions/culturalSafetyQuestions";
-import { FOR_STEMS } from "./questions/forensicQuestions";
-import { SU_STEMS } from "./questions/substanceUseQuestions";
-import { CA_STEMS } from "./questions/childAdolescentQuestions";
-import { OA_STEMS } from "./questions/oldAgeQuestions";
-import { RU_STEMS } from "./questions/ruralQuestions";
-import { ETH_STEMS } from "./questions/ethicsQuestions";
-import { CL_STEMS } from "./questions/clPsychiatryQuestions";
-import { FINAL_ELITE_MEQ_BANK } from "./questions/finalEliteMEQBank";
+// ─── Question bank (authoritative source: uploaded docx) ─────────────────────
+import { DOCX_STEMS } from "./questions/docxQuestions";
 
 // ─── STEMS ───────────────────────────────────────────────────────────────────
 
@@ -3174,29 +3155,7 @@ If therapeutic de-escalation within this session does not convincingly resolve t
 ];
 
 // ─── Merged question bank ─────────────────────────────────────────────────────
-export const QUIZ_STEMS: QuizStem[] = [
-  ...ORIGINAL_STEMS,
-  ...QA_STEMS,
-  ...SUP_STEMS,
-  ...DOC_STEMS,
-  ...DIS_STEMS,
-  ...ED_STEMS,
-  ...PER_STEMS,
-  ...CAP_STEMS,
-  ...GOV_STEMS,
-  ...RISK_STEMS,
-  ...MDT_STEMS,
-  ...PSY_STEMS,
-  ...CS_STEMS,
-  ...FOR_STEMS,
-  ...SU_STEMS,
-  ...CA_STEMS,
-  ...OA_STEMS,
-  ...RU_STEMS,
-  ...ETH_STEMS,
-  ...CL_STEMS,
-  ...FINAL_ELITE_MEQ_BANK,
-];
+export const QUIZ_STEMS: QuizStem[] = [...DOCX_STEMS];
 
 // Filter by topic
 export function getStemsByTopic(topic: TopicKey): QuizStem[] {

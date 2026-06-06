@@ -80,7 +80,7 @@ export function auditQuizStemQuality(stem: QuizStem): StemAuditResult {
     issues.push("Model answer is too short or missing");
 
   const genericPhrases = ["generic", "appropriate", "as needed", "manage accordingly"];
-  if (genericPhrases.some((p) => stem.modelAnswer.toLowerCase().includes(p)))
+  if (stem.modelAnswer && genericPhrases.some((p) => stem.modelAnswer!.toLowerCase().includes(p)))
     issues.push("Model answer contains generic phrasing — should be specific consultant-level content");
 
   const passCount = 8 - Math.min(issues.length, 8);
@@ -245,7 +245,7 @@ export function buildAIReviewExport(opts: BuildExportOptions): string {
     lines.push("");
     lines.push("**Model Answer:**");
     lines.push("");
-    lines.push(stem.modelAnswer.trim());
+    lines.push((stem.modelAnswer ?? "").trim());
     lines.push("");
     lines.push("---");
     lines.push("");
